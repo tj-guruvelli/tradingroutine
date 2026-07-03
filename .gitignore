@@ -1,0 +1,14 @@
+# Secrets — NEVER commit
+.env
+*.env
+!env.template
+
+# ClickUp local fallback (may contain notification text) — root-anchored so it
+# does not also match .claude/commands/daily-summary.md (Windows git is case-insensitive)
+/DAILY-SUMMARY.md
+
+# Noise
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
