@@ -1,0 +1,75 @@
+###Mega-Cap Tech & Communications
+META
+GOOG
+MSFT
+ORCL
+V
+MA
+CMCSA
+T
+###Defense & Aerospace
+NOC
+BA
+LMT
+RTX
+###AI Compute & Cloud
+CRWV
+NBIS
+RR
+###Nuclear & Clean Energy
+OKLO
+BE
+###Semiconductors
+AMKR
+KLIC
+SYNA
+GFS
+PEPG
+###Quantum Computing
+RGTI
+QBTS
+QTUM
+###Space & Satellites
+RKLB
+IRDM
+ASTS
+PL
+LUNR
+SATS
+QCOM
+SATL
+HXL
+STM
+RDW
+BKSY
+UFO
+###Drones & Autonomy
+UMAC
+KTOS
+ONDS
+AMPX
+DPRO
+RCAT
+AVAV
+###Shipping & Tankers
+HAFN
+BWLP
+TRMD
+ZIM
+CMBT
+BCI
+###Crypto-Adjacent Equities
+BMNR
+BLSH
+###EV / Automotive
+NIO
+###Real Estate
+OPEN
+APT
+LAKE
+###Speculative Micro-Caps (verify)
+QMMM
+WLDS
+AGMH
+BREA
+PTNM

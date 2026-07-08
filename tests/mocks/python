@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Mock python for hermetic tests: ignore args, emit minimal valid JSON.
+# The wrappers only use `python -c` to build a JSON payload string; the tests
+# assert on the resulting curl call, not on the payload internals.
+echo '{}'

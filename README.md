@@ -11,12 +11,17 @@ Alpaca, decides + acts, writes memory, commits back to git, and notifies you.
 
 ## Quickstart (local, paper)
 
-1. `cp env.template .env` and fill in your **Alpaca PAPER** keys
-   (Perplexity + ClickUp optional — the wrappers degrade gracefully without them).
+1. `cp env.template .env` and fill in your **Alpaca PAPER** keys. Optional:
+   Telegram (primary notify), Perplexity (research), ClickUp (backup notify).
+   See [docs/API-CONNECTIONS.md](docs/API-CONNECTIONS.md) for what each does
+   and how the pipeline degrades if you skip it.
 2. `chmod +x scripts/*.sh`
 3. Open this folder in Claude Code and run `/portfolio`. You should see your
    paper account + positions print cleanly. That's the smoke test.
-4. Try `/pre-market` and `/midday` locally to watch the workflows run.
+4. Try `/pre-market`, `/gappers`, `/tax` locally to watch the workflows run.
+5. For a schedule that runs while your machine is on:
+   `.\scripts\scheduler.ps1 install`
+6. Full help menu inside Claude Code: `/loops`.
 
 ## Going to cloud (production)
 

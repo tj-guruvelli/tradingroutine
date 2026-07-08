@@ -1,0 +1,78 @@
+{
+  "$schema": "./rules.schema.json",
+  "name": "trading-bot v1 — Nate Herk swing + Humbled Trader TJL blend",
+  "mode": "paper",
+  "instrument_universe": ["us_common_stocks"],
+  "instruments_forbidden": ["options", "futures", "crypto", "otc_pink"],
+  "capital": {
+    "starting_usd": 10000,
+    "max_deployed_pct": 85,
+    "min_deployed_pct": 75
+  },
+  "risk_rules": {
+    "max_positions_open": 6,
+    "max_position_pct_of_equity": 20,
+    "max_new_trades_per_week": 3,
+    "trailing_stop_pct_default": 10,
+    "trailing_stop_tighten_at": [
+      {"trigger_gain_pct": 15, "new_trail_pct": 7},
+      {"trigger_gain_pct": 20, "new_trail_pct": 5}
+    ],
+    "manual_cut_loser_at_pct": -7,
+    "stop_never_within_pct_of_current": 3,
+    "stop_never_moves_down": true,
+    "sector_exit_after_consecutive_losses": 2,
+    "pdt_day_trade_count_max": 3
+  },
+  "entry_rules": {
+    "require_catalyst_in_research_log": true,
+    "require_sector_momentum": true,
+    "min_rr_ratio": 2.0,
+    "confluence_min_signals": 2,
+    "indicators": {
+      "vwap": {"buy_when": "price_below_vwap", "sell_when": "price_above_vwap"},
+      "rsi_14": {"oversold_below": 30, "overbought_above": 70},
+      "sma_200": {"long_bias_when": "price_above_sma200"},
+      "insider": {"long_bias_when": "cluster_buy_last_90d == true"}
+    }
+  },
+  "watchlist_tiers": {
+    "immediate": ["CRWV", "OKLO"],
+    "thirty_day": ["META", "GOOG", "MSFT", "ORCL", "NBIS", "NIO", "BE", "RKLB", "ASTS"],
+    "long_term": ["NOC", "LMT", "RTX", "BA", "GFS", "AMKR", "KLIC", "SYNA", "QCOM", "STM", "HXL"]
+  },
+  "scanners": {
+    "scanner_a_gappers": {
+      "source_primary": "yahoo_finance_gainers",
+      "source_catalyst": "benzinga",
+      "gap_pct_min": 5.0,
+      "price_min": 3.0,
+      "premarket_volume_min": 50000,
+      "top_n": 10,
+      "schedule_ny": "0,30 8-13 * * MON-FRI"
+    },
+    "scanner_b_tjl": {
+      "universe": "scanner_a_hits + watchlist_tiers.immediate",
+      "gates": {
+        "daily_breakout": "curr_px > prev_daily_high AND prev_daily_close > sma_200",
+        "intraday_breakout": "curr_px > premarket_high AND curr_px > today_hod"
+      },
+      "schedule_ny": "5,35 10-14 * * MON-FRI"
+    }
+  },
+  "forbidden_actions": [
+    "delete_or_weaken_tests",
+    "widen_scope_to_pass_check",
+    "commit_secrets",
+    "force_push",
+    "trade_options",
+    "flip_to_live_without_user_confirmation",
+    "curl_apis_directly (must use scripts/*.sh wrappers)"
+  ],
+  "escalation_conditions": [
+    "wash_sale_flag_count > 0",
+    "safety_check_fails_3x_same_ticker_in_day",
+    "daily_pnl < -3% of equity",
+    "sector_consecutive_losses >= 2"
+  ]
+}

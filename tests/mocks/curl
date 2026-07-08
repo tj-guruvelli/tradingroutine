@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Mock curl for hermetic wrapper tests. Logs the request (method/url/body/headers)
+# to $CURL_LOG and prints a canned JSON response chosen by URL. Never hits network.
+log="${CURL_LOG:-/dev/null}"
+method="GET"; url=""; body=""; prev=""
+hdrs=()
+for a in "$@"; do
+  case "$prev" in
+    -X) method="$a" ;;
+    -d|--data|--data-raw) body="$a" ;;
+    -H) hdrs+=("$a") ;;
+  esac
+  case "$a" in
+    http://*|https://*) url="$a" ;;
+  esac
+  prev="$a"
+done
+{
+  echo "CALL $method $url"
+  [ -n "$body" ] && echo "BODY $body"
+  for h in "${hdrs[@]}"; do echo "HDR $h"; done
+} >> "$log"
+case "$url" in
+  *"/account"*)        echo '{"equity":"10000.00","cash":"10000.00","buying_power":"20000.00","daytrade_count":0,"pattern_day_trader":false}' ;;
+  *"quotes/latest"*)   echo '{"quote":{"ap":100.50,"bp":100.40,"t":"2026-07-03T14:00:00Z"}}' ;;
+  *"/orders"*)         echo '{"id":"ord_test_1","status":"accepted"}' ;;
+  *"/positions"*)      echo '[]' ;;
+  *"perplexity.ai"*)   echo '{"choices":[{"message":{"content":"mock research"}}]}' ;;
+  *"clickup.com"*)     echo '{"id":"msg_test_1"}' ;;
+  *)                   echo '{}' ;;
+esac
+exit 0

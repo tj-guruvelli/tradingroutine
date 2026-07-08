@@ -15,11 +15,22 @@ Open these in order before doing anything:
 - memory/RESEARCH-LOG.md — Today's research before any trade.
 - memory/PROJECT-CONTEXT.md — Overall mission and context.
 - memory/WEEKLY-REVIEW.md — Friday afternoons; template for new entries.
+- memory/WATCHLIST.md — Universe of tickers the bot watches / scans.
+- memory/BACKTEST-LOG.md — Historical strategy sims (walk-forward gated).
+- memory/TAX-LOG.md — Realized YTD short/long-term P&L + wash-sale flags.
 
 ## Daily Workflows
 
-Defined in .claude/commands/ (local) and routines/ (cloud). Five scheduled
-runs per trading day plus two ad-hoc helpers.
+Defined in .claude/commands/ (local) and routines/ (cloud). Six scheduled
+runs per trading day plus several ad-hoc helpers:
+
+- Cron routines: pre-market, gappers, market-open, midday, daily-summary, weekly-review
+- Ad-hoc: /portfolio, /trade, /tax, /backtest, /gappers, /tjl, /sentiment, /journal-review, /notify, /loops
+- Loop help menu: `/loops` (prints docs/LOOP-HELP.md)
+- Scheduling: `.\scripts\scheduler.ps1 install|status|remove|run <name>` — uses
+  `schtasks.exe`, NOT the `Register-ScheduledTask` cmdlet (that needs admin
+  rights this account doesn't have). Verified live in Windows Task Scheduler
+  2026-07-07 — 9 tasks registered across trading-bot + 2 VideoEditing pipelines.
 
 ## Strategy Hard Rules (quick reference)
 
@@ -37,8 +48,23 @@ runs per trading day plus two ad-hoc helpers.
 
 ## API Wrappers
 
-Use bash scripts/alpaca.sh, scripts/perplexity.sh, scripts/clickup.sh.
-Never curl these APIs directly.
+Use these wrappers — never curl the underlying APIs directly:
+- `scripts/alpaca.sh` — account, quotes, orders (PAPER by default)
+- `scripts/perplexity.sh` — research (falls back to WebSearch on exit 3)
+- `scripts/clickup.sh` — notification (fallback channel)
+- `scripts/telegram.sh` — notification (primary channel)
+- `scripts/tax.sh` — realized P&L, wash-sale flags
+- `scripts/gappers-alpaca.sh` — pre-market gap scan
+
+Backtesting and TradingView-side screening go through the MCPs:
+- `mcp__tradingview-data__*` — server-side data, screener, backtest engine.
+  **Use BARE symbols only** (`META`, not `NASDAQ:META` — the latter 404s).
+  Backtest param is `period` (1mo/3mo/6mo/1y/2y), not `horizon`. Only 6
+  strategies live: rsi, bollinger, macd, ema_cross, supertrend, donchian.
+  `market_sentiment`/`financial_news` take `symbol` (not `ticker`) but
+  currently return empty for every symbol — known upstream issue, not a
+  param bug; fall back to Perplexity/WebSearch (see `/sentiment`).
+- `mcp__tradingview__*` — Desktop-app control via CDP (needs port 9222)
 
 ## Communication Style
 

@@ -12,3 +12,13 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Local orchestration artifacts (claude-flow) — not part of this repo's history
+.claude-flow/
+.swarm/
+ruvector.db
+
+# Runtime output — trade data, safety-check logs, scan results, routine logs.
+# Generated locally/in-cloud on every run; not source, not committed.
+/data/
+/logs/

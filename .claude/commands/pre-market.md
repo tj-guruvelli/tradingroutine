@@ -18,8 +18,14 @@ oil prices; S&P futures; VIX; today's catalysts; pre-market earnings; economic
 calendar; sector momentum; news on each held ticker. If perplexity.sh exits 3,
 fall back to native WebSearch and note the fallback.
 
+STEP 3.5 — Sentiment check on each currently-held ticker + any Tier-1
+watchlist candidate: mcp__tradingview-data__market_sentiment { symbol, category: "stocks" }.
+If posts_analyzed is 0 across the board, the upstream source is down (known
+issue as of 2026-07-07) — skip silently, do not block on it. Do not spend
+more than one retry per ticker.
+
 STEP 4 — Append a dated entry to memory/RESEARCH-LOG.md: account snapshot,
 market context, 2-3 trade ideas (catalyst + entry/stop/target), risk factors,
-and a TRADE/HOLD decision (default HOLD).
+sentiment notes (if available), and a TRADE/HOLD decision (default HOLD).
 
 STEP 5 — Print a short summary to the chat. (Local mode: no git commit/push.)
