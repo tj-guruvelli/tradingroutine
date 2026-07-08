@@ -35,6 +35,19 @@ quote)
   sym="${1:?usage: quote SYM}"
   curl -fsS -H "$H_KEY" -H "$H_SEC" "$DATA/stocks/$sym/quotes/latest"
   ;;
+bars)
+  # usage: bars SYM TIMEFRAME START END [LIMIT]
+  # TIMEFRAME: 1Min, 5Min, 15Min, 1Hour, 1Day. START/END: RFC3339 (e.g. 2026-07-01T00:00:00Z).
+  # Free-tier IEX feed: premarket coverage is sparse/partial vs a paid SIP feed —
+  # a computed premarket-high from this endpoint is a lower bound, not exact.
+  sym="${1:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
+  tf="${2:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
+  start="${3:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
+  end="${4:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
+  limit="${5:-1000}"
+  curl -fsS -H "$H_KEY" -H "$H_SEC" \
+    "$DATA/stocks/$sym/bars?timeframe=$tf&start=$start&end=$end&limit=$limit&feed=iex&adjustment=raw"
+  ;;
 orders)
   status="${1:-open}"
   curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/orders?status=$status"

@@ -47,7 +47,8 @@ Save to `data/premarket_gappers_YYYY-MM-DD.json`:
   "gappers": [
     {"rank": 1, "symbol": "AAPL", "price": 175.20, "gap_pct": 7.5,
      "premarket_volume": 1200000, "catalyst": "Beat Q1 earnings, raised FY guidance",
-     "headlines": ["Apple Reports Strong Q1", "Analysts Boost Price Targets"]}
+     "headlines": ["Apple Reports Strong Q1", "Analysts Boost Price Targets"],
+     "stock_score": 7, "grade": "Buy", "sentiment_label": null}
   ]
 }
 ```
@@ -55,15 +56,29 @@ Save to `data/premarket_gappers_YYYY-MM-DD.json`:
 If a single ticker's catalyst fetch fails, set `catalyst: null` and `headlines: []`
 for that row — do NOT abort the whole scan.
 
+### Step 4.5 — Sentiment + technical grade
+
+For each of the top 10, in parallel:
+`mcp__tradingview-data__combined_analysis { symbol, exchange: "NASDAQ", timeframe: "1D" }`
+
+Extract `sentiment.sentiment_label`, `sentiment.posts_analyzed`, and
+`technical.stock_score` / `technical.grade`. Add these three fields to each
+gapper's JSON row. If `posts_analyzed == 0` (known upstream Reddit-feed
+issue as of 2026-07-07), set `sentiment_label: null` rather than blocking —
+this is informational enrichment, never a filter on whether a gapper makes
+the list.
+
 ### Step 5 — Telegram
 
 Send in this exact format:
 ```
 📊 *Premarket Gappers* — YYYY-MM-DD
-• TICKER $price +gap% — catalyst sentence
+• TICKER $price +gap% — catalyst sentence [grade: X/10, sentiment: Y]
 ```
 
-Bullet per gapper. If catalyst is null, omit the ` — catalyst` portion.
+Bullet per gapper. If catalyst is null, omit the ` — catalyst` portion. If
+sentiment_label is null, omit the `, sentiment: Y` portion (keep `grade` if
+available — that data source is reliable even when sentiment isn't).
 
 `bash scripts/telegram.sh "$MSG"` (falls back to ClickUp if Telegram fails).
 

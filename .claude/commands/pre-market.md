@@ -18,14 +18,22 @@ oil prices; S&P futures; VIX; today's catalysts; pre-market earnings; economic
 calendar; sector momentum; news on each held ticker. If perplexity.sh exits 3,
 fall back to native WebSearch and note the fallback.
 
-STEP 3.5 — Sentiment check on each currently-held ticker + any Tier-1
-watchlist candidate: mcp__tradingview-data__market_sentiment { symbol, category: "stocks" }.
-If posts_analyzed is 0 across the board, the upstream source is down (known
-issue as of 2026-07-07) — skip silently, do not block on it. Do not spend
-more than one retry per ticker.
+STEP 3.5 — Chart + sentiment read on each currently-held ticker + any Tier-1
+watchlist candidate:
+    mcp__tradingview-data__combined_analysis { symbol, exchange: "NASDAQ", timeframe: "1D" }
+This one call replaces a standalone sentiment-only lookup — it returns
+technical (RSI/MACD/SMA/EMA/Bollinger/ADX/support-resistance/stock_score/
+grade/trend_state), Reddit sentiment, and news in one shot. Use the
+`technical` block as the chart-read baseline for each candidate; note
+`stock_score` and `grade` alongside the trade idea in STEP 4.
+If `sentiment.posts_analyzed` is 0 across the board, the upstream Reddit
+feed is down (known issue as of 2026-07-07) — skip that field silently, do
+not block on it, and do not spend more than one retry per ticker. The
+`technical` block is unaffected by this and should always be populated.
 
 STEP 4 — Append a dated entry to memory/RESEARCH-LOG.md: account snapshot,
-market context, 2-3 trade ideas (catalyst + entry/stop/target), risk factors,
-sentiment notes (if available), and a TRADE/HOLD decision (default HOLD).
+market context, 2-3 trade ideas (catalyst + entry/stop/target + stock_score/
+grade from STEP 3.5), risk factors, sentiment notes (if available), and a
+TRADE/HOLD decision (default HOLD).
 
 STEP 5 — Print a short summary to the chat. (Local mode: no git commit/push.)

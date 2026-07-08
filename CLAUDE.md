@@ -24,8 +24,16 @@ Open these in order before doing anything:
 Defined in .claude/commands/ (local) and routines/ (cloud). Six scheduled
 runs per trading day plus several ad-hoc helpers:
 
-- Cron routines: pre-market, gappers, market-open, midday, daily-summary, weekly-review
-- Ad-hoc: /portfolio, /trade, /tax, /backtest, /gappers, /tjl, /sentiment, /journal-review, /notify, /loops
+- Cron routines: pre-market, gappers (+ gappers-cloud), market-open, midday,
+  daily-summary, weekly-review, tjl-cloud, tax
+- Ad-hoc: /portfolio, /trade, /tax, /backtest, /gappers, /tjl, /sentiment,
+  /journal-review, /notify, /loops, /pipeline
+- **`/pipeline`** — the full "How it thinks" loop in one pass: reads charts
+  (combined_analysis) -> reads news -> finds setups (merges Scanner A+B) ->
+  risk analysis -> generates ranked signal -> Telegram alert -> STOPS (never
+  auto-executes; run /trade to act). Loop it with `/loop 30m /pipeline` or a
+  scheduled task. This is the orchestrator — it calls existing components,
+  it doesn't duplicate their logic.
 - Loop help menu: `/loops` (prints docs/LOOP-HELP.md)
 - Scheduling: `.\scripts\scheduler.ps1 install|status|remove|run <name>` — uses
   `schtasks.exe`, NOT the `Register-ScheduledTask` cmdlet (that needs admin
@@ -61,10 +69,32 @@ Backtesting and TradingView-side screening go through the MCPs:
   **Use BARE symbols only** (`META`, not `NASDAQ:META` — the latter 404s).
   Backtest param is `period` (1mo/3mo/6mo/1y/2y), not `horizon`. Only 6
   strategies live: rsi, bollinger, macd, ema_cross, supertrend, donchian.
-  `market_sentiment`/`financial_news` take `symbol` (not `ticker`) but
-  currently return empty for every symbol — known upstream issue, not a
-  param bug; fall back to Perplexity/WebSearch (see `/sentiment`).
-- `mcp__tradingview__*` — Desktop-app control via CDP (needs port 9222)
+  `market_sentiment`/`financial_news`/`combined_analysis` take `symbol`
+  (not `ticker`). The sentiment/news portions currently return empty for
+  every symbol — known upstream issue (not a param bug); the `technical`
+  block from `combined_analysis` is unaffected and fully live (RSI, MACD,
+  SMA/EMA, Bollinger, ADX, support/resistance, stock_score, grade). Fall
+  back to Perplexity/WebSearch when sentiment/news is empty (see `/sentiment`).
+- `mcp__tradingview__*` — Desktop-app control via CDP (needs port 9222).
+  Only for Pine Script authoring/backtesting/native alerts — genuinely
+  local-only, no cloud equivalent exists or can exist for this one.
+
+## Data Sources ("what it watches")
+
+- **Charts/technicals** — `mcp__tradingview-data__combined_analysis` (RSI,
+  MACD, SMA/EMA, Bollinger, ADX, support/resistance, stock_score, grade)
+- **News** — `financial_news` MCP tool + `scripts/perplexity.sh` +
+  `scripts/afterhours.sh` (finviz/Google Finance/openinsider/Benzinga)
+- **Social sentiment (Reddit)** — `market_sentiment` / `combined_analysis`'s
+  sentiment block — wired everywhere, upstream-degraded as of 2026-07-08
+- **Broker/market data** — `scripts/alpaca.sh` (account/positions/quotes/
+  orders/bars), optionally `alpaca-mcp-server` (65-tool MCP, register once
+  `.env` has real keys)
+- **Deliberately NOT wired**: GitHub (no trading use case at this
+  timeframe), tick/Level-2 order-flow data (strategy trades daily/hourly
+  bars, not ticks), X/Twitter (needs a paid API tier), Discord (needs your
+  own bot + server access) — see `market-journal/RESEARCH-fable-five-ai-hedge-fund-reel.md`
+  for the full reasoning per source.
 
 ## Communication Style
 

@@ -28,7 +28,8 @@ run in the cloud, at what cadence, and what the manual web-UI steps are.
 | `tax` | ✅ | Quarterly | — | Uses `scripts/tax.sh` → Alpaca activities API |
 | `gappers-cloud` (Scanner A) | ✅ | 3-4× hourly premarket | Every 30 min | Cloud variant uses ONLY bash + WebFetch, no MCP |
 | `gappers` (local variant) | ❌ | — | Every 30 min | Uses `tradingview-data` MCP for enrichment |
-| `tjl` (Scanner B) | ❌ NEVER | — | Every 30 min | Requires `tradingview` CDP MCP + Desktop app |
+| `tjl-cloud` (Scanner B, cloud) | ✅ | 3× daily (10:00/12:00/14:00 ET) | — | Uses `scripts/alpaca.sh bars` (IEX feed) instead of the CDP MCP — same daily_breakout/intraday_breakout logic, no Desktop app needed. **Caveat:** IEX premarket coverage is sparser than the local variant's TradingView data; treat `pmh` as a lower bound. |
+| `tjl` (local variant) | ❌ | — | Every 30 min | Requires `tradingview` CDP MCP + Desktop app; use for the highest-fidelity premarket-high data or when you're actively at the machine |
 | `backtest` | ❌ | — | Ad-hoc | Uses `tradingview-data` MCP (local Python server) |
 | `portfolio` | ❌ Ad-hoc only | — | Slash command | Read-only smoke test |
 | `trade` | ❌ Manual only | — | Slash command | Requires human y/n confirmation |
@@ -93,6 +94,7 @@ For each:
    - `daily-summary`: cron `15 15 * * 1-5`
    - `weekly-review`: cron `0 16 * * 5`
    - `gappers-cloud` (Scanner A): cron `0 7,8,9,10 * * 1-5` (4 fires/day; Max plan needed if combined with the 5 above → 9 daily = fits under Max 15)
+   - `tjl-cloud` (Scanner B): cron `0 9,11,13 * * 1-5` (9am/11am/1pm CT = 10am/12pm/2pm ET, 3 fires/day)
    - `tax`: cron `0 9 1 1,4,7,10 *` (quarterly, 9am CT on Jan/Apr/Jul/Oct 1st)
 6. **Prompt** — paste the **entire contents** of the corresponding `routines/<name>.md` file. Copy verbatim. Do NOT paraphrase.
 7. **Model**: any current Claude model (Opus 4.8 or Sonnet 5 recommended for reasoning routines).
@@ -110,9 +112,9 @@ For each:
 - gappers-cloud @ 4 fires (4/day) — discovery
 - **Total ≈ 10 fires/day** — comfortable under Max 15.
 
-**Skip going to cloud (stay local):**
-- `tjl` — cannot work in cloud (needs TradingView Desktop CDP)
-- 30-min-cadence variants of gappers — cannot work in cloud (cadence limit)
+**Stay local only (no cloud path exists):**
+- `tjl` (local, CDP variant) — needs TradingView Desktop physically running; keep this for highest-fidelity premarket data, or run `tjl-cloud` instead if you want your computer able to be off
+- 30-min-cadence variants of gappers/tjl — cannot work in cloud (1-hour cadence limit)
 - `backtest` — needs local `tradingview-data` MCP
 - `portfolio`, `trade`, `notify` — ad-hoc slash commands, not scheduled
 
@@ -127,11 +129,9 @@ For each:
 The 30-min cadence scanners stay on your machine via `scripts/scheduler.ps1`:
 
 - `TradingBot-ScannerA-Gappers` — 08:30 local, every 30 min for 5.5h
-- `TradingBot-ScannerB-TJL` — 10:05 local, every 30 min for 4.92h
+- `TradingBot-ScannerB-TJL` — 10:05 local, every 30 min for 4.92h (CDP variant — highest fidelity, needs TradingView Desktop + your machine on)
 
-If you're on Max plan and don't want the redundancy, disable the `TradingBot-ScannerA-Gappers` local task after enabling the `gappers-cloud` cloud routine — otherwise you'll have double coverage (which is fine, just spends more tokens).
-
-TJL Scanner B has no cloud equivalent and stays local forever.
+If you're on Max plan and don't want the redundancy, disable these local tasks after enabling `gappers-cloud` and `tjl-cloud` — otherwise you'll have double coverage (fine, just spends more tokens). The cloud variants give you 24/7 coverage at lower cadence and slightly lower premarket-data fidelity (IEX feed vs TradingView); the local variants give you tighter 30-min cadence and better data, but only while your machine is on. Run both if you want belt-and-suspenders.
 
 ## The 4-step verification checklist (per Nate Herk's guide)
 
@@ -208,11 +208,12 @@ Combined trading-bot + VideoEditing routine grid:
 | daily-summary | 1 |
 | weekly-review | 0.2 (Fri only) |
 | gappers-cloud | 4 |
+| tjl-cloud | 3 |
 | tax | ~0 (quarterly) |
 | ig-clips daily-discovery | 1-2 |
 | instagram-research daily-discovery | 1-2 |
-| **Total (typical weekday)** | **11-14** |
+| **Total (typical weekday)** | **14-17** |
 
-- Pro (5/day) — trading bot only; skip cloud VideoEditing.
-- Max (15/day) — full grid fits with slack.
-- Team/Enterprise (25/day) — full grid + room for hourly bursts.
+- Pro (5/day) — trading bot core only (pre-market/market-open/midday/daily-summary); skip scanners and VideoEditing.
+- Max (15/day) — tight fit; drop `tjl-cloud` or reduce `gappers-cloud` to 2-3 fires if you also want VideoEditing.
+- Team/Enterprise (25/day) — full grid fits with room to spare.

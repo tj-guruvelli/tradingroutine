@@ -19,6 +19,9 @@ Type the slash command:
 | `/tax [YEAR]` | Realized short/long-term P&L + wash-sale flags |
 | `/backtest [SYM] [STRATEGY]` | tradingview-data MCP backtest against watchlist |
 | `/trade SYM QTY buy\|sell` | Manual trade with rule validation (calls `safety-check.sh` + `logtrade.sh`) |
+| `/sentiment TICKER` | Reddit sentiment + news for one ticker (falls back to Perplexity when upstream is empty) |
+| `/journal-review` | Mid-week TRADE-LOG pattern check — win rate, rule violations, sector-loss streaks |
+| `/pipeline` | **The full "How it thinks" loop in one pass**: reads charts (combined_analysis) → reads news → finds setups (merges Scanner A+B) → risk analysis → ranked signal → Telegram alert. Never auto-executes — ends with "run /trade to act." |
 | `/notify "<msg>"` | Send Telegram (fallback ClickUp) |
 | `/loops` | This help menu, printed inside Claude Code |
 
@@ -36,6 +39,11 @@ Type the slash command:
 
 # Nightly EOD sweep with tax + weekly review
 /loop 1d /daily-summary
+
+# The full watch-think-build cycle, every 30 min during market hours —
+# this is the one to run if you want the entire "How it thinks" pipeline
+# looping, not just one scanner
+/loop 30m /pipeline
 ```
 
 Notes:
@@ -74,9 +82,13 @@ NY-market timing, subtract one hour from the NY schedule (or move to Eastern).
 
 ## 4. Cloud routines (production — always-on)
 
-Follow README § "Going to cloud (production)" — install the Claude GitHub App
-on this repo, then wire each `routines/*.md` to a cloud routine. Runs even when
-your machine is off.
+Full setup guide: [CLOUD-ROUTINES.md](CLOUD-ROUTINES.md). Install the Claude
+GitHub App on this repo, create an Environment with your env vars, then paste
+each `routines/*.md` file into a new cloud routine on a cron schedule. Runs
+even when your machine is off — this covers everything except Pine Script
+work (`tjl` local variant) which is permanently tied to TradingView Desktop.
+`tjl-cloud.md` gives you a lower-fidelity but genuinely cloud-native version
+of Scanner B (Alpaca IEX bars instead of the CDP MCP).
 
 ## 5. AlphaInsider forward-testing (paper trading via webhook)
 
