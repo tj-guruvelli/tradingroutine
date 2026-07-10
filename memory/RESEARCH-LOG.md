@@ -126,3 +126,36 @@ BE and OKLO stay on the watch list for tomorrow's session.
 
 _Full auto-scan requires ALPACA keys set (gappers-alpaca.sh). This is the
 Yahoo-only shortlist derived from watchlist snapshot above._
+
+### Gappers (auto-scan 14:53 ET, 2026-07-10) — ad-hoc mid-day run
+Note: run mid-session, not premarket — "gap_pct" is today's session change.
+
+| Rank | Symbol | Price | Change% | Grade | Catalyst |
+|---|---|---|---|---|---|
+| 1 | PLBL | $8.47 | +31.93% | Avoid | No catalyst found (Benzinga: no news) |
+| 2 | EQPT | $18.59 | +16.19% | Avoid | $500M buyback + raised guidance |
+| 3 | VOD | $14.73 | +12.65% | Avoid | e& selling 16.21% stake for $5.95B |
+| 4 | ALM | $16.44 | +11.84% | n/a (no chart data) | DA Davidson price target raise |
+| 5 | WDFC | $266.86 | +11.46% | Watchlist | Beat Q3 earnings, raised FY guidance |
+| 6 | CCC | $5.89 | +9.48% | n/a (no chart data) | Exploring potential sale |
+| 7 | BBAR | $21.21 | +9.33% | Avoid | Argentina/Brazil market strength |
+| 8 | GGAL | $53.58 | +8.48% | Avoid | Form 4 insider filing |
+| 9 | CBRS | $213.71 | +7.65% | Avoid | 200MW European AI data center expansion |
+| 10 | WHR | $40.71 | +7.51% | Avoid | Guidance cut + dividend suspended (bearish) |
+
+Sentiment: Reddit posts_analyzed=0 across all 10 (known upstream degradation). Fed to Scanner B universe (data/scanner_b_universe.txt).
+
+### Pipeline run (14:01 ET, 2026-07-10)
+Account: ACTIVE, equity $100,000, cash $100,000, 0 open positions, 0 trades this week.
+Candidates considered: 11 (10 Scanner-A gappers + CRWV from Tier-1 watchlist via bullish-pullback rule; OKLO excluded — bearish trend, RSI 37, stock_score 0).
+
+Risk-gate results (all failed — zero survivors):
+- PLBL: no catalyst found (Benzinga: no news)
+- EQPT, VOD, GGAL, CBRS: catalyst present but grade "Avoid" (stock_score 3/50/43/30) — not strong enough to override per TRADING-STRATEGY
+- ALM, CCC: no chart data available (backtest MCP no-data error) — cannot confirm technicals
+- BBAR: catalyst is sector-macro ("South American stocks up"), not company-specific
+- WHR: catalyst is BEARISH (guidance cut, dividend suspended) — wrong direction for long-only strategy
+- CRWV: bullish pullback zone (RSI 43, bias Bullish) but no catalyst fetched — insufficient per "documented catalyst required" rule
+- **WDFC: closest candidate** — genuine catalyst (Q3 beat + raised guidance), only non-Avoid grade (Watchlist, score 56) — but RSI 73.4 is overbought; tool's own advice: "avoid new longs." Strategy rule is buy pullbacks, not chase extremes. FAILED on entry timing, not setup quality. Watch for a pullback into the 40-60 RSI zone.
+
+VERDICT: No qualifying setups this pass. Correct behavior — a disciplined system should reject more days than it accepts.

@@ -64,17 +64,27 @@ $Stamp = Get-Date -Format "yyyy-MM-dd_HHmmss"
 $LogFile = Join-Path $LogDir "$Routine-$Date.log"
 $StreamFile = Join-Path $LogDir "$Routine-$Stamp.stream.jsonl"
 
-# Locate claude CLI. Prefer PATH, else check common install locations.
-$ClaudeExe = (Get-Command claude -ErrorAction SilentlyContinue).Source
-if (-not $ClaudeExe) {
-    $Candidates = @(
-        "$env:APPDATA\npm\claude.cmd",
-        "$env:LOCALAPPDATA\Programs\claude\claude.exe"
-    )
-    foreach ($c in $Candidates) { if (Test-Path $c) { $ClaudeExe = $c; break } }
+# Locate claude CLI. MUST be a native .exe — Process.Start with
+# UseShellExecute=false cannot run npm's extensionless bash shim or a .cmd
+# (fails "not a valid application for this OS platform"). Get-Command 'claude'
+# happily returns the bash shim first, so probe native exes explicitly.
+$ClaudeExe = $null
+$Candidates = @(
+    "C:\nvm4w\nodejs\node_modules\@anthropic-ai\claude-code\bin\claude.exe",
+    (Get-Command claude.exe -ErrorAction SilentlyContinue).Source,
+    "$env:LOCALAPPDATA\Programs\claude\claude.exe"
+)
+# Also resolve through any node_modules root Get-Command can see
+$shim = (Get-Command claude -ErrorAction SilentlyContinue).Source
+if ($shim) {
+    $shimDir = Split-Path -Parent $shim
+    $Candidates += (Join-Path $shimDir "node_modules\@anthropic-ai\claude-code\bin\claude.exe")
+}
+foreach ($c in $Candidates) {
+    if ($c -and (Test-Path $c) -and $c.EndsWith(".exe")) { $ClaudeExe = $c; break }
 }
 if (-not $ClaudeExe) {
-    "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] loop-runner: FATAL - claude CLI not found on PATH." | Out-File -FilePath $LogFile -Append
+    "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] loop-runner: FATAL - no native claude.exe found (npm i -g @anthropic-ai/claude-code)." | Out-File -FilePath $LogFile -Append
     exit 3
 }
 
