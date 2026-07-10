@@ -18,22 +18,25 @@ API="${ALPACA_ENDPOINT:-https://paper-api.alpaca.markets/v2}"
 DATA="${ALPACA_DATA_ENDPOINT:-https://data.alpaca.markets/v2}"
 H_KEY="APCA-API-KEY-ID: $ALPACA_API_KEY"
 H_SEC="APCA-API-SECRET-KEY: $ALPACA_SECRET_KEY"
+# --ssl-no-revoke: Windows schannel curl + AV HTTPS interception fails cert
+# revocation checks (CRYPT_E_NO_REVOCATION_CHECK). No-op on non-schannel builds.
+acurl() { curl -fsS --ssl-no-revoke "$@"; }
 cmd="${1:-}"
 shift || true
 case "$cmd" in
 account)
-  curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/account"
+  acurl -H "$H_KEY" -H "$H_SEC" "$API/account"
   ;;
 positions)
-  curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/positions"
+  acurl -H "$H_KEY" -H "$H_SEC" "$API/positions"
   ;;
 position)
   sym="${1:?usage: position SYM}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/positions/$sym"
+  acurl -H "$H_KEY" -H "$H_SEC" "$API/positions/$sym"
   ;;
 quote)
   sym="${1:?usage: quote SYM}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" "$DATA/stocks/$sym/quotes/latest"
+  acurl -H "$H_KEY" -H "$H_SEC" "$DATA/stocks/$sym/quotes/latest"
   ;;
 bars)
   # usage: bars SYM TIMEFRAME START END [LIMIT]
@@ -45,31 +48,31 @@ bars)
   start="${3:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
   end="${4:?usage: bars SYM TIMEFRAME START END [LIMIT]}"
   limit="${5:-1000}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" \
+  acurl -H "$H_KEY" -H "$H_SEC" \
     "$DATA/stocks/$sym/bars?timeframe=$tf&start=$start&end=$end&limit=$limit&feed=iex&adjustment=raw"
   ;;
 orders)
   status="${1:-open}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/orders?status=$status"
+  acurl -H "$H_KEY" -H "$H_SEC" "$API/orders?status=$status"
   ;;
 order)
   body="${1:?usage: order '<json>'}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" -H "Content-Type: application/json" \
+  acurl -H "$H_KEY" -H "$H_SEC" -H "Content-Type: application/json" \
     -X POST -d "$body" "$API/orders"
   ;;
 cancel)
   oid="${1:?usage: cancel ORDER_ID}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders/$oid"
+  acurl -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders/$oid"
   ;;
 cancel-all)
-  curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders"
+  acurl -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders"
   ;;
 close)
   sym="${1:?usage: close SYM}"
-  curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions/$sym"
+  acurl -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions/$sym"
   ;;
 close-all)
-  curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions"
+  acurl -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions"
   ;;
 *)
   echo "Usage: bash scripts/alpaca.sh <account|positions|position|quote|orders|order|cancel|cancel-all|close|close-all> [args]" >&2
