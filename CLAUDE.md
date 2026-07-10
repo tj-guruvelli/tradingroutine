@@ -27,7 +27,16 @@ runs per trading day plus several ad-hoc helpers:
 - Cron routines: pre-market, gappers (+ gappers-cloud), market-open, midday,
   daily-summary, weekly-review, tjl-cloud, tax
 - Ad-hoc: /portfolio, /trade, /tax, /backtest, /gappers, /tjl, /sentiment,
-  /journal-review, /notify, /loops, /pipeline
+  /journal-review, /notify, /loops, /pipeline, /committee, /research,
+  /macro-brief, /risk, /alpha-scan, /rebalance, /filings
+- **Desk layer** (added 2026-07-10, "3 repos = a full hedge fund desk"
+  reel): /committee (bull/bear analyst debate → verdict), /research
+  (DCF+comps+technicals → thesis), /macro-brief (tape + regime call),
+  /risk (`scripts/risk.mjs` — VaR/CVaR + stress, no npm deps), /alpha-scan
+  (NASDAQ/NYSE anomaly sweep), /rebalance (drift proposal, human-gated),
+  /filings (`scripts/edgar.sh` — free SEC EDGAR, no key). All read-only;
+  none place orders. Live-verified 2026-07-10 (edgar.sh against real SEC
+  API, risk.mjs against the real paper account).
 - **`/pipeline`** — the full "How it thinks" loop in one pass: reads charts
   (combined_analysis) -> reads news -> finds setups (merges Scanner A+B) ->
   risk analysis -> generates ranked signal -> Telegram alert -> STOPS (never

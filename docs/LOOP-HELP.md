@@ -22,6 +22,13 @@ Type the slash command:
 | `/sentiment TICKER` | Reddit sentiment + news for one ticker (falls back to Perplexity when upstream is empty) |
 | `/journal-review` | Mid-week TRADE-LOG pattern check — win rate, rule violations, sector-loss streaks |
 | `/pipeline` | **The full "How it thinks" loop in one pass**: reads charts (combined_analysis) → reads news → finds setups (merges Scanner A+B) → risk analysis → ranked signal → Telegram alert. Never auto-executes — ends with "run /trade to act." |
+| `/committee SYM [--fast]` | Investment committee: 4 parallel analysts (technical/fundamental/news/positioning) → bull vs bear debate → trader synthesis → risk-manager gate → BUY/ACCUMULATE/HOLD/AVOID verdict |
+| `/research SYM` | Single-ticker deep dive — DCF-lite + comps + technicals → fair-value range + bull/bear thesis + conviction score |
+| `/macro-brief` | Overnight tape (10Y/VIX/ES/EUR/gold/brent/BTC) + macro news + per-holding exposure → RISK-ON/NEUTRAL/RISK-OFF call |
+| `/risk` | Portfolio VaR/CVaR + beta-scaled stress (2008/2020/rate-shock) + concentration flags, via `node scripts/risk.mjs` |
+| `/alpha-scan [--exchange] [--top N]` | Nightly NASDAQ+NYSE volume/breakout sweep, edge-scored ranked shortlist |
+| `/rebalance [--target-vol PCT]` | Drift + vol-scaling proposal vs config/rules.json — proposes only, never executes |
+| `/filings SYM [N]` | SEC EDGAR recent filings, flags fresh 8-Ks and Form-4 insider clusters |
 | `/notify "<msg>"` | Send Telegram (fallback ClickUp) |
 | `/loops` | This help menu, printed inside Claude Code |
 
