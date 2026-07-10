@@ -159,3 +159,48 @@ Risk-gate results (all failed — zero survivors):
 - **WDFC: closest candidate** — genuine catalyst (Q3 beat + raised guidance), only non-Avoid grade (Watchlist, score 56) — but RSI 73.4 is overbought; tool's own advice: "avoid new longs." Strategy rule is buy pullbacks, not chase extremes. FAILED on entry timing, not setup quality. Watch for a pullback into the 40-60 RSI zone.
 
 VERDICT: No qualifying setups this pass. Correct behavior — a disciplined system should reject more days than it accepts.
+
+### Full watchlist live check (59/59 tickers, real Yahoo prices)
+combined_analysis technical-analysis backend is down right now (confirmed:
+even AAPL/V control tickers 500 with "Expecting value: line 1 column 1" —
+empty upstream response, isolated to the TA/screener component; yahoo_price
+and market_sentiment on the same MCP server work fine). So no stock_score/
+grade/trend_state this pass — real live prices instead, via yahoo_price.
+
+| Symbol | Price | Chg% | Symbol | Price | Chg% |
+|---|---|---|---|---|---|
+| META | $667.74 | +5.74% | RGTI | $16.49 | -2.97% |
+| CMCSA | $23.66 | +1.31% | QBTS | $20.08 | -5.10% |
+| GOOG | $354.16 | -0.58% | GFS | $69.08 | -0.90% |
+| V | $348.57 | +0.10% | QTUM | $154.35 | -0.78% |
+| MA | $525.36 | +0.41% | RKLB | $81.20 | -1.64% |
+| MSFT | $385.29 | +0.24% | IRDM | $49.99 | -1.23% |
+| T | $21.22 | +0.83% | ASTS | $72.83 | -1.42% |
+| ORCL | $140.76 | -2.40% | PL | $25.97 | -4.54% |
+| NOC | $538.44 | +1.17% | LUNR | $16.01 | -5.27% |
+| BA | $222.93 | -0.08% | QCOM | $188.68 | -1.27% |
+| LMT | $522.45 | +0.81% | SATL | $4.46 | -3.25% |
+| RTX | $196.03 | +0.43% | HXL | $99.94 | +0.19% |
+| KOG.OL | 299.50 NOK | -4.19% | STM | $71.29 | -0.14% |
+| CRWV | $88.85 | -0.95% | RDW | $10.18 | -2.74% |
+| NBIS | $220.94 | +2.19% | BKSY | $24.57 | -3.84% |
+| OKLO | $48.42 | -1.74% | UFO | $46.99 | -0.88% |
+| RR | $1.71 | -3.93% | UMAC | $18.83 | **-9.17%** |
+| AMKR | $70.72 | -2.00% | KTOS | $48.21 | -1.32% |
+| KLIC | $112.90 | +1.36% | ONDS | $7.25 | -5.29% |
+| SYNA | $126.60 | -2.24% | AMPX | $11.55 | -2.78% |
+| QMMM | $119.40 | 0.00% | DPRO | $4.74 | -1.25% |
+| WLDS | $1.63 | +3.16% | RCAT | $8.88 | -3.37% |
+| AGMH | $1.12 | -0.88% | AVAV | $145.27 | -2.11% |
+| PTNM | $10.39 | 0.00% | HAFN | $7.18 | +2.21% |
+| PEPG | $2.33 | +1.30% | BWLP | $19.56 | +2.62% |
+| BMNR | $14.99 | +2.04% | TRMD | $29.16 | +3.92% |
+| BLSH | $24.45 | -1.43% | ZIM | $23.98 | -0.66% |
+| BE | $242.73 | **-5.56%** | CMBT | $15.45 | +3.48% |
+| NIO | $4.81 | +0.61% | BCI | $22.98 | -0.04% |
+| OPEN | $4.85 | **-8.58%** | | | |
+
+59/59 resolved, 0 failed. Excluded (unresolved symbols, need clarification):
+BREA, APT, LAKE.
+
+Notable movers: META +5.74% (real gain), UMAC -9.17%, OPEN -8.58%, BE -5.56%.

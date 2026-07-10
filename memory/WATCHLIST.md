@@ -3,6 +3,14 @@
 _Not financial advice. Tickers to verify are flagged `⚠`. Deep research in progress (see RESEARCH.md)._
 _Created via Claude — file-based because the TradingView in-app watchlist writes were failing this session._
 
+## Tier 1 — full tracked universe (59 tickers, drives /pipeline STEP 2)
+
+Every ticker below is scanned by `combined_analysis` when `/pipeline` or a
+full watchlist scan runs — synced 1:1 with `config/rules.json`
+`watchlist_tiers.immediate`. Unresolved symbols (BREA, APT, LAKE) are
+excluded from scanning until their actual company/ticker is confirmed —
+never guessed.
+
 ## Active Trade Ideas (journal)
 
 | Ticker | Name | Plan (as noted) | Thesis tag | Status |

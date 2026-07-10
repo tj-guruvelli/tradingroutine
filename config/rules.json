@@ -37,7 +37,22 @@
     }
   },
   "watchlist_tiers": {
-    "immediate": ["CRWV", "OKLO"],
+    "_note": "immediate = full tracked universe scanned by /pipeline STEP 2 (all user-provided tickers with confirmed symbols). thirty_day/long_term are legacy subsets, unused by pipeline as of 2026-07-10 but kept for reference.",
+    "immediate": [
+      "META", "CMCSA", "GOOG", "V", "MA", "MSFT", "T", "ORCL",
+      "NOC", "BA", "LMT", "RTX", "KOG.OL",
+      "CRWV", "NBIS", "OKLO", "RR",
+      "AMKR", "KLIC", "SYNA", "QMMM", "WLDS", "AGMH", "PTNM", "PEPG",
+      "HAFN", "BWLP", "TRMD", "ZIM", "CMBT", "BCI",
+      "BMNR", "BLSH",
+      "BE",
+      "NIO",
+      "OPEN",
+      "RGTI", "QBTS", "GFS", "QTUM",
+      "RKLB", "IRDM", "ASTS", "PL", "LUNR", "QCOM", "SATL", "HXL", "STM", "RDW", "BKSY", "UFO",
+      "UMAC", "KTOS", "ONDS", "AMPX", "DPRO", "RCAT", "AVAV"
+    ],
+    "unresolved_symbols": ["BREA", "APT", "LAKE"],
     "thirty_day": ["META", "GOOG", "MSFT", "ORCL", "NBIS", "NIO", "BE", "RKLB", "ASTS"],
     "long_term": ["NOC", "LMT", "RTX", "BA", "GFS", "AMKR", "KLIC", "SYNA", "QCOM", "STM", "HXL"]
   },
