@@ -73,7 +73,7 @@ The Environment is where env vars, network access, and setup scripts live.
   - `CLICKUP_API_KEY`, `CLICKUP_WORKSPACE_ID`, `CLICKUP_CHANNEL_ID`
   - `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (optional)
   - `GAP_THRESHOLD=5.0`, `GAP_MIN_PRICE=3.0`
-- **Network access**: **Full** (needed for Alpaca, Perplexity, Yahoo, Benzinga, Telegram).
+- **Network access**: **Full** (needed for Alpaca, Perplexity, Benzinga, Telegram).
 - **Setup script** (empty is fine — scripts are self-contained bash).
 - **CRITICAL:** enable "Allow unrestricted branch pushes" on the routine's environment. Without this, `git push origin main` silently fails. This is the #1 first-time-setup break per Nate Herk's guide.
 

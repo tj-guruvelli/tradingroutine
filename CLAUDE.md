@@ -90,6 +90,12 @@ Backtesting and TradingView-side screening go through the MCPs:
 
 ## Data Sources ("what it watches")
 
+Approved sources ONLY: TradingView, News/APIs, Market Data (Alpaca), Social
+Feed. **Yahoo Finance is FORBIDDEN — never use `mcp__tradingview-data__yahoo_price`,
+never WebFetch any finance.yahoo.com URL, in any command or script.** Found
+and purged 2026-07-10 from macro-brief.md, gappers.md (was the default
+gainers-page source), rules.json, and a live RESEARCH-LOG entry.
+
 - **Charts/technicals** — `mcp__tradingview-data__combined_analysis` (RSI,
   MACD, SMA/EMA, Bollinger, ADX, support/resistance, stock_score, grade)
 - **News** — `financial_news` MCP tool + `scripts/perplexity.sh` +
@@ -98,12 +104,29 @@ Backtesting and TradingView-side screening go through the MCPs:
   sentiment block — wired everywhere, upstream-degraded as of 2026-07-08
 - **Broker/market data** — `scripts/alpaca.sh` (account/positions/quotes/
   orders/bars), optionally `alpaca-mcp-server` (65-tool MCP, register once
-  `.env` has real keys)
+  `.env` has real keys). Default source for gappers/watchlist scans.
 - **Deliberately NOT wired**: GitHub (no trading use case at this
   timeframe), tick/Level-2 order-flow data (strategy trades daily/hourly
   bars, not ticks), X/Twitter (needs a paid API tier), Discord (needs your
   own bot + server access) — see `market-journal/RESEARCH-fable-five-ai-hedge-fund-reel.md`
   for the full reasoning per source.
+
+**UNRESOLVED — flag for the operator, do not silently assume either way**:
+`.claude/commands/backtest.md` documents (2026-07-07) that the `tradingview-data`
+MCP's `backtest_strategy` tool explicitly wraps Yahoo Finance under the hood
+("The MCP wraps Yahoo Finance, not TradingView symbology"), and `yahoo_price`
+self-declares `"source": "Yahoo Finance"` in its own output. Whether
+`combined_analysis`/`market_sentiment`/`financial_news`/the scanner tools
+(same MCP server, same author) are ALSO Yahoo-backed under a TradingView-
+branded wrapper is NOT confirmed either way — never verified against the
+package source or author docs. If confirmed Yahoo-backed, most of this
+session's "chart/technical" data (pipeline, gappers enrichment, /research,
+/committee, /alpha-scan) would need to migrate to the CDP-based
+`mcp__tradingview__*` (tradesdontlie, drives TradingView Desktop directly —
+the only tool in this stack with zero ambiguity about being real TradingView
+data), which is far slower (sequential, ~3-5 min/ticker) than
+`combined_analysis`'s parallel batch calls. This is a real architecture
+decision, not a doc fix — ask the operator before assuming either path.
 
 ## Communication Style
 

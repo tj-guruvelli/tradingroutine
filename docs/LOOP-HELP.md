@@ -10,7 +10,7 @@ Type the slash command:
 |-------|---------|
 | `/portfolio` | Read-only account + positions snapshot (no state change) |
 | `/pre-market` | Full research + write RESEARCH-LOG |
-| `/gappers` | Scanner A — Yahoo gainers + Benzinga catalyst, saves `data/premarket_gappers_YYYY-MM-DD.json` |
+| `/gappers` | Scanner A — Alpaca most-actives + Benzinga catalyst, saves `data/premarket_gappers_YYYY-MM-DD.json` |
 | `/tjl` | Scanner B — Trend Join Long filter over Scanner A hits (drives the chart MCP) |
 | `/market-open` | Execute today's trades per RESEARCH-LOG (paper by default) |
 | `/midday` | Midday risk check + stop tightening |

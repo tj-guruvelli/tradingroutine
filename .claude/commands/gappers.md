@@ -1,15 +1,18 @@
 ---
-description: Premarket gappers scanner — Yahoo gainers + Benzinga catalyst (Humbled Trader Scanner A shape)
+description: Premarket gappers scanner — Alpaca snapshot universe + Benzinga catalyst (Humbled Trader Scanner A shape)
 ---
 
 Two-source premarket gap scan. Adapted from the Humbled Trader Scanner A pattern.
+Yahoo Finance is NOT an approved data source (see CLAUDE.md Data Sources) —
+never WebFetch finance.yahoo.com for anything, including the gainers page.
 
 ## Args
 - optional `--threshold N` — minimum absolute gap % (default 5.0)
 - optional `--pmvol N` — minimum premarket volume (default 50000)
 - optional `--price N` — minimum price (default 3.0)
-- optional `--source alpaca|yahoo` — default `yahoo` for the humbled-trader path;
-  `alpaca` for the Alpaca-native path when the Alpaca data feed is preferred.
+- optional `--source alpaca|watchlist` — default `alpaca` (Alpaca most-actives
+  snapshot); `watchlist` scans memory/WATCHLIST.md's full tracked universe
+  instead of the broad market.
 
 ## Prereq
 Verify env: `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`, `PERPLEXITY_API_KEY` (optional
@@ -19,9 +22,10 @@ but recommended for catalysts).
 
 ### Step 1 — Pull gainers (universe)
 
-- `--source yahoo` (default): WebFetch `https://finance.yahoo.com/markets/stocks/gainers/`.
-  Parse each row for ticker, price, gap %, volume.
-- `--source alpaca`: `bash scripts/gappers-alpaca.sh watchlist` (uses Alpaca snapshot).
+- `--source alpaca` (default): `bash scripts/gappers-alpaca.sh most-active`
+  (Alpaca most-actives snapshot, approved broker/market-data source).
+- `--source watchlist`: `bash scripts/gappers-alpaca.sh watchlist` (scans
+  only memory/WATCHLIST.md's tracked tickers via Alpaca snapshot).
 
 ### Step 2 — Filter
 
@@ -36,7 +40,8 @@ For each of the top 10, run in parallel:
 `bash scripts/perplexity.sh "What recent news or catalyst is driving $TICKER stock today? Return a one-sentence summary, then up to 2 recent headlines verbatim. Just the data — no commentary."`
 
 If Perplexity is unset (`exit 3`), fall back to native `WebFetch https://www.benzinga.com/quote/$TICKER`
-with the same prompt. Do NOT use `https://finance.yahoo.com/quote/{TICKER}/news/` (503s reliably).
+with the same prompt. NEVER use any finance.yahoo.com URL — not an approved
+source, and the news endpoint 503s reliably anyway.
 
 ### Step 4 — Save JSON
 

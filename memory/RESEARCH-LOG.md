@@ -145,6 +145,15 @@ Note: run mid-session, not premarket — "gap_pct" is today's session change.
 
 Sentiment: Reddit posts_analyzed=0 across all 10 (known upstream degradation). Fed to Scanner B universe (data/scanner_b_universe.txt).
 
+**CORRECTION (flagged retroactively, 2026-07-10 later same day):** this scan's
+universe (PLBL/EQPT/VOD/ALM/WDFC/CCC/BBAR/GGAL/CBRS/WHR) came from WebFetching
+finance.yahoo.com/markets/stocks/gainers/ — Yahoo Finance is not an approved
+data source. `.claude/commands/gappers.md` now defaults to Alpaca most-actives
+instead. The pipeline run below inherited this same tainted universe. Not
+re-run with fabricated numbers — treat both this scan and the pipeline run
+below as informational/superseded, not a clean data source. Re-run `/gappers`
+(now Alpaca-sourced) for a compliant scan.
+
 ### Pipeline run (14:01 ET, 2026-07-10)
 Account: ACTIVE, equity $100,000, cash $100,000, 0 open positions, 0 trades this week.
 Candidates considered: 11 (10 Scanner-A gappers + CRWV from Tier-1 watchlist via bullish-pullback rule; OKLO excluded — bearish trend, RSI 37, stock_score 0).
@@ -160,47 +169,56 @@ Risk-gate results (all failed — zero survivors):
 
 VERDICT: No qualifying setups this pass. Correct behavior — a disciplined system should reject more days than it accepts.
 
-### Full watchlist live check (59/59 tickers, real Yahoo prices)
-combined_analysis technical-analysis backend is down right now (confirmed:
-even AAPL/V control tickers 500 with "Expecting value: line 1 column 1" —
-empty upstream response, isolated to the TA/screener component; yahoo_price
-and market_sentiment on the same MCP server work fine). So no stock_score/
-grade/trend_state this pass — real live prices instead, via yahoo_price.
+### Full watchlist live check (58/59 tickers, Alpaca snapshots — CORRECTED)
+**Superseded the same-day entry above that used `yahoo_price` — Yahoo is not
+an approved data source (see CLAUDE.md Data Sources). Re-pulled via
+`scripts/alpaca.sh`-equivalent snapshot endpoint (approved: Broker/market
+data) instead.** combined_analysis's technical-analysis backend was down
+during this run (confirmed: even AAPL/V control tickers 500'd with an
+empty-response parse error) — no stock_score/grade/trend_state this pass,
+real Alpaca prices instead.
 
 | Symbol | Price | Chg% | Symbol | Price | Chg% |
 |---|---|---|---|---|---|
-| META | $667.74 | +5.74% | RGTI | $16.49 | -2.97% |
-| CMCSA | $23.66 | +1.31% | QBTS | $20.08 | -5.10% |
-| GOOG | $354.16 | -0.58% | GFS | $69.08 | -0.90% |
-| V | $348.57 | +0.10% | QTUM | $154.35 | -0.78% |
-| MA | $525.36 | +0.41% | RKLB | $81.20 | -1.64% |
-| MSFT | $385.29 | +0.24% | IRDM | $49.99 | -1.23% |
-| T | $21.22 | +0.83% | ASTS | $72.83 | -1.42% |
-| ORCL | $140.76 | -2.40% | PL | $25.97 | -4.54% |
-| NOC | $538.44 | +1.17% | LUNR | $16.01 | -5.27% |
-| BA | $222.93 | -0.08% | QCOM | $188.68 | -1.27% |
-| LMT | $522.45 | +0.81% | SATL | $4.46 | -3.25% |
-| RTX | $196.03 | +0.43% | HXL | $99.94 | +0.19% |
-| KOG.OL | 299.50 NOK | -4.19% | STM | $71.29 | -0.14% |
-| CRWV | $88.85 | -0.95% | RDW | $10.18 | -2.74% |
-| NBIS | $220.94 | +2.19% | BKSY | $24.57 | -3.84% |
-| OKLO | $48.42 | -1.74% | UFO | $46.99 | -0.88% |
-| RR | $1.71 | -3.93% | UMAC | $18.83 | **-9.17%** |
-| AMKR | $70.72 | -2.00% | KTOS | $48.21 | -1.32% |
-| KLIC | $112.90 | +1.36% | ONDS | $7.25 | -5.29% |
-| SYNA | $126.60 | -2.24% | AMPX | $11.55 | -2.78% |
-| QMMM | $119.40 | 0.00% | DPRO | $4.74 | -1.25% |
-| WLDS | $1.63 | +3.16% | RCAT | $8.88 | -3.37% |
-| AGMH | $1.12 | -0.88% | AVAV | $145.27 | -2.11% |
-| PTNM | $10.39 | 0.00% | HAFN | $7.18 | +2.21% |
-| PEPG | $2.33 | +1.30% | BWLP | $19.56 | +2.62% |
-| BMNR | $14.99 | +2.04% | TRMD | $29.16 | +3.92% |
-| BLSH | $24.45 | -1.43% | ZIM | $23.98 | -0.66% |
-| BE | $242.73 | **-5.56%** | CMBT | $15.45 | +3.48% |
-| NIO | $4.81 | +0.61% | BCI | $22.98 | -0.04% |
-| OPEN | $4.85 | **-8.58%** | | | |
+| AGMH | $1.12 | -4.27% | NBIS | $221.65 | +2.54% |
+| AMKR | $70.80 | -1.86% | NIO | $4.79 | +0.21% |
+| AMPX | $11.58 | -2.53% | NOC | $538.85 | +1.29% |
+| ASTS | $73.09 | -1.08% | OKLO | $48.86 | -0.88% |
+| AVAV | $145.22 | -2.16% | ONDS | $7.26 | -5.22% |
+| BA | $222.74 | -0.17% | OPEN | $4.83 | **-8.43%** |
+| BCI | $22.98 | -0.13% | ORCL | $140.97 | -2.25% |
+| BE | $245.30 | **-4.56%** | PEPG | $2.36 | +1.94% |
+| BKSY | $24.64 | -3.45% | PL | $25.98 | -4.40% |
+| BLSH | $24.35 | -1.81% | PTNM | $10.21 | **-16.04%** |
+| BMNR | $15.02 | +2.21% | QBTS | $20.07 | -5.26% |
+| BWLP | $19.54 | +2.38% | QCOM | $188.82 | -1.15% |
+| CMBT | $15.50 | +3.75% | QMMM | $116.46 | **+17.64%** |
+| CMCSA | $23.64 | +1.24% | QTUM | $154.54 | -0.71% |
+| CRWV | $88.91 | -0.81% | RCAT | $8.88 | -3.32% |
+| DPRO | $4.75 | -0.73% | RDW | $10.21 | -2.48% |
+| GFS | $69.20 | -0.75% | RGTI | $16.52 | -2.71% |
+| GOOG | $354.46 | -0.49% | RKLB | $81.26 | -1.55% |
+| HAFN | $7.20 | +2.35% | RR | $1.73 | -2.54% |
+| HXL | $99.87 | +0.09% | RTX | $195.96 | +0.38% |
+| IRDM | $49.97 | -1.27% | SATL | $4.48 | -2.71% |
+| KLIC | $112.80 | +1.27% | STM | $71.50 | +0.17% |
+| KTOS | $48.19 | -1.34% | SYNA | $127.15 | -1.82% |
+| LMT | $522.25 | +0.79% | T | $21.21 | +0.90% |
+| LUNR | $16.02 | -5.35% | TRMD | $29.27 | +4.33% |
+| MA | $524.91 | +0.35% | UFO | $47.00 | -0.76% |
+| META | $665.59 | +5.40% | UMAC | $18.81 | **-9.17%** |
+| MSFT | $385.06 | +0.21% | V | $348.63 | +0.16% |
+| | | | WLDS | $1.61 | +4.55% |
+| | | | ZIM | $23.94 | -0.83% |
 
-59/59 resolved, 0 failed. Excluded (unresolved symbols, need clarification):
-BREA, APT, LAKE.
+58/58 resolvable-via-Alpaca tickers resolved, 0 failed. KOG.OL (Kongsberg,
+Oslo-listed) excluded — not on a US exchange, no Alpaca coverage. Excluded
+(unresolved symbols, need clarification): BREA, APT, LAKE.
 
-Notable movers: META +5.74% (real gain), UMAC -9.17%, OPEN -8.58%, BE -5.56%.
+**Yahoo-vs-Alpaca discrepancy caught in the correction**: QMMM showed 0.00%
+via Yahoo (stale/zero feed) vs **+17.64%** via Alpaca IEX. PTNM showed 0.00%
+via Yahoo vs **-16.04%** via Alpaca. Not just a policy violation — Yahoo was
+giving materially wrong data for illiquid names.
+
+Notable movers (Alpaca): QMMM +17.64%, PTNM -16.04%, UMAC -9.17%,
+OPEN -8.43%, META +5.40%, BE -4.56%.

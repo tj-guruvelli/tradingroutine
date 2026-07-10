@@ -58,7 +58,7 @@
   },
   "scanners": {
     "scanner_a_gappers": {
-      "source_primary": "yahoo_finance_gainers",
+      "source_primary": "alpaca_most_actives",
       "source_catalyst": "benzinga",
       "gap_pct_min": 5.0,
       "price_min": 3.0,

@@ -9,24 +9,29 @@ runtime under 60 sec — parallelize aggressively, never block on a slow source.
 
 Resolve date: DATE=$(date +%Y-%m-%d). NY time: NYHM=$(TZ=America/New_York date '+%H:%M').
 
-## STEP 1 — Tape (7 prints, one parallel batch)
+## STEP 1 — Tape (7 prints, one Perplexity query)
 
-Call `mcp__tradingview-data__yahoo_price { symbol }` for ALL SEVEN symbols in
-ONE message (parallel — sequential blows the 60s budget). Yahoo-format
-symbols. Each returns price + change_pct.
+Yahoo Finance is NOT an approved data source — never call `yahoo_price`.
+Approved sources are TradingView, News/APIs, Market Data (Alpaca), Social
+Feed. None of the 7 tape prints below are US-equity symbols Alpaca can quote
+(treasury yield, VIX index, futures, forex, commodities), so pull them via
+the approved News channel instead:
 
-| Symbol | Reads as |
+    bash scripts/perplexity.sh "Give me right now: US 10-year Treasury yield, VIX, S&P 500 futures % change, EUR/USD, gold spot price, Brent crude price, BTC price. Current value and % change for each, one line per item, cite source."
+
+If Perplexity is unset (exit 3), fall back to native WebSearch with the same
+query. If any single print is missing from the response, mark it "n/a" and
+continue — never abort the tape for one bad symbol.
+
+| Print | Reads as |
 |---|---|
-| ^TNX | US 10Y yield (4.54 means 4.54%) |
-| ^VIX | Volatility / fear |
-| ES=F | S&P 500 futures |
-| EURUSD=X | Dollar strength (inverse) |
-| GC=F | Gold |
-| BZ=F | Brent crude |
-| BTC-USD | Risk-appetite proxy |
-
-If any single print fails, mark it "n/a" and continue — never abort the tape
-for one bad symbol.
+| 10Y yield | US 10Y Treasury (4.54 means 4.54%) |
+| VIX | Volatility / fear |
+| S&P futures | S&P 500 futures % |
+| EUR/USD | Dollar strength (inverse) |
+| Gold | Spot gold |
+| Brent | Brent crude |
+| BTC | Risk-appetite proxy |
 
 ## STEP 2 — Overnight events
 
@@ -73,7 +78,7 @@ ClickUp):
 
 ```
 🌍 *Macro Brief* — ${DATE} ${NYHM} ET
-10Y 4.54 ↑ | VIX 15.2 ↓ | ES +0.3% | EUR 1.08 → | GC ↑ | BRENT ↓ | BTC +1.2%
+10Y 4.54 ↑ | VIX 15.2 ↓ | S&P +0.3% | EUR 1.08 → | Gold ↑ | Brent ↓ | BTC +1.2%
 Regime: RISK-ON — <one sentence why>
 ```
 
