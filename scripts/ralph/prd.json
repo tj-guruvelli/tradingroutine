@@ -1,0 +1,136 @@
+{
+  "project": "trading-bot",
+  "branchName": "ralph/remaining-pipeline-work",
+  "description": "Close out the remaining verified-but-never-live-run gaps in the trading-bot pipeline: migrate /backtest off Yahoo Finance, live-smoke-test the desk-layer commands built this session (committee/research/macro-brief/alpha-scan/rebalance/filings) against real APIs and fix whatever breaks, and harden the Telegram bot's scheduled-task persistence. Every story is read-only against the market (never places a live/paper order) except where explicitly noted as read-only in the acceptance criteria.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Migrate /backtest off Yahoo Finance to the CDP-based TradingView Strategy Tester",
+      "description": "As the operator, I need /backtest to never touch Yahoo Finance data, matching the no-Yahoo mandate already enforced everywhere else in this repo.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/backtest.md and CLAUDE.md's 'RESOLVED 2026-07-10' section on tradingview_mcp's real backends before changing anything",
+        "Rewrite .claude/commands/backtest.md to use mcp__tradingview__* (CDP, drives TradingView Desktop) — pine_new/pine_set_source/pine_smart_compile + Strategy Tester (data_get_strategy_results, or capture_screenshot region=strategy_tester as the documented fallback) — instead of mcp__tradingview-data__backtest_strategy/compare_strategies/walk_forward_backtest_strategy",
+        "Live-verify: run the new backtest flow for real on one real ticker (e.g. AMD or the existing TJL strategy already compiled on the chart from earlier this session) via tv_health_check + the CDP tools, confirm it returns real Strategy Tester metrics",
+        "grep -ril yahoo .claude/commands/backtest.md returns zero LIVE-call references (a comment explicitly warning against Yahoo is fine, an active yahoo_price/backtest_strategy call is not)",
+        "Append the real backtest result to memory/BACKTEST-LOG.md under today's date",
+        "Typecheck passes: N/A (no code, markdown + live MCP verification only) — instead require: no bash/node syntax errors in anything touched"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Live-smoke-test /committee on one real ticker and fix any breakage",
+      "description": "As the operator, I need /committee (the investment-committee command built this session) actually run end-to-end against real data at least once, not just pass an adversarial code review.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/committee.md fully first",
+        "Run it for real on ticker NVDA (or another real Tier-1 watchlist name if NVDA is already stale in RESEARCH-LOG) — actual combined_analysis, edgar.sh, perplexity.sh/WebSearch calls, actual subagent fan-out via the Agent tool",
+        "Fix any real breakage found: wrong MCP param names, missing scripts, broken JSON parsing, subagent prompt bugs — whatever actually fails when run for real",
+        "The real committee verdict (BUY/ACCUMULATE/HOLD/AVOID + rationale) is appended to memory/RESEARCH-LOG.md under '### Committee: NVDA' — this must be REAL tool output, not fabricated",
+        "Never place a trade — /committee remains read-only, ends with the /trade pointer",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Live-smoke-test /research on one real ticker and fix any breakage",
+      "description": "As the operator, I need /research (DCF + comps + technicals command) actually run end-to-end against real data at least once.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/research.md fully first",
+        "Run it for real on ticker GFS (the lone walk-forward survivor per BACKTEST-LOG.md, or another real name)",
+        "Fix any real breakage found (edgar.sh facts parsing, combined_analysis params, DCF arithmetic bugs)",
+        "The real thesis (fair-value range + conviction score) is appended to memory/RESEARCH-LOG.md under '### Research: GFS' with real numbers, not fabricated",
+        "Never place a trade",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Live-smoke-test /macro-brief after the Yahoo-removal fix and fix any breakage",
+      "description": "As the operator, I need to confirm /macro-brief's STEP 1 tape (rewritten this session to use one Perplexity query instead of yahoo_price) actually returns real, usable data.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/macro-brief.md fully first (already edited to remove yahoo_price — verify the replacement Perplexity query is present)",
+        "Run it for real — actual scripts/perplexity.sh call (or WebSearch fallback if PERPLEXITY_API_KEY is unset, which it currently is per .env), actual scripts/alpaca.sh positions call",
+        "Fix any real breakage: malformed query, parsing failure extracting the 7 tape prints from prose, holdings-exposure logic bugs",
+        "The real macro brief (tape table + regime call) is appended to memory/RESEARCH-LOG.md under '### Macro brief'",
+        "Never place a trade or modify a stop",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "Live-smoke-test /alpha-scan on NASDAQ and fix any breakage",
+      "description": "As the operator, I need /alpha-scan's anomaly sweep to actually run against real NASDAQ data, and I need the exchange-support fragility flagged in this session's adversarial review (volume_breakout_scanner/smart_volume_scanner schemas only document crypto exchanges) resolved with a real answer, not a guess.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/alpha-scan.md fully first",
+        "Run it for real with --exchange NASDAQ — actual volume_breakout_scanner, smart_volume_scanner, top_gainers, bollinger_scan calls",
+        "Determine for real (not by re-reading the tool schema, by actually calling it) whether volume_breakout_scanner/smart_volume_scanner work on NASDAQ or silently fail/return empty — update alpha-scan.md's caveat with the confirmed real answer",
+        "Fix any real breakage found in the merge/dedupe/edge-score steps",
+        "The real ranked shortlist is saved to data/alpha_scan_YYYY-MM-DD.json and the top-5 appended to memory/RESEARCH-LOG.md under '### Alpha scan'",
+        "Never place a trade",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "Live-smoke-test /rebalance against the real (currently flat) paper account",
+      "description": "As the operator, I need to confirm /rebalance's zero-positions early-exit path actually works as documented, since the account currently has 0 open positions.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/rebalance.md fully first",
+        "Run it for real — actual scripts/alpaca.sh account + positions calls against the real paper account (currently $100k cash, 0 positions per this session's earlier /pipeline run)",
+        "Confirm the STEP 1 zero-positions early-exit fires correctly ('nothing to rebalance', logged, stopped) rather than crashing on empty-array math",
+        "If it does NOT degrade gracefully, fix the actual bug",
+        "The real (even if trivial 'nothing to rebalance') result is appended to memory/RESEARCH-LOG.md under '### Rebalance proposal'",
+        "NEVER execute anything — /rebalance only ever proposes",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "Live-smoke-test /filings end-to-end on one real ticker",
+      "description": "As the operator, I need the /filings COMMAND (not just scripts/edgar.sh directly, which was already proven live) run end-to-end at least once, since the command wrapper itself has never been executed.",
+      "acceptanceCriteria": [
+        "Read .claude/commands/filings.md fully first",
+        "Run it for real on ticker NVDA or AMD — real scripts/edgar.sh filings call, real flagging logic for fresh 8-Ks / Form-4 clusters",
+        "If a fresh 8-K is found, verify the WebFetch-and-summarize step actually works",
+        "Fix any real breakage in the command wrapper (not in edgar.sh itself, already proven live)",
+        "The real filings summary is appended to memory/RESEARCH-LOG.md under '### Filings: <SYM>'",
+        "Typecheck passes: N/A — require no bash/node syntax errors in anything touched"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "Harden telegram-agent scheduled task against silent process death",
+      "description": "As the operator, I need the Telegram-LLM bot to not silently die again — earlier this session its ONLOGON-triggered process was found dead with no crash log entry after being alive at startup, and had to be manually re-triggered via schtasks /run.",
+      "acceptanceCriteria": [
+        "Read telegram-agent/bot.mjs, telegram-agent/start-bot.ps1, and this session's earlier finding about the silent process death (schtasks showed 'Ready' not 'Running', zero matching node process, no crash line in the log) before changing anything",
+        "Add a restart-on-exit wrapper: either a loop inside start-bot.ps1 that relaunches node if it exits (with a backoff and a max-restarts-per-hour cap so a crash-loop doesn't spin forever), or register the scheduled task with a restart trigger via schtasks — pick whichever is simpler and actually verifiable",
+        "Live-verify: kill the current bot.mjs node process for real, confirm the new restart mechanism actually relaunches it within a reasonable window (under 2 minutes), and confirm via a real getMe-equivalent check that it's alive and responding again",
+        "Do not weaken the existing security posture (chat-id + sender-id pinning, --strict-mcp-config, token scrubbing, rate limiting) while making this change",
+        "node --check telegram-agent/bot.mjs passes; PowerShell script has no syntax errors"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
