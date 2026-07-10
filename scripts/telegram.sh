@@ -42,7 +42,7 @@ print(json.dumps({
     'disable_web_page_preview': True,
 }))
 " "$TELEGRAM_CHAT_ID" "$msg")"
-curl -fsS -X POST \
+curl -fsS --ssl-no-revoke -X POST \
   "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
   -H "Content-Type: application/json" \
   -d "$payload"

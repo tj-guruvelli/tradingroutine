@@ -66,7 +66,7 @@ print(json.dumps({
 }))
 " "$MODEL" "$query")"
 
-resp="$(curl -fsS https://api.perplexity.ai/chat/completions \
+resp="$(curl -fsS --ssl-no-revoke https://api.perplexity.ai/chat/completions \
   -H "Authorization: Bearer $PERPLEXITY_API_KEY" \
   -H "Content-Type: application/json" \
   -d "$payload")"

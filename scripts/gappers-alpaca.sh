@@ -52,7 +52,7 @@ PY
     echo "${2:?comma-separated list required}"
     ;;
   most-active)
-    curl -fsS -H "$H_KEY" -H "$H_SEC" \
+    curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" \
       "$DATA/stocks/most-actives?by=volume&top=25" \
       | python -c "import json,sys; d=json.load(sys.stdin); print(','.join(m['symbol'] for m in d.get('most_actives', [])))"
     ;;
@@ -72,7 +72,7 @@ fi
 # Alpaca snapshot endpoint returns previous daily bar + latest quote/trade.
 # Batch (comma-separated) — endpoint supports up to 1000 symbols per call.
 snap_url="$DATA/stocks/snapshots?symbols=$symbols"
-snapshot="$(curl -fsS -H "$H_KEY" -H "$H_SEC" "$snap_url")"
+snapshot="$(curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" "$snap_url")"
 
 THRESH="$THRESH" python - <<'PY' <<<"$snapshot"
 import json, os, sys

@@ -41,7 +41,7 @@ fetch_fills() {
     local url="$API/account/activities?activity_types=FILL&date=$start&until=$end&page_size=100"
     if [[ -n "$page_token" ]]; then url="$url&page_token=$page_token"; fi
     local resp
-    resp="$(curl -fsS -H "$H_KEY" -H "$H_SEC" "$url")"
+    resp="$(curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" "$url")"
     # `resp` is a JSON array. Append (or start) into `out`.
     local n
     n="$(printf '%s' "$resp" | python -c "import json,sys; print(len(json.load(sys.stdin)))")"
