@@ -111,22 +111,32 @@ gainers-page source), rules.json, and a live RESEARCH-LOG entry.
   own bot + server access) — see `market-journal/RESEARCH-fable-five-ai-hedge-fund-reel.md`
   for the full reasoning per source.
 
-**UNRESOLVED — flag for the operator, do not silently assume either way**:
-`.claude/commands/backtest.md` documents (2026-07-07) that the `tradingview-data`
-MCP's `backtest_strategy` tool explicitly wraps Yahoo Finance under the hood
-("The MCP wraps Yahoo Finance, not TradingView symbology"), and `yahoo_price`
-self-declares `"source": "Yahoo Finance"` in its own output. Whether
-`combined_analysis`/`market_sentiment`/`financial_news`/the scanner tools
-(same MCP server, same author) are ALSO Yahoo-backed under a TradingView-
-branded wrapper is NOT confirmed either way — never verified against the
-package source or author docs. If confirmed Yahoo-backed, most of this
-session's "chart/technical" data (pipeline, gappers enrichment, /research,
-/committee, /alpha-scan) would need to migrate to the CDP-based
-`mcp__tradingview__*` (tradesdontlie, drives TradingView Desktop directly —
-the only tool in this stack with zero ambiguity about being real TradingView
-data), which is far slower (sequential, ~3-5 min/ticker) than
-`combined_analysis`'s parallel batch calls. This is a real architecture
-decision, not a doc fix — ask the operator before assuming either path.
+**RESOLVED 2026-07-10** — read the actual installed package source
+(`%APPDATA%\uv\tools\tradingview-mcp-server\Lib\site-packages\tradingview_mcp\`)
+rather than guess. Per-tool data source, confirmed from code, not docs:
+- `combined_analysis` technical block → `analyze_coin()` → `tradingview_ta`
+  package (real TradingView scanner API). **Clean.**
+- `combined_analysis` sentiment block, `market_sentiment` → direct Reddit API
+  calls (`sentiment_service.py`, plain `urllib.request`). **Clean.**
+- `combined_analysis` news block, `financial_news` → RSS `feedparser`
+  (`news_service.py`). **Clean.**
+- `top_gainers`/`volume_breakout_scanner`/scanner tools → `tradingview_screener`
+  package (real TradingView). **Clean.**
+- `yahoo_price` → `yahoo_finance_service.py` → **Yahoo Finance.** Confirmed
+  violation, already purged from every command (2026-07-10).
+- `backtest_strategy`/`compare_strategies`/`walk_forward_backtest_strategy` →
+  `backtest_service.py` → **Yahoo Finance.** Confirmed (matches the 2026-07-07
+  finding in backtest.md). `/backtest` still uses this — undecided whether
+  Yahoo-sourced backtesting research is an acceptable exception to the no-Yahoo
+  rule (never used for live signals, only historical simulation) or whether it
+  should migrate to the CDP-based `mcp__tradingview__*` Strategy Tester
+  (proven working this session on the TJL strategy, but sequential/slow —
+  ~3-5 min/ticker vs instant). Ask the operator before picking.
+
+**Net effect**: everything this session actually built on top of
+`combined_analysis` — /pipeline, /gappers enrichment, /research, /committee,
+/alpha-scan — was never Yahoo-tainted. Only `yahoo_price` (now purged) and
+`/backtest` (flagged, undecided) touch Yahoo.
 
 ## Communication Style
 
