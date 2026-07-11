@@ -50,9 +50,10 @@
       "OPEN",
       "RGTI", "QBTS", "GFS", "QTUM",
       "RKLB", "IRDM", "ASTS", "PL", "LUNR", "QCOM", "SATL", "HXL", "STM", "RDW", "BKSY", "UFO",
-      "UMAC", "KTOS", "ONDS", "AMPX", "DPRO", "RCAT", "AVAV"
+      "UMAC", "KTOS", "ONDS", "AMPX", "DPRO", "RCAT", "AVAV",
+      "APT", "LAKE"
     ],
-    "unresolved_symbols": ["BREA", "APT", "LAKE"],
+    "unresolved_symbols": ["BREA"],
     "thirty_day": ["META", "GOOG", "MSFT", "ORCL", "NBIS", "NIO", "BE", "RKLB", "ASTS"],
     "long_term": ["NOC", "LMT", "RTX", "BA", "GFS", "AMKR", "KLIC", "SYNA", "QCOM", "STM", "HXL"]
   },
