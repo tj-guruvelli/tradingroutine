@@ -11,6 +11,7 @@ the env-var check block and the commit-and-push step are load-bearing.
 | `midday.md` | `0 12 * * 1-5` | TRADE-LOG.md, RESEARCH-LOG.md | only if action taken |
 | `daily-summary.md` | `0 15 * * 1-5` | TRADE-LOG.md | always (1 message) |
 | `weekly-review.md` | `0 16 * * 5` | WEEKLY-REVIEW.md, TRADING-STRATEGY.md | always (1 message) |
+| `setup-scan-cloud.md` | `0 15,17,19 * * 1-5` | `data/setup-scan_cloud_*.json`, `RESEARCH-LOG.md` | only if grade-A hit |
 
 ## Per-routine setup (do for each)
 1. Routines → New Routine; name it (e.g. "Trading bot pre-market").
