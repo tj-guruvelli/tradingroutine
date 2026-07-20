@@ -42,8 +42,17 @@ print(json.dumps({
     'disable_web_page_preview': True,
 }))
 " "$TELEGRAM_CHAT_ID" "$msg")"
-curl -fsS --ssl-no-revoke -X POST \
+if curl -fsS --ssl-no-revoke -X POST \
   "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
   -H "Content-Type: application/json" \
-  -d "$payload"
-echo
+  -d "$payload"; then
+  echo
+else
+  # Telegram API call failed — chain to ClickUp so the "(falls back to
+  # ClickUp)" claim in the calling commands is actually true.
+  echo "[telegram] API call failed, falling back to ClickUp" >&2
+  bash "$ROOT/scripts/clickup.sh" "$msg" || {
+    printf "\n---\n## %s (fallback — Telegram + ClickUp both failed)\n%s\n" "$stamp" "$msg" >> "$FALLBACK"
+    exit 3
+  }
+fi
