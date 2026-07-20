@@ -22,7 +22,7 @@ IMPORTANT — ENVIRONMENT VARIABLES:
 
 IMPORTANT — PERSISTENCE + CLOUD LIMITATIONS:
 - This workspace is a fresh clone. File changes VANISH unless you commit and
-  push to main. You MUST commit and push at STEP 6.
+  push to main. You MUST commit and push at STEP 7.
 - Local MCPs (tradingview, tradingview-data) are UNAVAILABLE in cloud routines.
   Use ONLY the bash wrappers in scripts/ and the native WebFetch tool.
 
@@ -35,10 +35,11 @@ Parse the JSON output. Keep only rows with:
     (premarket_volume >= 50000 if that field is populated)
 Rank by |gap_pct| descending, cap at top 10.
 
-STEP 2 — For each of the top 10, fetch a one-line catalyst via the Apify RAG
-web browser tool (mcp__Apify__apify--rag-web-browser), query:
+STEP 2 — For each of the top 10, fetch a one-line catalyst headline via the
+Apify RAG web browser tool (mcp__Apify__apify--rag-web-browser), query:
     "<TICKER> stock news today catalyst"
-Summarize the top result into one sentence.
+Summarize the top result into one sentence. This is the quick-scan headline
+used for the summary table in STEP 5 and the JSON in STEP 4.
 
 If the Apify call errors or returns nothing usable, fall back to WebFetch
 against
@@ -49,42 +50,89 @@ NEVER hit finance.yahoo.com/quote/<T>/news (503s reliably).
 If a single ticker's catalyst fetch fails, set `catalyst: null` and
 `headlines: []` for that row. Do NOT abort the whole scan.
 
-STEP 3 — Save to `data/premarket_gappers_${DATE}.json`:
+STEP 3 — DEEP-DIVE ANALYSIS on the top 5 (of the 10) by |gap_pct|. State the
+cap explicitly in the log (do not silently drop rank 6-10 from the deep dive,
+just note they got quick-scan only). For each of the 5, run a second Apify
+RAG web browser query:
+    "<TICKER> business fundamentals recent developments"
+and combine it with the STEP 2 catalyst to write five short fields, tied to
+memory/TRADING-STRATEGY.md's rules (Entry Checklist, Confluence rule, Sector
+rotation table):
+
+- catalyst_detail: 2-4 sentences on what actually happened, sourced from the
+  research, not just the headline.
+- why: the mechanism connecting the catalyst to the price move (e.g. "earnings
+  beat plus raised guidance pulls in momentum buyers", "short-seller report
+  alleges accounting irregularities", "all-stock acquisition at a premium").
+- impact: does the move look sustainable given volume vs the stock's normal
+  volume, or does it read as a one-day headline spike likely to mean-revert?
+  Note any sector-wide read-through (e.g. a peer also moving).
+- horizon: SHORT_TERM or LONG_TERM, with one line of reasoning.
+  SHORT_TERM = headline-driven, no durable thesis, expect fade within days,
+  do not carry past the session/week.
+  LONG_TERM = the catalyst is structural (M&A, guidance reset, new contract,
+  regime change) and aligns with the current sector-rotation phase in
+  TRADING-STRATEGY.md, worth a multi-day/week swing hold if it also passes
+  the Confluence rule on a later /trade check.
+- opportunity_cost: given the hard caps (max 6 open positions, max 3 new
+  trades per week, max 20% of equity per position, min 2:1 reward:risk), name
+  what taking this trade would displace, either an existing weaker holding or
+  a higher-ranked gapper from today's own list, and whether the setup could
+  even clear the 2:1 R:R minimum at a sane stop distance. This is research
+  only, not a trade decision; do not recommend a specific order size here.
+
+STEP 4 — Save to `data/premarket_gappers_${DATE}.json`:
     {
       "scanned_at": "<ISO ts>",
+      "deep_dive_cap": 5,
       "gappers": [
         {"rank": 1, "symbol": "AAPL", "price": 175.20, "gap_pct": 7.5,
-         "premarket_volume": 1200000, "catalyst": "...", "headlines": []}
+         "premarket_volume": 1200000, "catalyst": "...", "headlines": [],
+         "catalyst_detail": "...", "why": "...", "impact": "...",
+         "horizon": "SHORT_TERM", "opportunity_cost": "..."}
       ]
     }
+Ranks 6-10 keep catalyst/headlines only; omit the deep-dive fields for them
+(do not fabricate values, leave the keys out entirely).
 
-STEP 4 — Append to memory/RESEARCH-LOG.md under today's date:
+STEP 5 — Append to memory/RESEARCH-LOG.md under today's date. Two parts:
 
+Part A, quick-scan table for all 10:
     ### Gappers (auto-scan HH:MM ET, cloud)
     | Rank | Sym | $Price | Gap% | Vol | Catalyst |
     | ---- | --- | ------ | ---- | --- | -------- |
 
-Sort by rank. Do NOT overwrite existing content under today's date.
+Part B, deep-dive writeup for the top 5:
+    #### Deep dive: <TICKER> $price gap%
+    - Catalyst: <catalyst_detail>
+    - Why: <why>
+    - Impact: <impact>
+    - Horizon: <SHORT_TERM|LONG_TERM>, <one-line reasoning>
+    - Opportunity cost: <opportunity_cost>
 
-STEP 5 — Notify. If TELEGRAM_BOT_TOKEN is set:
+Repeat Part B per ticker, in rank order. Sort by rank. Do NOT overwrite
+existing content under today's date.
+
+STEP 6 — Notify. If TELEGRAM_BOT_TOKEN is set:
     bash scripts/telegram.sh "$MSG"
 Format:
-    📊 *Premarket Gappers* — $DATE
-    • TICKER $price +gap% — catalyst sentence
-    • ...
-Bullet per gapper. If catalyst is null, omit the ` — catalyst` portion.
+    Premarket Gappers, $DATE
+    - TICKER $price, gap%, horizon (SHORT_TERM or LONG_TERM), catalyst sentence
+    - ...
+Bullet per gapper (top 5 deep-dive set gets the horizon tag, ranks 6-10 get
+catalyst only). If catalyst is null, omit that portion.
 Only send if hits > 0 OR the scan errored.
 
 If Telegram fails or is unset, fall back to:
     bash scripts/clickup.sh "$MSG"
 
-STEP 6 — COMMIT AND PUSH (mandatory):
+STEP 7 — COMMIT AND PUSH (mandatory):
     git add memory/RESEARCH-LOG.md data/premarket_gappers_${DATE}.json
     git commit -m "gappers scan $DATE $NYHM ET"
     git push origin main
 On push failure: git pull --rebase origin main, then push again.
 
-STEP 7 — Never auto-trade a gapper. Do NOT open orders here. This routine is
+STEP 8 — Never auto-trade a gapper. Do NOT open orders here. This routine is
 research-only; execution happens in market-open or /trade (both of which run
 the full safety-check gate).
 
