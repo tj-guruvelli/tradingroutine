@@ -222,3 +222,17 @@ giving materially wrong data for illiquid names.
 
 Notable movers (Alpaca): QMMM +17.64%, PTNM -16.04%, UMAC -9.17%,
 OPEN -8.43%, META +5.40%, BE -4.56%.
+
+## 2026-07-20 — Gappers (auto-scan 10:43 ET, cloud)
+
+### Gappers (auto-scan 10:43 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $194.31 | -9.43% | 86,858 | Shares falling on short-seller allegations, supply chain concerns, profit-taking despite $1.7B AI infra investment |
+| 2 | SYNA | $123.45 | +7.98% | 3,220 | ON Semi to acquire Synaptics in all-stock deal; analysts downgrading post-announcement |
+| 3 | BREA | $26.28 | +6.66% | 18,327 | catalyst fetch failed (not found on Benzinga) |
+| 4 | SATL | $3.59 | -6.03% | 61,701 | Named among big stocks moving higher Monday alongside Iridium, FuelCell Energy, Rocket Lab |
+
+Note: scan ran mid-session (10:43 ET, not premarket) — gap_pct is vs. prior close using latest quote, not a true premarket gap. AGMH (-14.59%) and WLDS (-10.26%) excluded, price < $3.00 floor. Fixed a stdin-redirection bug in `scripts/gappers-alpaca.sh` (heredoc silently overridden by here-string) that was making the script emit empty output; also had to override `ALPACA_DATA_ENDPOINT` inline for this run since the exported env var points at the trading API root, not `data.alpaca.markets/v2`.
+
+Research-only. No orders placed.

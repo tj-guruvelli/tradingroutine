@@ -74,10 +74,10 @@ fi
 snap_url="$DATA/stocks/snapshots?symbols=$symbols"
 snapshot="$(curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" "$snap_url")"
 
-THRESH="$THRESH" python - <<'PY' <<<"$snapshot"
-import json, os, sys
+THRESH="$THRESH" SNAPSHOT_JSON="$snapshot" python - <<'PY'
+import json, os
 thresh = float(os.environ["THRESH"])
-data = json.load(sys.stdin)
+data = json.loads(os.environ["SNAPSHOT_JSON"])
 rows = []
 for sym, snap in data.items():
     prev = snap.get("prevDailyBar") or {}
