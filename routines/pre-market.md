@@ -8,17 +8,19 @@ DATE=$(date +%Y-%m-%d).
 IMPORTANT — ENVIRONMENT VARIABLES:
 - Every API key is ALREADY exported as a process env var: ALPACA_API_KEY,
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT,
-  PERPLEXITY_API_KEY, PERPLEXITY_MODEL, CLICKUP_API_KEY,
-  CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+  CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
   ClickUp alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
-    for v in ALPACA_API_KEY ALPACA_SECRET_KEY PERPLEXITY_API_KEY \
+    for v in ALPACA_API_KEY ALPACA_SECRET_KEY \
              CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
       [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
     done
+- Market research uses the Apify connector (mcp__Apify__apify--rag-web-browser
+  or equivalently-named Apify RAG web browser tool), NOT Perplexity — retired
+  from this routine.
 
 IMPORTANT — PERSISTENCE:
 - This workspace is a fresh clone. File changes VANISH unless you commit and
@@ -34,8 +36,8 @@ STEP 2 — Pull live account state:
   bash scripts/alpaca.sh positions
   bash scripts/alpaca.sh orders
 
-STEP 3 — Research market context via Perplexity. Run
-  bash scripts/perplexity.sh "<query>" for each:
+STEP 3 — Research market context via the Apify RAG web browser tool
+  (mcp__Apify__apify--rag-web-browser), one query per topic:
 - "WTI and Brent oil price right now"
 - "S&P 500 futures premarket today"
 - "VIX level today"
@@ -44,8 +46,8 @@ STEP 3 — Research market context via Perplexity. Run
 - "Economic calendar today CPI PPI FOMC jobs data"
 - "S&P 500 sector momentum YTD"
 - News on any currently-held ticker
-If Perplexity exits 3, fall back to native WebSearch and note the fallback in
-the log entry.
+If the Apify tool errors or is unavailable, fall back to native WebSearch and
+note the fallback in the log entry.
 
 STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md:
 - Account snapshot (equity, cash, buying power, daytrade count)

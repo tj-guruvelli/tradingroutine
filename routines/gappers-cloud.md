@@ -7,9 +7,13 @@ Resolve New York time via: NYHM=$(TZ=America/New_York date '+%H:%M').
 
 IMPORTANT — ENVIRONMENT VARIABLES:
 - Every API key is ALREADY exported as a process env var: ALPACA_API_KEY,
-  ALPACA_SECRET_KEY, ALPACA_DATA_ENDPOINT, PERPLEXITY_API_KEY,
+  ALPACA_SECRET_KEY, ALPACA_DATA_ENDPOINT,
   CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID,
   TELEGRAM_BOT_TOKEN (optional), TELEGRAM_CHAT_ID (optional).
+- Catalyst research uses the Apify connector (mcp__Apify__apify--rag-web-browser
+  or equivalently-named Apify RAG web browser tool — check your available
+  tools if the exact name differs), NOT an env var. Perplexity is retired
+  from this routine.
 - There is NO .env file in this repo. Do NOT create one.
 - Verify env vars BEFORE any wrapper call:
     for v in ALPACA_API_KEY ALPACA_SECRET_KEY; do
@@ -31,10 +35,13 @@ Parse the JSON output. Keep only rows with:
     (premarket_volume >= 50000 if that field is populated)
 Rank by |gap_pct| descending, cap at top 10.
 
-STEP 2 — For each of the top 10, fetch a one-line catalyst via Perplexity:
-    bash scripts/perplexity.sh "What recent news or catalyst is driving <TICKER> stock today? Return one sentence."
+STEP 2 — For each of the top 10, fetch a one-line catalyst via the Apify RAG
+web browser tool (mcp__Apify__apify--rag-web-browser), query:
+    "<TICKER> stock news today catalyst"
+Summarize the top result into one sentence.
 
-If Perplexity exits 3 (unset), fall back to WebFetch against
+If the Apify call errors or returns nothing usable, fall back to WebFetch
+against
     https://www.benzinga.com/quote/<TICKER>
 and extract the top-of-page headline as the catalyst.
 NEVER hit finance.yahoo.com/quote/<T>/news (503s reliably).
