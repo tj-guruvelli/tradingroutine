@@ -115,13 +115,28 @@ existing content under today's date.
 
 STEP 6 — Notify. If TELEGRAM_BOT_TOKEN is set:
     bash scripts/telegram.sh "$MSG"
-Format:
+Format, the full deep-dive breakdown goes IN THE TELEGRAM MESSAGE ITSELF, not
+just a one-line teaser. This is the primary channel it gets read from, the
+RESEARCH-LOG.md entry is the archive copy, both carry the same detail:
+
     Premarket Gappers, $DATE
-    - TICKER $price, gap%, horizon (SHORT_TERM or LONG_TERM), catalyst sentence
-    - ...
-Bullet per gapper (top 5 deep-dive set gets the horizon tag, ranks 6-10 get
-catalyst only). If catalyst is null, omit that portion.
-Only send if hits > 0 OR the scan errored.
+
+    #1 TICKER $price (gap%), SHORT_TERM or LONG_TERM
+    Catalyst: <catalyst_detail>
+    Why: <why>
+    Impact: <impact>
+    Opportunity cost: <opportunity_cost>
+
+    #2 TICKER2 ...
+    (repeat the same 4-line block for each of the top 5)
+
+    Also moving (quick scan only):
+    - TICKER6 $price gap%, catalyst sentence
+    - ... (ranks 6-10, one line each)
+
+If catalyst_detail/why/impact/opportunity_cost is null for a top-5 ticker
+(deep-dive fetch failed), fall back to just its one-line catalyst instead of
+leaving the field blank. Only send if hits > 0 OR the scan errored.
 
 If Telegram fails or is unset, fall back to:
     bash scripts/clickup.sh "$MSG"
