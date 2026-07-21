@@ -236,3 +236,79 @@ OPEN -8.43%, META +5.40%, BE -4.56%.
 Note: scan ran mid-session (10:43 ET, not premarket) — gap_pct is vs. prior close using latest quote, not a true premarket gap. AGMH (-14.59%) and WLDS (-10.26%) excluded, price < $3.00 floor. Fixed a stdin-redirection bug in `scripts/gappers-alpaca.sh` (heredoc silently overridden by here-string) that was making the script emit empty output; also had to override `ALPACA_DATA_ENDPOINT` inline for this run since the exported env var points at the trading API root, not `data.alpaca.markets/v2`.
 
 Research-only. No orders placed.
+
+## 2026-07-21 — Pre-market Research
+
+Note: Apify RAG web browser tool (`mcp__Apify__apify--rag-web-browser`) was
+unavailable this run — all 7 topic queries stayed stuck in "READY" (queued,
+0 compute units) for 2+ minutes with no run start. Fell back to native
+WebSearch for all market-context queries per routine fallback rule.
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $400,000
+- Daytrade count: 0 (0 positions, 0 open orders)
+
+### Market Context
+- WTI / Brent: Brent $91.10 (+2.11%), WTI >$83 — both up on US-Iran conflict
+  escalation (10th consecutive night of US strikes; tanker reportedly struck
+  near Strait of Hormuz; Houthi threats to Saudi Red Sea traffic). Reports of
+  mediators pushing a 10-day ceasefire were also circulating — headline risk
+  cuts both ways today.
+- S&P 500 futures: +0.2% to +0.49% premarket (sources varied); Nasdaq 100
+  futures leading on a chip-stock rally (+5% in semis). 10Y yield ~4.52%,
+  easing on cooler inflation data.
+- VIX: ~18.6 (July 20 close) — mid-band (12-20), normal/moderate volatility.
+- Today's catalysts: GM beat Q2 estimates; Nvidia disclosed an equity stake
+  in Nebius (NBIS) — semis rallying broadly on this; Utz Brands going private
+  ($2.9B, Intersnack Group); crypto-infra stocks (COIN +11.8%, CRCL +8.1%,
+  MSTR +3.7%) up on the CLARITY Act. Iran conflict remains the dominant
+  overhang/tailwind for oil and risk sentiment.
+- Earnings before open: MMM, DHR, GM, HAL, NOC, NVS, SCHW (implied moves
+  4.6%-9.2% per options). After close: ALK, NLY, COF.
+- Economic calendar: Next FOMC meeting July 25-26 — no rate decision today.
+  CPI/PPI prints already behind us this cycle; markets watching Fed
+  commentary into the meeting.
+- Sector momentum (YTD, as of 7/17): Energy +4.8% (leader), Real Estate
+  +2.8%, Consumer Staples +1.3%, Financials +1.1%, Health Care +0.1%,
+  Utilities -0.4%, Consumer Discretionary -1.1%, Industrials -1.3%,
+  Materials -1.3%, Communications -2.3%, Technology -3.8% (laggard, despite
+  today's one-day chip bounce). S&P 500 YTD +9.6%.
+- Held tickers: none (0 open positions) — no ticker-specific news to check.
+
+### Trade Ideas
+1. NBIS — catalyst: Nvidia disclosed equity stake, semis rallying (+5%
+   sector-wide). Quote ~$213 (bid $208.22/ask $218). Entry ~$213, stop ~$196
+   (-8%), target ~$246 (2:1 R:R). Confluence unconfirmed — no
+   TradingView/technical MCP available this session (RSI/VWAP/200-SMA not
+   checked); catalyst is real but sector is YTD laggard (-3.8%), so today's
+   move may be a one-day bounce, not a trend change.
+2. XLE / energy majors — catalyst: Brent +2.1%, WTI >$83 on Iran conflict
+   escalation; sector already YTD leader (+4.8%). Quote XLE ~$58.28. Flagged
+   as AVOID for new longs: catalyst is a fear-driven geopolitical spike with
+   active ceasefire-mediation headlines circulating — high reversal risk on
+   any de-escalation news, not a clean setup.
+3. GM — catalyst: Q2 earnings beat, reporting before today's open (implied
+   move ±6.68%). No entry yet — print just released, pre-market reaction not
+   yet confirmed; watch for post-print price/volume confirmation before
+   considering a momentum entry.
+
+### Risk Factors
+- Iran/Israel-US conflict — active oil-shock and ceasefire-headline
+  volatility; can gap either direction intraday.
+- FOMC meeting July 25-26 this week — positioning risk into the decision.
+- Heavy earnings day (7 reports before open alone, implied moves up to 9%)
+  — elevated single-stock gap risk.
+- Technology sector still YTD laggard (-3.8%) — today's chip bounce is
+  unconfirmed as a trend reversal.
+- No TradingView/technical MCP access this session — cannot verify the
+  ≥2-indicator confluence rule before any entry; a genuine gap in this
+  routine's data coverage today.
+
+### Decision
+HOLD — no trade meets the confluence + catalyst bar today. NBIS is the
+closest candidate but lacks technical confirmation (no MCP access) and
+sits in a YTD-laggard sector; energy is chasing a reversible geopolitical
+spike; GM's reaction is unconfirmed. Patience > activity. Revisit NBIS and
+energy majors next session once technical confirmation is available.
