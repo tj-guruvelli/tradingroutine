@@ -312,3 +312,105 @@ closest candidate but lacks technical confirmation (no MCP access) and
 sits in a YTD-laggard sector; energy is chasing a reversible geopolitical
 spike; GM's reaction is unconfirmed. Patience > activity. Revisit NBIS and
 energy majors next session once technical confirmation is available.
+
+## 2026-07-23 — Pre-market Research
+
+Note: Apify RAG web browser tool (`mcp__Apify__apify--rag-web-browser`) worked
+for oil, S&P futures, catalysts, and earnings queries, but the underlying MCP
+connection dropped mid-run (VIX and sector-momentum queries returned empty/
+malformed content, one query errored outright with "MCP server connection
+lost"). Filled those two gaps with native WebSearch per the routine's
+fallback rule. Session also ran later than intended (a worker restart
+mid-run pushed queries past the open — quotes below are ~90 min into the
+session, not true premarket).
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $100,000
+- Daytrade count: 0 (0 positions, 0 open orders)
+
+### Market Context
+- WTI / Brent: **Brent $98.6 (+4.8-4.9%), WTI $90.6-90.7 (+4.3-4.8%)** —
+  sharp spike on direct Houthi missile/drone strikes on two Saudi oil
+  tankers in the Red Sea (first direct tanker strikes in that waterway) plus
+  a 12th consecutive day of US strikes on Iranian targets. Trump warned the
+  US will strike Iranian infrastructure for every future tanker attack in
+  the Strait of Hormuz; Iran threatened retaliation against US-linked
+  regional energy assets. Both the Red Sea and Strait of Hormuz are now
+  live risk fronts simultaneously — a meaningful escalation from the
+  single-front conflict noted in the 7/21 entry.
+- S&P 500 futures: **-0.93% to -0.97%**, Dow futures ~-1.0%, Nasdaq futures
+  **-1.3% to -1.36%** — broad risk-off, tech/growth underperforming.
+- VIX: **19.03, +14.3%** on the day (from prior-day close) — a sharp
+  volatility spike, moving from mid-band toward the elevated end of the
+  12-20 "normal" range.
+- Today's catalysts: Oil-tanker attacks + Iran-conflict escalation is the
+  dominant tape driver, overriding company-specific news. LMT beat Q2 and
+  the stock "soared" post-print. Nestlé selling half its water business to
+  Platinum Equity. Broad AI/semis commentary continues (Broadcom, Qualcomm,
+  Vertiv pieces) but is secondary to the macro/oil story today.
+- Earnings before open (BMO): RTX, TMUS, TMO, UNP, HON, LMT (beat, already
+  reacting), STM, NOK, ARGX, NDAQ, AMP, TTE. After close (AMC): INTC, SAP,
+  NEM, DLR, FIX. 183 total earnings prints today (Yahoo calendar) — one of
+  the heaviest days of the cycle.
+- Economic calendar: Light day — weekly initial jobless claims (187k vs
+  ~208k prior, a solid beat/lower) is the only notable US print. **FOMC
+  decision is July 29** (not July 25-26 as prior-session notes had it —
+  correcting that date), CPI not due until Aug 12. No Fed decision risk
+  today, but positioning into next week's meeting is likely amplified by
+  the oil/VIX spike.
+- Sector momentum (YTD, mixed/stale sourcing — flag for next session):
+  Energy sources conflict (one shows XLE +25% YTD as clear leader on the
+  oil rally; another shows XLK +26% YTD Q2-led by AI capex, with a separate
+  source claiming XLK -2.4% YTD). Directionally: Energy, Industrials, and
+  Materials are the sectors benefiting from today's oil/geopolitical spike;
+  Technology is the source of today's futures weakness (Nasdaq futures
+  underperforming S&P/Dow). Do not trade off the conflicting absolute
+  numbers — re-verify via combined_analysis/screener next session.
+- Held tickers: none (0 open positions) — no ticker-specific news to check.
+
+### Trade Ideas
+1. **LMT** (watchlist, Defense theme) — catalyst: Q2 beat, stock "soared."
+   Quote ap $575.90 (bid $556). That's already ~+10% from the 7/21 snapshot
+   ($522.25) — a post-earnings gap well beyond the "no entry within 3% of a
+   print >5% up on the day" chase rule. **AVOID new long today**; watch for
+   a pullback / basing pattern before considering entry.
+2. **NOC** (watchlist, Defense theme) — catalyst: Iran-conflict escalation +
+   sector tailwind (defense benefits from geopolitical risk generically,
+   no NOC-specific news). Quote ap $560.28 (bid $505.30 — very wide spread,
+   treat as illiquid/stale). Up modestly (~+4% from 7/21's $538.85), less
+   extended than LMT. No documented company-specific catalyst though —
+   sector-momentum-only setups fail the "≥1 catalyst required" rule.
+   **AVOID** — flagged for Tier 2 watch, not an entry.
+3. **RTX** (watchlist, Defense theme) — reports Q2 BMO today; quote ap $212
+   (bid $198.58, wide/stale-looking spread) shows no clear reaction posted
+   yet. **No entry — wait for confirmed post-print price/volume reaction**
+   before considering, same as GM in the 7/21 entry.
+
+### Risk Factors
+- Iran conflict has expanded to a second front (direct Red Sea tanker
+  strikes) — active, fast-moving headline risk; oil up ~5% in a session is
+  itself a volatility/gap-risk signal for tomorrow.
+- VIX +14% in a single session — elevated whipsaw risk on any new entry
+  today regardless of setup quality.
+- Heaviest earnings day of the cycle (183 prints) — single-stock gap risk
+  across the board, and RTX (on our watchlist) hasn't confirmed its
+  reaction yet.
+- FOMC meeting July 29 (corrected from earlier "July 25-26" note) — six
+  days out, positioning risk building.
+- Sector-momentum YTD source data was contradictory this run (Energy/Tech
+  disagreement across sources) — don't rely on it for entries until
+  re-verified via combined_analysis next session.
+- Session ran ~90 min later than intended due to a mid-run worker restart;
+  quotes reflect a post-open, not premarket, snapshot.
+
+### Decision
+HOLD — no trade clears the bar today. LMT is extended >5% post-earnings
+(chase-rule violation), NOC has sector tailwind but no documented
+company-specific catalyst, RTX's earnings reaction is unconfirmed. A
+14%-in-a-day VIX spike plus an escalating two-front oil-supply shock is
+exactly the kind of session where patience beats activity — elevated
+whipsaw risk on any new position regardless of setup quality. Revisit LMT
+(post-pullback), NOC (if a distinct catalyst emerges), and RTX (post-print
+reaction) next session.
