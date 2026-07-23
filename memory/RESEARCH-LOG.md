@@ -414,3 +414,54 @@ exactly the kind of session where patience beats activity — elevated
 whipsaw risk on any new position regardless of setup quality. Revisit LMT
 (post-pullback), NOC (if a distinct catalyst emerges), and RTX (post-print
 reaction) next session.
+
+## 2026-07-23 — Gappers (auto-scan 10:09 ET, cloud)
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | STM | $57.76 | -12.23% | 688,631 | STMicroelectronics shares fell after Q3 sales guidance overshadowed strong Q2 earnings and expanded AI data-center targets |
+| 2 | GOOG | $317.90 | -7.03% | 407,474 | Alphabet shares declined after Q2 earnings as capex guidance jumped to $205B for AI investments |
+| 3 | OPEN | $4.12 | -5.72% | 287,938 | Opendoor shares fell as part of a broader selloff hitting high-beta names, with housing and margin concerns weighing ahead of its Aug 4 earnings |
+| 4 | RTX | $205.16 | +5.35% | 93,213 | RTX shares surged after beat-and-raise Q2 earnings and a record $289B backlog, alongside peer Lockheed Martin's outsized move |
+
+Note: run started ~10:09 ET, already past premarket into the first trading
+hour, so gap_pct is vs. prior close using the live snapshot, not a strict
+premarket gap; volume is same-session daily-bar volume, not premarket-only
+volume. Only 4 of 12 raw scan hits cleared all three filters (|gap|≥5%,
+price≥$3, volume≥50k) — WLDS/AGMH excluded on price floor; BWLP/LMT/LUNR/
+BREA/AVAV/KTOS excluded on the 50k volume floor. Deep-dive cap is 5; all 4
+qualifying tickers got the full deep dive below (no quick-scan-only rows
+today). Apify RAG web browser tool was unavailable this run (session
+expired / worker restarts) — fell back to WebSearch + Benzinga WebFetch per
+the routine's documented fallback path.
+
+#### Deep dive: STM $57.76 -12.23%
+- Catalyst: STMicroelectronics beat Q2 2026 estimates with $3.49B revenue (+26% YoY) and gross margin up to 34.8%, and raised its data-center AI revenue target to over $1B in 2026 and $2B+ in 2027 on 800G/1.6T optical demand. Despite the beat, Q3 guidance of $3.7B revenue / 37% gross margin and Q4 guidance above $4B came in below what the market had priced after the stock's recent run, triggering a sharp selloff.
+- Why: Guidance-miss-on-a-beat dynamic — investors had priced in a stronger Q3/Q4 AI ramp, so even solid absolute numbers and raised long-term data-center targets read as "not enough" and triggered profit-taking.
+- Impact: Volume (688k) well above typical for STM with a clean gap-down on the print — reads as a real repricing of near-term growth expectations, not a one-day headline spike, though the raised multi-year AI data-center target argues the longer thesis is intact. No clear semiconductor-peer read-through today.
+- Horizon: SHORT_TERM — single-print reaction; without a second data point confirming a durable de-rating, expect the guidance-vs-beat tug-of-war to resolve within days.
+- Opportunity cost: Account is 100% cash, no existing position to displace. A long entry against the gap fights the trend and doesn't offer a clean 2:1 R:R without a defined support level; would consume 1 of 3 weekly trade slots and up to 20% of equity for a lower-conviction counter-trend idea versus RTX's confirmed beat-and-raise setup below.
+
+#### Deep dive: GOOG $317.90 -7.03%
+- Catalyst: Alphabet beat Q2 2026 estimates with $119.8B revenue (+24% YoY) and EPS of $9.11, and Google Cloud revenue surged 82% to $24.8B with backlog at $514B. The selloff is driven by capex: management raised full-year 2026 AI infrastructure spending guidance to $195-205B (from $180-190B), citing capacity shortages from stronger-than-expected demand.
+- Why: Market is discounting near-term free-cash-flow and margin compression from the capex raise even though the underlying demand signal (cloud backlog, revenue beat) is strong — a "too much of a good thing" reaction common across mega-cap AI capex prints this season.
+- Impact: Volume (407k) elevated with a clean earnings-day gap, not a slow drift — likely to stay volatile through the week as analysts digest, though several sell-side desks are framing the selloff as a buying opportunity given the demand-driven nature of the raise. Read-through to other hyperscalers' capex trajectories likely.
+- Horizon: SHORT_TERM by default (headline-driven capex reaction), with a LONG_TERM upgrade path if the stock stabilizes and cloud backlog growth is confirmed next quarter; not yet aligned with a clean sector-rotation thesis without more confirmation.
+- Opportunity cost: No existing position to displace, cash fully available. A long entry against a 7% earnings gap-down has no defined technical support/stop yet for a clean 2:1 R:R; would use 1 of 3 weekly trade slots on a catch-the-falling-knife idea versus a confirmed-uptrend setup like RTX.
+
+#### Deep dive: OPEN $4.12 -5.72%
+- Catalyst: Opendoor continues to slide on housing-market weakness and thin (8.2%) gross margins ahead of its August 4 earnings report, with KBW cutting its price target to $2.65 (Underperform) on regulatory scrutiny and housing headwinds. Today's move reads as part of a broader selloff hitting high-beta/high-short-interest names rather than a single new company headline.
+- Why: No fresh company-specific catalyst identified today; this looks like beta/momentum unwind in a heavily-shorted, low-priced name during a broad risk-off tape, compounded by pre-earnings positioning nerves.
+- Impact: Volume (288k) elevated but this is a continuation of a multi-week downtrend (stock already broke below $4 pre-earnings), not an isolated spike — reads as trend continuation, not a mean-reversion setup. Sector read-through is a broad high-beta pullback theme, not proptech-specific.
+- Horizon: SHORT_TERM — no structural catalyst, pure momentum/beta unwind into an earnings event; do not hold through the Aug 4 print without a specific thesis.
+- Opportunity cost: No existing position to displace. A long entry here is catching a falling knife into earnings risk and fails the Confluence/catalyst-documented rule (no real catalyst, just broad-market beta); would not clear the strategy's entry checklist at all, let alone the 2:1 R:R minimum.
+
+#### Deep dive: RTX $205.16 +5.35%
+- Catalyst: RTX beat Q2 2026 estimates (adjusted EPS $1.89 vs $1.66 consensus) and raised full-year adjusted EPS guidance to $7.10-7.25 (from $6.70-6.90) and sales guidance to $95-96B, with organic growth guidance raised to 8-9%. Backlog hit a record $289B (+22%), including $43B in new Q2 orders led by Raytheon's Patriot, Standard Missile, and AMRAAM programs.
+- Why: Classic beat-and-raise — record backlog plus an EPS/sales guidance raise gives momentum buyers a durable reason to bid the stock, not just a one-time earnings pop.
+- Impact: Volume (93k) supports the move and it's confirmed by sector-wide read-through — Lockheed Martin jumped roughly 10% on its own beat-and-raise print the same day, and LMT/AVAV/KTOS were also gapping up today in this scan (below the volume/price filter cutoffs), signaling genuine defense-sector strength, not an isolated single-stock move.
+- Horizon: LONG_TERM — record backlog and raised full-year guidance are structural, and defense/industrials fits a late-cycle sector-rotation tilt; worth evaluating for a multi-week swing hold if it clears the Confluence rule on a later /trade check.
+- Opportunity cost: No existing position to displace (100% cash). Strongest setup of today's 4 gappers — sector-confirmed beat-and-raise vs. the other three's guidance-miss/beta-unwind stories. Would use 1 of 3 weekly trade slots and up to 20% of equity ($2,000 max); needs a defined stop (7-10% below entry) to confirm it clears the 2:1 min R:R before sizing in /trade.
+
+Research-only. No orders placed.
