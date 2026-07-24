@@ -679,3 +679,104 @@ SLMT (Solana infra pivot); Alpaca's feed may be lagging the rename.
   account's max-3-new-trades-per-week budget.
 
 Research-only. No orders placed.
+
+## 2026-07-24 — Pre-market Research
+
+Note: `mcp__Apify__apify--rag-web-browser` was queried first (oil query
+returned only run metadata, no scraped text, before the MCP connection
+dropped mid-run for VIX/futures/catalysts/earnings/econ-calendar/sector
+queries — same failure mode as 2026-07-23). Fell back to native WebSearch
+for all seven queries per the routine's fallback rule. WebSearch results
+for a same-day query returned same-day intraday/close-level coverage
+(e.g. "as of the close," Friday wrap pieces) rather than strictly
+premarket snapshots — flagging so today's levels aren't read as a true
+premarket-only print.
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $400,000 (4x margin buying power on paper; RegT $200,000)
+- Daytrade count: 0 (0 positions, 0 open orders)
+
+### Market Context
+- WTI / Brent: **Brent ~$97-98.4 (-2.3%), WTI ~$87.9-90 (-4.7%)** — sharp
+  pullback from 7/23's spike on reports the stalled US-Iran peace talks may
+  be moving toward a path forward (Reuters/Pakistan mediation angle);
+  Brent's ~4% one-day drop is its biggest since late June. De-escalation,
+  not resolution — Iran conflict remains a live headline-risk front.
+- S&P 500 futures: **+0.1% to +0.2%** premarket, attempting to stabilize
+  after Thursday 7/23's S&P 500 worst single-day drop in a month (tech
+  capex anxiety + oil spike). Tentative, not a confirmed reversal.
+- VIX: **~18.6-18.8**, roughly flat to down slightly on the day — moderate,
+  mid-band; no acute fear signal despite the prior day's selloff.
+- Today's catalysts: Post-selloff stabilization attempt. Semiconductor
+  index -4.3% Thursday; **INTC -6.5%** despite an EPS beat (market
+  discounting guidance/outlook); **SNDK (Sandisk) -11%** dragging memory
+  names. **GOOG** capex raise to $195-205B (from $180-190B) continues to
+  overhang mega-cap tech sentiment even after a Q2 beat + 82% cloud growth
+  — same "good quarter, scary capex" pattern flagged 7/23. Oil retreat is
+  the session's positive offset, giving the Dow relief.
+- Earnings before open: CHTR, AXP, VZ, CNI, SXT, SLB, BAH, GRC, CPF, FLG —
+  none on our watchlist.
+- Economic calendar: No CPI/PPI/jobs prints confirmed for today via search
+  (PPI next due Aug 13). Light data day — consistent with 7/23's note that
+  FOMC (July 29) is the next real catalyst, five days out.
+- Sector momentum (YTD 2026): **Materials (XLB) leading, +22% YTD**,
+  breaking out of a long consolidation. Consumer Staples, Industrials,
+  Energy also in the leading/improving group. **Technology (XLK) +26% YTD
+  but now flagged Lagging/downgraded for 2H** alongside Communications,
+  Consumer Discretionary, Financials — momentum rotating away from mega-cap
+  tech after its Q2 run, consistent with today's INTC/SNDK/GOOG weakness.
+  Healthcare weakening; Real Estate and Utilities improving (defensive
+  bid). Directionally confirms the Materials/Energy/Industrials
+  late-cycle tilt flagged 7/23, now with corroborating source agreement
+  (last session's Energy-vs-Tech conflict is resolved: Energy/Materials
+  lead, Tech lags).
+- Held tickers: none (0 open positions) — no ticker-specific news to check.
+
+### Trade Ideas
+1. **RTX** (watchlist, Defense) — quote ap $225.49 today vs $205.16 logged
+   7/23 (already +5.35% that day on its beat-and-raise print) — now
+   **~+9.9% cumulative over two sessions**. Further extended, not less.
+   Fails the "no entry within 3% of a print >5% up" chase rule even harder
+   than yesterday. **AVOID** — needs a real pullback/base, not a
+   continuation entry.
+2. **LMT** (watchlist, Defense) — quote ap $612.26 vs $575.90 on 7/23
+   (already extended then) — **another ~+6.3% since**. Same chase-rule
+   violation, worse. **AVOID**.
+3. **NOC** (watchlist, Defense) — bid $506.83, **no ask posted (ap $0)** —
+   illiquid/stale quote, unchanged from 7/23's flagged wide-spread read.
+   Still no company-specific catalyst, sector-momentum-only. **AVOID**.
+4. **GOOG** (watchlist, mega-cap core) — down sharply post-earnings on the
+   capex raise despite a beat; no confluence check run this session
+   (no combined_analysis pull for RSI/VWAP/200-SMA). Flag for Tier 2 —
+   worth a full technical read next session before treating the dip as
+   a value entry vs. a falling-knife.
+
+### Risk Factors
+- Iran conflict de-escalating on headlines but unresolved — a single
+  contradicting report could reverse today's oil relief and futures
+  stabilization intraday.
+- Defense-theme watchlist (RTX/LMT) now two sessions extended off its
+  beat-and-raise catalyst — momentum chasers get squeezed on any pullback;
+  do not enter without a confirmed base.
+- Tech/semis sentiment fragile — INTC selling off despite a beat, GOOG
+  capex overhang — mega-cap tech named as "Lagging" in fresh sector-rotation
+  data; avoid adding tech exposure into this rotation.
+- FOMC five days out (July 29) — positioning risk building into the
+  meeting.
+- WebSearch fallback this session returned intraday/close-level coverage
+  rather than a clean premarket snapshot (Apify dropped again, same as
+  7/23) — re-verify opening-print levels via `/gappers` or `/pipeline`
+  once the market opens rather than trusting these levels as premarket-final.
+
+### Decision
+HOLD — no trade clears the bar. Defense names (RTX/LMT) are more extended
+today than yesterday, not less — the chase rule is even more clearly
+violated. NOC remains illiquid with no distinct catalyst. GOOG is an
+interesting dip but wasn't run through the confluence checklist this
+session. Two straight sessions of Apify dropping mid-run plus a volatile,
+still-unresolved geopolitical/capex backdrop argues for patience over
+forcing a trade. Revisit RTX/LMT only on a confirmed pullback/base; run
+GOOG through full confluence (combined_analysis) before considering it a
+dip-buy candidate.
