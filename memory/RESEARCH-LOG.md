@@ -529,3 +529,153 @@ the routine's documented fallback path.
 - Opportunity cost: No existing position to displace (100% cash). Strongest setup of today's 4 gappers — sector-confirmed beat-and-raise vs. the other three's guidance-miss/beta-unwind stories. Would use 1 of 3 weekly trade slots and up to 20% of equity ($2,000 max); needs a defined stop (7-10% below entry) to confirm it clears the 2:1 min R:R before sizing in /trade.
 
 Research-only. No orders placed.
+
+## 2026-07-24 — Gappers (auto-scan 18:39 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+run mid/late session (Apify RAG connector was unavailable this run —
+disconnected for the full scan — so catalyst research fell back to
+WebFetch/Benzinga per the routine's documented fallback, with WebSearch used
+for the two deep-dive fundamentals queries and one WebFetch 404). 21 raw
+candidates; filters (|gap| >= 5%, price >= $3) cut WLDS ($2.69, price floor)
+from an otherwise-qualifying 21. Premarket-volume field wasn't populated
+(scan ran outside premarket hours), so that floor was skipped per the
+routine's conditional. Ranked by |gap%|, capped at top 10. Deep-dive cap is
+5 — ranks 6-10 (OKLO, ZIM, GFS, ASTS, BREA) got quick-scan only.
+
+Notable cross-cutting theme: 5 of the top 10 (RKLB, BE, NBIS, ASTS, OKLO)
+are AI-infrastructure/space names all gapping down the same session —
+reads as a basket-wide AI-infra rotation, not five independent
+company-specific breaks. BREA's ticker has reportedly since changed to
+SLMT (Solana infra pivot); Alpaca's feed may be lagging the rename.
+
+### Gappers (auto-scan 18:39 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $9.27 | -15.84% | 36,856 | Buyback + $61.4M note redemption "failed to offset weak momentum" |
+| 2 | RKLB | $63.44 | -9.39% | 142,869 | $266M Space Force contract; gap likely Iridium-deal dilution overhang |
+| 3 | BE | $198.39 | -8.79% | 147,732 | JPM raised PT ~30%, but stock down on post-parabolic profit-taking |
+| 4 | NBIS | $202.50 | -8.39% | 306,825 | Rotation out of AI-infra names, reversing Google-CFO-driven gains |
+| 5 | PL | $20.555 | -8.07% | 117,714 | No PL-specific headline found; unclear vs. broader market rally |
+| 6 | OKLO | $40.49 | -7.97% | 65,107 | Joining govt program to accelerate AI data-center power plants |
+| 7 | ZIM | $23.615 | -7.75% | 5,797 | Regulatory review update on proposed Hapag-Lloyd merger |
+| 8 | GFS | $53.005 | -6.88% | 24,569 | Strategic partnership with SEALSQ on post-quantum crypto/quantum computing |
+| 9 | ASTS | $55.26 | -6.69% | 56,090 | Down after $1.15B capital raise, analyst updates, high short interest pre-earnings |
+| 10 | BREA | $26.28 | +6.66% | 18,327 | $300M PIPE tied to Solana crypto-infra pivot; ticker since renamed SLMT |
+
+#### Deep dive: BW $9.27 -15.84%
+- Catalyst: BW is executing a $61.4M note redemption plus a share buyback.
+  Q1 2026 results were actually strong (revenue $214.4M, +44% YoY; adjusted
+  EBITDA $16.1M, +296%; bookings surged to $2.5B, backlog $2.7B) on AI
+  data-center/hyperscaler demand, but shares fell anyway per Benzinga on
+  weak momentum outweighing the capital-structure moves.
+- Why: Capital-structure actions (buyback + note redemption) are usually
+  bullish, but a stock already up huge on the AI-power-demand narrative can
+  gap down on profit-taking or de-risking around balance-sheet flags
+  (stockholders' deficit -$172.1M, warrants liability $142.8M).
+- Impact: Volume (36,856) is thin relative to a -15.8% move — reads as a
+  single-name reversal/profit-take, not institutional distribution.
+  Balance-sheet deficit is a real overhang; could extend if AI-power
+  enthusiasm cools sector-wide.
+- Horizon: SHORT_TERM, no new negative catalyst — looks like a momentum
+  flush after an extended run, not a structural change to the backlog
+  story.
+- Opportunity cost: Account is pre-launch (100% cash, no positions to
+  displace). BW's -15.84% is the largest gap today, but at $9.27 a
+  compliant stop (10% trail, never within 3%) is wide relative to the
+  price — likely hard to clear 2:1 R:R cleanly. Watch, not a top candidate
+  today.
+
+#### Deep dive: RKLB $63.44 -9.39%
+- Catalyst: Rocket Lab disclosed an ~$8B stock-and-cash acquisition of
+  Iridium ($54/share) and won a $266M USAF suborbital contract (12 launches
+  through 2028, $112M upfront) in the past week. Today's gap down likely
+  reflects deal-related dilution/financing overhang plus a broader pullback
+  across space/AI-infrastructure names.
+- Why: Large stock-and-cash M&A raises dilution/integration concerns even
+  when strategically sound, prompting sellers to de-risk into strength;
+  compounds with a same-day rotation out of high-multiple space/AI names
+  (mirrors NBIS's -8.4% move today).
+- Impact: Volume (142,869) is well above the list's thin-volume gappers,
+  suggesting real institutional repositioning rather than noise.
+  Fundamentals intact (backlog $1.1-2.2B, FY26 revenue guide raised to
+  $850-900M) — reads as a sentiment/positioning air-pocket, not a broken
+  thesis.
+- Horizon: SHORT_TERM for the gap itself (deal-related profit-taking), but
+  the Iridium acquisition is a LONG_TERM structural catalyst (vertical
+  integration into satellite services/recurring revenue) worth tracking for
+  a swing entry once terms settle.
+- Opportunity cost: No existing positions to bump. RKLB's fundamentals/
+  backlog are the strongest of the group, but buying into a fresh
+  M&A-driven selloff before dilution is fully priced risks a wide stop that
+  may miss 2:1 R:R — better to wait for a base to form.
+
+#### Deep dive: BE $198.39 -8.79%
+- Catalyst: JPMorgan turned more bullish on Bloom Energy, but the stock
+  still gapped down -8.79% after a monster run (+194% YTD, +1,100% over 12
+  months). Q1 revenue was +130% YoY, backlog $20-24B on Oracle (2.8GW) and
+  Brookfield ($25B financing) AI-power deals.
+- Why: Even bullish analyst notes can't stop "sell the strength" after a
+  parabolic run built on backlog/guidance beats — classic distribution
+  after an extended move, amplified by today's sector-wide AI-infra
+  de-risking (also hit NBIS, RKLB, ASTS, OKLO).
+- Impact: Volume (147,732) is meaningfully elevated — real profit-taking/
+  rotation, not a thin-volume fluke. Fundamentals remain excellent (raised
+  FY26 guidance, positive FCF), so this looks like a valuation correction
+  rather than a broken story, though further mean reversion is plausible
+  given the size of the prior run.
+- Horizon: SHORT_TERM, no negative fundamental catalyst — classic
+  post-parabolic profit-taking. Could become a LONG_TERM re-entry if it
+  stabilizes and the AI-power-demand thesis keeps playing out.
+- Opportunity cost: No existing positions to bump. BE is the most expensive
+  top-5 name at $198.39 — a 20%-of-equity ($2,000) position on a $10K
+  account buys ~10 shares, and single-day -8.8% swings make a compliant
+  stop expensive in R terms; likely fails 2:1 R:R at a sane stop distance
+  on this account size.
+
+#### Deep dive: NBIS $202.50 -8.39%
+- Catalyst: Nebius fell as part of a broad rotation out of AI-
+  infrastructure/neocloud names, reversing gains from Google's CFO
+  signaling expanded third-party capacity buying. Underlying business
+  remains strong: Q1 revenue +684% YoY, ARR $1.92B, multi-year Microsoft
+  ($17-19B) and Meta (~$27B) contracts, $9.3B cash, FY26 capex guide raised
+  to $20-25B.
+- Why: Same mechanism as RKLB/BE — a sector-wide AI-infra rotation on
+  valuation/rate jitters, not company-specific bad news.
+- Impact: Volume (306,825) is the highest of the top 5 by far, signaling a
+  real institutional rotation rather than noise. Fundamental story intact
+  ($44B+ contract book, industry-leading growth) — reads as basket-wide
+  profit-taking (RKLB, BE, NBIS, ASTS, OKLO all red today), not a
+  Nebius-specific problem.
+- Horizon: SHORT_TERM for the gap (sector rotation, not fundamentals),
+  though the AI-cloud infrastructure buildout is a LONG_TERM structural
+  theme that could support a swing re-entry once the rotation stabilizes.
+- Opportunity cost: No existing positions to bump. NBIS at $202.50 is the
+  most expensive name on the list; a 20%-of-equity position buys ~10
+  shares. Five AI-infra names moved together today — taking NBIS would
+  concentrate the week's one new-trade slot into a single macro theme
+  rather than diversifying, and a sane stop likely won't clear 2:1 R:R at
+  this price/volatility.
+
+#### Deep dive: PL $20.555 -8.07%
+- Catalyst: No confirmed PL-specific negative catalyst. Underlying
+  fundamentals are strong: FY26 revenue outlook raised to $425-441M,
+  backlog above $900M, added to Russell 1000/Midcap/Growth indices in late
+  June, launching new Pelican Gen 2 satellites.
+- Why: Unclear standalone catalyst — most likely index-related mechanical
+  flow (recent Russell reclassification can cause temporary rebalancing
+  dislocations) or a pullback after the index-inclusion pop, rather than a
+  new negative fundamental print.
+- Impact: Volume (117,714) is moderate-to-high. Absent a clear negative
+  catalyst, this looks more like index-rebalancing/technical mean reversion
+  than a fundamentals-driven move — needs catalyst confirmation before
+  treating as tradeable.
+- Horizon: SHORT_TERM by default (no confirmed catalyst) — unexplained
+  moves without a clear driver should not be assumed structural.
+- Opportunity cost: No existing positions to bump. PL is the cheapest
+  top-5 name ($20.555), which makes fitting 2:1 R:R within the 20%-per-
+  position cap easier, but with the catalyst unconfirmed it would compete
+  with RKLB/NBIS's more clearly fundamentals-backed setups for the
+  account's max-3-new-trades-per-week budget.
+
+Research-only. No orders placed.

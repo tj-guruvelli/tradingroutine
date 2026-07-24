@@ -1,0 +1,121 @@
+{
+  "scanned_at": "2026-07-24T22:39:23Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BW",
+      "price": 9.27,
+      "gap_pct": -15.84,
+      "premarket_volume": 36856,
+      "catalyst": "BW investors are weighing a $61.4M note redemption and buyback plan, which failed to offset weak momentum as shares declined.",
+      "headlines": [],
+      "catalyst_detail": "BW is executing a $61.4M note redemption plus a share buyback. Q1 2026 results were actually strong (revenue $214.4M, +44% YoY; adjusted EBITDA $16.1M, +296%; bookings surged to $2.5B, backlog $2.7B) on AI data-center/hyperscaler demand, but shares fell anyway per Benzinga on weak momentum outweighing the capital-structure moves.",
+      "why": "Capital-structure actions (buyback + note redemption) are usually bullish, but a stock already up huge on the AI-power-demand narrative can gap down on profit-taking or de-risking around balance-sheet flags (stockholders' deficit -$172.1M, warrants liability $142.8M).",
+      "impact": "Volume (36,856) is thin relative to a -15.8% move -- reads as a single-name reversal/profit-take, not institutional distribution. Balance-sheet deficit is a real overhang; could extend if AI-power enthusiasm cools sector-wide.",
+      "horizon": "SHORT_TERM, no new negative catalyst -- looks like a momentum flush after an extended run, not a structural change to the backlog story.",
+      "opportunity_cost": "Account is pre-launch (100% cash, no positions to displace). BW's -15.84% is the largest gap today, but at $9.27 a compliant stop (10% trail, never within 3%) is wide relative to the price -- likely hard to clear 2:1 R:R cleanly. Watch, not a top candidate today."
+    },
+    {
+      "rank": 2,
+      "symbol": "RKLB",
+      "price": 63.44,
+      "gap_pct": -9.39,
+      "premarket_volume": 142869,
+      "catalyst": "Rocket Lab secured a $266M Space Force suborbital launch contract, though shares are down today alongside the broader space/AI-infra group.",
+      "headlines": [],
+      "catalyst_detail": "Rocket Lab disclosed an ~$8B stock-and-cash acquisition of Iridium ($54/share) and won a $266M USAF suborbital contract (12 launches through 2028, $112M upfront) in the past week. Today's gap down likely reflects deal-related dilution/financing overhang plus a broader pullback across space/AI-infrastructure names.",
+      "why": "Large stock-and-cash M&A raises dilution/integration concerns even when strategically sound, prompting sellers to de-risk into strength; compounds with a same-day rotation out of high-multiple space/AI names (mirrors NBIS's -8.4% move today).",
+      "impact": "Volume (142,869) is well above the list's thin-volume gappers, suggesting real institutional repositioning rather than noise. Fundamentals intact (backlog $1.1-2.2B, FY26 revenue guide raised to $850-900M) -- reads as a sentiment/positioning air-pocket, not a broken thesis.",
+      "horizon": "SHORT_TERM for the gap itself (deal-related profit-taking), but the Iridium acquisition is a LONG_TERM structural catalyst (vertical integration into satellite services/recurring revenue) worth tracking for a swing entry once terms settle.",
+      "opportunity_cost": "No existing positions to bump. RKLB's fundamentals/backlog are the strongest of the group, but buying into a fresh M&A-driven selloff before dilution is fully priced risks a wide stop that may miss 2:1 R:R -- better to wait for a base to form."
+    },
+    {
+      "rank": 3,
+      "symbol": "BE",
+      "price": 198.39,
+      "gap_pct": -8.79,
+      "premarket_volume": 147732,
+      "catalyst": "JPMorgan raised its price target on Bloom Energy by nearly 30%, yet shares are down today.",
+      "headlines": [],
+      "catalyst_detail": "JPMorgan turned more bullish on Bloom Energy, but the stock still gapped down -8.79% after a monster run (+194% YTD, +1,100% over 12 months). Q1 revenue was +130% YoY, backlog $20-24B on Oracle (2.8GW) and Brookfield ($25B financing) AI-power deals.",
+      "why": "Even bullish analyst notes can't stop 'sell the strength' after a parabolic run built on backlog/guidance beats -- classic distribution after an extended move, amplified by today's sector-wide AI-infra de-risking (also hit NBIS, RKLB, ASTS, OKLO).",
+      "impact": "Volume (147,732) is meaningfully elevated -- real profit-taking/rotation, not a thin-volume fluke. Fundamentals remain excellent (raised FY26 guidance, positive FCF), so this looks like a valuation correction rather than a broken story, though further mean reversion is plausible given the size of the prior run.",
+      "horizon": "SHORT_TERM, no negative fundamental catalyst -- classic post-parabolic profit-taking. Could become a LONG_TERM re-entry if it stabilizes and the AI-power-demand thesis keeps playing out.",
+      "opportunity_cost": "No existing positions to bump. BE is the most expensive top-5 name at $198.39 -- a 20%-of-equity ($2,000) position on a $10K account buys ~10 shares, and single-day -8.8% swings make a compliant stop expensive in R terms; likely fails 2:1 R:R at a sane stop distance on this account size."
+    },
+    {
+      "rank": 4,
+      "symbol": "NBIS",
+      "price": 202.5,
+      "gap_pct": -8.39,
+      "premarket_volume": 306825,
+      "catalyst": "Nebius shares fell 15% (intraday) as a market rotation out of AI-infrastructure names took hold, reversing recent gains tied to Google's CFO signaling expanded third-party cloud capacity.",
+      "headlines": [],
+      "catalyst_detail": "Nebius fell as part of a broad rotation out of AI-infrastructure/neocloud names, reversing gains from Google's CFO signaling expanded third-party capacity buying. Underlying business remains strong: Q1 revenue +684% YoY, ARR $1.92B, multi-year Microsoft ($17-19B) and Meta (~$27B) contracts, $9.3B cash, FY26 capex guide raised to $20-25B.",
+      "why": "Same mechanism as RKLB/BE -- a sector-wide AI-infra rotation on valuation/rate jitters, not company-specific bad news.",
+      "impact": "Volume (306,825) is the highest of the top 5 by far, signaling a real institutional rotation rather than noise. Fundamental story intact ($44B+ contract book, industry-leading growth) -- reads as basket-wide profit-taking (RKLB, BE, NBIS, ASTS, OKLO all red today), not a Nebius-specific problem.",
+      "horizon": "SHORT_TERM for the gap (sector rotation, not fundamentals), though the AI-cloud infrastructure buildout is a LONG_TERM structural theme that could support a swing re-entry once the rotation stabilizes.",
+      "opportunity_cost": "No existing positions to bump. NBIS at $202.50 is the most expensive name on the list; a 20%-of-equity position buys ~10 shares. Five AI-infra names moved together today -- taking NBIS would concentrate the week's one new-trade slot into a single macro theme rather than diversifying, and a sane stop likely won't clear 2:1 R:R at this price/volatility."
+    },
+    {
+      "rank": 5,
+      "symbol": "PL",
+      "price": 20.555,
+      "gap_pct": -8.07,
+      "premarket_volume": 117714,
+      "catalyst": "No PL-specific headline found; nearest news is a broad market rally (S&P 500 up, oil down on Iran-talk hopes) -- opposite direction of PL's move.",
+      "headlines": [],
+      "catalyst_detail": "No confirmed PL-specific negative catalyst. Underlying fundamentals are strong: FY26 revenue outlook raised to $425-441M, backlog above $900M, added to Russell 1000/Midcap/Growth indices in late June, launching new Pelican Gen 2 satellites.",
+      "why": "Unclear standalone catalyst -- most likely index-related mechanical flow (recent Russell reclassification can cause temporary rebalancing dislocations) or a pullback after the index-inclusion pop, rather than a new negative fundamental print.",
+      "impact": "Volume (117,714) is moderate-to-high. Absent a clear negative catalyst, this looks more like index-rebalancing/technical mean reversion than a fundamentals-driven move -- needs catalyst confirmation before treating as tradeable.",
+      "horizon": "SHORT_TERM by default (no confirmed catalyst) -- unexplained moves without a clear driver should not be assumed structural.",
+      "opportunity_cost": "No existing positions to bump. PL is the cheapest top-5 name ($20.555), which makes fitting 2:1 R:R within the 20%-per-position cap easier, but with the catalyst unconfirmed it would compete with RKLB/NBIS's more clearly fundamentals-backed setups for the account's max-3-new-trades-per-week budget."
+    },
+    {
+      "rank": 6,
+      "symbol": "OKLO",
+      "price": 40.49,
+      "gap_pct": -7.97,
+      "premarket_volume": 65107,
+      "catalyst": "Oklo shares moved on reports the company is joining a government program to accelerate AI data-center power plants alongside Microsoft and Nvidia.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "ZIM",
+      "price": 23.615,
+      "gap_pct": -7.75,
+      "premarket_volume": 5797,
+      "catalyst": "ZIM shares declined following updates on the regulatory review process for its proposed merger with Hapag-Lloyd, expected to close in 2026.",
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "GFS",
+      "price": 53.005,
+      "gap_pct": -6.88,
+      "premarket_volume": 24569,
+      "catalyst": "GlobalFoundries announced a strategic partnership with SEALSQ focused on post-quantum cryptography and quantum computing development.",
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "ASTS",
+      "price": 55.26,
+      "gap_pct": -6.69,
+      "premarket_volume": 56090,
+      "catalyst": "AST SpaceMobile fell following its recent $1.15B capital raise, analyst rating updates, and elevated short interest ahead of Q2 earnings.",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "BREA",
+      "price": 26.28,
+      "gap_pct": 6.66,
+      "premarket_volume": 18327,
+      "catalyst": "Brera Holdings closed a ~$300M PIPE financing tied to its pivot into a Solana-based crypto infrastructure company; the company has since completed a ticker change to SLMT, so Alpaca's BREA feed may be lagging the rename.",
+      "headlines": []
+    }
+  ]
+}
