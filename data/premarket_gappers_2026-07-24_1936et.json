@@ -1,0 +1,95 @@
+{
+  "scanned_at": "2026-07-24T23:36:05Z",
+  "deep_dive_cap": 5,
+  "note": "Second same-day gappers-cloud run (see premarket_gappers_2026-07-24.json for the 18:39 ET run); saved under a time-suffixed filename to avoid clobbering the earlier same-day scan.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "OPEN",
+      "price": 3.935,
+      "gap_pct": -9.95,
+      "premarket_volume": 2623820,
+      "catalyst": "Opendoor shares slumped roughly 12% on a technical breakdown exposing lower support, extending a multi-week downtrend ahead of its Aug 4 Q2 earnings report.",
+      "headlines": [],
+      "catalyst_detail": "Opendoor shares fell sharply (toward ~$3.88-3.94) as a technical breakdown exposed lower support levels, continuing a multi-week downtrend ahead of Q2 earnings on Aug 4. KBW recently cut its price target to $2.65 (Underperform) citing regulatory scrutiny and housing-market headwinds, and consensus expects a wider per-share loss than a year ago on revenue down sharply from $1.57B to ~$900M.",
+      "why": "No fresh single-day company catalyst identified -- this is beta/momentum unwind in a heavily-shorted, low-priced high-beta name compounded by a broken technical support level and pre-earnings positioning nerves.",
+      "impact": "Volume elevated (2.6M) and this extends a multi-week downtrend rather than an isolated spike -- reads as trend continuation into a binary earnings event, not mean-reversion. No distinct sector read-through (proptech-specific, not a broad real-estate move).",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Account is 100% cash so nothing to displace, but a long here fights the trend and fails the catalyst-documented half of the Confluence rule -- there is no clean support level for a 7-10% stop, so it can't be sized to clear the 2:1 R:R minimum. Would burn 1 of 3 weekly trade slots on the weakest-conviction setup on today's list versus RTX's confirmed beat-and-raise."
+    },
+    {
+      "rank": 2,
+      "symbol": "UMAC",
+      "price": 21.625,
+      "gap_pct": 9.77,
+      "premarket_volume": 104194,
+      "catalyst": "Unusual Machines shares extended a strong run on fresh bullish analyst coverage (7 Strong Buy ratings, ~$34.9 avg target) tied to demand for domestically-made drone components.",
+      "headlines": [],
+      "catalyst_detail": "Unusual Machines (FPV/drone components) continued a strong run on fresh bullish analyst coverage tied to demand for domestically-manufactured unmanned-aircraft parts -- 7 of 7 covering analysts rate it Strong Buy with an average 12-month target near $34.9 versus ~$21.6 today. Broader drone/defense-tech sentiment was also lifted by unrelated headlines about a Trump-linked robotics startup securing AMD chips for military-humanoid development, reviving interest in the domestic-hardware/defense-tech theme UMAC sits in.",
+      "why": "Analyst target hikes plus a re-energized reshoring/domestic-defense-hardware narrative are pulling in momentum buyers on a stock already in a strong uptrend.",
+      "impact": "Volume (104k) is only moderately above the 50k floor, and the stock screens as expensive on valuation checks after a strong 1-year run -- reads as continuation of an existing momentum trade rather than a fresh one-day spike, with stretched valuation raising mean-reversion risk. Sector read-through aligns with today's broader defense/hardware strength also seen in RTX.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "100% cash, nothing to displace. Small-cap, thin liquidity, already extended after a big run -- chasing here risks buying the top of a stretched move, and a same-day 2:1 R:R would need a tight stop on a volatile name. Would consume 1 of 3 weekly trade slots on a chase-risk setup versus RTX's cleaner beat-and-raise or waiting for a pullback entry."
+    },
+    {
+      "rank": 3,
+      "symbol": "GOOG",
+      "price": 316.745,
+      "gap_pct": -7.37,
+      "premarket_volume": 1650436,
+      "catalyst": "Alphabet shares fell despite a Q2 revenue/EPS beat after management raised 2026 AI capex guidance to $195-205B, pushing the stock below its 200-day moving average.",
+      "headlines": [],
+      "catalyst_detail": "Alphabet reported Q2 2026 revenue of $119.8B (+24% YoY) and EPS of $9.11, both above consensus, but shares fell roughly 7% -- breaking below the 200-day moving average for the first time in over a year -- after management raised full-year 2026 AI infrastructure capex guidance to $195-205B, up from a prior $180-190B range, citing capacity shortages from stronger-than-expected cloud demand.",
+      "why": "A 'too much of a good thing' reaction -- the market is discounting near-term free-cash-flow and margin compression from the capex raise even though the underlying demand signal (cloud backlog, revenue beat) is strong, a pattern repeating across mega-cap AI-capex prints this season.",
+      "impact": "Volume (1.65M) elevated on a clean earnings-day gap, not a slow drift -- likely to stay volatile through the week as analysts digest. Direct read-through to MSFT and QCOM also gapping down in today's scan, confirming a broader mega-cap AI-capex de-rating theme rather than a GOOG-specific issue.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "100% cash, nothing to displace. A long against a 7% earnings gap-down has no defined technical support/stop yet for a clean 2:1 R:R; would use 1 of 3 weekly trade slots on a catch-the-falling-knife idea versus RTX's confirmed uptrend setup. Second consecutive session GOOG has shown up as a gapper on the same capex story -- repeat appearance without a new catalyst argues for continued patience, not chasing."
+    },
+    {
+      "rank": 4,
+      "symbol": "RTX",
+      "price": 209.085,
+      "gap_pct": 7.37,
+      "premarket_volume": 487454,
+      "catalyst": "RTX shares jumped after a Q2 beat-and-raise print, a record $289B backlog, and its first domestic Patriot production order in over 30 years.",
+      "headlines": [],
+      "catalyst_detail": "RTX (Raytheon) beat Q2 2026 estimates (adjusted EPS $1.89, +21% YoY) on sales of $24.7B (+16% organically) and raised full-year adjusted EPS guidance to $7.10-7.25 (from $6.70-6.90) and sales guidance to $95-96B. Raytheon booked its first domestic GEM-T Patriot production order in over 30 years plus $5B in international Patriot orders, pushing backlog to a record $289B (+22% YoY, book-to-bill 2.42).",
+      "why": "Classic beat-and-raise -- record backlog plus a guidance raise gives momentum buyers a durable reason to bid the stock, not just a one-time earnings pop; the first-Patriot-order-in-30-years headline reinforces a structural, not one-off, demand story.",
+      "impact": "Volume (487k) supports the move. Second straight session RTX has appeared as a gapper on the same beat-and-raise print, with peer defense names also strong -- signals genuine sector strength, not an isolated single-stock move.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "100% cash, nothing to displace. Strongest setup on today's list -- sector-confirmed beat-and-raise vs. the mega-cap capex-selloff and beta-unwind stories elsewhere on the list. Would use 1 of 3 weekly trade slots and up to 20% of equity; needs a defined stop (7-10% below entry, never within 3% of current price) to confirm a 2:1 R:R before /trade sizing. Same name flagged as the top idea in yesterday's (2026-07-23) research log -- two-session confirmation strengthens the case."
+    },
+    {
+      "rank": 5,
+      "symbol": "BMNR",
+      "price": 16.495,
+      "gap_pct": -6.97,
+      "premarket_volume": 1832841,
+      "catalyst": "BitMine Immersion pulled back with the broader crypto selloff as Ethereum weakness compressed the value of its ~5.75M ETH treasury, compounded by an $83.6M quarterly net loss.",
+      "headlines": [],
+      "catalyst_detail": "BitMine Immersion Technologies (a large Ethereum treasury company holding ~5.74-5.77M ETH, roughly 4.8% of ETH supply, plus cash/securities totaling ~$11.1-11.3B) pulled back from a July high above $17 into the mid-$16s as the broader crypto market sold off; the company also disclosed an $83.6M net loss on $46.5M revenue in its latest quarter.",
+      "why": "BMNR's stock is a leveraged proxy for Ethereum price -- the crypto-wide downturn is compressing the market value of its treasury holdings, and the reported net loss adds a fundamental headwind on top of the crypto-driven move.",
+      "impact": "Volume (1.83M) elevated; this reads as continuation of a volatile pullback (stock ran roughly $13 to $17+ then back to mid-$16s this month) tied directly to ETH's price action, not an isolated single-stock headline -- high beta to crypto means it will keep moving with BTC/ETH regardless of company-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "100% cash, nothing to displace. Extremely high-beta/volatile name (deep losses, negative margins) -- a position here is effectively a leveraged crypto bet, not a stock-specific setup, and fails the specific-catalyst prong of the Entry Checklist beyond generic crypto-market direction. Would consume 1 of 3 weekly trade slots and carries outsized single-name risk relative to RTX's cleaner, less volatile beat-and-raise setup."
+    },
+    {
+      "rank": 6,
+      "symbol": "MSFT",
+      "price": 364.13,
+      "gap_pct": -6.7,
+      "premarket_volume": 1350874,
+      "catalyst": "Microsoft shares fell on continued investor scrutiny of AI-datacenter capex spend ahead of its July 29 earnings report.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "QCOM",
+      "price": 165.63,
+      "gap_pct": -5.67,
+      "premarket_volume": 286032,
+      "catalyst": "Qualcomm shares extended a multi-week decline (down over 30% since May) as investors de-risk ahead of July 29 fiscal Q3 earnings.",
+      "headlines": []
+    }
+  ]
+}

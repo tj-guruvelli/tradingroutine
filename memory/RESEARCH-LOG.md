@@ -798,7 +798,10 @@ watchlist source and threshold, but this snapshot pulled a smaller/different
 top-10 roster (only 7 names cleared filters here vs. 21 raw candidates at
 18:39) -- consistent with intraday price action shifting which names cross
 the +/-5% gap threshold as the session progressed, not a scan-methodology
-change. Only GOOG and RTX recur across both snapshots.
+change. Only GOOG and RTX recur across both snapshots. Saved to
+data/premarket_gappers_2026-07-24_1936et.json (time-suffixed) rather than
+the standard filename, since the 18:39 ET run already claimed
+data/premarket_gappers_2026-07-24.json.
 
 ### Gappers (auto-scan 19:36 ET, cloud)
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
