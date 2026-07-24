@@ -1,0 +1,37 @@
+{
+  "scanned_at": "2026-07-23T12:09:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "RCAT",
+      "price": 7.94,
+      "gap_pct": -7.46,
+      "premarket_volume": 435434,
+      "catalyst": "Red Cat Holdings shares fall after termination of Chief Revenue Officer for cause triggers legal dispute.",
+      "headlines": [
+        "Why Is Red Cat Stock Falling Wednesday? (Benzinga, 2026-07-22)",
+        "Red Cat Holdings terminated its Chief Revenue Officer (Benzinga premium, 2026-07-22)"
+      ],
+      "catalyst_detail": "Red Cat terminated its CRO for cause around 2026-07-22, which has escalated into a legal dispute; Benzinga flagged this as the proximate cause of the stock's slide. No fresh company-specific news beyond continued reaction to the executive departure. Q2 2026 earnings are set for August 6 after market close.",
+      "why": "Leadership/governance shock (contested for-cause termination plus litigation risk) undermines confidence independent of business fundamentals, prompting risk-off selling and short-term de-risking by holders ahead of earnings.",
+      "impact": "Premarket volume (435K) is well above the 50K floor, signaling real participation, not a thin illiquid print. But the move is driven by a single governance headline rather than a change in underlying demand for Red Cat's Arachnid drone line -- reads as event-driven de-risking, likely to stabilize once litigation details clarify or fade into the Aug 6 print. Peer AeroVironment's recent strong earnings shows sector demand intact, so this looks RCAT-specific, not a drone-sector rotation exit.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Portfolio is Day 0 baseline, 100% cash, zero open positions -- no existing holding displaced. But this is a gap DOWN on a negative catalyst and the strategy is long-only (no short-selling mechanic in TRADING-STRATEGY.md), so there is no long entry here today; it is a watch-for-stabilization candidate at best, not a trade against this week's 3-trade cap. Versus AMPX (today's other gapper), RCAT at least clears the Confluence rule's 'documented catalyst' bar even though the catalyst is negative."
+    },
+    {
+      "rank": 2,
+      "symbol": "AMPX",
+      "price": 10.33,
+      "gap_pct": -5.06,
+      "premarket_volume": 264926,
+      "catalyst": "No fresh company-specific news found today; most recent notable coverage is a Jim Cramer 'good spec' buy call ($33 PT) and a Jones Trading coverage initiation, both from July 9-10 and stale relative to today's premarket decline.",
+      "headlines": [],
+      "catalyst_detail": "No new headline explains today's move. The last substantive catalysts were the May 2026 Manatee Research short report alleging operational red flags and weak Q1 EPS guidance, both already priced in weeks ago. Q2 2026 earnings due August 4.",
+      "why": "Absent a fresh headline, the gap looks like thin premarket mean-reversion after the recent Cramer-driven bounce, or lingering overhang from the unresolved short-seller allegations rather than a new mechanism.",
+      "impact": "Premarket volume (265K) clears the liquidity floor, but with no new news the move reads as a one-session pullback/profit-taking after the Cramer pop, not the start of a durable leg down. 18.9% short interest keeps volatility structurally elevated regardless of catalyst quality.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Same zero-position baseline as RCAT -- no existing holding displaced. Also a gap DOWN with no confirmed catalyst, so it fails the Confluence rule's 'at least 1 documented catalyst' requirement outright; not investable as a long today. If forced to rank against RCAT for the 3-trades/week cap, RCAT has a stronger (if negative) documented catalyst; AMPX has none."
+    }
+  ]
+}

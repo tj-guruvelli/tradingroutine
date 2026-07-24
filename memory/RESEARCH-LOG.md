@@ -313,6 +313,70 @@ sits in a YTD-laggard sector; energy is chasing a reversible geopolitical
 spike; GM's reaction is unconfirmed. Patience > activity. Revisit NBIS and
 energy majors next session once technical confirmation is available.
 
+## 2026-07-23 — Gappers (auto-scan 08:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+5 raw candidates; filters (|gap| >= 5%, price >= $3, premarket vol >= 50K)
+cut it to 2. PEPG ($1.94) and WLDS ($1.455) excluded on price floor; BREA
+(vol 18,327) excluded on volume floor. Deep-dive cap is 5 — both survivors
+got the full deep-dive, no ranks 6-10 to note.
+
+### Gappers (auto-scan 08:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RCAT | $7.94 | -7.46% | 435,434 | Shares fall after CRO terminated for cause, ensuing legal dispute |
+| 2 | AMPX | $10.33 | -5.06% | 264,926 | No fresh news today; last catalyst was a stale Jul 9-10 Cramer buy call |
+
+#### Deep dive: RCAT $7.94 -7.46%
+- Catalyst: Red Cat terminated its CRO for cause around 2026-07-22, which has
+  escalated into a legal dispute; Benzinga flagged this as the proximate
+  cause of the slide. No fresh news beyond continued reaction to the
+  departure. Q2 2026 earnings due August 6 after close.
+- Why: Leadership/governance shock (contested for-cause termination +
+  litigation risk) undermines confidence independent of fundamentals,
+  prompting risk-off selling and de-risking ahead of earnings.
+- Impact: Premarket volume (435K) is well above the 50K floor — real
+  participation, not a thin print. But the move is driven by a single
+  governance headline, not a change in demand for Red Cat's Arachnid drone
+  line — reads as event-driven de-risking, likely to stabilize once
+  litigation details clarify or fade into the Aug 6 print. Peer
+  AeroVironment's recent strong earnings shows sector demand intact, so
+  this looks RCAT-specific, not a drone-sector rotation exit.
+- Horizon: SHORT_TERM — governance/legal-dispute headlines aren't structural
+  to the business; no durable thesis until litigation resolves or Q2
+  earnings reset the narrative.
+- Opportunity cost: Portfolio is Day 0 baseline, 100% cash, zero open
+  positions — no existing holding displaced. But this is a gap DOWN on a
+  negative catalyst and the strategy is long-only (no short mechanic in
+  TRADING-STRATEGY.md) — no long entry here today, at best a
+  watch-for-stabilization candidate, not a trade against the 3/week cap.
+  Versus AMPX, RCAT at least clears the Confluence rule's "documented
+  catalyst" bar even though the catalyst is negative.
+
+#### Deep dive: AMPX $10.33 -5.06%
+- Catalyst: No fresh company-specific news found today; most recent notable
+  coverage is a Jim Cramer "good spec" buy call ($33 PT) and a Jones Trading
+  coverage initiation, both from Jul 9-10 and stale relative to today's
+  premarket decline.
+- Why: Absent a fresh headline, the gap looks like thin premarket
+  mean-reversion after the recent Cramer-driven bounce, or lingering
+  overhang from the unresolved May short-seller allegations (Manatee
+  Research) rather than a new mechanism.
+- Impact: Premarket volume (265K) clears the liquidity floor, but with no
+  new news the move reads as a one-session pullback/profit-taking after the
+  Cramer pop, not the start of a durable leg down. 18.9% short interest
+  keeps volatility structurally elevated regardless of catalyst quality.
+- Horizon: SHORT_TERM — no structural catalyst identified; treat as noise
+  until a real news item surfaces or Aug 4 earnings.
+- Opportunity cost: Same zero-position baseline as RCAT — no existing
+  holding displaced. Also a gap DOWN with no confirmed catalyst, so it
+  fails the Confluence rule's "at least 1 documented catalyst" requirement
+  outright — not investable as a long today. Ranked against RCAT for the
+  3-trades/week cap, RCAT at least has a documented (if negative) catalyst;
+  AMPX has none.
+
+Research-only. No orders placed.
+
 ## 2026-07-23 — Pre-market Research
 
 Note: Apify RAG web browser tool (`mcp__Apify__apify--rag-web-browser`) worked
