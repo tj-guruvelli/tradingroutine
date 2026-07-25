@@ -1,0 +1,139 @@
+{
+  "scanned_at": "2026-07-25T00:41:18Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 184.325,
+      "gap_pct": -15.26,
+      "premarket_volume": 538121,
+      "catalyst": "No fresh same-day headline found; stock remains pressured by a Jul 8 short-seller report and de-risking ahead of Jul 28 Q2 earnings.",
+      "headlines": [
+        "Bloom Energy Stock Booms Tuesday: What's Happening? (Benzinga, stale — describes an earlier rally, not today's move)"
+      ],
+      "catalyst_detail": "Shares remain pressured by a July 8, 2026 short-seller report (Hunterbrook) alleging misleading disclosures on supply chain and production capacity, which already knocked the stock down ~25% from its 52-week high. No fresh company-specific headline explains today's incremental slide, which comes 2 trading days ahead of Q2 earnings on July 28. Fundamentals remain strong: Q1 revenue +130% YoY, raised FY26 EPS guidance to $1.85-2.25, and expanded partnerships (Oracle up to 2.8GW fuel-cell deal, Brookfield financing expanded 5x to $25B).",
+      "why": "Pre-earnings de-risking/profit-taking on a stock up 140%+ YTD, compounded by lingering short-report overhang -- traders trimming binary-event exposure into the Jul 28 print rather than reacting to a new negative catalyst.",
+      "impact": "Volume (538K) clears the liquidity floor by 10x -- real distribution, not a thin print. Analyst consensus (Buy, $286 avg target) vs. $184 current implies the sell-off has outrun the fundamental picture if Q1 trends hold, but the short-seller allegations keep tail risk elevated until the Jul 28 report clears the air. NOTE: this run's snapshot is a thin after-hours quote (post-4pm ET) -- the same-day 18:39 ET run priced BE at $198.39/-8.79% and 19:36 ET run did not surface BE at all, a wide spread consistent with low after-hours liquidity, not necessarily a genuine intraday move of this size.",
+      "horizon": "SHORT_TERM, earnings on Jul 28 is the binary catalyst; nothing to carry into that print without a fresh confluence signal after it prints.",
+      "opportunity_cost": "Portfolio is Day 0 baseline (100% cash, zero positions) -- no existing holding displaced. But this is a gap DOWN and the strategy is long-only, so it is not a today entry regardless; it is a post-earnings watch candidate (Jul 28) at best, and buying into an unresolved short-seller dispute 2 days before earnings fails the documented-catalyst clarity bar even though the fundamental story is strong."
+    },
+    {
+      "rank": 2,
+      "symbol": "AMPX",
+      "price": 8.575,
+      "gap_pct": -13.56,
+      "premarket_volume": 267647,
+      "catalyst": "Continued overhang from a Manatee Research short report; no fresh same-day negative news found.",
+      "headlines": [
+        "Amprius Technologies (AMPX) Shares Slip After Short Seller Raises Red Flags (Benzinga)"
+      ],
+      "catalyst_detail": "A short report from Manatee Research raised red flags on Amprius' operations; the acute sell-off it triggered predates today and no fresh same-day news explains the incremental drop. The durable business story is Q1 2026 revenue of $28.5M (+2.5x YoY), improving gross margin (20%, +343% YoY), a new Matternet drone-battery partnership, and raised FY26 revenue guidance to $130M+.",
+      "why": "Continued fade of the short-report overhang, likely compounded by a high-beta pullback correlated with today's broader drone/robotics-adjacent weakness (UMAC also down double digits this snapshot) rather than a distinct new negative print.",
+      "impact": "Volume (268K) clears the floor. The short-seller allegations remain unresolved and keep the stock volatile, but raised guidance and a real commercial partnership (Matternet) suggest the underlying growth story is intact -- reads as sentiment/overhang-driven rather than a fundamentals break. Q2 earnings due Aug 5 is the next real catalyst.",
+      "horizon": "SHORT_TERM, no new resolving catalyst until Aug 5 earnings; expect continued chop/fade risk until then.",
+      "opportunity_cost": "Same zero-position baseline -- no holding displaced. Gap DOWN, long-only strategy, so not a long entry today; the unresolved short-seller dispute also fails the clean-catalyst bar for Confluence. Versus BE, AMPX's guidance raise is more recent/concrete, but its market cap/liquidity is far smaller and the short thesis is still live."
+    },
+    {
+      "rank": 3,
+      "symbol": "BW",
+      "price": 9.73,
+      "gap_pct": -11.67,
+      "premarket_volume": 134853,
+      "catalyst": "BW Investors Weigh Buybacks, Debt Redemption And Weak Momentum (Benzinga) -- a fresh $200M dilutive stock offering is the likely driver.",
+      "headlines": [
+        "BW Investors Weigh Buybacks, Debt Redemption And Weak Momentum (Benzinga)"
+      ],
+      "catalyst_detail": "BW's own IR/news flow this week centered on a $200M underwritten common-stock public offering (dilutive) alongside a $50M buyback authorization and $61.4M note redemption -- the dilution announcement is the likely proximate driver of continued weakness, coming right after the stock had rallied ~186% over the prior 90 days on record Q1 revenue (+44% YoY) and a big AI-data-center-driven backlog. This is the third same-day appearance of BW in this scan (-15.84% at 18:39 ET, per-share basis differs slightly at each snapshot) -- persistent after-hours weakness, not a one-off print.",
+      "why": "A same-week dilutive equity raise (up to $200M plus a 30-day 15% greenshoe) against a stock that had run up nearly 3x in 90 days is a classic sell-the-news/dilution overhang, outweighing the offsetting buyback/debt-paydown headlines.",
+      "impact": "Volume (135K) clears the floor. Given the size of the prior run-up (186% in 90 days) and the fresh dilution, this reads as a sane, catalyst-explained pullback rather than a thesis break -- underlying demand (AI data-center energy backlog) is intact per Q1 results, but supply of new shares is a real near-term overhang until the offering is absorbed.",
+      "horizon": "SHORT_TERM, dilution digestion typically resolves over days-to-weeks; not a structural change to the backlog/demand story, so not a fresh LONG_TERM entry today.",
+      "opportunity_cost": "No holding displaced (zero positions). Gap DOWN + long-only means no entry today. Among today's decliners, BW has the clearest, freshest, company-specific catalyst (the offering) and has now shown up in all three same-day scans; if forced to rank for next week's 3-trade cap it would be a wait-for-offering-to-clear name, not a chase-the-dip candidate."
+    },
+    {
+      "rank": 4,
+      "symbol": "CRWV",
+      "price": 72.58,
+      "gap_pct": -10.52,
+      "premarket_volume": 972289,
+      "catalyst": "No CRWV-specific negative headline found; reads as broad AI-infrastructure sector rotation (same theme hit BE, NBIS, RKLB, OKLO, PL across today's scans).",
+      "headlines": [
+        "Why Is Nebius Stock Falling on Friday? (Benzinga, sector read-through)"
+      ],
+      "catalyst_detail": "No CRWV-specific negative headline found; the top hits are sector-wide AI-infrastructure rotation (same theme cited in the NBIS 'why is it falling' piece, and consistent with the 18:39/19:36 ET runs also flagging BE/NBIS/RKLB/PL/OKLO weakness) even as CRWV's own recent news is positive -- Truist and Baird turned bullish (Jul 21), and the company is guiding to ~108% YoY Q2 revenue growth with a $100B backlog and a major power-capacity ramp underway.",
+      "why": "Broad de-risking across AI-infrastructure/power names rather than a CRWV-specific negative print -- reads as a sector-rotation/risk-off day for the AI power + compute buildout trade, confirmed across all three of today's scans.",
+      "impact": "Volume (972K) is the highest of today's list -- heavy participation on the way down. With backlog and growth guidance intact and analysts turning more bullish just 3 days ago, this looks like a sector-wide, sentiment-driven flush rather than a break in CoreWeave's own thesis. Still carries real risk given $35B debt load and lack of profitability.",
+      "horizon": "SHORT_TERM, no fundamental change; treat as sector volatility, not a new structural catalyst, until it stabilizes.",
+      "opportunity_cost": "No holding displaced (zero positions). Gap DOWN, long-only, no entry today. Of the AI-power cluster flagged across today's three scans (BE, CRWV, NBIS, RKLB, OKLO, PL), CRWV has the most credible near-term analyst/growth tailwind (fresh upgrades, 108% growth guide) -- if the desk only has capacity to watch one name in this cluster for a bounce, CRWV screens best, but none clear a long entry until the tape stabilizes and Confluence can be checked."
+    },
+    {
+      "rank": 5,
+      "symbol": "UMAC",
+      "price": 19.39,
+      "gap_pct": -10.06,
+      "premarket_volume": 104031,
+      "catalyst": "No fresh negative headline found; recent news is uniformly positive (record revenue, defense orders, Russell 2000 inclusion) -- reads as valuation give-back / after-hours noise.",
+      "headlines": [
+        "This Eric Trump-Backed Startup Just Got AMD's Chips for Its Humanoid Robots (Benzinga, sector context, not a direct UMAC catalyst)"
+      ],
+      "catalyst_detail": "No fresh negative company headline found; recent news is uniformly positive -- Q1 2026 revenue +296% YoY (8th straight record quarter), a swing to $10.3M net income, a $150M capital raise (with Ondas as a strategic investor), a new NDAA-compliant defense order, doubled drone-motor production capacity, and inclusion in the Russell 2000 in the 2026 reconstitution. NOTE: the 19:36 ET run this same session priced UMAC at +9.77% (a bullish-analyst-coverage read) -- a ~20-point swing between two after-hours snapshots roughly an hour apart on a thin-liquidity small cap. This gap is very likely dominated by thin after-hours bid/ask noise rather than a genuine intraday move; treat both prints with caution.",
+      "why": "Reads as profit-taking/mean-reversion after a steep recent run (helped by sector enthusiasm around AMD-chip humanoid-robot partnerships in adjacent names) rather than any new negative print; some analysts have flagged the stock as significantly overvalued after the run, which likely fed today's give-back -- though the sign-flip vs. the 19:36 ET run within the same session strongly suggests after-hours liquidity noise is a bigger factor than any single narrative.",
+      "impact": "Volume (104K) clears the floor but is the smallest of today's top 5 in absolute share count -- some real distribution, but less conviction than BE/CRWV's prints, and the direction flip vs. the prior same-day run undercuts confidence in this print specifically.",
+      "horizon": "SHORT_TERM, no structural change; next confirmation point is Aug 6 earnings. Do not act on this specific gap print given the same-session direction flip -- reconfirm with a regular-session (not after-hours) snapshot before treating this as a real signal.",
+      "opportunity_cost": "No holding displaced (zero positions). Gap DOWN + long-only = no entry today regardless. UMAC's fundamentals are arguably the strongest of the top 5 (296% revenue growth, GAAP profitability), but the after-hours noise on this exact print plus flagged overvaluation risk means this is a Tier 1 watchlist name, not a today trade off this gap."
+    },
+    {
+      "rank": 6,
+      "symbol": "PL",
+      "price": 20.39,
+      "gap_pct": -8.81,
+      "premarket_volume": 575556,
+      "catalyst": "No clear stock-specific catalyst found; declined against a rising broader market -- unconfirmed sector/company-specific headwind.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "OKLO",
+      "price": 40.345,
+      "gap_pct": -8.3,
+      "premarket_volume": 247943,
+      "catalyst": "Pullback after recent highs on federal nuclear-AI datacenter program news; part of today's broader AI-power sector selloff.",
+      "headlines": [
+        "Oklo Stock Rises on Report of Joining Microsoft, Nvidia in Federal Nuclear Effort (Benzinga, describes the prior rally driver)"
+      ]
+    },
+    {
+      "rank": 8,
+      "symbol": "GFS",
+      "price": 53.19,
+      "gap_pct": -6.55,
+      "premarket_volume": 199253,
+      "catalyst": "Broader semiconductor/foundry sector selling pressure today despite positive SEALSQ post-quantum-cryptography partnership news.",
+      "headlines": [
+        "GlobalFoundries in the Spotlight After SEALSQ Pact on Post-Quantum Cryptography, Quantum Computing (Benzinga)"
+      ]
+    },
+    {
+      "rank": 9,
+      "symbol": "RCAT",
+      "price": 7.585,
+      "gap_pct": -5.66,
+      "premarket_volume": 257290,
+      "catalyst": "Overhang from CRO termination-for-cause and resulting legal dispute (recurring story from prior sessions).",
+      "headlines": [
+        "Why Is Red Cat Stock Falling Wednesday? (Benzinga)"
+      ]
+    },
+    {
+      "rank": 10,
+      "symbol": "QBTS",
+      "price": 16.225,
+      "gap_pct": -5.17,
+      "premarket_volume": 819008,
+      "catalyst": "Broader quantum-computing sector selloff, sympathetic to weakness in IonQ/Rigetti; inverse quantum ETFs up sharply on the same move.",
+      "headlines": [
+        "Quantum Stock Meltdown Sends These ETFs Soaring Up to 108% (Benzinga)"
+      ]
+    }
+  ]
+}

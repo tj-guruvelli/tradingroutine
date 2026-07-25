@@ -850,3 +850,88 @@ data/premarket_gappers_2026-07-24.json.
 - Opportunity cost: 100% cash, nothing to displace. Extremely high-beta/volatile name (deep losses, negative margins) — a position here is effectively a leveraged crypto bet, not a stock-specific setup, and fails the specific-catalyst prong of the Entry Checklist beyond generic crypto-market direction. Would consume 1 of 3 weekly trade slots and carries outsized single-name risk relative to RTX's cleaner, less volatile beat-and-raise setup.
 
 Research-only. No orders placed.
+
+## 2026-07-24 — Gappers (auto-scan 20:38 ET, cloud)
+
+Note: this is the THIRD same-day gappers run (see 18:39 ET and 19:36 ET
+entries above), fired well after the regular session close due to a
+mid-run session restart that lost the first (13:19 ET, genuinely
+premarket-adjacent) attempt entirely -- that data is gone and this run
+starts fresh with a live post-close Alpaca snapshot. Saved to
+data/premarket_gappers_2026-07-24_2038et.json (time-suffixed), since the
+bare filename is already claimed by the 18:39 ET run. Apify RAG web browser
+hung for 60+ minutes on the first (lost) attempt and was not retried; used
+the documented WebFetch/Benzinga fallback for all 10 catalysts and WebSearch
+for top-5 fundamentals instead.
+
+**Data-quality flag:** the roster and gap sizes diverge materially across
+all three of today's runs (e.g. UMAC: +9.77% at 19:36 ET vs -10.06% here,
+~20 points apart; BE: -8.79% at 18:39 ET vs -15.26% here; RTX/GOOG/MSFT/
+QCOM/BMNR/OPEN/RKLB/NBIS cleared the filter at 18:39/19:36 ET but not at
+all here). All three snapshots were taken after the 4pm ET close, where
+Alpaca's snapshot is a thin, wide-spread after-hours quote, not a genuine
+intraday move — treat gap_pct/volume from any post-close run as noisy and
+do not feed it into /trade sizing without reconfirming against a
+regular-session quote first. Recommend flagging this to the operator:
+the CLOUD CADENCE NOTE's intended premarket windows (07:00-10:00 CT) are
+not what's actually firing; three runs today all landed post-close.
+
+10 of 60 watchlist tickers cleared the |gap|>=5% threshold at this
+snapshot; WLDS, BREA, KTOS, TRMD, AVAV excluded on the 50k volume or $3
+price floors, leaving exactly 10 (no further cap needed). All 10 are gap
+DOWN moves — concentrated in AI-power/data-center names (BE, CRWV, OKLO),
+drone/defense-adjacent names (AMPX, UMAC, RCAT), and quantum computing
+(QBTS), echoing the AI-infra rotation theme flagged in both earlier runs
+today. Deep-dive cap is 5; ranks 6-10 (PL, OKLO, GFS, RCAT, QBTS) got
+quick-scan only.
+
+### Gappers (auto-scan 20:38 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $184.33 | -15.26% | 538,121 | No fresh same-day headline; continued pressure from a Jul 8 short-seller report, de-risking ahead of Jul 28 earnings |
+| 2 | AMPX | $8.58 | -13.56% | 267,647 | Continued overhang from a Manatee Research short report; no fresh same-day negative news |
+| 3 | BW | $9.73 | -11.67% | 134,853 | Fresh $200M dilutive stock offering overshadowing buyback/debt-paydown news (3rd straight scan appearance today) |
+| 4 | CRWV | $72.58 | -10.52% | 972,289 | No CRWV-specific negative headline; broad AI-infrastructure sector rotation (echoes BE/NBIS/RKLB/OKLO/PL across today's scans) |
+| 5 | UMAC | $19.39 | -10.06% | 104,031 | No negative headline; sign-flipped vs. the 19:36 ET run same session -- likely after-hours noise, not a real move |
+| 6 | PL | $20.39 | -8.81% | 575,556 | No clear stock-specific catalyst found; declined against a rising broader market |
+| 7 | OKLO | $40.35 | -8.30% | 247,943 | Pullback after recent highs on federal nuclear-AI datacenter program news; part of broader AI-power selloff |
+| 8 | GFS | $53.19 | -6.55% | 199,253 | Broader semiconductor/foundry sector selling pressure despite positive SEALSQ partnership news |
+| 9 | RCAT | $7.59 | -5.66% | 257,290 | Overhang from CRO termination-for-cause and resulting legal dispute (recurring) |
+| 10 | QBTS | $16.23 | -5.17% | 819,008 | Broader quantum-computing sector selloff, sympathetic to IonQ/Rigetti weakness |
+
+#### Deep dive: BE $184.33 -15.26%
+- Catalyst: Shares remain pressured by a July 8, 2026 short-seller report (Hunterbrook) alleging misleading disclosures on supply chain and production capacity, which already knocked the stock down ~25% from its 52-week high. No fresh company-specific headline explains today's incremental slide, which comes 2 trading days ahead of Q2 earnings on July 28. Fundamentals remain strong: Q1 revenue +130% YoY, raised FY26 EPS guidance to $1.85-2.25, and expanded partnerships (Oracle up to 2.8GW fuel-cell deal, Brookfield financing expanded 5x to $25B).
+- Why: Pre-earnings de-risking/profit-taking on a stock up 140%+ YTD, compounded by lingering short-report overhang — traders trimming binary-event exposure into the Jul 28 print rather than reacting to a new negative catalyst.
+- Impact: Volume (538K) clears the liquidity floor by 10x — real distribution, not a thin print. Analyst consensus (Buy, $286 avg target) vs. $184 current implies the sell-off has outrun the fundamental picture if Q1 trends hold, but the short-seller allegations keep tail risk elevated until the Jul 28 report clears the air. Caveat: this is a thin after-hours quote — the 18:39 ET run priced BE at $198.39/-8.79% and 19:36 ET didn't surface it at all, a spread consistent with low after-hours liquidity rather than a confirmed intraday move of this size.
+- Horizon: SHORT_TERM, earnings on Jul 28 is the binary catalyst; nothing to carry into that print without a fresh confluence signal after it prints.
+- Opportunity cost: Portfolio is Day 0 baseline (100% cash, zero positions) — no existing holding displaced. But this is a gap DOWN and the strategy is long-only, so it is not a today entry regardless; it is a post-earnings watch candidate (Jul 28) at best, and buying into an unresolved short-seller dispute 2 days before earnings fails the documented-catalyst clarity bar even though the fundamental story is strong.
+
+#### Deep dive: AMPX $8.58 -13.56%
+- Catalyst: A short report from Manatee Research raised red flags on Amprius' operations; the acute sell-off it triggered predates today and no fresh same-day news explains the incremental drop. The durable business story is Q1 2026 revenue of $28.5M (+2.5x YoY), improving gross margin (20%, +343% YoY), a new Matternet drone-battery partnership, and raised FY26 revenue guidance to $130M+.
+- Why: Continued fade of the short-report overhang, likely compounded by a high-beta pullback correlated with today's broader drone/robotics-adjacent weakness (UMAC also down this snapshot) rather than a distinct new negative print.
+- Impact: Volume (268K) clears the floor. The short-seller allegations remain unresolved and keep the stock volatile, but raised guidance and a real commercial partnership (Matternet) suggest the underlying growth story is intact — reads as sentiment/overhang-driven rather than a fundamentals break. Q2 earnings due Aug 5 is the next real catalyst.
+- Horizon: SHORT_TERM, no new resolving catalyst until Aug 5 earnings; expect continued chop/fade risk until then.
+- Opportunity cost: Same zero-position baseline — no holding displaced. Gap DOWN, long-only strategy, so not a long entry today; the unresolved short-seller dispute also fails the clean-catalyst bar for Confluence. Versus BE, AMPX's guidance raise is more recent/concrete, but its market cap/liquidity is far smaller and the short thesis is still live.
+
+#### Deep dive: BW $9.73 -11.67%
+- Catalyst: BW's own IR/news flow this week centered on a $200M underwritten common-stock public offering (dilutive) alongside a $50M buyback authorization and $61.4M note redemption — the dilution announcement is the likely proximate driver of continued weakness, coming right after the stock had rallied ~186% over the prior 90 days on record Q1 revenue (+44% YoY) and a big AI-data-center-driven backlog. This is the third same-day appearance of BW in this scan (-15.84% at 18:39 ET) — persistent after-hours weakness, not a one-off print.
+- Why: A same-week dilutive equity raise (up to $200M plus a 30-day 15% greenshoe) against a stock that had run up nearly 3x in 90 days is a classic sell-the-news/dilution overhang, outweighing the offsetting buyback/debt-paydown headlines.
+- Impact: Volume (135K) clears the floor. Given the size of the prior run-up (186% in 90 days) and the fresh dilution, this reads as a sane, catalyst-explained pullback rather than a thesis break — underlying demand (AI data-center energy backlog) is intact per Q1 results, but supply of new shares is a real near-term overhang until the offering is absorbed.
+- Horizon: SHORT_TERM, dilution digestion typically resolves over days-to-weeks; not a structural change to the backlog/demand story, so not a fresh LONG_TERM entry today.
+- Opportunity cost: No holding displaced (zero positions). Gap DOWN + long-only means no entry today. Among today's decliners, BW has the clearest, freshest, company-specific catalyst (the offering) and has now shown up in all three same-day scans; if forced to rank for next week's 3-trade cap it would be a wait-for-offering-to-clear name, not a chase-the-dip candidate.
+
+#### Deep dive: CRWV $72.58 -10.52%
+- Catalyst: No CRWV-specific negative headline found; the top hits are sector-wide AI-infrastructure rotation (same theme cited in the NBIS "why is it falling" piece, and consistent with the 18:39/19:36 ET runs also flagging BE/NBIS/RKLB/PL/OKLO weakness) even as CRWV's own recent news is positive — Truist and Baird turned bullish (Jul 21), and the company is guiding to ~108% YoY Q2 revenue growth with a $100B backlog and a major power-capacity ramp underway.
+- Why: Broad de-risking across AI-infrastructure/power names rather than a CRWV-specific negative print — reads as a sector-rotation/risk-off day for the AI power + compute buildout trade, confirmed across all three of today's scans.
+- Impact: Volume (972K) is the highest of today's list — heavy participation on the way down. With backlog and growth guidance intact and analysts turning more bullish just 3 days ago, this looks like a sector-wide, sentiment-driven flush rather than a break in CoreWeave's own thesis. Still carries real risk given $35B debt load and lack of profitability.
+- Horizon: SHORT_TERM, no fundamental change; treat as sector volatility, not a new structural catalyst, until it stabilizes.
+- Opportunity cost: No holding displaced (zero positions). Gap DOWN, long-only, no entry today. Of the AI-power cluster flagged across today's three scans (BE, CRWV, NBIS, RKLB, OKLO, PL), CRWV has the most credible near-term analyst/growth tailwind (fresh upgrades, 108% growth guide) — if the desk only has capacity to watch one name in this cluster for a bounce, CRWV screens best, but none clear a long entry until the tape stabilizes and Confluence can be checked.
+
+#### Deep dive: UMAC $19.39 -10.06%
+- Catalyst: No fresh negative company headline found; recent news is uniformly positive — Q1 2026 revenue +296% YoY (8th straight record quarter), a swing to $10.3M net income, a $150M capital raise (with Ondas as a strategic investor), a new NDAA-compliant defense order, doubled drone-motor production capacity, and inclusion in the Russell 2000 in the 2026 reconstitution. NOTE: the 19:36 ET run this same session priced UMAC at +9.77% — a ~20-point swing between two after-hours snapshots roughly an hour apart on a thin-liquidity small cap.
+- Why: Reads as profit-taking/mean-reversion after a steep recent run rather than any new negative print; some analysts have flagged the stock as significantly overvalued, which likely fed the give-back — though the sign-flip vs. the 19:36 ET run within the same session strongly suggests after-hours liquidity noise is the bigger factor.
+- Impact: Volume (104K) clears the floor but is the smallest of today's top 5 in absolute share count, and the direction flip vs. the prior same-day run undercuts confidence in this specific print.
+- Horizon: SHORT_TERM, no structural change; next confirmation point is Aug 6 earnings. Do not act on this specific gap print given the same-session direction flip — reconfirm with a regular-session snapshot first.
+- Opportunity cost: No holding displaced (zero positions). Gap DOWN + long-only = no entry today regardless. UMAC's fundamentals are arguably the strongest of the top 5 (296% revenue growth, GAAP profitability), but after-hours noise on this print plus flagged overvaluation risk means this is a Tier 1 watchlist name, not a today trade off this specific gap.
+
+Research-only. No orders placed.
