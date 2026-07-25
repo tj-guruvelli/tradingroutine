@@ -961,3 +961,42 @@ a Telegram alert per run for data that hasn't changed, and could mislead a
 later session into treating a frozen after-hours quote as a live gap.
 
 Research-only. No orders placed.
+
+## 2026-07-25 — Gappers (auto-scan, cloud) — SKIPPED, weekend + frozen feed, 5th duplicate run
+
+This session's clock started at Fri 2026-07-24 08:10 ET (genuinely
+premarket) when `scripts/gappers-alpaca.sh watchlist` was first run, but
+the session worker restarted multiple times mid-run (Apify RAG web browser
+tool errored/timed out repeatedly across restarts, matching the pattern in
+the 02:05 ET entry above), and by the time catalyst research finished and
+this log entry was being written, real wall-clock time had jumped to
+**Sat 2026-07-25 14:33 ET — a weekend, market closed, no trading session
+today at all.**
+
+The captured Alpaca snapshot is a duplicate of already-frozen post-close
+data, not fresh premarket data: volume figures match the 19:36 ET run above
+byte-for-byte on 6 of 7 names (OPEN 2,623,820 / UMAC 104,194 / RTX 487,454 /
+MSFT 1,350,874 / QCOM 286,032 / BMNR 1,832,841), and price/gap_pct are
+identical or near-identical on 5 of 7 (UMAC, RTX, MSFT, QCOM exact; OPEN and
+BMNR drift slightly, GOOG diverges more — consistent with stale bid/ask
+noise on a frozen feed, not a real move). Same 7-name roster, same $3
+price floor / 50k volume floor exclusions (WLDS, BREA) as the 19:36 ET run.
+Catalyst headlines fetched via WebFetch/Benzinga fallback (Apify unusable
+this run) confirm the same story already logged in the 19:36 ET deep dive
+(OPEN technical breakdown, UMAC drone/defense analyst coverage, GOOG Q2
+capex-guidance selloff, RTX beat-and-raise, MSFT AI-capex scrutiny, QCOM
+pre-earnings de-risking, BMNR crypto selloff) — nothing new to add.
+
+Per the same reasoning as the 02:05 ET entry: no new data file written, no
+duplicate deep-dive table, no Telegram alert (would misrepresent a Friday
+close/weekend as a live premarket gap). This is now the 5th gappers-cloud
+invocation across ~24h wall-clock (18:39, 19:36, 20:38 ET on 7/24, 02:05 ET
+and this one on 7/25), the first two "in-window" and the rest firing
+progressively later including now on a weekend — the CLOUD CADENCE NOTE's
+intended weekday 07:00-10:00 CT window (`0 7,8,9,10 * * 1-5`) is clearly
+not what's actually configured for this trigger. Flagging to the operator
+via notification; recommend checking the platform-level cron/trigger config
+for this routine (not visible from CronList in-session — likely a
+schedule/day-of-week mismatch on whatever triggers it externally).
+
+Research-only. No orders placed. No scan run, no trade action.
