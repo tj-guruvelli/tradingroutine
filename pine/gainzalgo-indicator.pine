@@ -1,0 +1,285 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// OPEN ALPHA SUITE — Multi-Phase Signal Engine (GainzAlgo V2 Alpha Alternative)
+// ═══════════════════════════════════════════════════════════════════════════════
+// FREE & OPEN SOURCE — No subscription, no invite-only access
+// Based on the same principles: structural shifts, micro-cycles, momentum,
+// volatility context, and multi-layer confirmation
+// Non-repainting, bar-close confirmation only
+// Works on ALL markets and ALL timeframes
+// ═══════════════════════════════════════════════════════════════════════════════
+
+//@version=6
+indicator("GainzAlgo", overlay=true, max_labels_count=500, max_lines_count=500)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// INPUTS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Preset Selection
+preset = input.string("Alpha", title="Preset", options=["Essential", "Proficient", "Alpha"], tooltip="Alpha = fastest/most signals (lower TF). Essential = smoothest (higher TF). Proficient = balanced.")
+
+// Signal Sensitivity
+sensitivity = input.float(1.0, title="Signal Sensitivity", minval=0.1, maxval=3.0, step=0.1, tooltip="Higher = more signals. Lower = fewer but higher quality.")
+
+// TP/SL Display
+showTPSL = input.bool(true, title="Show TP/SL Levels")
+tpMultiplier = input.float(1.5, title="TP Multiplier (x ATR)", minval=0.5, maxval=5.0, step=0.1)
+slMultiplier = input.float(1.0, title="SL Multiplier (x ATR)", minval=0.5, maxval=3.0, step=0.1)
+
+// Visual Settings
+showBackground = input.bool(true, title="Show Trend Background")
+showStructure = input.bool(false, title="Show Structure Lines")
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRESET CONFIGURATION
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Each preset uses different lookback periods and thresholds
+structLen = preset == "Alpha" ? 5 : preset == "Proficient" ? 10 : 20
+volLen = preset == "Alpha" ? 10 : preset == "Proficient" ? 14 : 20
+momLen = preset == "Alpha" ? 7 : preset == "Proficient" ? 12 : 18
+trendLen = preset == "Alpha" ? 14 : preset == "Proficient" ? 21 : 34
+confirmLen = preset == "Alpha" ? 3 : preset == "Proficient" ? 5 : 8
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LAYER 1: STRUCTURAL PATTERN EVALUATION
+// Detects directional shifts, exhaustion patterns, and micro-cycle transitions
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Swing High/Low Detection
+swingHigh = ta.pivothigh(high, structLen, structLen)
+swingLow = ta.pivotlow(low, structLen, structLen)
+
+// Track last swing levels
+var float lastSwingHigh = na
+var float lastSwingLow = na
+var float prevSwingHigh = na
+var float prevSwingLow = na
+
+if not na(swingHigh)
+    prevSwingHigh := lastSwingHigh
+    lastSwingHigh := swingHigh
+
+if not na(swingLow)
+    prevSwingLow := lastSwingLow
+    lastSwingLow := swingLow
+
+// Break of Structure (BOS) Detection
+bullishBOS = not na(lastSwingHigh) and close > lastSwingHigh and close[1] <= lastSwingHigh
+bearishBOS = not na(lastSwingLow) and close < lastSwingLow and close[1] >= lastSwingLow
+
+// Change of Character (CHoCH) Detection
+bullishCHoCH = not na(prevSwingLow) and not na(lastSwingLow) and lastSwingLow > prevSwingLow and close > lastSwingHigh
+bearishCHoCH = not na(prevSwingHigh) and not na(lastSwingHigh) and lastSwingHigh < prevSwingHigh and close < lastSwingLow
+
+// Exhaustion Pattern (large candle followed by reversal)
+bodySize = math.abs(close - open)
+avgBody = ta.sma(bodySize, 14)
+isLargeCandle = bodySize > avgBody * 2.0
+bullishExhaustion = isLargeCandle[1] and close[1] < open[1] and close > open
+bearishExhaustion = isLargeCandle[1] and close[1] > open[1] and close < open
+
+// Structural Score (0-30)
+structBullScore = (bullishBOS ? 15.0 : 0.0) + (bullishCHoCH ? 10.0 : 0.0) + (bullishExhaustion ? 5.0 : 0.0)
+structBearScore = (bearishBOS ? 15.0 : 0.0) + (bearishCHoCH ? 10.0 : 0.0) + (bearishExhaustion ? 5.0 : 0.0)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LAYER 2: VOLATILITY CONTEXT MODELING
+// Dynamic ranges, percentile comparisons, contextual thresholds
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ATR-based volatility
+atrVal = ta.atr(volLen)
+atrSMA = ta.sma(atrVal, volLen * 3)
+
+// Volatility percentile (is current vol high or low relative to recent history?)
+volRatio = atrVal / atrSMA
+isHighVol = volRatio > 1.2
+isLowVol = volRatio < 0.8
+isNormalVol = not isHighVol and not isLowVol
+
+// Bollinger Band squeeze detection (volatility compression = breakout incoming)
+bbBasis = ta.sma(close, 20)
+bbDev = ta.stdev(close, 20)
+bbWidth = (bbDev * 2) / bbBasis
+bbWidthSMA = ta.sma(bbWidth, 50)
+isSqueeze = bbWidth < bbWidthSMA * 0.75
+
+// Keltner Channel for squeeze confirmation
+kcBasis = ta.ema(close, 20)
+kcRange = ta.atr(10) * 1.5
+kcUpper = kcBasis + kcRange
+kcLower = kcBasis - kcRange
+
+// Volatility Score (0-20)
+volBullScore = (isHighVol and close > open ? 10.0 : isNormalVol ? 5.0 : 0.0) + (isSqueeze and close > bbBasis ? 10.0 : 0.0)
+volBearScore = (isHighVol and close < open ? 10.0 : isNormalVol ? 5.0 : 0.0) + (isSqueeze and close < bbBasis ? 10.0 : 0.0)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LAYER 3: MOMENTUM ALIGNMENT
+// Slope, acceleration, mid-range transitions, structural momentum flow
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// RSI-based momentum
+rsiVal = ta.rsi(close, momLen)
+rsiSlope = rsiVal - rsiVal[3]
+
+// MACD momentum
+[macdLine, signalLine, histLine] = ta.macd(close, 12, 26, 9)
+macdAccel = histLine - histLine[1]
+
+// Momentum oscillator (custom)
+momOsc = ta.mom(close, momLen)
+momOscSmooth = ta.ema(momOsc, 3)
+momCrossUp = ta.crossover(momOsc, momOscSmooth)
+momCrossDown = ta.crossunder(momOsc, momOscSmooth)
+
+// Stochastic for overbought/oversold context
+// NOTE: ta.stoch() returns a single value (%K), not a tuple — the original
+// pasted script wrongly destructured it as [stochK, stochD]. %D is the
+// standard 3-period SMA of %K.
+stochK = ta.stoch(close, high, low, 14)
+stochD = ta.sma(stochK, 3)
+// ta.crossover/crossunder must be assigned to their own variable on every
+// bar (not called inline inside a boolean expression) for consistent
+// non-repainting behavior — that's this script's own stated guarantee.
+stochCrossUp = ta.crossover(stochK, stochD)
+stochCrossDown = ta.crossunder(stochK, stochD)
+stochBullish = stochK < 30 and stochCrossUp
+stochBearish = stochK > 70 and stochCrossDown
+
+// Momentum Score (0-25)
+momBullScore = (rsiSlope > 0 ? 5.0 : 0.0) + (macdAccel > 0 ? 5.0 : 0.0) + (momCrossUp ? 5.0 : 0.0) + (stochBullish ? 5.0 : 0.0) + (histLine > 0 and histLine > histLine[1] ? 5.0 : 0.0)
+momBearScore = (rsiSlope < 0 ? 5.0 : 0.0) + (macdAccel < 0 ? 5.0 : 0.0) + (momCrossDown ? 5.0 : 0.0) + (stochBearish ? 5.0 : 0.0) + (histLine < 0 and histLine < histLine[1] ? 5.0 : 0.0)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LAYER 4: DIRECTIONAL BIAS COMPATIBILITY
+// Trend context, structural flow, cycle alignment
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Multi-timeframe EMA trend
+emaFast = ta.ema(close, trendLen)
+emaSlow = ta.ema(close, trendLen * 2)
+emaUltra = ta.ema(close, trendLen * 4)
+
+// Trend strength
+trendBullish = emaFast > emaSlow and close > emaFast
+trendBearish = emaFast < emaSlow and close < emaFast
+strongTrendBull = trendBullish and emaSlow > emaUltra
+strongTrendBear = trendBearish and emaSlow < emaUltra
+
+// ADX for trend strength
+[diPlus, diMinus, adxVal] = ta.dmi(14, 14)
+strongTrend = adxVal > 25
+weakTrend = adxVal < 20
+
+// Directional Bias Score (0-25)
+dirBullScore = (trendBullish ? 10.0 : 0.0) + (strongTrendBull ? 5.0 : 0.0) + (diPlus > diMinus ? 5.0 : 0.0) + (strongTrend and trendBullish ? 5.0 : 0.0)
+dirBearScore = (trendBearish ? 10.0 : 0.0) + (strongTrendBear ? 5.0 : 0.0) + (diMinus > diPlus ? 5.0 : 0.0) + (strongTrend and trendBearish ? 5.0 : 0.0)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// LAYER 5: MULTI-LAYER CONFIRMATION & SIGNAL GENERATION
+// Dynamic threshold evaluation — signals only when layers agree
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Total Scores
+totalBullScore = structBullScore + volBullScore + momBullScore + dirBullScore
+totalBearScore = structBearScore + volBearScore + momBearScore + dirBearScore
+
+// Dynamic threshold based on preset and sensitivity
+baseThreshold = preset == "Alpha" ? 30.0 : preset == "Proficient" ? 40.0 : 50.0
+threshold = baseThreshold / sensitivity
+
+// Confirmation: require minimum layers to agree
+minLayersBull = (structBullScore > 0 ? 1 : 0) + (volBullScore > 0 ? 1 : 0) + (momBullScore > 0 ? 1 : 0) + (dirBullScore > 0 ? 1 : 0)
+minLayersBear = (structBearScore > 0 ? 1 : 0) + (volBearScore > 0 ? 1 : 0) + (momBearScore > 0 ? 1 : 0) + (dirBearScore > 0 ? 1 : 0)
+
+minLayersRequired = preset == "Alpha" ? 2 : preset == "Proficient" ? 3 : 3
+
+// Final Signal Generation (non-repainting, bar-close only)
+buySignal = totalBullScore >= threshold and minLayersBull >= minLayersRequired and totalBullScore > totalBearScore
+sellSignal = totalBearScore >= threshold and minLayersBear >= minLayersRequired and totalBearScore > totalBullScore
+
+// Prevent consecutive same signals
+var int lastSignal = 0  // 1 = buy, -1 = sell
+finalBuy = buySignal and lastSignal != 1
+finalSell = sellSignal and lastSignal != -1
+
+if finalBuy
+    lastSignal := 1
+if finalSell
+    lastSignal := -1
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// TP/SL CALCULATION
+// ═══════════════════════════════════════════════════════════════════════════════
+
+tpDistance = atrVal * tpMultiplier
+slDistance = atrVal * slMultiplier
+
+var float entryPrice = na
+var float tpLevel = na
+var float slLevel = na
+var int tradeDir = 0
+
+if finalBuy
+    entryPrice := close
+    tpLevel := close + tpDistance
+    slLevel := close - slDistance
+    tradeDir := 1
+
+if finalSell
+    entryPrice := close
+    tpLevel := close - tpDistance
+    slLevel := close + slDistance
+    tradeDir := -1
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PLOTTING
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Buy/Sell Labels
+plotshape(finalBuy, title="BUY Signal", location=location.belowbar, color=color.new(#00E676, 0), style=shape.labelup, text="BUY", textcolor=color.white, size=size.small)
+plotshape(finalSell, title="SELL Signal", location=location.abovebar, color=color.new(#FF1744, 0), style=shape.labeldown, text="SELL", textcolor=color.white, size=size.small)
+
+// TP/SL Lines
+plot(showTPSL and tradeDir == 1 ? tpLevel : na, title="Take Profit (Long)", color=color.new(#00E676, 50), style=plot.style_linebr, linewidth=1)
+plot(showTPSL and tradeDir == 1 ? slLevel : na, title="Stop Loss (Long)", color=color.new(#FF1744, 50), style=plot.style_linebr, linewidth=1)
+plot(showTPSL and tradeDir == -1 ? tpLevel : na, title="Take Profit (Short)", color=color.new(#00E676, 50), style=plot.style_linebr, linewidth=1)
+plot(showTPSL and tradeDir == -1 ? slLevel : na, title="Stop Loss (Short)", color=color.new(#FF1744, 50), style=plot.style_linebr, linewidth=1)
+
+// Trend Background
+trendColor = showBackground ? (trendBullish ? color.new(#00E676, 92) : trendBearish ? color.new(#FF1744, 92) : color.new(color.gray, 95)) : na
+bgcolor(trendColor, title="Trend Background")
+
+// EMA Lines
+plot(emaFast, title="Fast EMA", color=color.new(#2196F3, 70), linewidth=1)
+plot(emaSlow, title="Slow EMA", color=color.new(#FF9800, 70), linewidth=1)
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// ALERTS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+alertcondition(finalBuy, title="BUY Signal", message="Open Alpha Suite: BUY signal on {{ticker}} ({{interval}})")
+alertcondition(finalSell, title="SELL Signal", message="Open Alpha Suite: SELL signal on {{ticker}} ({{interval}})")
+alertcondition(finalBuy or finalSell, title="Any Signal", message="Open Alpha Suite: {{ticker}} signal on {{interval}}")
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// INFO TABLE
+// ═══════════════════════════════════════════════════════════════════════════════
+
+var table infoTable = table.new(position.top_right, 2, 6, bgcolor=color.new(#1a1a2e, 10), border_width=1)
+
+if barstate.islast
+    table.cell(infoTable, 0, 0, "Open Alpha Suite v2", text_color=color.white, text_size=size.small)
+    table.cell(infoTable, 1, 0, preset, text_color=color.new(#00E676, 0), text_size=size.small)
+    table.cell(infoTable, 0, 1, "Bull Score", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 1, str.tostring(totalBullScore, "#.#"), text_color=color.new(#00E676, 0), text_size=size.tiny)
+    table.cell(infoTable, 0, 2, "Bear Score", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 2, str.tostring(totalBearScore, "#.#"), text_color=color.new(#FF1744, 0), text_size=size.tiny)
+    table.cell(infoTable, 0, 3, "Threshold", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 3, str.tostring(threshold, "#.#"), text_color=color.yellow, text_size=size.tiny)
+    table.cell(infoTable, 0, 4, "Volatility", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 4, isHighVol ? "HIGH" : isLowVol ? "LOW" : "NORMAL", text_color=isHighVol ? color.orange : isLowVol ? color.blue : color.gray, text_size=size.tiny)
+    table.cell(infoTable, 0, 5, "Trend", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 5, trendBullish ? "BULLISH" : trendBearish ? "BEARISH" : "NEUTRAL", text_color=trendBullish ? color.new(#00E676, 0) : trendBearish ? color.new(#FF1744, 0) : color.gray, text_size=size.tiny)

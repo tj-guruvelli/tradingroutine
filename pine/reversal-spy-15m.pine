@@ -1,0 +1,201 @@
+//@version=6
+// =============================================================================
+// Reversal Trade Strategy with ATR-based TP/SL - SPY 15m adaptation
+// =============================================================================
+// Origin: "Analyse the following indicator and create a highly profitable
+// 15-minute strategy for the Solana price chart" prompt output, re-targeted
+// per TJ 2026-07-25: load on AMEX:SPY, 15-minute chart.
+// CHoCH structure break + IDM sweep entry, volume/trend(EMA200)/RSI filters,
+// ATR-based TP/SL. Changes from the Solana original:
+//   - minMovePercent default 1.0 -> 0.3 (SPY 15m rarely offers 1% moves;
+//     the original default would produce near-zero signals on SPY)
+//   - title updated; everything else logic-identical
+// Status: file-backed 2026-07-25, NOT yet compiled on TradingView (Pine
+// editor automation unreachable); compile + Strategy Tester pass pending.
+// =============================================================================
+strategy("Reversal Trade Strategy SPY 15m (ATR TP/SL)", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=10)
+
+// Input Parameters
+len = input(50, 'CHoCH Detection Period')
+shortLen = input(3, 'IDM Detection Period')
+showLabels = input(true, "Show Labels")
+minMovePercent = input.float(0.3, "Minimum Move Required (%)", minval=0.1, maxval=10.0, step=0.1)
+
+// Risk Management Parameters
+atrPeriod = input.int(14, "ATR Period")
+atrMultiplierTP = input.float(2.0, "ATR Multiplier for Take Profit", minval=0.5, step=0.1)
+atrMultiplierSL = input.float(1.0, "ATR Multiplier for Stop Loss", minval=0.5, step=0.1)
+
+// Trading Filters
+useVolumeFilter = input.bool(true, "Use Volume Filter")
+volumeThreshold = input.float(1.5, "Volume Threshold (x Avg)", minval=1.0, step=0.1)
+trendFilter = input.bool(true, "Use Trend Filter")
+emaPeriod = input.int(200, "EMA Period for Trend")
+rsiFilter = input.bool(true, "Use RSI Filter")
+rsiPeriod = input.int(14, "RSI Period")
+rsiBullThreshold = input.int(30, "RSI Bullish Threshold", minval=0, maxval=100)
+rsiBearThreshold = input.int(70, "RSI Bearish Threshold", minval=0, maxval=100)
+
+// Colors
+bullCss = color.new(#089981, 0)
+bearCss = color.new(#ff5252, 0)
+
+// Swing Detection Function
+swings(len)=>
+    var os = 0
+    var int topx = na
+    var int btmx = na
+    upper = ta.highest(len)
+    lower = ta.lowest(len)
+    os := high[len] > upper ? 0 : low[len] < lower ? 1 : os[1]
+    top = os == 0 and os[1] != 0 ? high[len] : na
+    topx := os == 0 and os[1] != 0 ? bar_index[len] : topx
+    btm = os == 1 and os[1] != 1 ? low[len] : na
+    btmx := os == 1 and os[1] != 1 ? bar_index[len] : btmx
+    [top, topx, btm, btmx]
+
+// Get swing points
+[top, topx, btm, btmx] = swings(len)
+[stop, stopx, sbtm, sbtmx] = swings(shortLen)
+
+// Structure variables
+var os = 0
+var float topy = na
+var float btmy = na
+var bool top_crossed = false
+var bool btm_crossed = false
+
+// Update swing levels
+if not na(top)
+    topy := top
+    top_crossed := false
+if not na(btm)
+    btmy := btm
+    btm_crossed := false
+
+// CHoCH Detection
+if close > topy and not top_crossed
+    os := 1
+    top_crossed := true
+if close < btmy and not btm_crossed
+    os := 0
+    btm_crossed := true
+
+stopy = fixnan(stop)
+sbtmy = fixnan(sbtm)
+
+// Variables for reversal detection
+var float lastChochLevel = na
+var float lastIdmLevel = na
+var string chochType = na
+
+// Update CHoCH and structure type
+if os != os[1]
+    lastChochLevel := os == 1 ? btmy : topy
+    chochType := os == 1 ? "bullish" : "bearish"
+
+// Detect IDM formations
+bullishIdm = low < sbtmy and os == 0 and sbtmy != btmy  // IDM below bearish structure
+bearishIdm = high > stopy and os == 1 and stopy != topy  // IDM above bullish structure
+
+if bullishIdm
+    lastIdmLevel := sbtmy
+
+if bearishIdm
+    lastIdmLevel := stopy
+
+// Calculate potential moves
+potentialLongMove = ((lastChochLevel - close) / close) * 100
+potentialShortMove = ((close - lastChochLevel) / close) * 100
+
+// Additional indicators for filtering
+ema200 = ta.ema(close, emaPeriod)
+rsi = ta.rsi(close, rsiPeriod)
+atr = ta.atr(atrPeriod)
+volumeMA = ta.sma(volume, 20)
+
+// Trend filter conditions
+bullishTrend = not trendFilter or close > ema200
+bearishTrend = not trendFilter or close < ema200
+
+// RSI filter conditions
+rsiBullish = not rsiFilter or rsi < rsiBullThreshold
+rsiBearish = not rsiFilter or rsi > rsiBearThreshold
+
+// Volume filter
+volumeHigh = not useVolumeFilter or volume > volumeMA * volumeThreshold
+
+// Detect potential reversal entries with filters
+bullishEntry = chochType == "bearish" and bullishIdm and close > open and low <= lastIdmLevel and potentialLongMove >= minMovePercent and bullishTrend and rsiBullish and volumeHigh
+bearishEntry = chochType == "bullish" and bearishIdm and close < open and high >= lastIdmLevel and potentialShortMove >= minMovePercent and bearishTrend and rsiBearish and volumeHigh
+
+var float signalIDM = na
+signalIDM := bullishEntry or bearishEntry ? lastIdmLevel : signalIDM
+
+// Calculate take profit and stop loss levels
+longTP = close + (atr * atrMultiplierTP)
+longSL = close - (atr * atrMultiplierSL)
+shortTP = close - (atr * atrMultiplierTP)
+shortSL = close + (atr * atrMultiplierSL)
+
+// Plot Signals
+plotshape(bullishEntry, "Bullish Reversal", shape.triangleup, location.belowbar, bullCss, -3)
+plotshape(bearishEntry, "Bearish Reversal", shape.triangledown, location.abovebar, bearCss, -3)
+
+// Entries and Exits
+if bullishEntry
+    strategy.entry("Long", strategy.long)
+    strategy.exit("Long TP/SL", "Long", limit=longTP, stop=longSL)
+
+if bearishEntry
+    strategy.entry("Short", strategy.short)
+    strategy.exit("Short TP/SL", "Short", limit=shortTP, stop=shortSL)
+
+// Labels
+if showLabels
+    if bullishEntry
+        label.new(x=bar_index, y=low, text="BUY\nTP: " + str.tostring(longTP, "#.##") + "\nSL: " + str.tostring(longSL, "#.##"), color=color.new(bullCss, 70), textcolor=bullCss, style=label.style_label_up, size=size.tiny)
+    if bearishEntry
+        label.new(x=bar_index, y=high, text="SELL\nTP: " + str.tostring(shortTP, "#.##") + "\nSL: " + str.tostring(shortSL, "#.##"), color=color.new(bearCss, 70), textcolor=bearCss, style=label.style_label_down, size=size.tiny)
+
+// Track stats for last signal
+var float lastBullishPotential = na
+var float lastBearishPotential = na
+var int lastSignalBarIndex = na
+
+if bullishEntry and not na(topy)
+    lastBullishPotential := math.abs((topy - close) / close) * 100
+    lastBearishPotential := na
+    lastSignalBarIndex := bar_index
+
+if bearishEntry and not na(btmy)
+    lastBearishPotential := math.abs((close - btmy) / close) * 100
+    lastBullishPotential := na
+    lastSignalBarIndex := bar_index
+
+// Display info table
+var table info = table.new(position.top_right, 6, 6)
+if barstate.islast
+    table.cell(info, 0, 0, text="Structure", text_color=color.white)
+    table.cell(info, 1, 0, text=chochType, text_color=chochType == "bullish" ? bullCss : bearCss)
+    table.cell(info, 0, 1, text="Signal IDM", text_color=color.white)
+    table.cell(info, 1, 1, text=str.tostring(signalIDM, "#.##"), text_color=color.white)
+    table.cell(info, 0, 2, text="Potential Move %", text_color=color.white)
+    if not na(lastBullishPotential)
+        table.cell(info, 1, 2, text="BULL: " + str.tostring(lastBullishPotential, "#.##") + "%", text_color=bullCss)
+    else if not na(lastBearishPotential)
+        table.cell(info, 1, 2, text="BEAR: " + str.tostring(lastBearishPotential, "#.##") + "%", text_color=bearCss)
+    else
+        table.cell(info, 1, 2, text="N/A", text_color=color.white)
+    table.cell(info, 0, 3, text="ATR Value", text_color=color.white)
+    table.cell(info, 1, 3, text=str.tostring(atr, "#.##"), text_color=color.white)
+    table.cell(info, 0, 4, text="EMA " + str.tostring(emaPeriod), text_color=color.white)
+    table.cell(info, 1, 4, text=str.tostring(ema200, "#.##"), text_color=color.white)
+    table.cell(info, 0, 5, text="RSI", text_color=color.white)
+    table.cell(info, 1, 5, text=str.tostring(rsi, "#.##"), text_color=color.white)
+
+// Plot take profit and stop loss levels for active trades
+plot(strategy.position_size > 0 ? longSL : na, "Long SL", color.new(color.red, 0), 2, plot.style_linebr)
+plot(strategy.position_size > 0 ? longTP : na, "Long TP", color.new(color.green, 0), 2, plot.style_linebr)
+plot(strategy.position_size < 0 ? shortSL : na, "Short SL", color.new(color.red, 0), 2, plot.style_linebr)
+plot(strategy.position_size < 0 ? shortTP : na, "Short TP", color.new(color.green, 0), 2, plot.style_linebr)

@@ -1,0 +1,80 @@
+//@version=6
+// TJL — Trend Join Long (Humbled Trader Scanner B logic as a backtestable strategy)
+// Gates (same as routines/tjl.md):
+//   daily_breakout    = price breaks above PRIOR day's high, and prior daily close > daily SMA200
+//   intraday_breakout = price breaks above premarket high AND above prior high-of-day
+// Chart requirements: 5-minute timeframe, EXTENDED HOURS ON (premarket high needs it).
+// Exits: ATR trailing stop off the peak close since entry, floor stop at prior-day high,
+//        force-flat 15:50 ET (day-trade strategy — no overnight holds).
+strategy("TJL — Trend Join Long", overlay=true,
+     initial_capital=10000,
+     default_qty_type=strategy.percent_of_equity, default_qty_value=100,
+     commission_type=strategy.commission.percent, commission_value=0.06,
+     slippage=2,
+     process_orders_on_close=true,
+     calc_on_every_tick=false)
+
+// ---------- Inputs ----------
+smaLen        = input.int(200, "Daily SMA length", minval=50)
+atrLen        = input.int(14,  "ATR length", minval=2)
+atrMult       = input.float(3.0, "ATR trail multiple", step=0.5, minval=0.5)
+entryStartMin = input.int(600, "Earliest entry (minutes after midnight ET, 600=10:00)", minval=570, maxval=900)
+entryEndMin   = input.int(900, "Latest entry (900=15:00 ET)", minval=600, maxval=930)
+flatMin       = input.int(950, "Force-flat time (950=15:50 ET)", minval=930, maxval=955)
+
+// ---------- Daily context (prior bar only — no repaint) ----------
+prevDailyHigh  = request.security(syminfo.tickerid, "D", high[1],  lookahead=barmerge.lookahead_off)
+prevDailyClose = request.security(syminfo.tickerid, "D", close[1], lookahead=barmerge.lookahead_off)
+dailySma200    = request.security(syminfo.tickerid, "D", ta.sma(close, smaLen)[1], lookahead=barmerge.lookahead_off)
+
+// ---------- Intraday levels ----------
+etMinutes = hour(time, "America/New_York") * 60 + minute(time, "America/New_York")
+newDay = ta.change(dayofmonth(time, "America/New_York")) != 0
+
+var float pmh = na  // premarket high (04:00–09:29 ET)
+var float hod = na  // regular-session high of day
+if newDay
+    pmh := na
+    hod := na
+if etMinutes >= 240 and etMinutes < 570
+    pmh := na(pmh) ? high : math.max(pmh, high)
+if etMinutes >= 570 and etMinutes < 960
+    hod := na(hod) ? high : math.max(hod, high)
+
+// prior HOD excludes the current bar (matches scanner: "exclude current bar")
+priorHod = hod[1]
+
+// ---------- Entry ----------
+dailyBreakout    = close > prevDailyHigh and prevDailyClose > dailySma200
+intradayBreakout = not na(pmh) and close > pmh and (na(priorHod) or close > priorHod)
+inEntryWindow    = etMinutes >= entryStartMin and etMinutes <= entryEndMin
+canEnter         = dailyBreakout and intradayBreakout and inEntryWindow and strategy.position_size == 0
+
+if canEnter
+    strategy.entry("TJL long", strategy.long)
+
+// ---------- Exits ----------
+atr = ta.atr(atrLen)
+var float peakClose = na
+if strategy.position_size > 0
+    peakClose := na(peakClose) ? close : math.max(peakClose, close)
+else
+    peakClose := na
+
+trailStop = strategy.position_size > 0 ? peakClose - atrMult * atr : na
+floorStop = prevDailyHigh  // prior-day high acts as the structure floor
+
+if strategy.position_size > 0
+    if close < trailStop
+        strategy.close("TJL long", comment="ATR trail")
+    else if close < floorStop
+        strategy.close("TJL long", comment="Floor: prev day high lost")
+    else if etMinutes >= flatMin
+        strategy.close("TJL long", comment="EOD flat")
+
+// ---------- Plots ----------
+plot(pmh, "Premarket High", color=color.new(color.orange, 30), style=plot.style_linebr)
+plot(prevDailyHigh, "Prev Day High", color=color.new(color.blue, 40), style=plot.style_linebr)
+plot(strategy.position_size > 0 ? trailStop : na, "ATR Trail", color=color.new(color.red, 20), style=plot.style_linebr)
+plotshape(canEnter, "Entry", shape.triangleup, location.belowbar, color=color.green, size=size.small)
+bgcolor(strategy.position_size > 0 ? color.new(color.green, 92) : na)

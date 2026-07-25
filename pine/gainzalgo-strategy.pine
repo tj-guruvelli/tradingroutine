@@ -1,0 +1,221 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// OPEN ALPHA SUITE v2 — FIXED + converted to a backtestable strategy
+// Fixes vs the circulating source:
+//   1. ta.stoch() returns ONE series in v5 — tuple destructure was a compile error
+//   2. barstate.isconfirmed gate added — "bar-close only" is now actually true
+//   3. Keltner bands wired into a real BB-inside-KC squeeze (were dead code)
+//   4. showStructure input implemented (BOS/CHoCH level lines; was a no-op)
+//   5. na-guard added to bullish CHoCH
+//   6. indicator() -> strategy() with ATR TP/SL as real strategy.exit orders,
+//      0.1% commission + slippage, process_orders_on_close for non-repainting fills
+// ═══════════════════════════════════════════════════════════════════════════════
+
+//@version=5
+strategy("GainzAlgo — Strategy", overlay=true, max_labels_count=500, max_lines_count=500,
+     initial_capital=10000, default_qty_type=strategy.percent_of_equity, default_qty_value=10,
+     commission_type=strategy.commission.percent, commission_value=0.1, slippage=2,
+     calc_on_every_tick=false, process_orders_on_close=true)
+
+// ── INPUTS ─────────────────────────────────────────────────────────────────────
+preset       = input.string("Alpha", title="Preset", options=["Essential", "Proficient", "Alpha"], tooltip="Alpha = fastest/most signals (lower TF). Essential = smoothest (higher TF). Proficient = balanced.")
+sensitivity  = input.float(1.0, title="Signal Sensitivity", minval=0.1, maxval=3.0, step=0.1, tooltip="Higher = more signals. Lower = fewer but higher quality.")
+showTPSL     = input.bool(true,  title="Show TP/SL Levels")
+tpMultiplier = input.float(1.5, title="TP Multiplier (x ATR)", minval=0.5, maxval=5.0, step=0.1)
+slMultiplier = input.float(1.0, title="SL Multiplier (x ATR)", minval=0.5, maxval=3.0, step=0.1)
+showBackground = input.bool(true,  title="Show Trend Background")
+showStructure  = input.bool(false, title="Show Structure Lines")
+
+// ── PRESET CONFIG ──────────────────────────────────────────────────────────────
+structLen  = preset == "Alpha" ? 5  : preset == "Proficient" ? 10 : 20
+volLen     = preset == "Alpha" ? 10 : preset == "Proficient" ? 14 : 20
+momLen     = preset == "Alpha" ? 7  : preset == "Proficient" ? 12 : 18
+trendLen   = preset == "Alpha" ? 14 : preset == "Proficient" ? 21 : 34
+
+// ── LAYER 1: STRUCTURE ─────────────────────────────────────────────────────────
+swingHigh = ta.pivothigh(high, structLen, structLen)
+swingLow  = ta.pivotlow(low, structLen, structLen)
+
+var float lastSwingHigh = na
+var float lastSwingLow  = na
+var float prevSwingHigh = na
+var float prevSwingLow  = na
+
+if not na(swingHigh)
+    prevSwingHigh := lastSwingHigh
+    lastSwingHigh := swingHigh
+if not na(swingLow)
+    prevSwingLow := lastSwingLow
+    lastSwingLow := swingLow
+
+bullishBOS = not na(lastSwingHigh) and close > lastSwingHigh and close[1] <= lastSwingHigh
+bearishBOS = not na(lastSwingLow)  and close < lastSwingLow  and close[1] >= lastSwingLow
+
+// FIX 5: guard every level referenced, not just the swing pair
+bullishCHoCH = not na(prevSwingLow)  and not na(lastSwingLow)  and not na(lastSwingHigh) and lastSwingLow > prevSwingLow and close > lastSwingHigh
+bearishCHoCH = not na(prevSwingHigh) and not na(lastSwingHigh) and not na(lastSwingLow)  and lastSwingHigh < prevSwingHigh and close < lastSwingLow
+
+bodySize = math.abs(close - open)
+avgBody  = ta.sma(bodySize, 14)
+isLargeCandle = bodySize > avgBody * 2.0
+bullishExhaustion = isLargeCandle[1] and close[1] < open[1] and close > open
+bearishExhaustion = isLargeCandle[1] and close[1] > open[1] and close < open
+
+structBullScore = (bullishBOS ? 15.0 : 0.0) + (bullishCHoCH ? 10.0 : 0.0) + (bullishExhaustion ? 5.0 : 0.0)
+structBearScore = (bearishBOS ? 15.0 : 0.0) + (bearishCHoCH ? 10.0 : 0.0) + (bearishExhaustion ? 5.0 : 0.0)
+
+// ── LAYER 2: VOLATILITY ────────────────────────────────────────────────────────
+atrVal = ta.atr(volLen)
+atrSMA = ta.sma(atrVal, volLen * 3)
+volRatio = atrVal / atrSMA
+isHighVol   = volRatio > 1.2
+isLowVol    = volRatio < 0.8
+isNormalVol = not isHighVol and not isLowVol
+
+bbBasis = ta.sma(close, 20)
+bbDev   = ta.stdev(close, 20)
+bbUpper = bbBasis + bbDev * 2
+bbLower = bbBasis - bbDev * 2
+
+kcBasis = ta.ema(close, 20)
+kcRange = ta.atr(10) * 1.5
+kcUpper = kcBasis + kcRange
+kcLower = kcBasis - kcRange
+
+// FIX 3: real TTM-style squeeze — Bollinger fully inside Keltner = compression
+isSqueeze = bbUpper < kcUpper and bbLower > kcLower
+
+volBullScore = (isHighVol and close > open ? 10.0 : isNormalVol ? 5.0 : 0.0) + (isSqueeze and close > bbBasis ? 10.0 : 0.0)
+volBearScore = (isHighVol and close < open ? 10.0 : isNormalVol ? 5.0 : 0.0) + (isSqueeze and close < bbBasis ? 10.0 : 0.0)
+
+// ── LAYER 3: MOMENTUM ──────────────────────────────────────────────────────────
+rsiVal   = ta.rsi(close, momLen)
+rsiSlope = rsiVal - rsiVal[3]
+
+[macdLine, signalLine, histLine] = ta.macd(close, 12, 26, 9)
+macdAccel = histLine - histLine[1]
+
+momOsc       = ta.mom(close, momLen)
+momOscSmooth = ta.ema(momOsc, 3)
+momCrossUp   = ta.crossover(momOsc, momOscSmooth)
+momCrossDown = ta.crossunder(momOsc, momOscSmooth)
+
+// FIX 1: ta.stoch returns a single series in v5 — build %K/%D explicitly
+stochK = ta.sma(ta.stoch(close, high, low, 14), 3)
+stochD = ta.sma(stochK, 3)
+stochBullish = stochK < 30 and ta.crossover(stochK, stochD)
+stochBearish = stochK > 70 and ta.crossunder(stochK, stochD)
+
+momBullScore = (rsiSlope > 0 ? 5.0 : 0.0) + (macdAccel > 0 ? 5.0 : 0.0) + (momCrossUp ? 5.0 : 0.0) + (stochBullish ? 5.0 : 0.0) + (histLine > 0 and histLine > histLine[1] ? 5.0 : 0.0)
+momBearScore = (rsiSlope < 0 ? 5.0 : 0.0) + (macdAccel < 0 ? 5.0 : 0.0) + (momCrossDown ? 5.0 : 0.0) + (stochBearish ? 5.0 : 0.0) + (histLine < 0 and histLine < histLine[1] ? 5.0 : 0.0)
+
+// ── LAYER 4: DIRECTIONAL BIAS ──────────────────────────────────────────────────
+emaFast  = ta.ema(close, trendLen)
+emaSlow  = ta.ema(close, trendLen * 2)
+emaUltra = ta.ema(close, trendLen * 4)
+
+trendBullish    = emaFast > emaSlow and close > emaFast
+trendBearish    = emaFast < emaSlow and close < emaFast
+strongTrendBull = trendBullish and emaSlow > emaUltra
+strongTrendBear = trendBearish and emaSlow < emaUltra
+
+[diPlus, diMinus, adxVal] = ta.dmi(14, 14)
+strongTrend = adxVal > 25
+
+dirBullScore = (trendBullish ? 10.0 : 0.0) + (strongTrendBull ? 5.0 : 0.0) + (diPlus > diMinus ? 5.0 : 0.0) + (strongTrend and trendBullish ? 5.0 : 0.0)
+dirBearScore = (trendBearish ? 10.0 : 0.0) + (strongTrendBear ? 5.0 : 0.0) + (diMinus > diPlus ? 5.0 : 0.0) + (strongTrend and trendBearish ? 5.0 : 0.0)
+
+// ── LAYER 5: CONFIRMATION + SIGNALS ────────────────────────────────────────────
+totalBullScore = structBullScore + volBullScore + momBullScore + dirBullScore
+totalBearScore = structBearScore + volBearScore + momBearScore + dirBearScore
+
+baseThreshold = preset == "Alpha" ? 30.0 : preset == "Proficient" ? 40.0 : 50.0
+threshold = baseThreshold / sensitivity
+
+minLayersBull = (structBullScore > 0 ? 1 : 0) + (volBullScore > 0 ? 1 : 0) + (momBullScore > 0 ? 1 : 0) + (dirBullScore > 0 ? 1 : 0)
+minLayersBear = (structBearScore > 0 ? 1 : 0) + (volBearScore > 0 ? 1 : 0) + (momBearScore > 0 ? 1 : 0) + (dirBearScore > 0 ? 1 : 0)
+minLayersRequired = preset == "Alpha" ? 2 : 3
+
+buySignal  = totalBullScore >= threshold and minLayersBull >= minLayersRequired and totalBullScore > totalBearScore
+sellSignal = totalBearScore >= threshold and minLayersBear >= minLayersRequired and totalBearScore > totalBullScore
+
+// FIX 2: bar-close confirmation gate — makes the non-repainting claim true
+var int lastSignal = 0
+finalBuy  = barstate.isconfirmed and buySignal  and lastSignal != 1
+finalSell = barstate.isconfirmed and sellSignal and lastSignal != -1
+
+if finalBuy
+    lastSignal := 1
+if finalSell
+    lastSignal := -1
+
+// ── TP/SL + ORDERS (FIX 6: real strategy orders, not just lines) ───────────────
+tpDistance = atrVal * tpMultiplier
+slDistance = atrVal * slMultiplier
+
+var float entryPrice = na
+var float tpLevel = na
+var float slLevel = na
+var int   tradeDir = 0
+
+if finalBuy
+    entryPrice := close
+    tpLevel := close + tpDistance
+    slLevel := close - slDistance
+    tradeDir := 1
+    strategy.entry("Long", strategy.long)
+    strategy.exit("Long TP/SL", from_entry="Long", limit=tpLevel, stop=slLevel)
+    alert("Open Alpha Suite: BUY signal on " + syminfo.ticker + " (" + timeframe.period + ")", alert.freq_once_per_bar_close)
+
+if finalSell
+    entryPrice := close
+    tpLevel := close - tpDistance
+    slLevel := close + slDistance
+    tradeDir := -1
+    strategy.entry("Short", strategy.short)
+    strategy.exit("Short TP/SL", from_entry="Short", limit=tpLevel, stop=slLevel)
+    alert("Open Alpha Suite: SELL signal on " + syminfo.ticker + " (" + timeframe.period + ")", alert.freq_once_per_bar_close)
+
+// ── STRUCTURE LINES (FIX 4: input now does something) ──────────────────────────
+if showStructure and (bullishBOS or bullishCHoCH) and not na(lastSwingHigh)
+    line.new(bar_index - structLen, lastSwingHigh, bar_index, lastSwingHigh, color=color.new(#00E676, 40), style=line.style_dashed)
+if showStructure and (bearishBOS or bearishCHoCH) and not na(lastSwingLow)
+    line.new(bar_index - structLen, lastSwingLow, bar_index, lastSwingLow, color=color.new(#FF1744, 40), style=line.style_dashed)
+
+// ── PLOTTING ───────────────────────────────────────────────────────────────────
+plotshape(finalBuy,  title="BUY Signal",  location=location.belowbar, color=color.new(#00E676, 0), style=shape.labelup,   text="BUY",  textcolor=color.white, size=size.small)
+plotshape(finalSell, title="SELL Signal", location=location.abovebar, color=color.new(#FF1744, 0), style=shape.labeldown, text="SELL", textcolor=color.white, size=size.small)
+
+plot(showTPSL and tradeDir != 0 ? entryPrice : na, title="Entry",       color=color.new(color.gray, 40), style=plot.style_linebr, linewidth=1)
+plot(showTPSL and tradeDir != 0 ? tpLevel    : na, title="Take Profit", color=color.new(#00E676, 50),    style=plot.style_linebr, linewidth=1)
+plot(showTPSL and tradeDir != 0 ? slLevel    : na, title="Stop Loss",   color=color.new(#FF1744, 50),    style=plot.style_linebr, linewidth=1)
+
+trendColor = showBackground ? (trendBullish ? color.new(#00E676, 92) : trendBearish ? color.new(#FF1744, 92) : color.new(color.gray, 95)) : na
+bgcolor(trendColor, title="Trend Background")
+
+plot(emaFast, title="Fast EMA", color=color.new(#2196F3, 70), linewidth=1)
+plot(emaSlow, title="Slow EMA", color=color.new(#FF9800, 70), linewidth=1)
+
+// ── ALERTS ─────────────────────────────────────────────────────────────────────
+// alertcondition() is a NO-OP inside strategy() scripts (engine-confirmed warning) —
+// signal alerts fire via alert() in the entry blocks above; order-fill alerts come
+// from the strategy itself when you create an alert on it in the TradingView UI.
+
+// ── INFO TABLE ─────────────────────────────────────────────────────────────────
+var table infoTable = table.new(position.top_right, 2, 7, bgcolor=color.new(#1a1a2e, 10), border_width=1)
+
+if barstate.islast
+    winRate = strategy.closedtrades > 0 ? strategy.wintrades / strategy.closedtrades * 100 : 0.0
+    table.cell(infoTable, 0, 0, "Open Alpha Suite v2", text_color=color.white, text_size=size.small)
+    table.cell(infoTable, 1, 0, preset, text_color=color.new(#00E676, 0), text_size=size.small)
+    table.cell(infoTable, 0, 1, "Bull Score", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 1, str.tostring(totalBullScore, "#.#"), text_color=color.new(#00E676, 0), text_size=size.tiny)
+    table.cell(infoTable, 0, 2, "Bear Score", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 2, str.tostring(totalBearScore, "#.#"), text_color=color.new(#FF1744, 0), text_size=size.tiny)
+    table.cell(infoTable, 0, 3, "Threshold", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 3, str.tostring(threshold, "#.#"), text_color=color.yellow, text_size=size.tiny)
+    table.cell(infoTable, 0, 4, "Volatility", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 4, isHighVol ? "HIGH" : isLowVol ? "LOW" : "NORMAL", text_color=isHighVol ? color.orange : isLowVol ? color.blue : color.gray, text_size=size.tiny)
+    table.cell(infoTable, 0, 5, "Trend", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 5, trendBullish ? "BULLISH" : trendBearish ? "BEARISH" : "NEUTRAL", text_color=trendBullish ? color.new(#00E676, 0) : trendBearish ? color.new(#FF1744, 0) : color.gray, text_size=size.tiny)
+    table.cell(infoTable, 0, 6, "Trades / Win%", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 6, str.tostring(strategy.closedtrades) + " / " + str.tostring(winRate, "#.#") + "%", text_color=color.white, text_size=size.tiny)
