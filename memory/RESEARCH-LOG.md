@@ -1158,3 +1158,39 @@ blocked-ticker list with reasons.
 (single-signal GainzAlgo confluence, watch not trade) — not enough for
 entry under the confluence_min_signals rule. No action taken; scan is
 read-only per command spec.
+
+## 2026-07-25 — Risk Upgrades Batch (build + live verification)
+Built additive risk-management batch: ATR-based position sizing, correlation
+gate, portfolio-drawdown circuit breaker. All read-only / paper-only, no
+orders placed.
+
+- `scripts/size.mjs SYMBOL [--risk-pct 1.0]` — Wilder ATR(14) sizing.
+  Live check `node scripts/size.mjs AAPL`: price 327.58, atr14 8.6838,
+  equity 100000, risk_dollars 1000, atr_shares 115, cap_shares 61,
+  suggested_shares 61 (20%-of-equity cap applied).
+- `scripts/corr-gate.mjs SYMBOL` — Pearson correlation of daily log returns
+  vs open positions; blocks (exit 2) if >0.75 corr with >=2 positions.
+  Live check `node scripts/corr-gate.mjs AAPL`: pass=true, "fewer than 2
+  open positions" (book was empty/near-empty at test time).
+- `config/rules.json` — added `sizing`, `correlation_gate`,
+  `circuit_breaker` blocks (additive, no existing keys touched).
+- `scripts/safety-check.sh` — added circuit-breaker gate (drawdown from
+  1M portfolio-history peak >= 10% blocks new orders + Telegram alert) and
+  correlation gate (delegates to corr-gate.mjs, blocks on exit 2). Both
+  fail CLOSED (block) if risk data is unavailable.
+  **Deviation from source template**: circuit breaker BLOCKS + alerts, it
+  does NOT auto-flatten positions — execution stays human-gated per this
+  repo's doctrine.
+  Live check: PASS, drawdown_pct 0.0 vs peak/current equity 100000.
+- `scripts/loop-runner.ps1` — appends `elapsed_seconds=<N>` to the routine
+  log at run completion.
+- Docs: CLAUDE.md hard-rules bullets + `.claude/commands/trade.md` step 0
+  (run size.mjs before sizing an order).
+- `.gitignore` — added `graphify-out/` (untracked output another agent
+  writes in this repo).
+- Bug found + fixed during verification: `corr-gate.mjs`'s early
+  "pass:true, fewer than 2 open positions" branch called `process.exit(0)`
+  explicitly, which crashed on Windows/Node 24 with a libuv assertion
+  (`UV_HANDLE_CLOSING`, src/win/async.c:94) during fetch-socket teardown,
+  masking a real exit 0 as exit 127. Fixed by letting `main()` return
+  naturally (matches risk.mjs's pattern) instead of calling process.exit(0).

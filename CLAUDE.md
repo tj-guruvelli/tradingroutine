@@ -62,6 +62,9 @@ runs per trading day plus several ad-hoc helpers:
 - Never within 3% of current price. Never move a stop down.
 - Follow sector momentum. Exit a sector after 2 failed trades.
 - Patience > activity.
+- Size new positions by ATR(14): risk_pct_per_trade (1.0%) of equity per 1-ATR move, capped at 20% of equity — `scripts/size.mjs SYMBOL`.
+- Correlation gate: block new entry if SYMBOL correlates >0.75 with 2+ open positions — `scripts/corr-gate.mjs SYMBOL`.
+- Circuit breaker: 10% drawdown from peak equity BLOCKS new orders + Telegram alert. Does not auto-flatten — human-gated.
 
 ## API Wrappers
 

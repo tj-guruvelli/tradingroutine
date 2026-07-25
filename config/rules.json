@@ -75,6 +75,18 @@
       "schedule_ny": "5,35 10-14 * * MON-FRI"
     }
   },
+  "sizing": {
+    "method": "atr",
+    "atr_period": 14,
+    "risk_pct_per_trade": 1.0
+  },
+  "correlation_gate": {
+    "max_corr": 0.75,
+    "max_correlated_positions": 1
+  },
+  "circuit_breaker": {
+    "max_drawdown_from_peak_pct": 10
+  },
   "forbidden_actions": [
     "delete_or_weaken_tests",
     "widen_scope_to_pass_check",

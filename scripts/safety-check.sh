@@ -38,6 +38,56 @@ mkdir -p "$ROOT/data"
 LOG="$ROOT/data/safety-check-log.json"
 [[ -f "$LOG" ]] || echo "[]" > "$LOG"
 
+# --- Circuit breaker: portfolio drawdown from peak (1M window) ---
+# BLOCK new orders + alert on breach. Deviation from source template: we do
+# NOT auto-flatten positions — execution stays human-gated per this repo's
+# doctrine. Fails CLOSED (block) if portfolio history is unavailable.
+if history_json="$(bash "$ROOT/scripts/alpaca.sh" account 2>/dev/null)" && \
+   ph_json="$(curl -fsS --ssl-no-revoke \
+     -H "APCA-API-KEY-ID: $ALPACA_API_KEY" -H "APCA-API-SECRET-KEY: $ALPACA_SECRET_KEY" \
+     "${ALPACA_ENDPOINT:-https://paper-api.alpaca.markets/v2}/account/portfolio/history?period=1M&timeframe=1D" 2>/dev/null)"; then
+  RULES="$RULES" PH="$ph_json" python - <<'PY'
+import json, os, sys, pathlib
+rules = json.loads(pathlib.Path(os.environ["RULES"]).read_text())
+ph = json.loads(os.environ["PH"] or "{}")
+equity = [e for e in (ph.get("equity") or []) if e is not None]
+if not equity:
+    print("CIRCUIT BREAKER: no portfolio history equity series available — failing CLOSED", file=sys.stderr)
+    sys.exit(2)
+peak = max(equity)
+current = equity[-1]
+dd_pct = (peak - current) / peak * 100 if peak else 0
+max_dd = rules.get("circuit_breaker", {}).get("max_drawdown_from_peak_pct", 10)
+result = {"peak_equity": peak, "current_equity": current, "drawdown_pct": round(dd_pct, 2), "max_allowed_pct": max_dd}
+print(json.dumps(result, indent=2))
+sys.exit(2 if dd_pct >= max_dd else 0)
+PY
+  cb_status=$?
+  if [[ $cb_status -eq 2 ]]; then
+    msg="CIRCUIT BREAKER TRIPPED: drawdown from peak >= ${max_dd:-10}% — BLOCKING new orders. Positions NOT auto-flattened (human-gated)."
+    bash "$ROOT/scripts/telegram.sh" "$msg" || true
+    echo "safety-check: $msg" >&2
+    exit 2
+  fi
+else
+  echo "safety-check: CIRCUIT BREAKER — portfolio history unavailable, failing CLOSED (BLOCK)" >&2
+  exit 2
+fi
+
+# --- Correlation gate: block new entries correlated with existing book ---
+if [[ "$side" == "buy" ]]; then
+  if ! corr_out="$(node "$ROOT/scripts/corr-gate.mjs" "$sym" 2>&1)"; then
+    corr_status=$?
+    if [[ $corr_status -eq 2 ]]; then
+      echo "safety-check: CORRELATION GATE BLOCKED — $corr_out" >&2
+      exit 2
+    else
+      echo "safety-check: CORRELATION GATE — risk data unavailable, failing CLOSED (BLOCK): $corr_out" >&2
+      exit 2
+    fi
+  fi
+fi
+
 RULES="$RULES" ACCOUNT="$account" POSITIONS="$positions" QUOTE="$quote" \
 SYM="$sym" QTY="$qty" SIDE="$side" THESIS="$thesis" LOG="$LOG" \
 python - <<'PY'

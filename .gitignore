@@ -22,3 +22,6 @@ ruvector.db
 # Generated locally/in-cloud on every run; not source, not committed.
 /data/
 /logs/
+
+# graphify concept-graph output (built by another agent in this repo) — never committed
+graphify-out/

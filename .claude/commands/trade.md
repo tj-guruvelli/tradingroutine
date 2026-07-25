@@ -5,6 +5,8 @@ description: Manual trade helper with strategy-rule validation. Usage — /trade
 Execute a manual trade with full rule validation. Refuse if any rule fails.
 Args: SYMBOL SHARES SIDE (buy or sell). If missing, ask.
 
+0. For BUY, run `node scripts/size.mjs SYMBOL` first — use suggested_shares
+   as the sizing reference before picking SHARES.
 1. Pull state: account, positions, quote SYMBOL (capture ask price P).
 2. For BUY, validate:
    - Total positions after fill <= 6

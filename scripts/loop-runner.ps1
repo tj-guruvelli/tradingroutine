@@ -115,6 +115,7 @@ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  loop-runner  routine=$Routine
 ===============================================================================
 "@
 $LogHeader | Out-File -FilePath $LogFile -Append -Encoding utf8
+$RunStart = Get-Date
 
 if ($DryRun) {
     "[dry-run] would invoke: $ClaudeExe -p --max-turns $MaxTurns --max-budget-usd $MaxBudgetUsd --allowedTools '$AllowedTools'" | Out-File -FilePath $LogFile -Append
@@ -197,5 +198,7 @@ try {
     exit 4
 }
 
+$ElapsedSeconds = [int]((Get-Date) - $RunStart).TotalSeconds
 "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] loop-runner: exit $ExitCode  stream=$StreamFile" | Out-File -FilePath $LogFile -Append
+"elapsed_seconds=$ElapsedSeconds" | Out-File -FilePath $LogFile -Append
 exit $ExitCode
