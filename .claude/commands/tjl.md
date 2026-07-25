@@ -6,7 +6,9 @@ Adapted from the Humbled Trader "Trend Join Long" (TJL) workflow. Scanner A
 (/gappers) produces the universe; Scanner B (this) filters it to entries.
 
 ## Args
-- SYMBOLS (optional; default = today's Scanner A hits from `data/premarket_gappers_YYYY-MM-DD.json`)
+- SYMBOLS (optional; default = today's Scanner A hits from `data/premarket_gappers_YYYY-MM-DD.json`,
+  merged with `data/scanner_b_universe.txt` if that file exists and was written today —
+  `/gappers` Step 7 produces it between 10:00-15:00 NY as a plain one-ticker-per-line list)
 - TIMEFRAME_OK — always required; script checks that current NY time is between
   10:00 and 15:30. Otherwise save an error JSON and exit.
 

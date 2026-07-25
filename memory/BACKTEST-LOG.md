@@ -16,6 +16,36 @@ walk-forward validation. Treat new backtests with the same skepticism.
 
 _Appended by `/backtest`. Latest at top._
 
+### 2026-07-19 — strategy-lab.mjs build + smoke test (3 symbols, 3 families, --tune)
+
+New tool: `scripts/strategy-lab.mjs` + `/strategy-lab` command. Built because
+the tradingview-data MCP backtest tools take zero tunable indicator params
+(no RSI length, no thresholds, no stop/target %) — only 6 fixed presets.
+strategy-lab.mjs fetches real Alpaca daily bars (IEX feed) and bar-by-bar
+simulates any of the 6 families with grid-searched params, 70/30 chronological
+train/test split, 0.1% commission + 0.05% slippage per fill. This entry is a
+build-verification smoke test (real Alpaca data, real numbers), not a trading
+recommendation.
+
+| Sym | Family | In-sample Sharpe | OOS Sharpe | OOS Ret% | OOS MaxDD% | Win% | Trades | vs B&H | Verdict |
+|-----|--------|-------------------|------------|----------|------------|------|--------|--------|---------|
+| AAPL | ema_cross (10/50) | -1.70 | 4.77 | +28.52% | -2.53% | 100% | 2 | 34.20% (loses to hold) | MODERATE |
+| SPY | rsi (len10, 20/80) | 0.00 | 0.00 | 0% | 0% | — | 0 | -0.32% | WEAK (0 OOS trades) |
+| META | donchian (len10) | 0.19 | -0.30 | -7.15% | -25.06% | 60% | 5 | -3.11% (still loses) | OVERFITTED |
+
+**Notes:** AAPL's winning EMA(10/50) cross has a NEGATIVE in-sample Sharpe
+(-1.70) but positive out-of-sample (4.77) purely because only 2 OOS trades
+fired, one of them force-closed at `end_of_period` (not a real exit signal) —
+thin sample, treat as MODERATE not a real edge, same "0/thin OOS trades
+inflate Sharpe" trap this log already flags for GFS/CRWV above. SPY RSI never
+fired out-of-sample at all — correctly marked WEAK per the 0-trade rule, not
+ROBUST despite Sharpe being technically 0 (undefined, not good). META
+Donchian breakout is a clean OVERFITTED case: negative OOS Sharpe, -25% max
+drawdown, and still loses to buy-and-hold. **No survivors from this smoke
+test** — consistent with the rest of this log's pattern that mechanical
+signals rarely beat just holding the stock. None of these were converted to
+trades; STEP 7 (paper-trade) was never invoked during this build/verify pass.
+
 ### 2026-07-07 — FIXED: backtest tool works with bare symbols (root cause found)
 
 Root cause of the earlier "blocker" entry: the MCP wraps **Yahoo Finance**,

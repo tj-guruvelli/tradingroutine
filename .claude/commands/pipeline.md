@@ -32,6 +32,9 @@ For each ticker in memory/WATCHLIST.md Tier 1 + any currently-held position
 (from `bash scripts/alpaca.sh positions`), call in parallel:
 
     mcp__tradingview-data__combined_analysis { symbol, exchange: "NASDAQ", timeframe: "1D" }
+    (retry with exchange "NYSE" if not found — see memory/WATCHLIST.md /
+    config/rules.json for each ticker's listing exchange; several Tier-1
+    names are NYSE-listed, e.g. V, MA, T, ORCL, NOC, BA, LMT, RTX)
 
 This is the single richest data source in the pipeline — one call returns
 technical (RSI, MACD, SMA/EMA, Bollinger, ADX, support/resistance,

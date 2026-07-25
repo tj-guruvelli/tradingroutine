@@ -21,6 +21,8 @@ fall back to native WebSearch and note the fallback.
 STEP 3.5 — Chart + sentiment read on each currently-held ticker + any Tier-1
 watchlist candidate:
     mcp__tradingview-data__combined_analysis { symbol, exchange: "NASDAQ", timeframe: "1D" }
+    (retry with exchange "NYSE" if not found — held positions/watchlist
+    candidates may be NYSE-listed, e.g. V, MA, T, ORCL, NOC, BA, LMT, RTX)
 This one call replaces a standalone sentiment-only lookup — it returns
 technical (RSI/MACD/SMA/EMA/Bollinger/ADX/support-resistance/stock_score/
 grade/trend_state), Reddit sentiment, and news in one shot. Use the

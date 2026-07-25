@@ -25,7 +25,9 @@ summary (5-8 bullets max) — no raw dumps back to the main thread.
 
 1. **Technical analyst** — call
    `mcp__tradingview-data__combined_analysis { symbol: SYM, exchange: "NASDAQ", timeframe: "1D" }`
-   (param is `symbol`, never `ticker`; bare symbol, no exchange prefix).
+   (param is `symbol`, never `ticker`; bare symbol, no exchange prefix;
+   retry with exchange "NYSE" if not found — SYM may be an NYSE-listed
+   ticker, e.g. V, MA, T, ORCL, NOC, BA, LMT, RTX).
    Report: trend_state, RSI/MACD posture, support/resistance levels,
    stock_score + grade. Ignore the sentiment block if empty (known upstream
    issue) — the technical block is fully live.

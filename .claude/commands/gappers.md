@@ -65,6 +65,8 @@ for that row — do NOT abort the whole scan.
 
 For each of the top 10, in parallel:
 `mcp__tradingview-data__combined_analysis { symbol, exchange: "NASDAQ", timeframe: "1D" }`
+(retry with exchange "NYSE" if not found — the most-actives/watchlist
+universe includes NYSE-listed tickers, e.g. V, MA, T, ORCL, NOC, BA, LMT, RTX)
 
 Extract `sentiment.sentiment_label`, `sentiment.posts_analyzed`, and
 `technical.stock_score` / `technical.grade`. Add these three fields to each

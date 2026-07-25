@@ -14,7 +14,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)]
-    [ValidateSet("pre-market","market-open","midday","daily-summary","weekly-review","gappers","tjl","backtest","tax","portfolio","trade")]
+    [ValidateSet("pre-market","market-open","midday","daily-summary","weekly-review","gappers","tjl","backtest","tax","portfolio","trade","setup-scan","strategy-lab","analyst","desk-loop")]
     [string]$Routine,
     [Parameter(Mandatory=$false)]
     [string]$RepoRoot,
@@ -142,6 +142,7 @@ try {
     $psi.RedirectStandardError = $true
     $psi.UseShellExecute = $false
     $psi.CreateNoWindow = $true
+    $psi.WorkingDirectory = $RepoRoot
 
     $proc = [System.Diagnostics.Process]::Start($psi)
     $proc.StandardInput.Write($Prompt)

@@ -67,6 +67,13 @@ $Scanners = @(
         StartTime="10:05"
         RepetitionMinutes=30
         Duration="04:55"
+    },
+    @{
+        Name="TradingBot-ScannerC-SetupScan"
+        Routine="setup-scan"
+        StartTime="08:35"
+        RepetitionMinutes=30
+        Duration="05:00"
     }
 )
 

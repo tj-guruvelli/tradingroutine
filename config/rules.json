@@ -1,5 +1,4 @@
 {
-  "$schema": "./rules.schema.json",
   "name": "trading-bot v1 — Nate Herk swing + Humbled Trader TJL blend",
   "mode": "paper",
   "instrument_universe": ["us_common_stocks"],
@@ -40,7 +39,7 @@
     "_note": "immediate = full tracked universe scanned by /pipeline STEP 2 (all user-provided tickers with confirmed symbols). thirty_day/long_term are legacy subsets, unused by pipeline as of 2026-07-10 but kept for reference.",
     "immediate": [
       "META", "CMCSA", "GOOG", "V", "MA", "MSFT", "T", "ORCL",
-      "NOC", "BA", "LMT", "RTX", "KOG.OL",
+      "NOC", "BA", "LMT", "RTX",
       "CRWV", "NBIS", "OKLO", "RR",
       "AMKR", "KLIC", "SYNA", "QMMM", "WLDS", "AGMH", "PTNM", "PEPG",
       "HAFN", "BWLP", "TRMD", "ZIM", "CMBT", "BCI",
@@ -90,5 +89,9 @@
     "safety_check_fails_3x_same_ticker_in_day",
     "daily_pnl < -3% of equity",
     "sector_consecutive_losses >= 2"
-  ]
+  ],
+  "autonomy": {
+    "auto_execute": false,
+    "max_auto_trades_per_day": 1
+  }
 }

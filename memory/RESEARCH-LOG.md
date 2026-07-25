@@ -244,6 +244,9 @@ unavailable this run — all 7 topic queries stayed stuck in "READY" (queued,
 0 compute units) for 2+ minutes with no run start. Fell back to native
 WebSearch for all market-context queries per routine fallback rule.
 
+---
+
+## 2026-07-19 — Pre-market Research
 ### Account
 - Equity: $100,000
 - Cash: $100,000
@@ -1000,3 +1003,158 @@ for this routine (not visible from CronList in-session — likely a
 schedule/day-of-week mismatch on whatever triggers it externally).
 
 Research-only. No orders placed. No scan run, no trade action.
+- Daytrade count: 0
+- Open positions: 0
+- Open orders: 0
+
+### Market Context
+- WTI / Brent: WTI ~$82.49 (Barchart CLN26, last session), Brent nearing $85 —
+  both spiking on US-Iran ceasefire breakdown (US strikes on Iran, Iranian
+  retaliation on US bases in Kuwait/Jordan) driving Red Sea supply fears.
+- S&P 500 futures: last quoted ~7,497-7,575 range (Friday close level; no
+  Sunday session).
+- VIX: 18.77 as of Fri 2026-07-17 close, up +12.19% that session — elevated
+  vs. recent summer lows, tracking the Iran-conflict escalation above.
+- Today's catalysts: none — today is Sunday, no session. Monday 2026-07-20
+  calendar is light: WebSearch found "no major earnings or data expected."
+- Earnings before open (Mon 7/20): none from our watchlist; general-market
+  names reporting are DPZ, WRB, STLD (not tracked). Bigger week ahead
+  (7/21+): NOC, GM, MMM, DHR, MRSH, MSCI, and **GOOG earnings Wed 7/22** —
+  flagged as an AI-capex-guidance catalyst for the whole AI trade.
+- Economic calendar: light week for macro data, heavy for earnings
+  (+23% YoY estimated per FactSet).
+- Sector momentum: AI/semiconductor rally still running (PHLX chip index
+  +60% YTD; Micron +240%, Intel +216%, AMD +186% in Q2 2026 per WebSearch),
+  but a rotation OUT of large-cap tech into financials/healthcare/small-caps
+  is also underway — consistent with the across-the-board weak grades below.
+
+**Data-source note**: `scripts/perplexity.sh` failed with a 401 (exit 3) —
+all of the above came from native WebSearch fallback, not Perplexity, per
+the command's documented fallback path. `mcp__alpaca__get_clock` failed twice
+with a local SSL cert-verify error (known cert-interception issue on this
+machine); market-closed status confirmed instead via system date/time
+(Sunday 2026-07-19, no `clock` subcommand exists in `scripts/alpaca.sh`).
+
+### Chart reads — Tier-1 30-day watchlist (config/rules.json, 0 held positions so nothing else to check)
+| Ticker | Price | Chg% | RSI | Trend | stock_score | Grade |
+|---|---|---|---|---|---|---|
+| META | $646.01 | -0.26% | 56.8 | Weak Uptrend (Death Cross EMA50<200) | 43 | Avoid |
+| GOOG | $346.12 | +0.10% | 43.3 | Weak Uptrend (Golden Cross, pullback zone) | 9 | Avoid |
+| MSFT | $393.82 | -0.26% | 51.9 | Transitioning (mixed signals, BUY sub-signal) | 17 | Avoid |
+| ORCL | $126.41 | +3.87% | 29.3 (oversold) | Strong Downtrend | 3 | Avoid |
+| NBIS | $177.71 | +7.65% | 37.6 | Weak Uptrend (Golden Cross, but well below SMA20) | 8 | Avoid |
+| NIO | n/a | n/a | n/a | data unavailable | n/a | n/a |
+| BE | n/a | n/a | n/a | data unavailable | n/a | n/a |
+| RKLB | n/a | n/a | n/a | data unavailable | n/a | n/a |
+| ASTS | n/a | n/a | n/a | data unavailable | n/a | n/a |
+
+NIO/BE/RKLB/ASTS: `combined_analysis` technical block returned the same
+parse error ("Expecting value: line 1 column 1") on both the initial call
+and one retry each (NYSE for NIO/BE, NASDAQ for RKLB/ASTS) — genuine upstream
+outage for this batch, not a symbol/exchange issue (other exchanges resolved
+fine). Reddit sentiment (`posts_analyzed`) was 0 across all 9 tickers —
+known upstream degradation since 2026-07-07, skipped per command instructions;
+the technical block above is unaffected where it returned data.
+
+### Trade Ideas
+No BUY-grade setup exists this pass — every ticker with usable data graded
+**Avoid** (stock_score 3-43). Documenting as WATCH per the rulebook's
+catalyst+confluence bar, not as live entries:
+
+1. **GOOG — WATCH, not BUY** — catalyst: earnings Wed 2026-07-22, AI-capex
+   guidance is the read-through for the whole AI trade. RSI 43.3 sits in the
+   tool's own "good pullback entry" zone (40-60) and Golden Cross (EMA50>EMA200)
+   is intact, but stock_score 9 / grade Avoid and stochastic is oversold-bearish
+   (K 8.19). Plan: no pre-earnings entry: stock_score is too low to satisfy
+   confluence. If post-earnings price reclaims $350-355 (SMA20/30 zone) with
+   RSI back above 50, re-evaluate for entry — hypothetical stop 10% trail,
+   target R1 $374.06 (~8% from current, R:R depends on entry).
+2. **NBIS — WATCH, not BUY** — catalyst: +7.65% single-day pop riding the
+   AI/semis sector rally; Golden Cross (SMA50 224.8 > SMA200 137.9) still
+   intact structurally. But RSI 37.6 (bearish direction), stock_score 8 /
+   grade Avoid, and price ($177.71) is still ~23% below its own SMA20
+   ($229.92) — a bounce inside a bigger downtrend, not a clean setup. Plan:
+   needs to reclaim ~$229 (SMA20) with RSI > 50 before any entry consideration.
+3. **MSFT — WATCH, not BUY** — mixed read: MACD bullish crossover, RSI 51.9
+   neutral pullback zone, and the tool's own `market_sentiment.buy_sell_signal`
+   flags BUY — but overall grade is Avoid (score 17), trend_state
+   "Transitioning," and price sits below SMA200 (death cross intact). No
+   documented near-term catalyst found beyond the general AI-capex theme.
+   Plan: too mixed to act; needs either a genuine golden-cross confirmation
+   or a specific catalyst before reconsidering.
+
+### Risk Factors
+- Sector rotation OUT of large-cap tech (WebSearch-sourced) lines up with
+  every successfully-read Tier-1 tech name grading Avoid today — treat as a
+  real signal, not noise, going into next week.
+- US-Iran ceasefire breakdown is the dominant macro risk: oil + VIX both
+  spiking; elevated whipsaw risk for any new entries this week.
+- 4 of 9 Tier-1 tickers (NIO, BE, RKLB, ASTS) have no technical read at all
+  this pass (upstream MCP outage) — blind spot on those names until the
+  data source recovers.
+- Perplexity wrapper is down (401/exit 3) — research this run leaned on
+  WebSearch only; re-check `scripts/perplexity.sh` auth before next session.
+- `mcp__alpaca__get_clock` is broken (SSL cert-verify failure) — no
+  programmatic market-open check available; relied on system date instead.
+- Reddit sentiment feed still down fleet-wide (known since 2026-07-07) — no
+  social-sentiment confirmation available for any ticker this pass.
+
+### Decision
+**HOLD.** 0 open positions, 0 qualifying setups (all graded Avoid or no
+data). Nothing to trade or manage. Re-check GOOG post-earnings (Wed 7/22)
+and retry NIO/BE/RKLB/ASTS chart reads next session.
+
+---
+
+### Setup Scan (10:53 ET)
+
+Full-universe run of `/setup-scan` against all 61 `watchlist_tiers.immediate`
+tickers (60 from config/rules.json + KOG per the command's exchange map).
+Sunday, market closed — no premarket session, so Setup A (TJL breakout,
+requires an intraday leg only checkable 10:00-15:30 ET) was **not checkable
+for any ticker** this pass and contributed 0 to every score. Gate used a
+disclosed liquidity substitute (all `volume_analysis.average_20` fields
+returned null — see Risk Factors) rather than the literal 1.5x-30-day-avg
+ratio; no ticker was gated out on liquidity.
+
+A sustained upstream outage on `combined_analysis`'s technical block hit
+~2 minutes into the run (same "Expecting value: line 1 column 1" parse
+error documented in the 2026-07-07 entry above) and stayed down for most
+of the run, with one ~2-min recovery window. **14 of 61 tickers** got a
+real technical read; **44** were blocked by the outage; **3** (APT, UMAC,
+KOG) hit an unsupported-exchange fallback (AMEX/OSL aren't valid exchange
+values for this MCP — they silently fall through to a KUCOIN/crypto
+backend). Every one of the 61 was attempted at least once; nothing below
+is fabricated for an unscanned ticker.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| GFS | B | GainzAlgo confluence | 5m-15m | ADX 25.5 (Strong), EMA50 70.94 > EMA200 56.17, stock_score 14 |
+| QTUM | B | GainzAlgo confluence | 5m-15m | ADX 22.4 (Moderate), EMA50 150.50 > EMA200 127.29, stock_score 11 |
+| V | B | GainzAlgo confluence | 5m-15m | ADX 32.9 (Strong), EMA50 336.50 > EMA200 329.55, stock_score 59 |
+
+0 grade-A hits. 11 of the 14 scanned tickers (META, CMCSA, GOOG, MSFT,
+OPEN, RGTI, RKLB, IRDM, MA, ASTS, LUNR) scored 0/3 and were excluded per
+spec. Full per-ticker gate/setup detail (all three gate values, not just
+hits) saved to `data/setup-scan_2026-07-19_1053ET.json`, including the
+blocked-ticker list with reasons.
+
+### Risk Factors
+- `combined_analysis` technical block outage blocked 44/61 tickers — this
+  is a recurring failure mode (also seen 2026-07-07), worth flagging as a
+  persistent upstream reliability issue, not a one-off.
+- `volume_analysis.average_20`/`.ratio` are null fleet-wide for stocks on
+  this MCP — the literal volume gate can't be computed; flagged as a data
+  gap, not silently worked around.
+- `mcp__alpaca__get_clock`/`get_stock_bars` still SSL-broken (same as
+  2026-07-07) — no Alpaca fallback for market timing or volume history.
+- AMEX (APT, UMAC) is not a supported exchange for this MCP tool, not
+  previously documented — falls through to a KUCOIN backend and returns
+  no data. Needs a fix or an alternate data source if AMEX names stay on
+  the watchlist.
+
+### Decision
+**HOLD / WATCH ONLY.** No grade-A setups. GFS/QTUM/V are grade-B
+(single-signal GainzAlgo confluence, watch not trade) — not enough for
+entry under the confluence_min_signals rule. No action taken; scan is
+read-only per command spec.
