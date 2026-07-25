@@ -935,3 +935,29 @@ quick-scan only.
 - Opportunity cost: No holding displaced (zero positions). Gap DOWN + long-only = no entry today regardless. UMAC's fundamentals are arguably the strongest of the top 5 (296% revenue growth, GAAP profitability), but after-hours noise on this print plus flagged overvaluation risk means this is a Tier 1 watchlist name, not a today trade off this specific gap.
 
 Research-only. No orders placed.
+
+## 2026-07-25 — Gappers (auto-scan 02:05 ET, cloud) — DUPLICATE, no new data
+
+This is the 4th gappers-cloud run in this rolling window (after 18:39,
+19:36, and 20:38 ET on 2026-07-24, all above). `scripts/gappers-alpaca.sh
+watchlist` at 02:05 ET returned a top-10 roster **byte-for-byte identical**
+to the 20:38 ET run — same symbols, same rank order, same price/gap_pct/
+volume to the last decimal for all 10 rows. This confirms the Alpaca
+snapshot feed is fully frozen post-close (no new quotes since ~20:38 ET)
+and this run added zero incremental information; no separate data file or
+deep-dive was written to avoid duplicating already-logged content
+verbatim. Apify RAG web browser tool crashed the session worker twice on
+this run before falling back to WebFetch/Benzinga (whose pinned "top
+headline" repeatedly proved stale/mismatched vs. the actual move direction
+for BE/CRWV/OKLO/GFS — a weaker source than the WebSearch-driven research
+in the 20:38 ET entry above; defer to that entry's catalyst detail).
+
+**Scheduling flag for the operator:** this is now 4 gappers-cloud
+invocations landing between 18:39 ET and 02:05 ET (all post-close,
+overnight), none in the intended premarket window (07:00-10:00 CT per the
+CLOUD CADENCE NOTE). Recommend checking the cron/trigger config for this
+routine — repeated post-close firings burn Alpaca/Apify/WebFetch calls and
+a Telegram alert per run for data that hasn't changed, and could mislead a
+later session into treating a frozen after-hours quote as a live gap.
+
+Research-only. No orders placed.
