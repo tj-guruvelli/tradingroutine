@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Apify__apify--rag-web-browser"
+      "mcp__Apify",
+      "mcp__apify",
+      "mcp__claude_ai_Apify",
+      "mcp__Apify__apify--rag-web-browser",
+      "mcp__apify__apify--rag-web-browser",
+      "mcp__claude_ai_Apify__apify--rag-web-browser",
+      "mcp__Apify__call-actor",
+      "mcp__Apify__search-actors",
+      "mcp__Apify__get-dataset-items",
+      "WebSearch",
+      "WebFetch"
     ]
   }
 }
