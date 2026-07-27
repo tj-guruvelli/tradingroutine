@@ -1,0 +1,139 @@
+{
+  "scanned_at": "2026-07-27T16:05:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "QBTS",
+      "price": 18.825,
+      "gap_pct": 16.06,
+      "premarket_volume": 741649,
+      "catalyst": "D-Wave Quantum tied to renewed quantum-computing sector interest around proposed U.S. government funding.",
+      "headlines": [
+        "This Explosive Quantum Stock Just Got a Massive... catalyst (fool.com, Jul 6 2026)"
+      ],
+      "catalyst_detail": "QBTS's move rides a broader quantum-computing sector re-rating tied to proposed U.S. government funding/investment support (Fool.com, Jul 6). D-Wave also announced technical advancements in annealing and gate-model quantum computing on Jan 27, 2026 (Hybrid Solver Software integration), but that news is dated, not same-day.",
+      "why": "Government-funding-interest headlines act as a sector catalyst, pulling in momentum and retail speculative buyers across the whole quantum basket (QBTS, RGTI, IonQ); low float amplifies the move.",
+      "impact": "Volume of 741K is moderate versus QBTS's historical 12M-share days on bigger news — a smaller flare-up, not a blowout. RGTI moving +7.38% the same session confirms sector-wide read-through rather than a QBTS-specific event.",
+      "horizon": "SHORT_TERM, no confirmed company-specific news dated today; reads as a continuation of the running quantum-funding narrative, prone to fade without a fresh headline.",
+      "opportunity_cost": "Account is Day 0 with zero open positions, so no existing holding is displaced. QBTS and RGTI gapped on the same quantum theme same day; taking both would concentrate 2 of the 3 weekly trade slots in one correlated bet (run scripts/corr-gate.mjs before either entry). Stop at -10% is ~$16.94 (~$1.90 risk); a 2:1 target (~$22.6) is plausible only if the sector theme extends."
+    },
+    {
+      "rank": 2,
+      "symbol": "KLIC",
+      "price": 87.615,
+      "gap_pct": -13.48,
+      "premarket_volume": 25406,
+      "catalyst": "No fresh same-day catalyst found; all sourced coverage is stale (Jun 16 close $117.27, Mar 12 momentum piece, 2022 catalyst article).",
+      "headlines": [],
+      "catalyst_detail": "No dated catalyst explains today's -13.48% drop. Returned sources are stale: a Jun 16 article showing KLIC at $117.27, a Mar 12 2026 'fundamental momentum' piece, and a 2022 catalyst piece. Low reported volume (25K shares) also raises a data-quality flag on the gap read itself.",
+      "why": "Unconfirmed. Possibly a stale prev_close reference in the gap calc (prev_close $101.26 vs today $87.615 is a large overnight gap for a semiconductor-equipment name with no news hit), or a real post-earnings reaction not yet indexed by search.",
+      "impact": "Cannot assess sustainability without a confirmed catalyst; low volume (25K) suggests a thin/illiquid print rather than a broad institutional move.",
+      "horizon": "SHORT_TERM by default given no thesis support, but flagged UNCONFIRMED -- do not act until a same-day catalyst is verified (check KLIC investor relations / earnings calendar).",
+      "opportunity_cost": "Not assessable yet -- data-quality gap means this isn't a real opportunity-cost comparison. Re-verify via scripts/alpaca.sh quote plus KLIC IR before any consideration."
+    },
+    {
+      "rank": 3,
+      "symbol": "BMNR",
+      "price": 17.375,
+      "gap_pct": 9.86,
+      "premarket_volume": 1379727,
+      "catalyst": "BitMine Immersion (Ethereum-treasury play) recovering off $13-14 support, testing resistance on its ETH bet.",
+      "headlines": [
+        "Can BitMine's Ethereum Bet Trigger a Rally to $24? (tradingview/coinpedia, Jul 7 2026)"
+      ],
+      "catalyst_detail": "BMNR is a Peter Thiel-backed Ethereum-treasury company (per memory/WATCHLIST.md). Coverage notes it found support around $13-14 and is recovering, testing resistance on the ETH-bet thesis.",
+      "why": "BMNR trades as a levered proxy on ETH price; today's pop lines up with crypto-sentiment-driven buying of ETH-treasury vehicles rather than a company-specific operational catalyst.",
+      "impact": "Volume of 1.38M is a real, elevated print for this name -- looks like genuine risk-on flow into ETH proxies, not noise. Read-through: watch other crypto-treasury names (e.g. BLSH, also on today's watchlist) for confirmation.",
+      "horizon": "SHORT_TERM, BMNR's price action is a direct ETH-beta trade; without a durable company catalyst (M&A, contract) this is a crypto-sentiment swing, not a structural re-rating.",
+      "opportunity_cost": "No existing holdings to displace (Day 0). Against today's own list, BMNR has the strongest confirmed volume of the deep-dive set versus KLIC's unconfirmed drop and TRMD's stale-news case. Stop at -10% is ~$15.64; 2:1 target (~$20.9) is plausible only if ETH itself extends the rally."
+    },
+    {
+      "rank": 4,
+      "symbol": "ZIM",
+      "price": 22.955,
+      "gap_pct": -7.77,
+      "premarket_volume": 14005,
+      "catalyst": "Pending Hapag-Lloyd acquisition (~$4.2B, ~$35/share arb target) is ZIM's standing catalyst, but today's move is away from that price, not toward it.",
+      "headlines": [
+        "ZIM's $35 Buyout: An Arbitrage Play With a Solid Floor (tradingview/marketbeat, Mar 9 2026)"
+      ],
+      "catalyst_detail": "ZIM's headline catalyst is the pending Hapag-Lloyd acquisition (~$4.2B, ~$35/share deal target). Today's -7.77% gap down moves away from, not toward, that arbitrage price -- inconsistent with fresh deal-progress news.",
+      "why": "If the buyout-arb thesis held, ZIM should trade tightly toward the ~$35 deal price with low volatility; a -7.77% drop on only 14K volume instead suggests either deal-risk repricing (financing/regulatory/shareholder-vote concerns) or a stale prev_close reference in the gap calc rather than genuine deal news today.",
+      "impact": "Extremely low volume (14K shares) for a name with an active M&A arb -- reads as a thin/illiquid print, not a broad institutional repricing. Low confidence this reflects real information flow.",
+      "horizon": "SHORT_TERM/UNCONFIRMED pending re-verification; if the buyout were genuinely re-priced down that would be a LONG_TERM-relevant shift to the M&A thesis, but today's volume doesn't support that read.",
+      "opportunity_cost": "Not assessable pending confirmation -- same data-quality caveat as KLIC. Do not count this against the 3-trades/week cap until the move is verified against a live Alpaca quote."
+    },
+    {
+      "rank": 5,
+      "symbol": "RGTI",
+      "price": 15.205,
+      "gap_pct": 7.38,
+      "premarket_volume": 775551,
+      "catalyst": "Same quantum-computing sector tailwind as QBTS; Street-high $50 price target (Benchmark) and a UK 1,000+-qubit deployment contract.",
+      "headlines": [
+        "Rigetti Computing Just Got a New Street-High Price Target (barchart.com, Oct 17 2025)"
+      ],
+      "catalyst_detail": "Same quantum-computing sector tailwind as QBTS. Rigetti carries a Street-high $50 price target from Benchmark (dated Oct 2025 but part of the ongoing bull case) plus a UK deployment of a 1,000+-qubit system announced via Rigetti's own investor news releases. 90-day return is +38.5% per SimplyWall.st.",
+      "why": "Analyst price-target momentum plus a genuine multi-year contract announcement (UK 1,000-qubit system) gives RGTI a firmer company-specific catalyst than QBTS's more diffuse government-funding narrative, though it still trades in the same speculative quantum basket.",
+      "impact": "Volume 775K, moving the same direction and same session as QBTS (+16.06%) -- strong sector read-through; this is a basket trade on quantum-computing sentiment, not RGTI-isolated news.",
+      "horizon": "LONG_TERM lean if the UK deployment contract is real and multi-year (structural), but trading SHORT_TERM today since the price action rides the sector-wide QBTS-driven pop rather than a fresh RGTI-specific headline dated today.",
+      "opportunity_cost": "Directly competes with QBTS for the same quantum-computing trade -- scripts/corr-gate.mjs would likely flag RGTI and QBTS as correlated if both were opened; only one should be sized to avoid doubling up on one sector bet within the 3-trades/week cap."
+    },
+    {
+      "rank": 6,
+      "symbol": "AMKR",
+      "price": 60.65,
+      "gap_pct": -6.67,
+      "premarket_volume": 175385,
+      "catalyst": "Amkor Technology pulling back after an AI-supply-chain partnership deal that had driven the stock higher.",
+      "headlines": [
+        "Amkor Technology (AMKR) News Today (marketbeat.com)"
+      ]
+    },
+    {
+      "rank": 7,
+      "symbol": "BREA",
+      "price": 26.28,
+      "gap_pct": 6.66,
+      "premarket_volume": 18327,
+      "catalyst": "Brera Holdings PLC halted for trading multiple times today; no clear fundamental catalyst identified, reads as speculative volatility.",
+      "headlines": [
+        "$BREA stock halted for the 3rd time today! (x.com/stockhaltalerts)"
+      ]
+    },
+    {
+      "rank": 8,
+      "symbol": "TRMD",
+      "price": 32.03,
+      "gap_pct": 5.8,
+      "premarket_volume": 9086,
+      "catalyst": "TORM PLC (tanker shipping) -- no fresh same-day catalyst found; consensus price target $34.50 vs ~$30-32 trading range.",
+      "headlines": [
+        "TORM PLC (TRMD) Stock Price, Quote, News & History (benzinga.com)"
+      ]
+    },
+    {
+      "rank": 9,
+      "symbol": "WLDS",
+      "price": 3.325,
+      "gap_pct": -5.27,
+      "premarket_volume": 5515,
+      "catalyst": "Wearable Devices Ltd, thinly traded microcap (beta 4.58); no fresh 2026 catalyst found, most coverage dated back to 2023.",
+      "headlines": [
+        "Wearable Devices Ltd. (WLDS) Stock Price, News & Analysis (stocktitan.net)"
+      ]
+    },
+    {
+      "rank": 10,
+      "symbol": "RR",
+      "price": 1.485,
+      "gap_pct": -5.11,
+      "premarket_volume": 249016,
+      "catalyst": "Richtech Robotics tumbling today, reversing yesterday's rally; watchlist-flagged ticker (RR ⚠) needing direction/name confirmation.",
+      "headlines": [
+        "RR: Richtech Robotics Inc. Latest Stock Price, Analysis (stocktwits.com)"
+      ]
+    }
+  ]
+}

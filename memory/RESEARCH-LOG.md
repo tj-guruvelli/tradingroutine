@@ -1375,3 +1375,52 @@ STEP 6.
 
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
 an order — feed to `/trade` if pursued (full safety-check gate applies).
+
+### Gappers (auto-scan 12:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QBTS | $18.825 | +16.06% | 741,649 | Quantum sector rally on US govt funding interest |
+| 2 | KLIC | $87.615 | -13.48% | 25,406 | No same-day catalyst found — flag as data-quality/unconfirmed |
+| 3 | BMNR | $17.375 | +9.86% | 1,379,727 | ETH-treasury proxy recovering off $13-14 support |
+| 4 | ZIM | $22.955 | -7.77% | 14,005 | Away from Hapag-Lloyd $35 arb price — unconfirmed |
+| 5 | RGTI | $15.205 | +7.38% | 775,551 | Quantum sector rally + UK 1,000-qubit deployment |
+| 6 | AMKR | $60.65 | -6.67% | 175,385 | Pullback after AI-supply-chain deal news |
+| 7 | BREA | $26.28 | +6.66% | 18,327 | Halted 3x today, no clear catalyst — ⚠ unresolved symbol |
+| 8 | TRMD | $32.03 | +5.8% | 9,086 | No fresh catalyst; consensus PT $34.50 |
+| 9 | WLDS | $3.325 | -5.27% | 5,515 | Thin microcap, no 2026-dated catalyst |
+| 10 | RR | $1.485 | -5.11% | 249,016 | Reversing yesterday's rally — ⚠ watchlist-flagged ticker |
+
+#### Deep dive: QBTS $18.825 +16.06%
+- Catalyst: Move rides a broader quantum-computing sector re-rating tied to proposed U.S. government funding/investment support (Fool.com, Jul 6). D-Wave also announced annealing/gate-model tech advancements Jan 27, 2026, but that's dated, not same-day.
+- Why: Government-funding-interest headlines pull momentum/retail buyers into the whole quantum basket (QBTS, RGTI, IonQ); low float amplifies the move.
+- Impact: 741K volume is moderate vs QBTS's historical 12M-share days on bigger news — a smaller flare-up. RGTI moving +7.38% same session confirms sector-wide read-through, not QBTS-specific news.
+- Horizon: SHORT_TERM — no confirmed company-specific news dated today; reads as continuation of the running quantum-funding narrative, prone to fade without a fresh headline.
+- Opportunity cost: Day 0, zero open positions, nothing displaced. QBTS + RGTI gapped on the same theme same day — taking both concentrates 2 of 3 weekly slots in one correlated bet (run corr-gate.mjs first). Stop -10% ≈ $16.94 (~$1.90 risk); 2:1 target ≈ $22.6, plausible only if the sector theme extends.
+
+#### Deep dive: KLIC $87.615 -13.48%
+- Catalyst: No dated catalyst explains today's move. Sourced coverage is stale (Jun 16 close $117.27, Mar 12 momentum piece, 2022 catalyst article). Low volume (25K) also flags a possible data-quality issue with the gap read itself.
+- Why: Unconfirmed — possibly a stale prev_close in the gap calc (prev_close $101.26 vs today $87.615 is a large overnight gap for this name with no news hit), or a real reaction not yet indexed by search.
+- Impact: Can't assess sustainability without a confirmed catalyst; low volume (25K) suggests a thin/illiquid print, not a broad move.
+- Horizon: SHORT_TERM by default, but UNCONFIRMED — do not act until a same-day catalyst is verified (check KLIC IR / earnings calendar).
+- Opportunity cost: Not assessable — data-quality gap. Re-verify via scripts/alpaca.sh quote plus KLIC IR before any consideration.
+
+#### Deep dive: BMNR $17.375 +9.86%
+- Catalyst: Peter Thiel-backed Ethereum-treasury company (per WATCHLIST.md). Coverage notes recovery off $13-14 support, testing resistance on the ETH-bet thesis.
+- Why: BMNR trades as a levered ETH proxy; today's pop lines up with crypto-sentiment-driven buying of ETH-treasury vehicles, not a company-specific operational catalyst.
+- Impact: 1.38M volume is a real, elevated print — genuine risk-on flow into ETH proxies, not noise. Read-through: watch other crypto-treasury names (e.g. BLSH, also on today's list) for confirmation.
+- Horizon: SHORT_TERM — direct ETH-beta trade; without a durable company catalyst (M&A, contract) this is a crypto-sentiment swing, not a structural re-rating.
+- Opportunity cost: Day 0, nothing displaced. Strongest confirmed volume of the deep-dive set vs KLIC's unconfirmed drop and TRMD's stale-news case. Stop -10% ≈ $15.64; 2:1 target ≈ $20.9, plausible only if ETH extends the rally.
+
+#### Deep dive: ZIM $22.955 -7.77%
+- Catalyst: Standing catalyst is the pending Hapag-Lloyd acquisition (~$4.2B, ~$35/share arb target). Today's move is away from, not toward, that price — inconsistent with fresh deal-progress news.
+- Why: If the buyout-arb thesis held, ZIM should trade tightly toward ~$35 with low volatility; a -7.77% drop on only 14K volume instead suggests deal-risk repricing or a stale prev_close reference rather than genuine deal news today.
+- Impact: Extremely low volume (14K) for a name with an active M&A arb — reads as a thin/illiquid print, not institutional repricing. Low confidence this reflects real information flow.
+- Horizon: SHORT_TERM/UNCONFIRMED pending re-verification; a genuine deal re-price down would be LONG_TERM-relevant to the M&A thesis, but today's volume doesn't support that read.
+- Opportunity cost: Not assessable pending confirmation — same data-quality caveat as KLIC. Don't count against the 3-trades/week cap until verified against a live Alpaca quote.
+
+#### Deep dive: RGTI $15.205 +7.38%
+- Catalyst: Same quantum-computing sector tailwind as QBTS. Street-high $50 price target from Benchmark (dated Oct 2025, part of the ongoing bull case) plus a UK 1,000+-qubit deployment contract via Rigetti's own IR. 90-day return +38.5% per SimplyWall.st.
+- Why: Analyst price-target momentum plus a genuine multi-year contract announcement gives RGTI a firmer company-specific catalyst than QBTS's more diffuse government-funding narrative, though still trading in the same speculative quantum basket.
+- Impact: 775K volume, moving same direction/session as QBTS (+16.06%) — strong sector read-through; this is a basket trade on quantum sentiment, not RGTI-isolated news.
+- Horizon: LONG_TERM lean if the UK deployment contract is real and multi-year (structural), but trading SHORT_TERM today since price action rides the sector-wide QBTS-driven pop rather than a fresh RGTI-specific headline dated today.
+- Opportunity cost: Directly competes with QBTS for the same quantum-computing trade — corr-gate.mjs would likely flag them as correlated if both opened; only one should be sized to avoid doubling up on one sector bet within the 3-trades/week cap.
