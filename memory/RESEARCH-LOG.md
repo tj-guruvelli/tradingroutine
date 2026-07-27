@@ -1365,3 +1365,13 @@ every candidate; the macro backdrop (Fed week + oil reversal + megacap
 earnings) is real but not a substitute for a documented technical setup.
 No orders touched. Nothing else to commit/push beyond this log entry per
 STEP 6.
+
+### Setup Scan (11:56 ET, cloud)
+60 candidates checked, 0 errors, 1 hit (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| WLDS | B | Momentum confluence | daily | ADX14 33.63, EMA9 1.98 > EMA21 1.70, RSI14 86.46 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
+an order — feed to `/trade` if pursued (full safety-check gate applies).
