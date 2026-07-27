@@ -1435,3 +1435,17 @@ an order — feed to `/trade` if pursued (full safety-check gate applies).
 No grade-A hits -> no Telegram alert per STEP 4 rule. Same hit as the 11:56 ET
 run today, curr_px drifted 3.33 -> 3.11. Candidate only, not an order — feed
 to `/trade` if pursued (full safety-check gate applies).
+
+### Setup Scan (18:38 ET, cloud)
+60 candidates checked, 3 errors, 1 hit (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| WLDS | B | Momentum confluence | daily | ADX14 33.63, EMA9 1.98 > EMA21 1.70, RSI14 86.46 |
+
+Errors: META, CMCSA, MA all failed with "DNS resolution failure" on the
+Alpaca bars endpoint (transient network issue, not a data-quality flag on
+those tickers). No grade-A hits -> no Telegram alert per STEP 4 rule. Same
+hit as the two earlier runs today, curr_px unchanged at 3.11 vs 16:39 ET.
+Candidate only, not an order — feed to `/trade` if pursued (full
+safety-check gate applies).
