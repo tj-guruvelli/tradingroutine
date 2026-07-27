@@ -21,6 +21,12 @@ IMPORTANT — ENVIRONMENT VARIABLES:
 - Market research uses the Apify connector (mcp__Apify__apify--rag-web-browser
   or equivalently-named Apify RAG web browser tool), NOT Perplexity — retired
   from this routine.
+- YAHOO BLOCK (hard rule): append this suffix to EVERY Apify query:
+    -site:finance.yahoo.com -site:uk.finance.yahoo.com -site:sg.finance.yahoo.com
+  Apify does Google-search-then-scrape, so Yahoo surfaces unprompted otherwise
+  (hit on 3 of 7 queries on 2026-07-27). If a result still resolves to a
+  finance.yahoo.com URL, DISCARD it and source the fact elsewhere (Cboe,
+  TradingEconomics, CNBC). Never cite Yahoo-sourced data in the log.
 
 IMPORTANT — PERSISTENCE:
 - This workspace is a fresh clone. File changes VANISH unless you commit and

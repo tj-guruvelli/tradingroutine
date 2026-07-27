@@ -87,6 +87,18 @@ Backtesting and TradingView-side screening go through the MCPs:
   block from `combined_analysis` is unaffected and fully live (RSI, MACD,
   SMA/EMA, Bollinger, ADX, support/resistance, stock_score, grade). Fall
   back to Perplexity/WebSearch when sentiment/news is empty (see `/sentiment`).
+  **Exchange param is narrower than documented** (verified 2026-07-26): the
+  tool description lists NASDAQ/NYSE/BINANCE/KUCOIN/MEXC/BIST/EGX as valid,
+  but NYSE-Arca-listed ETFs (SPY, IVV) return no data even on `exchange:
+  "NYSE"`, and any value outside its real internal enum (tried OANDA, TVC,
+  AMEX — for forex/commodities/indices) silently falls back to querying
+  KUCOIN and returns a confusing `"No data found for X on KUCOIN"` instead
+  of a clean invalid-param error. Only confirmed working: crypto pairs
+  (KUCOIN/BINANCE) and NASDAQ-listed equities. For SPY/QQQ-style ETF data or
+  anything forex/commodities/index, use `scripts/alpaca.sh bars`/`crypto-bars`
+  instead (Alpaca's own data isn't exchange-enum-limited this way), or the
+  CDP-based `mcp__tradingview__*` Desktop control for symbols Alpaca can't
+  serve at all (spot forex, commodities).
 - `mcp__tradingview__*` — Desktop-app control via CDP (needs port 9222).
   Only for Pine Script authoring/backtesting/native alerts — genuinely
   local-only, no cloud equivalent exists or can exist for this one.
@@ -98,6 +110,19 @@ Feed. **Yahoo Finance is FORBIDDEN — never use `mcp__tradingview-data__yahoo_p
 never WebFetch any finance.yahoo.com URL, in any command or script.** Found
 and purged 2026-07-10 from macro-brief.md, gappers.md (was the default
 gainers-page source), rules.json, and a live RESEARCH-LOG entry.
+
+**Search-side enforcement (added 2026-07-27).** The ban above is not enough on
+its own: the Apify RAG web browser does Google-search-then-scrape, so it pulls
+finance.yahoo.com pages unprompted even when no query names Yahoo (hit on 3 of
+7 queries in the 2026-07-27 pre-market run, which caught and discarded them).
+Prevent it rather than filtering after the fact:
+
+- Append this suffix to EVERY Apify RAG web browser query, in every routine and
+  command: `-site:finance.yahoo.com -site:uk.finance.yahoo.com -site:sg.finance.yahoo.com`
+- If a result still resolves to a finance.yahoo.com URL, DISCARD it and source
+  the fact elsewhere (Cboe for VIX, TradingEconomics, CNBC, the issuer page).
+- Never cite Yahoo-sourced numbers in RESEARCH-LOG, TRADE-LOG, or a notification,
+  even as a cross-check. If no clean non-Yahoo source exists, log it as a gap.
 
 - **Charts/technicals** — `mcp__tradingview-data__combined_analysis` (RSI,
   MACD, SMA/EMA, Bollinger, ADX, support/resistance, stock_score, grade)

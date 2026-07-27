@@ -14,6 +14,12 @@ IMPORTANT — ENVIRONMENT VARIABLES:
   or equivalently-named Apify RAG web browser tool — check your available
   tools if the exact name differs), NOT an env var. Perplexity is retired
   from this routine.
+- YAHOO BLOCK (hard rule): append this suffix to EVERY Apify query:
+    -site:finance.yahoo.com -site:uk.finance.yahoo.com -site:sg.finance.yahoo.com
+  Apify does Google-search-then-scrape, so Yahoo surfaces unprompted otherwise
+  (hit on 3 of 7 queries on 2026-07-27). If a result still resolves to a
+  finance.yahoo.com URL, DISCARD it and source the fact elsewhere (Cboe,
+  TradingEconomics, CNBC). Never cite Yahoo-sourced data in the log.
 - There is NO .env file in this repo. Do NOT create one.
 - Verify env vars BEFORE any wrapper call:
     for v in ALPACA_API_KEY ALPACA_SECRET_KEY; do
