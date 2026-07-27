@@ -1,0 +1,44 @@
+{
+  "scanned_at": "2026-07-27T22:39:03.806Z",
+  "ny_time": "18:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "WLDS",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 3.11,
+      "prev_daily_high": 4.26,
+      "prev_daily_close": 3.51,
+      "sma200": 1.5,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 6.46,
+      "rsi14": 86.46,
+      "adx14": 33.63,
+      "ema9": 1.98,
+      "ema21": 1.7,
+      "premarket_volume": 0,
+      "daily_volume": 98427,
+      "avg_daily_volume_30": 11611,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": [
+    {
+      "symbol": "META",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/META/bars?timeframe=1Day&start=2025-07-12T00:00:00.000Z&end=2026-07-27T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "CMCSA",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/CMCSA/bars?timeframe=1Day&start=2025-07-12T00:00:00.000Z&end=2026-07-27T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "MA",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/MA/bars?timeframe=1Day&start=2025-07-12T00:00:00.000Z&end=2026-07-27T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    }
+  ]
+}
