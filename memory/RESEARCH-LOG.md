@@ -1450,6 +1450,65 @@ hit as the two earlier runs today, curr_px unchanged at 3.11 vs 16:39 ET.
 Candidate only, not an order — feed to `/trade` if pursued (full
 safety-check gate applies).
 
+## 2026-07-27 — Market-Open re-check (local session, technicals RESTORED)
+
+Operator-authorized re-run of market-open + midday at 12:36 CT. The earlier
+cloud market-open entry today decided HOLD because `mcp__tradingview-data__*`
+was absent from that session and the confluence rule was uncheckable. That
+blocker does NOT apply locally — the MCP is connected here, so this run redoes
+the check the cloud run could not perform.
+
+Timing caveat: market-open is a 08:30 CT routine and this ran at 12:36 CT.
+Every quote was pulled live; no morning price was reused.
+
+### Account (live, paper-api.alpaca.markets)
+- Equity $100,000 | Cash $100,000 | Buying power $400,000 | 0 positions | 0 open orders
+
+### Confluence check — `combined_analysis`, 1D, real-time
+Rule: no entry unless >=2 of {VWAP, RSI, 200-SMA, insider} agree AND a catalyst
+is documented.
+
+| Ticker | Price | Chg% | RSI(14) | vs SMA200 | MACD | ADX / DI | Grade | Bullish signals |
+|--------|-------|------|---------|-----------|------|----------|-------|-----------------|
+| CRWV | 70.25 | -4.81 | 34.35 bearish, falling | below (96.27) | bearish | 23.1, -DI | Avoid (0) | 0 of 4 |
+| NBIS | 185.47 | -5.72 | 41.92 neutral, falling | above (140.29) | bearish | 13.7, -DI | Avoid (0) | 1 of 4 |
+| OPEN | 3.80 | -1.30 | 34.42 bearish, falling | below (5.66) | bearish | 17.9, -DI | Avoid (0) | 0 of 4 |
+| OKLO | 40.72 | -0.20 | 33.00 bearish, rising | below (77.87) | bearish | 23.0, -DI | Avoid (0) | 0 of 4 |
+| META | 596.87 | -1.71 | 44.31 neutral, rising | below (637.49) | bearish | 15.6, -DI | Avoid (0) | 0 of 4 |
+
+Every name: stock_score 0, grade "Avoid", MACD bearish crossover, -DI > +DI.
+Best case (NBIS) reaches 1 of 4 and still fails the >=2 gate. OPEN is below its
+lower Bollinger band with stochastic 2.7 — oversold, not a confluence buy.
+Sentiment blocks returned 0 posts and news count 0 for all five (the known
+upstream degradation, unchanged).
+
+### Decision
+**HOLD — no trades.** Not a tooling failure this time: technicals were live and
+every candidate genuinely failed the confluence rule on a broadly bearish tape.
+No orders placed, no stops touched. STEP 8 commit-and-push skipped per "skip if
+no trades fired" (this research entry committed locally, not pushed).
+
+### Midday scan — NO-OP (verified, not assumed)
+`positions` returned 0 and `orders` returned 0. Nothing to cut at -7%, no
+trailing stops to cancel or tighten, no thesis to invalidate. Steps 3-5 had an
+empty input set.
+
+### Risk Factors / operator flags
+- **PDT rule is currently uncheckable.** market-open STEP 3 requires
+  "daytrade_count leaves room (PDT 3/5)", but Alpaca's `/account` response
+  contains no `daytrade_count` and no `pattern_day_trader` key. Verified the
+  wrapper does not trim the payload (`scripts/alpaca.sh account` is a bare
+  passthrough); the full key list has only `intraday_adjustments`. Today this
+  was moot (no trades), but the hard-rule gate silently cannot enforce PDT.
+  Today's earlier cloud entry asserts "Daytrade count: 0" — that number is not
+  obtainable from this endpoint and should be treated as unverified.
+- **Account/memory mismatch.** Live paper equity is $100,000, but the TRADE-LOG
+  Day-0 baseline and CLAUDE.md both describe a ~$10,000 account. Percentage
+  rules (20% max position, 1% ATR risk) scale, but a 20% position is now
+  $20,000, not $2,000. Needs an operator decision before the next entry.
+- FOMC Wed 7/29, heaviest earnings week of the season, Iran-pause headline
+  reversal risk — all unchanged from this morning's entries.
+
 ## 2026-07-28 — Pre-Market Research (cloud routine)
 
 Ran the scheduled pre-market workflow via Apify RAG web browser. `tradingview-data`
