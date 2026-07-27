@@ -1194,3 +1194,81 @@ orders placed.
   (`UV_HANDLE_CLOSING`, src/win/async.c:94) during fetch-socket teardown,
   masking a real exit 0 as exit 127. Fixed by letting `main()` return
   naturally (matches risk.mjs's pattern) instead of calling process.exit(0).
+
+## 2026-07-27 — Market-Open (no prior research entry, ran inline)
+
+No 7/27 or 7/26 pre-market entry existed (last entry was the 7/25 risk-batch
+build note); ran pre-market STEPS 1-3 inline per the market-open routine's
+"never trade without documented research" rule.
+
+**Blocker**: `mcp__tradingview-data__*` is NOT connected in this cloud
+session (`ListConnectors` returns no tradingview entry at all — different
+from the known upstream-outage failure mode documented on 7/07, 7/19, 7/23,
+where the tool connected but the technical block returned parse errors).
+No `combined_analysis` technical block available this run -> no RSI/MACD/
+SMA/EMA/ADX/support-resistance/stock_score/grade for any candidate. Fell
+back to Apify RAG web browser for market context only (Perplexity exit 3,
+`401` — key not configured for this wrapper, expected fallback path per
+CLAUDE.md).
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 | Daytrade count: 0
+- TRADE-LOG shows zero trades since the Day-0 baseline (2026-07-08) — every
+  session to date has been HOLD/WATCH per prior entries (0 grade-A setups,
+  repeated technical-feed outages). Consistent with strategy doctrine
+  ("patience > activity"), not a bug.
+
+### Market Context (Apify RAG web browser, Sun 7/26 evening -> Mon 7/27 premarket sourcing)
+- **Futures**: Dow +0.5%, S&P 500 +0.6%, Nasdaq-100 +1.2% (as of late
+  Sunday) — risk-on reopen.
+- **Oil**: WTI fell >5% Sunday to below $85/bbl (from Friday's $89.31,
+  which was itself +~10% on the week) on a weekend pause in US-Iran
+  tit-for-tat strikes — first pause in ~2 weeks, mediation hopes building.
+  Not a confirmed ceasefire; still an active conflict that flared repeatedly
+  this month (per 7/23 entry's two-front escalation note).
+- **Rates**: Fed meets Tue-Wed (7/28-7/29), decision + Warsh presser
+  Wednesday. CME FedWatch ~35-38% odds of a hike *this* meeting, most still
+  expect September. 10-year yield near a decade high on Iran-driven
+  inflation worries.
+- **Earnings**: Heaviest week of the season — 177 S&P 500 companies,
+  including META/MSFT/AMZN/AAPL/QCOM, plus SBUX, CMG, UPS, V, BA. Today
+  (Mon): Durable Orders (preliminary, June); earnings from Cincinnati
+  Financial, Nucor, UDR, Universal Health Services, Welltower, Cadence
+  Design Systems — none are current watchlist/holding names.
+- **Prior week close**: Dow fell for a 3rd straight week, S&P 500 and
+  Nasdaq both declined for a 2nd straight week (per Fri 7/24 wrap) — tape
+  was net risk-off into the weekend; today's futures bounce is a reaction
+  to the Iran pause, not a trend reversal yet.
+- VIX: not sourced this run (no dedicated query executed; deprioritized
+  once the technical-block blocker made any entry moot regardless of vol
+  level) — flag for next session.
+- Held tickers: none (0 open positions).
+
+### Trade Ideas
+None generated. Without `combined_analysis` there is no way to satisfy the
+strategy's confluence rule (≥2 of VWAP/RSI/200-SMA/insider signal) for any
+watchlist candidate (CRWV, OKLO, NIO, defense names, etc.) — a documented
+catalyst alone (even the Iran-pause macro tailwind) is explicitly
+insufficient per TRADING-STRATEGY.md. No Tier-1 setup was carried over from
+a prior confirmed-technical session either.
+
+### Risk Factors
+- **Tooling gap**: tradingview-data MCP absent from this cloud session's
+  connector list — needs operator attention; if this persists across
+  scheduled cloud runs it silently degrades every routine that depends on
+  Price Action (pre-market, gappers, pipeline, setup-scan, alpha-scan, the
+  `/committee` technical analyst, etc.), not just market-open.
+- Iran conflict pause is fresh (hours old) and unconfirmed as a ceasefire —
+  headline-reversal risk into the open.
+- FOMC Wed 7/29 is 2 days out; heaviest earnings week of the season starts
+  now — elevated single-stock and macro gap risk across the board.
+
+### Decision
+**HOLD — no trades.** Root cause: missing technical-data tool blocks the
+confluence check for every candidate, not a lack of catalysts (Iran pause +
+Fed week + megacap earnings would normally be enough to justify a full
+research pass). No buys placed, no orders touched, nothing to commit/push
+per STEP 8's "skip if no trades fired." Flagging the MCP gap to the
+operator; retry with `combined_analysis` live next session before
+attempting any new entry.
