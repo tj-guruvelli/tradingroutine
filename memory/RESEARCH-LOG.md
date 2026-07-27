@@ -1424,3 +1424,14 @@ an order — feed to `/trade` if pursued (full safety-check gate applies).
 - Impact: 775K volume, moving same direction/session as QBTS (+16.06%) — strong sector read-through; this is a basket trade on quantum sentiment, not RGTI-isolated news.
 - Horizon: LONG_TERM lean if the UK deployment contract is real and multi-year (structural), but trading SHORT_TERM today since price action rides the sector-wide QBTS-driven pop rather than a fresh RGTI-specific headline dated today.
 - Opportunity cost: Directly competes with QBTS for the same quantum-computing trade — corr-gate.mjs would likely flag them as correlated if both opened; only one should be sized to avoid doubling up on one sector bet within the 3-trades/week cap.
+
+### Setup Scan (16:39 ET, cloud)
+60 candidates checked, 0 errors, 1 hit (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| WLDS | B | Momentum confluence | daily | ADX14 33.63, EMA9 1.98 > EMA21 1.70, RSI14 86.46 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Same hit as the 11:56 ET
+run today, curr_px drifted 3.33 -> 3.11. Candidate only, not an order — feed
+to `/trade` if pursued (full safety-check gate applies).
