@@ -1272,3 +1272,96 @@ research pass). No buys placed, no orders touched, nothing to commit/push
 per STEP 8's "skip if no trades fired." Flagging the MCP gap to the
 operator; retry with `combined_analysis` live next session before
 attempting any new entry.
+
+## 2026-07-27 — Pre-Market Research (cloud routine)
+
+Ran the scheduled pre-market workflow via Apify RAG web browser (Perplexity
+retired from this routine). Same `tradingview-data` MCP outage already
+logged in today's earlier market-open entry — `ListConnectors`/`ToolSearch`
+show no tradingview-data tools this session, so `combined_analysis` is still
+unavailable and the confluence rule (≥2 of VWAP/RSI/200-SMA/insider) cannot
+be satisfied for any candidate. Also hit and enforced the Yahoo Finance ban
+mid-run: several Apify search results auto-scraped `finance.yahoo.com` pages
+(S&P/Nasdaq/sector-ETF snapshot data) — excluded that content per CLAUDE.md
+and sourced the same facts from Cboe/TradingEconomics/CNBC instead where
+possible; sector-level quantified performance (XLK/XLF/XLE/XLU today) had no
+clean non-Yahoo source this run and is flagged as a gap below.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged from every prior session since
+  the Day-0 baseline.
+
+### Market Context (Apify RAG web browser, Mon 7/27 mid-morning ET)
+- **Oil — sharp reversal of Friday's spike**: WTI ~$83.25-83.4 (down ~7-8%
+  intraday, tradingeconomics.com), Brent ~$89.6-90.0 (down ~8.5-8.9%
+  intraday, tradingeconomics.com). Friday's close had oil back above $100/bbl
+  on a resumption of US-Iran hostilities (CNBC); over the weekend the US
+  paused its strikes, Iran said it halted retaliation and opened talks with
+  Oman over the Strait of Hormuz, and Caspian Pipeline Consortium loadings
+  resumed on Russia's Black Sea coast after Ukrainian drone disruption
+  (tradingeconomics.com). Net: a ~2-day round-trip from <$85 (Fri close per
+  yesterday's log) to >$100 (Fri intraday per CNBC) back to ~$83-90 today —
+  still an active, reversible conflict, not a durable ceasefire.
+- **VIX**: 18.93-19.20, +1.89% to +3.34% on the day (Cboe direct). Elevated
+  vs. recent calm but well inside the 52-week range (13.38-35.30) — a
+  "climbing a wall of worry" tape (Citi's Dirk Willer, via CNBC), not panic.
+- **FOMC**: decision Wed 7/29, 2:00pm ET. CME FedWatch prices ~35% odds of a
+  hike *at this meeting* (unusual — most of the Street still expects
+  September), per CNBC — a genuinely hawkish repricing tied to oil-driven
+  inflation-expectation risk, not the routine cut-odds debate.
+- **Earnings — heaviest week of the season** (S&P 500 Q2 EPS growth guided
+  +38% YoY per FactSet, via CNBC): Mon 7/27 (today) — Durable Orders prelim
+  (June) 8:30am; earners include Cincinnati Financial, Nucor, UDR,
+  Universal Health Services, Welltower, Cadence Design Systems (none on
+  watchlist/held). Tue 7/28 — Visa, Boeing, Ford, NXP, PayPal, UPS, Coca-Cola
+  and dozens more. Wed 7/29 (FOMC day) — Meta Platforms, Microsoft,
+  Qualcomm, Starbucks, Robinhood, Chipotle. Thu 7/30 — Amazon, Mastercard,
+  Coinbase, plus GDP/Core PCE/Initial Claims. Fri 7/31 — Apple, Chevron,
+  AbbVie, Moderna, Colgate-Palmolive.
+- **Megacap/AI divergence** (CNBC, Fri 7/24 close): Roundhill Magnificent
+  Seven ETF (MAGS) fell >5% week-to-date after Alphabet's solid headline
+  results but negative-FCF/heavy-capex commentary spooked investors, while
+  semiconductor ETFs rose on the week — the chip trade still depends on
+  hyperscaler AI capex continuing even as the spenders themselves get
+  punished. META/MSFT/AMZN/AAPL results this week are the read-through.
+- **Sector momentum (XLK/XLF/XLE/XLU today)**: no quantified same-day read —
+  only source found was a Yahoo Finance page, excluded per policy. Gap,
+  not fabricated.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None generated — same root cause as this morning's market-open entry: no
+`combined_analysis` technical block this session means the confluence rule
+(≥2 of VWAP/RSI/200-SMA/insider signal) can't be satisfied for any
+watchlist name, and a macro catalyst alone (Fed-week volatility, oil
+reversal, megacap earnings) is explicitly insufficient per
+TRADING-STRATEGY.md. No Tier-1 setup carried over from a prior
+confirmed-technical session.
+
+### Risk Factors
+- **Tooling gap persists**: `tradingview-data` MCP absent again this cloud
+  session (2nd session today) — now a repeated, not one-off, degradation of
+  Price Action across pre-market, market-open, and any other routine that
+  depends on it. Needs operator attention.
+- **Yahoo Finance leakage via search**: Apify's Google-search-then-scrape
+  behavior surfaced `finance.yahoo.com` pages unprompted for at least 3 of
+  7 queries this run (VIX, sector-ETF, earnings-calendar searches). Content
+  was discarded per CLAUDE.md, but if this routine's query set keeps
+  surfacing Yahoo as a top organic result, worth tightening queries (e.g.
+  `-site:finance.yahoo.com`) to avoid re-litigating the exclusion every run.
+- Oil's 2-day round trip (>$100 Fri intraday -> <$85 weekend -> ~$83-90
+  today) means the Iran de-escalation is fresh and reversible — a snapback
+  on any breakdown in the Iran-Oman talks is a live gap risk, not a settled
+  input.
+- FOMC pricing ~35% hike odds this week is a hawkish tail risk most of the
+  Street isn't positioned for.
+- Heaviest earnings week of the year lands on top of FOMC — elevated
+  single-stock and index gap risk through Friday.
+
+### Decision
+**HOLD — no trades.** Missing technical-data tool blocks confluence for
+every candidate; the macro backdrop (Fed week + oil reversal + megacap
+earnings) is real but not a substitute for a documented technical setup.
+No orders touched. Nothing else to commit/push beyond this log entry per
+STEP 6.
