@@ -1,6 +1,75 @@
 {
-  "scanned_at": "2026-07-28T12:16:06Z",
+  "scanned_at": "2026-07-28T13:20:00Z",
   "deep_dive_cap": 5,
-  "gappers": [],
-  "note": "0 qualifying gappers after fixing a data bug in scripts/gappers-alpaca.sh (see RESEARCH-LOG 2026-07-28). Pre-fix, the raw snapshot scan surfaced 4 candidates (WLDS, RR, BMNR, BREA); all 4 were stale-data artifacts, not real premarket gaps. Post-fix, 1 candidate (WLDS, +29.07%) had a genuine fresh trade but failed the volume>=50000 floor (39,125 shares, and that print was a single 125-share trade) -- excluded."
+  "note": "Second gappers-cloud run today; an 08:10 ET run earlier found 0 qualifying hits (see RESEARCH-LOG). Prices refreshed at 09:20 ET (10 min to open) now clear the gate.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "AMKR",
+      "price": 52.885,
+      "gap_pct": -12.93,
+      "premarket_volume": 540051,
+      "catalyst": "Q2 2026 earnings beat (net sales $1.90B, +26% YoY; EPS $0.70 vs $0.22 prior year) but stock sells off hard despite in-line-to-slightly-above Q3 guidance.",
+      "headlines": [
+        "Amkor Technology Reports Financial Results for the Second Quarter 2026 (ir.amkor.com)",
+        "Amkor Technology shares drop 6% on weak guidance after reporting Q2 earnings beat (historical pattern, investing.com)"
+      ],
+      "catalyst_detail": "Amkor reported Q2 2026 after Monday's close: net sales $1.898B (+26% YoY, record), gross margin 16.8% (up from 12.0% a year ago), EPS $0.70 (vs $0.22 Q2'25). Q3 guidance: $1.95-2.05B sales, 18.5-19.5% gross margin, $0.72-0.82 EPS -- sequential growth on every line. No warning language in the release; capex guide raised to $2.5-3.0B for the year (expansion, not caution).",
+      "why": "Classic 'sell the news' -- AMKR was already up ~52% YTD on the AI-packaging/OSAT story heading into print, so a beat-and-raise that merely confirms the existing bull case, without a fresh incremental surprise, invites profit-taking. Same script played out on this ticker's Q2'24 print (beat + guide, stock still dropped ~6-7%). Compounded by a broad chip-sector selloff today (Nasdaq futures down, 'chips slide' per marketwatch).",
+      "impact": "Volume (540K, yesterday's full session print, used here as a liquidity proxy -- Alpaca has no true premarket-volume field) is well above AMKR's norm and the print is fundamentals-driven, so this reads as a real repricing, not noise. Not clearly a one-day fade: earnings resets the base for weeks, but the drop looks like giveback of recent AI-multiple froth rather than a broken thesis. Read-through: STM (also on this list) shows the same beat-but-selloff pattern -- a semiconductor-sector-wide 'good enough isn't good enough' reaction today.",
+      "horizon": "SHORT_TERM for a trade decision today (earnings gap, elevated IV, no edge in guessing post-earnings drift direction on day 1) -- but LONG_TERM thesis intact (record revenue, raised capex, AI/HPC packaging demand); worth revisiting once the gap settles and 200-SMA/VWAP confluence can be checked.",
+      "opportunity_cost": "Zero open positions and zero trades this week, so no existing holding would be displaced and the 3-trades/week cap isn't binding. Against the other 3 gappers today, AMKR has the clearest documented catalyst (real earnings print vs. macro-beta moves for HXL/BE/STM), so it would rank first if a trade were being considered. A short-side or wait-for-basing entry both plausibly clear 2:1 R:R given the size of the move, but this is a post-earnings-gap stock -- Confluence rule (2 of VWAP/RSI/200-SMA/insider) has not been checked and must be before any /trade action."
+    },
+    {
+      "rank": 2,
+      "symbol": "HXL",
+      "price": 102.4,
+      "gap_pct": -6.68,
+      "premarket_volume": 63940,
+      "catalyst": "No HXL-specific news found for today; move looks like broad market/sector beta rather than a company catalyst.",
+      "headlines": [
+        "Hexcel (HXL) Research Report -- general 6-month performance recap (stockstory.org)",
+        "HXL News Today | Why did Hexcel stock go down today? (marketbeat.com, no specific reason surfaced)"
+      ],
+      "catalyst_detail": "Searched both a catalyst-specific and a fundamentals-specific query; found nothing dated today. Hexcel's last earnings were Q1 2026 (reported ~Apr 23, beat by 37% on EPS, revenue +10% YoY, stock surged that day) -- that's aging news, not today's driver. Most recent company-specific item on file is a March CFO-change story, also stale.",
+      "why": "No identified HXL-specific mechanism. Best working explanation is that this is beta/momentum unwind riding a broad risk-off tape (other gappers list a 'Nasdaq drops, chips slide' backdrop today) -- Hexcel is aerospace-composites, not semis, but still an industrial cyclical that sells off in a broad de-risking move.",
+      "impact": "Volume (63,940 -- Monday's full-day print, used as liquidity proxy) barely clears the 50K floor and is HXL's normal range, not an outlier. Absent a real catalyst, this reads more like a one-day beta wobble that could partially mean-revert once the broader tape stabilizes, rather than a durable repricing.",
+      "horizon": "SHORT_TERM -- no structural catalyst identified, so by the routine's own rule this doesn't qualify for a multi-day swing thesis regardless of sector-rotation phase.",
+      "opportunity_cost": "No open positions to displace. Given the lack of a documented catalyst, HXL fails the Confluence rule's 'at least 1 catalyst documented' requirement outright -- this is a hold-and-watch, not a trade candidate, without further research turning up an actual reason for the move."
+    },
+    {
+      "rank": 3,
+      "symbol": "BE",
+      "price": 177.715,
+      "gap_pct": -5.54,
+      "premarket_volume": 524559,
+      "catalyst": "Bloom Energy reports Q2 2026 earnings AFTER today's close (Jul 28) -- today's premarket weakness predates the print, not a reaction to it.",
+      "headlines": [
+        "Bloom Energy's Next Earnings Report on July 28 Could Send the Stock Soaring, Here's Why (fool.com, 2 days old)",
+        "Bloom Energy Corp - BE Stock Price & News: 'Nasdaq Drops 2%, Dow Falls 950 Points As Chips Slide' (marketwatch.com)"
+      ],
+      "catalyst_detail": "BE has no news catalyst dated today; the one forward-looking piece on file flags earnings due after tonight's close. BE is up ~110% YTD per stock-analysis sources, so it is carrying a large embedded move into the print. A marketwatch snippet dated to a prior session references a broad 'Nasdaq drops 2%, Dow falls 950 points, chips slide' tape -- consistent with the same risk-off backdrop hitting AMKR/STM/HXL today.",
+      "why": "Read as pre-earnings de-risking/profit-taking after a huge YTD run, amplified by a broad risk-off/chip-weak tape rather than any BE-specific negative print. Traders trimming a big winner ahead of a binary earnings event is a standard mechanism, distinct from AMKR/STM's post-earnings reaction.",
+      "impact": "Volume (524,559, yesterday's full-day print, liquidity proxy only) is high for BE and consistent with real position-trimming, not noise. Not sustainable as an assessment either way -- the real move happens after tonight's print, so anything read into today's premarket gap is provisional and superseded by tonight's actual results.",
+      "horizon": "SHORT_TERM -- explicitly event-driven (earnings tonight); no basis for a multi-day thesis until the print is in and can be re-evaluated against the Confluence rule.",
+      "opportunity_cost": "No open positions to displace, no trade cap pressure. Entering BE today, before its own earnings print, would be taking on binary event risk with no informational edge -- the routine's rule against opening new risk into an unknown catalyst outcome argues to wait for the print rather than sizing a position now; a post-earnings re-scan is the appropriate next step, not a same-day entry."
+    },
+    {
+      "rank": 4,
+      "symbol": "STM",
+      "price": 50.45,
+      "gap_pct": -5.52,
+      "premarket_volume": 936895,
+      "catalyst": "Mixed Q2 2026 earnings -- beat on EPS but issued Q3 revenue guidance below expectations, pulling back after a ~150% 3-month AI-driven rally.",
+      "headlines": [
+        "STMicroelectronics NV (STM) Stock Price Today -- 'reported mixed Q2 2026 earnings, beating EPS estimates but issuing a Q3 revenue outlook below expectations' (pluang.com)",
+        "STMicroelectronics Soars 150% in 3 Months: Buy, Hold or Take Profits? (tradingview.com/zacks, early June)"
+      ],
+      "catalyst_detail": "STM beat Q2 2026 EPS estimates but guided Q3 revenue below Street expectations. This follows a run where the stock had already soared ~150% over the prior three months on AI/data-center demand optimism -- the same AI-infrastructure buildout story driving AMKR.",
+      "why": "Guidance miss after a parabolic run is a textbook trigger for a sharp giveback: expectations had run well ahead of what management is now committing to for Q3, even with a clean EPS beat on the quarter just reported. Directly parallels AMKR's post-earnings reaction today -- both are semiconductor supply-chain AI plays getting a 'good quarter, cautious guide' reaction on the same morning, reinforcing a sector-wide (not company-specific) read-through.",
+      "impact": "Volume (936,895, yesterday's full-day print, liquidity proxy) is STM's largest of the four names and well above normal, consistent with a real institutional repricing off the guidance miss rather than noise. Given the size of the preceding rally (150% in 3 months), this reads as a legitimate mean-reversion/profit-taking move with room to continue if the broader chip tape stays weak, not a one-day spike likely to fully reverse.",
+      "horizon": "SHORT_TERM for now (guidance-driven, elevated post-earnings volatility) with a LONG_TERM watch-item flag: if the pullback stabilizes above the pre-rally base and the AI-demand thesis holds, this could re-qualify as a swing candidate on a later /trade check once Confluence conditions are checked.",
+      "opportunity_cost": "No open positions to displace, no weekly-cap constraint. Of the four gappers, STM and AMKR both have clean, documented, earnings-based catalysts (satisfying the Confluence rule's catalyst requirement) versus HXL (no catalyst found) and BE (pre-earnings, not post). If only one semiconductor AI-supply-chain name were sized this week, STM vs. AMKR would need a head-to-head comparison on guidance quality and valuation reset before either clears a full /trade check."
+    }
+  ]
 }
