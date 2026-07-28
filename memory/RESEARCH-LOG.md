@@ -1649,3 +1649,105 @@ routine. Contested bull/bear setup with no fresh single-source catalyst
 and earnings ~1-2 weeks out — does not clear the documented-catalyst bar
 for a same-day entry. Notify sent (hits > 0). No orders touched; execution
 only happens via market-open or /trade with full safety-check gate.
+
+## 2026-07-28 — Gappers (auto-scan 11:16 ET, cloud)
+
+Third same-day run (mid-morning). Full watchlist scan via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+
+**Deep-dive cap: 5** (not applicable this run — only 2 candidates cleared
+all filters, see below; both deep-dived).
+
+Part A, quick-scan table for all qualifying rows:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $179.065 | +7.63% | 447,201 | AI-infra momentum reflex bounce, no fresh dated catalyst found |
+| 2 | BW | $9.22 | +6.96% | 51,253 | No dated catalyst for today's bounce; legal/dilution overhang still live per 2d-old coverage |
+
+8 raw candidates cleared |gap| >= 5% (AGMH -16.78%, NBIS +7.63%, BKSY
++7.63%, ZIM +7.43%, APT -6.96%, BW +6.96%, UMAC -6.9%, LPG -6.71%, SYNA
++5.9% — 9 counting AGMH). After the full filter (price >= $3,
+premarket_volume >= 50,000 where populated): AGMH excluded on price
+($0.9071 < $3); BKSY (23,620), ZIM (5,719), APT (916), UMAC (27,044), LPG
+(10,313), SYNA (14,951) all excluded on the volume floor. Only NBIS and BW
+cleared all three gates. Note: the "volume" field is the prior completed
+session's full-day volume, not true premarket volume (known
+`gappers-alpaca.sh` limitation) — applied as-is per the routine's own
+filter definition, consistent with the 10:09 ET run.
+
+Notable exclusion worth flagging as research-only (does not change the
+Decision below, since it fails the volume gate): ZIM's search results
+surfaced a reported Hapag-Lloyd acquisition of ZIM for $4.2B (stocktwits),
+which if confirmed via a primary source (SEC 8-K/press release) would be
+a materially different, LONG_TERM-shaped catalyst vs a headline spike —
+worth a follow-up check outside this routine's volume-gated scope.
+
+#### Deep dive: NBIS $179.065 +7.63%
+
+- Catalyst: NBIS up 7.63% intraday to $179.065 vs Monday's $166.37 close
+  (already above the 10:09 ET print of $175.19 earlier today). No fresh
+  company-specific news dated today found — most recent coverage is a ~9%
+  drop "Friday" (~Jul 24) amid AI-stock risk-off rotation, with NBIS still
+  up ~135% YTD per one source. Reads as continuation/reflex-bounce in the
+  same neocloud AI-infra trade flagged in the 10:09 ET deep dive (Nvidia
+  stake, GB300 Blackwell cloud status, Meta/Microsoft contracts), not a
+  new event.
+- Why: No new dated catalyst confirmed; likely mechanism is momentum/dip-
+  buying reflex within the AI-infrastructure trade after last week's
+  risk-off pullback — same dynamic as the 10:09 ET entry (earnings-
+  anticipation positioning), still contested by the Jul 27 Seeking Alpha
+  Sell note ($95 target).
+- Impact: `premarket_volume` (447,201) is Alpaca's prior-completed-session
+  full-day volume, not true intraday volume (documented gappers-alpaca.sh
+  limitation) — still far below NBIS's ~18.33M average daily volume, so
+  can't confirm conviction. Stock has now printed a higher gap on the
+  third same-day scan (175.19 at 10:09 ET -> 179.065 now), trending
+  further from Monday's close rather than fading — but still no
+  confirming news.
+- Horizon: SHORT_TERM — unchanged from the 10:09 ET call: no durable new
+  catalyst, high-beta AI name, contested bull/bear split in sell-side
+  research.
+- Opportunity cost: Account flat (0 positions per today's market-open
+  log); NBIS is a WATCHLIST.md "watch" item, not currently held. This is
+  the second same-day scan to flag NBIS as a qualifying gapper —
+  persistence across scans is a mild positive signal, but the unresolved
+  2:1 R:R question from the 10:09 ET entry stands: stop sizing needs a
+  firmer target than the conflicting bull/bear notes provide.
+
+#### Deep dive: BW $9.22 +6.96%
+
+- Catalyst: BW up 6.96% to $9.22 vs Monday's $8.62 close. Most recent
+  dated coverage (Jul 26) reports BW down ~33% over the prior 30 days
+  ($14.45 Jun 26 -> $9.62 Jul 24) on "legal and dilution pressures" — a
+  headwind, not an explanation for today's up-move. An older item (May
+  11) cites a separate +17% premarket pop on an earnings/bookings beat —
+  stale and unrelated to today. No fresh same-day catalyst identified.
+- Why: Unconfirmed for today. Current $9.22 is still below the Jul 24
+  close of $9.62 cited in the legal/dilution writeup, so this reads more
+  like continued volatility around a depressed level than a confirmed
+  relief rally — could be short-covering or dip-buying with no news
+  trigger.
+- Impact: `premarket_volume` (51,253) barely clears the 50,000 floor — of
+  8 gap-qualifying symbols tonight, only NBIS and BW cleared the volume
+  gate at all. Thin volume plus an unresolved legal/dilution overhang and
+  no confirming news reads as a noise-level move at a depressed price,
+  not a durable reversal.
+- Horizon: SHORT_TERM — legal/dilution overhang from the Jul 26 writeup
+  is still the dominant unresolved thesis; nothing found here flips it to
+  structural.
+- Opportunity cost: Not a current holding. Account flat (0 positions).
+  Given the unconfirmed catalyst and still-live legal/dilution overhang,
+  this ranks behind NBIS on today's 2-name list — would need a confirmed
+  catalyst before it clears the Confluence rule for a same-day entry;
+  recommend passing.
+
+### Decision
+**HOLD — no trades.** 2 qualifying gappers (NBIS, BW), both deep-dived
+per the routine. Neither clears the documented-catalyst bar for a
+same-day entry — NBIS is a contested-thesis momentum continuation, BW has
+an unresolved legal/dilution overhang with no confirming bounce catalyst.
+ZIM's reported M&A (Hapag-Lloyd, $4.2B) is flagged for follow-up outside
+this routine since it fails the volume gate here. Notify sent (hits > 0).
+No orders touched; execution only happens via market-open or /trade with
+full safety-check gate.

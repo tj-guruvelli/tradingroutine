@@ -1,0 +1,40 @@
+{
+  "scanned_at": "2026-07-28T15:16:01Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 179.065,
+      "gap_pct": 7.63,
+      "premarket_volume": 447201,
+      "catalyst": "Continued AI-infra/neocloud momentum reflex bounce off last week's risk-off pullback; no fresh single dated catalyst found for today specifically.",
+      "headlines": [
+        "Nebius Is Down 9% Today: How Does NBIS Compare to Other AI Cloud Stocks? (247wallst, ~4d ago)",
+        "NBIS Nebius Group NV Stock Price & Overview (Seeking Alpha)"
+      ],
+      "catalyst_detail": "NBIS up 7.63% intraday to $179.065 vs Monday's $166.37 close (already above the 10:09 ET print of $175.19 earlier today). No fresh company-specific news dated today found -- most recent coverage is a ~9% drop 'Friday' (~Jul 24) amid AI-stock risk-off rotation, with NBIS still up ~135% YTD per one source. Reads as continuation/reflex-bounce in the same neocloud AI-infra trade flagged in the 10:09 ET deep dive (Nvidia stake, GB300 Blackwell cloud status, Meta/Microsoft contracts), not a new event.",
+      "why": "No new dated catalyst confirmed; likely mechanism is momentum/dip-buying reflex within the AI-infrastructure trade after last week's risk-off pullback -- same dynamic as the 10:09 ET entry (earnings-anticipation positioning), still contested by the Jul 27 Seeking Alpha Sell note ($95 target).",
+      "impact": "premarket_volume (447,201) is Alpaca's prior-completed-session full-day volume, not true intraday volume (documented gappers-alpaca.sh limitation) -- still far below NBIS's ~18.33M average daily volume, so cannot confirm conviction. Stock has now printed a higher gap on the third same-day scan (175.19 at 10:09 ET -> 179.065 now), trending further from Monday's close rather than fading -- but still no confirming news.",
+      "horizon": "SHORT_TERM -- unchanged from the 10:09 ET call: no durable new catalyst, high-beta AI name, contested bull/bear split in sell-side research.",
+      "opportunity_cost": "Account flat (0 positions per today's market-open log); NBIS is a WATCHLIST.md 'watch' item, not currently held. This is the second same-day scan to flag NBIS as a qualifying gapper -- persistence across scans is a mild positive signal, but the unresolved 2:1 R:R question from the 10:09 ET entry stands: stop sizing needs a firmer target than the conflicting bull/bear notes provide."
+    },
+    {
+      "rank": 2,
+      "symbol": "BW",
+      "price": 9.22,
+      "gap_pct": 6.96,
+      "premarket_volume": 51253,
+      "catalyst": "No dated catalyst for today's bounce found; most recent coverage (2 days ago) reports a ~33% 30-day slide on legal/dilution overhang.",
+      "headlines": [
+        "Babcock & Wilcox Enterprises (BW) Stock Falls -33% in 30 Days Amid Legal and Dilution Pressures (Tickeron, 2d ago)",
+        "Why Is BW Stock Rising Today? (Stocktwits, May 11 -- stale, different move)"
+      ],
+      "catalyst_detail": "BW up 6.96% to $9.22 vs Monday's $8.62 close. Most recent dated coverage (Jul 26) reports BW down ~33% over the prior 30 days ($14.45 Jun 26 -> $9.62 Jul 24) on 'legal and dilution pressures' -- a headwind, not an explanation for today's up-move. An older item (May 11) cites a separate +17% premarket pop on an earnings/bookings beat -- stale and unrelated to today. No fresh same-day catalyst identified.",
+      "why": "Unconfirmed for today. Current $9.22 is still below the Jul 24 close of $9.62 cited in the legal/dilution writeup, so this reads more like continued volatility around a depressed level than a confirmed relief rally -- could be short-covering or dip-buying with no news trigger.",
+      "impact": "premarket_volume (51,253) barely clears the 50,000 floor -- of 8 gap-qualifying symbols tonight, only NBIS and BW cleared the volume gate at all. Thin volume plus an unresolved legal/dilution overhang and no confirming news reads as a noise-level move at a depressed price, not a durable reversal.",
+      "horizon": "SHORT_TERM -- legal/dilution overhang from the Jul 26 writeup is still the dominant unresolved thesis; nothing found here flips it to structural.",
+      "opportunity_cost": "Not a current holding. Account flat (0 positions). Given the unconfirmed catalyst and still-live legal/dilution overhang, this ranks behind NBIS on today's 2-name list -- would need a confirmed catalyst before it clears the Confluence rule for a same-day entry; recommend passing."
+    }
+  ]
+}
