@@ -17,3 +17,10 @@ Weekly trade count: 0/3.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero trades this week, zero open positions — 13 trading days since launch (Jul 9) with no entries taken despite active daily research/gappers/setup-scan pipelines. Live Alpaca account equity is $100,000 (confirmed flat since account creation 2026-07-08), not the $10,000 baseline recorded in this log's Day 0 entry and in PROJECT-CONTEXT.md/TRADING-STRATEGY.md — that $10,000 figure appears to have never matched the actual paper account. Using confirmed live equity ($100,000, unchanged) as the basis for Day/Phase P&L since no prior real snapshot exists. Flagging the mismatch for operator review; not correcting the strategy docs unilaterally.
+
+### Jul 28 — EOD Snapshot (Day 14, Tuesday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders. Pre-market research = HOLD (no confluence), gappers scan (08:10 + 10:09 + 11:16 ET) found no qualifying candidates, market-open skipped Steps 2-6 for lack of a validated ticker. 14 trading days since launch (Jul 9) with no entries taken. Weekly trade count: 0/3 (week of Jul 27). Equity flat at $100,000 (still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27 — unresolved, operator review pending).
