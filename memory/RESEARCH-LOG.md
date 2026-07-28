@@ -1583,3 +1583,69 @@ per the routine's own rule (hits == 0, no scan error).
 **HOLD — no trades, no alert.** Root-caused and fixed a real data-quality
 bug in the shared gappers scanner rather than logging false signals; today's
 corrected scan has zero real premarket gappers on the watchlist.
+
+## 2026-07-28 — Gappers (auto-scan 10:09 ET, cloud)
+
+Second same-day run (market open, first hour). Full watchlist scan via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0), fixed-script
+version (see 08:10 ET entry above for the prevDailyBar bug fix).
+
+**Deep-dive cap: 5** (ranks 6-10 would get quick-scan only — not applicable
+this run, only 1 candidate cleared the filters, see below).
+
+Part A, quick-scan table for all qualifying rows:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $175.19 | +5.43% | 221,862 | AI-infra momentum continuation vs. a fresh Seeking Alpha Sell note |
+
+8 raw candidates cleared |gap| >= 5% (AGMH -15.94%, BKSY -7.91%, SYNA -7.45%,
+ZIM +7.17%, UMAC -7.15%, BWLP -6.93%, LPG +6.72%, NBIS +5.43%). After the
+full filter (price >= $3, premarket_volume >= 50,000 where populated): AGMH
+excluded on price ($0.9163 < $3); BKSY/SYNA/ZIM/UMAC/BWLP/LPG all excluded
+on the volume floor (1,809-12,732, all well under 50K). Only NBIS cleared
+all three gates. Note: the "volume" field here is the prior completed
+session's full-day volume, not true premarket volume (known
+`gappers-alpaca.sh` limitation, documented in the script and CLAUDE.md) —
+applied as-is per the routine's own filter definition.
+
+#### Deep dive: NBIS $175.19 +5.43%
+
+- Catalyst: NBIS is up 5.43% intraday to $175.19 vs. Monday's $166.17
+  close. No single fresh company-specific news event today; reads as
+  continuation of the "neocloud" AI-infrastructure trade — reinforced by
+  recent coverage of Nvidia's $2B anchor equity stake, Nebius' GB300
+  Blackwell "Exemplar Cloud" status, and large standing contracts with Meta
+  (~$27B) and Microsoft. Its Nasdaq-100 inclusion (cited in older coverage)
+  dates to a prior quarter and is not today's driver. One day after a fresh
+  Seeking Alpha Sell initiation (Jul 27, $95 target, ~49% downside) arguing
+  GPU capacity constraints are easing and eroding NBIS's pricing power.
+- Why: Momentum/rotation buying in AI-capex-beneficiary names ahead of its
+  Aug earnings print (source conflict on date — Public.com says Aug 10,
+  Seeking Alpha's Jul 27 piece says Aug 6, flagging as a gap) is pulling
+  NBIS higher despite, not because of, the newly published bear thesis.
+- Impact: The `premarket_volume` figure (221,862) is actually the prior
+  session's full-day volume (Alpaca snapshot limitation), not true intraday
+  volume, and is far below NBIS's own ~18.33M average daily volume — can't
+  confirm real conviction behind the move. High beta (~3.19x) plus an
+  actively contested bull/bear split in sell-side research reads as
+  volatile repositioning, not a confirmed sustainable breakout.
+- Horizon: SHORT_TERM — no durable new catalyst today (index-inclusion news
+  is stale); looks like earnings-anticipation positioning colliding with a
+  freshly published bear note. High-beta AI names like this tend to give
+  back gap moves fast without a fresh confirming print.
+- Opportunity cost: Account is flat (0 open positions), so no existing
+  holding is displaced. NBIS is already a WATCHLIST.md "watch" item tagged
+  "Microsoft invested." It's the only gapper clearing all filters today, so
+  there's no competing candidate to rank it against. Whether it clears 2:1
+  reward:risk is unclear — the bear ($95 target) and implied bull cases
+  point in very different directions, and a stop respecting the "never
+  within 3% of current price" rule needs a firmer near-term target than
+  either single source gives. Research only, no size recommended.
+
+### Decision
+**HOLD — no trades.** 1 qualifying gapper (NBIS), deep-dived per the
+routine. Contested bull/bear setup with no fresh single-source catalyst
+and earnings ~1-2 weeks out — does not clear the documented-catalyst bar
+for a same-day entry. Notify sent (hits > 0). No orders touched; execution
+only happens via market-open or /trade with full safety-check gate.

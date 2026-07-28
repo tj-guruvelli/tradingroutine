@@ -1,0 +1,23 @@
+{
+  "scanned_at": "2026-07-28T14:13:03Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 175.19,
+      "gap_pct": 5.43,
+      "premarket_volume": 221862,
+      "catalyst": "Continued AI-infrastructure/neocloud momentum buying (Nvidia-anchored GPU capacity, Meta/Microsoft cloud contracts) running against a fresh Seeking Alpha Sell initiation.",
+      "headlines": [
+        "Can Nebius Stock Turn a $10,000 Investment Into $1 Million? (The Motley Fool, 1h)",
+        "Nebius Could Get Cut In Half (Seeking Alpha, Jul 27 -- Sell init., $95 target)"
+      ],
+      "catalyst_detail": "NBIS is up 5.43% intraday to $175.19 against Monday's $166.17 close. No single fresh company-specific news event today; the move reads as continuation of the 'neocloud' AI-infrastructure trade -- reinforced by recent coverage of Nvidia's $2B anchor equity investment, Nebius' GB300 Blackwell 'Exemplar Cloud' status, and large standing contracts with Meta (~$27B) and Microsoft. Its Nasdaq-100 inclusion (cited in older coverage) dates to a prior quarter and is not today's driver. Notably, this comes one day after a Seeking Alpha Sell initiation (Jul 27, $95 target, ~49% downside) arguing GPU capacity constraints are easing and eroding NBIS's pricing power/margins.",
+      "why": "Momentum/rotation buying in AI-capex-beneficiary names is pulling NBIS higher ahead of its Aug earnings print (Public.com lists Aug 10, Seeking Alpha's Jul 27 piece says Aug 6 -- sources disagree, flagging as a gap); this is happening despite, not because of, the newly published bear thesis, suggesting bulls are outweighing that note for now.",
+      "impact": "The premarket_volume field here (221,862) is actually the prior completed session's full-day volume, not true intraday volume (known Alpaca snapshot limitation, see CLAUDE.md/gappers-alpaca.sh) -- it's also far below NBIS's own ~18.33M average daily volume per Public.com, so it cannot confirm real conviction behind today's move. High beta (~3.19x) and a live, actively contested bull/bear split in sell-side research make this read as volatile repositioning rather than a confirmed, sustainable breakout.",
+      "horizon": "SHORT_TERM -- no durable new catalyst today (index-inclusion news is stale); move looks like earnings-anticipation positioning colliding with a freshly published bear note, and high-beta AI names like this tend to give back gap moves fast without a fresh confirming print.",
+      "opportunity_cost": "Account is flat (0 open positions per today's 08:10 ET pre-market log), so a trade here would not displace an existing holding. NBIS is already a WATCHLIST.md 'watch' item tagged 'Microsoft invested.' This is the ONLY gapper clearing all three filters today (out of 8 raw candidates before filtering) -- there is no competing higher-ranked gapper to weigh it against. Whether it clears the 2:1 reward:risk minimum is unclear: the bear case ($95 target) and the implied bull case point in very different directions, and a stop respecting the 'never within 3% of current price' rule plus 10% trailing-stop convention would need a firmer near-term target than either single research source provides. Research only -- no size recommended here."
+    }
+  ]
+}
