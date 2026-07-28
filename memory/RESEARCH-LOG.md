@@ -1449,3 +1449,89 @@ those tickers). No grade-A hits -> no Telegram alert per STEP 4 rule. Same
 hit as the two earlier runs today, curr_px unchanged at 3.11 vs 16:39 ET.
 Candidate only, not an order — feed to `/trade` if pursued (full
 safety-check gate applies).
+
+## 2026-07-28 — Pre-Market Research (cloud routine)
+
+Ran the scheduled pre-market workflow via Apify RAG web browser. `tradingview-data`
+MCP tools are absent again this session (`ToolSearch` returns no matches) —
+same outage flagged in every recent session; `combined_analysis` is still
+unavailable so the confluence rule (≥2 of VWAP/RSI/200-SMA/insider) cannot be
+satisfied for any candidate. Separately, Apify's search choked on every query
+containing "S&P" — the literal `&` broke the query and returned junk results
+(Wikipedia's "S" page, a Spotify artist) instead of an error, for the S&P
+futures and sector-momentum queries. Not a Yahoo-ban issue; fell back to
+native WebSearch (with the standard Yahoo domain block) for those two plus
+VIX/catalysts/earnings/econ-calendar, per the routine's fallback rule.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 14 straight trading days
+  since the Day-0 baseline (2026-07-08 launch).
+
+### Market Context (Apify + WebSearch fallback, Tue 7/28 premarket ET)
+- **Oil — continued reversal**: WTI $81.05 (-1.89%), Brent $86.40 (-2.22%)
+  (oilprice.com, live delayed feed). Extends the weekend de-escalation move
+  logged yesterday (was ~$83-90); no fresh Iran-Oman headline found today,
+  reads as continuation, not a new catalyst.
+- **S&P 500 futures**: +~0.9% premarket (CNBC/Schwab via WebSearch) — helped
+  by the oil pullback easing yield pressure (10Y ~4.64%, off overnight highs)
+  and firm PMI prints (~53-54, services + manufacturing both expanding).
+- **VIX**: 18.67 at Mon 7/27 close (CNBC/FRED via WebSearch) — down from
+  yesterday's 18.93-19.20 read, "sleepy" per search summary. Low vs. the
+  FOMC + megacap-earnings pileup this week — a complacency flag, not a
+  bullish all-clear.
+- **FOMC**: meeting runs today-tomorrow (7/28-29); decision + Chair Kevin
+  Warsh press conference Wed 7/29 2:00pm ET. Consensus now: hold at
+  3.50-3.75%, with the debate being whether a September hike stays on the
+  table given oil-driven inflation risk — a softer framing than yesterday's
+  "~35% hike-this-meeting" CME print; take as the newer, not necessarily
+  more reliable, read.
+- **Earnings — today (7/28)**: Coca-Cola, Boeing, Ford, Visa, Tilray Brands
+  (none held/watchlist). Wed 7/29 (FOMC day): SoFi, P&G, Meta, Microsoft.
+  Thu 7/30: Sirius XM, Roblox, Apple, Amazon. Same heaviest-week-of-the-
+  season setup as yesterday's log — FOMC + Mag-7 earnings compressed into
+  48 hours.
+- **Econ calendar today**: Consumer Confidence, Richmond Fed mfg survey,
+  Dallas Fed retail outlook, Advance Intl Trade in Goods, Advance
+  Retail/Wholesale Inventories, FHFA HPI, S&P Case-Shiller (10am-ish ET
+  cluster). No CPI/PPI today — next CPI print is Aug 12.
+- **Sector YTD (XLK/XLF/XLE/XLU)**: XLK (Technology) +~32-33%, XLE (Energy)
+  +~26-27%, XLU (Utilities) +~5%, XLF (Financials) ~-5% (Seeking
+  Alpha/Morningstar/ETF trackers via WebSearch — first clean quantified read
+  after two straight sessions flagging this as a Yahoo-only gap). Rotation
+  narrative: capital into Energy/Industrials/Materials "real economy" names,
+  Financials the clear laggard.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None generated. Same root cause as every recent session: no
+`combined_analysis` technical block means the confluence rule (≥2 of
+VWAP/RSI/200-SMA/insider signal) can't be satisfied for any watchlist name.
+Sector momentum (XLK/XLE strength) and today's macro setup (oil relief +
+premarket futures green) are real but explicitly insufficient substitutes
+for a documented technical setup per TRADING-STRATEGY.md.
+
+### Risk Factors
+- **Tooling gap persists (3rd+ consecutive session)**: `tradingview-data`
+  MCP still absent — Price Action confluence blocked across pre-market,
+  market-open, and setup-scan alike. Needs operator attention; this is no
+  longer transient.
+- **Apify query-encoding bug**: literal `&` in "S&P 500" queries breaks the
+  RAG web browser's search (returns dictionary/Wikipedia junk for "S"
+  instead of an error or empty result) — a silent-failure mode distinct
+  from the Yahoo-leakage issue already documented in CLAUDE.md. Worth
+  URL-encoding or rephrasing S&P queries (e.g. "SPX", "S and P 500") in the
+  routine going forward to avoid relying on WebSearch fallback every run.
+- FOMC decision + Chair press conference Wed 2pm ET, stacked directly against
+  Meta/Microsoft earnings the same day — elevated single-session gap risk.
+- VIX at 18.67 (sleepy) heading into that stack reads as underpriced
+  volatility risk, not confirmed calm.
+- Oil's de-escalation is 2 days old and reversible; a snapback would hit
+  the same yield/futures channel that's currently helping the tape.
+
+### Decision
+**HOLD — no trades.** Missing technical-data tool blocks confluence for
+every candidate; premarket is constructively green (oil relief, firm PMI)
+but that's not a substitute for a documented technical setup, and FOMC +
+Mag-7 earnings this week argue for patience over new risk anyway. No orders
+touched.
