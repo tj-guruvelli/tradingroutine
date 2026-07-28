@@ -1,0 +1,6 @@
+{
+  "scanned_at": "2026-07-28T12:16:06Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "note": "0 qualifying gappers after fixing a data bug in scripts/gappers-alpaca.sh (see RESEARCH-LOG 2026-07-28). Pre-fix, the raw snapshot scan surfaced 4 candidates (WLDS, RR, BMNR, BREA); all 4 were stale-data artifacts, not real premarket gaps. Post-fix, 1 candidate (WLDS, +29.07%) had a genuine fresh trade but failed the volume>=50000 floor (39,125 shares, and that print was a single 125-share trade) -- excluded."
+}

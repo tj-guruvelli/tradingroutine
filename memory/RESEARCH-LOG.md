@@ -1535,3 +1535,51 @@ every candidate; premarket is constructively green (oil relief, firm PMI)
 but that's not a substitute for a documented technical setup, and FOMC +
 Mag-7 earnings this week argue for patience over new risk anyway. No orders
 touched.
+
+## 2026-07-28 — Gappers (auto-scan 08:10 ET, cloud)
+
+**Data bug found and fixed before this run's results were trusted.**
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0) initially returned
+4 candidates (WLDS -11.54%, RR -9.9%, BMNR +8.31%, BREA +6.66%). Cross-checking
+BMNR against `scripts/alpaca.sh bars`/`quote` before writing it up showed the
+script's "prev_close" was Alpaca's `prevDailyBar` (Fri 7/24 close, $15.815)
+instead of the actually-most-recent completed session (Mon 7/27 close,
+$17.90) — Alpaca's snapshot endpoint carries `dailyBar` forward as "last
+completed session" pre-market, and `prevDailyBar` is one session further
+back. Using the wrong field manufactured an 8.3% "gap" out of a stock that
+was actually down ~4.5% from Monday's close. All 4 raw candidates had the
+same defect. Separately, KLIC/RR/AGMH (which the fix then surfaced) turned
+out to be citing a **stale Monday-close quote** (bid/ask spread noise from
+`latestQuote` at Mon 20:00 UTC, no trades since) as "current price" against
+today's dailyBar — another false-gap source, not a real premarket move.
+
+Fixed both bugs in `scripts/gappers-alpaca.sh`: (1) prev_close now prefers
+`dailyBar.c` over `prevDailyBar.c`; (2) current price now requires a
+quote/trade timestamped *today*, picking whichever of quote/trade is freshest
+and skipping the symbol entirely if neither is fresh (no fabricated price
+from stale data). Also fixed a latent bug where a zero/stale quote could
+mask a valid same-timestamp trade price.
+
+**Retroactive flag**: this same prevDailyBar bug was already visible but
+unresolved in the 2026-07-27 pre-market entry — that day's KLIC row
+(-13.48%, prev_close $101.26) was flagged "possibly a stale prev_close
+reference" but not root-caused. BMNR's 2026-07-27 entry (+9.86%,
+"volume 1.38M") likely has the same defect. Treat gap%/prev_close values in
+gapper entries dated 2026-07-24 through 2026-07-27 as unverified; re-check
+before acting on any of them.
+
+**Post-fix result: 0 qualifying gappers today.** Corrected scan surfaced only
+WLDS (+29.07% vs Monday's $2.89 close, on ONE 125-share trade at 08:02 ET —
+not a reliable print). Applied full filter (|gap| >= 5%, price >= $3,
+premarket_volume >= 50,000 where populated): WLDS's populated volume field
+(39,125 — Monday's full-day volume, not true premarket volume; Alpaca's
+snapshot has no distinct premarket-volume field) is below the 50K floor →
+excluded. No candidates cleared all three gates. No deep-dive run (nothing
+to dive into). Saved `data/premarket_gappers_2026-07-28.json` with an empty
+`gappers` array and a note explaining why. Telegram/ClickUp notify skipped
+per the routine's own rule (hits == 0, no scan error).
+
+### Decision
+**HOLD — no trades, no alert.** Root-caused and fixed a real data-quality
+bug in the shared gappers scanner rather than logging false signals; today's
+corrected scan has zero real premarket gappers on the watchlist.

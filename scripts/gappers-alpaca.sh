@@ -73,32 +73,53 @@ fi
 # Batch (comma-separated) — endpoint supports up to 1000 symbols per call.
 snap_url="$DATA/stocks/snapshots?symbols=$symbols"
 snapshot="$(curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" "$snap_url")"
+TODAY_UTC="$(date -u +%Y-%m-%d)"
 
-THRESH="$THRESH" SNAPSHOT_JSON="$snapshot" python - <<'PY'
+THRESH="$THRESH" SNAPSHOT_JSON="$snapshot" TODAY_UTC="$TODAY_UTC" python - <<'PY'
 import json, os
 thresh = float(os.environ["THRESH"])
+today = os.environ["TODAY_UTC"]
 data = json.loads(os.environ["SNAPSHOT_JSON"])
 rows = []
 for sym, snap in data.items():
+    # Pre-market: today's session hasn't started, so Alpaca's "dailyBar" is
+    # still carrying the most recently COMPLETED session (i.e. yesterday's
+    # close) — that's the correct baseline for a premarket gap. "prevDailyBar"
+    # is one session further back and is stale for this purpose. Only fall
+    # back to prevDailyBar if dailyBar is missing outright (e.g. no trades
+    # in the most recent session).
+    daily = snap.get("dailyBar") or {}
     prev = snap.get("prevDailyBar") or {}
-    latest = snap.get("latestQuote") or snap.get("latestTrade") or {}
-    prev_close = prev.get("c") or 0.0
-    # latestQuote: use midpoint; latestTrade: use price
-    current = 0.0
-    if "ap" in latest and "bp" in latest and latest["ap"] and latest["bp"]:
-        current = (latest["ap"] + latest["bp"]) / 2.0
-    elif "p" in latest:
-        current = latest["p"]
-    if not prev_close or not current: continue
+    prev_close = daily.get("c") or prev.get("c") or 0.0
+    # Pick whichever of quote/trade is more recent, but only trust it if it's
+    # actually from today's session — thinly-traded names can carry Monday's
+    # closing quote/trade forward unchanged, which produces a fake "gap"
+    # against dailyBar (stale bid/ask spread noise, not a real move).
+    quote = snap.get("latestQuote") or {}
+    trade = snap.get("latestTrade") or {}
+    quote_px = (quote["ap"] + quote["bp"]) / 2.0 if quote.get("ap") and quote.get("bp") else None
+    trade_px = trade.get("p")
+    candidates = []
+    if quote_px and str(quote.get("t", "")).startswith(today):
+        candidates.append((quote["t"], quote_px))
+    if trade_px and str(trade.get("t", "")).startswith(today):
+        candidates.append((trade["t"], trade_px))
+    if not candidates:
+        continue  # no fresh premarket data for this symbol — skip, don't fake it
+    candidates.sort(key=lambda c: c[0])
+    current = candidates[-1][1]
+    if not prev_close: continue
     gap = (current - prev_close) / prev_close * 100.0
     if abs(gap) < thresh: continue
-    day = snap.get("dailyBar") or {}
     rows.append({
         "symbol": sym,
         "prev_close": round(prev_close, 4),
         "current": round(current, 4),
         "gap_pct": round(gap, 2),
-        "volume": day.get("v") or prev.get("v") or 0,
+        # Alpaca's snapshot has no distinct premarket-volume field; this is
+        # the most recent completed session's full-day volume, not today's
+        # premarket volume.
+        "volume": daily.get("v") or prev.get("v") or 0,
     })
 rows.sort(key=lambda r: abs(r["gap_pct"]), reverse=True)
 print(json.dumps(rows, indent=2))
