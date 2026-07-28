@@ -1751,3 +1751,22 @@ ZIM's reported M&A (Hapag-Lloyd, $4.2B) is flagged for follow-up outside
 this routine since it fails the volume gate here. Notify sent (hits > 0).
 No orders touched; execution only happens via market-open or /trade with
 full safety-check gate.
+
+## 2026-07-28 — Setup Scan (auto-scan 16:38 ET, cloud)
+
+### Setup Scan (16:38 ET, cloud)
+60 candidates checked, 6 errors, 2 hits (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| RTX | B | Momentum confluence | daily | ADX14 33.53, EMA9 204.05 > EMA21 197.84, RSI14 77.51 |
+| WLDS | B | Momentum confluence | daily | ADX14 37.53, EMA9 2.16 > EMA21 1.80, RSI14 69.78 |
+
+Errors: TRMD, BKSY, UFO, UMAC, RCAT, LAKE all failed with "DNS resolution
+failure" on the Alpaca bars endpoint (transient network issue, not a
+data-quality flag on those tickers). No grade-A hits -> no Telegram alert
+per STEP 4 rule. WLDS is a repeat hit from the 11:56/16:39/18:38 ET cloud
+scans on 2026-07-27 — curr_px now 3.83 (up from 3.11 at last check), still
+grade B only (stock_score gate unavailable in cloud variant). RTX is a new
+hit this run, overbought on RSI14 77.51. Candidates only, not orders — feed
+to `/trade` if pursued (full safety-check gate applies).

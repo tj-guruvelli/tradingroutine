@@ -1,0 +1,79 @@
+{
+  "scanned_at": "2026-07-28T20:38:40.570Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "RTX",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 215.97,
+      "prev_daily_high": 220.33,
+      "prev_daily_close": 218.34,
+      "sma200": 186.77,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 221.26,
+      "rsi14": 77.51,
+      "adx14": 33.53,
+      "ema9": 204.05,
+      "ema21": 197.84,
+      "premarket_volume": 0,
+      "daily_volume": 405970,
+      "avg_daily_volume_30": 211652,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "WLDS",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 3.83,
+      "prev_daily_high": 6.46,
+      "prev_daily_close": 2.89,
+      "sma200": 1.49,
+      "sma200_window_days": 200,
+      "pmh": 3.73,
+      "today_hod": 4.63,
+      "rsi14": 69.78,
+      "adx14": 37.53,
+      "ema9": 2.16,
+      "ema21": 1.8,
+      "premarket_volume": 125,
+      "daily_volume": 39125,
+      "avg_daily_volume_30": 12892,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": [
+    {
+      "symbol": "TRMD",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/TRMD/bars?timeframe=1Min&start=2026-07-28T04:00:00-04:00&end=2026-07-28T20:38:37.819Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "BKSY",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/BKSY/bars?timeframe=1Min&start=2026-07-28T04:00:00-04:00&end=2026-07-28T20:38:37.819Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "UFO",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/UFO/bars?timeframe=1Day&start=2025-07-13T00:00:00.000Z&end=2026-07-28T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "UMAC",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/UMAC/bars?timeframe=1Min&start=2026-07-28T04:00:00-04:00&end=2026-07-28T20:38:37.819Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "RCAT",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/RCAT/bars?timeframe=1Min&start=2026-07-28T04:00:00-04:00&end=2026-07-28T20:38:37.819Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "LAKE",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/LAKE/bars?timeframe=1Day&start=2025-07-13T00:00:00.000Z&end=2026-07-28T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    }
+  ]
+}
