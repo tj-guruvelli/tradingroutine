@@ -1770,3 +1770,18 @@ scans on 2026-07-27 — curr_px now 3.83 (up from 3.11 at last check), still
 grade B only (stock_score gate unavailable in cloud variant). RTX is a new
 hit this run, overbought on RSI14 77.51. Candidates only, not orders — feed
 to `/trade` if pursued (full safety-check gate applies).
+
+## 2026-07-28 — Setup Scan (auto-scan 18:38 ET, cloud)
+
+### Setup Scan (18:38 ET, cloud)
+60 candidates checked, 0 errors, 2 hits (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| RTX | B | Momentum confluence | daily | ADX14 33.53, EMA9 204.05 > EMA21 197.84, RSI14 77.51 |
+| WLDS | B | Momentum confluence | daily | ADX14 37.53, EMA9 2.16 > EMA21 1.80, RSI14 69.78 |
+
+Unchanged from the 16:38 ET run two hours earlier — same two grade-B hits,
+same values (post-close, no new bars since last scan). No grade-A hits ->
+no Telegram alert per STEP 4 rule. Candidates only, not orders — feed to
+`/trade` if pursued (full safety-check gate applies).
