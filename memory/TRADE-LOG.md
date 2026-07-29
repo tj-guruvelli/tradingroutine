@@ -24,3 +24,15 @@ Weekly trade count: 0/3.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders. Pre-market research = HOLD (no confluence), gappers scan (08:10 + 10:09 + 11:16 ET) found no qualifying candidates, market-open skipped Steps 2-6 for lack of a validated ticker. 14 trading days since launch (Jul 9) with no entries taken. Weekly trade count: 0/3 (week of Jul 27). Equity flat at $100,000 (still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27 — unresolved, operator review pending).
+
+### Jul 29, Market-Open (Day 15, Wednesday)
+**No trades.** Account flat: $100,000 equity, $100,000 cash, 0 positions
+(re-confirmed live via `alpaca.sh account`/`positions`). Pre-market RESEARCH-LOG
+(2026-07-29) = HOLD — FOMC decision + 5 mega-cap earnings (MSFT/META/QCOM/ARM/
+LRCX) land same day, semis in active technical breakdown (Nasdaq 100 near
+correction on China DUV lithography story), `tradingview-data` MCP still down
+(4th+ session, confluence unsatisfiable), Apify hit its monthly hard cap.
+Gappers scan (09:11 ET) surfaced 1 candidate (BE +10.08%, earnings beat +
+raised guidance + Brookfield/Oracle/Nebius deals) but logged research-only,
+no confluence check performed — not a validated planned trade. No planned
+tickers to validate; skipped Steps 2-6. Weekly trade count: 0/3 (week of Jul 27).
