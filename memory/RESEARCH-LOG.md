@@ -1943,3 +1943,150 @@ worth flagging to the operator, but this routine is research-only per STEP 8.
 A same-day entry still needs the Confluence rule check (>= 2 of
 VWAP/RSI/200-SMA/insider signal) and a sized stop via `/trade` or
 `market-open` before anything gets ordered. Notify sent (hit > 0).
+
+## 2026-07-29 — Gappers (auto-scan 11:10 ET, cloud)
+
+Full watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Apify RAG web browser again returned "Monthly usage hard limit exceeded" on
+every query (same cap flagged in the 09:11 ET run this morning) — fell back
+to WebFetch (Benzinga) for catalyst headlines and WebSearch (Yahoo Finance
+blocked via `blocked_domains`) for the deep-dive fundamentals queries.
+JSON saved to `data/premarket_gappers_2026-07-29_1110.json` (time-suffixed,
+not the bare `${DATE}.json`, to avoid clobbering the 09:11 run's BE entry
+already committed under that filename).
+
+**Deep-dive cap: 5.** 8 raw candidates cleared |gap| >= 5% on the full
+watchlist scan; `premarket_volume` is Alpaca's prior-completed-session
+full-day volume (documented `gappers-alpaca.sh` limitation, not true
+intraday premarket volume) so that filter leg was not applied per the
+routine's own "if that field is populated" carve-out — all 8 clear price
+>= $3 and are kept. Ranks 6-8 got quick-scan only.
+
+Part A, quick-scan table for all 8:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $7.57 | -7.34% | 30,573 | Buybacks + $61.4M note redemption failed to reverse declining momentum |
+| 2 | LPG | $42.11 | -7.08% | 5,173 | No negative catalyst found; added dual-fuel vessel "Areion" to fleet |
+| 3 | BWLP | $23.105 | +7.02% | 2,572 | Cited in generic "Undervalued Energy Stocks" piece; no company-specific headline |
+| 4 | SYNA | $114.395 | +6.95% | 4,043 | onsemi agreed to acquire Synaptics in ~$7B all-stock deal |
+| 5 | APT | $4.625 | -6.94% | 106 | null — Benzinga conflated with unrelated "Aptos" crypto token |
+| 6 | TRMD | $27.845 | -6.65% | 20,016 | Sector piece on product-tanker tailwinds; no TORM-specific headline |
+| 7 | KLIC | $79.255 | -6.34% | 14,377 | Broad semiconductor-sector selloff extending industry-wide |
+| 8 | UMAC | $17.47 | -5.05% | 18,726 | Robotics-startup AMD/military-chip headline; sector read-through only |
+
+#### Deep dive: BW $7.57 -7.34%
+
+- Catalyst: Babcock & Wilcox reported Q1 2026 revenue of $214.4M (+42.55% vs
+  consensus, +44% YoY) and adjusted EBITDA of $16.1M (+296% YoY), net debt
+  down to 0.42x TTM EBITDA. Despite this, shares are down ~33% over the past
+  30 days on multiple securities class-action lawsuits alleging undisclosed
+  related-party ties to largest shareholder BRC Group Holdings. Plans to
+  redeem all $61.4M of its 6.50% Senior Notes on Aug 13, 2026 and authorized
+  a $50M buyback starting after the Q2 10-Q filing.
+- Why: Litigation overhang (undisclosed related-party allegations) is
+  dominating price action despite a strong operating quarter and debt
+  paydown — governance/legal risk outweighing fundamentals.
+- Impact: Not a one-day spike — continuation of an existing 30-day ~33%
+  decline; today's move is a fresh leg down, not an isolated headline event.
+  Volume thin (30.6K, prior full-session), no sector read-through — company
+  -specific legal risk.
+- Horizon: SHORT_TERM-leaning — trend still actively deteriorating with no
+  resolution catalyst for the litigation; no basis for a swing-hold thesis.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no holding
+  displaced. But active unresolved securities-fraud litigation plus a still
+  -falling 30-day trend fails the Entry Checklist's clean-catalyst bar; reads
+  as a re-test of broken support, not a fresh setup. Skip.
+
+#### Deep dive: LPG $42.11 -7.08%
+
+- Catalyst: No negative company-specific headline found. Recent news is
+  actually positive — a $1.00/share irregular cash dividend (record date
+  Jul 27, payable Aug 12, ~$42.8M total), Russell growth/small-cap index
+  additions in late June, a new VLGC newbuild order with HD Hyundai, and
+  agreements to sell three older VLGCs for ~$256M. TTM fundamentals strong:
+  $481.5M revenue, 43.6% operating margin, $4.54 diluted EPS TTM; analyst
+  consensus "Buy," $51 target (~+25% from spot).
+- Why: No identified negative catalyst explains a -7% move; most likely a
+  mechanical pullback (partial ex-dividend adjustment or profit-taking after
+  the recent index-inclusion/dividend run). Flagging as unexplained.
+- Impact: Fundamentals/analyst sentiment remain favorable; could mean-revert
+  if this is technical rather than fundamental, but confidence is low
+  without a confirmed driver — data-quality flag, not a validated thesis.
+- Horizon: Undetermined — no catalyst to anchor a horizon call. Do not act
+  until the driver is confirmed by same-day news.
+- Opportunity cost: No holding displaced (0/6 open). Fails the Entry
+  Checklist's catalyst requirement outright with no confirmed driver.
+
+#### Deep dive: BWLP $23.105 +7.02%
+
+- Catalyst: No BWLP-specific news found. Standalone fundamentals strong —
+  Q1 2026 EPS $1.08 (vs $0.30 YoY, +1,113% YoY), net income $164.3M (+257%
+  YoY), a $1B order for 8 new VLGCs, 9.1% dividend yield, and a Jul 10 sale
+  of the BW Elm vessel (+$36M gain, +$64M cash).
+- Why: Plausibly sector-wide LPG/tanker strength (Iran-tension-driven
+  freight rates) layered on already-strong standalone earnings/fleet news,
+  rather than one specific headline.
+- Impact: Same-day divergence from LPG (down -7.08% today) undercuts a clean
+  "sector tailwind" read — a genuine LPG-sector rally should move both names
+  together. More likely company-specific/index flow or thin-liquidity noise
+  (~2.6K premarket volume). Treat with caution.
+- Horizon: LONG_TERM lean on fundamentals if the move holds, but SHORT_TERM
+  data-quality risk given the unexplained divergence from LPG — needs next
+  -session confirmation.
+- Opportunity cost: No holding displaced. Thin volume (~2.6K) means real
+  -size entry risk is dominated by illiquidity/slippage; needs same-day
+  volume + catalyst confirmation before clearing the Entry Checklist.
+
+#### Deep dive: SYNA $114.395 +6.95%
+
+- Catalyst: onsemi agreed to acquire Synaptics in an all-stock deal, ~$7B
+  enterprise value. SYNA holders receive 1.350 onsemi shares per share
+  (~19% premium to 10-day VWAP), ~12% pro forma ownership of the combined
+  company. ~$200M synergy target (85-90% opex/SG&A), non-GAAP EPS-accretive
+  within 18 months, close expected mid-2027 pending approvals.
+- Why: Classic M&A repricing — announced acquisition at a premium pulls the
+  target toward deal value. All-stock consideration means SYNA now also
+  trades as a partial onsemi proxy, hence some analyst downgrades (loses
+  standalone upside, adds onsemi execution/integration risk).
+- Impact: Durable, not a headline spike — signed, SEC-filed merger
+  agreement, not a rumor; should hold barring a deal break or topping bid.
+  Today's semis tape is otherwise weak (KLIC + broader semis down on sector
+  pressure), so this is stock-specific M&A, not sector momentum.
+- Horizon: LONG_TERM/structural (signed M&A) but on an ~11-month timeline to
+  close (mid-2027) — effectively a merger-arb position now, not a momentum
+  swing; the strategy's swing-hold framing doesn't cleanly apply.
+- Opportunity cost: No holding displaced (0/6 open, 0/3 weekly). Entering
+  the announcement pop has capped upside (bounded by the fixed 1.35x
+  exchange ratio) and full downside on deal break — asymmetric, unlikely to
+  clear a clean 2:1 R:R, and outside the current momentum/breakout playbook.
+  Skip unless operator wants to explicitly run merger-arb.
+
+#### Deep dive: APT $4.625 -6.94%
+
+- Catalyst: null. Benzinga's page conflated the ticker with the unrelated
+  "Aptos" crypto token (an ETF-filing headline); a broader search surfaced
+  no APT-specific negative news for Jul 29. Q1 2026 results were actually
+  positive — EPS $0.069 (vs $0.057 YoY), revenue +5.5% YoY to $14.6M, net
+  income +14% — next earnings not until Aug 12, 2026.
+- Why: No identifiable catalyst. Combined with only 106 shares of volume in
+  the scan — extremely thin even for a small-cap — reads as a stale/
+  illiquid quote artifact in Alpaca's snapshot-vs-prior-close math, not a
+  real institutional move.
+- Impact: Not sustainable / not a real signal — data-quality artifact.
+- Horizon: N/A — no catalyst to anchor a horizon call.
+- Opportunity cost: No holding displaced. Fails the confluence rule outright
+  (no catalyst, negligible volume) — exclude from consideration.
+
+### Decision
+**HOLD — no trades placed by this routine.** 8 qualifying gappers, none
+clear a clean catalyst + confluence bar: BW is a litigation-driven
+continuation of an existing downtrend, LPG and BWLP both lack a confirmed
+same-day driver (and diverge from each other despite being in the same
+sub-sector, which argues against a shared sector tailwind), SYNA is a
+signed M&A deal better suited to merger-arb than this strategy's momentum
+playbook, and APT is a low-volume data artifact with a misattributed
+catalyst. Ranks 6-8 (TRMD, KLIC, UMAC) got quick-scan only per the 5-ticker
+deep-dive cap. Account remains flat (0/6 positions, 0/3 weekly trades).
+Notify sent (hit > 0). This routine is research-only per STEP 8 — no orders
+placed.

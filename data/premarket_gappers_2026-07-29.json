@@ -1,9 +1,11 @@
 {
   "scanned_at": "2026-07-29T13:11:27Z",
+  "last_scanned_at": "2026-07-29T15:11:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
+      "scan_time": "2026-07-29T13:11:27Z",
       "symbol": "BE",
       "price": 183.88,
       "gap_pct": 10.08,
@@ -17,6 +19,125 @@
       "impact": "Gappers-alpaca.sh has no true premarket-volume field; the 1,007,762 figure is the prior completed session's full-day volume, clears the routine's 50k floor easily but isn't a same-day conviction read. Multiple concurrent, dollar-quantified catalysts (guidance raise + Brookfield + Oracle + Nebius/Oaktree) argue against a single-headline spike; no other watchlist name moved in sympathy today, so this reads BE-specific rather than sector-wide.",
       "horizon": "LONG_TERM, structural growth drivers (raised guidance, multi-billion financing/hyperscaler commitments for AI power) align with Bloom Energy's Energy-sector fuel-cell thesis already on WATCHLIST.md, not a one-day headline fade.",
       "opportunity_cost": "Account is flat (0 open positions, weekly trade count 0/3 per Jul 28 EOD log), so this displaces nothing directly. Taking it would use 1 of 3 weekly trade slots and up to 20% of equity; BE is highly volatile post-gap, so the entry stop distance needs sizing (scripts/size.mjs) before a 2:1 R:R can be confirmed — not assessed here, this is research only."
+    },
+    {
+      "rank": 2,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "BW",
+      "price": 7.57,
+      "gap_pct": -7.34,
+      "premarket_volume": 30573,
+      "catalyst": "Share buybacks and a $61.4M note redemption failed to reverse declining momentum; shares fell further amid ongoing weakness.",
+      "headlines": [
+        "BW Investors Weigh Buybacks, Debt Redemption And Weak Momentum"
+      ],
+      "catalyst_detail": "Babcock & Wilcox reported Q1 2026 revenue of $214.4M (+42.55% vs consensus, +44% YoY) and adjusted EBITDA of $16.1M (+296% YoY), with net debt down to 0.42x TTM EBITDA. Despite this, shares are down ~33% over the past 30 days ($14.45 on Jun 26 to $9.62 by Jul 24) on multiple securities class-action lawsuits alleging undisclosed related-party ties to largest shareholder BRC Group Holdings. Company plans to redeem all $61.4M of its 6.50% Senior Notes on Aug 13, 2026 and authorized a $50M buyback to start after the Q2 10-Q filing.",
+      "why": "Litigation overhang (undisclosed related-party allegations) is dominating price action despite a strong operating quarter and debt paydown — governance/legal risk outweighing fundamentals in the market's read.",
+      "impact": "Not a one-day spike — this is a continuation of an existing 30-day, ~33% decline; today's -7.34% is a fresh leg down, not an isolated headline event. Volume is thin (30.6K, prior full-session) consistent with a small/illiquid name. No clear sector read-through — company-specific legal risk.",
+      "horizon": "SHORT_TERM in the sense that the trend is still actively deteriorating with no resolution catalyst; litigation risk has no defined end date, so there's no basis for a swing-hold thesis right now.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — no existing holding displaced. But an active, unresolved securities-fraud litigation overhang plus a still-falling 30-day trend fails the Entry Checklist's clean-catalyst bar; this reads as a re-test of broken support, not a fresh setup. Skip."
+    },
+    {
+      "rank": 3,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "LPG",
+      "price": 42.11,
+      "gap_pct": -7.08,
+      "premarket_volume": 5173,
+      "catalyst": "Dorian LPG added the dual-fuel vessel \"Areion\" to its fleet to support low-emission shipping operations.",
+      "headlines": [
+        "Dorian LPG adds dual-fuel vessel Areion to fleet"
+      ],
+      "catalyst_detail": "No negative company-specific headline found for today. Recent news is actually positive: a $1.00/share irregular cash dividend announced (record date Jul 27, payable Aug 12, ~$42.8M total), addition to Russell growth/small-cap indices in late June, a new VLGC newbuild order with HD Hyundai, and agreements to sell three older VLGCs for ~$256M. TTM fundamentals are strong: $481.5M revenue, 43.6% operating margin, $4.54 diluted EPS TTM; analyst consensus is \"Buy\" with a $51 target (~+25% from spot).",
+      "why": "No identified negative catalyst explains a -7% move; most likely a mechanical pullback — possibly partial ex-dividend adjustment around the Aug 12 payout (though that alone would only account for ~2%) or profit-taking after the recent index-inclusion/dividend run. Flagging as an unexplained move, not a validated thesis.",
+      "impact": "Fundamentals and analyst sentiment remain favorable; if this is a technical/ex-dividend pullback rather than deterioration, it could mean-revert, but confidence is low without a confirmed driver. Treat as a data-quality flag pending clearer next-session news.",
+      "horizon": "Undetermined — no catalyst to anchor SHORT_TERM vs LONG_TERM. Do not act until the driver is confirmed.",
+      "opportunity_cost": "No displacement needed (0/6 open). Fails the Entry Checklist's catalyst requirement outright with no confirmed driver — do not consider until the move is explained by same-day news."
+    },
+    {
+      "rank": 4,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "BWLP",
+      "price": 23.105,
+      "gap_pct": 7.02,
+      "premarket_volume": 2572,
+      "catalyst": "Cited in a general \"5 Undervalued Energy Stocks to Buy on Renewed Iran Tensions\" piece — no BWLP-specific headline found.",
+      "headlines": [
+        "5 Undervalued Energy Stocks to Buy on Renewed Iran Tensions"
+      ],
+      "catalyst_detail": "No BWLP-specific news found for today. Standalone fundamentals are strong: Q1 2026 EPS $1.08 (up from $0.30 YoY, +1,113% YoY growth), net income $164.3M (+257% YoY), a $1B order for 8 new VLGCs, a 9.1% dividend yield, and a Jul 10 sale of the BW Elm vessel (+$36M gain, +$64M cash).",
+      "why": "Plausibly sector-wide LPG/tanker strength (Iran-tension-driven freight rates) layered on already-strong standalone earnings and fleet-expansion news, rather than one specific headline.",
+      "impact": "Same-day divergence from LPG (down -7.08% today) undercuts a clean \"sector tailwind\" read — a genuine LPG-sector rally should move both names together. More likely company-specific/index flow or thin-liquidity noise; premarket volume here is only ~2.6K shares. Treat with caution.",
+      "horizon": "LONG_TERM lean on fundamentals (EPS growth, dividend, fleet investment) if the move holds, but SHORT_TERM data quality risk given the unexplained same-day divergence from LPG. Needs a next-session confirmation before treating as durable.",
+      "opportunity_cost": "No displacement needed. Thin volume (~2.6K) makes real-size entry risk illiquidity-driven slippage; would need a same-day volume/catalyst confirmation before this clears the Entry Checklist."
+    },
+    {
+      "rank": 5,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "SYNA",
+      "price": 114.395,
+      "gap_pct": 6.95,
+      "premarket_volume": 4043,
+      "catalyst": "onsemi (ON Semiconductor) agreed to acquire Synaptics in an all-stock deal; some analysts downgraded the stock following the announcement.",
+      "headlines": [
+        "onsemi to Acquire Synaptics in $6.2-7B All-Stock Deal"
+      ],
+      "catalyst_detail": "onsemi agreed to acquire Synaptics in an all-stock transaction valued at ~$7B enterprise value. Synaptics holders receive 1.350 onsemi shares per SYNA share (~19% premium to the 10-day VWAP), implying ~12% pro forma ownership of the combined company. Deal targets ~$200M in synergies (85-90% opex/SG&A) and is expected to be non-GAAP EPS-accretive within 18 months of closing, with close expected mid-2027 pending shareholder and regulatory approval.",
+      "why": "Classic M&A repricing — an announced acquisition at a premium pulls the target toward deal value. Because consideration is all-stock (not cash), SYNA now also trades as a partial proxy for onsemi's own stock, which is why some analysts downgraded (loses standalone upside, adds onsemi execution/integration risk).",
+      "impact": "Durable, not a headline spike — this is a signed, SEC-filed merger agreement, not a rumor; the repricing should hold barring a deal break or topping bid. Today's semiconductor tape is otherwise weak (KLIC and broader semis down on sector-wide pressure), so this move is stock-specific M&A, not sector momentum.",
+      "horizon": "LONG_TERM/structural (signed M&A) but on an ~11-month timeline to close (mid-2027) — this is effectively a merger-arbitrage position now, not a momentum swing trade; the strategy's swing-hold framing doesn't cleanly apply.",
+      "opportunity_cost": "No displacement needed (0/6 open, 0/3 weekly). Entering into the announcement pop has capped upside (bounded by the fixed 1.35x exchange ratio) and full downside on deal break — asymmetric and unfavorable vs. this strategy's momentum setups; unlikely to clear a clean 2:1 R:R and falls outside the current playbook (momentum/breakout, not merger-arb). Skip unless operator explicitly wants to run arb."
+    },
+    {
+      "rank": 6,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "APT",
+      "price": 4.625,
+      "gap_pct": -6.94,
+      "premarket_volume": 106,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No APT-specific catalyst found. Benzinga's page conflated the ticker with the unrelated \"Aptos\" crypto token (an ETF-filing headline); a broader search surfaced no company-specific negative news for Jul 29. Q1 2026 results were actually positive — EPS $0.069 (vs $0.057 YoY), revenue +5.5% YoY to $14.6M, net income +14% — and next earnings isn't until Aug 12, 2026.",
+      "why": "No identifiable catalyst. Combined with only 106 shares of volume in the scan — extremely thin even for a small-cap — this reads as a stale/illiquid quote artifact in Alpaca's snapshot-vs-prior-close math, not a real institutional move.",
+      "impact": "Not sustainable / not a real signal — low-volume data-quality artifact rather than a genuine catalyst-driven gap.",
+      "horizon": "N/A — no catalyst to anchor a horizon call.",
+      "opportunity_cost": "No displacement needed. Fails the confluence rule outright (no catalyst, negligible volume) — exclude from any trade consideration."
+    },
+    {
+      "rank": 7,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "TRMD",
+      "price": 27.845,
+      "gap_pct": -6.65,
+      "premarket_volume": 20016,
+      "catalyst": "A sector piece on product-tanker tailwinds ran today, but no TORM-specific negative headline was found to explain the drop.",
+      "headlines": [
+        "Crude Production And Seasonal Tailwinds To Drive Product Tanker Strength"
+      ]
+    },
+    {
+      "rank": 8,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "KLIC",
+      "price": 79.255,
+      "gap_pct": -6.34,
+      "premarket_volume": 14377,
+      "catalyst": "Broad semiconductor-sector selloff extending industry-wide; KLIC down alongside the group, no company-specific headline found.",
+      "headlines": [
+        "Semiconductor shares trading lower as industry downturn extends"
+      ]
+    },
+    {
+      "rank": 9,
+      "scan_time": "2026-07-29T15:11:00Z",
+      "symbol": "UMAC",
+      "price": 17.47,
+      "gap_pct": -5.05,
+      "premarket_volume": 18726,
+      "catalyst": "An Eric Trump-backed humanoid-robotics startup secured AMD chips and is developing military-use robots, drawing conflict-of-interest headlines — plausible sector read-through for drone/robotics component makers, not a direct UMAC-specific catalyst.",
+      "headlines": [
+        "Eric Trump-backed robotics startup secures AMD chips, developing military robots"
+      ]
     }
   ]
 }
