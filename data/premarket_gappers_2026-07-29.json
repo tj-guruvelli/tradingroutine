@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-07-29T12:10:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 181.66,
+      "gap_pct": 8.76,
+      "premarket_volume": 1007762,
+      "catalyst": "Bloom Energy beat Q2 2026 earnings estimates ($1.07B revenue) and raised full-year guidance.",
+      "headlines": [],
+      "catalyst_detail": "Bloom Energy reported Q2 2026 revenue of $1.07B, beating analyst estimates, and management raised full-year 2026 guidance. The print follows a rough prior session (closed July 27 down 11.34%), and pre-market is now pricing in $182.00 vs the $167.04 prior close, an 8.76% gap. Consensus analyst price target sits at $192.87 with an overall Hold rating.",
+      "why": "Earnings beat plus raised guidance is a classic momentum trigger — it removes near-term downside uncertainty and pulls in both short covering (7.78% short interest) and fresh momentum buyers repricing toward the raised outlook.",
+      "impact": "Pre-market volume (~1.0M shares) already running well above a typical pre-open print, consistent with a real earnings-driven repricing rather than pure headline noise. Forward P/E near 75x means the move still leans on continued execution, not cheap valuation — a single quarter beat doesn't erase that. Read-through: watch other power-infrastructure / AI-datacenter-power names (fuel cell, grid, natural gas peaker plays) for a sympathy move, since Bloom's guidance raise is partly a datacenter-power-demand story.",
+      "horizon": "LONG_TERM — raised full-year guidance is a structural catalyst (not just a one-day headline), and it dovetails with the ongoing AI/datacenter power-demand theme rather than a pure momentum spike; still needs a later /trade confluence check before sizing.",
+      "opportunity_cost": "Zero open positions and 0/3 weekly trades used, so BE would displace nothing. But it's the only gapper on today's list (1 of 60 watchlist names cleared the 5% threshold), and it's already up 8.76% pre-market on top of Friday's plunge — a same-day chase entry compresses the stop distance needed to still clear the strategy's 2:1 minimum reward:risk, so entry timing (pullback vs breakout) matters more than usual here. Research only, no order placed."
+    }
+  ]
+}

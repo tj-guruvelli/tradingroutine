@@ -1885,3 +1885,44 @@ same-day, semiconductors are in an active technical breakdown, and the
 confluence rule remains unsatisfiable with `tradingview-data` still down.
 Zero positions, zero orders — patience over activity. Notify sent (Apify
 outage is worth a heads-up; no trade signal to alert on otherwise).
+
+## 2026-07-29 — Gappers (auto-scan 08:10 ET, cloud)
+
+Watchlist scan (60 tickers, GAP_THRESHOLD=5.0) via `scripts/gappers-alpaca.sh
+watchlist` returned exactly 1 qualifying hit — BE. Apify RAG web browser is
+still hard-capped ("Monthly usage hard limit exceeded" on every query,
+matching this morning's pre-market entry) — fell back to WebFetch against
+Benzinga per the routine's fallback rule.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 181.66 | +8.76% | 1,007,762 | Q2 2026 earnings beat ($1.07B rev) + raised FY26 guidance |
+
+#### Deep dive: BE $181.66 +8.76%
+- Catalyst: Bloom Energy reported Q2 2026 revenue of $1.07B, beating
+  analyst estimates, and management raised full-year 2026 guidance. The
+  print follows a rough prior session (closed July 27 down 11.34%), and
+  pre-market is now pricing $182.00 vs the $167.04 prior close. Consensus
+  analyst price target is $192.87 with an overall Hold rating.
+- Why: Earnings beat plus raised guidance removes near-term downside
+  uncertainty and pulls in both short covering (7.78% short interest) and
+  fresh momentum buyers repricing toward the raised outlook.
+- Impact: Pre-market volume (~1.0M shares) is already running well above a
+  typical pre-open print, consistent with a real earnings-driven repricing
+  rather than pure headline noise. Forward P/E near 75x means the move
+  still leans on continued execution, not cheap valuation. Sector
+  read-through: watch other power-infrastructure / AI-datacenter-power
+  names (fuel cell, grid, natural gas peaker plays) for a sympathy move,
+  since the guidance raise partly reflects datacenter power demand.
+- Horizon: LONG_TERM — raised full-year guidance is a structural catalyst,
+  not a one-day headline, and dovetails with the ongoing AI/datacenter
+  power-demand theme; still needs a later `/trade` confluence check
+  (tradingview-data MCP remains down) before sizing.
+- Opportunity cost: Zero open positions and 0/3 weekly trades used, so BE
+  displaces nothing. It's the only gapper on today's list (1 of 60
+  watchlist names cleared 5%), but it's already up 8.76% pre-market on top
+  of Friday's plunge — a same-day chase compresses the stop distance
+  needed to still clear the strategy's 2:1 minimum R:R, so entry timing
+  (pullback vs breakout) matters more than usual. Research only, no order
+  placed.
