@@ -36,3 +36,10 @@ Gappers scan (09:11 ET) surfaced 1 candidate (BE +10.08%, earnings beat +
 raised guidance + Brookfield/Oracle/Nebius deals) but logged research-only,
 no confluence check performed — not a validated planned trade. No planned
 tickers to validate; skipped Steps 2-6. Weekly trade count: 0/3 (week of Jul 27).
+
+### Jul 29 — EOD Snapshot (Day 15, Wednesday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. FOMC + 5 mega-cap earnings (MSFT/META/QCOM/ARM/LRCX) landed today; pre-market call was HOLD on no confluence (tradingview-data MCP still down, Apify capped). Gappers scan flagged BE (+10.08%, earnings beat) as research-only, never validated to a planned trade. 15 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Jul 27). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved.
