@@ -1885,3 +1885,61 @@ same-day, semiconductors are in an active technical breakdown, and the
 confluence rule remains unsatisfiable with `tradingview-data` still down.
 Zero positions, zero orders — patience over activity. Notify sent (Apify
 outage is worth a heads-up; no trade signal to alert on otherwise).
+
+## 2026-07-29 — Gappers (auto-scan 09:11 ET, cloud)
+
+Full watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Apify RAG web browser hit its monthly usage hard limit on the first query —
+fell back to WebFetch against Benzinga/StockTitan per the routine's documented
+fallback path.
+
+**Deep-dive cap: 5** (not applicable this run — only 1 candidate cleared all
+filters, deep-dived below).
+
+Part A, quick-scan table for all qualifying rows:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $183.88 | +10.08% | 1,007,762 | Q2 2026 earnings beat + raised FY guidance |
+
+Only 1 raw candidate cleared |gap| >= 5% on the full watchlist scan (BE
++10.08%). Price >= $3 and volume >= 50,000 (prior-session full-day volume,
+per the routine's own filter definition) both clear easily.
+
+#### Deep dive: BE $183.88 +10.08%
+
+- Catalyst: Record Q2 2026 revenue of $1.065B (first quarter above $1B,
+  +165.5% YoY, $935.4M product revenue), FY2026 guidance raised to
+  $3.9-4.2B revenue with ~34% non-GAAP gross margin and $800-900M operating
+  income. Also announced an expanded $25B Brookfield financing partnership
+  (up from $5B), a strategic Oracle agreement for up to 2.8GW of fuel cell
+  deployment for AI infrastructure, and a $1.7B project investment from
+  Industrial Development Funding/Oaktree tied to Nebius AI infra.
+- Why: Earnings beat plus raised guidance pulls in momentum buyers, layered
+  on a structural AI-datacenter power-demand narrative (Oracle, Nebius
+  deals) rather than a single-metric beat — broadens the buyer base beyond
+  quant/momentum flow.
+- Impact: `premarket_volume` (1,007,762) is Alpaca's prior-completed-session
+  full-day volume, not true intraday volume (documented gappers-alpaca.sh
+  limitation) — clears the routine's 50k floor easily. Multiple concurrent,
+  dollar-quantified catalysts (guidance raise + Brookfield + Oracle +
+  Nebius/Oaktree) argue against a single-headline spike; no other watchlist
+  name moved in sympathy today, so this reads BE-specific, not sector-wide.
+- Horizon: LONG_TERM — structural growth drivers (raised guidance,
+  multi-billion financing/hyperscaler commitments for AI power) align with
+  Bloom Energy's Energy-sector fuel-cell thesis already flagged on
+  WATCHLIST.md, not a one-day headline fade.
+- Opportunity cost: Account flat (0 open positions, weekly trade count 0/3
+  per Jul 28 EOD log) — this displaces nothing directly. Taking it would use
+  1 of 3 weekly trade slots and up to 20% of equity; BE is highly volatile
+  post-gap so entry stop distance needs sizing (`scripts/size.mjs`) before a
+  2:1 R:R can be confirmed — not assessed here, research only.
+
+### Decision
+**HOLD — no trades placed by this routine.** 1 qualifying gapper (BE,
++10.08% on a real earnings + guidance + multi-billion partnership catalyst
+bundle) — the strongest documented catalyst seen across recent gappers runs,
+worth flagging to the operator, but this routine is research-only per STEP 8.
+A same-day entry still needs the Confluence rule check (>= 2 of
+VWAP/RSI/200-SMA/insider signal) and a sized stop via `/trade` or
+`market-open` before anything gets ordered. Notify sent (hit > 0).
