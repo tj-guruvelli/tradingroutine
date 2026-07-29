@@ -1,0 +1,22 @@
+{
+  "scanned_at": "2026-07-29T13:11:27Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 183.88,
+      "gap_pct": 10.08,
+      "premarket_volume": 1007762,
+      "catalyst": "Bloom Energy shares surged after a Q2 2026 earnings beat and raised full-year guidance.",
+      "headlines": [
+        "Bloom Energy shares surged following strong Q2 earnings results and raised full-year guidance"
+      ],
+      "catalyst_detail": "Bloom Energy reported record Q2 2026 revenue of $1.065B (first quarter above $1B, +165.5% YoY, $935.4M product revenue) and raised FY2026 guidance to $3.9-4.2B revenue with ~34% non-GAAP gross margin and $800-900M operating income. Also announced an expanded $25B financing partnership with Brookfield (up from $5B), a strategic Oracle agreement for up to 2.8GW of fuel cell deployment for AI infrastructure, and a $1.7B project investment from Industrial Development Funding/Oaktree tied to Nebius AI infra.",
+      "why": "Earnings beat plus raised guidance pulls in momentum buyers; layered on top of a structural AI-datacenter power-demand narrative (Oracle, Nebius deals) rather than a single-metric beat, which broadens the buyer base beyond quant/momentum flow.",
+      "impact": "Gappers-alpaca.sh has no true premarket-volume field; the 1,007,762 figure is the prior completed session's full-day volume, clears the routine's 50k floor easily but isn't a same-day conviction read. Multiple concurrent, dollar-quantified catalysts (guidance raise + Brookfield + Oracle + Nebius/Oaktree) argue against a single-headline spike; no other watchlist name moved in sympathy today, so this reads BE-specific rather than sector-wide.",
+      "horizon": "LONG_TERM, structural growth drivers (raised guidance, multi-billion financing/hyperscaler commitments for AI power) align with Bloom Energy's Energy-sector fuel-cell thesis already on WATCHLIST.md, not a one-day headline fade.",
+      "opportunity_cost": "Account is flat (0 open positions, weekly trade count 0/3 per Jul 28 EOD log), so this displaces nothing directly. Taking it would use 1 of 3 weekly trade slots and up to 20% of equity; BE is highly volatile post-gap, so the entry stop distance needs sizing (scripts/size.mjs) before a 2:1 R:R can be confirmed — not assessed here, this is research only."
+    }
+  ]
+}
