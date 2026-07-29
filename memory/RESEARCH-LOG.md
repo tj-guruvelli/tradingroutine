@@ -1785,3 +1785,103 @@ Unchanged from the 16:38 ET run two hours earlier — same two grade-B hits,
 same values (post-close, no new bars since last scan). No grade-A hits ->
 no Telegram alert per STEP 4 rule. Candidates only, not orders — feed to
 `/trade` if pursued (full safety-check gate applies).
+
+## 2026-07-29 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser returned "Monthly usage hard limit exceeded" on every
+query (all 6 topics) — full outage, not a per-query fluke. Fell back to
+native WebSearch (Yahoo domains blocked) per the routine's fallback rule for
+the entire session. `tradingview-data` MCP is still absent (`ToolSearch`: no
+match) — 4th+ consecutive session; confluence rule (>=2 of VWAP/RSI/200-
+SMA/insider) remains unsatisfiable for any candidate.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 15 straight trading days
+  since the Day-0 baseline (2026-07-08 launch).
+
+### Market Context (WebSearch fallback, Wed 7/29 premarket ET)
+- **Oil — sharp reversal from yesterday's relief move**: Brent $89.53
+  (+4%+ overnight) on renewed Middle East hostilities; WTI last printed
+  $79.28 (-4.03%) at Tue close, pre-open figures conflict slightly by
+  source (oilprice.com vs Forbes) — direction is consistent (up, geopolitical
+  risk-on) even if the exact print differs. Reverses the 2-day de-escalation
+  trend flagged in yesterday's log; confirms that call's own risk-factor
+  ("oil relief is reversible") the very next session.
+- **S&P 500 futures**: +0.18-0.24% premarket (CNBC/Benzinga) — muted given
+  today's stack of catalysts; SPY +0.24% at $742.65 premarket. Polymarket
+  implying ~70% odds of a green open.
+- **VIX**: 18.62 (range 18.22-19.52 intraday) — essentially flat vs.
+  yesterday's 18.67 close, still "sleepy" heading into FOMC day itself.
+- **FOMC**: today, not tomorrow — decision + Chair Kevin Warsh press
+  conference at 2:00pm ET. Consensus: hold at 3.50-3.75%; ~30% priced odds
+  of a hike per one source (higher than yesterday's ~35%-at-this-meeting
+  read from CME, so estimates are still noisy across sources — treat as a
+  live, unresolved binary, not a settled hold).
+- **Earnings — today, FOMC day**: Procter & Gamble, Vertiv, General
+  Dynamics, Aon, Microsoft, Meta Platforms, Lam Research, Arm Holdings,
+  Qualcomm, Starbucks. None held/watchlist, but MSFT/META/QCOM/ARM/LRCX
+  landing same-day as the rate decision makes this the single heaviest
+  catalyst-density session of the challenge so far.
+- **Econ calendar today**: No CPI/PPI (next CPI Aug 12). Consumer
+  Confidence at 10am ET is the other scheduled print; FOMC dominates.
+- **Semiconductor breakdown (new since yesterday's log)**: Nasdaq 100 -1.8%
+  Tue, nearing correction (-10% from highs) on a report a Chinese
+  state-backed firm began mass-producing immersion DUV lithography
+  machines — a direct competitive threat to ASML's moat. NVDA and ASML each
+  -4%+, SK Hynix -13% (Korea), Philadelphia Semiconductor Index down a
+  4th straight session. Sector momentum in tech/semis is actively negative,
+  not a "buy the dip" signal under the momentum-following rule.
+- **Sector YTD**: search returned Energy +3.6%, Utilities +2.2%,
+  Industrials +1.6%, Technology +0.4%, Financials 0.0%, Consumer
+  Discretionary -6.1% (source: stated "as of 7/24" read) — this conflicts
+  sharply with yesterday's logged XLK +32-33%/XLE +26-27% read from a
+  different source set. Flagging the discrepancy rather than reconciling
+  it; don't trust either figure alone for sizing until `tradingview-data`
+  is back and gives a clean technical/price-based sector read.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None generated (documented-catalyst + confluence bar not cleared):
+1. **Energy watch-only** (XLE / integrated majors) — catalyst is Brent's
+   4%+ geopolitical spike, but that's a macro/geopolitical driver, not a
+   company-specific catalyst, and confluence can't be checked without
+   `tradingview-data`. No entry; revisit only if oil holds the move and a
+   specific name shows a real technical setup once the tool is back.
+2. **Avoid new semiconductor/AI-capex longs** — sector momentum is
+   actively negative (Nasdaq 100 near correction, NVDA/ASML/SK Hynix all
+   down hard on the China DUV story). Per the sector-momentum rule this is
+   a "stay out," not a dip-buy, until the selloff shows a documented
+   stabilization catalyst.
+3. **No pre-FOMC positioning** — with Fed decision + Warsh presser +
+   MSFT/META/QCOM/ARM/LRCX earnings all landing today, any new entry ahead
+   of 2pm ET is a binary bet on macro/earnings outcomes, not a
+   strategy-compliant technical setup. Wait for the dust to settle.
+
+### Risk Factors
+- **FOMC decision day itself** (2pm ET) stacked directly against 5 major
+  earnings reports (MSFT, META, QCOM, ARM, LRCX) — the single highest
+  single-session gap-risk day of the challenge to date.
+- **Semiconductor/AI-capex correction**: Nasdaq 100 near -10% correction
+  territory; a China chipmaking-competition story (DUV lithography) is a
+  structural threat narrative, not a one-day headline — could keep
+  bleeding into tech-heavy names regardless of Fed outcome.
+- **Oil re-spiking on Middle East escalation** — reverses the 2-day relief
+  move, re-introduces inflation-via-energy-prices risk right into an
+  already-live FOMC decision.
+- **Apify fully down (monthly cap hit)** — no fallback within Apify itself;
+  entirely dependent on native WebSearch until the quota resets or is
+  raised. Operator: check Apify billing/plan if this routine needs it
+  reliably again before next reset.
+- **`tradingview-data` MCP still absent** — 4th+ consecutive session;
+  confluence rule has now been unsatisfiable for this entire stretch. Same
+  operator flag as yesterday, escalating in duration.
+- **Sector-YTD source conflict** (see Market Context) — don't size or rank
+  sector bets off either figure until resolved.
+
+### Decision
+**HOLD — no trades.** FOMC decision + 5-name mega-cap earnings pile land
+same-day, semiconductors are in an active technical breakdown, and the
+confluence rule remains unsatisfiable with `tradingview-data` still down.
+Zero positions, zero orders — patience over activity. Notify sent (Apify
+outage is worth a heads-up; no trade signal to alert on otherwise).
