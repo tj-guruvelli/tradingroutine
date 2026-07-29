@@ -2113,3 +2113,17 @@ outputs were discarded, not committed. RTX is a repeat hit from the
 77.51). V is a new grade-B hit. No grade-A hits -> no Telegram alert per
 STEP 4 rule. Candidates only, not orders — feed to `/trade` if pursued (full
 safety-check gate applies).
+
+### Setup Scan (18:39 ET, cloud)
+60 candidates checked, 1 error (BMNR — HTTP 503/DNS resolution failure,
+transient, script continued past it), 2 hits (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| V | B | Momentum confluence | daily | ADX14 29.41, EMA9 358.51 > EMA21 352.79, RSI14 65.33 |
+| RTX | B | Momentum confluence | daily | ADX14 35.39, EMA9 206.94 > EMA21 199.72, RSI14 77.61 |
+
+Same two grade-B hits as the 16:39 ET run today, unchanged levels — no new
+setups emerged over the 2-hour window. RTX remains overbought (RSI14 77.61).
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidates only, not
+orders — feed to `/trade` if pursued (full safety-check gate applies).
