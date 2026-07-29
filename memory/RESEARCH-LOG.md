@@ -2090,3 +2090,26 @@ catalyst. Ranks 6-8 (TRMD, KLIC, UMAC) got quick-scan only per the 5-ticker
 deep-dive cap. Account remains flat (0/6 positions, 0/3 weekly trades).
 Notify sent (hit > 0). This routine is research-only per STEP 8 — no orders
 placed.
+
+## 2026-07-29 — Setup Scan (auto-scan 16:39 ET, cloud)
+
+### Setup Scan (16:39 ET, cloud)
+60 candidates checked, 0 errors, 2 hits (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| V | B | Momentum confluence | daily | ADX14 29.41, EMA9 358.51 > EMA21 352.79, RSI14 65.33 |
+| RTX | B | Momentum confluence | daily | ADX14 35.39, EMA9 206.94 > EMA21 199.72, RSI14 77.61 |
+
+Note on run quality: first attempt (16:38 ET) hit 37/60 "DNS resolution
+failure" errors on the Alpaca bars endpoint; a second attempt one minute
+later got worse (48/60 errors, 0 hits) despite DNS resolving fine via direct
+lookup and sequential/parallel curl tests to the same endpoint succeeding —
+points to a transient issue specific to concurrent fetch() calls from this
+sandbox, not a real Alpaca outage or DNS problem. A third attempt came back
+clean (0 errors) and is the run recorded here; the two earlier noisy JSON
+outputs were discarded, not committed. RTX is a repeat hit from the
+2026-07-28 16:38/18:38 ET scans, still overbought (RSI14 77.61, up from
+77.51). V is a new grade-B hit. No grade-A hits -> no Telegram alert per
+STEP 4 rule. Candidates only, not orders — feed to `/trade` if pursued (full
+safety-check gate applies).
