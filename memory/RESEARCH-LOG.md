@@ -2127,3 +2127,39 @@ Same two grade-B hits as the 16:39 ET run today, unchanged levels — no new
 setups emerged over the 2-hour window. RTX remains overbought (RSI14 77.61).
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidates only, not
 orders — feed to `/trade` if pursued (full safety-check gate applies).
+
+## 2026-07-29 — Gappers (auto-scan 20:56 ET, cloud) — SKIPPED, post-close frozen feed, 3rd run today
+
+Session clock started this routine mid-day (last checkpoint before a worker
+restart showed Mon 2026-07-27 11:10 ET), but the worker restarted multiple
+times and by the time execution resumed, wall-clock had jumped to **Wed
+2026-07-29 20:56 ET — nearly 5 hours after the 16:00 ET close**, on a
+trading day that already had two gappers-cloud runs this morning (09:11 ET
+and 11:10 ET, both logged above).
+
+`GAP_THRESHOLD=5.0 bash scripts/gappers-alpaca.sh watchlist` returned `[]`
+even at `GAP_THRESHOLD=0.5` — not "no movers," a frozen feed. Pulled the raw
+snapshot directly for AAPL/QBTS/BMNR: `latestQuote`/`latestTrade` all
+timestamped `2026-07-29T20:00:0{0,1}...Z` — the closing-auction print,
+~57 minutes stale relative to the 20:56 ET run time, and identical to the
+second for names with no reason to trade in lockstep. This Alpaca data plan
+does not appear to carry extended-hours quotes; the feed freezes at the
+16:00 ET close print and stays there until the next session's pre-market
+prints begin. The script's own same-UTC-day freshness guard (added since
+the 11:10 ET run, see `scripts/gappers-alpaca.sh` diff) correctly rejected
+this stale close print rather than reporting a fake gap.
+
+Per the same reasoning as the 2026-07-25 02:05 ET / 14:33 ET entries: no
+data file written (nothing but a stale close print to put in it), no
+duplicate deep-dive, no Telegram alert (0 hits, and a post-close alert would
+misrepresent a frozen quote as a live premarket gap).
+
+**Scheduling flag for the operator:** this is the 3rd gappers-cloud
+invocation on 2026-07-29 (09:11, 11:10, now 20:56 ET) and the first two were
+genuinely in/near the premarket window while this one landed well after the
+close. Recommend checking the cron/trigger config for this routine —
+repeated post-close firings burn Alpaca calls for data that hasn't changed
+and risk a session mistaking a frozen close print for a live gap. Same
+pattern already flagged in the 2026-07-25 entries above; still unresolved.
+
+Research-only. No orders placed.
