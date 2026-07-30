@@ -1,0 +1,62 @@
+{
+  "scanned_at": "2026-07-30T14:09:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "APT",
+      "price": 5.245,
+      "gap_pct": 7.04,
+      "premarket_volume": null,
+      "catalyst": "No stock-specific catalyst found; Benzinga's top APT headline is about the Aptos cryptocurrency (ticker collision), not Alpha Pro Tech Ltd.",
+      "headlines": [],
+      "catalyst_detail": "Alpha Pro Tech (NYSE American: APT, protective apparel/building-supply maker) reported Q1 2026 EPS of $0.069 (up from $0.057 YoY) on revenue of $14.6M (+5.5% YoY) and net income of $702K (+14% YoY) - a routine, not fresh, print. No same-day news, filing, or press release explains today's move; search results return only stale Q1 commentary and an analyst 'Strong Buy'/$16.75 PT from an undated note. Daily volume on the last completed session was just 498 shares, extremely thin for a $50M market-cap name.",
+      "why": "With no identifiable catalyst and volume this thin, the gap most likely reflects a stale or wide bid/ask print on a low-liquidity name rather than a real supply/demand shift.",
+      "impact": "Not sustainable as a genuine move - reads as thin-volume noise. No sector read-through (Alpha Pro Tech's building-products/protective-apparel niche has no other watchlist peer moving today).",
+      "horizon": "SHORT_TERM, and low-conviction even as that - no durable thesis, no confirmed catalyst; do not treat as tradeable without a same-day news confirmation.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week - displaces nothing. But absent any catalyst, this fails the Entry Checklist's 'specific catalyst' requirement outright and would not clear the Confluence rule regardless of R:R math. Research only, no size given."
+    },
+    {
+      "rank": 2,
+      "symbol": "WLDS",
+      "price": 3.48,
+      "gap_pct": 6.42,
+      "premarket_volume": null,
+      "catalyst": "Wearable Devices (micro-cap neural-wristband maker) continues elevated volatility following its June 22 1-for-3 reverse split; no fresh same-day news identified.",
+      "headlines": [],
+      "catalyst_detail": "Wearable Devices Ltd develops neural-input wristbands (Mudra band/Mudra Pro) for gesture control of smart devices. Its FY2025 revenue was just $647K against a $8.1M net loss. Recent (non-same-day) developments include a Meta-Bounds AR-glasses integration demo, a USPTO patent-allowance notice (Apr 24), and the 1-for-3 reverse split (effective Jun 22) done to regain Nasdaq's $1.00 minimum-bid compliance. A Jul 26 momentum-trader writeup flagged the stock for 'sharp momentum spikes' on thin float, consistent with today's move.",
+      "why": "Post-reverse-split micro-caps with tiny float commonly see outsized swings on retail/momentum-trader flow rather than fundamentals; no earnings, contract, or filing dated today was found.",
+      "impact": "Reads as continued speculative momentum-trading volatility in a low-float name, not a fresh, sustainable catalyst. No meaningful sector read-through - no other wearables/HMI name on the watchlist is moving.",
+      "horizon": "SHORT_TERM - no structural catalyst dated today; company remains unprofitable with negligible revenue and no analyst coverage.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week - displaces nothing. Fails the Entry Checklist's catalyst requirement (no dated news) and is a sub-$5 micro-cap with binary reverse-split risk; would not clear Confluence even before considering R:R. Research only, no size given."
+    },
+    {
+      "rank": 3,
+      "symbol": "KLIC",
+      "price": 95.45,
+      "gap_pct": 6.24,
+      "premarket_volume": null,
+      "catalyst": "Kulicke & Soffa (semi capital equipment) extending a fundamentals-driven rally on an AI/memory-demand earnings beat and raised guidance.",
+      "headlines": [],
+      "catalyst_detail": "KLIC's fiscal Q2 2026 (ended Apr 4) non-GAAP EPS of $0.79 beat the $0.67 consensus by ~18%, on revenue up 49.8% YoY to $242.6M - a swing from a prior-year loss, driven by general semi/memory/automotive/industrial demand. Guidance for fiscal Q3 2026 called for ~$310M revenue and ~$1.00 non-GAAP EPS, with the memory segment up 93% sequentially on NAND/data-center demand. Management raised FY26 capex from ~$12M to ~$22M to expand Thermo-Compression Bonding (TCB) capacity, targeting up to $400M in annual TCB sales. Q3 FY26 earnings are due Aug 5 after close.",
+      "why": "Earnings beat plus raised guidance and a structural capex build-out for AI-driven advanced-packaging demand (TCB for HBM/AI chip assembly) is pulling in momentum and fundamental buyers alike - a genuine mechanism, not a headline spike.",
+      "impact": "Move looks sustainable relative to a real, multi-quarter fundamental improvement (30-day return +24.8%, 1-year return +263%) rather than a one-day spike, though the stock has already re-rated a long way (P/E 80x trailing, 19x forward) and sits ahead of its own Aug 5 earnings print, which is a binary risk. Sector read-through: bullish for AI/advanced-packaging-exposed semi-equipment peers (e.g. AMKR, also on the watchlist).",
+      "horizon": "LONG_TERM - structural driver (AI/memory capex supercycle, TCB capacity build-out) aligns with an early/mid-cycle Technology tilt in TRADING-STRATEGY.md's sector-rotation table, worth a multi-week swing thesis if it also clears Confluence on a later /trade check.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week - displaces nothing existing, but is the strongest-catalyst name of today's 4 and would be first in line for a full /trade confluence check. At $95.45, a 10% trailing stop is ~$9.55 away; needs roughly a +20% target to clear 2:1 R:R - plausible given the guidance raise, but the Aug 5 earnings date sits inside most reasonable hold windows and adds binary risk to that math. Research only, no size given."
+    },
+    {
+      "rank": 4,
+      "symbol": "UMAC",
+      "price": 17.95,
+      "gap_pct": -5.35,
+      "premarket_volume": null,
+      "catalyst": "Unusual Machines (NDAA-compliant drone-component maker) pulling back after an extended run-up; no negative news identified.",
+      "headlines": [],
+      "catalyst_detail": "UMAC's Q1 2026 revenue of ~$8.1M beat estimates of $5.54M (+296% YoY, 8th consecutive record quarter). The company raised ~$150M in a March 2026 offering (cash now $222.9M), signed a ~$52M deal to acquire battery maker Upgrade Energy, is doubling Orlando motor-production capacity, and was added to the Russell 2000 on Jun 29. A late-May WSJ report on potential U.S. government investment in domestic drone suppliers (naming UMAC) drove a 58% single-day spike. No same-day negative catalyst (no earnings miss, downgrade, or filing) was found to explain today's decline.",
+      "why": "Valuation is rich (32x EV/sales) after a large multi-month run-up on the WSJ/government-interest catalyst and Russell 2000 inclusion; today's -5.35% move reads as profit-taking/give-back rather than a fundamental deterioration.",
+      "impact": "Likely a one-day pullback within a still-intact bullish structural story rather than a trend reversal, given the absence of any negative news; sector read-through - watch domestic-drone/defense-supply-chain peers (KTOS, ONDS, RCAT, AVAV, all on the watchlist) for a similar give-back.",
+      "horizon": "SHORT_TERM for this specific move (a pullback, not a new catalyst); the underlying growth/defense-onshoring thesis remains LONG_TERM if it re-sets up on a later confluence check after the pullback stabilizes.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week - displaces nothing. A down gap isn't a long entry signal on its own; would need to wait for stabilization and a fresh confluence read (VWAP reclaim, RSI oversold bounce) before this clears the Entry Checklist. Research only, no size given."
+    }
+  ]
+}

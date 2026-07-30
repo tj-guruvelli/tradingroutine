@@ -2291,3 +2291,114 @@ since the pool is below the top-5 cap.
   A 10% trailing stop from $65.56 is ~$6.56 away, needing a ~+20% target to
   clear 2:1 R:R — harder to justify given the SHORT_TERM/bounce framing.
   Research only, no size given.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+
+Apify RAG web browser hit its monthly hard usage cap on all 4 catalyst
+queries — fell back to Benzinga quote pages (per routine), then WebSearch
+(Yahoo-blocked) for the fundamentals deep-dive leg since Apify was
+unavailable for that query too. All 4 hits got the full deep-dive (cap is 5,
+only 4 qualified).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.245 | +7.04% | 498 (thin) | None found — Benzinga's top hit is Aptos crypto (ticker collision) |
+| 2 | WLDS | $3.48 | +6.42% | n/a | No same-day news — post-reverse-split micro-cap momentum volatility |
+| 3 | KLIC | $95.45 | +6.24% | n/a | Extending Q2 FY26 earnings beat + raised guidance (AI/memory demand) |
+| 4 | UMAC | $17.95 | -5.35% | n/a | No negative news — pullback/profit-taking after a large prior run-up |
+
+#### Deep dive: APT $5.245 +7.04%
+- Catalyst: No stock-specific catalyst found. Alpha Pro Tech (NYSE American:
+  APT, protective apparel/building-supply maker) last reported Q1 2026 EPS
+  of $0.069 (+21% YoY) on $14.6M revenue (+5.5% YoY) — a routine, dated
+  print, not a same-day event. Benzinga's top APT headline is about the
+  Aptos cryptocurrency, a ticker collision, not this company. Last
+  completed-session volume was just 498 shares.
+- Why: With no identifiable catalyst and volume this thin, the gap most
+  likely reflects a stale/wide bid-ask print on a low-liquidity name rather
+  than real supply/demand.
+- Impact: Not sustainable as a genuine move — reads as thin-volume noise.
+  No sector read-through (no other building-products/PPE peer moving).
+- Horizon: SHORT_TERM and low-conviction even as that — no durable thesis,
+  no confirmed catalyst.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but this fails the Entry Checklist's "specific
+  catalyst" requirement outright regardless of R:R math. Research only,
+  no size given.
+
+#### Deep dive: WLDS $3.48 +6.42%
+- Catalyst: Wearable Devices (neural-input wristband maker, Mudra/Mudra
+  Pro) continues elevated volatility following its Jun 22 1-for-3 reverse
+  split (done to regain Nasdaq's $1.00 min-bid compliance). FY2025 revenue
+  was just $647K against an $8.1M net loss. No same-day news found; a Jul
+  26 momentum-trader writeup flagged the stock for "sharp momentum spikes"
+  on thin float, consistent with today's move.
+- Why: Post-reverse-split micro-caps with tiny float commonly see outsized
+  swings on retail/momentum flow rather than fundamentals; no earnings,
+  contract, or filing dated today was found.
+- Impact: Reads as continued speculative momentum-trading volatility, not a
+  fresh sustainable catalyst. No meaningful sector read-through.
+- Horizon: SHORT_TERM — no structural catalyst dated today; company remains
+  unprofitable with negligible revenue and no analyst coverage.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but fails the Entry Checklist's catalyst requirement
+  and carries binary reverse-split risk; would not clear Confluence.
+  Research only, no size given.
+
+#### Deep dive: KLIC $95.45 +6.24%
+- Catalyst: Kulicke & Soffa's fiscal Q2 2026 (ended Apr 4) non-GAAP EPS of
+  $0.79 beat the $0.67 consensus by ~18% on revenue up 49.8% YoY to
+  $242.6M — a swing from a prior-year loss, driven by general semi/memory/
+  automotive/industrial demand. Fiscal Q3 2026 guidance called for ~$310M
+  revenue and ~$1.00 non-GAAP EPS, with the memory segment up 93%
+  sequentially on NAND/data-center demand; FY26 capex was raised from ~$12M
+  to ~$22M to expand Thermo-Compression Bonding (TCB) capacity for AI-chip
+  packaging. Next earnings: Aug 5 after close.
+- Why: Earnings beat plus raised guidance and a structural capex build-out
+  for AI-driven advanced packaging (TCB for HBM/AI chip assembly) is
+  pulling in momentum and fundamental buyers alike — a genuine mechanism,
+  not a headline spike.
+- Impact: Move looks sustainable relative to a real multi-quarter
+  fundamental improvement (30-day return +24.8%, 1-yr +263%), though the
+  stock has already re-rated a long way (P/E 80x trailing, 19x forward) and
+  sits ahead of its own Aug 5 print — a binary risk. Sector read-through:
+  bullish for AI/advanced-packaging-exposed semi-equipment peers (e.g.
+  AMKR, also on the watchlist).
+- Horizon: LONG_TERM — structural driver (AI/memory capex supercycle, TCB
+  capacity build-out) aligns with an early/mid-cycle Technology tilt in
+  TRADING-STRATEGY.md's sector-rotation table, worth a multi-week swing
+  thesis if it also clears Confluence on a later /trade check.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing existing, and is the strongest-catalyst name of
+  today's 4. At $95.45, a 10% trailing stop is ~$9.55 away; needs roughly a
+  +20% target to clear 2:1 R:R — plausible given the guidance raise, but
+  the Aug 5 earnings date sits inside most reasonable hold windows and adds
+  binary risk. Research only, no size given.
+
+#### Deep dive: UMAC $17.95 -5.35%
+- Catalyst: Unusual Machines (NDAA-compliant drone-component maker) pulled
+  back after an extended run-up; no same-day negative news found. Q1 2026
+  revenue of ~$8.1M beat estimates of $5.54M (+296% YoY, 8th consecutive
+  record quarter); the company raised ~$150M in a March 2026 offering
+  (cash now $222.9M), signed a ~$52M deal to acquire battery maker Upgrade
+  Energy, is doubling Orlando motor-production capacity, and was added to
+  the Russell 2000 on Jun 29. A late-May WSJ report on potential U.S.
+  government investment in domestic drone suppliers (naming UMAC) drove a
+  58% single-day spike earlier.
+- Why: Valuation is rich (32x EV/sales) after a large multi-month run-up on
+  the WSJ/government-interest catalyst and Russell 2000 inclusion; today's
+  move reads as profit-taking/give-back, not fundamental deterioration.
+- Impact: Likely a one-day pullback within a still-intact bullish
+  structural story rather than a trend reversal, given the absence of any
+  negative news. Sector read-through: watch domestic-drone/defense-supply
+  peers (KTOS, ONDS, RCAT, AVAV, all on the watchlist) for a similar
+  give-back.
+- Horizon: SHORT_TERM for this specific move (a pullback, not a new
+  catalyst); the underlying growth/defense-onshoring thesis remains
+  LONG_TERM if it re-sets up on a later confluence check after the
+  pullback stabilizes.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. A down gap isn't a long-entry signal on its own; would
+  need stabilization and a fresh confluence read (VWAP reclaim, RSI
+  oversold bounce) before this clears the Entry Checklist. Research only,
+  no size given.
