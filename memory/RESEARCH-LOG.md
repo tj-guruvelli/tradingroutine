@@ -2402,3 +2402,125 @@ only 4 qualified).
   need stabilization and a fresh confluence read (VWAP reclaim, RSI
   oversold bounce) before this clears the Entry Checklist. Research only,
   no size given.
+
+### Gappers (auto-scan 11:10 ET, cloud)
+
+Apify RAG web browser still hitting its monthly hard usage cap (same outage
+as the 08:12 and 10:09 ET scans) — fell back to Benzinga WebFetch per
+routine rule, then WebSearch (Yahoo domains blocked) for LAKE/LPG (Benzinga
+returned no usable headline) and for the SYNA/KLIC fundamentals legs. 6
+qualifying gappers out of ~60 scanned; top 5 got the full deep dive, UMAC
+(rank 6) quick-scan only per the cap.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | WLDS | $3.605 | +10.24% | 315 (thin) | Continued post-reverse-split momentum after a white paper release; no new same-day filing |
+| 2 | LAKE | $11.705 | +7.58% | 365 (thin) | No same-day catalyst found; closest data point is a Q1 FY27 EPS beat |
+| 3 | LPG | $42.35 | -7.09% | 3,987 (thin) | No same-day negative catalyst; recent fleet-expansion news is positive, doesn't fit the drop |
+| 4 | KLIC | $97.965 | +6.74% | n/a | Extending the earnings-beat/guidance-raise rally already flagged at 08:12 and 10:09 ET |
+| 5 | SYNA | $117.395 | +6.68% | n/a | ON Semi's $7B all-stock buyout (Jun 25) + SYNA reports earnings today, Jul 30 |
+| 6 | UMAC | $18.41 | -6.45% | n/a | Sector-wide Pentagon drone-production concerns weighing on drone names |
+
+#### Deep dive: WLDS $3.605 +10.24%
+- Catalyst: Wearable Devices (Mudra neural-input wristband maker) completed
+  a 1-for-3 reverse split in June for Nasdaq compliance and released a white
+  paper that coincided with a prior Friday surge. No new same-day filing or
+  news found; reference-session volume was just 315 shares.
+- Why: Post-reverse-split micro-caps with tiny float commonly see outsized
+  momentum swings on retail flow rather than fundamentals — same name, same
+  read as this morning's 10:09 ET scan.
+- Impact: Continued speculative momentum volatility, not a fresh catalyst;
+  thin volume argues against durability. No sector read-through.
+- Horizon: SHORT_TERM, no structural catalyst — unchanged from the 10:09 ET
+  deep dive on this same ticker earlier today.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but fails the Entry Checklist's catalyst requirement
+  outright; flagged as non-actionable twice today already. Research only,
+  no size given.
+
+#### Deep dive: LAKE $11.705 +7.58%
+- Catalyst: No dated headline found via Benzinga or web search. Lakeland
+  Industries' most recent reported quarter (Q1 FY2027) beat EPS estimates
+  (+$0.04 vs -$0.14 expected) after a weak Q4 FY2026 (net loss $0.61/share
+  vs expected $0.30 profit, revenue miss of 17.6%). References to
+  securities class-action law-firm ads relate to past losses, not new
+  litigation. Reference-session volume was just 365 shares.
+- Why: With no identifiable same-day catalyst and volume this thin, the gap
+  likely reflects a stale/wide bid-ask print rather than real supply/demand
+  — the same pattern flagged on APT and WLDS in earlier scans this week.
+- Impact: Not sustainable as a genuine move; reads as thin-volume noise. No
+  sector read-through identified.
+- Horizon: SHORT_TERM and low-conviction — no confirmed catalyst.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but fails the Entry Checklist's catalyst requirement
+  outright. Research only, no size given.
+
+#### Deep dive: LPG $42.35 -7.09%
+- Catalyst: No same-day negative headline found. Dorian LPG's most recent
+  company news is fleet expansion (new dual-fuel carrier "Areion"), a
+  positive item that doesn't explain today's decline. Other coverage
+  describes the stock as trading near the top of its 52-week range and
+  above its 200-day SMA, consistent with a pullback after a run-up rather
+  than news-driven selling. Reference-session volume (3,987 shares) is thin
+  for this name.
+- Why: Absent a same-day negative catalyst, this likely reflects sector-wide
+  LPG shipping-rate softness or profit-taking after an extended run, not
+  company-specific bad news.
+- Impact: Sustainability uncertain with no catalyst to anchor a thesis
+  either way. Sector read-through: watch other LPG/product-tanker shipping
+  names (on watchlist) for a similar pullback.
+- Horizon: SHORT_TERM by default — no catalyst identified to support a
+  structural read.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but fails the Entry Checklist's catalyst requirement.
+  Research only, no size given.
+
+#### Deep dive: KLIC $97.965 +6.74%
+- Catalyst: Continuation of the same earnings-driven move logged twice
+  already today (record revenue growth, raised FY26 guidance, capex
+  increase for AI-chip/TCB packaging capacity). Price has extended intraday
+  from $95.45 (10:09 ET read) to $97.965 — no new incremental news found
+  this hour; this is the existing thesis still running.
+- Why: Same mechanism as this morning's deep dive — earnings beat + raised
+  guidance + structural AI/advanced-packaging capex build-out pulling in
+  momentum and fundamental buyers.
+- Impact: Move continues to look sustainable relative to the fundamental
+  improvement already documented today; stock is increasingly extended
+  (already +24.8% over 30 days per this morning's read) and sits ahead of
+  its Aug 5 print, a binary risk that hasn't changed. Sector read-through
+  unchanged: bullish for AI/advanced-packaging-exposed semi-equipment peers
+  (e.g. AMKR).
+- Horizon: LONG_TERM — same structural driver (AI/memory capex supercycle)
+  as logged this morning; no new information to revise that call.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  unchanged from this morning's read. Research only, no size given; see
+  10:09 ET entry for full R:R math (unchanged at this price).
+
+#### Deep dive: SYNA $117.395 +6.68%
+- Catalyst: ON Semiconductor agreed on Jun 25, 2026 to acquire Synaptics in
+  an all-stock deal valued at ~$7B (its largest deal ever) — Synaptics
+  holders get 1.350 ON shares per share, a 19% premium to the 10-day VWAP,
+  for ~12% pro-forma ownership of the combined company; deal expected to
+  close mid-2027 pending regulatory/shareholder approval ($235M/$320M
+  termination fees). ON fell ~9% after-hours on the announcement while SYNA
+  rose. The fresh same-day driver: Synaptics reports earnings today (Jul
+  30) — the print interacts with the fixed exchange ratio, so today's move
+  reflects repositioning into the print rather than new deal news.
+- Why: An all-stock acquisition at a fixed exchange ratio anchors SYNA's
+  value to ON's stock plus deal-completion odds; today's earnings print is
+  the incremental same-day catalyst on top of that arb dynamic, pulling in
+  both merger-arb and event-driven buyers.
+- Impact: Deal-driven, not organic — sustainability is a function of the
+  earnings print's read-through for deal certainty plus arb-spread
+  narrowing, not SYNA's standalone growth. Analysts already downgraded SYNA
+  post-announcement in June, capping upside near the exchange-ratio-implied
+  value absent a topping bid. Sector read-through: constructive for
+  semiconductor M&A/consolidation broadly.
+- Horizon: SHORT_TERM — the deal itself is over a month old (Jun 25);
+  today's move is earnings-print-driven repositioning within an existing
+  arb trade, not a new structural catalyst for a fresh directional entry.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but a merger-arb-plus-earnings setup with a fixed
+  1.35x exchange ratio is a poor fit for this strategy's directional-swing
+  rules (no clean stop-distance/R:R framing against a stock-for-stock deal
+  price). Research only, no size given.
