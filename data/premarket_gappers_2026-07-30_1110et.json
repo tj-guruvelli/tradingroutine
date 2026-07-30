@@ -1,0 +1,85 @@
+{
+  "scanned_at": "2026-07-30T15:10:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "WLDS",
+      "price": 3.605,
+      "gap_pct": 10.24,
+      "premarket_volume": null,
+      "catalyst": "Continued post-reverse-split momentum after a white paper release; no new same-day filing found.",
+      "headlines": [],
+      "catalyst_detail": "Wearable Devices (Mudra neural-input wristband maker) completed a 1-for-3 reverse split in June to regain Nasdaq's $1.00 min-bid compliance and released a white paper that coincided with a prior Friday surge. No new same-day filing or news was found; the reference session traded just 315 shares.",
+      "why": "Post-reverse-split micro-caps with tiny float commonly see outsized momentum swings on retail flow rather than fundamentals — this is the same name and same read flagged in today's 10:09 ET scan.",
+      "impact": "Reads as continued speculative momentum volatility, not a fresh catalyst; thin volume argues against durability. No sector read-through.",
+      "horizon": "SHORT_TERM, no structural catalyst — same conclusion as this morning's 10:09 ET deep dive on this ticker.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week — displaces nothing, but this fails the Entry Checklist's catalyst requirement outright; already flagged as non-actionable twice today. Research only, no size given."
+    },
+    {
+      "rank": 2,
+      "symbol": "LAKE",
+      "price": 11.705,
+      "gap_pct": 7.58,
+      "premarket_volume": null,
+      "catalyst": "No same-day catalyst found; closest data point is a Q1 FY2027 EPS beat.",
+      "headlines": [],
+      "catalyst_detail": "No dated headline found via Benzinga or web search. Lakeland Industries' most recent reported quarter (Q1 FY2027) beat EPS estimates (+$0.04 vs -$0.14 expected) after a weak Q4 FY2026 (net loss $0.61/share vs expected $0.30 profit, revenue miss of 17.6%). References to securities class-action law firm ads relate to past losses, not new litigation. Reference-session volume was just 365 shares.",
+      "why": "With no identifiable same-day catalyst and volume this thin, the gap likely reflects a stale/wide bid-ask print rather than real supply/demand — the same pattern flagged on APT and WLDS in earlier scans this week.",
+      "impact": "Not sustainable as a genuine move; reads as thin-volume noise. No sector read-through identified.",
+      "horizon": "SHORT_TERM and low-conviction — no confirmed catalyst.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week — displaces nothing, but fails the Entry Checklist's catalyst requirement outright. Research only, no size given."
+    },
+    {
+      "rank": 3,
+      "symbol": "LPG",
+      "price": 42.35,
+      "gap_pct": -7.09,
+      "premarket_volume": null,
+      "catalyst": "No same-day negative catalyst found; recent fleet-expansion news is positive, not aligned with today's drop.",
+      "headlines": [],
+      "catalyst_detail": "No same-day negative headline found. Dorian LPG's most recent company news is fleet expansion (new dual-fuel carrier 'Areion'), a positive item that doesn't explain today's decline. Other coverage describes the stock as trading near the top of its 52-week range and above its 200-day SMA, consistent with a pullback after a run-up rather than news-driven selling. Reference-session volume (3,987 shares) is thin for this name.",
+      "why": "Absent a same-day negative catalyst, this likely reflects sector-wide LPG shipping-rate softness or profit-taking after an extended run, not company-specific bad news.",
+      "impact": "Sustainability uncertain with no catalyst to anchor a thesis either way. Sector read-through: watch other LPG/product-tanker shipping names (on watchlist) for a similar pullback.",
+      "horizon": "SHORT_TERM by default — no catalyst identified to support a structural read.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week — displaces nothing, but fails the Entry Checklist's catalyst requirement. Research only, no size given."
+    },
+    {
+      "rank": 4,
+      "symbol": "KLIC",
+      "price": 97.965,
+      "gap_pct": 6.74,
+      "premarket_volume": null,
+      "catalyst": "Extending the earnings-beat/raised-guidance rally already flagged in today's 08:12 and 10:09 ET scans.",
+      "headlines": [],
+      "catalyst_detail": "Continuation of the same earnings-driven move logged twice already today (record revenue growth, raised FY26 guidance, capex increase for AI-chip/TCB packaging capacity). Price has extended intraday from $95.45 (10:09 ET read) to $97.965 — no new incremental news found this hour, this is the existing thesis still running.",
+      "why": "Same mechanism as this morning's deep dive: earnings beat + raised guidance + structural AI/advanced-packaging capex build-out pulling in momentum and fundamental buyers.",
+      "impact": "Move continues to look sustainable relative to the fundamental improvement already documented today; stock is increasingly extended (already +24.8% over 30 days per this morning's read) and sits ahead of its Aug 5 print, a binary risk that hasn't changed. Sector read-through unchanged: bullish for AI/advanced-packaging-exposed semi-equipment peers (e.g. AMKR).",
+      "horizon": "LONG_TERM — same structural driver (AI/memory capex supercycle) as logged this morning; no new information to revise that call.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week — unchanged from this morning's read. Research only, no size given; see 10:09 ET entry for full R:R math (unchanged at this price)."
+    },
+    {
+      "rank": 5,
+      "symbol": "SYNA",
+      "price": 117.395,
+      "gap_pct": 6.68,
+      "premarket_volume": null,
+      "catalyst": "ON Semiconductor's $7B all-stock acquisition of Synaptics (announced Jun 25) plus Synaptics reporting earnings today, Jul 30.",
+      "headlines": [],
+      "catalyst_detail": "ON Semiconductor agreed on Jun 25, 2026 to acquire Synaptics in an all-stock deal valued at ~$7B (its largest deal ever) — Synaptics holders get 1.350 ON shares per share, a 19% premium to the 10-day VWAP, for ~12% pro-forma ownership of the combined company; deal expected to close mid-2027 pending regulatory/shareholder approval ($235M/$320M termination fees). ON fell ~9% after-hours on the announcement while SYNA rose. The fresh same-day driver is that Synaptics reports earnings today (Jul 30) — the print interacts with the fixed exchange ratio, so today's move reflects repositioning into the print rather than new deal news.",
+      "why": "An all-stock acquisition at a fixed exchange ratio anchors SYNA's value to ON's stock plus deal-completion odds; today's earnings print is the incremental same-day catalyst on top of that arb dynamic, pulling in both merger-arb and event-driven buyers.",
+      "impact": "Deal-driven, not organic — sustainability is now a function of the earnings print's read-through for deal certainty (does it change ON's appetite or terms) plus arb-spread narrowing, not SYNA's standalone growth. Analysts already downgraded SYNA post-announcement in June, capping upside near the exchange-ratio-implied value absent a topping bid. Sector read-through: constructive for semiconductor M&A/consolidation broadly.",
+      "horizon": "SHORT_TERM — the deal itself is over a month old (Jun 25); today's move is earnings-print-driven repositioning within an existing arb trade, not a new structural catalyst for a fresh directional entry.",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week — displaces nothing, but a merger-arb-plus-earnings setup with a fixed 1.35x exchange ratio is a poor fit for this strategy's directional-swing rules (no clean stop-distance/R:R framing against a stock-for-stock deal price). Research only, no size given."
+    },
+    {
+      "rank": 6,
+      "symbol": "UMAC",
+      "price": 18.41,
+      "gap_pct": -6.45,
+      "premarket_volume": null,
+      "catalyst": "Sector-wide concerns over Pentagon drone-production capabilities weighing on drone stocks broadly, including UMAC.",
+      "headlines": []
+    }
+  ]
+}
