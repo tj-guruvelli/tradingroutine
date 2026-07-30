@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-07-30T20:38:46.152Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "V",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 374.13,
+      "prev_daily_high": 373.97,
+      "prev_daily_close": 369.12,
+      "sma200": 330.09,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 366.83,
+      "rsi14": 66.77,
+      "adx14": 29.31,
+      "ema9": 360.63,
+      "ema21": 354.28,
+      "premarket_volume": 0,
+      "daily_volume": 612088,
+      "avg_daily_volume_30": 365301,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
