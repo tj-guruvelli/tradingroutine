@@ -2229,3 +2229,65 @@ binary-catalyst-dense session in both directions. Confluence rule remains
 unsatisfiable with `tradingview-data` still down. Zero positions, zero
 orders, 16 straight flat trading days — patience over activity. Notify
 sent (Apify outage + elevated vol backdrop worth a heads-up).
+
+## 2026-07-30 — Gappers (auto-scan 08:12 ET, cloud)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on both
+catalyst queries (same outage as pre-market run above) — fell back to
+Benzinga WebFetch per routine rule, then WebSearch (Yahoo domains blocked)
+when the CRWV Benzinga quote page returned a stale (Jul 22-vintage) article
+that contradicted today's direction. Watchlist scan returned only 2
+qualifying gappers (out of ~60 scanned) — both get quick-scan and deep-dive
+since the pool is below the top-5 cap.
+
+### Gappers (auto-scan 08:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 177.00 | +8.22% | 1,601,851 | Extends Q2-earnings rally on record revenue, raised guidance, new $1.7B Nebius AI-power deal |
+| 2 | CRWV | 65.56 | +7.74% | 1,147,817 | Bounces after Fed-driven selloff; better $2.6B loan terms + new Flow Traders AI-training deal |
+
+#### Deep dive: BE $177.00 +8.22%
+- Catalyst: Bloom Energy reported record Q2 2026 revenue of $1.065B (+166%
+  YoY), adjusted EPS $0.78 vs $0.42 est., and raised FY26 guidance to
+  $3.9-4.2B revenue / $2.55-2.85 EPS. Follow-on news of a $1.7B Nebius
+  AI-power deal (backed by IDF and Oaktree) and a JPMorgan price-target
+  hike to $346 (Overweight) are extending the move into a second session.
+- Why: Earnings beat + raised guidance removed near-term risk, and the new
+  multi-year AI-power supply deal gives momentum buyers a durable growth
+  narrative (fuel cells as a bottleneck-relief for AI datacenter power)
+  rather than a one-off headline.
+- Impact: Second consecutive up day after the Jul 28 earnings release
+  (Jul 29 gappers scan flagged BE +10.08%) — move has held/extended rather
+  than faded, reinforced by a fresh contract and an analyst PT hike.
+  Sector read-through: bullish for AI-power-infrastructure names broadly.
+- Horizon: LONG_TERM — structural catalyst (guidance raise + new multi-year
+  AI power-supply contract), aligned with Technology-adjacent sector
+  momentum in TRADING-STRATEGY.md.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week — displaces
+  nothing. At $177 a 10% trailing stop is ~$17.70 away; needs a ~+20% target
+  ($212) to clear 2:1 R:R, plausible given the guidance raise but not yet
+  confirmed by a same-day confluence check. Research only, no size given.
+
+#### Deep dive: CRWV $65.56 +7.74%
+- Catalyst: CRWV whipsawed $58.90-$68.25 on Jul 29 after Fed Governor Kevin
+  Warsh's hawkish remarks sparked a broad AI-stock selloff (CRWV named a
+  top loser). Premarket news is more constructive: better terms on a $2.6B
+  loan (eases capital-cost concern) and a new Flow Traders deal to power
+  AI quant-trading model training; BofA separately reiterated Buy ($140 PT)
+  and raised CRWV's FY26 capex estimate to $34B.
+- Why: Bargain-hunting bounce off a macro-driven (not company-specific)
+  selloff, reinforced by incremental good news (cheaper financing, new
+  logo) partially offsetting Wednesday's valuation/leverage concerns.
+- Impact: Reads as reversion off an oversold, Fed-driven down day rather
+  than a fresh breakout — shares remain below the 52-week high and key
+  moving averages per recent coverage. Sector read-through: likely a
+  sector-wide AI/neocloud relief bounce, not CRWV-specific; watch for a
+  fade back toward Wednesday's lows if it doesn't hold.
+- Horizon: SHORT_TERM — no new structural catalyst, just a bounce off a
+  rate-driven selloff; do not carry past this week without a confluence
+  recheck.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week — no
+  existing holding displaced, but BE (rank 1) is the stronger setup today.
+  A 10% trailing stop from $65.56 is ~$6.56 away, needing a ~+20% target to
+  clear 2:1 R:R — harder to justify given the SHORT_TERM/bounce framing.
+  Research only, no size given.

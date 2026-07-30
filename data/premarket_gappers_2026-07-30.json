@@ -1,0 +1,34 @@
+{
+  "scanned_at": "2026-07-30T12:12:11Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 177.00,
+      "gap_pct": 8.22,
+      "premarket_volume": 1601851,
+      "catalyst": "Bloom Energy shares extend Q2-earnings rally on record revenue, raised guidance, and a new $1.7B Nebius AI-power deal.",
+      "headlines": [],
+      "catalyst_detail": "Bloom Energy reported record Q2 2026 revenue of $1.065B (+166% YoY), adjusted EPS $0.78 vs $0.42 est., and raised FY26 guidance to $3.9-4.2B revenue and $2.55-2.85 EPS. Follow-on news of a $1.7B Nebius AI-power deal (backed by IDF and Oaktree) expanding its fuel-cell footprint for AI data centers, plus JPMorgan lifting its price target to $346 (Overweight), are keeping the move going into a second session.",
+      "why": "Earnings beat + raised guidance removed the biggest near-term risk, and the new multi-year AI-power supply deal gives momentum buyers a durable growth narrative (fuel cells as a bottleneck-relief for AI datacenter power) rather than a one-off headline.",
+      "impact": "Second consecutive up day following the Jul 28 earnings release (prior gappers scan flagged BE +10.08% on Jul 29) — the move has held/extended rather than faded, and is reinforced by a fresh contract announcement and an analyst PT hike, which argues for more durability than a single-day spike. Sector read-through: bullish for AI-power-infrastructure names generally (data-center power, fuel cells, grid capacity).",
+      "horizon": "LONG_TERM, structural catalyst (earnings guidance raise + new multi-year AI power-supply contract) aligned with early/mid-cycle Technology-adjacent sector rotation in TRADING-STRATEGY.md.",
+      "opportunity_cost": "0/6 positions open and 0/3 trades used this week, so this would displace nothing. At $177 entry, a 10% trailing stop is ~$17.70 away; a move needs a first target near +20% ($212) to clear 2:1 R:R at that stop distance, which is plausible given the fresh guidance raise but not yet confirmed by a same-day confluence check. Research only — no order sized here."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 65.56,
+      "gap_pct": 7.74,
+      "premarket_volume": 1147817,
+      "catalyst": "CoreWeave bounces after a volatile, Fed-driven selloff session, helped by better loan terms and a new AI-training customer win.",
+      "headlines": [],
+      "catalyst_detail": "CRWV whipsawed between $58.90-$68.25 on Jul 29 after Fed Governor Kevin Warsh's hawkish remarks sparked a broad AI-stock selloff (CRWV was named one of the session's biggest losers). Overnight/premarket news is more constructive: CoreWeave offered better terms on a $2.6B loan (easing investor concern about its capital costs) and Flow Traders selected CoreWeave to power AI quant-trading model training, a new customer win. BofA has separately reiterated Buy with a $140 PT and raised its FY26 capex estimate for the company to $34B.",
+      "why": "Bargain-hunting bounce off a macro-driven (not company-specific) selloff, reinforced by incremental company-specific good news (cheaper financing terms, a new logo) that partially offsets the valuation/leverage concerns that drove Wednesday's drop.",
+      "impact": "Reads more like a reversion off an oversold, Fed-driven down day than a fresh breakout — shares remain well below the 52-week high and below key moving averages per recent coverage. Sector read-through: other AI/neocloud infrastructure names likely bouncing in sympathy, so this may be sector-wide relief rather than CRWV-specific strength; watch for fade back toward Wednesday's lows if the relief rally doesn't hold.",
+      "horizon": "SHORT_TERM, no new structural catalyst — this is a bounce off a rate-driven selloff, not a guidance reset or contract-scale change; do not carry past this week without a confluence recheck.",
+      "opportunity_cost": "0/6 positions open and 0/3 trades used this week, so no existing holding would be displaced, but BE (rank 1, LONG_TERM structural catalyst) is the stronger of the two setups today. A 10% trailing stop from $65.56 is ~$6.56 away, needing a ~+20% target to clear 2:1 R:R — harder to justify given the SHORT_TERM/bounce framing. Research only — no order sized here."
+    }
+  ]
+}
