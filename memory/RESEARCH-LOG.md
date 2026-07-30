@@ -2291,3 +2291,162 @@ since the pool is below the top-5 cap.
   A 10% trailing stop from $65.56 is ~$6.56 away, needing a ~+20% target to
   clear 2:1 R:R — harder to justify given the SHORT_TERM/bounce framing.
   Research only, no size given.
+
+## 2026-07-30 — Gappers (auto-scan 09:14 ET, cloud, 2nd run today)
+
+Apify RAG web browser still hard-capped (same outage flagged in the 08:12
+run) — fell back to Benzinga WebFetch per routine rule, then cross-checked
+CRWV/AMKR via WebSearch since their Benzinga top-headlines were stale
+(dated Jul 26) and read the wrong direction at first glance. Both resolved
+once combined with fresher sources: today's session is a Big Tech earnings
+day (MSFT/META reported after Tuesday's close), and CRWV/AMKR are bouncing
+off their own separate pre-existing selloffs. Watchlist scan (60 tickers)
+returned 6 qualifying gappers (>=5% gap, >=$3, vol populated) vs. 2 at
+08:12 — the AI-earnings reaction widened the pool. Deep-dive capped at 5
+per routine; AMKR (rank 6) gets quick-scan only.
+
+### Gappers (auto-scan 09:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 164.38 | +10.95% | 1,128,738 | Nvidia discloses 9.3% stake + $1B Reflection AI compute deal, bouncing off Wed's correction |
+| 2 | CRWV | 67.32 | +10.63% | 1,147,817 | Extends bounce off 30%-in-a-month drawdown as MSFT's Azure beat eases hyperscaler-competition fears |
+| 3 | MSFT | 428.72 | +9.65% | 1,558,652 | Q4 revenue $90B beats, Azure accelerates to 43%, FY26 capex guidance cut on longer asset-life assumptions |
+| 4 | BE | 179.08 | +9.5% | 1,601,851 | Extends Q2 beat-and-raise rally, adds $1.7B Nebius AI-power deal + JPMorgan PT hike to $346 |
+| 5 | META | 533.65 | -9.15% | 839,088 | Mixed Q2 — revenue beat, EPS miss on AI/legal opex — raised capex spooks investors |
+| 6 | AMKR | 46.01 | +7.66% | 538,335 | Bounces off Wed's post-earnings guidance-miss selloff on NVIDIA/TSMC packaging deal news |
+
+#### Deep dive: NBIS $164.38 +10.95%
+- Catalyst: Nebius shares are rebounding off a sharp correction (low $180s
+  down to ~$148 at Wednesday's close) after Nvidia disclosed a passive
+  9.3% stake (existing shares + a prefunded warrant) and Nebius agreed to
+  sell over $1B of compute to Reflection AI through 2029. Amplified by
+  sympathy with Microsoft's blowout Azure print overnight — Microsoft is
+  one of Nebius's own multibillion-dollar AI-infrastructure customers.
+- Why: Nvidia's equity stake signals demand/legitimacy for the GPU-cloud
+  model, and the new $1B compute deal adds visible backlog right as MSFT's
+  strong Azure/AI capex commentary eases fears hyperscalers will undercut
+  neocloud demand.
+- Impact: Volume (~1.13M) well above recent selloff-day average; recovers
+  a meaningful chunk of Wednesday's rout — reads as a genuine relief rally
+  on fresh company news plus a supportive tape (MSFT, CRWV both up), not a
+  pure headline spike, though NBIS remains far below its $220 high and
+  highly volatile (avg analyst Buy $258 PT vs. one Sell at $95).
+- Horizon: LONG_TERM — Nvidia's stake and the multi-year Reflection AI
+  contract are structural, aligned with AI-infrastructure momentum;
+  still worth a same-day confluence recheck given volatility.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. At $164.38 a 10% stop is ~$16.44 away; needs a ~20%+
+  target for 2:1 R:R, plausible given the bounce but competes directly
+  with CRWV/BE for the same AI-infra thesis slot. Research only, no size
+  given.
+
+#### Deep dive: CRWV $67.32 +10.63%
+- Catalyst: CoreWeave extends a bounce off a brutal ~30%-in-a-month
+  drawdown (triggered Jul 17 by Meta's "Meta Compute" cloud service
+  announcement, worsened by Fed Governor Warsh's hawkish remarks ~Jul 26).
+  Company tailwinds this week: better terms on a $2.6B loan and a new Flow
+  Traders deal to power AI quant-training. Today's extension is boosted
+  further by MSFT's strong Azure print undercutting the hyperscaler-
+  cannibalization fear that drove the original selloff.
+- Why: A macro/competition-driven overreaction is unwinding as financing
+  terms improve, a new logo lands, and MSFT's print shows AI infra demand
+  still accelerating rather than being insourced away from CoreWeave.
+- Impact: Volume (~1.15M) elevated, bounce holding through the premarket
+  session rather than fading, but CRWV is still >30% below its highs and
+  next earnings (Aug 11) is an unresolved catalyst risk. Sector read-
+  through: same-day NBIS move confirms an AI-infra-wide relief bounce,
+  not CRWV-idiosyncratic.
+- Horizon: SHORT_TERM — loan refinancing and Flow Traders deal are real,
+  but the primary driver is unwind of a macro/competition scare rather
+  than a new durable catalyst; recheck before carrying past Aug 11
+  earnings.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week — no
+  existing holding displaced, but directly competes with NBIS and BE for
+  the single AI-infra-bounce slot (max 3 trades/week, max 6 positions).
+  At $67.32 a 10% stop is ~$6.73 away; needs a ~20% move for 2:1 R:R —
+  achievable given the size of the prior drawdown, but earnings risk
+  (Aug 11) sits inside a multi-week hold. Research only, no size given.
+
+#### Deep dive: MSFT $428.72 +9.65%
+- Catalyst: Microsoft's fiscal Q4 revenue hit $90B (+18% YoY), GAAP EPS
+  $4.81 (+31% YoY), adjusted EPS $4.74 vs. $4.24 est. Azure and other
+  cloud revenue grew 43% (accelerating from 40% prior quarter) and topped
+  $100B for the full fiscal year for the first time; Copilot passed 30M
+  paid seats. Capex was $41B for the quarter (+69% YoY) but management cut
+  the calendar-2026 capex forecast to ~$175B from ~$190B by extending
+  assumed useful life of data-center/office assets to 25 years from 15.
+- Why: An across-the-board beat combined with a capex guidance CUT (via a
+  useful-life accounting change, not a spending pullback) reads as AI
+  capex finally paying off with rising efficiency — the opposite read of
+  META's raised-capex/missed-EPS report the same night, explaining the
+  sharp divergence between the two stocks this morning.
+- Impact: Volume (~1.56M), the highest of today's list — a genuine post-
+  earnings gap, not a headline spike; commercial RPO up 84% to $678B backs
+  a durable growth read. Sector read-through: lifting the whole AI-infra
+  complex (NBIS, CRWV both up double digits) since MSFT is a customer/
+  proof-point for both.
+- Horizon: LONG_TERM — structural beat with an efficiency-improving capex
+  revision and record backlog; consistent with continued Technology-
+  sector momentum per TRADING-STRATEGY.md, though the gap is already large
+  enough that chasing needs a same-day confluence check for entry timing.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but MSFT's 9.65% gap makes for a wide stop: 10% from
+  $428.72 is ~$42.87 away, needing an ~20% move for 2:1 R:R on a mega-cap
+  — a tall ask versus sizing NBIS/CRWV/BE instead, which have more room
+  left after their own drawdowns. Research only, no size given.
+
+#### Deep dive: BE $179.08 +9.5%
+- Catalyst: Bloom Energy extends its Q2 beat-and-raise: revenue $1.07B
+  (vs. $822.8M est.), adjusted EPS $0.78 (vs. $0.40 est.), FY26 guidance
+  raised to $3.9-4.2B revenue / $2.55-2.85 EPS. New this session: a $1.7B
+  Nebius AI-power deal (backed by IDF and Oaktree) adds to an already-large
+  ~$20B contracted backlog (Brookfield $5B, Oracle Project Jupiter up to
+  2.8GW, AEP $2.65B), and JPMorgan raised its price target to $346
+  (Overweight).
+- Why: A record beat-and-raise plus a steady drumbeat of large multi-year
+  AI-power contracts (Nebius the latest) keeps pulling in momentum buyers
+  who see fuel cells as bottleneck-relief for AI datacenter power — each
+  new deal reinforces rather than replaces the thesis.
+- Impact: Third consecutive up session on the same underlying catalyst
+  (highest volume of today's list, ~1.6M) — the move has extended, not
+  faded, with fresh contract news each day. Sector read-through: bullish
+  for AI-power-infrastructure peers generally.
+- Horizon: LONG_TERM — structural (earnings beat + guidance raise + a
+  growing multi-year contracted backlog), aligned with Technology-adjacent
+  momentum in TRADING-STRATEGY.md.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing, but BE is now the most extended of today's names
+  (3rd up day) versus NBIS/CRWV which are earlier in their bounce. At
+  $179.08 a 10% stop is ~$17.91 away; needs a ~20%+ target for 2:1 R:R —
+  plausible given backlog growth but chasing a 3-day-old move raises
+  entry-price risk versus the earlier-stage NBIS/CRWV setups. Research
+  only, no size given.
+
+#### Deep dive: META $533.65 -9.15%
+- Catalyst: Meta's Q2 revenue was $60.8B (+28% YoY, beating the $59.5B
+  est.) but adjusted EPS of $6.18 missed the $7.13 estimate as AI/legal
+  opex drove a 55% rise in operating costs and an 8% drop in operating
+  income. Management raised full-year capex guidance to $130-145B (from
+  $125-145B) and guided FY26 expenses to $165-169B; Q3 revenue guided to
+  $61-64B.
+- Why: The market is penalizing rising AI-infrastructure and legal spend
+  compressing near-term margins even as top-line growth and ad metrics
+  (impressions +14% YoY, price/ad +12% YoY) stayed healthy — a sharp
+  contrast to MSFT's same-night print, where capex guidance was actually
+  cut via an accounting change, making META's raised-capex/missed-EPS
+  combination look worse by comparison.
+- Impact: Volume (~839K, lowest of today's list) but a clean post-earnings
+  gap down, not a stale headline — reads as a genuine re-rating of AI-
+  spend tolerance rather than a one-day overreaction likely to fully
+  reverse, though ad-business fundamentals argue against a full re-rating
+  lower. Sector read-through: contrasts sharply with MSFT's rally same
+  morning — investors discriminating between AI-capex stories by
+  near-term margin impact.
+- Horizon: SHORT_TERM — no confluence check performed; TRADING-STRATEGY.md's
+  Entry Checklist implies a long-biased book (200-SMA long filter, no
+  defined short process) so a -9% gap down is not a long candidate here —
+  flagged for sector context only, not as a trade idea.
+- Opportunity cost: Not applicable as a long — META's gap is a decline,
+  not a long setup within this long-biased strategy. Noted only for
+  sector-context completeness (explains why NBIS/CRWV/MSFT/BE diverge from
+  META today).
