@@ -2539,3 +2539,18 @@ V is a repeat hit from the 2026-07-29 16:39/18:39 ET scans, still trending
 same momentum-confluence setup persisting, no new tickers qualified this
 run. No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only,
 not an order — feed to `/trade` if pursued (full safety-check gate applies).
+
+### Setup Scan (18:41 ET, cloud)
+60 candidates checked, 0 errors, 1 hit (grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| V | B | Momentum confluence | daily | ADX14 29.31, EMA9 360.63 > EMA21 354.28, RSI14 66.77 |
+
+Same V momentum-confluence hit as the 16:38 ET scan this session, unchanged
+(ADX14/RSI14/EMA levels identical to 2 decimal places — no new bar since).
+Note: the first two run attempts this session (18:38/18:39 ET) hit Alpaca
+DNS/rate-limit errors (25-27 of 60 tickers) from rapid successive scans;
+those partial results were discarded and are not the source of this entry.
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
+an order — feed to `/trade` if pursued (full safety-check gate applies).
