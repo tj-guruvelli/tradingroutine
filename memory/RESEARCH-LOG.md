@@ -2127,3 +2127,105 @@ Same two grade-B hits as the 16:39 ET run today, unchanged levels — no new
 setups emerged over the 2-hour window. RTX remains overbought (RSI14 77.61).
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidates only, not
 orders — feed to `/trade` if pursued (full safety-check gate applies).
+
+## 2026-07-30 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser returned "Monthly usage hard limit exceeded" on every
+query (all 6 topics) — same outage as 2026-07-29, cap has not reset. Fell
+back to native WebSearch (Yahoo domains blocked) per the routine's fallback
+rule for the entire session. `tradingview-data` MCP still absent (`ToolSearch`:
+no match) — 5th+ consecutive session; confluence rule (>=2 of VWAP/RSI/200-
+SMA/insider) remains unsatisfiable for any candidate.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 16 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+
+### Market Context (WebSearch fallback, Thu 7/30 premarket ET)
+- **Oil — sharp spike, geopolitical**: WTI $84.20/bbl (+6.20% vs prior
+  close), Brent $89.43/bbl (+6.92%) — renewed Middle East hostilities
+  driving a second consecutive up day after yesterday's reversal call.
+  Directionally consistent with 7/29's "oil relief is reversible" flag,
+  now confirmed twice.
+- **S&P 500 futures**: +0.5% premarket (multiple sources), SPX cash ~7328
+  (+0.17%). Muted-to-modestly-positive despite a very heavy catalyst stack.
+- **VIX**: closed 20.66 yesterday (7/29), +13.45% on the day — IMF's July
+  update flagged stalled global disinflation + slower 3.0% growth,
+  triggering a repricing of expensive equities. Today's print not yet
+  available premarket; treat 20.66 as the live reference — a meaningful
+  step up from 7/29's own premarket read of 18.62, i.e. vol expanded
+  intraday on FOMC day itself.
+- **FOMC aftermath**: Fed held rates steady Wed but markets read it as
+  insufficiently hawkish on inflation — 30-year Treasury yield surged above
+  5.2%, highest since 2007. Dow fell ~800 points Wed. This is the dominant
+  overnight story: a hawkish-inflation, high-yield risk-off reaction to a
+  hold decision.
+- **Earnings — today**: Reported/reporting premarket-adjacent: Mastercard,
+  Shell, AB InBev, Bristol-Myers Squibb, Altria, Southern, Sanofi. After
+  the close today: Apple, Amazon, Coinbase. Yesterday's after-close prints
+  (MSFT beat on Azure, +8.3% premarket; META miss — soft rev guide +91%
+  drop in Q2 FCF, -9% premarket) are still digesting into today's tape.
+  None held/watchlist.
+- **Econ calendar today (8:30am ET)**: Q2 GDP first estimate (consensus
+  ~2.3% vs prior 2.1%), June core PCE (Fed's preferred inflation gauge,
+  MoM +0.1% / YoY consensus ~3.1% per one source), personal income/spending,
+  initial jobless claims (~201K consensus vs 187K prior). Heavy print
+  cluster same morning as digesting FOMC/Big Tech earnings reaction.
+- **Sector YTD** (as of ~7/24 read): Energy +3.6%, Utilities +2.2%,
+  Industrials +1.6%, Materials +1.4%, Real Estate +1.0%, Health Care +0.9%,
+  Technology +0.4%, Financials 0.0%, Consumer Staples -1.3%, Consumer
+  Discretionary -5.6%, Communications -6.1%. Q2-specific note: Technology
+  led large-cap gains (+43% large-cap surge cited) while Energy lagged
+  (-13% large-cap). Same source-conflict caveat as 7/29 — don't size sector
+  bets off this without a `tradingview-data`-based technical confirmation.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **MSFT — watch only, not a chase.** Catalyst: Q2 beat, Azure growth,
+   +8.3% premarket. Strategy rule bars entry within 3% of a print >5% up
+   on the day — this is a "wait for pullback to a reclaimed level" watch,
+   not an entry today. No confluence data available to set a level.
+2. **Energy — watch only, macro-driven.** Catalyst: WTI/Brent both +6%+ on
+   Middle East escalation, second up day in a row. Geopolitical, not
+   company-specific, and confluence unsatisfiable without
+   `tradingview-data`. Revisit only if the move holds and a specific name
+   (XLE, integrated majors) shows a real technical setup once the tool is
+   back.
+3. **No pre-GDP/PCE positioning.** GDP + core PCE + jobless claims all
+   land at 8:30am ET on top of an already-volatile FOMC-aftermath tape
+   (VIX +13%, 30Y yield highest since 2007, Dow -800 Wed) — any new entry
+   ahead of that data is a binary macro bet, not a strategy-compliant
+   technical setup.
+
+### Risk Factors
+- **Post-FOMC risk-off**: 30Y yield >5.2% (highest since 2007), Dow -800
+  Wed, VIX +13.45% to 20.66 — market reading the Fed's hold as
+  inflation-complacent, not dovish-friendly. Elevated whipsaw risk into
+  today's GDP/PCE prints.
+- **Oil re-spiking on Middle East escalation** — second consecutive day,
+  reintroduces inflation-via-energy risk directly into a market already
+  repricing on inflation fears.
+- **Mixed mega-cap earnings reaction**: MSFT +8.3% (Azure strength) vs.
+  META -9% (soft guide, FCF collapse) premarket — no clean single
+  narrative; AAPL/AMZN/COIN report after close today, adding another
+  binary catalyst stack into the same session.
+- **Apify still fully down** (monthly cap not reset) — 2nd consecutive
+  session on WebSearch fallback only. Operator: check Apify billing/plan.
+- **`tradingview-data` MCP still absent** — 5th+ consecutive session;
+  confluence rule unsatisfiable for this entire stretch. Same operator
+  flag as prior days, escalating in duration.
+- **Sector-YTD source conflict** (see Market Context) — don't size or rank
+  sector bets off either figure until resolved.
+
+### Decision
+**HOLD — no trades.** Post-FOMC risk-off tape (VIX +13%, 30Y yield highest
+since 2007, Dow -800 Wed) stacked directly against GDP/PCE/jobless-claims
+prints at 8:30am ET and AAPL/AMZN/COIN earnings after close — a
+binary-catalyst-dense session in both directions. Confluence rule remains
+unsatisfiable with `tradingview-data` still down. Zero positions, zero
+orders, 16 straight flat trading days — patience over activity. Notify
+sent (Apify outage + elevated vol backdrop worth a heads-up).
