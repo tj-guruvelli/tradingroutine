@@ -2658,3 +2658,52 @@ DNS/rate-limit errors (25-27 of 60 tickers) from rapid successive scans;
 those partial results were discarded and are not the source of this entry.
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
 an order — feed to `/trade` if pursued (full safety-check gate applies).
+
+## 2026-07-31 — Gappers (auto-scan 08:10 ET, cloud)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on both the
+catalyst and fundamentals queries (same ongoing outage as prior sessions) —
+fell back to Benzinga WebFetch per routine rule for the catalyst headline,
+then WebFetch (Benzinga news feed + stockanalysis.com; Yahoo domains
+excluded) for the deep-dive fundamentals leg. Watchlist scan (~60 tickers,
+GAP_THRESHOLD=5.0) returned only 1 qualifying gapper — gets both quick-scan
+and deep-dive since the pool is below the top-5 cap.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 78.25 | +5.94% | 1,591,106 | Trending after partnering with Leidos to bring AI cloud to national security |
+
+#### Deep dive: CRWV $78.25 +5.94%
+- Catalyst: CoreWeave announced a strategic partnership with Leidos to
+  deliver secure, AI-native cloud infrastructure for the U.S. Intelligence
+  Community and Department of Defense. Lands on top of an already-strong
+  Jul 30 session (+21.5% to $73.90) driven by Truist upgrading to Buy (58%
+  upside, citing power access/AI demand) and Baird initiating Outperform,
+  plus new client wins (Flow Traders, Anam). Q2 2026 earnings due Aug 11
+  after close.
+- Why: A defense/intelligence-community contract expands CoreWeave's
+  addressable market beyond hyperscaler AI-compute rental into higher-
+  margin, more durable federal cloud revenue — gives momentum buyers a
+  fresh structural narrative on top of this week's analyst-upgrade cycle
+  and Wednesday's 21.5% pop.
+- Impact: 1.59M volume on the gap. Move follows an extreme whipsaw: -30%
+  over the trailing month into a Jul 29 52-week low (broad AI-sector
+  selloff on Fed commentary), then +21.5% Jul 30, now +5.9% more Jul 31 —
+  three catalysts (analyst upgrades, Leidos deal, oversold bounce) stacked
+  in under a week. Reads as a genuine re-rating attempt but with real
+  mean-reversion risk given the stock's volatility and continued
+  unprofitability (-$1.59B TTM net income). Sector read-through: broader
+  AI-cloud/neocloud names were hit in the same Fed-driven Jul 29 selloff,
+  so this is partly a name-specific catalyst riding a sector bounce.
+- Horizon: LONG_TERM — structural catalyst (federal/defense contract win +
+  analyst upgrades citing durable AI-power demand), though Q2 earnings on
+  Aug 11 is a near-term binary event that could truncate any swing hold.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week (week of
+  Jul 27) — displaces nothing. At $78.25 a 10% trailing stop is ~$7.83
+  away, needing roughly a +20% move ($94) to clear the 2:1 R:R minimum —
+  plausible on the Leidos/upgrade thesis but not yet confirmed by same-day
+  confluence (VWAP/RSI/200-SMA/insider). CRWV has now printed as a gapper
+  on 2 straight sessions (Jul 30 +7.74%, Jul 31 +5.94%) without ever
+  clearing confluence — argues for a fresh confluence check before
+  treating this as more than research. Research only, no size given.
