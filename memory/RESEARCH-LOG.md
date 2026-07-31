@@ -3027,3 +3027,19 @@ of 5 not binding, all 4 get full writeups below.
   displaces nothing. Weakest name on today's list — no verified catalyst
   plus thin-liquidity data means it shouldn't compete for any of the
   week's 3 trade slots ahead of KLIC or even ZIM.
+
+## 2026-07-31 — Setup Scan (auto-scan 16:38 ET, cloud)
+
+### Setup Scan (16:38 ET, cloud)
+60 candidates checked, 1 error (CMCSA — Alpaca DNS resolution failure,
+non-fatal, script continued), 2 hits (both grade B, no grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| MA | B | Momentum confluence | daily swing | ADX14 32.24, EMA9 553.85 > EMA21 539.76, RSI14 72.23 |
+| HXL | B | Momentum confluence | daily swing | ADX14 29.26, EMA9 106.32 > EMA21 103.99, RSI14 50.04 |
+
+Both new names vs. the 2026-07-30 scans (V was the sole hit those runs;
+V did not qualify here). No grade-A hits -> no Telegram alert per STEP 4
+rule. Candidates only, not orders — feed to `/trade` if pursued (full
+safety-check gate applies).
