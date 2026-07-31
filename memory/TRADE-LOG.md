@@ -64,3 +64,16 @@ of Jul 27).
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Post-FOMC risk-off tape (VIX +13.45% to 20.66, 30Y yield >5.2%, Dow -800 Wed) plus GDP/core-PCE/jobless-claims prints and AAPL/AMZN/COIN earnings after close; pre-market call was HOLD (confluence unsatisfiable, tradingview-data MCP still down 5th+ session, Apify still capped). Gappers scan flagged BE (+8.22%) and CRWV (+7.74%) as research-only, neither validated to a planned trade. 16 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Jul 27). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+### Jul 31, Market-Open (Day 17, Friday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. Pre-market RESEARCH-LOG (2026-07-31) = HOLD — tape
+is risk-on (VIX -17% to 17.09, futures up on blowout MSFT/AMZN earnings) but
+every actionable idea either fails the "no chase within 3% of a >5% print"
+rule (MSFT, AMZN) or is an earnings-day binary bet with no technical
+confirmation (XOM, CVX); `tradingview-data` MCP still down (6th+ consecutive
+session), confluence rule unsatisfiable. Gappers scans (08:10 + 09:10 ET)
+flagged NBIS (+7.33%), BE (+7.24%, 3rd straight gap day), CRWV (+5.94%, 2nd
+straight gap day, unchanged since 08:10) as research-only — none cleared
+confluence, none promoted to Tier-1, no planned tickers to validate. Skipped
+Steps 3-6. 17 trading days since launch (Jul 9) with zero entries. Weekly
+trade count: 0/3 (week of Jul 27).
