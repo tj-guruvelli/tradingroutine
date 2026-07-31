@@ -1,0 +1,40 @@
+{
+  "scanned_at": "2026-07-31T14:14:00Z",
+  "run_note": "Cloud gappers scan run at 10:14 ET (post-open, not premarket) per scheduled task. gappers-alpaca.sh's premarket-only baseline (dailyBar.c as prev_close) is invalid once a session's dailyBar starts updating (post-open or with premarket prints), producing false gaps. Recomputed correctly here using prevDailyBar.c (true prior-session close) vs latestTrade.p (last real trade), with a freshness check on the snapshot timestamp.",
+  "deep_dive_cap": 5,
+  "excluded_bad_data": [
+    {"symbol": "SYNA", "raw_script_gap_pct": -7.96, "true_gap_pct": 0.14, "reason": "baseline bug: dailyBar.c (in-progress today's bar) used as prev_close instead of yesterday's close; true gap from prevDailyBar is +0.14%"},
+    {"symbol": "ZIM", "raw_script_gap_pct": -7.58, "true_gap_pct": -0.04, "reason": "same baseline bug"},
+    {"symbol": "BWLP", "raw_script_gap_pct": -7.54, "true_gap_pct": 0.36, "reason": "same baseline bug"},
+    {"symbol": "BW", "raw_script_gap_pct": -7.10, "true_gap_pct": -3.64, "reason": "same baseline bug; real move exists but under 5% threshold"},
+    {"symbol": "WLDS", "raw_script_gap_pct": -8.40, "true_gap_pct": null, "reason": "same baseline bug; also below $3 price floor"},
+    {"symbol": "QMMM", "raw_script_gap_pct": null, "true_gap_pct": 17.64, "reason": "STALE DATA: Alpaca snapshot dailyBar/prevDailyBar timestamped 2025-09-25/26 (~10 months old) — no current trading data, not a real gap today. WATCHLIST.md already flags this ticker unverified (⚠)."},
+    {"symbol": "PTNM", "raw_script_gap_pct": null, "true_gap_pct": -16.04, "reason": "STALE DATA: snapshot timestamped 2025-10-02/03 (~10 months old). Benzinga returns 404, ticker not found. WATCHLIST.md flags unverified (⚠). Likely delisted/halted/wrong symbol."}
+  ],
+  "gappers": [
+    {"rank": 1, "symbol": "BLSH", "price": 20.70, "gap_pct": -8.57,
+     "volume": 3349, "catalyst": "Cathie Wood's Ark Invest trimmed BLSH (and BMNR, HOOD) while buying COIN and CRCL",
+     "headlines": ["Cathie Wood's Ark Invest Loads Up on COIN, CRCL While Selling BMNR, HOOD, BLSH"],
+     "catalyst_detail": "Ark Invest disclosed trimming its Bullish position today alongside BitMine and Robinhood, while adding to Coinbase and Circle — a within-crypto-sector reallocation, not a broad risk-off signal.",
+     "why": "Ark's daily disclosed trades are widely followed/front-run by momentum and quant strategies; a disclosed sell from a high-profile fund in a thin-float recent IPO name triggers mechanical selling pressure independent of BLSH's own fundamentals.",
+     "impact": "Volume (3,349 shares by 10:14 ET) is thin for a name this size — move looks driven by basket/flow rebalancing rather than heavy conviction selling; elevated one-day-fade risk. Sector read-through: BMNR (same Ark sell list) also down hard today; COIN/CRCL (Ark buys) would be the read-through longs, not BLSH.",
+     "horizon": "SHORT_TERM — mechanical fund-flow event, no new fundamental catalyst on Bullish the business; typically fades within days absent follow-on selling.",
+     "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — no existing holding to displace. Not a long setup (decliner with a bearish flow catalyst, no bullish confluence) — does not clear the Entry Checklist. Research-only, no order sized."},
+    {"rank": 2, "symbol": "BMNR", "price": 16.58, "gap_pct": -8.30,
+     "volume": 439675, "catalyst": "Cathie Wood's Ark Invest sold BMNR (and BLSH, HOOD) while buying COIN and CRCL",
+     "headlines": ["Cathie Wood's Ark Invest Loads Up on COIN, CRCL While Selling BMNR, HOOD, BLSH"],
+     "catalyst_detail": "Same Ark Invest disclosed rebalance as BLSH — BitMine (an ETH-treasury company) was cut from Ark's book same day as BLSH/HOOD, while COIN/CRCL were added.",
+     "why": "BMNR is high-beta to ETH price action and had a very large prior 12-month run (per fundamentals pull, up hundreds of percent); a disclosed sale from a marquee momentum fund hits high-beta, richly-run names hardest as followers de-risk in sympathy.",
+     "impact": "Real, liquid move — 439,675 shares traded by 10:14 ET, not thin-volume noise. Sector read-through: this is a within-crypto rotation (Ark bought COIN/CRCL same day), not a crypto-wide risk-off — worth confirming ETH spot price didn't independently break down.",
+     "horizon": "SHORT_TERM — flow-driven, no change disclosed to BMNR's ETH-holdings thesis. Could continue bleeding intraday if other momentum followers unwind, but not a structural re-rate.",
+     "opportunity_cost": "0/6 positions open, 0/3 weekly trades used. Decliner with a bearish flow catalyst — fails Entry Checklist (no bullish catalyst, no confluence check run). Research-only, no order sized."},
+    {"rank": 3, "symbol": "ONDS", "price": 7.14, "gap_pct": -5.80,
+     "volume": 309056, "catalyst": "Headline references Ondas co-leading a strategic investment in counter-drone startup FPF Defense",
+     "headlines": ["What's Going on With Ondas Stock Monday?"],
+     "catalyst_detail": "Ondas co-led a strategic investment in FPF Defense (counter-drone tech) to help scale AI-enabled SmartFlak interceptors, layered on top of ~$70M in recent autonomous-systems order backlog — a structurally positive defense-tech catalyst.",
+     "why": "DIRECTION MISMATCH FLAGGED: the sourced headline frames this as bullish/a 'surge,' but today's Alpaca data shows ONDS down -5.80% from yesterday's close on real volume (309k shares). Most likely explanation: the headline covers an earlier pop and today's print is a give-back/profit-taking after that spike, not a fresh negative catalyst.",
+     "impact": "Volume is substantial and close to typical daily turnover, so this is a real move, not noise. Sector read-through checked: drone/defense peers AVAV (-1.17%), KTOS (-2.61%), RCAT (-1.22%) are all mildly red today too, but nowhere near ONDS's -5.80% — so this is company-specific amplification on top of a soft sector tape, consistent with a fade of ONDS's own prior spike rather than sector contagion.",
+     "horizon": "SHORT_TERM leaning, unresolved — underlying catalyst (FPF Defense investment) is structurally aligned with the AI-defense sector-rotation phase and could support a LONG_TERM swing thesis, but today's price action contradicts the bullish headline. Needs a fresh technical/confluence check (VWAP/RSI/200-SMA/insider — 2 of 4 required) before this can be called either way; tradingview-data MCP is unavailable in this cloud routine.",
+     "opportunity_cost": "0/6 positions open, 0/3 weekly trades used, so no displacement needed either way. Not actionable as a long today given it's currently a decliner; would need to reverse and clear the Confluence rule on a later /trade or pre-market check to qualify. Research-only, no order sized."}
+  ]
+}

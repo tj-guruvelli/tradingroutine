@@ -2796,3 +2796,112 @@ re-researched.
 - Opportunity cost: Unchanged from the 08:10 ET entry — 0/6 positions,
   0/3 trades this week, no confluence check run. Research only, no size
   given.
+
+## 2026-07-31 — Gappers (auto-scan 10:14 ET, cloud) — DATA QUALITY BUG FOUND
+
+**This run surfaced a real bug in `scripts/gappers-alpaca.sh`, not a market
+event.** Run fired at 10:14 ET — 44 min after the 9:30 open, not premarket.
+The script's `prev_close = dailyBar.c or prevDailyBar.c` logic assumes
+`dailyBar` still reflects yesterday's completed session ("premarket, today's
+session hasn't started" — its own comment). That assumption breaks once
+today's session starts printing: `dailyBar` becomes TODAY's in-progress bar,
+so `dailyBar.c` is just a recent same-day trade, not yesterday's close.
+Combined with wide/stale NBBO quotes on thin names, this produced 5-8%
+"gaps" that are fabricated:
+
+| Sym | Script said | Recomputed (prevDailyBar.c vs latestTrade.p) |
+| --- | --- | --- |
+| SYNA | -7.96% | +0.14% |
+| ZIM | -7.58% | -0.04% |
+| BWLP | -7.54% | +0.36% |
+| BW | -7.10% | -3.64% (real move, just under threshold) |
+| WLDS | -8.40% | n/a (also below $3 floor) |
+
+Recomputing the full ~69-ticker watchlist correctly (true prior-session
+close vs. latest real trade) surfaced two more candidates, **QMMM (+17.64%)
+and PTNM (-16.04%), that are ALSO fake** — their Alpaca snapshot timestamps
+are ~10 months stale (Sep/Oct 2025), meaning no current trading data exists;
+the "gap" is comparing two ancient bars, not anything from today. Both are
+already flagged unverified (`⚠`) in WATCHLIST.md, and Benzinga returns a
+404 for PTNM (symbol not found) — consistent with these being bad/dead
+tickers that should probably be pulled from the watchlist rather than
+rescanned. Neither bug (stale in-progress dailyBar, unfiltered stale
+snapshots) is specific to this run — both will recur on every cloud gappers
+run that fires after the open, and the stale-snapshot bug can hit any
+`⚠`-flagged ticker at any time of day.
+
+After excluding both bad-data classes, **3 real gappers** remain (verified
+fresh `dailyBar.t` timestamp = today, cross-checked against Benzinga/finviz):
+
+### Gappers (auto-scan 10:14 ET, cloud) — verified real only
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BLSH | 20.70 | -8.57% | 3,349 | Ark Invest disclosed trimming BLSH (sector reallocation into COIN/CRCL) |
+| 2 | BMNR | 16.58 | -8.30% | 439,675 | Same Ark Invest disclosed sale, high-beta ETH-treasury name |
+| 3 | ONDS | 7.14 | -5.80% | 309,056 | FPF Defense counter-drone investment — but headline reads bullish while price is down; likely fade of an earlier spike |
+
+#### Deep dive: BLSH $20.70 -8.57%
+- Catalyst: Ark Invest disclosed trimming Bullish today alongside BitMine
+  and Robinhood, while adding to Coinbase and Circle — a within-crypto
+  reallocation, not broad risk-off.
+- Why: Ark's daily disclosed trades are widely followed/front-run by
+  momentum and quant strategies; a sell from a high-profile fund in a thin
+  recent-IPO float triggers mechanical selling independent of BLSH
+  fundamentals.
+- Impact: Only 3,349 shares traded by 10:14 ET — thin for a name this size,
+  consistent with basket/flow-driven noise rather than heavy conviction
+  selling. BMNR (same Ark sell list) also down hard today; COIN/CRCL (Ark
+  buys) are the sector read-through longs, not BLSH.
+- Horizon: SHORT_TERM — mechanical fund-flow event, no new fundamental
+  catalyst on the business itself.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Decliner with a bearish flow catalyst, no bullish
+  confluence — fails the Entry Checklist outright. Research only, no size
+  given.
+
+#### Deep dive: BMNR $16.58 -8.30%
+- Catalyst: Same Ark Invest disclosed rebalance as BLSH — BitMine (ETH
+  treasury) cut same day as BLSH/HOOD, COIN/CRCL added.
+- Why: BMNR is high-beta to ETH and had a huge prior 12-month run; a
+  disclosed sale from a marquee momentum fund hits richly-run, high-beta
+  names hardest as followers de-risk in sympathy.
+- Impact: Real, liquid move — 439,675 shares by 10:14 ET, not noise. Reads
+  as a within-crypto rotation (Ark bought COIN/CRCL same day) rather than
+  crypto-wide risk-off; didn't independently confirm spot ETH price.
+- Horizon: SHORT_TERM — flow-driven, no change disclosed to BMNR's
+  ETH-holdings thesis.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Fails Entry Checklist (bearish catalyst, no
+  confluence run). Research only, no size given.
+
+#### Deep dive: ONDS $7.14 -5.80%
+- Catalyst: Ondas co-led a strategic investment in counter-drone startup
+  FPF Defense to scale AI-enabled SmartFlak interceptors, on top of ~$70M
+  in recent autonomous-systems order backlog — structurally positive
+  defense-tech news.
+- Why: DIRECTION MISMATCH — the sourced headline frames this as bullish
+  ("surge"), but today's data shows ONDS down -5.80% on real volume. Most
+  likely explanation: headline covers an earlier pop and today is a
+  give-back, not a fresh negative catalyst.
+- Impact: 309,056 shares traded, close to typical daily turnover — a real
+  move. Checked sector read-through: drone/defense peers AVAV (-1.17%),
+  KTOS (-2.61%), RCAT (-1.22%) are all mildly red too, but nowhere near
+  ONDS's -5.80% — company-specific amplification on a soft sector tape,
+  consistent with fading its own prior spike rather than sector contagion.
+- Horizon: SHORT_TERM leaning, unresolved — underlying catalyst is
+  structurally aligned with the AI-defense rotation phase and could
+  support a LONG_TERM thesis, but today's tape contradicts the bullish
+  headline. Needs a fresh confluence check (VWAP/RSI/200-SMA/insider, 2 of
+  4 required) before calling it either way; tradingview-data MCP
+  unavailable in this cloud routine.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing either way. Not actionable as a long today (currently a
+  decliner); would need to reverse and clear Confluence on a later /trade
+  or pre-market check. Research only, no size given.
+
+**Recommended follow-up (not actioned here, needs operator sign-off):** fix
+`scripts/gappers-alpaca.sh`'s baseline to always use `prevDailyBar.c` (not
+`dailyBar.c`) regardless of time of day, and add a staleness guard that
+discards any symbol whose `dailyBar`/`prevDailyBar` timestamp isn't from the
+last 1-2 trading days. Also consider dropping QMMM/PTNM from
+`memory/WATCHLIST.md` given no current Alpaca data and Benzinga 404 on PTNM.
