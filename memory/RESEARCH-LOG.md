@@ -3043,3 +3043,15 @@ Both new names vs. the 2026-07-30 scans (V was the sole hit those runs;
 V did not qualify here). No grade-A hits -> no Telegram alert per STEP 4
 rule. Candidates only, not orders — feed to `/trade` if pursued (full
 safety-check gate applies).
+
+### Setup Scan (18:38 ET, cloud)
+60 candidates checked, 0 errors, 2 hits (both grade B, no grade-A hits) —
+unchanged from the 16:38 ET run this session (same 2 names, no new hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| MA | B | Momentum confluence | daily swing | ADX14 32.24, EMA9 553.85 > EMA21 539.76, RSI14 72.23 |
+| HXL | B | Momentum confluence | daily swing | ADX14 29.26, EMA9 106.32 > EMA21 103.99, RSI14 50.04 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidates only, not
+orders — feed to `/trade` if pursued (full safety-check gate applies).
