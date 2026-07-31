@@ -2905,3 +2905,125 @@ fresh `dailyBar.t` timestamp = today, cross-checked against Benzinga/finviz):
 discards any symbol whose `dailyBar`/`prevDailyBar` timestamp isn't from the
 last 1-2 trading days. Also consider dropping QMMM/PTNM from
 `memory/WATCHLIST.md` given no current Alpaca data and Benzinga 404 on PTNM.
+
+## 2026-07-31 — Gappers (auto-scan 11:11 ET, cloud)
+
+**Note:** Apify RAG web browser hit its monthly usage hard limit on all 4
+catalyst queries (`Error: Monthly usage hard limit exceeded`) — fell back to
+WebFetch on `benzinga.com/quote/<TICKER>` per routine fallback rule for
+catalyst headlines, and `stockanalysis.com/stocks/<TICKER>` for fundamentals
+(non-Yahoo, consistent with approved-sources policy). `premarket_volume` is
+not a field the current `gappers-alpaca.sh` output populates — its `volume`
+field is the prior completed session's daily bar volume (per the script's own
+comment), not live premarket volume, so it's logged as null here rather than
+faked. Two of the four volume prints (ZIM ~2.4k, LAKE ~871) look implausibly
+low for those names' normal turnover — treat as a data-quality caveat, not a
+liquidity signal, consistent with the stale/thin-data issue already flagged
+in the 10:14 ET run today.
+
+### Gappers (auto-scan 11:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ZIM | 22.885 | -7.37% | n/a (data-quality caveat) | ZIM falls as Hapag-Lloyd's $35/sh buyout hits fresh regulatory obstacles |
+| 2 | LPG | 43.415 | -7.35% | n/a (data-quality caveat) | Fleet upgrade (new VLGC 'Areion') found; no catalyst matching the down move |
+| 3 | KLIC | 97.63 | +6.71% | n/a (data-quality caveat) | Semis broadly higher; KLIC also beat on Q2 earnings |
+| 4 | LAKE | 10.505 | -6.41% | n/a (data-quality caveat) | No LAKE-specific headline found; fundamentals research skews positive |
+
+AGMH (+5.06%) scanned but excluded — price $0.7701 fails the $3.00 minimum.
+Only 4 names cleared both filters (|gap%| ≥ 5.0, price ≥ $3.00); deep-dive cap
+of 5 not binding, all 4 get full writeups below.
+
+#### Deep dive: ZIM $22.885 -7.37%
+- Catalyst: Hapag-Lloyd agreed in Feb 2026 to acquire ZIM for $35/share
+  (~$4.2B). The deal has since hit repeated regulatory setbacks (one flagged
+  in early July persists), alongside a CEO transition (Dr. Chen Lichtenstein
+  replacing Eli Glickman since June). Q2 earnings land Aug 19.
+- Why: Deal-arbitrage unwind — each fresh sign the merger is stalling in
+  regulatory review compresses the acquisition spread, so risk-arb holders
+  sell toward standalone fair value. Reads as another leg of that unwind,
+  not a new operating issue.
+- Impact: Alpaca's volume field is the prior session's bar, not live
+  premarket volume (~2.4k shares, implausibly low for a $3B-cap name) — a
+  known data-quality gap, not a real liquidity read. Directionally
+  consistent with an ongoing, real story (M&A regulatory risk) rather than
+  a one-day headline spike. Watch other shipping/container names if
+  Hapag-Lloyd disclosures continue.
+- Horizon: LONG_TERM — deal-arb overhang is a durable mechanism (regulatory
+  risk), not a single-day headline, but it's a downside/avoid catalyst, not
+  a buy signal.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Ranks #1 by gap size but is short-direction with
+  unreliable volume data; doesn't fit the long/momentum playbook. If only
+  one slot is used this week, KLIC is the stronger use of it.
+
+#### Deep dive: LPG $43.415 -7.35%
+- Catalyst: Research surfaced only a fleet-expansion release (added
+  dual-fuel VLGC "Areion", sold two older vessels for ~$169M combined,
+  ordered a new 2029-delivery VLGC for $115M) plus strong fundamentals —
+  FY2026 revenue +35.8% YoY, net income +114.8%, 5-analyst consensus Buy,
+  $51 PT (~8.5% upside). Nothing found explains a same-day -7.35% move.
+- Why: No mechanism connects the located news (fleet upgrade, strong
+  fundamentals) to a decline this size — the catalyst found is
+  positive-sounding, the opposite of the gap direction. Likely a VLGC
+  freight/charter-rate pullback (sector-wide, volatile) or profit-taking
+  after a big recent run (market cap cited +58.7%), not a name-specific
+  negative event.
+- Impact: Low confidence this is a durable, catalyst-driven move — reads
+  more like sector-rate noise or a thin/stale print (volume field ~2.3k,
+  same caveat as ZIM). Check peer VLGC/product-tanker names for a
+  sector-wide read-through before acting.
+- Horizon: SHORT_TERM — no durable, name-specific catalyst found; default
+  to treating this as noise likely to fade absent a confirmed negative
+  story.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Weakest of today's 4 for a real trade — catalyst
+  unverified, wouldn't clear Confluence without a confirmed reason for the
+  move. Shouldn't take priority over KLIC or ZIM for any of this week's 3
+  trade slots.
+
+#### Deep dive: KLIC $97.63 +6.71%
+- Catalyst: KLIC traded up alongside other semiconductor-equipment names
+  (Aehr, Lam Research, Applied Materials) in a broad Nasdaq rally.
+  Company-specific tailwind: Q2 2026 results beat, "revenue and gross
+  margin exceeded expectations" on strong TCB/automotive demand; TTM
+  revenue +11.2% YoY, net income +155.9%, EPS +161%. Next earnings call
+  Aug 6.
+- Why: Sector-wide semiconductor-equipment strength (broad Nasdaq rally)
+  combined with KLIC's own recent earnings beat — momentum buyers rotating
+  into a group already showing fundamental improvement.
+- Impact: Looks more sustainable than the shipping names — sector-wide
+  (peers also up) and backed by a real earnings beat, not just headline
+  noise. Volume field (~17.9k) is again the prior-session bar per the known
+  caveat, not confirmation of today's flow. Cross-check against the
+  sector-rotation table in TRADING-STRATEGY.md.
+- Horizon: LONG_TERM — aligns with a sector-rotation thesis (semis
+  strength, improving fundamentals) rather than a single headline; worth
+  tracking with Q3 earnings (Aug 6) as a near-term catalyst, pending a
+  later Confluence check.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Best opportunity-cost case of today's 4 — up-gap,
+  sector tailwind, real earnings support — but still needs to
+  independently clear Confluence and a sane 2:1 R:R stop before using one
+  of this week's 3 trade slots.
+
+#### Deep dive: LAKE $10.505 -6.41%
+- Catalyst: No LAKE-specific headline found — top Benzinga result was an
+  unrelated Amazon/analyst-forecast roundup. Fundamentals research
+  (stockanalysis.com) shows a positive recent story instead — Q1 FY2027
+  sales +1.4% with a return to profitability, fire-services segment +11%,
+  DA Davidson raised PT to $18, 4 analysts "Strong Buy" with $16.50 avg
+  target (~47% upside from $11.23).
+- Why: Mechanism unclear — available research points to positive
+  fundamentals/analyst sentiment, the opposite direction of today's gap.
+  Combined with extremely thin prior-session volume (~871 shares,
+  implausibly low even for a $110M microcap), reads as a
+  low-liquidity/stale-quote artifact rather than a real move.
+- Impact: Low confidence this is real or sustainable — thin liquidity plus
+  no located catalyst is the profile of noise, not signal. Do not treat as
+  a genuine gapper without a confirmed name-specific reason.
+- Horizon: SHORT_TERM (if anything) — no durable catalyst found; default
+  assumption is this reverts once real volume shows up.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week —
+  displaces nothing. Weakest name on today's list — no verified catalyst
+  plus thin-liquidity data means it shouldn't compete for any of the
+  week's 3 trade slots ahead of KLIC or even ZIM.

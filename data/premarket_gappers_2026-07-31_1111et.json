@@ -1,0 +1,68 @@
+{
+  "scanned_at": "2026-07-31T15:11:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ZIM",
+      "price": 22.885,
+      "gap_pct": -7.37,
+      "premarket_volume": null,
+      "catalyst": "ZIM shares fall as the Hapag-Lloyd $35/share buyout keeps hitting regulatory obstacles.",
+      "headlines": [
+        "Why ZIM Stock Is Falling on Hapag-Lloyd Merger Update"
+      ],
+      "catalyst_detail": "Hapag-Lloyd agreed in Feb 2026 to acquire ZIM for $35/share (~$4.2B total). The deal has since run into repeated regulatory setbacks (a 'major regulatory setback' flagged in early July persists) alongside a CEO transition (Dr. Chen Lichtenstein replacing Eli Glickman since June). Q2 earnings land Aug 19.",
+      "why": "Deal-arbitrage unwind: each fresh sign the merger is stalling in regulatory review compresses the acquisition spread, so risk-arb holders sell toward standalone fair value. Reads as another leg of that unwind, not a new operating issue.",
+      "impact": "Alpaca's volume field here is the prior completed session's bar, not live premarket volume (~2.4k shares, implausibly low for a $3B-cap name), so sizing conviction is limited by a known data-quality gap. Directionally consistent with an ongoing, real story (M&A regulatory risk) rather than a one-day headline spike. Read-through: watch other shipping/container names if Hapag-Lloyd disclosures continue.",
+      "horizon": "LONG_TERM, deal-arb overhang is a durable mechanism (regulatory risk), not a single-day headline, but it is a downside/avoid catalyst, not a buy signal.",
+      "opportunity_cost": "0 open positions, 0/3 weekly trades used, so no existing holding is displaced. Ranks #1 by gap size but is a short-direction, deal-arb-risk name with unreliable volume data -- doesn't fit the long/momentum playbook. If only one slot is used this week, KLIC is the stronger use of it."
+    },
+    {
+      "rank": 2,
+      "symbol": "LPG",
+      "price": 43.415,
+      "gap_pct": -7.35,
+      "premarket_volume": null,
+      "catalyst": "Dorian LPG news flow centers on a fleet upgrade (new dual-fuel VLGC 'Areion'); no negative-specific headline found.",
+      "headlines": [
+        "Dorian LPG adds 'Areion' dual-fuel VLGC to its fleet"
+      ],
+      "catalyst_detail": "Research surfaced a fleet-expansion release (added dual-fuel VLGC 'Areion', sold two older vessels for a combined ~$169M, ordered a new 2029-delivery VLGC for $115M) plus a strong fundamentals backdrop -- FY2026 revenue +35.8% YoY, net income +114.8%, 5-analyst consensus Buy, $51 PT (~8.5% upside). Nothing found explains a same-day -7.35% move.",
+      "why": "No mechanism identified connecting the located news (fleet upgrade, strong fundamentals) to a decline this size -- the found catalyst is positive-sounding, the opposite of the gap direction. Most likely explanation is a pullback in VLGC freight/charter rates (sector-wide, volatile) or profit-taking after a big recent run (market cap cited +58.7%), not a name-specific negative event.",
+      "impact": "Low confidence this is a durable, catalyst-driven move -- looks more like sector-rate noise or a thin/stale print (volume field ~2.3k, same data caveat as ZIM). Check peer VLGC/product-tanker names for a sector-wide read-through before acting.",
+      "horizon": "SHORT_TERM -- no durable, name-specific catalyst found; default to treating this as noise likely to fade absent a confirmed negative story.",
+      "opportunity_cost": "No open positions to displace. Weakest of today's 4 for a real trade -- catalyst unverified, would not clear the Confluence rule without a confirmed reason for the move. Should not take priority over KLIC or ZIM for any of this week's 3 trade slots."
+    },
+    {
+      "rank": 3,
+      "symbol": "KLIC",
+      "price": 97.63,
+      "gap_pct": 6.71,
+      "premarket_volume": null,
+      "catalyst": "Kulicke & Soffa (and semis broadly) rally as chip-equipment stocks lead a broad Nasdaq advance.",
+      "headlines": [
+        "Aehr Test Systems, Lam Research, Applied Materials And Other Big Stocks Moving Higher"
+      ],
+      "catalyst_detail": "KLIC traded up alongside other semiconductor-equipment names (Aehr, Lam Research, Applied Materials) in a broad Nasdaq rally. Company-specific tailwind: Q2 2026 results beat, 'revenue and gross margin exceeded expectations' on strong TCB/automotive demand; TTM revenue +11.2% YoY, net income +155.9%, EPS +161%. Next earnings call Aug 6.",
+      "why": "Sector-wide semiconductor-equipment strength (broad Nasdaq rally) combined with KLIC's own recent earnings beat -- momentum buyers rotating into a group already showing fundamental improvement.",
+      "impact": "Looks more sustainable than the shipping names -- sector-wide (peers also up) and backed by a real earnings beat, not just headline noise. Volume field (~17.9k) is again the prior-session bar per the known data caveat, not confirmation of today's flow. Cross-check against the sector-rotation table in TRADING-STRATEGY.md.",
+      "horizon": "LONG_TERM -- aligns with a sector-rotation thesis (semis strength, improving fundamentals) rather than a single headline; worth tracking with Q3 earnings (Aug 6) as a near-term catalyst, pending a later Confluence check.",
+      "opportunity_cost": "No open positions to displace, 0/3 weekly trades used. Best opportunity-cost case of today's 4 -- up-gap, sector tailwind, real earnings support -- but still needs to independently clear Confluence and a sane 2:1 R:R stop before using one of this week's 3 trade slots."
+    },
+    {
+      "rank": 4,
+      "symbol": "LAKE",
+      "price": 10.505,
+      "gap_pct": -6.41,
+      "premarket_volume": null,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "Company fundamentals (stockanalysis.com) show a positive recent story -- Q1 FY2027 sales +1.4% with a return to profitability, fire-services segment +11%, DA Davidson raised PT to $18, 4 analysts 'Strong Buy' with $16.50 avg target (~47% upside from $11.23). None of this explains a same-day -6.41% move; no negative-specific news was located (top Benzinga result was an unrelated Amazon/analyst-forecast roundup).",
+      "why": "Mechanism unclear -- available research points to positive fundamentals/analyst sentiment, the opposite direction of today's gap. Combined with extremely thin prior-session volume (~871 shares, implausibly low even for a $110M microcap), this looks like a low-liquidity/stale-quote artifact rather than a real move.",
+      "impact": "Low confidence this is real or sustainable -- thin liquidity plus no located catalyst is the profile of noise, not signal. Do not treat as a genuine gapper without a confirmed name-specific reason.",
+      "horizon": "SHORT_TERM (if anything) -- no durable catalyst found; default assumption is this reverts once real volume shows up.",
+      "opportunity_cost": "No open positions to displace. Weakest name on today's list -- no verified catalyst plus thin-liquidity data means it shouldn't compete for any of the week's 3 trade slots ahead of KLIC or even ZIM."
+    }
+  ]
+}
