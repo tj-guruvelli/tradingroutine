@@ -2230,6 +2230,110 @@ unsatisfiable with `tradingview-data` still down. Zero positions, zero
 orders, 16 straight flat trading days — patience over activity. Notify
 sent (Apify outage + elevated vol backdrop worth a heads-up).
 
+## 2026-07-31 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 7
+topic queries — same outage, now 3rd consecutive session, cap has not
+reset. Fell back to native WebSearch (Yahoo domains blocked via
+`blocked_domains`) for the entire session per the routine's fallback rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — 6th+
+consecutive session; confluence rule (>=2 of VWAP/RSI/200-SMA/insider)
+remains unsatisfiable for any candidate.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 17 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+
+### Market Context (WebSearch fallback, Fri 7/31 premarket ET)
+- **Oil — elevated, holding gains**: WTI ~$84.59/bbl, Brent ~$90.46/bbl
+  (intraday touched $92.65 per one source). Still near the multi-day highs
+  flagged 7/29-7/30; no fresh escalation headline found this morning, reads
+  as consolidation at the elevated level rather than a new spike.
+- **S&P 500 futures — sharp risk-on reversal**: ES +0.3-0.57%, Nasdaq 100
+  futures +0.5-1.32% premarket. Polymarket implied 94% probability of a
+  higher open. Driven by blowout Big Tech earnings: MSFT +16% (~$450B
+  added, largest single-day value gain ever for any stock), AMZN +12.31%
+  on cloud/AI-demand beat. AAPL slipped despite a revenue beat (iPhone
+  units +22%) — Services line missed and overshadowed the beat.
+- **VIX — sharp drop**: 17.09, down ~17% from Wednesday's post-FOMC spike
+  (20.66, flagged 7/30). One source frames this level as bordering on
+  complacency — a "priced for a perfect soft landing" read with little
+  downside insurance. Vol round-tripped from FOMC-day fear back near
+  pre-FOMC levels in two sessions.
+- **Earnings — today, before open**: XOM, ABBV, CVX, ETN, ENB among ~41
+  companies reporting before the bell (108 total today). None held/
+  watchlist. Last night's after-close prints (MSFT, AMZN beats; AAPL mixed)
+  are the dominant overnight story digesting into today's tape.
+- **Econ calendar today**: Employment Cost Index (8:30am ET), Michigan
+  Consumer Sentiment Final + Multivariate Core Trend Inflation (10:00am
+  ET), NY Fed Staff Nowcast (12:45pm ET). Lighter print cluster than
+  7/30's GDP/PCE/jobless-claims stack, but month-end positioning flagged
+  as an active flow driver alongside a new tariff regime (10-12.5% levies
+  on ~60 economies, effective July 24) still working through the tape.
+- **Sector YTD**: Energy dominant momentum leader (+22% YTD per one read),
+  with Consumer Staples/Industrials/Materials also in the "leading"
+  quadrant; Healthcare weakening; Technology/Communications/Consumer
+  Discretionary/Financials in the lagging quadrant; Real Estate/Utilities
+  improving. S&P 500 Momentum Index +14.22% YTD (as of 7/29). One source
+  conflicts, citing Technology leading Q2 gains (+43% large-cap surge) —
+  same source-conflict caveat as 7/29-7/30; not sizing sector bets off
+  either read without `tradingview-data` technical confirmation.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **MSFT/AMZN — watch only, not a chase.** Catalyst: blowout Q2 prints,
+   MSFT +16% / AMZN +12.31% premarket. Strategy rule bars entry within 3%
+   of a print >5% up on the day — both are "wait for pullback to a
+   reclaimed level" watches, not entries today. No confluence data
+   available to set a level.
+2. **Energy majors (XOM/CVX) — watch only, earnings-day binary.** Catalyst:
+   sector is the dominant YTD momentum leader (+22%) and both report
+   before today's open — but reporting on the print itself is a binary
+   catalyst, not a technical setup, and neither is on the current
+   watchlist. Confluence unsatisfiable without `tradingview-data`. Revisit
+   post-print only if a name shows a real technical setup once the tool is
+   back.
+3. **No fresh entries into the VIX-complacency reversal.** VIX round-
+   tripping from 20.66 to 17.09 in two sessions while futures rip on
+   earnings is a fast, thin-insurance tape — chasing the reversal itself
+   isn't a documented-catalyst, confluence-backed setup under this
+   strategy.
+
+### Risk Factors
+- **VIX complacency read**: 17.09 after a 17% one-session plunge — cited
+  by one source as underpricing tail risk just two sessions after a
+  FOMC-driven spike to 20.66. Elevated whipsaw risk if any negative
+  catalyst lands into thin insurance.
+- **Oil still elevated** (WTI ~$84.59, Brent ~$90-93) — inflation-via-
+  energy risk unresolved even without a fresh spike headline.
+- **Tariff regime (10-12.5% on ~60 economies, effective July 24)** still
+  digesting into corporate guidance/margin commentary — a slower-burn
+  risk than the day's earnings prints.
+- **Apify still fully down** (monthly cap not reset) — 3rd consecutive
+  session on WebSearch fallback only. Operator: check Apify billing/plan;
+  this has now spanned three separate routine runs.
+- **`tradingview-data` MCP still absent** — 6th+ consecutive session;
+  confluence rule unsatisfiable for this entire stretch. Same operator
+  flag as prior days, escalating in duration.
+- **Sector-YTD source conflict** (see Market Context) — don't size or rank
+  sector bets off either figure until resolved.
+
+### Decision
+**HOLD — no trades.** Tape is risk-on (VIX -17% to 17.09, futures up on
+blowout MSFT/AMZN earnings) but every actionable idea either fails the
+"no chase within 3% of a >5% print" rule (MSFT, AMZN) or is an earnings-
+day binary bet with no technical confirmation available (XOM, CVX) —
+`tradingview-data` still down for a 6th+ consecutive session, confluence
+rule unsatisfiable. Zero positions, zero orders, 17 straight flat trading
+days — patience over activity. Notify sent via Telegram (primary channel
+delivered ok); ClickUp fallback call returned a server-side HTTP 500
+(keys all confirmed present — not a missing-credential issue) — flagging
+for operator awareness, not blocking on it since Telegram succeeded.
+
 ## 2026-07-30 — Gappers (auto-scan 08:12 ET, cloud)
 
 Apify RAG web browser hit "Monthly usage hard limit exceeded" on both
