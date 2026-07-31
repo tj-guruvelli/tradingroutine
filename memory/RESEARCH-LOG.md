@@ -2707,3 +2707,92 @@ and deep-dive since the pool is below the top-5 cap.
   on 2 straight sessions (Jul 30 +7.74%, Jul 31 +5.94%) without ever
   clearing confluence — argues for a fresh confluence check before
   treating this as more than research. Research only, no size given.
+
+## 2026-07-31 — Gappers (auto-scan 09:10 ET, cloud)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" again on both
+the catalyst and fundamentals queries (same ongoing outage) — fell back to
+Benzinga WebFetch for catalysts and stockanalysis.com WebFetch for
+fundamentals. Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 3
+qualifying gappers, all get deep-dive since the pool is below the top-5 cap.
+CRWV's premarket price/volume are unchanged from the 08:10 ET scan (last
+trade printed 08:08 ET, thin premarket liquidity) — noted rather than
+re-researched.
+
+### Gappers (auto-scan 09:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 202.18 | +7.33% | 1,300,668 | Surges as Microsoft's cloud beat lifts neocloud sentiment |
+| 2 | BE | 222.00 | +7.24% | 1,215,490 | Shares shrug off Hunterbrook short report after record Q2 |
+| 3 | CRWV | 78.25 | +5.94% | 1,591,106 | Trending after partnering with Leidos to bring AI cloud to national security |
+
+#### Deep dive: NBIS $202.18 +7.33%
+- Catalyst: Nebius shares are extending Wednesday's +27.1% surge (to
+  $188.43) after Microsoft's cloud-segment earnings beat lifted sentiment
+  across neocloud/AI-infrastructure names broadly. Company-specific drivers
+  stacking on top: Nvidia disclosed a 9.3% equity stake, its Vera Rubin
+  compute rack went live at the Finland data center, and it published its
+  2025 Sustainability Report. Q2 earnings set for Aug 12.
+- Why: A read-through catalyst — a hyperscaler peer (Microsoft) beating on
+  cloud growth signals durable AI-compute demand, lifting every neocloud
+  name — layered on a company-specific Nvidia stake disclosure that reads
+  as a vote of confidence in Nebius's GPU-cluster capacity.
+- Impact: 1.3M volume on the prior session's gap. Two consecutive up days
+  (+27.1% Wed, +7.3% today) after revenue grew 575% YoY to $877.9M ttm — a
+  real fundamental growth story, not a pure headline spike. Sector-wide
+  sympathy rally (Microsoft beat lifting the whole neocloud group) plus a
+  stock already up big raises one-day-extension risk; 17 analysts rate it
+  Buy with a $258 target (37% upside).
+- Horizon: LONG_TERM — Nvidia stake + hyperscaler read-through + real
+  revenue growth is structural, not headline-only.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week (week of
+  Jul 27) — displaces nothing. At $202.18 a 10% trailing stop is ~$20.22
+  away, needing roughly a +20% move (~$243) to clear 2:1 R:R — steep but
+  not implausible against a $258 consensus target. No same-day confluence
+  check run (tradingview-data MCP unavailable in cloud routines). Research
+  only, no size given.
+
+#### Deep dive: BE $222.00 +7.24%
+- Catalyst: Record Q2 revenue of $1.065B (+166% YoY) with strong margins
+  and raised full-year guidance to $3.9-4.2B revenue / $800-900M operating
+  income, driven by accelerating AI-data-center power demand. Mizuho
+  upgraded to Buy/Outperform ($242 target). A Hunterbrook short-seller
+  report alleging accounting/business-quality issues landed around the
+  same time but the stock kept climbing through it.
+- Why: A blowout earnings beat plus raised guidance is pulling in momentum
+  buyers on a structural AI-power-demand thesis; price rising through a
+  same-day short report is itself a bullish signal fundamentals are
+  winning the narrative for now.
+- Impact: 1.2M volume on the prior session's gap, extending Thursday's
+  +8.22% (Nebius AI-power deal read-through) into today's earnings-driven
+  +7.24% — third straight gap session. 233x PE and still unprofitable
+  (2025 net loss -$88M despite huge revenue growth) — a story stock riding
+  an AI-power narrative; the short report disputing the numbers adds real
+  headline/volatility risk even though price has absorbed it so far.
+- Horizon: SHORT_TERM — earnings-pop momentum on an already-extended
+  3-day move; no durable re-rating catalyst beyond the guidance raise
+  itself.
+- Opportunity cost: 0/6 positions open, 0/3 trades used this week (week of
+  Jul 27) — displaces nothing, but BE is now a 3rd consecutive gap day
+  without a confluence check ever clearing (per Jul 29/30 RESEARCH-LOG
+  entries) — argues against chasing an extended move. At $222 a 10%
+  trailing stop is ~$22.20 away, needing roughly a +20% move (~$266) for
+  2:1 R:R. Research only, no size given.
+
+#### Deep dive: CRWV $78.25 +5.94%
+- Catalyst: Unchanged since the 08:10 ET scan — no new premarket trade
+  printed for CRWV between then and this 09:10 ET run (last trade
+  timestamp 08:08 ET, thin premarket liquidity). Leidos defense/
+  intelligence-community AI cloud partnership remains the catalyst,
+  layered on Wednesday's Truist/Baird upgrades and Thursday's +21.5%
+  oversold bounce.
+- Why: Same mechanism as the 08:10 write-up — federal/defense contract win
+  expands addressable market into higher-margin government cloud revenue,
+  compounding this week's sell-side upgrade cycle.
+- Impact: No new information since the 08:10 scan. CRWV's premarket
+  price/volume have not moved in an hour, consistent with thin premarket
+  liquidity rather than a fading catalyst.
+- Horizon: LONG_TERM, unchanged from the 08:10 ET entry.
+- Opportunity cost: Unchanged from the 08:10 ET entry — 0/6 positions,
+  0/3 trades this week, no confluence check run. Research only, no size
+  given.
