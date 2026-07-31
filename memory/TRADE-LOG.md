@@ -77,3 +77,10 @@ straight gap day, unchanged since 08:10) as research-only — none cleared
 confluence, none promoted to Tier-1, no planned tickers to validate. Skipped
 Steps 3-6. 17 trading days since launch (Jul 9) with zero entries. Weekly
 trade count: 0/3 (week of Jul 27).
+
+### Jul 31 — EOD Snapshot (Day 17, Friday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Risk-on tape (VIX -17% to 17.09 on blowout MSFT/AMZN earnings) but every idea either chased a >5% print (MSFT, AMZN) or lacked technical confirmation (XOM, CVX); `tradingview-data` MCP still down 6th+ session, confluence unsatisfiable. Gappers flagged NBIS/BE/CRWV as research-only, none promoted. 17 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Jul 27, week now closed). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
