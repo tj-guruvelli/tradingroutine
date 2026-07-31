@@ -1,0 +1,54 @@
+{
+  "scanned_at": "2026-07-31T13:12:26Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 202.18,
+      "gap_pct": 7.33,
+      "premarket_volume": 1300668,
+      "catalyst": "Nebius stock surges as Microsoft's cloud beat lifts neocloud sentiment.",
+      "headlines": [
+        "Nebius Stock Surges as Microsoft's Cloud Beat Lifts Neocloud Sentiment"
+      ],
+      "catalyst_detail": "Nebius shares are extending Wednesday's +27.1% surge (to $188.43) after Microsoft's cloud-segment earnings beat lifted sentiment across neocloud/AI-infrastructure names broadly. Nebius-specific drivers stacking on top: Nvidia disclosed a 9.3% equity stake in the company, its Vera Rubin compute rack went live at the Finland data center, and it published its 2025 Sustainability Report. Q2 earnings are set for Aug 12.",
+      "why": "A read-through catalyst — a hyperscaler peer (Microsoft) beating on cloud growth signals durable AI-compute demand, which lifts every neocloud name including Nebius — layered on a company-specific Nvidia stake disclosure that reads as a vote of confidence in Nebius's GPU-cluster capacity.",
+      "impact": "Volume 1.3M on the prior session's gap. This is now two consecutive up days (+27.1% Wed, +7.3% today) after Nebius revenue grew 575% YoY to $877.9M ttm — a real fundamental growth story, not a pure headline spike. But a sector-wide sympathy rally (Microsoft beat lifting the whole neocloud group) plus a stock already up big raises one-day-extension risk; 17 analysts rate it Buy with a $258 target (37% upside), suggesting Street still sees room, but a pullback after a 2-day pop is common.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week (week of Jul 27) — displaces nothing. At $202.18 a 10% trailing stop is ~$20.22 away, needing roughly a +20% move (~$243) to clear 2:1 R:R at that stop distance — steep but not implausible against a $258 consensus target. No same-day confluence check run (tradingview-data MCP unavailable in cloud routines); research only, no size given."
+    },
+    {
+      "rank": 2,
+      "symbol": "BE",
+      "price": 222.0,
+      "gap_pct": 7.24,
+      "premarket_volume": 1215490,
+      "catalyst": "Bloom Energy shares shrug off Hunterbrook short report after record Q2.",
+      "headlines": [
+        "Bloom Energy Shares Shrug Off Hunterbrook short report After Record Q2"
+      ],
+      "catalyst_detail": "Bloom Energy printed record Q2 revenue of $1.065B (+166% YoY) with strong gross/operating margins and raised full-year guidance to $3.9-4.2B revenue / $800-900M operating income, driven by accelerating AI-data-center power demand. Mizuho upgraded to Buy/Outperform ($242 target). A short-seller report from Hunterbrook alleging accounting/business-quality issues landed around the same time but the stock shrugged it off and kept climbing.",
+      "why": "A blowout earnings beat plus raised guidance is pulling in momentum buyers on a structural AI-power-demand thesis; the fact that price kept rising through a same-day short report is itself a bullish signal that fundamentals are winning the narrative for now.",
+      "impact": "Volume 1.2M on the prior session's gap, extending Thursday's +8.22% move (Nebius AI-power deal read-through) into today's earnings-driven +7.24% — third straight gap session for BE. Stock has 233x PE and only a razor-thin path to full profitability (2025 net loss -$88M despite huge revenue growth), so this reads as a story stock riding an AI-power narrative; a short report actively disputing the numbers adds real headline/volatility risk even though price has absorbed it so far.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "0/6 positions open, 0/3 trades used this week (week of Jul 27) — displaces nothing, but BE is now a 3rd consecutive gap day without a confluence check ever clearing (per Jul 29/30 RESEARCH-LOG entries) — argues against chasing an extended move. At $222 a 10% trailing stop is ~$22.20 away, needing roughly a +20% move (~$266) for 2:1 R:R — would require the move to keep extending well past an already 3-day run. Research only, no size given."
+    },
+    {
+      "rank": 3,
+      "symbol": "CRWV",
+      "price": 78.25,
+      "gap_pct": 5.94,
+      "premarket_volume": 1591106,
+      "catalyst": "CoreWeave trending after partnering with Leidos to bring AI cloud to national security workloads.",
+      "headlines": [
+        "CoreWeave Trending After Partnering With Leidos to Bring AI Cloud to National Security"
+      ],
+      "catalyst_detail": "Unchanged since the 08:10 ET scan — no new premarket trade printed for CRWV between then and this 09:10 ET run (last trade timestamp 08:08 ET, thin premarket liquidity). CoreWeave's Leidos partnership for defense/intelligence-community AI cloud infrastructure remains the catalyst, layered on Wednesday's Truist/Baird analyst-upgrade cycle and Thursday's oversold bounce (+21.5%).",
+      "why": "Same mechanism as the 08:10 write-up: a federal/defense contract win expands CoreWeave's addressable market into higher-margin government cloud revenue, compounding this week's sell-side upgrade cycle.",
+      "impact": "No new information since the 08:10 scan — see that entry. Flagging that CRWV's premarket price/volume have not moved in an hour, consistent with thin premarket liquidity rather than a fading catalyst.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "Unchanged from the 08:10 ET entry — 0/6 positions, 0/3 trades this week, no confluence check run. Research only, no size given."
+    }
+  ]
+}
