@@ -18,10 +18,29 @@ A/B/C size tiers for that ticker.
 
 Emits one JSON object: `{as_of, market_open, daily_stop:{max_drawdown_from_peak_pct,
 peak_equity, current_equity, drawdown_pct, equity_floor_before_circuit_breaker,
-circuit_breaker_tripped}, position_size_tiers:{symbol, price, atr14, A, B, C}}`
+circuit_breaker_tripped}, position_size_tiers:{symbol, price, atr14, A, B, C},
+spy_scoreboard:{window, portfolio_pct, spy_pct, alpha_pct, beating_spy}}`
 where A/B/C each carry `{risk_pct, risk_dollars, shares, cap_applied}` (A = full
 `risk_pct_per_trade` from `config/rules.json`, B = half, C = quarter — all
 capped at 20% of equity, matching `scripts/size.mjs`'s cap).
+
+`spy_scoreboard` compares the paper portfolio's % change vs SPY's % change over
+the same 1M window (portfolio history vs SPY daily IEX bars); `alpha_pct` =
+portfolio minus SPY, `beating_spy` is the boolean. If either series is
+unavailable the block is `{error: "..."}` — numbers are never fabricated.
+
+### Always-on-top desktop launcher
+
+`scripts/risk-widget.ps1` renders the same JSON as a small always-on-top dark
+WPF card (XamlReader-based — no C# compilation). Read-only, paper account.
+
+    powershell -NoProfile -ExecutionPolicy Bypass -File scripts\risk-widget.ps1 [-Symbol SPY] [-SmokeTest]
+
+It re-runs `risk-widget.mjs` every 5 minutes; a failed refresh keeps the
+last-good card visible with a STALE marker and the error text. `-SmokeTest`
+opens the window, auto-closes after 2 seconds, and prints `SMOKE-PASS` (used
+for verification). A weekday 8:15 AM local autostart entry lives in
+`scripts/scheduler.ps1` (`TradingBot-RiskWidget`).
 
 If the market is closed (`market_open: false`), the JSON still returns
 last-known account/equity values with `market_closed_note` set — that is

@@ -107,7 +107,37 @@ async function main() {
       circuit_breaker_tripped: circuitBreakerTripped,
     },
     position_size_tiers: null,
+    spy_scoreboard: null,
   };
+
+  // SPY scoreboard: portfolio % change vs SPY % change over the same 1M window.
+  // Reuses the portfolio-history response (ph) already fetched above; SPY comes
+  // from daily bars over the matching date range. Never fabricates numbers: any
+  // missing series yields {error} instead.
+  try {
+    const valid = (e) => Number.isFinite(Number(e)) && Number(e) > 0;
+    const ts = (ph?.timestamp || []).filter((t, i) => valid(ph.equity?.[i]));
+    const eq = (ph?.equity || []).filter(valid).map(Number);
+    if (eq.length < 2 || ts.length < 2) throw new Error('portfolio history unavailable or too short for a 1M comparison');
+    const portfolioPct = ((eq[eq.length - 1] - eq[0]) / eq[0]) * 100;
+    if (!Number.isFinite(portfolioPct)) throw new Error('portfolio % change is not finite — refusing to fabricate');
+    const spyStart = new Date(ts[0] * 1000).toISOString();
+    const spyEnd = new Date(Math.min(ts[ts.length - 1] * 1000 + 24 * 3600 * 1000, Date.now() - 15 * 60 * 1000)).toISOString();
+    const spyUrl = `${dataBase}/stocks/SPY/bars?timeframe=1Day&start=${spyStart}&end=${spyEnd}&limit=40&feed=iex&adjustment=raw`;
+    const spyData = await alpacaJson(spyUrl, headers);
+    const spyBars = spyData.bars || [];
+    if (spyBars.length < 2) throw new Error(`only ${spyBars.length} SPY daily bars in the window — cannot compute SPY % change`);
+    const spyPct = ((spyBars[spyBars.length - 1].c - spyBars[0].c) / spyBars[0].c) * 100;
+    widget.spy_scoreboard = {
+      window: '1M',
+      portfolio_pct: r2(portfolioPct),
+      spy_pct: r2(spyPct),
+      alpha_pct: r2(portfolioPct - spyPct),
+      beating_spy: portfolioPct > spyPct,
+    };
+  } catch (e) {
+    widget.spy_scoreboard = { error: e.message || String(e) };
+  }
 
   if (symbol) {
     const end = new Date(Date.now() - 24 * 3600 * 1000).toISOString();
