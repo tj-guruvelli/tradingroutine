@@ -1,8 +1,8 @@
 {
   "name": "trading-bot v1 — Nate Herk swing + Humbled Trader TJL blend",
   "mode": "paper",
-  "instrument_universe": ["us_common_stocks"],
-  "instruments_forbidden": ["options", "futures", "crypto", "otc_pink"],
+  "instrument_universe": ["us_common_stocks", "crypto"],
+  "instruments_forbidden": ["options", "futures", "otc_pink"],
   "capital": {
     "starting_usd": 10000,
     "max_deployed_pct": 85,
