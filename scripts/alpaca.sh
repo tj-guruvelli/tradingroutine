@@ -51,6 +51,17 @@ bars)
   acurl -H "$H_KEY" -H "$H_SEC" \
     "$DATA/stocks/$sym/bars?timeframe=$tf&start=$start&end=$end&limit=$limit&feed=iex&adjustment=raw"
   ;;
+crypto-bars)
+  # usage: crypto-bars SYM TIMEFRAME START END [LIMIT]
+  # SYM: Alpaca crypto pair format, e.g. BTC/USD. Separate endpoint from stock bars.
+  sym="${1:?usage: crypto-bars SYM TIMEFRAME START END [LIMIT]}"
+  tf="${2:?usage: crypto-bars SYM TIMEFRAME START END [LIMIT]}"
+  start="${3:?usage: crypto-bars SYM TIMEFRAME START END [LIMIT]}"
+  end="${4:?usage: crypto-bars SYM TIMEFRAME START END [LIMIT]}"
+  limit="${5:-1000}"
+  acurl -H "$H_KEY" -H "$H_SEC" \
+    "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=$sym&timeframe=$tf&start=$start&end=$end&limit=$limit"
+  ;;
 orders)
   status="${1:-open}"
   acurl -H "$H_KEY" -H "$H_SEC" "$API/orders?status=$status"
@@ -75,7 +86,7 @@ close-all)
   acurl -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions"
   ;;
 *)
-  echo "Usage: bash scripts/alpaca.sh <account|positions|position|quote|orders|order|cancel|cancel-all|close|close-all> [args]" >&2
+  echo "Usage: bash scripts/alpaca.sh <account|positions|position|quote|bars|crypto-bars|orders|order|cancel|cancel-all|close|close-all> [args]" >&2
   exit 1
   ;;
 esac

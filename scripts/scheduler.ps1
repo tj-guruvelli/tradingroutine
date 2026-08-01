@@ -50,6 +50,15 @@ $Routines = @(
 # Weekly review runs Friday only
 $WeeklyReview = @{ Name="TradingBot-WeeklyReview"; Routine="weekly-review"; Time="17:00"; DayOfWeek="FRI" }
 
+# Risk widget — always-on-top desk card (scripts/risk-widget.ps1, read-only, paper).
+# Weekdays 8:15 AM local (America/Chicago on this machine — see TIME ZONE NOTE).
+# Runs a script directly, not a loop-runner routine, so it carries its own Command.
+$RiskWidget = @{
+    Name="TradingBot-RiskWidget"
+    Time="08:15"
+    Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$(Join-Path $ScriptDir 'risk-widget.ps1')`" -Symbol SPY"
+}
+
 # Humbled Trader scanners (repetition triggers — fire every N minutes across a window)
 # Scanner A (gappers) — 08:30 NY, every 30 min for 5h30m (-> ~14:00 NY)
 # Scanner B (TJL)     — 10:05 NY, every 30 min for 4h55m (-> ~15:00 NY)
@@ -88,7 +97,7 @@ function Build-Command {
 
 function Install-Task {
     param([hashtable]$T)
-    $cmd = Build-Command $T.Routine
+    $cmd = if ($T.ContainsKey("Command")) { $T.Command } else { Build-Command $T.Routine }
     $days = if ($T.ContainsKey("DayOfWeek")) { $T.DayOfWeek } else { $WEEKDAYS }
     $args = @(
         "/Create", "/TN", $T.Name, "/TR", $cmd,
@@ -145,6 +154,7 @@ switch ($Action) {
         Write-Host "Installing scheduled tasks (via schtasks.exe, no admin required)..."
         foreach ($t in $Routines) { Install-Task $t }
         Install-Task $WeeklyReview
+        Install-Task $RiskWidget
         foreach ($t in $Scanners) { Install-ScannerTask $t }
         Write-Host "Done. Verify: .\scripts\scheduler.ps1 status"
     }
@@ -152,12 +162,14 @@ switch ($Action) {
         Write-Host "Removing scheduled tasks..."
         foreach ($t in $Routines) { Remove-Task $t.Name }
         Remove-Task $WeeklyReview.Name
+        Remove-Task $RiskWidget.Name
         foreach ($t in $Scanners) { Remove-Task $t.Name }
     }
     "status" {
         Write-Host "Task Scheduler status:"
         foreach ($t in $Routines) { Show-Status $t }
         Show-Status $WeeklyReview
+        Show-Status $RiskWidget
         foreach ($t in $Scanners) { Show-Status $t }
     }
     "run" {
