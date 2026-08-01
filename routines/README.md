@@ -13,6 +13,8 @@ the env-var check block and the commit-and-push step are load-bearing.
 | `daily-summary.md` | `0 15 * * 1-5` | TRADE-LOG.md | always (1 message) |
 | `setup-scan-cloud.md` | `30 15,17 * * 1-5` | `data/setup-scan_cloud_*.json`, `RESEARCH-LOG.md` | only if grade-A hit |
 | `weekly-review.md` | `0 16 * * 5` | WEEKLY-REVIEW.md, TRADING-STRATEGY.md | always (1 message) |
+| `reflect.md` | `30 16 * * 1-5` (proposed, NOT yet scheduled on claude.ai) | hypotheses.jsonl, TRADING-STRATEGY.md (max ONE variable/cycle), strategy-versions/ | only if a change applied |
+| `tjr-cloud.md` | `0 * 13-21 * * 1-5` (hourly, ~NY 08:00-16:00) | `data/tjr_state_*.json` | only on new entry/exit |
 
 Spacing rule: routines stay >= 30 minutes apart so two never run simultaneously
 and race a commit. setup-scan moved off `0 15` (collided with daily-summary) to
@@ -27,7 +29,12 @@ Cloud crons are stored in UTC (CDT = UTC-5): `0 11`, `0 12,13,14,15`, `30 13`,
 November, every fire time drifts 1 hour later in local terms — re-shift the UTC
 crons then. `tjl-cloud.md` is deliberately NOT scheduled: it is a day-trading
 strategy, and the account goal is beating the S&P via swing holds, not day
-trading. Manage routines at https://claude.ai/code/routines.
+trading. `tjr-cloud.md` (added 2026-07-26) is alert-only (never places an
+order) and its hourly cloud cadence is best-effort backup coverage for the
+15-min QQQ/SPY legs — BTC (1Hour) is the one it tracks properly. Not yet
+LIVE as a cloud routine as of this writing; needs the same per-routine setup
+below plus `ALPACA_DATA_ENDPOINT` for crypto-bars. Manage routines at
+https://claude.ai/code/routines.
 
 ## Per-routine setup (do for each)
 1. Routines → New Routine; name it (e.g. "Trading bot pre-market").
