@@ -3114,3 +3114,99 @@ unchanged from the 16:38 ET run this session (same 2 names, no new hits).
 
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidates only, not
 orders — feed to `/trade` if pursued (full safety-check gate applies).
+
+## 2026-08-03 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 7 topic
+queries — same outage flagged 2026-07-31, cap has not reset over the
+weekend. Fell back to native WebSearch (Yahoo domains blocked via
+`blocked_domains`) for the entire session per the routine's fallback rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable for any
+candidate, same unresolved gap as every session since 2026-07-25.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 18 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- New week: weekly trade count resets to 0/3 (week of Aug 3).
+
+### Market Context (WebSearch fallback, Mon 8/3 premarket ET)
+- **Oil — elevated, near multi-day highs**: Brent ~$87.93/bbl (last print
+  Jul 31), WTI ~$84.67/bbl (Jul 31 close), Aug 3 forecast range
+  $78.42-$85.09. Driven by renewed US-Iran tension, Houthi Red Sea attacks,
+  Saudi strikes on Iran-backed groups over the weekend — but see risk
+  factors: this conflicts with the same-morning "de-escalation" headline
+  below, unresolved by WebSearch alone.
+- **S&P 500 futures — risk-on**: ES +0.6% premarket, described as climbing
+  on a "major de-escalation in the Middle East" (Trump reported to have
+  halted a "massive attack" on Iran) plus earnings optimism outweighing
+  rate jitters. Prediction-market odds ~86% for an "Up" open. 10Y yield
+  ~4.7-4.8%, keeping borrowing costs elevated.
+- **VIX — calm**: ~16.0-16.03, down from ~18.0 Jul 30 intraday. Low-vol,
+  risk-on tape.
+- **Earnings — today, before open**: ON Semiconductor (ON, est. EPS $0.71),
+  Tyson Foods (TSN, est. EPS $1.04). After close: Vertex Pharmaceuticals
+  (VRTX), Axon Enterprise (AXON), Williams Companies (WMB), Clorox (CLX).
+  None held/watchlist.
+- **Econ calendar this week**: July nonfarm payrolls (jobs report) and ISM
+  manufacturing/services PMI land this week — exact day not confirmed by
+  WebSearch. No CPI this week (next CPI print is Aug 12). No FOMC this
+  week.
+- **Sector YTD**: Energy leads (+3.6%), then Utilities (+2.2%), Industrials
+  (+1.6%), Materials (+1.4%). Communications worst (-6.1%), Consumer
+  Discretionary next-worst (-5.6%). S&P 500 overall +9.0% YTD. Same
+  source-conflict caveat as prior sessions (a Q2 large-cap read had
+  Technology leading with +43%) — not sizing sector bets off either figure
+  without `tradingview-data` technical confirmation.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **Energy sector (XLE-style exposure) — watch only.** Catalyst: YTD
+   momentum leader (+3.6%) and oil holding $84-88/bbl on Middle East
+   tension. Conflicting same-morning de-escalation headline (see Risk
+   Factors) makes the oil-support thesis unstable intraday. No confluence
+   data available to set entry/stop/target.
+2. **ON Semiconductor (ON) — earnings-day binary, not a setup.** Reports
+   before today's open (EPS est. $0.71). Strategy explicitly excludes
+   earnings-day binary bets without technical confirmation (same rule
+   applied to XOM/CVX on 7/31) — watch only, no entry today regardless of
+   print direction.
+3. **Utilities (XLU-style exposure) — watch only.** Catalyst: #2 YTD sector
+   (+2.2%), defensive tilt that would pair well if the jobs report this
+   week surprises risk-off. No confluence data to confirm entry level;
+   purely a sector-rotation watch.
+
+### Risk Factors
+- **Oil catalyst conflict**: one thread (weekend Iran/Houthi/Saudi
+  escalation) argues oil stays elevated; another (Trump halting a "massive
+  attack" on Iran) argues de-escalation is driving today's equity rally.
+  Both can't be the dominant story — treat oil direction as unresolved
+  until a same-day, non-Yahoo source confirms one thread.
+- **VIX at 16 after a heavy earnings/geopolitical week** — thin insurance
+  again, same complacency pattern flagged 7/31 (17.09) now even lower.
+- **Apify still fully down** — cap has not reset since at least 7/31 (spans
+  the weekend). Operator: check Apify billing/plan; blocking the primary
+  research path for multiple consecutive sessions now.
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  for the entire stretch since 7/25. Same operator flag, escalating in
+  duration.
+- **Sector-YTD source conflict** (Energy-led vs. Tech-led reads) — don't
+  size or rank sector bets off either figure until resolved.
+
+### Decision
+**HOLD — no trades.** Tape is risk-on (VIX ~16, S&P futures +0.6% on
+reported Middle East de-escalation) but the oil/geopolitical catalyst
+itself is internally conflicting between sources, ON's earnings-day print
+is a binary bet excluded by strategy rule, and Energy/Utilities sector
+ideas have no technical confirmation available — `tradingview-data` still
+down, confluence rule unsatisfiable. Zero positions, zero orders, 18
+straight flat trading days — patience over activity. New week: 0/3 trade
+slots used. Notify sent via Telegram (primary channel delivered ok);
+ClickUp fallback call returned a server-side HTTP 500 again (keys all
+confirmed present — not a missing-credential issue, same failure as
+7/31) — flagging for operator awareness, not blocking since Telegram
+succeeded.
