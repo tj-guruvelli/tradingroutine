@@ -3228,3 +3228,17 @@ neither applies).
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | No tickers cleared the 5.0% gap threshold |
 
+## 2026-08-03 — Gappers (auto-scan 09:10 ET, cloud)
+
+Second scheduled fire of the day (cloud cadence runs 3-4x pre-market/early
+session). Re-scanned the full watchlist via `scripts/gappers-alpaca.sh
+watchlist` (GAP_THRESHOLD=5.0) — again **zero qualifying gappers**, no
+change from the 08:10 run. No catalyst/deep-dive research needed. Per
+routine rule, no Telegram/ClickUp notify sent (only fires on hits > 0 or
+scan error; neither applies).
+
+### Gappers (auto-scan 09:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No tickers cleared the 5.0% gap threshold |
+
