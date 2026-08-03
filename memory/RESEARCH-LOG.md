@@ -3291,3 +3291,19 @@ skipping these.
 - Horizon: SHORT_TERM — if genuine, no structural catalyst supports holding; if an artifact (more likely), there's nothing to hold. Q2 earnings land Aug 6 (3 days out), adding pre-earnings binary risk either way.
 - Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to displace. Earnings 3 days out makes this an earnings-binary setup regardless of direction; catalyst/price mismatch also means confluence's documented-catalyst leg isn't cleanly satisfied. Pass.
 
+## 2026-08-03 — Gappers (auto-scan 11:09 ET, cloud)
+
+Fourth scheduled fire of the day. Re-scanned the full watchlist via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0) — one raw hit
+(AGMH, +6.31%, $0.7792) but it fails the $3.00 minimum price filter, so
+**zero qualifying gappers** after filtering. BKSY/BW/UMAC from the 10:11 run
+are no longer showing as fresh gap candidates this pass. No catalyst/deep-dive
+research needed since there were no qualifying candidates. Per routine rule,
+no Telegram/ClickUp notify sent (only fires on hits > 0 or scan error;
+neither applies).
+
+### Gappers (auto-scan 11:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No tickers cleared the $3.00 price / 5.0% gap filters (AGMH +6.31% at $0.78 excluded on price) |
+
