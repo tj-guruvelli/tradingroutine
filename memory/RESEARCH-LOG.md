@@ -3291,3 +3291,24 @@ skipping these.
 - Horizon: SHORT_TERM — if genuine, no structural catalyst supports holding; if an artifact (more likely), there's nothing to hold. Q2 earnings land Aug 6 (3 days out), adding pre-earnings binary risk either way.
 - Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to displace. Earnings 3 days out makes this an earnings-binary setup regardless of direction; catalyst/price mismatch also means confluence's documented-catalyst leg isn't cleanly satisfied. Pass.
 
+
+## 2026-08-03 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits**:
+MA and BCI both clear Setup B (ADX14 > 20 AND EMA9 > EMA21; note the local
+`/setup-scan` stock_score>=6 gate is dropped here, MCP-only). Setup A
+(TJL breakout) not checkable for any ticker this run — `setup_a_checkable:
+false` across both hits, consistent with this being a post-close scan
+(16:38 ET, after the 16:00 close) rather than an intraday/premarket window.
+No grade-A hit, so no Telegram/ClickUp notify sent per routine rule.
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| MA | B | Momentum confluence | daily swing | ADX 33.3, EMA9 557.76 > EMA21 542.82, RSI 69.2, px $575.81 vs SMA200 $527.94 |
+| BCI | B | Momentum confluence | daily swing | ADX 22.7, EMA9 23.96 > EMA21 23.75, RSI 54.0, px $23.57 vs SMA200 $22.92 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
