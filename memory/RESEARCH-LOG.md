@@ -3312,3 +3312,24 @@ No grade-A hit, so no Telegram/ClickUp notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-03 — Setup Scan (18:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits**:
+same two names as the 16:38 ET run — MA and BCI, both still clearing Setup B
+(ADX14 > 20 AND EMA9 > EMA21; local `/setup-scan` stock_score>=6 gate
+dropped here, MCP-only). Setup A (TJL breakout) not checkable for any
+ticker this run — `setup_a_checkable: false` across both hits, consistent
+with a post-close scan window. No grade-A hit, so no Telegram/ClickUp
+notify sent per routine rule.
+
+### Setup Scan (18:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| MA | B | Momentum confluence | daily swing | ADX 33.3, EMA9 557.76 > EMA21 542.82, RSI 69.2, px $575.81 vs SMA200 $527.94 |
+| BCI | B | Momentum confluence | daily swing | ADX 22.7, EMA9 23.96 > EMA21 23.75, RSI 54.0, px $23.57 vs SMA200 $22.92 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
