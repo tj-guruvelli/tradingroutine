@@ -3242,3 +3242,52 @@ scan error; neither applies).
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | No tickers cleared the 5.0% gap threshold |
 
+## 2026-08-03 — Gappers (auto-scan 10:11 ET, cloud)
+
+Third scheduled fire of the day. Watchlist scan (`scripts/gappers-alpaca.sh
+watchlist`, GAP_THRESHOLD=5.0) returned **3 qualifying gappers** — first hits
+of the day, all downside gaps, all under the 10-ticker cap so all 3 get
+deep-dive treatment (well under the 5-ticker deep-dive cap too — none
+dropped to quick-scan only). Apify RAG web browser returned "Monthly usage
+hard limit exceeded" on all 3 catalyst queries (same outage flagged in
+today's 07:xx pre-market entry, still not reset) — fell back to WebFetch
+against `benzinga.com/quote/<TICKER>` for both the catalyst headline and the
+fundamentals/recent-developments research, per routine fallback rule.
+
+None of the 3 clear a trade: BKSY and UMAC both carry earnings on Aug 6
+(3 days out) — excluded by the strategy's no-earnings-binary-bet rule; BW's
+consensus analyst price target ($5.75) sits below its current price, so it
+can't clear a sane 2:1 R:R as a long, and the account is long-only in scope.
+`tradingview-data` MCP remains unavailable in this cloud routine regardless,
+so the confluence rule (≥2 indicators + catalyst) is unsatisfiable either
+way. 0 open positions, 0/3 weekly trade slots used — nothing displaced by
+skipping these.
+
+### Gappers (auto-scan 10:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BKSY | $21.68 | -7.39% | 2,770 | Jefferies downgraded Buy→Hold (PT $50) ahead of Aug 6 earnings |
+| 2 | BW | $8.63 | -7.16% | 12,276 | Buyback + $61.4M note redemption failed to offset weak momentum |
+| 3 | UMAC | $20.02 | -6.49% | 4,767 | No negative catalyst found; sector (drone) news is bullish — likely thin-volume premarket artifact |
+
+#### Deep dive: BKSY $21.68 -7.39%
+- Catalyst: Jefferies cut BlackSky from Buy to Hold while keeping its $50 price target, shifting sentiment lower right before Q2 2026 earnings (Aug 6, BMO). Space stocks broadly under pressure as attention rotates to SpaceX-adjacent names and the UFO space ETF crosses $1B AUM.
+- Why: A rating cut this close to earnings removes a bullish analyst voice and triggers de-risking from momentum holders; sector-wide rotation away from smaller space plays compounds the outflow.
+- Impact: Headline/analyst-driven on an already unprofitable name (TTM operating cash flow -$57.9M, ROE -33.8%, P/S 8.2x). Snapshot volume thin (2,770 sh) — needs confirmation, not a confirmed repricing. Consensus PT ($28.38) still implies upside from $21.68; could fade or extend depending on the Aug 6 print.
+- Horizon: SHORT_TERM — single-analyst downgrade pre-earnings, no structural catalyst; the real event is the Aug 6 report, not this dip.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to displace. Entering 3 days ahead of an earnings binary on a cash-burning name fails the no-earnings-binary rule (same rule applied to ON 8/3, MSFT/AMZN 7/31); a stop tight enough for 2:1 R:R can't realistically hold through the print.
+
+#### Deep dive: BW $8.63 -7.16%
+- Catalyst: Babcock & Wilcox announced share buybacks and a $61.4M note redemption — normally bullish capital-return moves — but shares declined anyway as weak momentum dominated the session's reaction.
+- Why: With negative free cash flow (-$62.2M TTM) and negative book value per share (-$1.16) against $275.9M debt vs $106.6M cash, using cash for buybacks/redemption reads as a liquidity/dilution risk flag rather than a confidence signal.
+- Impact: Fundamentals stressed (EPS -$0.60, underperforming industry); consensus analyst PT is $5.75 — well below even the post-gap price — implying further downside risk rather than mean-reversion. Aug 10 earnings adds more binary risk.
+- Horizon: SHORT_TERM, and arguably not a long setup at all — consensus PT sits under spot, no structural bull catalyst.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to displace. Not viable as a long regardless: PT below current price means no sane 2:1 R:R long thesis. Strategy is long-only in scope — pass, not a short candidate.
+
+#### Deep dive: UMAC $20.02 -6.49%
+- Catalyst: No negative company-specific catalyst found. Same-day coverage centers on AeroVironment's strong Q4 lifting drone stocks broadly, plus an unrelated Eric Trump-backed robotics startup's AMD chip deal appearing in UMAC's news feed. A separate source showed UMAC actually +1.75% at a different timestamp than the Alpaca premarket snapshot used for this gap_pct.
+- Why: Catalyst/price-direction mismatch — no bearish driver corroborates the -6.49% print, and premarket volume was thin (4,767 sh), consistent with a thin-liquidity/stale-quote artifact rather than a real repricing event.
+- Impact: Likely a data artifact given thin volume and absence of any negative catalyst — needs re-verification against a live quote at/near market open before treating as real.
+- Horizon: SHORT_TERM — if genuine, no structural catalyst supports holding; if an artifact (more likely), there's nothing to hold. Q2 earnings land Aug 6 (3 days out), adding pre-earnings binary risk either way.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to displace. Earnings 3 days out makes this an earnings-binary setup regardless of direction; catalyst/price mismatch also means confluence's documented-catalyst leg isn't cleanly satisfied. Pass.
+
