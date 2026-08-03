@@ -3210,3 +3210,21 @@ ClickUp fallback call returned a server-side HTTP 500 again (keys all
 confirmed present — not a missing-credential issue, same failure as
 7/31) — flagging for operator awareness, not blocking since Telegram
 succeeded.
+
+## 2026-08-03 — Gappers (auto-scan 08:10 ET, cloud)
+
+Watchlist scan (69 tickers currently in memory/WATCHLIST.md,
+GAP_THRESHOLD=5.0) returned **zero qualifying gappers** — max |gap_pct| seen
+was META +1.98% (sanity-checked at GAP_THRESHOLD=1.0, not logged as a hit).
+No catalyst/deep-dive research needed since there were no candidates; Apify
+RAG web browser status not re-tested this run (last known state:
+"Monthly usage hard limit exceeded" per this morning's 07:xx pre-market
+research entry above — moot here since no queries were needed). Per routine
+rule, no Telegram/ClickUp notify sent (only fires on hits > 0 or scan error;
+neither applies).
+
+### Gappers (auto-scan 08:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No tickers cleared the 5.0% gap threshold |
+
