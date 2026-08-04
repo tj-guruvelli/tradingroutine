@@ -3333,3 +3333,101 @@ notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-04 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 6 topic
+queries — same outage flagged every session since 2026-07-31, cap still not
+reset. Fell back to native WebSearch (Yahoo domains blocked via
+`blocked_domains`) for the entire session per the routine's fallback rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable, same
+unresolved gap as every session since 2026-07-25.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 19 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 3).
+
+### Market Context (WebSearch fallback, Tue 8/4 premarket ET)
+- **Oil — elevated, near multi-day highs**: Brent ~$89.81/bbl (5:20am ET
+  today, +$2.43 vs yesterday morning), WTI ~$81.08/bbl. Sources attribute
+  the move to renewed US-Iran hostilities shattering the interim peace deal,
+  with disruption risk spanning the Strait of Hormuz to the Red Sea. This
+  directly conflicts with the same-morning equity-side narrative below
+  ("lower oil prices easing inflation concerns") — see Risk Factors.
+- **S&P 500 futures — risk-on**: ES +0.21% early Tuesday, near a record high
+  after Monday's tech-led rally. Polymarket implies 77% odds of an up open.
+  Premarket movers: PLTR +16% on raised guidance; AMD and SpaceX (first
+  earnings as a public company) both due to report today.
+- **VIX — calm**: closed 15.99 (8/3), opened 15.76 today, live ~15.83. Low
+  vol, risk-on, complacency flag carried over from prior sessions (was 16.0
+  yesterday, 17.09 on 7/31 — trending down).
+- **Earnings — today, before open**: large cross-section incl. CAT, MCD,
+  PFE, BP, MPC, SPOT, TM, HSBC, MRK, KMB, DD, APO, GWW, IDXX (full list in
+  source). AMD and SpaceX also report today (session timing unconfirmed by
+  WebSearch). None held; checked against WATCHLIST.md — no overlap.
+- **Econ calendar this week**: JOLTS today (Tue), ISM Manufacturing/Services
+  PMI and the July jobs report (Fri) later this week — exact day/time for
+  each not confirmed by WebSearch. No CPI, no FOMC this week.
+- **Sector YTD** (as of 7/24, same source used yesterday): Energy leads
+  (+3.6%), then Utilities (+2.2%), Industrials (+1.6%), Materials (+1.4%).
+  Communications worst (-6.1%), Consumer Discretionary next-worst (-5.6%).
+  Same Q2-large-cap source conflict as prior sessions (that read has Tech
+  leading at +43%) — not sizing sector bets off either figure without
+  `tradingview-data` confirmation.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **AMD — earnings-day binary, not a setup.** Reports today (SpaceX too,
+   also a binary event as its debut public print). Strategy explicitly
+   excludes earnings-day binary bets without technical confirmation (same
+   rule applied to ON 8/3, MSFT/AMZN 7/31) — watch only, no entry today
+   regardless of print direction.
+2. **Energy sector (XLE-style exposure) — watch only.** Catalyst: YTD
+   momentum leader (+3.6%) and oil pushing to $89.81 Brent on Middle East
+   escalation. But the same escalation headline conflicts with the
+   "de-escalation/lower oil" framing in the equity-futures coverage this
+   morning — thesis unstable until one source resolves the conflict. No
+   confluence data available to set entry/stop/target.
+3. **Utilities (XLU-style exposure) — watch only.** Catalyst: #2 YTD sector
+   (+2.2%), defensive tilt that would pair well if Friday's jobs report
+   surprises risk-off. No confluence data to confirm entry level; purely a
+   sector-rotation watch.
+
+### Risk Factors
+- **Oil/geopolitical narrative conflict, now sharper than yesterday**: one
+  thread has Brent +23% on renewed US-Iran hostilities and Hormuz/Red Sea
+  disruption risk; the same-morning equity-futures thread cites "lower oil
+  prices easing inflation concerns" as a reason stocks are up. These cannot
+  both be the dominant read — treat oil/geopolitical direction as unresolved
+  until a same-day, non-Yahoo source reconciles it. Carried over and
+  worsened from the 8/3 flag.
+- **VIX at ~15.8, third straight session lower** (17.09 -> 16.0 -> 15.8) —
+  thin insurance heading into a dense earnings day (AMD, SpaceX, CAT, MCD,
+  PFE, HSBC, BP, MRK and dozens more) plus JOLTS today and jobs Friday.
+- **Apify still fully down** — cap has not reset since at least 7/31, now 5+
+  consecutive sessions. Operator: check Apify billing/plan; blocking the
+  primary research path.
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  for the entire stretch since 7/25. Same operator flag, escalating in
+  duration.
+- **Sector-YTD source conflict** (Energy-led vs. Tech-led reads) — don't
+  size or rank sector bets off either figure until resolved.
+
+### Decision
+**HOLD — no trades.** Tape is nominally risk-on (VIX ~15.8, S&P futures
++0.21% near record highs, PLTR +16% premarket) but the oil/geopolitical
+catalyst is now more sharply contradictory across sources than yesterday,
+AMD/SpaceX earnings are binary bets excluded by strategy rule, and
+Energy/Utilities sector ideas have no technical confirmation available —
+`tradingview-data` still down, confluence rule unsatisfiable. Zero
+positions, zero orders, 19 straight flat trading days — patience over
+activity. 0/3 weekly trade slots used. ClickUp notify call returned a
+server-side HTTP 500 (keys all confirmed present — same recurring
+non-credential failure as 7/31 and 8/3), flagging for operator awareness,
+not blocking.
