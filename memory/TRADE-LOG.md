@@ -91,3 +91,18 @@ trade count: 0/3 (week of Jul 27).
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Pre-market RESEARCH-LOG (2026-08-03) = HOLD; gappers scans (08:10/09:12/10:11 ET) flagged BKSY/BW/UMAC as research-only — BKSY and UMAC both carry Aug 6 earnings (excluded by no-earnings-binary rule), BW's consensus PT ($5.75) sits below spot (no viable long R:R). `tradingview-data` MCP still down, confluence unsatisfiable regardless. No Market-Open TRADE-LOG entry found for today (routine did not log one). 18 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Aug 4, Market-Open (Day 19, Tuesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. No Pre-Market Research entry existed for today, so
+it was run inline (see RESEARCH-LOG 2026-08-04) = HOLD. Gappers scan (08:21
+ET) flagged ASTS (+6.88% premarket, BlueBird 11-13 launch catalyst ~Aug 5)
+and SATL (+7.45%, Q2 earnings tomorrow AMC — excluded, no-earnings-binary
+rule). Re-checked ASTS with a live quote (bid $67.54/ask $71.90) and 21
+sessions of daily bars: already ~13% above yesterday's $63.53 close and ~6%
+above its own manually-computed 20-day SMA ($63.78) — fails the "no entry
+within 3% of a >5% up print" chase rule outright, on top of stacking on a
+prior 3-day +19.7% bounce. `tradingview-data` MCP still absent (7th+
+session), Apify still hard-capped (6th+ session); confluence rule
+unsatisfiable via the normal path regardless. 19 trading days since launch
+(Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3).

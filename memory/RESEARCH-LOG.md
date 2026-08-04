@@ -3372,3 +3372,58 @@ used — nothing displaced by holding off.
 - Impact: Volume (236K sh) elevated but not extreme for ASTS's typical liquidity; tied to a concrete, dated catalyst rather than pure rumor, giving more durability than a typical headline spike — still vulnerable to a "sell the news" fade post-launch. Read-through to satellite/space peers plausible if the launch executes cleanly.
 - Horizon: LONG_TERM — the BlueBird buildout is a structural, multi-quarter thesis (accelerating cadence, beta commercial service later this year) rather than a single headline; a multi-day/week swing hold is defensible IF it also clears the Confluence rule on a later `/trade` check.
 - Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing to displace. As the higher-conviction of today's two gappers (structural catalyst vs SATL's earnings-binary risk), ASTS is the one worth validating via `/trade`; a 7-10% stop below a $67.90 entry (~$4.75-6.79 risk) needs a $9.50-13.60+ target for 2:1 R:R, plausible on a clean launch with no material pullback. Research only, not a sized recommendation.
+
+## 2026-08-04 — Pre-Market Research (inline, local market-open run)
+
+No standalone Pre-Market Research entry existed for today before this run —
+only the 08:21 ET gappers scan above. Ran inline per market-open Step 1
+("never trade without documented research"). Apify RAG web browser hit
+"Monthly usage hard limit exceeded" again (same outage flagged every session
+since 7/29, still not reset) — fell back to native WebSearch. `tradingview-data`
+MCP still absent (`ToolSearch`: no match) — confluence rule (>=2 of
+VWAP/RSI/200-SMA/insider) remains unsatisfiable via that path; computed SMA20
+manually from Alpaca bars for ASTS instead (see below).
+
+### Account
+- Equity: $100,000 | Cash: $100,000 (100%) | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 19 straight trading days
+  since Day-0 (2026-07-08 launch). Same confirmed-live-vs-$10k-baseline
+  mismatch flagged 2026-07-27, still unresolved/operator pending.
+- Weekly trade count: 0/3 (week of Aug 3).
+
+### Market Context (WebSearch fallback, Tue 8/4 premarket ET)
+- **S&P 500 futures — modestly risk-on**: ES +0.21%. Palantir (PLTR, not
+  held/watchlist) +17% premarket on blowout earnings + raised guidance.
+  SpaceX reports its first quarterly results as a newly public company
+  today; AMD earnings after close.
+- **VIX — calm-ish**: ~18.0, in line with recent range, no acute stress
+  signal.
+
+### Trade Ideas — re-evaluated from today's gappers scan
+1. **ASTS ($67.90 premarket per 08:21 scan; live quote now bid $67.54 /
+   ask $71.90, ~13% above yesterday's $63.53 close) — FAILS the no-chase
+   rule.** Pulled 21 sessions of daily bars: stock fell $86.29 (7/6) to
+   $53.05 (7/29), then ripped +19.7% into $63.53 (8/3) and is gapping again
+   today. Manual SMA20 (Jul 6 - Aug 3 closes) = **$63.78** — current ask is
+   already ~13% above that average, not a fresh mean-revert entry.
+   Strategy explicitly bans "entry within 3% of a print > 5% up on the
+   day" — today's move alone is already >5% (and stacks on Monday's +19.7%
+   3-day run). Structural launch catalyst (BlueBird 11-13, ~Aug 5) is real
+   and documented, but the entry itself is a chase. **No trade.**
+2. **SATL — still excluded**, reports Q2 earnings tomorrow (Aug 5 AMC),
+   same no-earnings-binary-bet exclusion as the 08:21 scan.
+3. No other watchlist ticker carries a same-day documented catalyst.
+
+### Risk Factors
+- Apify still fully capped — 6th+ consecutive session, cap has not reset
+  since 7/29. Operator: check Apify billing/plan.
+- `tradingview-data` MCP still absent — confluence unsatisfiable via that
+  path for the entire stretch since 7/25; manual SMA calc used as a partial
+  substitute today but RSI/VWAP/200-SMA still unavailable.
+
+### Decision
+**HOLD — no trades.** Only actionable idea (ASTS) fails the no-chase rule
+outright (already ~13% above yesterday's close, ~6% above its own 20-day
+average); SATL is earnings-binary-excluded; nothing else has a same-day
+catalyst. Zero positions, zero orders, 19 straight flat trading days —
+patience over activity. Weekly trade count unaffected: 0/3.
