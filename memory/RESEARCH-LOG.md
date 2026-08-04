@@ -3559,3 +3559,17 @@ slots used (week of Aug 3) — nothing displaced by holding off.
 - Horizon: SHORT_TERM — no structural catalyst identified; reads as noise likely to fade if the print is even real.
 - Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Fails the Confluence rule's catalyst leg outright (no catalyst to document) and the practical liquidity bar (100 sh volume). Pass.
 
+## 2026-08-04 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| — | — | no hits this run | — | — |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
