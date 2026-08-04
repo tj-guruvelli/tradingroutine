@@ -3498,3 +3498,64 @@ slots used — nothing displaced by holding off.
 - Horizon: SHORT_TERM — no structural negative catalyst, but no durable long thesis either given revenue scale and dilution.
 - Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Volume this thin (100 sh) fails the practical liquidity bar for a sized position before R:R is even considered. Pass.
 
+## 2026-08-04 — Gappers (auto-scan 11:22 ET, cloud)
+
+Fifth scheduled fire of the day. Watchlist scan (`scripts/gappers-alpaca.sh
+watchlist`, GAP_THRESHOLD=5.0) returned 5 raw prints; one (AGMH, $0.87) was
+dropped for failing the $3.00 minimum price filter, leaving **4 qualifying
+gappers** — 1 upside, 3 downside — all under the 10-ticker cap so all 4 get
+deep-dive treatment. Apify RAG web browser again returned "Monthly usage
+hard limit exceeded" on every query (same outage flagged since 7/29, still
+not reset) — fell back to WebFetch against `benzinga.com/quote/<TICKER>`
+for catalyst headlines and `stockanalysis.com/stocks/<TICKER>` for
+fundamentals/recent-developments research.
+
+Notable: BWLP is a repeat name from this morning's 10:15 ET scan but has
+flipped direction (+7.22% then, -7.29% now) — same-session reversal, no
+new catalyst found, reads as unwind/noise rather than a fresh signal. None
+clear a trade today: BWLP fails on the direction-flip/no-fresh-catalyst
+basis above; TRMD's move has no confirmed same-day driver (plausible
+continuation of its own record-Q1 freight-rate story, but unconfirmed) and
+`tradingview-data` MCP remains unavailable for the Confluence check; SYNA
+is excluded outright by the no-earnings-binary rule (Aug 6 print, 2 days
+out) plus the all-stock ON Semi deal complicates any standalone reading;
+WLDS traded on just 100 shares (not a real repricing), same liquidity
+problem as its 10:15 ET appearance. 0/6 open positions, 0/3 weekly trade
+slots used (week of Aug 3) — nothing displaced by holding off.
+
+### Gappers (auto-scan 11:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BWLP | $20.10 | -7.29% | 8,063 | Direction flip from +7.22% this morning; no fresh catalyst, reads as unwind |
+| 2 | TRMD | $31.64 | +7.04% | 3,415 | Likely continued freight-rate momentum off record Q1 earnings; no fresh same-day headline confirmed |
+| 3 | SYNA | $99.47 | -6.92% | 9,466 | Tracking ON Semi all-stock deal value and/or pre-earnings (Aug 6) de-risking |
+| 4 | WLDS | $3.17 | -5.93% | 100 | No dated catalyst found; 100-share volume, likely thin-liquidity noise |
+
+#### Deep dive: BWLP $20.10 -7.29%
+- Catalyst: Benzinga's cached top story still ties BWLP to renewed Iran-tension energy plays (same headline surfaced at 10:15 ET, when BWLP printed +7.22%) — no fresh news found to explain today's flip to -7.29%.
+- Why: A same-session reversal from +7.22% to -7.29% with no new bearish news reads as profit-taking/mean-reversion off the earlier spike, not a new negative catalyst.
+- Impact: Volume (8,063 sh) is thin relative to the size of the swing; consistent with an intraday unwind, not a confirmed new trend.
+- Horizon: SHORT_TERM — no structural catalyst behind today's reversal; not a thesis worth holding.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Same-session direction flip fails the Confluence rule's stability bar outright; `tradingview-data` MCP still unavailable regardless. Pass.
+
+#### Deep dive: TRMD $31.64 +7.04%
+- Catalyst: TORM plc (product-tanker shipper) — Benzinga's cached top story is dated Jan 26, 2026 (stale); no fresher same-day headline found. Recently reported record Q1 2026 earnings on strong freight rates, raising FY revenue guidance to $800M-$1.1B. NASDAQ-listed, ~8.18% dividend yield, analyst consensus "Buy" with a $36 PT (~14% above spot). 2025 net income fell 53.42% YoY despite the strong Q1; PE 8.65.
+- Why: No fresh same-day news found — most plausible read is continued momentum in tanker freight-rate strength (the same driver behind the record Q1 print), but this is unconfirmed, flagged as a data gap.
+- Impact: Volume (3,415 sh) is thin for a 7% move. If freight rates are genuinely still climbing, sector peers likely show read-through — not confirmed this scan (Apify down).
+- Horizon: LONG_TERM candidate IF the freight-rate strength is structural (Energy is a late-cycle favored sector per TRADING-STRATEGY.md) — but SHORT_TERM by default since today's specific driver is unconfirmed.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Best 2:1 R:R math of today's 4 (7-10% stop ≈ $2.21-$3.16 risk vs a $35.86-$38.06 target, close to the $36 analyst PT) — but still needs a confirmed today-specific catalyst plus the Confluence check (`tradingview-data` unavailable) before it clears the entry checklist.
+
+#### Deep dive: SYNA $99.47 -6.92%
+- Catalyst: ON Semiconductor's ~$7B all-stock acquisition of Synaptics (announced Jun 26, 2026, "physical AI"/edge-compute rationale) already prompted analyst downgrades on valuation. Synaptics reports fiscal 2026 full-year results Aug 6, 2026 (2 days out). Consensus rating "Hold", $143.67 12-month target (reflects deal-implied value, well above today's $99.47 print).
+- Why: In an all-stock deal, SYNA's price tracks the implied exchange-ratio value of ON Semi's own stock — if ON Semi shares fell, SYNA's deal-implied value falls too. Pre-earnings positioning ahead of Aug 6 is a plausible secondary driver. Apify was down, so the specific trigger isn't confirmed.
+- Impact: Volume (9,466 sh) is the highest of today's 4 but still thin in absolute terms. A move this size just before a scheduled print, on a name mid-acquisition, reads as event-driven positioning, not a durable repricing.
+- Horizon: SHORT_TERM — earnings print in 2 days makes this a binary event window regardless of direction; no durable read until the print clears and deal terms firm up.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Excluded outright by the no-earnings-binary practice (same rule applied to BKSY/SATL/UMAC this week) given the Aug 6 print 2 days out. Pass regardless of R:R math.
+
+#### Deep dive: WLDS $3.17 -5.93%
+- Catalyst: No dated same-day catalyst found — Benzinga's cached top story is a stale Jul 2024 "stock surging on reverse split" headline, unrelated to today's move. Wearable Devices (Mudra neural-interface wristbands) reported 2025 revenue of $647K (+24% YoY) against an $8.11M net loss; recently partnered with Meta-Bounds for AR integration and completed a 1-for-3 reverse split; holds $18.4M cash.
+- Why: The prior day's volume feeding this gap calc was only 100 shares — at that size a ~6% "gap" most likely reflects thin-liquidity quote noise on a micro-float name, not a real repricing. Matches the same liquidity read from this ticker's 10:15 ET appearance.
+- Impact: Not likely sustainable — lowest volume of today's 4, no catalyst corroborates it, sub-$5 microcap with a history of a reverse split for Nasdaq-compliance reasons.
+- Horizon: SHORT_TERM — no structural catalyst identified; reads as noise likely to fade if the print is even real.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Fails the Confluence rule's catalyst leg outright (no catalyst to document) and the practical liquidity bar (100 sh volume). Pass.
+
