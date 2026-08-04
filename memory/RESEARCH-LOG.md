@@ -3427,3 +3427,74 @@ outright (already ~13% above yesterday's close, ~6% above its own 20-day
 average); SATL is earnings-binary-excluded; nothing else has a same-day
 catalyst. Zero positions, zero orders, 19 straight flat trading days —
 patience over activity. Weekly trade count unaffected: 0/3.
+
+## 2026-08-04 — Gappers (auto-scan 10:15 ET, cloud)
+
+Fourth scheduled fire of the day. Watchlist scan (`scripts/gappers-alpaca.sh
+watchlist`, GAP_THRESHOLD=5.0) returned 6 raw prints; one (AGMH, $0.90) was
+dropped for failing the $3.00 minimum price filter, leaving **5 qualifying
+gappers** — 3 upside, 2 downside — all under the 10-ticker cap so all 5 get
+deep-dive treatment (exactly at the 5-ticker deep-dive cap, none dropped to
+quick-scan only). Apify RAG web browser returned "Monthly usage hard limit
+exceeded" on every query (same outage flagged repeatedly since 7/29, still
+not reset) — fell back to WebFetch against `benzinga.com/quote/<TICKER>` for
+catalyst headlines and `stockanalysis.com/stocks/<TICKER>` for
+fundamentals/recent-developments research.
+
+None clear a trade today: APT's move is on 436 shares volume with no
+corroborating catalyst (likely a thin-liquidity artifact) and sits 3 days
+ahead of its own Aug 7 earnings; BKSY repeats the same Aug-earnings
+exclusion already applied on 8/3, now even closer to the print; BW's
+analyst-target data conflicts with the 8/3 entry ($24.67 today vs $5.75
+then) and can't be trusted without reconciliation; WLDS traded on just 100
+shares (not a real repricing); BWLP has the strongest fundamentals (record
+profit, 8.6% yield) but the catalyst is a sector-wide geopolitical
+(Iran-tensions/oil) read, not company-specific, and `tradingview-data` MCP
+remains unavailable in this cloud routine so the Confluence indicator leg
+can't be checked here regardless. 0/6 open positions, 0/3 weekly trade
+slots used — nothing displaced by holding off.
+
+### Gappers (auto-scan 10:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.35 | +8.42% | 436 | No catalyst found (Benzinga returned unrelated crypto coverage); earnings Aug 7 |
+| 2 | BWLP | $23.16 | +7.22% | 3,913 | Iran-tensions oil-price spike lifting energy/shipping names sector-wide |
+| 3 | BKSY | $23.48 | -6.62% | 2,453 | Pre-earnings jitters into Q2 print (days out); bullish govt-contract/analyst backdrop otherwise unchanged |
+| 4 | BW | $10.78 | +6.31% | 33,329 | AI-datacenter/utility demand narrative; catalyst source stale/contradictory |
+| 5 | WLDS | $3.17 | -5.93% | 100 | Trading through Jul 31 private-placement price ($3.285); dilution overhang, not a new catalyst |
+
+#### Deep dive: APT $5.35 +8.42%
+- Catalyst: No company-specific catalyst found — Benzinga's APT page returned crypto (Aptos, ticker collision) coverage instead of Alpha Pro Tech. Fundamentals: Q1 2026 net sales +5.5% to $14.6M, FY2025 revenue +2.25% to $59.14M though earnings fell 10.13%; management flagged persistent housing-market weakness. $2M buyback expansion (Jun 2025). Earnings due Aug 7 (3 days out).
+- Why: No identified driver — 436-share volume on an 8.4% print reads as a thin-liquidity quote artifact, not a real repricing.
+- Impact: Almost certainly not sustainable — lowest volume of today's 5 gappers by a wide margin, no catalyst corroborates it, and Aug 7 earnings adds pre-earnings binary risk on top.
+- Horizon: SHORT_TERM — no structural catalyst identified; if the print is real at all, it reads as noise likely to fade.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Fails the Confluence rule's catalyst leg outright (no catalyst to document) and earnings 3 days out triggers the no-earnings-binary exclusion. Pass.
+
+#### Deep dive: BWLP $23.16 +7.22%
+- Catalyst: Opinion coverage ties renewed Iran tensions and a resulting oil-price spike to undervalued energy/shipping names including BW LPG (54-vessel LPG fleet, 28 VLGCs). Q1 2026 record profit $164M on elevated freight rates; FY2025 revenue $3.58B (+0.52%) though earnings fell 31.61%. 8-vessel Hyundai newbuild order; divested BW Elm ($36M gain) and BW Levant ($38M proceeds); exited Confidence Petroleum India stake. 8.61% dividend yield, P/E 9.33.
+- Why: Geopolitical risk premium (Iran tensions) lifting LPG freight-rate expectations pulls in momentum buyers on an already fundamentally strong, high-yield name.
+- Impact: Sector-wide read-through is real — framed as a shipping/energy reaction to a macro event, so peers likely moved too. Volume (3,913 sh) is modest for the size of the gap; durability depends on whether Iran-tension headlines keep escalating.
+- Horizon: SHORT_TERM — geopolitical-headline-driven, durable only if tensions keep escalating, otherwise a fade candidate within days. Structural buyback/fleet-modernization story exists but wasn't today's driver.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Strongest fundamentals of today's 5, but the catalyst is a macro sector read rather than company-specific; `tradingview-data` MCP unavailable in this cloud routine so the Confluence indicator leg can't be checked here — would need a `/trade` confluence pass before sizing.
+
+#### Deep dive: BKSY $23.48 -6.62%
+- Catalyst: BlackSky reports Q2 2026 earnings within days (conference call 8:30am ET per Benzinga). Provides AI-enabled satellite imagery/intelligence to govt/commercial customers. FY2025 revenue $106.58M (+4.39%) but net loss widened 22.8% to -$70.26M. Multiple new govt R&D/NRO contracts and seven-figure subscription renewals; Jefferies/Oppenheimer/Canaccord PT increases post-Q1; consensus Strong Buy, $40.50 target.
+- Why: Downside gap (-6.62%) despite a bullish fundamental/analyst backdrop reads as pre-earnings de-risking/profit-taking, not a negative catalyst. RESEARCH-LOG 8/3 already flagged BKSY's Aug 6 earnings as a no-earnings-binary exclusion at $21.68 — now $23.48, even closer to the print.
+- Impact: Volume (2,453 sh) thin — consistent with pre-earnings positioning noise, not a confirmed repricing. Government-contract backdrop and analyst-target upside look unaffected; short-term jitters into the print, not a thesis change.
+- Horizon: SHORT_TERM — earnings-binary event within days, no durable read until the print clears.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Same exclusion already applied to BKSY on 8/3 (no-earnings-binary rule); still applies, now even closer to the print. Pass regardless of direction.
+
+#### Deep dive: BW $10.78 +6.31%
+- Catalyst: Benzinga's headline is stale (references a prior down day: "buyback plans and $61.4M note redemption failed to offset weak momentum as shares slipped Monday") — today's print is +6.31%, opposite direction, so treat the specific driver as unconfirmed. Babcock & Wilcox: FY2025 revenue $587.68M (+1.14%), -$51.02M net loss; Q1 2026 record revenue/adjusted EBITDA on utility/AI-datacenter demand; $200M stock offering (May, 12.4M sh at $18.50), $50M buyback authorized (Jul), $61.4M note redemption; Q2 earnings Aug 10; pending securities litigation; a board governance proposal failed shareholder approval.
+- Why: Likely momentum buying tied to the AI-datacenter/utility demand narrative and record-backlog messaging, though the catalyst source itself is stale/contradictory — treat the driver as unconfirmed.
+- Impact: Mixed fundamentals — real backlog/demand tailwinds vs. a net loss, pending litigation, and 12.4M shares of May dilution. RESEARCH-LOG 8/3 noted a $5.75 consensus PT (below spot then); today's source shows $24.67 — the two conflict and neither is independently verified here.
+- Horizon: SHORT_TERM — catalyst source unreliable/contradictory; Aug 10 earnings (6 days out) adds event risk before any thesis could mature.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Analyst-target data conflicts between sessions ($24.67 today vs $5.75 on 8/3) — can't confirm a sane 2:1 R:R long without resolving that discrepancy; pending litigation is an added tail risk. Pass pending cleaner data.
+
+#### Deep dive: WLDS $3.17 -5.93%
+- Catalyst: Wearable Devices (Mudra neural-interface wearables) — recent coverage centers on a white-paper release and a Jun 2026 1-for-3 reverse split, but today's print is a downside move opposite that framing. FY2025 revenue $647K (+23.95%) against an $8.11M net loss; raised $24.4M in 2025, holds $18.4M cash. Jul 31 private placement priced 1M shares at $3.285; unveiled "Mudra Pro" and a Meta-Bounds AR partnership; exhibited at AWE 2026.
+- Why: The Jul 31 placement price ($3.285) sits just above today's $3.17 print — the -5.93% gap likely reflects dilution overhang/technical pressure from that raise trading through its placement price, not a new negative catalyst.
+- Impact: Volume is negligible (100 sh) — not a confirmed repricing on an illiquid $6.94M market-cap name. Recent dilution and pre-revenue-scale losses are real overhangs regardless of today's specific print.
+- Horizon: SHORT_TERM — no structural negative catalyst, but no durable long thesis either given revenue scale and dilution.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing displaced. Volume this thin (100 sh) fails the practical liquidity bar for a sized position before R:R is even considered. Pass.
+

@@ -1,0 +1,82 @@
+{
+  "scanned_at": "2026-08-04T14:16:58Z",
+  "deep_dive_cap": 5,
+  "gap_threshold": 5.0,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "APT",
+      "price": 5.345,
+      "gap_pct": 8.42,
+      "premarket_volume": 436,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No company-specific catalyst found - Benzinga's APT quote page returned crypto (Aptos, ticker collision) coverage, not Alpha Pro Tech. Company fundamentals: Q1 2026 net sales +5.5% to $14.6M, FY2025 revenue +2.25% to $59.14M though earnings fell 10.13%; management has flagged persistent housing-market weakness. $2M buyback expansion announced June 2025. Earnings due Aug 7, 2026 (3 days out).",
+      "why": "No identified news driver. Volume on this print is only 436 shares - at that size an 8.4% 'gap' is most likely a thin-liquidity quote artifact, not a real repricing.",
+      "impact": "Almost certainly not sustainable - lowest-volume ticker of today's 5 gappers by a wide margin, no catalyst corroborates the move, and Aug 7 earnings (3 days out) adds pre-earnings binary risk on top.",
+      "horizon": "SHORT_TERM - no structural catalyst identified; if the print is real at all, it reads as noise likely to fade, not a thesis worth holding.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Not viable regardless of sizing: no catalyst to document (fails the Confluence rule's catalyst leg outright) and earnings 3 days out triggers the no-earnings-binary exclusion. Pass.",
+      "unavailable": "yahoo_price is banned per CLAUDE.md; Apify was capped for the whole scan, see routine note"
+    },
+    {
+      "rank": 2,
+      "symbol": "BWLP",
+      "price": 23.16,
+      "gap_pct": 7.22,
+      "premarket_volume": 3913,
+      "catalyst": "Opinion coverage ties renewed Iran tensions and a resulting oil-price spike to undervalued energy/shipping names including BW LPG.",
+      "headlines": [],
+      "catalyst_detail": "BW LPG operates a 54-vessel LPG shipping fleet (28 VLGCs) plus wholesale trading. Q1 2026 posted record profit of $164M on elevated freight rates; FY2025 revenue was $3.58B (+0.52% YoY) though earnings fell 31.61%. Recently ordered 8 newbuild vessels from Hyundai Heavy Industries, divested BW Elm ($36M gain) and BW Levant ($38M net proceeds), and exited its Confidence Petroleum India stake. Pays an 8.61% dividend yield; P/E 9.33.",
+      "why": "Geopolitical risk premium (Iran tensions) lifting LPG freight-rate expectations pulls in momentum buyers on an already fundamentally strong, high-yield shipping name.",
+      "impact": "Sector-wide read-through is real - the move is framed as a shipping/energy-sector reaction to a macro geopolitical event, not BWLP-specific news, so peers in the tanker/LPG space likely moved too. Volume (3,913 sh) is modest for the size of the gap, so near-term durability depends on whether Iran-tension headlines keep escalating.",
+      "horizon": "SHORT_TERM - geopolitical-headline-driven; durable only if tensions keep escalating, otherwise reads as a fade candidate within days. Structural buyback/fleet-modernization story exists but wasn't today's driver.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Strongest fundamentals of today's 5 (record profit, 8.6% yield, single-digit P/E), but the catalyst is a geopolitical macro read rather than a company-specific event - `tradingview-data` MCP is unavailable in this cloud routine so the Confluence indicator leg (VWAP/RSI/200-SMA) can't be checked here. Would need a `/trade` confluence pass before sizing.",
+      "unavailable": "Apify was capped for the whole scan, fell back to WebFetch"
+    },
+    {
+      "rank": 3,
+      "symbol": "BKSY",
+      "price": 23.475,
+      "gap_pct": -6.62,
+      "premarket_volume": 2453,
+      "catalyst": "BlackSky reports Q2 2026 earnings before the open in the coming days (per Benzinga's page, timing appears close), conference call at 8:30am ET.",
+      "headlines": [],
+      "catalyst_detail": "BlackSky provides AI-enabled satellite imagery/intelligence to government and commercial customers. FY2025 revenue was $106.58M (+4.39% YoY) but net loss widened 22.8% to -$70.26M. Recently won multiple U.S. government R&D contracts for Gen-3 AI solutions plus NRO contract modifications, and secured seven-figure multi-year government subscription renewals. Multiple analyst price-target increases (Jefferies, Oppenheimer, Canaccord) followed Q1 earnings; consensus rates it Strong Buy with a $40.50 target.",
+      "why": "This is a downside gap (-6.62%) despite a generally bullish fundamental/analyst backdrop - reads as pre-earnings de-risking/profit-taking, not a negative catalyst. RESEARCH-LOG (2026-08-03) already flagged BKSY's Aug 6 earnings as a no-earnings-binary exclusion at a higher price ($21.68 that day vs $23.48 now).",
+      "impact": "Volume (2,453 sh) is thin - consistent with pre-earnings positioning noise rather than a confirmed repricing. Government-contract backdrop and analyst target upside are unaffected; this looks like short-term jitters into the print, not a thesis change.",
+      "horizon": "SHORT_TERM - earnings-binary event within days makes this headline/event-driven regardless of direction; no durable read until the print clears.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Same exclusion already applied to BKSY on 8/3 (earnings-binary, no-earnings-binary rule) - still applies today, now even closer to the print. Pass regardless of direction.",
+      "unavailable": "Apify was capped for the whole scan, fell back to WebFetch"
+    },
+    {
+      "rank": 4,
+      "symbol": "BW",
+      "price": 10.78,
+      "gap_pct": 6.31,
+      "premarket_volume": 33329,
+      "catalyst": "Benzinga: 'BW Share Buyback plans and a $61.4 million note redemption failed to offset weak momentum as shares slipped Monday' - stale headline from a prior down day, today's print is a +6.31% gap up, opposite direction.",
+      "headlines": [],
+      "catalyst_detail": "Babcock & Wilcox provides energy/emissions-control equipment (steam generation, BrightLoop chemical looping). FY2025 revenue was $587.68M (+1.14%) with a -$51.02M net loss. Q1 2026 showed record revenue/adjusted EBITDA on rising utility and AI-data-center demand. Completed a $200M stock offering in May 2026 (12.4M shares at $18.50), authorized a $50M buyback in July, redeemed $61.4M in senior notes. Q2 earnings due Aug 10. Multiple securities lawsuits alleging disclosure violations are pending; a board governance proposal failed shareholder approval.",
+      "why": "Likely momentum buying tied to the AI-data-center/utility demand narrative and record backlog messaging, though today's catalyst source is stale/contradictory (references a prior decline) - treat the driver as unconfirmed.",
+      "impact": "Fundamentals are mixed - record backlog and AI-datacenter demand are real tailwinds, but the company carries a net loss, pending securities litigation, and diluted 12.4M new shares in May. RESEARCH-LOG (2026-08-03) noted a consensus PT of $5.75 (below spot then); today's source shows a much higher $24.67 PT - the two figures conflict and neither is independently verified here, so treat both with caution.",
+      "horizon": "SHORT_TERM - catalyst source is unreliable/contradictory; Aug 10 earnings (6 days out) adds event risk before any thesis could mature.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Analyst-target data conflicts between sessions (this session's $24.67 vs 8/3's $5.75) - can't confirm a sane 2:1 R:R long thesis without resolving that discrepancy first; pending litigation is an added tail risk. Pass pending cleaner data.",
+      "unavailable": "Apify was capped for the whole scan, fell back to WebFetch"
+    },
+    {
+      "rank": 5,
+      "symbol": "WLDS",
+      "price": 3.17,
+      "gap_pct": -5.93,
+      "premarket_volume": 100,
+      "catalyst": "Wearable Devices surged recently on a white-paper release and 1-for-3 reverse split (Jun 2026) - today's print is a downside move, direction has reversed from that source's framing.",
+      "headlines": [],
+      "catalyst_detail": "Wearable Devices makes neural-interface wearables (Mudra) for touchless gesture control. FY2025 revenue was $647K (+23.95% YoY) against an $8.11M net loss. Raised $24.4M in 2025, holds $18.4M cash. Announced a $3.3M private placement (Jul 31, shares priced at $3.285) and executed a 1-for-3 reverse split in June to regain Nasdaq compliance. Unveiled 'Mudra Pro' and a Meta-Bounds AR partnership; exhibited at AWE 2026.",
+      "why": "The Jul 31 private placement priced at $3.285 sits just above today's $3.17 print - the -5.93% gap likely reflects dilution overhang/technical pressure from that raise trading through its placement price, not a new negative catalyst.",
+      "impact": "Volume is negligible (100 sh) - not a confirmed repricing, essentially noise on an illiquid micro-cap ($6.94M market cap). Recent private-placement dilution and pre-revenue-scale losses are real overhangs regardless of today's specific print.",
+      "horizon": "SHORT_TERM - no structural negative catalyst, but no durable long thesis either given the revenue scale and dilution; not a name to hold on this data alone.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Volume this thin (100 sh) fails the practical liquidity bar for a sized position before R:R is even considered. Pass.",
+      "unavailable": "Apify was capped for the whole scan, fell back to WebFetch"
+    }
+  ]
+}
