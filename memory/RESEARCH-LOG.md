@@ -3333,3 +3333,42 @@ notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-04 — Gappers (auto-scan 08:21 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **2 qualifying gappers**, both upside — under the 10-ticker cap so
+both get deep-dive treatment (well under the 5-ticker deep-dive cap too).
+Apify RAG web browser returned "Monthly usage hard limit exceeded" on both
+catalyst queries (same outage flagged repeatedly in recent sessions, still
+not reset) — fell back to WebFetch against `benzinga.com/quote/<TICKER>`
+for the catalyst headline, then WebSearch (Yahoo Finance domains blocked
+per routine rule) for the fundamentals/recent-developments research.
+
+Neither clears a trade today: SATL reports Q2 2026 earnings tomorrow (Aug 5
+AMC) — excluded by the strategy's no-earnings-binary-bet rule; ASTS has a
+structural, dated catalyst (BlueBird 11-13 launch) and no near-term earnings
+conflict, making it the stronger of the two, but still needs a `/trade`
+confluence check (`tradingview-data` MCP unavailable in this cloud routine,
+so that gate can't be run here). 0/6 open positions, 0/3 weekly trade slots
+used — nothing displaced by holding off.
+
+### Gappers (auto-scan 08:21 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | $4.26 | +7.45% | 282,680 | Reports Q2 2026 earnings Aug 5 AMC; recent $18M+ defense-imagery contract + Merlin constellation news |
+| 2 | ASTS | $67.90 | +6.88% | 235,697 | Premarket pop ahead of BlueBird 11-13 satellite launch (~Aug 5) and Aug 10 H1 business update |
+
+#### Deep dive: SATL $4.26 +7.45%
+- Catalyst: Satellogic (SATL) reports Q2 2026 results Wed Aug 5 after market close, conference call 4:30pm ET; pre-earnings gap likely reflects positioning ahead of the print. Q1 2026 revenue was $6.11M (+80% YoY) but net loss widened to $118.3M (+263% YoY), with management calling it an inflection point (first positive net operating cash contribution). Also landed an $18M+ one-year defense-imagery contract and unveiled the Merlin constellation (first satellite launching Oct 2026).
+- Why: Momentum/positioning buying ahead of the Aug 5 earnings call, amplified by recent contract wins and constellation roadmap news building anticipation for a strong print.
+- Impact: Pre-earnings gaps on thin-volume small caps (282K sh) are prone to violent reversal on the actual print either direction — speculative positioning, not a confirmed trend. No sector-wide read-through; single-name earnings-anticipation move.
+- Horizon: SHORT_TERM — earnings-binary event tomorrow (Aug 5 AMC), no durable thesis until the print clears; expect a volatile resolution within 1-2 sessions.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing to displace. Entering pre-earnings breaches the no-earnings-binary practice (same exclusion applied to BKSY/UMAC on 8/3); a 7-10% stop below a $4.26 entry (~$0.30-0.43 risk) needs a $0.85+ target for 2:1 R:R, only plausible on a clean beat that can't be known pre-report. Pass pending post-earnings confirmation.
+
+#### Deep dive: ASTS $67.90 +6.88%
+- Catalyst: AST SpaceMobile (ASTS) preparing to launch BlueBird satellites 11, 12, and 13 via SpaceX Falcon 9 (targeting ~Aug 5), its second next-gen batch after BlueBird 8-10 launched in June. New satellites carry the proprietary AST5000 ASIC, targeting 150+ Mbps per coverage cell (vs 98.9 Mbps demonstrated on Block-1). Manufacturing has advanced through satellite 42; H1 business update/trading statement due Aug 10.
+- Why: Anticipation buying ahead of a hard, dated launch catalyst plus accelerating constellation-deployment cadence, read by the market as de-risking the path to commercial space-based cellular broadband.
+- Impact: Volume (236K sh) elevated but not extreme for ASTS's typical liquidity; tied to a concrete, dated catalyst rather than pure rumor, giving more durability than a typical headline spike — still vulnerable to a "sell the news" fade post-launch. Read-through to satellite/space peers plausible if the launch executes cleanly.
+- Horizon: LONG_TERM — the BlueBird buildout is a structural, multi-quarter thesis (accelerating cadence, beta commercial service later this year) rather than a single headline; a multi-day/week swing hold is defensible IF it also clears the Confluence rule on a later `/trade` check.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing to displace. As the higher-conviction of today's two gappers (structural catalyst vs SATL's earnings-binary risk), ASTS is the one worth validating via `/trade`; a 7-10% stop below a $67.90 entry (~$4.75-6.79 risk) needs a $9.50-13.60+ target for 2:1 R:R, plausible on a clean launch with no material pullback. Research only, not a sized recommendation.
