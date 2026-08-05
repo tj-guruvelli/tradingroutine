@@ -3977,3 +3977,112 @@ today, so none were quick-scan-only by rank).
   7-10% stop below $103.11 entry has no analyst-supported target that
   clears 2:1 R:R — fails the R:R leg of the Entry Checklist on current
   numbers.
+
+## 2026-08-05 — Gappers (auto-scan 11:20 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **4 hits** of 60 tracked tickers. 1 (APT, -7.80%) dropped before
+ranking — unresolved ticker per this file's own header note (line 10,
+"Unresolved symbols (BREA, APT, LAKE) are excluded from scanning until
+their actual company/ticker is confirmed"; line 55 flags APT as "verify —
+'Apt': Alpha Pro Tech? AppTech? clarify"), and its Benzinga news feed is
+dominated by the unrelated Aptos crypto token — no dated catalyst found for
+today's move, same treatment as the 10:21 ET scan. Leaves **3** qualifying
+gappers, all price>=$3; premarket_volume field isn't populated by this
+scanner (returns prior full-day volume, not premarket flow — noted
+per-ticker below), so that filter leg was not applicable. Apify RAG web
+browser: "Monthly usage hard limit exceeded" on all queries (persists from
+the 10:21 ET scan) — fell back to WebFetch against Benzinga for the
+catalyst leg and WebSearch (Yahoo Finance domains blocked) for the
+fundamentals leg per routine rule. All 3 qualified for the deep-dive tier
+(cap is 5; only 3 total today, so none were quick-scan-only by rank).
+
+### Gappers (auto-scan 11:20 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | 31.02 | +7.24% | 10,527 (stale, prior session) | Product-tanker sector strength (crude production + seasonal tailwinds) plus TORM's own raised FY26 guidance and new fleet order. |
+| 2 | BWLP | 22.53 | +6.73% | 3,812 (stale, prior session) | Riding an "undervalued energy stocks on Iran tensions" theme, alongside a strong Q1 print and $940M fleet order. |
+| 3 | ZIM | 25.01 | -6.73% | 35,418 (stale, prior session) | Shares fell as the Hapag-Lloyd $35/share cash-acquisition moves through regulatory review stages. |
+
+#### Deep dive: TRMD $31.02 +7.24%
+- Catalyst: TORM plc reported strong Q1 2026 results (TCE earnings $286M,
+  EBITDA $201M, net profit $122M, EPS $1.21, fleet-wide TCE $34,937/day) and
+  upgraded FY2026 guidance to TCE $1,150-1,450M / EBITDA $800-1,100M. It
+  also broke an 8-year newbuild drought with a $370M order for up to 8
+  product tankers via a Chinese yard. Today's headlines cite broader
+  crude-production and seasonal tailwinds for the product-tanker sector.
+  Next earnings Aug 26.
+- Why: Genuine sector rate strength (LR2/LR1/MR day rates all elevated)
+  plus company-specific reinforcement (raised guidance, fleet expansion,
+  ~8% TTM dividend yield) is pulling in momentum and income buyers
+  together.
+- Impact: Today's Pre-Market Research (this file, 2026-08-05) already
+  flagged that tanker names are being undercut by the same Iran/Hormuz
+  de-escalation optimism driving the broader market rally — a genuine
+  tension against tanker-rate bulls even on an up day. Volume field is
+  stale prior-session total (10,527 sh), not today's flow.
+- Horizon: LONG_TERM — raised FY26 guidance, a fleet-expansion order, and a
+  strong dividend policy are structural, not headline noise; but the
+  Iran-de-escalation tension above needs resolving before treating this as
+  a clean multi-week hold.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of Aug
+  3) — nothing displaced by slot count. Best-formed setup of the three: a
+  7-10% stop below $31.015 (~$28.80-$28.84) pairs with a plausible 2:1
+  target given TORM's own guidance upgrade. Still needs the de-escalation
+  tension resolved and a tradingview-data confluence check (MCP still
+  down) before it clears the Entry Checklist.
+
+#### Deep dive: BWLP $22.53 +6.73%
+- Catalyst: BW LPG's Q1 2026 NPAT was $187M, EPS $1.08 (up from $0.30 YoY,
+  +257%), annualized ROE 38%, and it signed a $940M order for 8 new
+  Panamax VLGCs (2029-2030 delivery). Today's headline groups BWLP among
+  energy names catching a bid on renewed Iran tensions pushing oil/LPG
+  economics higher.
+- Why: A geopolitical-risk premium (Iran tensions) lifting energy/shipping
+  names broadly, layered on a genuinely strong (but weeks-old) Q1 print
+  and fleet-expansion news.
+- Impact: Directly conflicts with the TRMD read above: today's Pre-Market
+  Research log frames Iran/Hormuz de-escalation as a headwind for tanker
+  names, while BWLP's catalyst here frames Iran tensions as a positive
+  driver — an internal contradiction in the day's macro narrative, not
+  resolved in this research-only pass. Volume field is stale prior-session
+  (3,812 sh). BWLP is also down roughly 30% over a longer window on
+  volatile freight rates per fundamentals research, so today's pop reads
+  as a bounce, not trend confirmation.
+- Horizon: SHORT_TERM — today's move reads as geopolitical-headline-driven;
+  the strong Q1 print is already old news and isn't what's moving the
+  stock today.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. The Iran-tension narrative conflicts with the same day's
+  TRMD/tanker de-escalation read — resolve which macro read is correct
+  before sizing either; as-is this fails Confluence's requirement for a
+  clean, undisputed catalyst.
+
+#### Deep dive: ZIM $25.01 -6.73%
+- Catalyst: ZIM is under a signed, shareholder-approved (97.36%) all-cash
+  acquisition by Hapag-Lloyd at $35.00/share (~$4.2B equity value, 58%
+  premium to the Feb 13 2026 unaffected price). The deal is moving through
+  regulatory review, targeting a late-2026 close, with a carve-out Israeli
+  entity ("New ZIM") retaining a domestic container-liner business under
+  FIMI ownership. Today's decline coincides with a regulatory-review-stage
+  update.
+- Why: In a signed cash merger, price should track close to the $35 deal
+  value discounted for time-to-close and deal risk; today's decline
+  signals the market pricing in either a longer regulatory timeline or
+  incremental closing risk from the review-stage update, not organic
+  business weakness.
+- Impact: This is a merger-arb name, not a momentum setup — the roughly
+  $10/share (40%) gap to the $35 cash offer is unusually wide for a
+  shareholder-approved deal, implying real regulatory risk (Israeli state
+  / antitrust approvals) is priced in. Not a fadable one-day spike and not
+  a normal breakout either; volume field (35,418 sh, stale prior-session)
+  is the highest of the three but still not today's flow.
+- Horizon: LONG_TERM catalyst by nature (structural M&A) but NOT a fresh
+  long setup on a down day into a cash deal — any long here is really a
+  merger-arb bet on deal completion, a different strategy than this book
+  runs.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. Excluded on mechanism grounds before R:R math applies: no
+  VWAP/RSI/200-SMA/insider-signal thesis applies to a merger-arb spread,
+  so it doesn't fit the Entry Checklist or Confluence rule at all — same
+  category exclusion as SYNA in the 10:21 ET scan.

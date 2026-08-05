@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-08-05T14:21:00Z",
+  "scanned_at": "2026-08-05T15:20:34Z",
   "deep_dive_cap": 5,
   "gap_threshold": 5.0,
   "excluded_unresolved": [
@@ -7,51 +7,51 @@
       "symbol": "APT",
       "price": 4.61,
       "gap_pct": -7.8,
-      "reason": "unresolved ticker per memory/WATCHLIST.md line 10 and 55 (\"APT ⚠ (verify — 'Apt': Alpha Pro Tech? AppTech? clarify)\") — excluded from ranking/deep-dive, not researched, per the file's own instruction to exclude unresolved symbols until confirmed."
+      "reason": "unresolved ticker per memory/WATCHLIST.md line 10 and 55 (\"APT ⚠ (verify — 'Apt': Alpha Pro Tech? AppTech? clarify)\"). Benzinga's APT news feed is dominated by the unrelated Aptos crypto token; the only ticker-specific hit is a stale May 7, 2026 mention. No dated catalyst confirmed for today's move — excluded from ranking/deep-dive, same treatment as the 10:21 ET scan."
     }
   ],
   "gappers": [
     {
       "rank": 1,
-      "symbol": "BW",
-      "price": 10.875,
-      "gap_pct": 7.46,
-      "premarket_volume": 8806,
-      "catalyst": "BW Investors Weigh Buybacks, Debt Redemption And Weak Momentum.",
+      "symbol": "TRMD",
+      "price": 31.015,
+      "gap_pct": 7.24,
+      "premarket_volume": 10527,
+      "catalyst": "Sector-wide product-tanker strength headlines (crude production + seasonal tailwinds) lifted TORM (TRMD) shares, on top of TORM's own raised FY2026 guidance and a new fleet order.",
       "headlines": [],
-      "catalyst_detail": "Babcock & Wilcox highlighted share buybacks and a $61.4M note redemption; shares had wobbled Monday on weakening momentum despite a better-than-expected Q1 2026 print. Q2 2026 earnings are scheduled for Aug 10 after market close (5 sessions out).",
-      "why": "Buyback/debt-paydown headlines plus residual momentum from the Q1 beat are pulling in short-term dip buyers after Monday's pullback — a bounce mechanism, not a fresh catalyst.",
-      "impact": "Alpaca's volume field here is the prior session's full-day total (8,806 sh), not today's premarket volume, so the move can't be volume-confirmed. This is the same name flagged in the Aug 3 gappers scan (TRADE-LOG), where consensus PT ($5.75) was already noted as sitting well below spot — a repeat appearance on a stock analysts rate over 50% overvalued reads as noise, not a strengthening thesis.",
-      "horizon": "SHORT_TERM — buyback/momentum headline with no new catalyst since Aug 3, upcoming Aug 10 earnings adds binary risk, consensus PT ($5.75) implies ~47% below spot; no durable long thesis.",
-      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 3) — nothing displaced by slot count. But consensus PT sitting far below spot means a 7-10% stop can't be paired with a 2:1 upside target that any analyst supports — fails the R:R leg of the Entry Checklist on fundamentals alone, same conclusion as Aug 3."
+      "catalyst_detail": "TORM plc reported strong Q1 2026 results (TCE earnings $286M, EBITDA $201M, net profit $122M, EPS $1.21, fleet-wide TCE $34,937/day) and upgraded FY2026 guidance to TCE $1,150-1,450M / EBITDA $800-1,100M. It also broke an 8-year newbuild drought with a $370M order for up to 8 product tankers via a Chinese yard. Today's headlines cite broader crude-production and seasonal tailwinds for the product-tanker sector. Next earnings Aug 26.",
+      "why": "Genuine sector rate strength (LR2/LR1/MR day rates all elevated) plus company-specific reinforcement (raised guidance, fleet expansion, ~8% TTM dividend yield) is pulling in momentum and income buyers together.",
+      "impact": "Today's Pre-Market Research (RESEARCH-LOG 2026-08-05) already flagged that tanker names are being undercut by the same Iran/Hormuz de-escalation optimism driving the broader market rally — a genuine tension against tanker-rate bulls even on an up day. Volume field is stale prior-session total (10,527 sh), not today's flow.",
+      "horizon": "LONG_TERM — raised FY26 guidance, a fleet-expansion order, and a strong dividend policy are structural, not headline noise; but the Iran-de-escalation tension above needs resolving before treating this as a clean multi-week hold.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 3) — nothing displaced by slot count. Best-formed setup of the three: a 7-10% stop below $31.015 (~$28.80-$28.84) pairs with a plausible 2:1 target given TORM's own guidance upgrade. Still needs the de-escalation tension resolved and a tradingview-data confluence check (MCP still down) before it clears the Entry Checklist."
     },
     {
       "rank": 2,
-      "symbol": "SYNA",
-      "price": 96.375,
-      "gap_pct": -7.15,
-      "premarket_volume": 7397,
-      "catalyst": "ON Semiconductor To Acquire Synaptics in an all-stock deal; analysts downgraded the stock post-announcement.",
+      "symbol": "BWLP",
+      "price": 22.53,
+      "gap_pct": 6.73,
+      "premarket_volume": 3812,
+      "catalyst": "BW LPG rode a broader \"undervalued energy stocks on renewed Iran tensions\" theme, alongside its own outsized Q1 2026 profit growth and a new $940M fleet order.",
       "headlines": [],
-      "catalyst_detail": "ON Semiconductor announced an all-stock acquisition of Synaptics aimed at expanding AI/edge-device capabilities. Analysts downgraded SYNA following the announcement, and shares are trading down from the deal-announcement level rather than up on a typical acquisition premium.",
-      "why": "In an all-stock deal, the target's price tracks the acquirer's stock times the exchange ratio; SYNA trading down (not up on a premium) signals the market reads the offered exchange ratio as light, or is discounting ON Semi's own shares — either way it's a deal-terms repricing, not organic weakness.",
-      "impact": "This reads as a structural M&A repricing rather than a one-day headline spike — SYNA's price should track near the implied deal value until terms firm up or the deal closes, not mean-revert on its own. Alpaca's volume field is stale prior-session volume (7,397 sh) and doesn't confirm today's flow.",
-      "horizon": "LONG_TERM catalyst (M&A is structural, not headline noise) but NOT a viable fresh long either horizon — upside is capped near the announced deal/exchange-ratio value and the move is a decline, not a breakout; no long entry catalyst here regardless of holding period.",
-      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — nothing displaced. Excluded on catalyst-direction grounds before R:R math applies: the Entry Checklist requires a catalyst supporting the trade direction, and this is a down move with capped upside, not a long setup."
+      "catalyst_detail": "BW LPG's Q1 2026 NPAT was $187M, EPS $1.08 (up from $0.30 YoY, +257%), annualized ROE 38%, and it signed a $940M order for 8 new Panamax VLGCs (2029-2030 delivery). Today's headline groups BWLP among energy names catching a bid on renewed Iran tensions pushing oil/LPG economics higher.",
+      "why": "A geopolitical-risk premium (Iran tensions) lifting energy/shipping names broadly, layered on a genuinely strong (but weeks-old) Q1 print and fleet-expansion news.",
+      "impact": "Directly conflicts with the TRMD read above: today's Pre-Market Research log frames Iran/Hormuz de-escalation as a headwind for tanker names, while BWLP's catalyst here frames Iran tensions as a positive driver — an internal contradiction in the day's macro narrative, not resolved in this research-only pass. Volume field is stale prior-session (3,812 sh). BWLP is also down roughly 30% over a longer window on volatile freight rates per fundamentals research, so today's pop reads as a bounce, not trend confirmation.",
+      "horizon": "SHORT_TERM — today's move reads as geopolitical-headline-driven; the strong Q1 print is already old news and isn't what's moving the stock today.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — nothing displaced. The Iran-tension narrative conflicts with the same day's TRMD/tanker de-escalation read — resolve which macro read is correct before sizing either; as-is this fails Confluence's requirement for a clean, undisputed catalyst."
     },
     {
       "rank": 3,
-      "symbol": "KLIC",
-      "price": 103.11,
-      "gap_pct": 6.92,
-      "premarket_volume": 6883,
-      "catalyst": "Kulicke and Soffa Industries shares traded higher by as much as 19% premarket on a better-than-expected earnings beat.",
+      "symbol": "ZIM",
+      "price": 25.005,
+      "gap_pct": -6.73,
+      "premarket_volume": 35418,
+      "catalyst": "ZIM shares declined as the pending Hapag-Lloyd $35.00/share all-cash acquisition moves through regulatory review stages ahead of a targeted late-2026 close.",
       "headlines": [],
-      "catalyst_detail": "Kulicke & Soffa (semiconductor assembly/test equipment) beat Q3 2026 earnings expectations, spiking as much as +19% premarket before fading to +6.92% by this scan (10:21 ET). Conference call scheduled tomorrow 8:00am.",
-      "why": "Earnings beat pulling in momentum buyers and short covering — amplified because the stock already carries an elevated P/E (~90.8x), so a beat against a demanding valuation tends to produce an outsized initial reaction.",
-      "impact": "Meaningful intraday fade already visible (premarket +19% → +6.92% now), consistent with a one-day headline spike partially mean-reverting rather than a clean breakout holding its gains. Alpaca volume field is stale prior-session total (6,883 sh), not today's flow. Sector read-through worth checking against other watchlist semi-equipment names (AMKR).",
-      "horizon": "SHORT_TERM — single earnings print with an already-visible intraday fade, consensus PT ($59.80) sits far below spot ($103.11) implying the stock is priced well past analyst targets, and tomorrow's earnings call adds fresh binary risk; no structural catalyst beyond the print.",
-      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — nothing displaced by slot count. Best-formed catalyst of the three (real beat, not just headline), but consensus PT ($59.80) is far below spot, so a 7-10% stop below $103.11 entry has no analyst-supported target that clears 2:1 R:R — fails the R:R leg of the Entry Checklist on current numbers."
+      "catalyst_detail": "ZIM is under a signed, shareholder-approved (97.36%) all-cash acquisition by Hapag-Lloyd at $35.00/share (~$4.2B equity value, 58% premium to the Feb 13 2026 unaffected price). The deal is moving through regulatory review, targeting a late-2026 close, with a carve-out Israeli entity (\"New ZIM\") retaining a domestic container-liner business under FIMI ownership. Today's decline coincides with a regulatory-review-stage update.",
+      "why": "In a signed cash merger, price should track close to the $35 deal value discounted for time-to-close and deal risk; today's decline signals the market pricing in either a longer regulatory timeline or incremental closing risk from the review-stage update, not organic business weakness.",
+      "impact": "This is a merger-arb name, not a momentum setup — the roughly $10/share (40%) gap to the $35 cash offer is unusually wide for a shareholder-approved deal, implying real regulatory risk (Israeli state / antitrust approvals) is priced in. Not a fadable one-day spike and not a normal breakout either; volume field (35,418 sh, stale prior-session) is the highest of the four but still not today's flow.",
+      "horizon": "LONG_TERM catalyst by nature (structural M&A) but NOT a fresh long setup on a down day into a cash deal — any long here is really a merger-arb bet on deal completion, a different strategy than this book runs.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — nothing displaced. Excluded on mechanism grounds before R:R math applies: no VWAP/RSI/200-SMA/insider-signal thesis applies to a merger-arb spread, so it doesn't fit the Entry Checklist or Confluence rule at all — same category exclusion as SYNA in the 10:21 ET scan."
     }
   ]
 }
