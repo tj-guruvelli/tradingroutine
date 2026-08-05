@@ -3740,3 +3740,138 @@ WebFetch (Benzinga + stockanalysis.com) per routine rule.
   $4.40-$4.64 target for 2:1 R:R — inside the pre-gap $4.12 level, i.e. a
   bet on the gap filling, not a fresh breakout; not a qualifying setup as
   scanned. Research only, no order placed.
+
+## 2026-08-05 — Gappers (auto-scan 09:22 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **6 hits** of 60 tracked tickers; 1 (LAKE, -5.64%) dropped on the
+premarket_volume>=50000 filter (3,526 sh), leaving **5** after all filters
+(|gap|>=5%, price>=$3, volume>=50k). Apify RAG web browser still "Monthly
+usage hard limit exceeded" on all 10 queries (9th+ consecutive session) —
+fell back to WebFetch (Benzinga + stockanalysis.com) per routine rule for
+both the catalyst headline and fundamentals research legs. All 5 gappers
+qualified for the deep-dive tier (cap is 5; today's filtered list has only
+5 total, so none were quick-scan-only by rank).
+
+### Gappers (auto-scan 09:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | KTOS | 59.81 | +15.30% | 251,587 | Q2 2026 double beat (revenue + EPS), guidance raised — business momentum expected to accelerate. |
+| 2 | NYT | 67.69 | -10.53% | 217,446 | Q2 revenue/EPS in line but digital subscriber growth slowed; circulating Buffett-stake headline is unrelated/stale. |
+| 3 | AMPX | 11.85 | +9.52% | 451,333 | Q2 beat, FY guidance raised to $130M+; Cramer issued a same-day buy call. |
+| 4 | GFS | 47.82 | -8.43% | 249,874 | Q2 revenue beat, but Morgan Stanley cut PT $65->$57 same day — downgrade overriding the beat. |
+| 5 | OPEN | 3.91 | -5.44% | 1,814,255 | Continuation of the Aug 4 earnings sell-the-news fade, easing from -6.65% at 08:22 ET to -5.44% now. |
+
+#### Deep dive: KTOS $59.81 +15.30%
+- Catalyst: Kratos reported Q2 2026 revenue of $458.8M (+19.1% organic),
+  net income up 113.1% to $30.9M, and raised FY organic revenue growth
+  guidance to 19%-23%. Recent wins: ~$400M Department of War contract plus
+  counter-drone/space domain awareness awards, a new 167,000 sq ft
+  Pennsylvania plant, and a $50M Indiana hypersonic facility completed
+  ahead of schedule.
+- Why: Beat-and-raise (double beat plus a guidance hike) is the textbook
+  mechanism for pulling in momentum buyers; the beat's magnitude plus
+  concrete contract wins gives the move a fundamental anchor, not just
+  headline reaction.
+- Impact: Premarket volume (251,587 sh) is moderate but not extreme
+  relative to the beat size; the raised full-year guide argues this is a
+  real repricing, not a one-day spike. Possible thematic read-through with
+  AMPX, also gapping today on a related aviation/defense theme.
+- Horizon: LONG_TERM — guidance raise and contract backlog are structural;
+  defense/industrials sit in the early-cycle favored-sector bucket per
+  TRADING-STRATEGY.md's sector rotation table. Worth a confluence check on
+  a later /trade pass, not a same-day fade play.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of
+  Aug 3) — nothing displaced. Top-ranked gapper today (15.3%).
+  tradingview-data MCP still unavailable in this cloud routine so the
+  Confluence rule can't be checked either way; a 7-10% stop below $59.81
+  (~$4.19-$5.98 risk) needs a ~$68.20-$71.77 target for 2:1 R:R — plausible
+  given the guidance raise but unconfirmed without technicals. Research
+  only, no order placed.
+
+#### Deep dive: NYT $67.69 -10.53%
+- Catalyst: NYT reported Q2 2026 revenue of $762.5M and adjusted EPS of 69
+  cents, but digital subscriber growth slowed versus prior quarters even
+  as digital subscription revenue grew 16.4% YoY. Also faces ongoing DOJ
+  subpoenas tied to Air Force One security reporting (DOJ has agreed to
+  withdraw some). The circulating Buffett/Berkshire-stake-at-ATH headline
+  is stale positive coverage, not a fresh catalyst for today's gap down.
+- Why: Reads as a Q2 earnings reaction — decelerating digital subscriber
+  growth overshadowing an in-line revenue/EPS print, a "growth
+  deceleration disappoints despite a beat" mechanism, not the Buffett
+  headline circulating today.
+- Impact: Premarket volume (217,446 sh) is moderate. No clear sector-wide
+  read-through — media/publishing peer set is thin and no other watchlist
+  name is moving in sympathy, so this looks idiosyncratic to NYT's own
+  subscriber numbers rather than a group move.
+- Horizon: SHORT_TERM — earnings-reaction gap with no structural catalyst
+  beyond a subscriber-growth deceleration; absent confirming details this
+  should stabilize within days, not a multi-week thesis.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. Second-ranked by |gap%| but a decliner: fails the Entry
+  Checklist's catalyst leg for a long (catalyst just fired negative) and
+  the strategy is long-stocks-only, so not actionable today regardless of
+  size.
+
+#### Deep dive: AMPX $11.85 +9.52%
+- Catalyst: Amprius (silicon-anode Li-ion batteries for aviation/drone
+  use) released Q2 2026 earnings today and raised FY revenue guidance to
+  at least $130M, building on FY2025 revenue of $73.01M (+202% YoY, still
+  unprofitable, -$44.02M loss). Existing Matternet drone-delivery
+  partnership; consensus rates it Strong Buy.
+- Why: Earnings beat plus raised FY guidance, amplified by a same-day
+  Cramer buy call, is a beat-and-raise-plus-publicity mechanism pulling in
+  both fundamental and retail momentum buyers together.
+- Impact: Premarket volume (451,333 sh) is the largest of today's
+  up-movers, supporting a real repricing rather than noise. Possible
+  thematic read-through with KTOS — both serve aviation/defense end
+  markets.
+- Horizon: LONG_TERM — guidance raise is structural and the drone-battery
+  demand story is durable, but the company remains unprofitable; treat as
+  a confluence-confirmation candidate, not a same-day chase.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced yet, but AMPX and KTOS are both defense/aviation-adjacent
+  gappers today; taking both would need to clear the correlation gate
+  (scripts/corr-gate.mjs, blocks >0.75 correlation with 2+ open positions)
+  and the max-3-new-trades/week cap — a rank/size choice if both later
+  clear confluence, not a guaranteed double-entry.
+
+#### Deep dive: GFS $47.82 -8.43%
+- Catalyst: GFS beat Q2 2026 revenue estimates ($1.79B vs $1.76B
+  consensus) but Morgan Stanley cut its price target from $65 to $57 same
+  day. Also disclosed a $300M LOI for a U.S. government silicon-photonics
+  R&D award, completed the Synopsys Processor IP Solutions acquisition,
+  and expanded its Infosys AI-managed-services collaboration.
+- Why: A same-day sell-side downgrade/PT cut overriding an earnings beat
+  and positive strategic news is a "beat but re-rated down" mechanism —
+  the market pricing the analyst's forward view over the trailing print.
+- Impact: Premarket volume (249,874 sh) is moderate. Possible
+  semiconductor-sector read-through worth checking against peer foundry
+  names to confirm whether this is GFS-specific downgrade risk or a
+  broader semis re-rating.
+- Horizon: SHORT_TERM — a single-analyst downgrade against a revenue beat
+  and a government-award positive reads as a near-term overreaction, not
+  enough alone to call a structural regime change.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. Fourth-ranked decliner: fails the Entry Checklist's catalyst
+  leg for a long (fresh negative catalyst dominates) and the strategy is
+  long-stocks-only, so not actionable as scanned even before R:R.
+
+#### Deep dive: OPEN $3.91 -5.44%
+- Catalyst: Same catalyst as the 08:22 ET deep dive above — Q2 2026
+  results (revenue +23% QoQ, contribution profit +59% QoQ, EBITDA
+  profitability guide within 12 months from Q2 2026). Stock popped
+  intraday Aug 4 then gapped down premarket Aug 5; still deeply
+  unprofitable (FY2025 revenue -15.18% YoY to $4.37B, loss expanded to
+  $1.30B). Fade has eased from -6.65% (08:22 ET) to -5.44% now.
+- Why: Same sell-the-news reversal mechanism as the earlier scan, now
+  showing signs of decelerating rather than deepening.
+- Impact: Premarket volume (1,814,255 sh) remains the largest of today's
+  list, consistent with a real repricing; the fade easing over 55 minutes
+  suggests the move may be stabilizing intraday rather than accelerating.
+- Horizon: SHORT_TERM — unchanged from the 08:22 ET assessment.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. Already deep-dived at 08:22 ET; no new information changes
+  that verdict — still fails the Entry Checklist's catalyst leg for a
+  long, and tradingview-data MCP remains unavailable so the Confluence
+  rule can't be checked.

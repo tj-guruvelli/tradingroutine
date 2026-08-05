@@ -1,21 +1,77 @@
 {
-  "scanned_at": "2026-08-05T12:22:00Z",
+  "scanned_at": "2026-08-05T13:22:00Z",
   "deep_dive_cap": 5,
   "gap_threshold": 5.0,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "OPEN",
-      "price": 3.86,
-      "gap_pct": -6.65,
-      "premarket_volume": 1814255,
-      "catalyst": "Opendoor reported Q2 2026 earnings on Aug 4 (\"Everything is Up, Except Costs\"); stock popped intraday Aug 4, now fading -6.65% premarket Aug 5.",
+      "symbol": "KTOS",
+      "price": 59.805,
+      "gap_pct": 15.3,
+      "premarket_volume": 251587,
+      "catalyst": "Kratos Defense posted a Q2 2026 double beat (revenue + EPS), with business momentum expected to accelerate.",
       "headlines": [],
-      "catalyst_detail": "Opendoor reported Q2 2026 results Aug 4: revenue up 23% QoQ, contribution profit up 59% QoQ, guiding to annual adjusted EBITDA profitability by year-end 2026. Stock closed Aug 4 up 4.57% at $4.12 on the print, then gapped down premarket Aug 5. Shut down India operations in June (250 layoffs), shifting toward AI. TTM revenue $3.25B (-37.2% YoY), TTM net loss -$1.52B, 964.74M shares outstanding, analyst consensus Hold with $5.61 PT.",
-      "why": "Sell-the-news reversal — Q2 beat drove a same-day pop, but with the company still deeply unprofitable (-$1.52B TTM) and a very large share count, the premarket fade reads as profit-taking/guidance skepticism rather than a fresh negative catalyst.",
-      "impact": "Volume (1.81M sh) is large in absolute terms and the move reverses ~all of Aug 4's gain, arguing this is a real two-day round-trip on the earnings print rather than noise. No sector peer read-through identified (thin iBuyer comp set) — looks idiosyncratic to OPEN's own guidance credibility.",
-      "horizon": "SHORT_TERM - headline/earnings-reaction move with no new structural catalyst; the durable EBITDA-by-YE26 question won't resolve for months, no basis for a multi-week hold off today's print alone.",
-      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 3) - nothing displaced. Fails the Entry Checklist's catalyst leg for a long (catalyst just fired negative) and tradingview-data MCP is still unavailable so the Confluence rule can't be checked. A 7-10% stop below $3.86 needs a $4.40-$4.64 target for 2:1 R:R, inside the pre-gap $4.12 level (a gap-fill bet, not a breakout) - not a qualifying setup as scanned."
+      "catalyst_detail": "Kratos reported Q2 2026 revenue of $458.8M (+19.1% organic growth), net income up 113.1% to $30.9M, and raised FY organic revenue growth guidance to 19%-23%. Recent operational wins: ~$400M Department of War contract plus counter-drone/space domain awareness awards, a new 167,000 sq ft Pennsylvania manufacturing plant, and a $50M Indiana hypersonic payload facility completed ahead of schedule.",
+      "why": "Earnings beat-and-raise (double beat plus a guidance hike) is the textbook mechanism for pulling in momentum buyers; the magnitude of the beat plus concrete contract wins gives the move a fundamental anchor rather than pure headline reaction.",
+      "impact": "Premarket volume (251,587 sh) is moderate but not extreme relative to the size of the beat; a raised full-year guide argues this reads as a real repricing, not a one-day spike. Possible sector read-through with other defense/industrials names (AMPX also gapping today on a related aviation/defense-adjacent theme).",
+      "horizon": "LONG_TERM - guidance raise and contract backlog are structural, not headline-only, and defense/industrials sit in the early-cycle favored-sector bucket per TRADING-STRATEGY.md's sector rotation table; worth a confluence check on a later /trade pass rather than a same-day fade play.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 3) - nothing displaced. Top-ranked gapper today (15.3%, largest of the 5). tradingview-data MCP remains unavailable in this cloud routine so the Confluence rule (>=2 of VWAP/RSI/200-SMA/insider) can't be checked either way; a 7-10% stop below $59.81 (~$4.19-$5.98 risk) needs a ~$68.20-$71.77 target for 2:1 R:R - plausible given the guidance raise but unconfirmed without technicals. Research only, no order placed."
+    },
+    {
+      "rank": 2,
+      "symbol": "NYT",
+      "price": 67.685,
+      "gap_pct": -10.53,
+      "premarket_volume": 217446,
+      "catalyst": "Coverage today centers on Warren Buffett's Berkshire Hathaway NYT stake hitting all-time highs in 2026 - an unrelated positive framing that predates and does not explain today's decline.",
+      "headlines": [],
+      "catalyst_detail": "NYT reported Q2 2026 revenue of $762.5M and adjusted EPS of 69 cents, but digital subscriber growth slowed versus prior quarters even as digital subscription revenue grew 16.4% YoY. The company also faces ongoing DOJ subpoenas tied to Air Force One security reporting (DOJ has agreed to withdraw some). The circulating Buffett/Berkshire-stake headline is stale positive coverage, not a fresh catalyst for today's gap down.",
+      "why": "Reads as a Q2 earnings reaction - decelerating digital subscriber growth overshadowing a revenue/EPS print that was in line, a classic 'growth deceleration disappoints despite a beat' sell mechanism, not the Buffett headline circulating today.",
+      "impact": "Premarket volume (217,446 sh) is moderate. No clear sector-wide read-through identified - media/publishing peer set is thin and no other watchlist name is moving in sympathy, so this looks idiosyncratic to NYT's own subscriber-growth numbers rather than a group move.",
+      "horizon": "SHORT_TERM - earnings-reaction gap with no structural catalyst identified beyond a subscriber-growth deceleration; absent confirming details this is a headline/print reaction likely to stabilize within days, not a multi-week thesis.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Second-ranked by |gap%| but a decliner: fails the Entry Checklist's catalyst leg for a long (the catalyst just fired negative, not positive) and the strategy is long-stocks-only, so this is not an actionable setup today regardless of size."
+    },
+    {
+      "rank": 3,
+      "symbol": "AMPX",
+      "price": 11.845,
+      "gap_pct": 9.52,
+      "premarket_volume": 451333,
+      "catalyst": "Jim Cramer issued a bullish call on Amprius Technologies with a $23 price target, calling it 'a good spec' name.",
+      "headlines": [],
+      "catalyst_detail": "Amprius (silicon-anode lithium-ion batteries for aviation/drone applications) released Q2 2026 earnings today (Aug 5) and raised full-year revenue guidance to at least $130M, building on FY2025 revenue of $73.01M (+202% YoY, still unprofitable with a $44.02M loss). The company has an existing partnership with Matternet for drone-delivery battery applications, and consensus rates it Strong Buy.",
+      "why": "Earnings beat plus raised full-year guidance, amplified by a high-profile media buy call (Cramer) same-day, is a beat-and-raise-plus-publicity mechanism that pulls in both fundamental and retail momentum buyers together.",
+      "impact": "Premarket volume (451,333 sh) is the largest of today's up-movers, supporting a real repricing rather than headline noise. Possible thematic read-through with KTOS (also gapping today on a defense/aviation-adjacent beat-and-raise) - both serve aviation/defense end markets.",
+      "horizon": "LONG_TERM - the guidance raise is structural and the aviation/drone-battery demand story is durable, but the company remains unprofitable, so treat as a candidate for confluence confirmation rather than a same-day chase.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced yet, but AMPX and KTOS are both defense/aviation-adjacent gappers today; taking both would need to clear the correlation gate (scripts/corr-gate.mjs, blocks >0.75 correlation with 2+ open positions) and the max-3-new-trades/week cap, so if both later clear confluence this is a rank/size choice, not a guaranteed double-entry."
+    },
+    {
+      "rank": 4,
+      "symbol": "GFS",
+      "price": 47.82,
+      "gap_pct": -8.43,
+      "premarket_volume": 249874,
+      "catalyst": "GlobalFoundries beat Q2 2026 revenue estimates ($1.79B vs $1.76B consensus) but the stock is falling on a Morgan Stanley price-target cut from $65 to $57.",
+      "headlines": [],
+      "catalyst_detail": "GFS also disclosed a letter of intent for a $300M U.S. government award for silicon photonics R&D, completed its acquisition of Synopsys' Processor IP Solutions Business, and expanded its AI-managed-services collaboration with Infosys. Despite the Q2 beat and these structural positives, Morgan Stanley cut its price target from $65 to $57 today, which appears to be the proximate driver of the premarket decline.",
+      "why": "A same-day sell-side downgrade/PT cut overriding an earnings beat and positive strategic news is a 'beat but re-rated down' mechanism - the market is pricing the analyst's forward view over the trailing print.",
+      "impact": "Premarket volume (249,874 sh) is moderate. Possible semiconductor-sector read-through worth checking against peer foundry/chip names for confirmation of whether this is GFS-specific downgrade risk or a broader semis re-rating.",
+      "horizon": "SHORT_TERM - a single-analyst downgrade against a revenue beat and a government-award positive reads as a near-term overreaction rather than a structural regime change; not enough here to call it a multi-week thesis on today's information alone.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Fourth-ranked decliner: fails the Entry Checklist's catalyst leg for a long (fresh negative catalyst - the downgrade - dominates today's print) and the strategy is long-stocks-only, so not actionable as scanned even before considering R:R."
+    },
+    {
+      "rank": 5,
+      "symbol": "OPEN",
+      "price": 3.91,
+      "gap_pct": -5.44,
+      "premarket_volume": 1814255,
+      "catalyst": "Opendoor's Q2 2026 earnings fade continues: still down premarket the morning after the Aug 4 print, though the decline has moderated from -6.65% at the 08:22 ET scan to -5.44% now.",
+      "headlines": [],
+      "catalyst_detail": "Same catalyst as the 08:22 ET deep dive logged earlier today: Q2 2026 results showed revenue up 23% QoQ and contribution profit up 59% QoQ, with management guiding to adjusted EBITDA profitability within 12 months starting Q2 2026. Stock popped intraday Aug 4 (+4.57% to $4.12) then gapped down premarket Aug 5; company still deeply unprofitable (FY2025 revenue -15.18% YoY to $4.37B, loss expanded to $1.30B).",
+      "why": "Same sell-the-news reversal mechanism as the earlier scan - a same-day pop on the print followed by profit-taking/guidance skepticism given the company's continued unprofitability - now showing signs of decelerating rather than deepening.",
+      "impact": "Premarket volume (1,814,255 sh) remains the largest of today's list, consistent with a real repricing rather than noise; the fade easing versus 55 minutes ago (-6.65% to -5.44%) suggests the move may be stabilizing intraday rather than accelerating.",
+      "horizon": "SHORT_TERM - unchanged from the 08:22 ET assessment: headline/earnings-reaction move, no new structural catalyst since the last check.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used - nothing displaced. Already deep-dived in the 08:22 ET RESEARCH-LOG entry today; no new information here changes that verdict - still fails the Entry Checklist's catalyst leg for a long, and tradingview-data MCP remains unavailable so the Confluence rule can't be checked."
     }
   ]
 }
