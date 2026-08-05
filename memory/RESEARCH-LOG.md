@@ -3574,6 +3574,110 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 
+## 2026-08-05 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 4
+topic queries — same outage flagged continuously since 2026-07-29, 8th+
+consecutive session, still not reset. Fell back to native WebSearch
+(Yahoo domains blocked via `blocked_domains`) per routine rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable for any
+candidate, same unresolved gap as every session since 2026-07-25.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 20 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 3, unchanged).
+
+### Market Context (WebSearch fallback, Wed 8/5 premarket ET)
+- **Oil — falling on de-escalation**: Brent ~$83.72/bbl (down ~$6.09 from
+  yesterday morning per one source), WTI forecast range $78.42-$80.53.
+  Driven by Bessent saying a US-Iran deal to reopen the Strait of Hormuz
+  could land "today or tomorrow" — a 60-day temporary arrangement lifting
+  tolls/removing naval mines reportedly close.
+- **S&P 500 futures — risk-on, extending a record close**: ES +0.39-0.4%
+  premarket, following the S&P 500's +1.79% close at 7,736.52 (fresh
+  record) on Aug 4. Polymarket implied ~87% odds of an "Up" open today.
+  Gains attributed to strong earnings + falling oil + Iran-deal optimism.
+- **VIX — subdued, ticking up slightly**: ~16.5, up ~4% from prior session
+  but still historically low — thin insurance into an earnings-heavy day.
+- **Earnings — today, before open**: Eli Lilly (LLY), Disney (DIS), Novo
+  Nordisk (NVO), Shopify (SHOP), CVS, Uber (UBER), AppLovin (APP); Sandisk
+  (SNDK)/Western Digital (WDC) reporting AMC. None held/watchlist-tagged.
+- **Econ calendar**: June JOLTS at 10am ET (est. ~7.45M openings, down from
+  7.59M in May). No CPI (next print Aug 12), no FOMC this week.
+- **Sector YTD — source conflict persists**: one read has Energy/Consumer
+  Staples/Industrials/Materials leading, Technology/Communications/Consumer
+  Discretionary/Financials lagging, Healthcare weakening, Real
+  Estate/Utilities improving — but the same read flags Q2 alone flipped to
+  Tech leading (+43% large-cap) while Energy large-caps fell -13%. Same
+  unresolved conflict as 8/3 — not sizing sector bets off either figure.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Watchlist spot-checks (live Alpaca bars, since MCP/Apify both down)
+- **CRWV (CoreWeave)** — closed $91.89 on 8/4, up from $60.85 on 7/29:
+  +51% in 4 sessions. Grossly extended — fails the "no entry within 3% of
+  a >5% up print" chase rule outright, regardless of catalyst quality.
+- **OKLO (Oklo)** — closed $43.34 on 8/4, +5.1% day-over-day from $41.22.
+  Right at the chase-rule threshold; no dated, company-specific catalyst
+  confirmed for today specifically (broad AI-buildout theme only). Note:
+  WATCHLIST.md's stale plan ("Buy $135 x10sh") is ~3x off current price —
+  data-quality flag, not usable as a reference entry.
+- **NOC (defense)** — closed $551.49 on 8/4, +0.53% day-over-day, trading
+  in a stable $520-555 range over 30 days. No fresh catalyst dated today.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **OKLO — watch only, not actionable today.** Catalyst: AI/nuclear-power
+   buildout theme, Sam Altman-linked. Already +5.1% on 8/4 (borderline
+   chase), no today-specific catalyst confirmed, and confluence
+   unsatisfiable (`tradingview-data` MCP down). If it holds/consolidates
+   near $43 with a fresh catalyst next session: illustrative entry ~$43,
+   stop ~$38.70 (-10%), target ~$52 (2:1 R:R) — not a plan for today.
+2. **Iran/Hormuz de-escalation trade (energy-linked shorts/tanker names) —
+   not actionable.** Falling oil on a reported US-Iran deal cuts against
+   the tanker/shipping thesis (BWLP/TRMD) rather than supporting it — same
+   names flagged as noise/direction-flip repeatedly this week (8/3, 8/4).
+   No fresh long setup here.
+3. **Mega-cap earnings today (LLY/DIS/NVO/SHOP/UBER/APP) — excluded.**
+   All report before today's open; strategy's no-earnings-binary-bet rule
+   excludes trading the print regardless of direction (same rule applied
+   to ON 8/3, MSFT/AMZN 7/31). None are watchlist-tagged tickers anyway.
+
+### Risk Factors
+- **Apify still fully down** — 8th+ consecutive session (since 7/29),
+  spans two full weeks. Operator: check Apify billing/plan — blocking the
+  primary research path indefinitely.
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  since 7/25, now 20 straight sessions. Same operator flag, escalating.
+- **VIX complacency** — ~16.5 into a dense earnings day (7 mega-caps
+  reporting) plus an unresolved geopolitical (Iran/Hormuz) headline that
+  could reverse either direction intraday.
+- **Sector-YTD source conflict** (broad-YTD leaders vs. Q2-only leaders)
+  unresolved — don't size sector bets off either figure.
+- **CRWV extension** — +51% in 4 sessions is a reminder to sanity-check
+  any watchlist "idea" tier price against live bars before treating it as
+  an entry reference; WATCHLIST.md plan prices are going stale (OKLO's
+  noted above).
+
+### Decision
+**HOLD — no trades.** Tape is risk-on (S&P at a fresh record, futures
++0.4%, VIX still subdued) on falling oil/Iran-deal optimism and strong
+earnings, but nothing on the watchlist clears the entry checklist: CRWV is
+badly overextended (+51%/4 sessions), OKLO is borderline-chase with no
+today-specific catalyst, tanker names are undercut by the same
+de-escalation driving the rally, and today's mega-cap earnings are
+excluded by the no-earnings-binary rule. `tradingview-data` MCP still
+down (20 straight sessions) and Apify still hard-capped (8th+ consecutive
+session) — confluence rule unsatisfiable regardless. Zero positions, zero
+orders, 20 straight flat trading days — patience over activity. New week
+unchanged: 0/3 trade slots used. ClickUp notify call returned HTTP 500
+(same recurring failure as 7/31, 8/3 — keys confirmed present, not a
+credential issue) — non-blocking since this was a silent/non-urgent call.
+
 ## 2026-08-04 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
