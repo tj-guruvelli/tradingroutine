@@ -1,0 +1,21 @@
+{
+  "scanned_at": "2026-08-05T12:22:00Z",
+  "deep_dive_cap": 5,
+  "gap_threshold": 5.0,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "OPEN",
+      "price": 3.86,
+      "gap_pct": -6.65,
+      "premarket_volume": 1814255,
+      "catalyst": "Opendoor reported Q2 2026 earnings on Aug 4 (\"Everything is Up, Except Costs\"); stock popped intraday Aug 4, now fading -6.65% premarket Aug 5.",
+      "headlines": [],
+      "catalyst_detail": "Opendoor reported Q2 2026 results Aug 4: revenue up 23% QoQ, contribution profit up 59% QoQ, guiding to annual adjusted EBITDA profitability by year-end 2026. Stock closed Aug 4 up 4.57% at $4.12 on the print, then gapped down premarket Aug 5. Shut down India operations in June (250 layoffs), shifting toward AI. TTM revenue $3.25B (-37.2% YoY), TTM net loss -$1.52B, 964.74M shares outstanding, analyst consensus Hold with $5.61 PT.",
+      "why": "Sell-the-news reversal — Q2 beat drove a same-day pop, but with the company still deeply unprofitable (-$1.52B TTM) and a very large share count, the premarket fade reads as profit-taking/guidance skepticism rather than a fresh negative catalyst.",
+      "impact": "Volume (1.81M sh) is large in absolute terms and the move reverses ~all of Aug 4's gain, arguing this is a real two-day round-trip on the earnings print rather than noise. No sector peer read-through identified (thin iBuyer comp set) — looks idiosyncratic to OPEN's own guidance credibility.",
+      "horizon": "SHORT_TERM - headline/earnings-reaction move with no new structural catalyst; the durable EBITDA-by-YE26 question won't resolve for months, no basis for a multi-week hold off today's print alone.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 3) - nothing displaced. Fails the Entry Checklist's catalyst leg for a long (catalyst just fired negative) and tradingview-data MCP is still unavailable so the Confluence rule can't be checked. A 7-10% stop below $3.86 needs a $4.40-$4.64 target for 2:1 R:R, inside the pre-gap $4.12 level (a gap-fill bet, not a breakout) - not a qualifying setup as scanned."
+    }
+  ]
+}
