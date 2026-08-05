@@ -3692,3 +3692,51 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-05 — Gappers (auto-scan 08:22 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **1 hit** of 60 tracked tickers, all filters applied (|gap|>=5%,
+price>=$3, premarket_volume field not populated by this script so that
+filter was skipped). Apify RAG web browser still "Monthly usage hard limit
+exceeded" on both queries (9th+ consecutive session) — fell back to
+WebFetch (Benzinga + stockanalysis.com) per routine rule.
+
+### Gappers (auto-scan 08:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | OPEN | 3.86 | -6.65% | 1,814,255 | Q2 2026 earnings released Aug 4 ("Everything is Up, Except Costs") — stock popped intraday Aug 4, now fading premarket Aug 5. |
+
+#### Deep dive: OPEN $3.86 -6.65%
+- Catalyst: Opendoor reported Q2 2026 results on Aug 4: revenue up 23%
+  QoQ, contribution profit up 59% QoQ, management guiding to annual
+  adjusted EBITDA profitability by year-end 2026. Stock closed Aug 4 up
+  4.57% at $4.12 on the print, then gapped down -6.65% premarket Aug 5.
+  Company also shut down India operations in June (250 layoffs), shifting
+  toward AI. TTM revenue $3.25B (-37.2% YoY), TTM net loss -$1.52B, 964.74M
+  shares outstanding, analyst consensus Hold with a $5.61 PT (+20% from
+  premarket price).
+- Why: Classic "sell the news" reversal — Q2 beat drove a same-day pop,
+  but with the company still deeply unprofitable (-$1.52B TTM) and a very
+  large share count, the premarket fade reads as profit-taking / guidance
+  skepticism (EBITDA-profitability-by-YE26 target still unconfirmed,
+  revenue still down YoY) rather than a fresh negative catalyst.
+- Impact: Volume (1.81M sh) is large in absolute terms and the move
+  reverses ~all of Aug 4's gain, which argues this is a real two-day
+  round-trip on the earnings print, not noise. No sector peer read-through
+  identified (real-estate iBuyer is a thin comp set); this looks
+  idiosyncratic to OPEN's own guidance credibility, not a group move.
+- Horizon: SHORT_TERM — this is a headline/earnings-reaction move with no
+  new structural catalyst; the durable question (can OPEN actually hit
+  EBITDA profitability by YE26) won't resolve for months, so no basis for
+  a multi-week hold off today's print alone.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of
+  Aug 3) — nothing displaced. Deeply unprofitable microcap with a >6% gap
+  down on an earnings overhang fails the Entry Checklist's catalyst
+  leg for a long (the catalyst just fired negative, not positive) and
+  `tradingview-data` MCP is still unavailable in this cloud routine so the
+  Confluence rule (>=2 of VWAP/RSI/200-SMA/insider) can't be checked
+  either way. A 7-10% stop below $3.86 (~$0.27-$0.39 risk) would need a
+  $4.40-$4.64 target for 2:1 R:R — inside the pre-gap $4.12 level, i.e. a
+  bet on the gap filling, not a fresh breakout; not a qualifying setup as
+  scanned. Research only, no order placed.
