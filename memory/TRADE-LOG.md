@@ -113,3 +113,23 @@ unsatisfiable via the normal path regardless. 19 trading days since launch
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-open call was HOLD; ASTS (+6.88% premarket) failed the "no entry within 3% of a >5% up print" chase rule (already ~13% above prior close, ~6% above 20-day SMA, stacked on a prior 3-day +19.7% bounce) and SATL was excluded by the no-earnings-binary rule (Q2 earnings tomorrow AMC). `tradingview-data` MCP still down (7th+ session), Apify still hard-capped (6th+ session). 19 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Aug 5, Market-Open (Day 20, Wednesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. Pre-Market Research (2026-08-05) = HOLD — tape is
+risk-on (S&P at a fresh record close, futures +0.4%, VIX ~16.5, falling oil
+on Iran/Hormuz de-escalation optimism) but nothing clears the entry
+checklist: CRWV is +51% in 4 sessions (badly overextended), OKLO is
+borderline-chase (+5.1%) with no today-specific catalyst, tanker names are
+undercut by the same de-escalation driving the rally, and today's mega-cap
+earnings (LLY/DIS/NVO/SHOP/UBER/APP) are excluded by the no-earnings-binary
+rule. Gappers scans (08:22/09:22 ET) flagged OPEN, KTOS, NYT, AMPX, GFS —
+all research-only: OPEN/NYT/GFS are earnings-reaction decliners (fail the
+catalyst leg for a long), KTOS/AMPX are beat-and-raise up-movers but neither
+cleared confluence (`tradingview-data` MCP still absent, 20 straight
+sessions) and both are flagged as later `/trade` confluence-check
+candidates, not same-day chases. No planned tickers to validate, Steps 3-7
+skipped. 20 trading days since launch (Jul 9) with zero entries. Weekly
+trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved,
+operator review pending.
