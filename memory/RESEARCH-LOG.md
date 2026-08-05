@@ -4086,3 +4086,18 @@ fundamentals leg per routine rule. All 3 qualified for the deep-dive tier
   VWAP/RSI/200-SMA/insider-signal thesis applies to a merger-arb spread,
   so it doesn't fit the Entry Checklist or Confluence rule at all — same
   category exclusion as SYNA in the 10:21 ET scan.
+
+## 2026-08-05 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| — | — | no hits this run | — | — |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
