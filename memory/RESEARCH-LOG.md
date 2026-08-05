@@ -3875,3 +3875,105 @@ qualified for the deep-dive tier (cap is 5; today's filtered list has only
   that verdict — still fails the Entry Checklist's catalyst leg for a
   long, and tradingview-data MCP remains unavailable so the Confluence
   rule can't be checked.
+
+## 2026-08-05 — Gappers (auto-scan 10:21 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **4 hits** of 60 tracked tickers. 1 (APT, -7.80%) dropped before
+ranking — unresolved ticker per this file's own header note (line 10,
+"Unresolved symbols (BREA, APT, LAKE) are excluded from scanning until
+their actual company/ticker is confirmed"; line 55 flags APT as "verify —
+'Apt': Alpha Pro Tech? AppTech? clarify"). The scanner's watchlist-parsing
+regex doesn't yet enforce that exclusion (picked APT up anyway from ticker
+soup) — flagging as a known scanner gap, not fixed here (out of scope for
+a research-only routine). Leaves **3** qualifying gappers, all price>=$3;
+premarket_volume field isn't populated by this scanner (it returns prior
+full-day volume, not premarket flow — noted per-ticker below), so that
+filter leg was not applicable. Apify RAG web browser: "Monthly usage hard
+limit exceeded" on all 3 queries — fell back to WebFetch against
+Benzinga quote pages per routine rule for both catalyst and fundamentals
+legs. All 3 qualified for the deep-dive tier (cap is 5; only 3 total
+today, so none were quick-scan-only by rank).
+
+### Gappers (auto-scan 10:21 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | 10.88 | +7.46% | 8,806 (stale, prior session) | Investors weigh buybacks, $61.4M note redemption vs weakening momentum. |
+| 2 | SYNA | 96.38 | -7.15% | 7,397 (stale, prior session) | ON Semiconductor to acquire Synaptics in an all-stock deal; analysts downgraded post-announcement. |
+| 3 | KLIC | 103.11 | +6.92% | 6,883 (stale, prior session) | Shares spiked as much as +19% premarket on a Q3 2026 earnings beat, now faded to +6.92%. |
+
+#### Deep dive: BW $10.88 +7.46%
+- Catalyst: Babcock & Wilcox highlighted share buybacks and a $61.4M note
+  redemption; shares had wobbled Monday on weakening momentum despite a
+  better-than-expected Q1 2026 print. Q2 2026 earnings are scheduled for
+  Aug 10 after market close (5 sessions out).
+- Why: Buyback/debt-paydown headlines plus residual momentum from the Q1
+  beat are pulling in short-term dip buyers after Monday's pullback — a
+  bounce mechanism, not a fresh catalyst.
+- Impact: Alpaca's volume field is the prior session's full-day total
+  (8,806 sh), not today's premarket volume, so the move can't be
+  volume-confirmed. This is the same name flagged in the Aug 3 gappers
+  scan (see TRADE-LOG), where consensus PT ($5.75) was already noted
+  sitting well below spot — a repeat appearance on a stock analysts rate
+  well overvalued reads as noise, not a strengthening thesis.
+- Horizon: SHORT_TERM — buyback/momentum headline with no new catalyst
+  since Aug 3, upcoming Aug 10 earnings adds binary risk, consensus PT
+  ($5.75) implies ~47% below spot; no durable long thesis.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of
+  Aug 3) — nothing displaced by slot count. But consensus PT sitting far
+  below spot means a 7-10% stop can't be paired with a 2:1 upside target
+  any analyst supports — fails the R:R leg of the Entry Checklist on
+  fundamentals alone, same conclusion as Aug 3.
+
+#### Deep dive: SYNA $96.38 -7.15%
+- Catalyst: ON Semiconductor announced an all-stock acquisition of
+  Synaptics aimed at expanding AI/edge-device capabilities. Analysts
+  downgraded SYNA following the announcement, and shares are trading down
+  from the deal-announcement level rather than up on a typical
+  acquisition premium.
+- Why: In an all-stock deal, the target's price tracks the acquirer's
+  stock times the exchange ratio; SYNA trading down (not up on a premium)
+  signals the market reads the offered exchange ratio as light, or is
+  discounting ON Semi's own shares — either way a deal-terms repricing,
+  not organic weakness.
+- Impact: Reads as a structural M&A repricing rather than a one-day
+  headline spike — price should track near the implied deal value until
+  terms firm up or the deal closes, not mean-revert on its own. Volume
+  field is stale prior-session volume (7,397 sh), doesn't confirm today's
+  flow.
+- Horizon: LONG_TERM catalyst (M&A is structural, not headline noise) but
+  NOT a viable fresh long either horizon — upside is capped near the
+  announced deal/exchange-ratio value and the move is a decline, not a
+  breakout; no long entry catalyst here regardless of holding period.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced. Excluded on catalyst-direction grounds before R:R math
+  applies: the Entry Checklist requires a catalyst supporting the trade
+  direction, and this is a down move with capped upside, not a long
+  setup.
+
+#### Deep dive: KLIC $103.11 +6.92%
+- Catalyst: Kulicke & Soffa (semiconductor assembly/test equipment) beat
+  Q3 2026 earnings expectations, spiking as much as +19% premarket before
+  fading to +6.92% by this scan (10:21 ET). Conference call scheduled
+  tomorrow 8:00am.
+- Why: Earnings beat pulling in momentum buyers and short covering —
+  amplified because the stock already carries an elevated P/E (~90.8x),
+  so a beat against a demanding valuation tends to produce an outsized
+  initial reaction.
+- Impact: Meaningful intraday fade already visible (premarket +19% ->
+  +6.92% now), consistent with a one-day headline spike partially
+  mean-reverting rather than holding its gains cleanly. Volume field is
+  stale prior-session total (6,883 sh), not today's flow. Sector
+  read-through worth checking against other watchlist semi-equipment
+  names (AMKR).
+- Horizon: SHORT_TERM — single earnings print with an already-visible
+  intraday fade, consensus PT ($59.80) sits far below spot ($103.11)
+  implying the stock is priced well past analyst targets, and tomorrow's
+  earnings call adds fresh binary risk; no structural catalyst beyond the
+  print.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced by slot count. Best-formed catalyst of the three (real beat,
+  not just headline), but consensus PT ($59.80) is far below spot, so a
+  7-10% stop below $103.11 entry has no analyst-supported target that
+  clears 2:1 R:R — fails the R:R leg of the Entry Checklist on current
+  numbers.
