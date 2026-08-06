@@ -4624,3 +4624,21 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-06 — Setup Scan (18:39 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
+19 errors (mix of Alpaca 503/DNS blips and 429 rate-limit under the script's
+8-parallel-fetch cap) — script logged each and continued, matching its
+never-abort-on-one-bad-ticker design. No Telegram/ClickUp notify sent per
+routine rule (0 grade-A hits).
+
+### Setup Scan (18:39 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| — | — | no hits this run | — | — |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.

@@ -1,0 +1,84 @@
+{
+  "scanned_at": "2026-08-06T22:39:04.729Z",
+  "ny_time": "18:39",
+  "candidates_checked": 60,
+  "hits": [],
+  "errors": [
+    {
+      "symbol": "NIO",
+      "reason": "HTTP 503 for https://data.alpaca.markets/v2/stocks/NIO/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: DNS resolution failure"
+    },
+    {
+      "symbol": "PL",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/PL/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "LUNR",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/LUNR/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "QCOM",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/QCOM/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "SATL",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/SATL/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "HXL",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/HXL/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "STM",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/STM/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "RDW",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/RDW/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "BKSY",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/BKSY/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "UFO",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/UFO/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "UMAC",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/UMAC/bars?timeframe=1Min&start=2026-08-06T04:00:00-04:00&end=2026-08-06T22:39:02.968Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "KTOS",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/KTOS/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "ONDS",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/ONDS/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "AMPX",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/AMPX/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "DPRO",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/DPRO/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "RCAT",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/RCAT/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "AVAV",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/AVAV/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "APT",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/APT/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    },
+    {
+      "symbol": "LAKE",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/LAKE/bars?timeframe=1Day&start=2025-07-22T00:00:00.000Z&end=2026-08-06T00:00:00.000Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    }
+  ]
+}
