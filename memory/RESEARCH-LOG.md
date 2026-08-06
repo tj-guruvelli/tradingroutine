@@ -4358,4 +4358,117 @@ led with) and is flagged explicitly as unreliable/unconfirmed for NBIS.
 
 Apify RAG web browser fully hard-capped again this run (10th+ consecutive
 session since 7/29) — same unresolved operator flag as every session since.
+
+## 2026-08-06 — Gappers (auto-scan 10:22 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **4 hits** of ~60 tracked tickers, all filters applied (|gap|>=5%,
+price>=$3, premarket_volume field not populated by this script so that
+filter was skipped). Apify RAG web browser again returned "Monthly usage
+hard limit exceeded" on all 4 catalyst queries (11th+ consecutive session,
+unresolved since 7/29) — fell back to WebFetch (Benzinga quote + news pages)
+per routine rule. Only 4 hits total, so deep dive covers all 4; no ranks
+6-10 to note as quick-scan-only this run.
+
+**Data-quality flag (UMAC):** this run's Alpaca snapshot shows UMAC +6.88%
+($27.41), but Benzinga's live quote at 10:07 AM ET showed UMAC -4.75%
+($24.51), and this morning's 09:21 ET gappers scan (same session) had UMAC
+at -8.36% ($23.56) on a similar prev_close baseline. Three data points in
+three different directions inside 90 minutes — treating this as an unreliable
+print, not a real move. Flagged in the deep dive below and in the JSON;
+matches the "fake gaps + stale snapshots" failure mode logged 2026-07-31.
+
+### Gappers (auto-scan 10:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | 5.68 | +12.03% | 297 | Q2 2026 earnings beat: EPS $0.18 vs $0.12 YoY, released before open today. |
+| 2 | BW | 10.345 | +7.20% | 6,076 | No same-day news found; latest coverage (buybacks/debt redemption) is 3+ weeks old. |
+| 3 | UMAC | 27.41 | +6.88% | 36,412 | Q2 2026 EPS $(0.16), inline — but price data conflicts with Benzinga and this morning's scan, see flag above. |
+| 4 | ZIM | 28.875 | +6.85% | 3,186 | No same-day news found; latest coverage (Hapag-Lloyd merger) is ~1 month old. |
+
+Deep dive (all 4, no cap needed — only 4 hits this run):
+
+#### Deep dive: APT $5.68 +12.03%
+- Catalyst: Alpha Pro Tech released Q2 2026 results before today's open,
+  EPS of $0.18 vs $0.12 in the year-ago quarter, a 50% YoY increase. No
+  guidance or M&A element found in available coverage; reads as a standard
+  earnings-beat pop for a micro-cap.
+- Why: Earnings beat plus YoY EPS growth pulls in momentum/value buyers on
+  a thinly-traded micro-cap, exaggerating the percentage move.
+- Impact: Premarket volume is extremely thin (297 shares) — this print
+  reflects almost no participation and could reverse hard once regular-
+  session liquidity arrives. No sector read-through found; treat the 12%
+  gap as noise-prone until volume confirms at the open.
+- Horizon: SHORT_TERM — earnings pop on a low-float/low-volume name with no
+  structural catalyst; expect fade risk without volume confirmation, not a
+  swing-hold candidate.
+- Opportunity cost: Would need to displace an existing position or another
+  gapper on today's list to fit inside the 6-position/20%-per-position
+  caps; at 297 shares of premarket volume this setup can't support a sane
+  stop distance for 2:1 R:R — does not clear the bar.
+
+#### Deep dive: BW $10.345 +7.20%
+- Catalyst: Could not confirm a same-day catalyst. Most recent Benzinga
+  coverage is 3+ weeks old (board buyback authorization, $61.4M note
+  redemption) and already priced in. Next actual catalyst (Q2 earnings) is
+  Aug 10 after close, 4 days out.
+- Why: No confirmed news-driven mechanism; a 7.2% premarket move on 6,076
+  shares of volume looks more consistent with a wide bid/ask print or a
+  stale previous-close baseline than a real catalyst.
+- Impact: Unconfirmed / likely noise. Flag as a possible data-quality issue
+  (stale prevDailyBar) rather than a genuine gap — same failure mode as the
+  stale-snapshot bug logged 2026-07-31. Do not treat as tradeable until a
+  fresh catalyst surfaces or Q2 earnings (Aug 10) print.
+- Horizon: SHORT_TERM — no durable catalyst identified; do not carry,
+  re-check before Aug 10 earnings.
+- Opportunity cost: No confirmed catalyst — doesn't clear the bar for any
+  position-sizing discussion; skip and free the slot for the higher-
+  conviction APT earnings beat or a cleaner setup nearer Aug 10.
+
+#### Deep dive: UMAC $27.41 +6.88%
+- Catalyst: Unusual Machines reported Q2 2026 EPS of $(0.16), in line with
+  expectations, released before today's open with a conference call/
+  webcast this morning. Benzinga's live quote (10:07 AM ET) showed UMAC at
+  $24.51, down 4.75% on the day — directly contradicting the Alpaca
+  snapshot used for this scan (current $27.41, prev_close $25.645,
+  +6.88%), and inconsistent with this morning's 09:21 ET gappers scan
+  (UMAC $23.56, -8.36%, similar prev_close baseline).
+- Why: In-line earnings alone rarely drives a 7% premarket pop; the
+  conflicting price data across two independent sources and this morning's
+  own earlier scan suggests the Alpaca snapshot's current price for this
+  name is a stale/bad print, not a genuine catalyst-driven move.
+- Impact: DATA QUALITY FLAG — three data points disagree (this run's
+  Alpaca +6.88%, this run's Benzinga -4.75%, 09:21 ET Alpaca scan -8.36%).
+  Do not act on this gap without confirming the current quote directly via
+  `scripts/alpaca.sh` before any trade discussion.
+- Horizon: SHORT_TERM — underlying earnings are inline (non-catalytic);
+  with directional data in dispute, no durable thesis either way.
+- Opportunity cost: Given the data conflict, this cannot clear the bar for
+  capital allocation until the price discrepancy is resolved; would not
+  displace anything on today's list as-is.
+
+#### Deep dive: ZIM $28.875 +6.85%
+- Catalyst: No same-day catalyst found. The Hapag-Lloyd acquisition
+  (announced Feb 17 at ~38% premarket pop, since progressing through
+  regulatory review) is the only structural story, but the latest specific
+  update is a month old and described ZIM falling, not rising. Q2 earnings
+  aren't due until Aug 19.
+- Why: No confirmed news-driven mechanism for today; on only 3,186 shares
+  of premarket volume, this looks like thin-liquidity noise around
+  merger-arb positioning rather than a fresh catalyst.
+- Impact: Likely noise / stale baseline — extremely low volume for a name
+  that normally trades in volume; a wide bid/ask can produce large %-gaps
+  on tiny prints. Merger-arb spread convergence toward the Hapag-Lloyd deal
+  terms is the only durable structural story, but not dated today.
+- Horizon: LONG_TERM — if verified, the Hapag-Lloyd acquisition is a
+  structural M&A catalyst worth tracking into the 2026 close date, but
+  today's specific 6.85% print is unconfirmed and shouldn't be chased on
+  this data alone.
+- Opportunity cost: Today's print doesn't clear the bar on its own (no
+  fresh catalyst, thin volume); the underlying merger-arb thesis is better
+  tracked as a slower swing setup ahead of the Aug 19 earnings/deal-
+  progress catalysts, not a same-day gapper trade.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
 No trades placed; research only.
