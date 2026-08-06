@@ -140,3 +140,10 @@ operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-open call was HOLD (CRWV badly overextended +51%/4 sessions, OKLO borderline-chase with no catalyst, tanker names undercut by the same Iran/Hormuz de-escalation driving the rally, mega-cap earnings excluded by no-earnings-binary rule). Gappers flagged OPEN/KTOS/NYT/AMPX/GFS as research-only; none cleared confluence. 20 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Aug 6 — EOD Snapshot (Day 21, Thursday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. No Market-Open or Pre-Market TRADE-LOG entry found for today (routines did not log one, or none ran). 21 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
