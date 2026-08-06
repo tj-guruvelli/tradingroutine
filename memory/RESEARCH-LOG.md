@@ -4609,3 +4609,18 @@ Deep dive (all 4, no cap needed — only 4 hits this run):
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 No trades placed; research only.
+
+## 2026-08-06 — Setup Scan (16:39 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:39 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| — | — | no hits this run | — | — |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
