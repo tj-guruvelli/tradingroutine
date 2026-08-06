@@ -4212,3 +4212,150 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-06 — Gappers (auto-scan 09:21 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **6 hits** of ~60 tracked tickers, all filters applied (|gap|>=5%,
+price>=$3, premarket_volume field not populated by this script so that
+filter was skipped). Apify RAG web browser returned "Monthly usage hard
+limit exceeded" on all catalyst and deep-dive queries (10th+ consecutive
+session, unresolved since 7/29) — fell back to WebFetch (Benzinga for
+quick-scan headlines, stockanalysis.com for deep-dive fundamentals) per
+routine rule. Deep-dive capped at top 5 by |gap%|; rank 6 (NBIS) got
+quick-scan only.
+
+Note: several Benzinga top-of-page headlines were stale or direction-
+mismatched vs. today's actual gap (QBTS, UMAC, NBIS) — stockanalysis.com's
+fundamentals pull surfaced the more likely real, direction-consistent
+catalyst for QBTS (Q2 earnings miss, not the Verafin partnership Benzinga
+led with) and is flagged explicitly as unreliable/unconfirmed for NBIS.
+
+### Gappers (auto-scan 09:21 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QBTS | 18.955 | -11.30% | 782,857 | Q2 2026 earnings miss (wider losses, revenue miss) despite 1,120% bookings surge and new Nasdaq Verafin partnership. |
+| 2 | RDW | 11.81 | +10.07% | 712,124 | Q2 2026 earnings beat ($117.07M rev vs $107.66M consensus), record backlog, raised FY26 guidance to $450-500M. |
+| 3 | UMAC | 23.56 | -8.36% | 81,063 | Q2 2026 revenue +687% YoY to $16.7M (beat), yet stock fell — new $30M Powerus equity stake, direction unexplained. |
+| 4 | BKSY | 26.825 | +7.13% | 34,910 | Q2 2026 earnings this morning reaffirmed FY26 guidance ($130-150M), new Gen-3 AI government contracts. |
+| 5 | PEPG | 2.11 | +6.03% | 37,288 | DSMB recommended advancing PGN-EDODM1 to highest dose cohort on favorable Phase 2 tolerability/efficacy signals. |
+| 6 | NBIS | 207.365 | -5.29% | 415,844 | Benzinga cites a ~6% technical-driven rise — contradicts today's -5.29% gap; treat as stale/unconfirmed. |
+
+#### Deep dive: QBTS $18.955 -11.30%
+- Catalyst: D-Wave reported Q2 2026 earnings with a 1,120% surge in
+  bookings and a $40.7M backlog, but wider-than-expected losses and
+  revenue that missed consensus drove the stock down. Separately the
+  company announced a Nasdaq Verafin partnership for financial-crime
+  detection and a quantum-error-correction hardware breakthrough, neither
+  of which offset the earnings miss.
+- Why: Classic earnings-miss mechanism — headline growth metrics (bookings,
+  backlog) were overshadowed by a wider loss and revenue miss, so
+  growth/momentum investors de-risked despite incrementally positive
+  partnership/technology news.
+- Impact: Volume (782,857, prior-session basis) is elevated for the name;
+  reads as a genuine earnings-reaction repricing, not a one-day headline
+  spike — but it's a DOWN move on a speculative, pre-scale quantum name,
+  not a long setup as-is.
+- Horizon: SHORT_TERM, and only as a bearish/avoid signal — no long thesis
+  here; an earnings-miss gap-down needs several sessions to show
+  stabilization before any long re-entry could even be considered.
+- Opportunity cost: N/A for a long entry — fails the catalyst leg of the
+  Entry Checklist for a long (the catalyst fired negative). 0/6 positions
+  open, 0/3 weekly trades used (week of Aug 3) — nothing displaced
+  regardless.
+
+#### Deep dive: RDW $11.81 +10.07%
+- Catalyst: Redwire (space/defense sensors-avionics-software) beat Q2 2026
+  revenue consensus ($117.07M vs $107.66M) with record revenue, gross
+  margins, and contracted backlog. Management raised FY26 guidance to
+  $450M-$500M and cited a $21.5M defense-robotics follow-on order plus
+  Indiana/Huntsville facility expansions.
+- Why: Earnings beat plus raised guidance pulls in momentum buyers — a
+  structural re-rating on a guidance reset, reinforced by backlog and
+  margin improvement together, not just a headline pop.
+- Impact: Move reads as fundamentally driven (beat-and-raise, record
+  backlog) rather than a one-day spike. BKSY moved on similarly strong Q2
+  space/defense results the same morning — a sector-wide read-through per
+  the sector-momentum rule.
+- Horizon: LONG_TERM — guidance reset and backlog growth are structural
+  and align with space/defense sector momentum alongside BKSY's pop today,
+  though today's +10% print itself isn't enterable (chase rule: no entry
+  within 3% of a >5% up day).
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  existing holding displaced. Ranks above UMAC/PEPG on catalyst clarity; a
+  7-10% stop against a guidance-driven thesis could plausibly clear 2:1
+  R:R on a pullback entry, but not chaseable at today's price.
+
+#### Deep dive: UMAC $23.56 -8.36%
+- Catalyst: Unusual Machines (NDAA-compliant drone components) reported Q2
+  2026 revenue up 687% YoY to $16.7M on enterprise demand, beating
+  estimates, and disclosed a $30M equity investment in drone maker Powerus
+  plus added Orlando manufacturing capacity. Stock gapped down -8.36%
+  despite the beat.
+- Why: Mechanism is ambiguous, not a clean beat-and-raise pop — a strong
+  revenue beat with a down gap most likely reflects profit-taking/"sell
+  the news" after a prior run-up or dilution concerns from funding the
+  $30M stake; no source found explains the down move directly.
+- Impact: Volume (81,063, prior-session basis) is modest for the name;
+  without a confirmed negative catalyst the move reads more technical/
+  positioning-driven than headline-driven, which cuts against treating it
+  as a reliable signal in either direction.
+- Horizon: SHORT_TERM — fundamentals (revenue beat, Strong Buy consensus,
+  $34.86 PT) contradict the day's price action; needs a session or two of
+  confirmation before any directional read is trustworthy.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  displacement issue. The mixed signal (fundamentals up, price down)
+  likely fails the Confluence rule outright today; would rank behind
+  RDW/BKSY/PEPG on catalyst clarity for the week's 3-trade budget.
+
+#### Deep dive: BKSY $26.825 +7.13%
+- Catalyst: BlackSky (space-based intelligence/satellite imagery)
+  released Q2 2026 earnings this morning reaffirming FY26 revenue guidance
+  of $130M-$150M and disclosing new Gen-3 AI government contracts and
+  satellite-development wins. TTM revenue $108.92M, TTM net loss $66.71M,
+  analyst consensus Strong Buy with $40.50 average PT.
+- Why: Earnings-day reaffirmation of guidance plus new contract wins is
+  pulling in momentum buyers on a still net-loss-making name — the market
+  is pricing contract-pipeline/guidance durability over current
+  profitability.
+- Impact: Same-morning move directly tied to the earnings release, not a
+  stale headline; paired with RDW's earnings pop today this reads as
+  sector-wide space/defense strength, reinforcing the sector-momentum read
+  rather than a fade risk.
+- Horizon: LONG_TERM if the space/defense sector-rotation read holds (two
+  names, RDW and BKSY, both up on Q2 beats/reaffirmed guidance same
+  morning) — reasoning ties to the Confluence/sector-momentum rules, not
+  just today's single print.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used. Of today's
+  up-movers this and RDW are the cleanest catalyst-to-move fits (both
+  earnings-day, both guidance-affirming); a 7-10% stop against a
+  guidance/contract thesis is the more plausible 2:1 R:R candidate, but
+  still not chaseable at today's already +7% print.
+
+#### Deep dive: PEPG $2.11 +6.03%
+- Catalyst: PepGen (clinical-stage biotech, oligonucleotide therapies for
+  neuromuscular/neurologic disease) had an independent DSMB recommend
+  advancing lead program PGN-EDODM1 (Phase 2, myotonic dystrophy type 1)
+  into the highest-dose cohort after favorable tolerability and promising
+  early efficacy signals — a more current, more positive update than the
+  disappointing March 2026 low-dose readout.
+- Why: A favorable interim clinical-trial signal (DSMB dose-escalation
+  green light) pulling in event-driven biotech buyers sidelined since the
+  March low-dose data; a risk-reduction event, not a full efficacy
+  readout.
+- Impact: $2 clinical-stage biotech — a single trial-status update, not a
+  broad volume-vs-normal comparison; sustainability is inherently capped
+  by binary clinical risk ahead of full Phase 2 data, more a de-risking
+  pop than a durable re-rate.
+- Horizon: SHORT_TERM — interim DSMB signals are encouraging but not a
+  full data readout; Phase 2 completion and any FDA interaction remain the
+  real catalysts, so this doesn't clear the bar for a multi-week
+  structural thesis yet.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used. As a
+  sub-$3 clinical-stage biotech with binary trial risk, stop/target math
+  is unreliable (event risk can gap through a stop) — the weakest 2:1 R:R
+  candidate of the top 5 despite the positive catalyst.
+
+Apify RAG web browser fully hard-capped again this run (10th+ consecutive
+session since 7/29) — same unresolved operator flag as every session since.
+No trades placed; research only.

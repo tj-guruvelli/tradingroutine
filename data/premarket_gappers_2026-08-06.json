@@ -1,0 +1,95 @@
+{
+  "scanned_at": "2026-08-06T13:21:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "QBTS",
+      "price": 18.955,
+      "gap_pct": -11.3,
+      "premarket_volume": null,
+      "catalyst": "D-Wave Quantum fell after Q2 2026 results showed wider losses and lower-than-expected revenue despite a 1,120% bookings surge and a new Nasdaq Verafin partnership.",
+      "headlines": [
+        "D-Wave Quantum shares surged Monday following a Nasdaq Verafin quantum-computing collaboration (stale Benzinga top-of-page item, contradicts today's down gap)"
+      ],
+      "catalyst_detail": "D-Wave reported Q2 2026 earnings with a 1,120% surge in bookings and a $40.7M backlog, but wider-than-expected losses and revenue that missed consensus drove the stock down. Separately the company announced a commercial partnership with Nasdaq Verafin to explore quantum computing for financial-crime detection, and a hardware breakthrough in quantum error correction, but neither offset the earnings miss.",
+      "why": "Classic earnings-miss mechanism: headline growth metrics (bookings, backlog) were overshadowed by a wider loss and revenue miss, so momentum/growth investors de-risked despite the longer-term partnership and technology news being incrementally positive.",
+      "impact": "Volume (782,857, prior-session basis) is elevated for the name; the move reads as a genuine earnings-reaction repricing rather than a one-day headline spike, but is a DOWN move on a highly speculative, pre-revenue-scale quantum-computing name — not a long setup as-is.",
+      "horizon": "SHORT_TERM, and only as a bearish/avoid signal — no long thesis here; an earnings-miss gap-down needs several sessions to show whether it stabilizes before any long re-entry could even be considered.",
+      "opportunity_cost": "N/A for a long entry — this is a decliner on a miss, fails the catalyst leg of the Entry Checklist for a long. 0/6 positions open and 0/3 weekly trades used today, so no existing holding or higher-ranked gapper would need to be displaced regardless."
+    },
+    {
+      "rank": 2,
+      "symbol": "RDW",
+      "price": 11.81,
+      "gap_pct": 10.07,
+      "premarket_volume": null,
+      "catalyst": "Redwire rose after Q2 2026 earnings beat estimates (revenue $117.07M vs. $107.66M consensus) with record backlog and raised FY26 guidance to $450-500M.",
+      "headlines": [
+        "Redwire stock rose following Q2 earnings, record backlog cited (Benzinga)"
+      ],
+      "catalyst_detail": "Redwire, a space/defense sensors-avionics-software provider, beat Q2 2026 revenue consensus ($117.07M vs $107.66M) and reported record revenue, gross margins, and contracted backlog. Management raised FY26 revenue guidance to $450M-$500M and cited new contract wins including a $21.5M follow-on defense-robotics order plus facility expansions in Indiana and Huntsville.",
+      "why": "Earnings beat plus raised guidance pulls in momentum buyers — the mechanism is a structural re-rating on a guidance reset, not just a headline pop, since backlog and margin metrics also improved together.",
+      "impact": "Move looks driven by real fundamental improvement (beat-and-raise plus record backlog) rather than a one-day spike; BKSY moved on similarly strong Q2 space/defense results the same morning, a sector-wide read-through worth noting per the sector-momentum rule.",
+      "horizon": "LONG_TERM — guidance reset and backlog growth are structural, and align with space/defense sector momentum alongside BKSY's own earnings pop today, though today's +10% print itself is not enterable (chase rule: no entry within 3% of a >5% up day).",
+      "opportunity_cost": "0/6 positions open and 0/3 weekly trades used, so this doesn't need to displace an existing holding. Against today's own list it ranks above UMAC/PEPG on catalyst clarity; a 7-10% stop against a guidance-driven thesis could plausibly clear 2:1 R:R on a pullback entry, but not chasable at today's price."
+    },
+    {
+      "rank": 3,
+      "symbol": "UMAC",
+      "price": 23.56,
+      "gap_pct": -8.36,
+      "premarket_volume": null,
+      "catalyst": "Unusual Machines fell despite Q2 2026 revenue surging 687% YoY to $16.7M (beating estimates), alongside a new $30M equity stake in drone maker Powerus.",
+      "headlines": [
+        "Q2 2026 revenue +687% YoY to $16.7M, beat expectations (stockanalysis.com); unrelated stale Eric Trump-startup/AMD-chips story (Benzinga, dated Jul 26)"
+      ],
+      "catalyst_detail": "Unusual Machines, an NDAA-compliant drone-component maker, reported Q2 2026 revenue up 687% YoY to $16.7M driven by enterprise demand, comfortably beating analyst expectations. The same period the company disclosed a $30M equity investment in drone manufacturer Powerus and added Orlando manufacturing capacity. Despite the beat, the stock gapped down -8.36% today.",
+      "why": "Mechanism is ambiguous and NOT a clean beat-and-raise pop: a strong revenue beat but a down gap most likely reflects profit-taking/'sell the news' after a prior run-up, dilution concerns from funding the $30M Powerus stake, or a margin/guidance detail not captured in the top-line beat. No source found explains the down move directly.",
+      "impact": "Volume (81,063, prior-session basis) is modest for the name; without a confirmed negative catalyst the move reads more like technical/positioning-driven than headline-driven, which cuts against treating it as a reliable signal in either direction.",
+      "horizon": "SHORT_TERM — fundamentals (revenue beat, Strong Buy consensus, $34.86 PT) are positive but contradict the day's price action; needs a session or two of confirmation before any directional read, long or short, is trustworthy.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used — no displacement issue. But the mixed signal (fundamentals up, price down) means it likely fails the Confluence rule outright today; would rank behind RDW/BKSY/PEPG on catalyst clarity for the week's 3-trade budget."
+    },
+    {
+      "rank": 4,
+      "symbol": "BKSY",
+      "price": 26.825,
+      "gap_pct": 7.13,
+      "premarket_volume": null,
+      "catalyst": "BlackSky rose after Q2 2026 earnings this morning reaffirmed FY26 revenue guidance of $130-150M and highlighted new Gen-3 AI government contracts.",
+      "headlines": [
+        "BlackSky shares surged following Q2 2026 earnings, released before market open today (Benzinga)"
+      ],
+      "catalyst_detail": "BlackSky, a space-based intelligence/satellite-imagery provider, released Q2 2026 earnings this morning (Aug 6) reaffirming full-year revenue guidance of $130M-$150M and disclosing new government contracts for Gen-3 AI solutions and satellite development. TTM revenue is $108.92M with a $66.71M net loss; analyst consensus is Strong Buy with a $40.50 average price target.",
+      "why": "Earnings-day reaffirmation of guidance plus new government contract wins is pulling in momentum buyers on a name still net-loss-making — the market is pricing the contract pipeline and guidance durability more than current profitability.",
+      "impact": "Same-morning move directly tied to the earnings release (not a stale headline); paired with RDW's earnings pop today this reads as sector-wide space/defense strength, not an isolated one-off — reinforces the sector-momentum read rather than a fade risk.",
+      "horizon": "LONG_TERM if the space/defense sector-rotation read holds (two names, RDW and BKSY, both up on Q2 beats/reaffirmed guidance same morning) — reasoning ties to the Confluence/sector-momentum rules, not just today's single print.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used. Of today's up-movers this and RDW are the cleanest catalyst-to-move fits (both earnings-day, both guidance-affirming); a 7-10% stop against a guidance/contract thesis is the more plausible 2:1 R:R candidate of the two down-gap/up-gap set, but still not chaseable at today's already +7% print."
+    },
+    {
+      "rank": 5,
+      "symbol": "PEPG",
+      "price": 2.11,
+      "gap_pct": 6.03,
+      "premarket_volume": null,
+      "catalyst": "PepGen rose after an independent DSMB recommended advancing its lead myotonic-dystrophy therapy PGN-EDODM1 to the highest dose cohort following positive early Phase 2 data.",
+      "headlines": [
+        "DSMB recommends advancing PGN-EDODM1 into highest-dose cohort on favorable tolerability/efficacy signals (stockanalysis.com); stale March 2026 Benzinga item re: limited splicing correction is outdated"
+      ],
+      "catalyst_detail": "PepGen is a clinical-stage biotech developing oligonucleotide therapies for neuromuscular/neurologic disease; its lead program PGN-EDODM1 is in Phase 2 for myotonic dystrophy type 1. An independent Data Safety Monitoring Board recommended advancing the trial into the highest-dose cohort after favorable tolerability and promising early efficacy signals — a more current and more positive update than the March 2026 low-dose readout that had earlier disappointed the market.",
+      "why": "Mechanism is a favorable interim clinical-trial signal (DSMB dose-escalation green light) pulling in event-driven biotech buyers who had been sidelined since the disappointing March low-dose data; it's a risk-reduction event, not a full efficacy readout.",
+      "impact": "This is a $2 clinical-stage biotech — a single trial-status update, not a broad volume-vs-normal comparison metric; sustainability is inherently capped by binary clinical risk ahead of full Phase 2 data, more a de-risking pop than a durable re-rate.",
+      "horizon": "SHORT_TERM — interim DSMB signals are encouraging but not a full data readout; myotonic-dystrophy Phase 2 completion and any FDA interaction remain the real catalysts, so this doesn't clear the bar for a multi-week structural thesis yet.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used. As a sub-$3 clinical-stage biotech with binary trial risk, stop/target math is unreliable (event risk can gap through a stop), so even before sizing it's the weakest 2:1 R:R candidate of the top 5 despite the positive catalyst."
+    },
+    {
+      "rank": 6,
+      "symbol": "NBIS",
+      "price": 207.365,
+      "gap_pct": -5.29,
+      "premarket_volume": null,
+      "catalyst": "Benzinga's top article cites a ~6% technical-driven rise on a key price level, which contradicts today's -5.29% gap in this scan — treat as stale/unconfirmed.",
+      "headlines": []
+    }
+  ]
+}
