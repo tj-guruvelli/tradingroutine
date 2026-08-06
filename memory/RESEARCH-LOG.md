@@ -3678,6 +3678,102 @@ unchanged: 0/3 trade slots used. ClickUp notify call returned HTTP 500
 (same recurring failure as 7/31, 8/3 — keys confirmed present, not a
 credential issue) — non-blocking since this was a silent/non-urgent call.
 
+## 2026-08-06 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 6
+topic queries — same outage flagged continuously since 2026-07-29, 9th+
+consecutive session, still not reset. Fell back to native WebSearch
+(Yahoo domains blocked via `blocked_domains`) per routine rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable for any
+candidate, same unresolved gap as every session since 2026-07-25 (21
+straight sessions now).
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 21 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 3, unchanged).
+
+### Market Context (WebSearch fallback, Thu 8/6 premarket ET)
+- **Oil**: WTI ~$78.42-80.53/bbl, Brent ~$83.45/bbl (per Aug 4 opens —
+  no clean same-day print found). Still swinging on every Middle East
+  headline per Bloomberg's Thu wrap.
+- **S&P 500 futures — mixed/divergent**: Dow +0.33%, SPY +0.22%, Nasdaq
+  (QQQ) -0.3% lagging. Follows Wed's close: S&P 500 -0.17% to 7,723.55,
+  snapping a 4-session win streak (profit-taking in tech) even as the Dow
+  hit a fresh record. Polymarket implied ~69% odds of an "Up" open today.
+- **VIX — subdued, ticking down**: ~15.77 (-4.4%), opened ~16.15. Calm
+  into a dense earnings day.
+- **Earnings — today, before open**: ConocoPhillips (COP), Cloudflare
+  (NET), Airbnb (ABNB) headline the print; ~56 companies reporting
+  today across sectors (Tech 11, Comm Services 8, Healthcare 7, Financials
+  6, others fewer). None held/watchlist-tagged.
+- **Econ calendar**: Q2 preliminary productivity data today. Tomorrow
+  (Fri 8/7) brings June nonfarm payrolls, hourly earnings, unemployment
+  rate — a real catalyst risk for anything opened today and held overnight.
+  No CPI/FOMC this week.
+- **Sector YTD**: Semiconductors the "runaway leader" (Micron/SanDisk
+  +248%/+736% YTD per one source); July flipped to Energy/Industrials/
+  Materials/Consumer-Staples leading (Energy sector ETF +12% in July on
+  the oil rebound) while Tech lagged (-8% in July on AI-spend jitters).
+  Same broad-YTD-vs-recent-month conflict flagged 8/3 and 8/5 — still not
+  sizing sector bets off either figure.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Watchlist spot-checks (live Alpaca quotes, since MCP/Apify both down)
+- **CRWV (CoreWeave)** — bid $85.48, down from $91.89 close on 8/4 (~-7%
+  pullback off the +51%/4-session extension). Cooling, not a fresh entry;
+  still no dated catalyst for today specifically.
+- **OKLO (Oklo)** — bid $40.85, down from $43.34 close on 8/4 (~-5.7%).
+  Also cooling off the chase-rule threshold flagged yesterday. No fresh
+  today-specific catalyst.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **CRWV/OKLO — watch only, not actionable.** Both AI-buildout names
+   pulled back overnight after prior-week extensions; no fresh catalyst
+   today, confluence unsatisfiable (`tradingview-data` MCP down). Would
+   need a fresh, dated catalyst plus a stabilized base before re-evaluating.
+2. **Semiconductor momentum theme (AMKR/KLIC on watchlist)** — sector is
+   the strongest YTD momentum leader per research, but no company-specific
+   catalyst dated today for either name, and no confluence check possible.
+   Flagged for closer look on a future session with a real catalyst, not
+   actionable today.
+3. **COP/NET/ABNB earnings today — excluded.** All report before today's
+   open; strategy's no-earnings-binary-bet rule excludes trading the print
+   regardless of direction. None are watchlist-tagged tickers anyway.
+
+### Risk Factors
+- **Apify still fully down** — 9th+ consecutive session (since 7/29), over
+  two full weeks. Operator: check Apify billing/plan — blocking the
+  primary research path indefinitely.
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  since 7/25, now 21 straight sessions. Same operator flag, escalating.
+- **Tomorrow's jobs report (Fri 8/7)** — nonfarm payrolls/unemployment is
+  a real overnight-hold risk for anything opened today; factor into any
+  stop/size decision if a setup does clear later today.
+- **Nasdaq lagging in premarket** (-0.3%) while Dow/S&P lead — a rotation
+  signal worth watching, not yet actionable without confluence.
+- **Sector-YTD source conflict** (broad-YTD leaders vs. July-only leaders)
+  unresolved — don't size sector bets off either figure.
+
+### Decision
+**HOLD — no trades.** Futures are mixed (Dow/SPY up, Nasdaq down) after
+Wednesday's profit-taking snapped the S&P's win streak; VIX stays calm.
+No watchlist name clears the entry checklist: CRWV/OKLO are cooling off
+prior extensions with no fresh catalyst, semiconductor sector momentum has
+no company-specific trigger dated today, and today's earnings names
+(COP/NET/ABNB) are excluded by the no-earnings-binary rule and aren't
+watchlist tickers anyway. `tradingview-data` MCP still down (21 straight
+sessions) and Apify still hard-capped (9th+ consecutive session) —
+confluence rule unsatisfiable regardless. Zero positions, zero orders, 21
+straight flat trading days — patience over activity. Tomorrow's jobs
+report is a reason for extra caution on any new overnight hold. Weekly
+trade count unchanged: 0/3 (week of Aug 3).
+
 ## 2026-08-04 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
