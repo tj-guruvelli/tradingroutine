@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-08-06T12:24:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "RDW",
+      "price": 11.81,
+      "gap_pct": 10.07,
+      "premarket_volume": 712124,
+      "catalyst": "Redwire stock rises as strong Q2 demand drives record backlog.",
+      "headlines": ["Redwire Stock Rises as Strong Q2 Demand Drives Record Backlog"],
+      "catalyst_detail": "Redwire reported Q2 2026 results Aug 5: record revenue of $117.1M (+89.6% YoY, beat estimates), gross margin turned positive at 27.8%, and contracted backlog hit a record $542.1M (+64.5% YoY, LTM book-to-bill 1.52). GAAP net loss narrowed by $56.0M to $41.0M. New defense contract wins (Stalker Block 30 follow-ons for the Marine Corps/Army, a multi-year Penguin UAS deal with an undisclosed NATO country) underpinned the backlog growth, and the company reaffirmed FY26 revenue guidance of $450-500M.",
+      "why": "Beat-and-raise-adjacent print (revenue beat, margin inflection, record backlog, reaffirmed guidance) plus fresh defense contract wins is classic momentum-buyer bait -- traders chase the backlog/book-to-bill number as a forward-revenue signal even though the company is still adjusted-EBITDA-negative (-$3.2M).",
+      "impact": "712K shares pre-market on a non-mega-cap name is a real volume spike, not thin-tape noise, and it's a same-day earnings reaction, so the move should mostly hold through the session but carries one-day-headline-spike/fade risk given adjusted EBITDA is still negative. No peer read-through flagged among other watchlist space names (RKLB/ASTS/IRDM/LUNR/BKSY) in this scan.",
+      "horizon": "LONG_TERM, record contracted backlog (+64.5% YoY, book-to-bill 1.52) and reaffirmed FY26 guidance are structural, not just headline noise, and RDW sits in the space/defense sector already on the watchlist -- still needs a later /trade confluence check, not a same-day chase given today's 10%+ gap.",
+      "opportunity_cost": "0/6 open positions and 0/3 weekly trades used this week, so RDW wouldn't displace an existing holding or a higher-ranked gapper today (it's the only hit). Entry is barred right now by the 'never chase >5% within 3%' rule (gapped 10.07% pre-market); waiting for a pullback/basing entry preserves room to size up to 20% of equity, but post-earnings volatility may make a sane stop distance hard to clear the 2:1 R:R minimum same-day. Research only, no order recommended here."
+    }
+  ]
+}

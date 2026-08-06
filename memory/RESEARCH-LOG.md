@@ -4212,3 +4212,55 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 0 grade-B hits.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-06 — Gappers (auto-scan 08:24 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **1 hit** of 60 tracked tickers (|gap|>=5%, price>=$3,
+premarket_volume field not populated by this script so that filter was
+skipped). Apify RAG web browser still "Monthly usage hard limit exceeded"
+on both queries (10th+ consecutive session) — fell back to WebFetch
+(Benzinga) for the quick-scan catalyst and native WebSearch (Yahoo domains
+blocked via `blocked_domains`) for the deep-dive per routine rule.
+
+### Gappers (auto-scan 08:24 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RDW | 11.81 | +10.07% | 712,124 | Redwire stock rises as strong Q2 demand drives record backlog. |
+
+#### Deep dive: RDW $11.81 +10.07%
+- Catalyst: Redwire reported Q2 2026 results Aug 5: record revenue of
+  $117.1M (+89.6% YoY, beat estimates), gross margin turned positive at
+  27.8%, and contracted backlog hit a record $542.1M (+64.5% YoY, LTM
+  book-to-bill 1.52). GAAP net loss narrowed by $56.0M to $41.0M. New
+  defense contract wins (Stalker Block 30 follow-ons for the Marine
+  Corps/Army, a multi-year Penguin UAS deal with an undisclosed NATO
+  country) underpinned the backlog growth; company reaffirmed FY26 revenue
+  guidance of $450-500M.
+- Why: Beat-and-raise-adjacent print (revenue beat, margin inflection,
+  record backlog, reaffirmed guidance) plus fresh defense contract wins is
+  classic momentum-buyer bait — traders chase the backlog/book-to-bill
+  number as a forward-revenue signal even though the company is still
+  adjusted-EBITDA-negative (-$3.2M).
+- Impact: 712K shares pre-market on a non-mega-cap name is a real volume
+  spike, not thin-tape noise, and it's a same-day earnings reaction, so the
+  move should mostly hold through the session but carries one-day-
+  headline-spike/fade risk given adjusted EBITDA is still negative. No
+  peer read-through flagged among other watchlist space names
+  (RKLB/ASTS/IRDM/LUNR/BKSY) in this scan.
+- Horizon: LONG_TERM — record contracted backlog (+64.5% YoY, book-to-bill
+  1.52) and reaffirmed FY26 guidance are structural, not just headline
+  noise, and RDW sits in the space/defense sector already on the
+  watchlist; still needs a later `/trade` confluence check, not a
+  same-day chase given today's 10%+ gap.
+- Opportunity cost: 0/6 open positions and 0/3 weekly trades used this
+  week, so RDW wouldn't displace an existing holding or a higher-ranked
+  gapper today (it's the only hit). Entry is barred right now by the
+  "never chase >5% within 3%" rule (gapped 10.07% pre-market); waiting for
+  a pullback/basing entry preserves room to size up to 20% of equity, but
+  post-earnings volatility may make a sane stop distance hard to clear the
+  2:1 R:R minimum same-day. Research only, no order recommended here.
+
+Deep-dive cap: 5 (only 1 hit this run, so all of it got the deep dive).
+No execution here — research only. Feed to `/trade` for the full
+safety-check gate if pursued next session.
