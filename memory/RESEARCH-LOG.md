@@ -4472,3 +4472,140 @@ Deep dive (all 4, no cap needed — only 4 hits this run):
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 No trades placed; research only.
+
+## 2026-08-06 — Gappers (auto-scan 11:32 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **4 hits** of ~60 tracked tickers, all filters applied (|gap|>=5%,
+price>=$3, premarket_volume field not populated by this script so that
+filter was skipped). Apify RAG web browser again returned "Monthly usage
+hard limit exceeded" on all 4 catalyst queries (12th+ consecutive session,
+unresolved since 7/29). **Benzinga WebFetch fallback also failed this run —
+403 Forbidden on all 4 quote pages, and on a CNBC probe too**, while a
+non-finance URL (example.com) fetched fine, so this reads as bot-blocking on
+those specific sites rather than a general WebFetch/proxy outage. Substituted
+stocktitan.net (not in the routine's documented fallback chain) as a
+last-resort source so the scan wasn't skipped; flagged in the JSON `note`
+field. Only 4 hits total, so deep dive covers all 4; no ranks 6-10 to note
+as quick-scan-only this run.
+
+**Data-quality flag (UMAC) continues:** this run's Alpaca snapshot shows
+UMAC -6.53% ($24.10, prev_close $25.785); the prior 10:22 ET run this
+session had UMAC at +6.88% ($27.41, prev_close $25.645) — a ~12% swing with
+a shifting prev_close baseline in roughly an hour. Third consecutive run
+today with inconsistent UMAC pricing (09:21 ET: -8.36%, 10:22 ET: +6.88%,
+this run: -6.53%). Treat as an unreliable print, matching the "fake gaps +
+stale snapshots" failure mode logged 2026-07-31.
+
+**BW also flipped sign vs the prior run:** +7.20% at 10:22 ET, -7.04% now,
+with no fresh news either time — consistent with a stale-baseline/wide-spread
+issue rather than two real catalysts an hour apart.
+
+### Gappers (auto-scan 11:32 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | 27.215 | -7.76% | 4,592 | No same-day news found; latest coverage (Oaktree/Njord 19.86% stake disclosure) is from Jun 24, over a month old. |
+| 2 | KLIC | 100.76 | +7.50% | 16,649 | Q3 2026 earnings beat reported Aug 5: revenue $330.4M vs $242.6M prior quarter, GAAP EPS $1.07 vs $(0.06) YoY, guided Q4 higher. |
+| 3 | BW | 8.98 | -7.04% | 18,348 | No same-day news; latest item (Aug 3) only scheduled the Q2 earnings call for Aug 10. |
+| 4 | UMAC | 24.10 | -6.53% | 90,749 | Q2 2026 shareholder letter today: revenue +687% YoY, but stock gapping down — see data-quality flag above. |
+
+Deep dive (all 4, no cap needed — only 4 hits this run):
+
+#### Deep dive: TRMD $27.215 -7.76%
+- Catalyst: No news dated today. Most recent TRMD headlines are from June:
+  a Jun 24 disclosure that Oaktree's OCM Njord Holdings holds 19.86% of
+  TORM shares, a Jun 2 RSU-driven share-count increase, and a May 21 CEO
+  share sale (~549,177 shares, ~DKK 112.8M). Last operational news was May
+  13 Q1 2026 results (USD 122m net profit, USD 0.70/share interim dividend,
+  raised 2026 guidance) — nearly 3 months old.
+- Why: No confirmed same-day catalyst; a -7.76% premarket move on very thin
+  volume (4,592 shares) looks more like a stale/wide-spread print or
+  sector-wide tanker weakness than a company-specific news-driven move.
+- Impact: Volume is too thin to confirm real participation. TRMD is a
+  product-tanker name — check tanker peers (ASC, STNG, INSW) for sector-wide
+  weakness before treating this as company-specific. Reads as noise-prone
+  until volume confirms at the open.
+- Horizon: SHORT_TERM — no structural catalyst identified; nothing here
+  would clear the Confluence rule's catalyst requirement even if the price
+  move is real.
+- Opportunity cost: Zero open positions today, so nothing to displace, but
+  no catalyst fails the Confluence rule's catalyst leg outright, and 4,592
+  shares of volume can't support a sane stop distance for 2:1 R:R — doesn't
+  clear the bar for one of the 3 weekly trade slots.
+
+#### Deep dive: KLIC $100.76 +7.50%
+- Catalyst: Kulicke & Soffa reported Q3 FY2026 results after the Aug 5
+  close: net revenue $330.4M (up from $242.6M in Q2, nearly double the
+  $148.4M a year ago), GAAP diluted EPS $1.07 vs $(0.06) in Q3 2025,
+  non-GAAP EPS $1.20, gross margin expanded to 47.8%. Guided Q4 revenue to
+  ~$375M ±$20M and GAAP EPS to $1.29 ±10%.
+- Why: Beat-and-raise: revenue nearly doubling YoY plus a Q4 guide above
+  the current run-rate pulls in momentum and semi-cap-equipment buyers, a
+  textbook earnings-beat-plus-raised-guidance gap.
+- Impact: Volume (16,649 shares in this snapshot) is moderate but the
+  session is already ~1.5 hours old at this scan time (11:30 ET), not true
+  premarket. A near-doubling of revenue plus a guidance raise is
+  fundamentally driven and more likely to hold than a single-day headline
+  spike. Check semi-cap peers (ASML, AMAT, LRCX) for chip-equipment sector
+  read-through.
+- Horizon: LONG_TERM — structural, a guidance raise off a real revenue
+  inflection fits an early/mid-cycle Tech overweight per the sector-rotation
+  table, worth carrying past a single session if it later passes the
+  Confluence rule.
+- Opportunity cost: Zero open positions today, so nothing to displace. Best
+  name of today's 4 gappers — the only one with a confirmed same-day
+  beat-and-raise catalyst. Still needs a live tradingview-data confluence
+  check (2nd indicator) and a stop-distance check before using one of the 3
+  weekly trade slots; at $100.76/share a position would eat close to the
+  full 20%-of-equity cap on a ~$10k account — size via `scripts/size.mjs`
+  before any order.
+
+#### Deep dive: BW $8.98 -7.04%
+- Catalyst: No news dated today. Aug 3 release only scheduled the Q2 2026
+  earnings call for Aug 10; the Jul 13 items (full redemption of $61.4M
+  6.50% senior notes, $50M buyback authorization) are 3+ weeks old and
+  already priced in.
+- Why: No confirmed same-day driver; a -7.04% premarket move on 18,348
+  shares with no fresh news reads like noise or a stale-baseline print —
+  same failure mode flagged in this morning's earlier scan (BW +7.20% at
+  10:22 ET vs -7.04% now, opposite sign inside an hour) and the 2026-07-31
+  log entry, not a genuine catalyst.
+- Impact: Unconfirmed / likely a data-quality issue rather than a real
+  catalyst. Do not treat as tradeable until the Aug 10 Q2 print or a fresh
+  news item surfaces.
+- Horizon: SHORT_TERM — no catalyst to anchor a thesis to; even the pending
+  Aug 10 earnings is a binary event the no-earnings-binary rule would want
+  to sit out ahead of.
+- Opportunity cost: No confirmed catalyst — fails the Confluence rule's
+  catalyst leg regardless of open slots; skip and revisit after the Aug 10
+  earnings print (which itself would trip the no-earnings-binary rule
+  going in).
+
+#### Deep dive: UMAC $24.10 -6.53%
+- Catalyst: Unusual Machines released its Q2 2026 shareholder letter today:
+  revenue ~$16.7M (+687% YoY, +106% sequentially), gross margin 34.7%, GAAP
+  operating loss ~$7.8M, adjusted EBITDA loss ~$0.4M. Targets positive
+  operating cash flow by year-end 2026, breakeven ~early 2027. Cash $229.6M
+  / working capital ~$367.5M after a $58.2M ATM raise in Q2. No Blue
+  UAS/defense-contract-specific news found in the available excerpt.
+- Why: A large revenue beat alongside a still-widening GAAP operating loss,
+  no profitability this year, and a recent dilutive ATM raise can read as
+  "growth without earnings" — consistent with the -6.53% sell-the-news
+  reaction despite the top-line beat.
+- Impact: Volume (90,749 shares) is the highest of today's 4 names and
+  clears the routine's 50k threshold, so this looks like real participation
+  rather than noise. DATA QUALITY FLAG persists (see above) — three
+  different gap directions across three scans today. Confirm the live
+  quote via `scripts/alpaca.sh` before acting on any of these figures.
+- Horizon: SHORT_TERM — headline/earnings-reaction driven, no sector-
+  rotation read-through identified yet; treat as fade-or-confirm within
+  days, not a multi-week thesis.
+- Opportunity cost: Zero open positions today. This is a decliner (-6.53%)
+  in this run, not a long-entry candidate on gap direction alone; this
+  strategy has no short-selling mechanism (all sizing/stop scripts are
+  long-side only), so not actionable either way, and the price-data
+  conflict alone rules it out regardless.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
+No trades placed; research only.
