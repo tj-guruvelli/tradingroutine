@@ -4731,3 +4731,180 @@ hard-capped (10th+ consecutive session) — confluence rule unsatisfiable
 regardless. Zero positions, zero orders, 22 straight flat trading days —
 patience over activity. Weekly trade count closes the week at 0/3 (week
 of Aug 3).
+
+## 2026-08-07 — Gappers (auto-scan 09:33 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0):
+7 raw hits, 1 excluded (BWLP, volume 10,473 < 50k threshold — note the
+script's "volume" field is the prior completed session's full-day volume,
+not true premarket volume; Alpaca's snapshot has no distinct premarket-
+volume field). 6 gappers cleared the filter, ranked by |gap%|, capped at
+top 10 (all 6 shown). Apify RAG web browser hit "Monthly usage hard limit
+exceeded" on all 12 queries — same outage flagged continuously since
+2026-07-29 (11th+ consecutive session). Benzinga WebFetch fallback also
+failed (HTTP 403 on all 6 quote pages). Fell back to native WebSearch with
+Yahoo domains blocked via `blocked_domains`, per the routine's "do not
+abort the whole scan" rule — no Yahoo-sourced facts used below. Deep-dive
+capped at top 5 per routine; RKLB (rank 6) got quick-scan only.
+
+Account: $100,000 equity, 0 open positions, 0/3 weekly trades used (week
+of Aug 3, resets Mon 8/10) — same confirmed-live-vs-$10k-baseline mismatch
+flagged 2026-07-27, still unresolved/operator pending, not re-litigating
+here. No existing holding is displaced by any of today's gappers.
+
+### Gappers (auto-scan 09:33 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | OKLO | 46.555 | +10.32% | 342,562 | DOE cleared Groves Isotope Test Reactor for startup/testing after first criticality; ~$200M Microsoft/Nvidia program; Q2 earnings due today. |
+| 2 | NIO | 5.00 | +8.81% | 2,337,803 | July deliveries 35,934, +71% YoY; stock up ~8.7% on the delivery beat. |
+| 3 | RDW | 12.85 | +8.62% | 798,174 | Defense-order stacking (Stalker UAS $21.5M Q2 + $20M Q1), Huntsville expansion, Q2 revenue beat +89.6% YoY. |
+| 4 | SATL | 5.365 | +6.45% | 392,311 | Q2 2026 results (Aug 5): revenue +259% YoY, first positive operating income/adjusted EBITDA. |
+| 5 | RGTI | 15.525 | -6.25% | 716,980 | Q2 earnings reaction (~Aug 6); prior run-up was on CHIPS Act LOI/analyst coverage/hardware progress — today's move is a gap DOWN, opposite that cluster. |
+| 6 | RKLB | 80.00 | +5.68% | 498,337 | Selected for $397M USSF SB-AMTI contract (Flatellite constellation via Neutron rocket); prior $266M USSF suborbital-launch award. Q2 earnings due Aug 10. |
+
+#### Deep dive: OKLO $46.555 +10.32%
+- Catalyst: DOE granted startup authorization for Oklo's privately financed
+  Groves Isotope Test Reactor, and the reactor separately reached first
+  criticality (a self-sustaining nuclear chain reaction) — both real
+  regulatory/technical milestones. Layered on top, Oklo has a ~$200M
+  Microsoft/Nvidia-backed program de-risking its commercial SMR pathway,
+  and reports Q2 earnings today (Aug 7), which the pre-open move may
+  partly anticipate.
+- Why: Regulatory clearance plus a technical milestone removes near-term
+  execution risk right before today's earnings print — momentum/short-
+  covering buyers piling in ahead of a binary catalyst, amplified by
+  OKLO's high short interest (~16.45%, highest in utilities).
+- Impact: Can't confirm sustainability from volume data (the "volume"
+  field here is prior full-day volume, not premarket). Stock is down
+  ~45% YTD / ~52% over 6mo and oversold (RSI 32.3), so this reads as a
+  genuine bounce off oversold plus a real milestone — but stacked
+  directly on same-day earnings makes it event-risk, not a clean trend
+  continuation. No confirmed sector-wide read-through.
+- Horizon: SHORT_TERM — genuine catalysts exist but the move is compounded
+  by same-day earnings (binary/event risk); strategy's no-earnings-binary
+  rule argues against treating this as a fresh entry until the print is
+  digested.
+- Opportunity cost: 0 open positions, nothing existing displaced. Would
+  use 1 of the 0/3 weekly slots. Already logged Aug-6 as "borderline-
+  chase, no today-specific catalyst"; same-day earnings makes a sane 2:1
+  R:R stop hard to define given post-print gap risk. Ranks below RDW/SATL
+  among today's list for a non-earnings-binary setup.
+
+#### Deep dive: NIO $5.00 +8.81%
+- Catalyst: NIO reported July 2026 deliveries of 35,934 vehicles, up
+  71.0% YoY, across its multi-brand lineup (NIO premium, Onvo mass-
+  market, Firefly compact). Follows NIO's first-ever quarterly adjusted
+  operating profit in Q4 2025 (~RMB950M), a reversal from a ~RMB5.54B
+  adjusted operating loss a year earlier.
+- Why: A large delivery beat plus a recent profitability inflection pulls
+  in momentum buyers looking for confirmation that unit growth is finally
+  translating to margin — a "proof point" catalyst, not pure speculation.
+- Impact: Real operational data (delivery count), more durable than a
+  headline spike; but NIO carries balance-sheet risk (current ratio 0.98,
+  debt/equity 2.07) and was hit in May by a DoD Chinese-military-company
+  listing (-12.4%, contested by NIO) that could resurface and cap upside.
+  No confirmed EV-peer read-through today.
+- Horizon: LONG_TERM — delivery growth plus an operating-profit inflection
+  is structural, not a one-day headline — though Tech/Consumer-
+  Discretionary sits in the "Lagging" YTD momentum bucket per today's
+  brief, so a multi-week hold swims against the broader sector-rotation
+  read even if the company thesis holds.
+- Opportunity cost: 0 open positions, nothing displaced. Would use 1 of
+  the 0/3 weekly slots. Likely cleaner room to 2:1 R:R than OKLO's
+  earnings-binary setup, but the debt-heavy balance sheet and DoD-listing
+  overhang are real tail risks a stop needs to price in; competes with
+  RDW/SATL (also LONG_TERM candidates today) for the same weekly cap.
+
+#### Deep dive: RDW $12.85 +8.62%
+- Catalyst: Redwire posted Q2 CY2026 revenue up 89.6% YoY to $117.1M,
+  beating estimates by ~$10M, backed by $21.5M in new Q2 Stalker UAS
+  follow-on defense orders (on top of $20M in Q1) and a fresh $8.5M-
+  incentivized 164,000 sq ft Huntsville, AL expansion targeting higher
+  Stalker/space-infrastructure output by Q4 2027.
+- Why: Stacked, verifiable defense contract wins plus a real revenue beat
+  and a record $498.1M backlog (+71.1% YoY) with reaffirmed FY26 guidance
+  pull in momentum buyers on a "the growth story is real" re-rating, not
+  just a headline.
+- Impact: Backed by hard numbers (revenue beat, backlog growth, contract
+  dollar figures), reads more sustainable than a pure headline spike —
+  though margins remain deep negative (EBIT ~-77%, profit margin ~-80%)
+  and RDW recently ran a $500M ATM equity program that triggered a >15%
+  selloff, a dilution risk that could resurface. Sector read-through:
+  aligns with "Industrials leading" in today's brief, and RKLB (also
+  gapping up today) suggests a sector-wide bid, not an isolated move.
+- Horizon: LONG_TERM — backlog growth, reaffirmed FY26 guidance, and
+  multi-year contract wins (NATO Penguin Mk3, Stalker follow-ons) are
+  structural and align with the current "Industrials leading" sector-
+  rotation phase, worth a multi-day/week hold if it later clears the
+  Confluence rule.
+- Opportunity cost: 0 open positions, nothing displaced. Would use 1 of
+  the 0/3 weekly slots. Deep negative margins and dilution risk (recent
+  $500M ATM) mean the stop needs room to survive volatility, pressuring
+  the 2:1 R:R math at a sane stop distance; competes with NIO/SATL (also
+  LONG_TERM) for the weekly cap, and with RKLB for space/defense sector
+  concentration.
+
+#### Deep dive: SATL $5.365 +6.45%
+- Catalyst: Satellogic's Q2 2026 results (reported Aug 5) showed revenue
+  up 259% YoY and the company's first-ever positive operating income and
+  adjusted EBITDA, following Q1's first positive operating cash flow.
+  Shortly before that: two new strategic partnerships (SpaceKnow,
+  SynMax) integrating its satellite imagery with AI analytics, an $18M
+  international defense imagery contract, and its funded "Merlin" AI-
+  first defense constellation (anchored by a $30M customer contract).
+- Why: A swing to positive operating income/EBITDA on a 259% revenue jump
+  is a rare profitability inflection for a small-cap space company,
+  pulling in momentum buyers on a "the model is starting to work"
+  re-rating, compounded by fresh defense-contract validation.
+- Impact: Genuine financial inflection (positive op income, not just
+  revenue growth) backed by real contract dollars, more durable than pure
+  sentiment; but SATL is thinly capitalized and volatile (previously
+  moved -19.2% on a different defense-contract announcement, so it swings
+  hard both ways on news). Sector read-through: same space/defense
+  cluster as RDW and RKLB, all gapping up together today — a real
+  sector-wide bid.
+- Horizon: LONG_TERM — first positive operating income/EBITDA plus a
+  funded multi-year defense constellation (Merlin) is a structural
+  inflection, aligning with the "Industrials leading" sector-rotation
+  phase, worth a multi-day/week hold if it clears Confluence later.
+- Opportunity cost: 0 open positions, nothing displaced. Would use 1 of
+  the 0/3 weekly slots — but competes directly with RDW and NIO (also
+  LONG_TERM) and RKLB (same space/defense sector) for the same cap and
+  for sector-concentration/correlation-gate limits if more than one of
+  RDW/SATL/RKLB were taken together. At $5.37, ATR(14) sizing would need
+  to be run to confirm actual share count against the 20%-of-equity cap.
+
+#### Deep dive: RGTI $15.525 -6.25%
+- Catalyst: Rigetti has a cluster of recent positive catalysts — a
+  nonbinding US Commerce Dept letter of intent for up to $100M in CHIPS
+  Act funding, an NSF-backed "TangleLab" partnership, new analyst
+  coverage (Wedbush Outperform $40 PT, Benchmark Buy $25 PT), and
+  hardware progress on its 84-qubit QPU with a 100-qubit system in
+  development — but today's move is a GAP DOWN (-6.25%), opposite that
+  catalyst cluster's direction.
+- Why: Reads as a post-earnings-reaction pullback, not a fresh negative
+  catalyst — RGTI ran up sharply into its Q2 print (+7-8% in the days
+  prior on analyst/hardware anticipation) and today's red gap looks like
+  "sell the news"/profit-taking after the report, or the print falling
+  short of elevated pre-earnings expectations.
+- Impact: Given the run-up into earnings and now a reversal, this looks
+  like a one-day mean-reversion move tied to the earnings reaction, not a
+  fresh negative catalyst — no distinct negative headline surfaced. No
+  confirmed sector-wide down-move across quantum peers.
+- Horizon: SHORT_TERM — post-earnings pullback with no distinct negative
+  catalyst identified — reads as noise/profit-taking that could resolve
+  either direction quickly, not a durable thesis change; the no-earnings-
+  binary rule would in any case exclude a fresh trade right around this
+  print.
+- Opportunity cost: 0 open positions, nothing displaced. This is a gap
+  DOWN and not a long setup candidate under the current stocks-only,
+  long-bias strategy (200-SMA long-bias filter in TRADING-STRATEGY.md);
+  only relevant if the strategy later considers a short — account has
+  shorting_enabled but TRADING-STRATEGY.md has no short-side rules, so
+  this stays research-only, not sizeable against the weekly cap either
+  direction.
+
+### Note
+Ranks 6-10: only 6 gappers total cleared today's filter (no ranks 7-10).
+RKLB (rank 6) got quick-scan only per the top-5 deep-dive cap — see table
+above for its catalyst headline.
