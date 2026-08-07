@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-08-07T15:15:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BWLP",
+      "price": 23.00,
+      "gap_pct": 6.83,
+      "premarket_volume": 4990,
+      "catalyst": "No same-day news; most recent headline is a stale Jun 2, 2026 Q1 earnings recap - gap reads as thin-liquidity noise, not catalyst-driven.",
+      "headlines": [],
+      "catalyst_detail": "No company-specific news dated today or in the prior several weeks. BW LPG Limited (Oslo-listed VLGC/LPG shipping company, US ticker BWLP) last reported news is a Q1 2026 earnings-call recap from Jun 2, 2026 - over two months stale. No 8-K-equivalent, M&A, guidance, or insider-trade item found closer to today.",
+      "why": "No confirmed same-day driver. Prior-session volume in this snapshot was only 4,990 shares - extremely thin for a name that's primarily listed on the Oslo Bors (as BWLPG) with a much smaller US print. A handful of trades on that little volume can swing the quoted gap% without any real news or institutional flow behind it.",
+      "impact": "Reads as a low-liquidity/stale-quote artifact rather than a sustainable move - same failure mode flagged repeatedly for other thin names (TRMD, BW, UMAC, 2026-08-06). No sector peer read-through found. Do not treat as confirmed until real volume shows at the open.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions today, so nothing to displace. Fails the Confluence rule's catalyst requirement outright, and 4,990 shares of volume can't support a sane stop distance for a 2:1 R:R - doesn't clear the bar for one of the week's 3 trade slots (closes the week at 0/3 regardless)."
+    }
+  ]
+}

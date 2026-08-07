@@ -4731,3 +4731,53 @@ hard-capped (10th+ consecutive session) — confluence rule unsatisfiable
 regardless. Zero positions, zero orders, 22 straight flat trading days —
 patience over activity. Weekly trade count closes the week at 0/3 (week
 of Aug 3).
+
+## 2026-08-07 — Gappers (auto-scan 11:15 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **1 hit** of ~60 tracked tickers (|gap|>=5%, price>=$3;
+premarket_volume field not populated by this script so that filter was
+skipped, per routine note). Apify RAG web browser again returned "Monthly
+usage hard limit exceeded" on both the catalyst and fundamentals queries
+(11th+ consecutive session, unresolved since 7/29). Benzinga WebFetch
+fallback also 403'd. Substituted finviz.com/quote (not in the routine's
+documented fallback chain) as a last-resort source so the scan wasn't
+skipped — it returned a full news list with dates, so this run's catalyst
+read is more complete than recent sessions despite the primary chain being
+fully down.
+
+### Gappers (auto-scan 11:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BWLP | 23.00 | +6.83% | 4,990 | No same-day news; most recent headline is a stale Jun 2, 2026 Q1 earnings recap — gap reads as thin-liquidity noise, not catalyst-driven. |
+
+Deep dive (only 1 hit this run, well under the 5-name cap):
+
+#### Deep dive: BWLP $23.00 +6.83%
+- Catalyst: No company-specific news dated today or in the prior several
+  weeks. BW LPG Limited (Oslo-listed VLGC/LPG shipping company, US ticker
+  BWLP) last reported news is a Q1 2026 earnings-call recap from Jun 2,
+  2026 — over two months stale. No 8-K-equivalent, M&A, guidance, or
+  insider-trade item found closer to today.
+- Why: No confirmed same-day driver. Prior-session volume in this
+  snapshot was only 4,990 shares — extremely thin for a name that's
+  primarily listed on the Oslo Børs (as BWLPG) with a much smaller US
+  print. A handful of trades on that little volume can swing the quoted
+  gap% without any real news or institutional flow behind it.
+- Impact: Reads as a low-liquidity/stale-quote artifact rather than a
+  sustainable move — same failure mode flagged repeatedly in this log for
+  other thin names (TRMD, BW, UMAC, 2026-08-06). No sector peer
+  read-through found (no other LPG/tanker names on today's list). Do not
+  treat as confirmed until real volume shows at the open.
+- Horizon: SHORT_TERM — no structural catalyst to anchor a thesis to;
+  even if the price move is real, there's nothing here that would clear
+  the Confluence rule's catalyst leg.
+- Opportunity cost: Zero open positions today, so nothing to displace.
+  Fails the Confluence rule's catalyst requirement outright, and 4,990
+  shares of volume can't support a sane stop distance for a 2:1 R:R —
+  doesn't clear the bar for one of the week's 3 trade slots (which closes
+  the week at 0/3 regardless, per this morning's pre-market entry).
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
+No trades placed; research only.
