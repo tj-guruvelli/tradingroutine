@@ -4781,3 +4781,19 @@ Deep dive (only 1 hit this run, well under the 5-name cap):
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 No trades placed; research only.
+
+## 2026-08-07 — Setup Scan (16:39 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:39 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| WLDS | B | Momentum confluence | daily swing | RSI 67, ADX 46, px $3.53 EMA9>EMA21 ($3.09>$2.57) |
+| PEPG | B | Momentum confluence | daily swing | RSI 66, ADX 24, px $2.39 EMA9>EMA21 ($2.01>$1.98) |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
