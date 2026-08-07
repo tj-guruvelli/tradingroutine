@@ -1,0 +1,34 @@
+{
+  "scanned_at": "2026-08-07T14:27:26Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BW",
+      "price": 9.90,
+      "gap_pct": 7.61,
+      "premarket_volume": 12138,
+      "catalyst": "No same-day news found; latest item (Aug 3) only scheduled the Q2 2026 earnings call for Aug 10 — recurring data-quality-flagged ticker (gap sign has flipped across multiple recent scans with no catalyst attached either time).",
+      "headlines": [],
+      "catalyst_detail": "No news dated today (Aug 7). Only recent items are Aug 3 (Q2 2026 earnings call scheduled for Aug 10) and Jul 13 (full redemption of $61.4M 6.50% senior notes due Aug 13, plus a new $50M share repurchase authorization), both 3+ weeks old and already priced in. No same-day 8-K, contract, or analyst-rating action found via WebSearch or StockTitan's headline feed.",
+      "why": "No confirmed same-day catalyst. BW has flipped gap sign repeatedly this week on Alpaca snapshots (+7.20% then -7.04% within roughly an hour on Aug 6, per the prior day's RESEARCH-LOG entry) with no news attached either time — consistent with a stale-baseline/wide-spread pricing issue on a thin, low-priced name rather than a genuine move.",
+      "impact": "12,138 shares is thin for this name; combined with the documented data-quality flag (3+ conflicting gap prints across the last two sessions), this reads as noise/stale-snapshot rather than real participation. Not sustainable until confirmed by a live quote at the open.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions (0/6) and 0/3 weekly trade slots used, so nothing to displace — but no catalyst fails the Confluence rule's catalyst leg outright regardless of open capacity. Skip; revisit only if a genuine same-day catalyst appears, or after the Aug 10 print (which itself would trip the no-earnings-binary rule on entry)."
+    },
+    {
+      "rank": 2,
+      "symbol": "BKSY",
+      "price": 30.365,
+      "gap_pct": 7.26,
+      "premarket_volume": 6636,
+      "catalyst": "BlackSky reported Q2 2026 results before the open Aug 6: revenue +50% YoY to $33.3M, record $24.5M in space-based intelligence & AI services revenue — today's move reads as post-earnings follow-through.",
+      "headlines": [],
+      "catalyst_detail": "BlackSky reported Q2 2026 results before the open on Aug 6: total revenue $33.3M (+50% YoY), a record $24.5M in space-based intelligence & AI services revenue, international revenue +200% YoY, and roughly $150M of cash added during the quarter. Management cited Gen-3 satellite momentum expanding the customer base, pipeline, and backlog; the year also includes a $99M sole-source IDIQ with the Air Force Research Lab and a $25M multi-year international MoD subscription deal.",
+      "why": "Beat-and-raise-style momentum: a 50% YoY revenue beat with a record high-margin services line and a strengthened balance sheet pulls in momentum buyers. Today's +7.3% move, a day after the Aug 6 print, looks like follow-through/analyst reaction rather than the initial earnings pop.",
+      "impact": "Volume in this snapshot (6,636 shares) is thin relative to what real post-earnings follow-through would need — can't confirm sustainability off this print alone; check full-session volume vs BKSY's average before treating as durable. Worth checking other space/geospatial-intel peers for a sector-wide read-through.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "Zero open positions (0/6) and 0/3 weekly trade slots used this week (week of Aug 3), so nothing to displace. Of today's 2 gappers this is the stronger candidate — the only one with a confirmed, fundamentals-backed catalyst (BW has none). Still needs a live confluence check (tradingview-data MCP down 22+ straight sessions per this morning's pre-market log) and a stop-distance check via scripts/size.mjs before using one of the 3 weekly trade slots; size against the 20%-of-equity cap at ~$30/share."
+    }
+  ]
+}

@@ -4731,3 +4731,92 @@ hard-capped (10th+ consecutive session) — confluence rule unsatisfiable
 regardless. Zero positions, zero orders, 22 straight flat trading days —
 patience over activity. Weekly trade count closes the week at 0/3 (week
 of Aug 3).
+
+## 2026-08-07 — Gappers (auto-scan 10:25 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **2 hits** of ~60 tracked tickers (|gap|>=5%, price>=$3;
+premarket_volume field not populated by this script so that filter was
+skipped, same as every prior cloud run). Apify RAG web browser again
+returned "Monthly usage hard limit exceeded" on both catalyst queries
+(11th+ consecutive session, unresolved since 7/29). Benzinga WebFetch
+fallback also 403'd on both quote pages. Substituted WebSearch +
+stocktitan.net headline checks (not in the routine's documented fallback
+chain) as a last-resort source so the scan wasn't skipped; flagged here per
+the same pattern as the 2026-08-06 11:32 ET entry. Only 2 hits, both within
+the top-5 deep-dive cap — no ranks 6-10 to note as quick-scan-only this run.
+
+**BW data-quality flag continues:** this run shows BW +7.61% ($9.90, prev
+close $9.20). The 2026-08-06 log shows BW at +7.20% (10:22 ET) then -7.04%
+(11:32 ET) with no catalyst attached to either print — this is now a third
+distinct gap reading this week with no same-day news behind any of them.
+Treat BW gap prints as unreliable pending a live-quote confirmation, per the
+"fake gaps + stale snapshots" failure mode logged 2026-07-31.
+
+### Gappers (auto-scan 10:25 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | 9.90 | +7.61% | 12,138 | No same-day news; latest item (Aug 3) only scheduled the Q2 2026 earnings call for Aug 10 — recurring data-quality-flagged ticker. |
+| 2 | BKSY | 30.365 | +7.26% | 6,636 | BlackSky reported Q2 2026 results Aug 6: revenue +50% YoY to $33.3M, record $24.5M space-based intelligence & AI services revenue. |
+
+Deep dive (both hits, no cap needed — only 2 this run):
+
+#### Deep dive: BW $9.90 +7.61%
+- Catalyst: No news dated today (Aug 7). Only recent items are Aug 3 (Q2
+  2026 earnings call scheduled for Aug 10) and Jul 13 (full redemption of
+  $61.4M 6.50% senior notes due Aug 13, plus a new $50M share repurchase
+  authorization), both 3+ weeks old and already priced in. No same-day 8-K,
+  contract, or analyst-rating action found via WebSearch or StockTitan's
+  headline feed.
+- Why: No confirmed same-day catalyst. BW has flipped gap sign repeatedly
+  this week on Alpaca snapshots (+7.20% then -7.04% within roughly an hour
+  on Aug 6) with no news attached either time — consistent with a
+  stale-baseline/wide-spread pricing issue on a thin, low-priced name
+  rather than a genuine move.
+- Impact: 12,138 shares is thin for this name; combined with the
+  documented data-quality flag (3 conflicting gap prints across the last
+  two sessions), this reads as noise/stale-snapshot rather than real
+  participation. Not sustainable until confirmed by a live quote at the
+  open.
+- Horizon: SHORT_TERM — no catalyst to anchor any thesis to, and even the
+  pending Aug 10 earnings would trip the no-earnings-binary rule going in.
+- Opportunity cost: Zero open positions (0/6) and 0/3 weekly trade slots
+  used, so nothing to displace — but no catalyst fails the Confluence
+  rule's catalyst leg outright regardless of open capacity. Skip; revisit
+  only if a genuine same-day catalyst appears, or after the Aug 10 print
+  (which itself would trip the no-earnings-binary rule on entry).
+
+#### Deep dive: BKSY $30.365 +7.26%
+- Catalyst: BlackSky reported Q2 2026 results before the open on Aug 6:
+  total revenue $33.3M (+50% YoY), a record $24.5M in space-based
+  intelligence & AI services revenue, international revenue +200% YoY, and
+  roughly $150M of cash added during the quarter. Management cited Gen-3
+  satellite momentum expanding the customer base, pipeline, and backlog;
+  the year also includes a $99M sole-source IDIQ with the Air Force
+  Research Lab and a $25M multi-year international MoD subscription deal.
+- Why: Beat-and-raise-style momentum — a 50% YoY revenue beat with a
+  record high-margin services line and a strengthened balance sheet pulls
+  in momentum buyers. Today's +7.3% move, a day after the Aug 6 print,
+  looks like follow-through/analyst reaction rather than the initial
+  earnings pop.
+- Impact: Volume in this snapshot (6,636 shares) is thin relative to what
+  real post-earnings follow-through would need — can't confirm
+  sustainability off this print alone; check full-session volume vs BKSY's
+  average before treating as durable. Worth checking other
+  space/geospatial-intel peers for a sector-wide read-through.
+- Horizon: LONG_TERM — the catalyst is structural (real revenue growth,
+  expanding defense/intel contract backlog, strengthened cash position),
+  consistent with a name that could hold a multi-day/week swing if it
+  clears Confluence later, not just a one-day headline spike.
+- Opportunity cost: Zero open positions (0/6) and 0/3 weekly trade slots
+  used this week (week of Aug 3), so nothing to displace. Of today's 2
+  gappers this is the stronger candidate — the only one with a confirmed,
+  fundamentals-backed catalyst (BW has none). Still needs a live confluence
+  check (tradingview-data MCP down 22+ straight sessions per this morning's
+  pre-market log) and a stop-distance check via scripts/size.mjs before
+  using one of the 3 weekly trade slots; size against the 20%-of-equity cap
+  at ~$30/share.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
+No trades placed; research only.
