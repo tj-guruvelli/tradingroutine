@@ -4642,3 +4642,92 @@ routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+
+## 2026-08-07 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser hit "Monthly usage hard limit exceeded" on all 6
+topic queries — same outage flagged continuously since 2026-07-29, 10th+
+consecutive session, still not reset. Fell back to native WebSearch
+(Yahoo domains blocked via `blocked_domains`) per routine rule.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable for any
+candidate, same unresolved gap as every session since 2026-07-25 (22
+straight sessions now).
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 22 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 3, last session of the week — will
+  reset Mon 8/10).
+
+### Market Context (WebSearch fallback, Fri 8/7 premarket ET)
+- **Oil**: WTI ~$86.04/bbl per one source, Brent $82.15/bbl (-0.41% d/d)
+  per TradingEconomics — sources disagree on WTI, treat as directional
+  only (Brent softer, WTI print noisy). Coverage flags a possible
+  US-Iran deal near-term, which would be bearish for crude if it lands.
+- **S&P 500 futures — little changed**: flat/muted into the jobs print
+  after Thursday's -0.2% close (2nd straight down day). Overnight movers:
+  ABNB +8% (beat), NET +16% (raised guide) — both reported yesterday
+  AMC, not today's session but color for tech-earnings tape.
+- **VIX — calm**: ~15.15-16.15, down ~4% d/d. No stress priced in ahead
+  of the jobs number.
+- **Earnings — today, before open**: no clean before-open list surfaced
+  (searches returned VST/TTWO as reporting today, timing unconfirmed).
+  None held/watchlist-tagged as far as verified.
+- **Econ calendar — the catalyst of the day**: July nonfarm payrolls,
+  unemployment rate, average hourly earnings all release today. This is
+  the dominant risk event — futures flat specifically because the market
+  is waiting on this print. Next CPI is Wed 8/12, not today.
+- **Sector YTD**: Consumer Staples/Industrials/Materials/Energy in
+  "Leading" momentum quadrant (Energy sector ETF +12% in July on the oil
+  bounce; Staples up as a flight-to-safety play). Tech/Communications/
+  Consumer Discretionary/Financials "Lagging" (Tech -8% in July on AI-
+  capex jitters) despite semis still framed as the runaway YTD leader in
+  absolute terms — same broad-YTD-vs-recent-month conflict flagged
+  repeatedly since 8/3, still not sizing sector bets off either figure.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **Sit out ahead of the jobs report — not a name, a timing call.** A
+   nonfarm-payrolls surprise in either direction can move the whole tape
+   intraday; strategy has no position to react with and no confluence
+   tooling live to size a fresh one safely into that volatility window.
+2. **Energy/Industrials/Materials sector momentum — watch only.** Leading
+   quadrant per research, but no single-name catalyst dated today and no
+   confluence check possible (`tradingview-data` MCP down). Revisit with
+   a specific ticker + catalyst next session.
+3. **VST/TTWO earnings — excluded if before-open confirmed.** Unconfirmed
+   timing; no-earnings-binary rule excludes trading the print regardless,
+   and neither is a current watchlist name.
+
+### Risk Factors
+- **Jobs report today (Fri 8/7)** — nonfarm payrolls/unemployment/hourly
+  earnings all print this morning; the single biggest catalyst risk of
+  the week, argues against opening anything new pre-print.
+- **Apify still fully down** — 10th+ consecutive session (since 7/29),
+  over two full weeks. Operator: check Apify billing/plan — blocking the
+  primary research path indefinitely.
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  since 7/25, now 22 straight sessions. Same operator flag, escalating.
+- **Oil source conflict** (WTI $86 vs implied-$78 range) — don't size any
+  energy-sector trade off either figure without a clean same-source print.
+- **Sector-YTD source conflict** (broad-YTD leaders vs. July-only leaders)
+  unresolved — don't size sector bets off either figure.
+
+### Decision
+**HOLD — no trades.** Futures are flat into this morning's nonfarm
+payrolls print, the week's dominant catalyst — no reason to open a new
+position ahead of it. No watchlist name clears the entry checklist:
+Energy/Industrials/Materials sector momentum has no company-specific
+trigger dated today, and VST/TTWO earnings (if before-open) are excluded
+by the no-earnings-binary rule and aren't watchlist tickers anyway.
+`tradingview-data` MCP still down (22 straight sessions) and Apify still
+hard-capped (10th+ consecutive session) — confluence rule unsatisfiable
+regardless. Zero positions, zero orders, 22 straight flat trading days —
+patience over activity. Weekly trade count closes the week at 0/3 (week
+of Aug 3).
