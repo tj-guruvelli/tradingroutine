@@ -4814,3 +4814,16 @@ since. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-10 — Gappers (auto-scan 09:29 ET, cloud)
+
+Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
+watchlist` against Alpaca). 1 raw gap >=5%: AGMH +6.36%, but price $1.11 fails
+the $3.00 floor. **0 qualifying gappers after filters** (gap>=5%, price>=$3,
+premarket_volume>=50k where populated). No deep-dive run (nothing to dive on).
+No Telegram/ClickUp notify sent per routine rule (0 hits, no scan error).
+
+### Gappers (auto-scan 09:29 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | none — 0 rows passed filters |
