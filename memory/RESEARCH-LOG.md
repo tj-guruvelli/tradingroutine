@@ -4814,3 +4814,93 @@ since. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-10 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser back online this session (no hard-limit error on any
+of the 8 queries — first clean run since the outage began 2026-07-29,
+ending an 11-session streak). Several queries still hit JS-rendered
+calendar/tracker pages (tradingeconomics.com/calendar, marketwatch
+calendar, Nasdaq earnings calendar, SSGA sector tracker) that don't expose
+data to a static scrape — noted per-item below, not treated as an outage.
+`tradingview-data` MCP still absent (`ToolSearch`: no match) — confluence
+rule (>=2 of VWAP/RSI/200-SMA/insider) remains unsatisfiable, same
+unresolved gap as every session since 2026-07-25 (24 straight sessions
+now).
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — unchanged for 23 straight trading days
+  since the Day-0 baseline (2026-07-08 launch). Same confirmed-live-vs-
+  $10k-baseline mismatch flagged 2026-07-27, still unresolved/operator
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 10, fresh week).
+
+### Market Context (Apify RAG web browser, Mon 8/10 premarket ET)
+- **Oil**: Brent $84.75/bbl, +1.44% ($1.20) per Markets Insider (07:02 AM
+  ET indication; prior close $83.55, day range $83.33-$84.99). No clean
+  same-source WTI print surfaced — oil-price.net didn't render numeric
+  data via static scrape. Treat Brent print as directional only until
+  WTI confirms.
+- **VIX — up off a calm base**: 15.47, +3.83% (+0.57) per Cboe.com
+  (official, as of Aug 10 2026; prev close 14.90, open 15.40, day range
+  15.39-15.49). Still deep in the lower third of its 52-week range
+  (13.38-35.30) — an uptick, not stress. Context: CNBC (8/8) headlined "a
+  record-breaking week for options powers S&P 500 surge," consistent with
+  the risk-on tape flagged in recent sessions (S&P/Dow record closes
+  8/4-8/8).
+- **S&P 500 futures** — no clean today-dated premarket print surfaced;
+  search results returned stale Aug 4/7 recaps instead of live futures
+  data. Gap not filled this session — treat as unknown, not flat.
+- **Earnings — today, before open**: none confirmed. Nasdaq's earnings
+  calendar widget returned "Data is currently not available" (JS-rendered,
+  not scrapable) rather than a real empty-result signal — informational
+  gap, not a clean "no earnings today" read.
+- **Econ calendar**: no CPI/PPI/jobs release dated today found. Confirmed
+  via BLS.gov's official PPI release schedule — July 2026 PPI prints Aug
+  13 (Wed), not today. Friday 8/7's nonfarm payrolls already happened last
+  session. No major scheduled catalyst identified for today.
+- **Sector YTD/momentum**: could not refresh — State Street's sector
+  tracker (ssga.com) is JS-rendered and returned template placeholders,
+  not live values. Falling back to the 8/7 read (Energy/Industrials/
+  Materials/Staples "Leading," Tech/Comm/Discretionary/Financials
+  "Lagging") as stale context only, not sized off.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met):
+1. **No dated catalyst surfaced for today.** Recent tape (through 8/8) was
+   risk-on with S&P/Dow at record closes and VIX near 52-week lows: not a
+   reason on its own to chase into a fresh week with no company-specific
+   trigger and no confluence tooling live.
+2. **Energy/Industrials/Materials sector momentum — watch only, stale
+   data.** Last confirmed read is 8/7's leading-quadrant call; couldn't
+   refresh sector tracker this session (JS-rendered page). No single-name
+   catalyst dated today regardless.
+3. **VIX uptick (+3.83%) — monitor, not act.** Still historically low in
+   absolute terms; worth a midday recheck before treating as a regime
+   shift.
+
+### Risk Factors
+- **`tradingview-data` MCP still absent** — confluence rule unsatisfiable
+  since 7/25, now 24 straight sessions. Same operator flag, escalating.
+- **S&P futures and today's earnings calendar both gapped** — JS-rendered
+  source pages didn't yield live data via static scrape; don't treat
+  either as confirmed-flat/confirmed-empty, re-check via a different
+  source (e.g. direct WebSearch snippet) before size decisions later today.
+- **Oil source coverage thin** — Brent confirmed live, WTI unconfirmed
+  this session; don't size any energy-sector trade off Brent alone.
+- **Sector-momentum data stale** (last refreshed 8/7) — don't size sector
+  bets off it without a same-session confirmation.
+- **Confirmed-live-vs-$10k-baseline mismatch** (flagged 7/27) — still
+  unresolved, operator review pending, not re-litigating further here.
+
+### Decision
+**HOLD — no trades.** No dated catalyst surfaced for today across 8
+research queries; two of the eight sources (S&P futures, today's earnings
+calendar) returned gaps rather than confirmed data due to JS-rendered
+pages, and sector-momentum context is stale from 8/7. `tradingview-data`
+MCP still down (24 straight sessions) — confluence rule unsatisfiable
+regardless of what the market-context queries turn up. Zero positions,
+zero orders, 23 straight flat trading days — patience over activity. Fresh
+week, trade count reset to 0/3 (week of Aug 10).
