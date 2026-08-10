@@ -4940,3 +4940,17 @@ No grade-A hits -> no Telegram alert per STEP 4 rule. Post-close run (16:38
 ET, market closed) — Setup A not checkable, matches routine expectation.
 Candidates only, not orders — feed to `/trade` if pursued (full
 safety-check gate applies).
+
+### Setup Scan (18:38 ET, cloud)
+60 candidates checked, 0 errors, 2 hits (both grade B, no grade-A hits) —
+same two names as the 16:38 ET run, unchanged.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| PEPG | B | Momentum confluence | daily | ADX14 26.12, EMA9 2.18 > EMA21 2.06, RSI14 74.43 |
+| RDW | B | Momentum confluence | daily | ADX14 23.63, EMA9 10.71 > EMA21 10.31, RSI14 67.19 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Post-close run (18:38
+ET, market closed) — Setup A not checkable, matches routine expectation.
+Candidates only, not orders — feed to `/trade` if pursued (full
+safety-check gate applies).
