@@ -1,0 +1,54 @@
+{
+  "scanned_at": "2026-08-10T20:38:46.786Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "PEPG",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 2.57,
+      "prev_daily_high": 2.87,
+      "prev_daily_close": 2.85,
+      "sma200": 3.82,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 3.04,
+      "rsi14": 74.43,
+      "adx14": 26.12,
+      "ema9": 2.18,
+      "ema21": 2.06,
+      "premarket_volume": 0,
+      "daily_volume": 184972,
+      "avg_daily_volume_30": 71908,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "RDW",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 13.25,
+      "prev_daily_high": 13.67,
+      "prev_daily_close": 13.59,
+      "sma200": 10.09,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 13.83,
+      "rsi14": 67.19,
+      "adx14": 23.63,
+      "ema9": 10.71,
+      "ema21": 10.31,
+      "premarket_volume": 0,
+      "daily_volume": 1444689,
+      "avg_daily_volume_30": 706119,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
