@@ -4814,3 +4814,14 @@ since. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-10 — Gappers (auto-scan 08:28 ET, cloud)
+
+Full watchlist scan (69 tickers from `memory/WATCHLIST.md`, via
+`scripts/gappers-alpaca.sh watchlist` against Alpaca premarket snapshot
+data). **0 hits at the 5.0% gap threshold.** Largest premarket mover was
+ONDS at +3.6% (below threshold) — sanity-checked with `GAP_THRESHOLD=0.0` to
+confirm live premarket data was flowing, not a scan failure. No catalyst
+research run (nothing cleared the gate). No Telegram/ClickUp notify sent per
+routine rule (0 hits, no error). No `data/premarket_gappers_2026-08-10.json`
+written — nothing to save.
