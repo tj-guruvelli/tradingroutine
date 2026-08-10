@@ -4827,3 +4827,43 @@ No Telegram/ClickUp notify sent per routine rule (0 hits, no scan error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-08-10 — Gappers (auto-scan 10:33 ET, cloud)
+
+Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
+watchlist` against Alpaca), rerun ~1h after the 09:29 scan (cadence gate
+clears at 1h). 4 raw gaps >=5%: LPG -7.1%, AGMH +6.57%, BW -6.47%, BKSY
++6.18%. AGMH excluded ($1.11 fails the $3.00 price floor). **3 qualifying
+gappers after filters.** Note: BW's gap flipped sign across three Alpaca
+snapshots taken minutes apart (-6.55% -> +6.63% -> -6.47%) on thin volume —
+flagged as noise in its deep dive, not a directional catalyst. Deep-dive cap
+is 5; all 3 qualifiers got the full deep dive (none held back to quick-scan
+only). Full detail: `data/premarket_gappers_2026-08-10_1033et.json`.
+
+### Gappers (auto-scan 10:33 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LPG | $41.925 | -7.1% | 3,487 | Record Q1 FY27 results Aug 5 (TCE $75,926/day, +91% YoY), Mideast freight-rate spike; $1.00/sh dividend paid Aug 12 |
+| 2 | BW | $8.67 | -6.47% | 19,453 | No confirmed catalyst; reports Q2 2026 earnings after today's close (5pm ET call) |
+| 3 | BKSY | $32.495 | +6.18% | 4,190 | Q2 2026 earnings (~Aug 7): revenue +50% YoY, first-ever positive adjusted EBITDA, loss narrowed 49% |
+
+#### Deep dive: LPG $41.925 -7.1%
+- Catalyst: Dorian LPG announced Q1 FY2027 (quarter ended June 30, 2026) results on Aug 5: revenue $187.9M (+123% YoY), net income $138.3M ($3.24 diluted EPS) vs $10.1M ($0.24 EPS) YoY, adjusted EBITDA $165.4M. TCE rate hit $75,926/day, up 91% YoY, driven by the Middle East conflict/Strait of Hormuz disruption pushing VLGC freight rates to records (Baltic Index ~$190/mt vs ~$95/mt in Q1). Declared a $1.00/share ($42.8M) irregular dividend, its 19th consecutive quarterly special dividend, paid Aug 12. Also sold three older VLGCs for ~$248M combined proceeds and prepaid debt.
+- Why: The blowout quarter is now five sessions old; today's -7.1% reads as the market fading the freight-rate spike, since management's own language flagged the driver ("dislocations and uncertainty... high volatility and extraordinary freight rates") as geopolitically contingent, not structural — any Strait of Hormuz de-escalation reprices VLGC day-rates lower fast.
+- Impact: Volume today (3,487 sh) is thin for a name that normally trades heavier around earnings/dividend events — reads as a low-liquidity pullback on an already-priced catalyst, not a fresh single-day shock. Sector read-through: check other Hormuz-risk-premium shipping/tanker names for a similar fade.
+- Horizon: SHORT_TERM, the print is 5 days stale and freight rates here are explicitly geopolitically contingent per management — not a durable re-rating to carry as a swing.
+- Opportunity cost: 0 open positions and 0/3 weekly trade slots used, so nothing existing is displaced — but it competes for one of the 3 weekly slots against BW and BKSY below. At $41.925 with a 7-10% stop and no confirmed 2:1 R:R on a catalyst that's already 5 days old and could reverse either direction on Hormuz headlines, it is a low-quality use of that slot.
+
+#### Deep dive: BW $8.67 -6.47%
+- Catalyst: No same-day news catalyst confirmed — the two most relevant search hits were stale (a May equity-dilution offering, a March short-seller/forensic-risk report). What is confirmed and current: Benzinga's live quote page shows BW reports Q2 2026 earnings after today's market close with a conference call at 5:00pm ET. Alpaca snapshots taken minutes apart showed the "gap" flip from -6.55% to +6.63% back to -6.47% on ~19,453 sh volume — a sign of thin-liquidity noise around a pre-earnings name (12.96% short interest, RSI 39) rather than a clean directional catalyst.
+- Why: No mechanism confirmed; best explanation is pre-earnings positioning/short-covering chop ahead of tonight's print, amplified by BW's elevated short interest and thin volume relative to its 3.84M average.
+- Impact: Move direction flipped between two Alpaca snapshots minutes apart — that instability is itself the signal: this reads as noise, not a sustained move. Any real move comes from tonight's earnings reaction, not today's chop.
+- Horizon: SHORT_TERM, nothing durable identified; today's action is likely overwritten by tonight's earnings reaction.
+- Opportunity cost: 0 open positions to displace; competes for one of the 3 weekly trade slots. Since BW reports earnings after today's close, any same-day entry here is a same-day earnings-binary bet — the desk's no-earnings-binary convention (already applied today to exclude SPG) argues this should not consume a trade slot regardless of gap direction.
+
+#### Deep dive: BKSY $32.495 +6.18%
+- Catalyst: BlackSky reported Q2 2026 results around Aug 7: revenue $33.3M vs $22.2M YoY (+50%), net loss narrowed to $20.8M ($0.54/sh) from $41.2M ($1.27/sh), and adjusted EBITDA flipped positive to $4.7M (14.2% margin) for the first time. Management flagged ~$200M YTD bookings with >80% of funded backlog now multi-year international contracts (international subscription revenue +150% YoY), tied to the Gen-3 satellite platform ramp.
+- Why: First-ever positive-EBITDA quarter plus accelerating international/multi-year bookings is a legitimate structural narrative (durable margin inflection, not a one-off headline) — momentum buyers are extending the initial Aug 7 pop into today.
+- Impact: Stock is +6.18% today on top of the initial Aug 7 jump — multi-day follow-through, not a single-day spike — though it sits against a -26% 90-day drawdown (recovering from a larger prior selloff, not making new highs). Volume in this snapshot (4,190 sh) is light for a real breakout; size any confirmation carefully. Sector read-through: watch peers PL and SPIR for a shared move.
+- Horizon: LONG_TERM, the Gen-3 margin inflection plus backlog mix shift is structural, not headline-driven; worth a multi-day/week swing IF it clears the Confluence rule (>=2 of VWAP/RSI/200-SMA/insider) on a later /trade check — that check has not been run here.
+- Opportunity cost: 0 open positions to displace. Of today's three gappers this is the only one with a legitimate multi-day structural catalyst (vs. LPG's stale/fading print and BW's earnings-binary noise) — the strongest opportunity-cost case for one of the 3 weekly slots, though up 6%+ on top of an already-extended move risks tripping the chase-rule check /trade would need to run explicitly, and a sub-2:1 R:R is plausible at a tight stop this extended.
