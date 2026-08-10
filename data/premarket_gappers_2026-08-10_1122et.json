@@ -1,0 +1,48 @@
+{
+  "scanned_at": "2026-08-10T15:26:36Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "LPG",
+      "price": 48.335,
+      "gap_pct": 7.6,
+      "premarket_volume": 8811,
+      "catalyst": "No same-day news; most recent dated item is a 08/05/2026 Q1 FY2027 earnings release (rev +123.1% YoY) that the stock actually closed -1.08% on — gap reads as thin-liquidity noise, not a fresh catalyst.",
+      "headlines": [],
+      "catalyst_detail": "Dorian LPG (NYSE: LPG, VLGC/LPG shipping) last reported news is its Q1 FY2027 earnings release dated 08/05/2026 06:00 AM: revenue $187.9M (+123.1% YoY), net income $138.3M ($3.24 diluted EPS), TCE $75,926/day (+91.1%), plus an already-declared $1.00/share irregular dividend payable ~Aug 12, 2026 to holders of record as of Jul 27, 2026 (record date already passed, so not a live catalyst for new buyers). No 8-K-equivalent, M&A, or news item dated 08/10/2026 found.",
+      "why": "No confirmed same-day driver. The stock actually closed down -1.08% the day of its earnings beat (08/05), so today's +7.6% gap is not a continuation of that reaction. Session volume in this snapshot was only 8,811 shares — thin enough that a handful of prints can swing the quoted gap% without real flow behind it.",
+      "impact": "Reads as a low-liquidity/stale-quote artifact rather than a sustainable move — same failure mode flagged repeatedly in this log for thin names. No sector peer read-through found (no other shipping/tanker name on today's list). Do not treat as confirmed without real volume confirmation.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions today per last portfolio check, so nothing to displace. Fails the Confluence rule's catalyst requirement outright (nearest real news is 5 days stale and price-negative on the day), and 8,811 shares of volume can't support a sane stop distance for a 2:1 R:R — doesn't clear the bar for one of the week's 3 trade slots."
+    },
+    {
+      "rank": 2,
+      "symbol": "UMAC",
+      "price": 25.15,
+      "gap_pct": -6.44,
+      "premarket_volume": 18057,
+      "catalyst": "No same-day news; most recent items are a Jun 22 profit-taking/valuation-concern selloff writeup and a Jul 15 analyst-upgrade piece — nothing dated 08/10 explains today's -6.44% move.",
+      "headlines": [],
+      "catalyst_detail": "Unusual Machines (NYSE American: UMAC, drone components/manufacturing) has no news dated today. Most recent relevant items: a Jul 5 Orlando manufacturing-facility expansion announcement, a Jul 15 sell-side note citing 125% upside (Trump Jr.-linked drone/defense supply-chain thesis), and a Jun 22 writeup attributing a prior -9.65% drop to profit-taking on valuation concerns after a run of major catalysts. No fresh 8-K-equivalent, guidance, or insider item found closer to today.",
+      "why": "No confirmed same-day driver for the down move. The stock has been volatile all summer on defense/drone-supply-chain headlines (up 45%+ YTD per the Jul 15 piece); today's drop most plausibly reads as give-back/profit-taking in a name that has repeatedly seen sharp single-day swings on thin news, consistent with the Jun 22 pattern already logged for this ticker.",
+      "impact": "Volume in this snapshot (18,057) is well under what would confirm a real distribution day for a name this volatile. No sector peer read-through found among today's other gappers. Treat as noise/give-back until confirmed by real session volume and a dated catalyst.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions today, so nothing to displace. No dated catalyst to anchor a short or a dip-buy thesis to; fails the Confluence rule's catalyst leg, and 18,057 shares of volume is too thin to size a stop for 2:1 R:R — doesn't clear the bar for one of the week's 3 trade slots."
+    },
+    {
+      "rank": 3,
+      "symbol": "BWLP",
+      "price": 20.36,
+      "gap_pct": -6.2,
+      "premarket_volume": 4511,
+      "catalyst": "No same-day news; most recent dated item is a May 29, 2026 support-test writeup and a Jul 26 \"holds steady\" piece — nothing dated 08/10 explains today's -6.2% move.",
+      "headlines": [],
+      "catalyst_detail": "BW LPG Limited (NYSE: BWLP, VLGC/LPG shipping) has no news dated today. Most recent items found: a May 2025 Q1 financial-results release (VLGC sale MOA with BW India), a May 29, 2026 piece flagging a -4.53% drop to $19.60 on a pullback, and a Jul 26, 2026 note describing the stock holding near $21.83 on normal volume with no unusual activity. No fresh 8-K-equivalent, M&A, or guidance item found closer to today.",
+      "why": "No confirmed same-day driver. Prior-session volume in this snapshot was only 4,511 shares — extremely thin, same failure mode already flagged repeatedly in this log for BWLP (2026-08-06, 2026-08-07). A handful of trades on that little volume can swing the quoted gap% without any real news or institutional flow behind it.",
+      "impact": "Reads as a low-liquidity/stale-quote artifact rather than a sustainable move, consistent with this ticker's recurring pattern in this log. LPG (also LPG-shipping) gapped up the same session while BWLP gapped down — no coherent sector read-through, reinforces that both are noise rather than a sector-wide move.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions today, so nothing to displace. Fails the Confluence rule's catalyst requirement outright, and 4,511 shares of volume can't support a sane stop distance for a 2:1 R:R — doesn't clear the bar for one of the week's 3 trade slots."
+    }
+  ]
+}

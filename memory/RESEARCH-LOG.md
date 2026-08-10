@@ -4827,3 +4827,103 @@ No Telegram/ClickUp notify sent per routine rule (0 hits, no scan error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-08-10 — Gappers (auto-scan 11:22 ET, cloud)
+
+Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
+watchlist` against Alpaca). 4 raw gaps >=5%: LPG +7.6%, AGMH +6.57%, UMAC
+-6.44%, BWLP -6.2%. AGMH fails the $3.00 price floor ($1.11). **3 qualifying
+gappers** (gap>=5%, price>=$3). Note: the script's "volume" field is the most
+recently completed session's full-day volume, not a true premarket-volume
+figure (script has no such field, per its own header comment) — treated as
+informational only, filter not applied as a hard block, consistent with the
+2026-08-07 precedent in this log. All 3 got the full deep-dive (well under
+the 5-name cap). Apify RAG web browser worked cleanly this run (no rate-limit
+errors). Telegram sent (3 hits).
+
+### Gappers (auto-scan 11:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LPG | 48.335 | +7.60% | 8,811 | No same-day news; nearest item is a stale (5 days old) 08/05 earnings release the stock actually closed down on — reads as thin-liquidity noise. |
+| 2 | UMAC | 25.15 | -6.44% | 18,057 | No same-day news; nearest items are Jun/Jul writeups on prior valuation-driven selloffs and analyst upgrades — nothing dated today. |
+| 3 | BWLP | 20.36 | -6.20% | 4,511 | No same-day news; nearest item is a Jul 26 "holding steady" piece — reads as thin-liquidity noise, same recurring pattern as prior BWLP entries. |
+
+Deep dive (3 hits, well under the 5-name cap — no ranks dropped):
+
+#### Deep dive: LPG $48.335 +7.60%
+- Catalyst: Dorian LPG (NYSE: LPG, VLGC/LPG shipping) last reported news is
+  its Q1 FY2027 earnings release dated 08/05/2026 06:00 AM — revenue $187.9M
+  (+123.1% YoY), net income $138.3M ($3.24 diluted EPS), TCE $75,926/day
+  (+91.1%), plus an already-declared $1.00/share irregular dividend payable
+  ~Aug 12, 2026 to holders of record as of Jul 27, 2026 (record date already
+  passed, not a live catalyst for new buyers). No item dated 08/10/2026
+  found.
+- Why: No confirmed same-day driver. The stock actually closed -1.08% on the
+  day of its own earnings beat (08/05), so today's +7.6% gap is not a
+  continuation of that reaction. Session volume in this snapshot was only
+  8,811 shares — thin enough that a handful of prints can swing the quoted
+  gap% without real flow behind it.
+- Impact: Reads as a low-liquidity/stale-quote artifact rather than a
+  sustainable move — same failure mode flagged repeatedly in this log for
+  thin names. No sector peer read-through (no other shipping/tanker name on
+  today's list moved the same direction — see BWLP below, which gapped the
+  opposite way).
+- Horizon: SHORT_TERM — nearest real catalyst is 5 days stale and was
+  price-negative on the day; nothing here anchors a multi-day thesis.
+- Opportunity cost: Zero open positions today, so nothing to displace. Fails
+  the Confluence rule's catalyst requirement outright, and 8,811 shares of
+  volume can't support a sane stop distance for a 2:1 R:R — doesn't clear
+  the bar for one of the week's 3 trade slots.
+
+#### Deep dive: UMAC $25.15 -6.44%
+- Catalyst: Unusual Machines (NYSE American: UMAC, drone components/
+  manufacturing) has no news dated today. Most recent relevant items: a Jul
+  5 Orlando manufacturing-facility expansion announcement, a Jul 15 sell-side
+  note citing 125% upside (Trump Jr.-linked drone/defense supply-chain
+  thesis), and a Jun 22 writeup attributing a prior -9.65% drop to
+  profit-taking on valuation concerns after a run of major catalysts. No
+  fresh item found closer to today.
+- Why: No confirmed same-day driver for the down move. The stock has been
+  volatile all summer on defense/drone-supply-chain headlines (up 45%+ YTD
+  per the Jul 15 piece); today's drop most plausibly reads as give-back/
+  profit-taking in a name that has repeatedly seen sharp single-day swings
+  on thin news, consistent with the Jun 22 pattern already logged for this
+  ticker.
+- Impact: Volume in this snapshot (18,057) is well under what would confirm
+  a real distribution day for a name this volatile. No sector peer
+  read-through among today's other gappers. Treat as noise/give-back until
+  confirmed by real session volume and a dated catalyst.
+- Horizon: SHORT_TERM — no dated catalyst to anchor a thesis to either
+  direction.
+- Opportunity cost: Zero open positions today, so nothing to displace. No
+  dated catalyst to anchor a short or dip-buy thesis to; fails the
+  Confluence rule's catalyst leg, and 18,057 shares of volume is too thin to
+  size a stop for 2:1 R:R — doesn't clear the bar for one of the week's 3
+  trade slots.
+
+#### Deep dive: BWLP $20.36 -6.20%
+- Catalyst: BW LPG Limited (NYSE: BWLP, VLGC/LPG shipping) has no news dated
+  today. Most recent items found: a May 2025 Q1 financial-results release
+  (VLGC sale MOA with BW India), a May 29, 2026 piece flagging a -4.53% drop
+  to $19.60 on a pullback, and a Jul 26, 2026 note describing the stock
+  holding near $21.83 on normal volume with no unusual activity. No fresh
+  item found closer to today.
+- Why: No confirmed same-day driver. Prior-session volume in this snapshot
+  was only 4,511 shares — extremely thin, same failure mode already flagged
+  repeatedly in this log for BWLP (2026-08-06, 2026-08-07). A handful of
+  trades on that little volume can swing the quoted gap% without any real
+  news or institutional flow behind it.
+- Impact: Reads as a low-liquidity/stale-quote artifact rather than a
+  sustainable move, consistent with this ticker's recurring pattern in this
+  log. LPG (also LPG-shipping) gapped up the same session while BWLP gapped
+  down — no coherent sector read-through, reinforces both are noise rather
+  than a sector-wide move.
+- Horizon: SHORT_TERM — no dated catalyst, thin volume, no durable thesis.
+- Opportunity cost: Zero open positions today, so nothing to displace. Fails
+  the Confluence rule's catalyst requirement outright, and 4,511 shares of
+  volume can't support a sane stop distance for a 2:1 R:R — doesn't clear
+  the bar for one of the week's 3 trade slots.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
+No trades placed; research only.
