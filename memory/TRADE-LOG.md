@@ -154,3 +154,24 @@ operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. No Market-Open or Pre-Market TRADE-LOG entry found for today (routines did not log one, or none ran). 22 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 3). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Aug 10, Market-Open (Day 23, Monday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. No Pre-Market Research entry existed for today —
+only a Gappers auto-scan (09:29 ET, cloud) which found 0 qualifying names
+(1 raw gap AGMH +6.36% but $1.11 fails the $3.00 price floor). Ran inline
+research: CNBC week-ahead brief — market is risk-on (S&P at record highs,
+Dow above 54,000, best week since April on the Fri Aug 7 jobs-miss-cheered
+rally), but this week's setup is CPI (Wed)/PPI (Thu) risk with no
+company-specific catalyst for any single name today; Simon Property Group
+(SPG) reports earnings today AMC — excluded, no-earnings-binary rule, not a
+watchlist name regardless. Re-checked the two Aug 7 setup-scan B-grade
+candidates live: WLDS ask $4.68/bid $3.37 (32%+ above the $3.53 Aug 7 print
+AND a >25% bid/ask spread — untradeable, fails chase rule outright); PEPG
+ask $2.87/bid $2.86 (~20% above the $2.39 Aug 7 print — fails chase rule).
+Neither clears the "no entry within 3% of a >5% up print" rule or carries a
+today-specific catalyst. No planned tickers to validate, Steps 3-7 skipped.
+23 trading days since launch (Jul 9) with zero entries. Weekly trade count:
+0/3 (week of Aug 10, new week). Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved,
+operator review pending.
