@@ -5043,3 +5043,126 @@ quick-scan table, no deep dive, no Telegram/ClickUp send (per routine: only
 notify if hits > 0 or the scan errored; this run didn't error). Data file
 `data/premarket_gappers_2026-08-11.json` written with an empty `gappers`
 array.
+
+## 2026-08-11 — Gappers (auto-scan 09:43 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, GAP_THRESHOLD=5.0)
+returned **7 hits** of ~69 tracked tickers (all already |gap|>=5%, price>=$3
+per script filtering; `premarket_volume` field not populated by this script
+so that sub-filter was skipped). Note: this run landed at 09:43 ET, after
+the 9:30 open — later than a strict premarket window, still executed as
+scheduled. Deep-dive capped at top 5 by |gap%|; ranks 6-7 (DPRO, BW) got
+quick-scan only. CMBT's catalyst fetch failed both ways (Apify RAG empty,
+Benzinga WebFetch 403) — logged as a gap, not fabricated.
+
+Several catalyst headlines returned by Apify were stale (dated Jun-Jul) or
+otherwise didn't explain today's specific move — flagged per-ticker below
+rather than treated as confirmed drivers. Two names (SYNA, CMBT) printed
+only 200-400 shares premarket — thin/illiquid prints, flagged as
+low-confidence gaps, not confirmed tradeable moves.
+
+### Gappers (auto-scan 09:43 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | 14.645 | -7.89% | 2,025 | MarketWatch/TipRanks cite an Aug 4 spacecraft-contract-win jump; no fresh headline for today's move (Q2 earnings due Aug 13). |
+| 2 | SYNA | 114.095 | +7.44% | 200 | Stocktitan pegs SYNA at $103.64 (Jul 29) with a ~8% price-target cut to $133; no dated catalyst found for today's print. |
+| 3 | ZIM | 23.38 | -7.20% | 108,791 | Coverage centers on ZIM's pending buyout-arbitrage vs. a reported ~$35/share Hapag-Lloyd offer; no same-day headline for today's drop. |
+| 4 | BWLP | 23.12 | +7.19% | 10,191 | Marketchameleon earnings-dates page is the top hit; no same-day catalyst found. |
+| 5 | CMBT | 17.685 | +6.99% | 400 | Catalyst fetch failed (Apify empty, Benzinga 403) — no headline identified. |
+| 6 | DPRO | 3.86 | -6.54% | 4,945 | Trustwave recap notes Draganfly consolidating near $4.10 (Jul 31); no fresh today-dated catalyst. |
+| 7 | BW | 11.81 | +5.92% | 15,124 | Trustwave notes energy-transition headwinds (Jul 19); Stocktwits flags an earlier Q1 revenue beat ($214.4M vs $149.7M est.) driving a premarket surge — no confirmed same-day driver. |
+
+#### Deep dive: LUNR $14.645 -7.89%
+- Catalyst: No same-day catalyst identified. Freshest relevant coverage is
+  ~1-week-old (Aug 4, spacecraft contract win); LUNR is already down ~28%
+  from its May 28 52-week high ($46.75) ahead of Q2 earnings due Aug 13
+  (est. -$0.07 EPS, $219.3M revenue).
+- Why: With no fresh headline surfaced, the drop most likely reflects
+  pre-earnings positioning or continuation of the post-high pullback, not a
+  single new catalyst.
+- Impact: Premarket volume of only 2,025 shares vs. LUNR's normal
+  multi-million-share turnover reads as a thin/low-liquidity print, not
+  confirmed institutional selling — high mean-reversion risk once regular
+  volume arrives.
+- Horizon: SHORT_TERM — no structural catalyst identified; Aug 13 earnings
+  is the real event risk and this gap likely reprices into that print.
+- Opportunity cost: At 2,025 shares of premarket liquidity a clean fill at
+  20%-of-equity sizing is doubtful; unlikely to clear 2:1 R:R at a sane stop
+  given the illiquidity — ranks below ZIM/BWLP/BW today. 0/6 positions
+  open, 0/3 weekly trades used (week of Aug 10) — nothing displaced either
+  way.
+
+#### Deep dive: SYNA $114.095 +7.44%
+- Catalyst: No same-day headline found. Freshest dated point (Jul 29) has
+  SYNA at $103.64, with a 9-analyst average price-target cut to $133 the
+  most recent fundamental note. Today's print at $114.095 is well above
+  that level with nothing surfaced to explain the gap.
+- Why: Mechanism can't be established from available sources — possibly
+  options/index-flow driven, or an unconfirmed same-day headline the
+  research didn't surface.
+- Impact: Only 200 shares printed premarket — does not read as a real,
+  liquid gap; treat as a stale/thin quote pending confirmation against
+  actual regular-session volume at the open.
+- Horizon: SHORT_TERM pending data-quality confirmation — insufficient
+  evidence for any thesis until verified with live volume.
+- Opportunity cost: A 200-share print carries no real signal; sizing
+  anything here would just be trading noise. 0/6 positions open, 0/3
+  weekly trades used (week of Aug 10).
+
+#### Deep dive: ZIM $23.38 -7.20%
+- Catalyst: ZIM's dominant known thesis is merger-arbitrage — a reported
+  ~$35/share Hapag-Lloyd acquisition interest (Mar 2026 piece), with ZIM
+  trading well below that implied deal price. Q1 2026 results (reported
+  May 20) were weak. No today-dated report found confirming a specific
+  deal update behind today's drop.
+- Why: If merger-arb is still the operative thesis, a sharp drop like this
+  typically signals deal-risk repricing (terms cut, timeline slip,
+  regulatory doubt) — but no confirming same-day source was found.
+- Impact: Premarket volume of 108,791 shares is the largest of today's
+  batch — reads as a real, liquid move, not noise. Worth checking
+  container-shipping peers for a sector-wide freight-rate read-through vs.
+  a ZIM-specific deal update.
+- Horizon: SHORT_TERM pending confirmation — if this is deal-arb repricing
+  it's event-driven and needs a same-day sourced headline before treating
+  it as more than a fade risk; would only become LONG_TERM if the buyout is
+  confirmed intact at a materially higher implied price.
+- Opportunity cost: Real volume plus a real (if unconfirmed) M&A angle
+  makes this the most credible name on today's down-list, but needs the
+  actual deal-status headline before it could be sized against the 2:1 R:R
+  minimum. 0/6 positions open, 0/3 weekly trades used (week of Aug 10).
+
+#### Deep dive: BWLP $23.12 +7.19%
+- Catalyst: No same-day headline found. Most relevant fundamentals: BW LPG
+  reported a Q3 2025 profit (Dec 2025 release) with a historical pattern of
+  drifting up modestly post-earnings (+2.3% day-after, +3.9% over the
+  following days). A Q4 2025 EPS beat (+45.8% vs. estimate, per a late-May
+  recap) was actually followed by a 3.37% share decline — the market has
+  recently been fading BWLP's earnings beats, not rewarding them.
+- Why: No same-day mechanism established; given that historical pattern,
+  today's up-move is unlikely to be earnings-related unless a new report
+  just dropped.
+- Impact: 10,191 shares premarket is modest but not negligible; absent a
+  confirmed catalyst this reads more like normal volatility in a
+  shipping/LPG name than a durable move — check VLGC freight rates and peer
+  tanker names for sector read-through.
+- Horizon: SHORT_TERM — no structural catalyst found; default to fade-risk
+  absent same-day confirmation.
+- Opportunity cost: Without a real catalyst, BWLP would need to displace a
+  stronger, catalyst-confirmed name (e.g. ZIM) to be worth taking — hard to
+  justify given the unexplained gap. 0/6 positions open, 0/3 weekly trades
+  used (week of Aug 10).
+
+#### Deep dive: CMBT $17.685 +6.99%
+- Catalyst: Fetch failed — Apify RAG returned no usable results and the
+  Benzinga WebFetch fallback was blocked (HTTP 403). No same-day news
+  identified. Separate fundamentals research surfaced CMB.TECH NV (NYSE:
+  CMBT), a Belgian shipping/tanker company, with a reported $3.05B contract
+  backlog as of an April 2026 piece.
+- Why: Unknown — no catalyst source available for today's move.
+- Impact: Only 400 shares printed premarket — thin/illiquid print, likely
+  not a real tradeable gap.
+- Horizon: SHORT_TERM pending data gap — cannot classify without a
+  confirmed catalyst; re-check next run.
+- Opportunity cost: No catalyst plus a 400-share print means this doesn't
+  clear the bar for any position sizing — lowest-quality signal in today's
+  top 5. 0/6 positions open, 0/3 weekly trades used (week of Aug 10).
