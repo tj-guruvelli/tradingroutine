@@ -5078,3 +5078,17 @@ Data file `data/setup-scan_cloud_2026-08-11_1641ET.json`.
 
 No Telegram/ClickUp send — 0 grade-A hits (per routine: notify only if
 >=1 grade-A hit).
+
+### Setup Scan (18:38 ET, cloud)
+
+Second scheduled fire of this routine today (see 16:41 ET entry above).
+Market is closed (regular session ends 16:00 ET) — this scan runs on the
+day's final daily/intraday bars, not live intraday data. Scanned 60
+watchlist tickers via `node scripts/setup-scan-cloud.mjs`
+(`config/rules.json` -> `watchlist_tiers.immediate`), all 60 succeeded,
+0 errors this run. Zero grade-A or grade-B hits — no ticker cleared 2+
+setups or a single setup. No table to print. Data file
+`data/setup-scan_cloud_2026-08-11_1838ET.json`.
+
+No Telegram/ClickUp send — 0 grade-A hits (per routine: notify only if
+>=1 grade-A hit).
