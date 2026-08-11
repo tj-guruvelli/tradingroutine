@@ -56,10 +56,30 @@ function fail(msg, err) {
 const r2 = (x) => (x == null ? null : Math.round(x * 100) / 100);
 const mean = (xs) => xs.reduce((a, b) => a + b, 0) / xs.length;
 
-async function alpacaJson(url, headers) {
-  const res = await fetch(url, { headers });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}: ${(await res.text()).slice(0, 200)}`);
-  return res.json();
+async function alpacaJson(url, headers, attempt = 1) {
+  const MAX_ATTEMPTS = 6;
+  try {
+    const res = await fetch(url, { headers });
+    if (!res.ok) {
+      if (res.status === 429 && attempt < MAX_ATTEMPTS) {
+        await new Promise((r) => setTimeout(r, 800 * attempt)); // Alpaca rate limit — needs longer backoff than transient net errors
+        return alpacaJson(url, headers, attempt + 1);
+      }
+      if (res.status === 503 && attempt < MAX_ATTEMPTS) {
+        await new Promise((r) => setTimeout(r, 250 * attempt));
+        return alpacaJson(url, headers, attempt + 1);
+      }
+      throw new Error(`HTTP ${res.status} for ${url}: ${(await res.text()).slice(0, 200)}`);
+    }
+    return res.json();
+  } catch (e) {
+    // transient DNS/connection errors under concurrent load — retry with backoff
+    if (attempt < MAX_ATTEMPTS && /fetch failed|DNS|ECONNRESET|ETIMEDOUT|network/i.test(String(e && e.cause ? e.cause : e.message || e))) {
+      await new Promise((r) => setTimeout(r, 250 * attempt));
+      return alpacaJson(url, headers, attempt + 1);
+    }
+    throw e;
+  }
 }
 
 // ---------------------------------------------------------------------------

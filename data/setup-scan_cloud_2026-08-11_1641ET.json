@@ -1,0 +1,12 @@
+{
+  "scanned_at": "2026-08-11T20:42:20.653Z",
+  "ny_time": "16:41",
+  "candidates_checked": 60,
+  "hits": [],
+  "errors": [
+    {
+      "symbol": "GFS",
+      "reason": "HTTP 429 for https://data.alpaca.markets/v2/stocks/GFS/bars?timeframe=1Min&start=2026-08-11T04:00:00-04:00&end=2026-08-11T20:41:41.324Z&limit=10000&feed=iex&adjustment=raw: {\"message\": \"too many requests.\"}\n"
+    }
+  ]
+}

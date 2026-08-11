@@ -5058,3 +5058,23 @@ open, not new market information. Zero hits — no quick-scan table, no deep
 dive, no Telegram/ClickUp send. Data file
 `data/premarket_gappers_2026-08-11_1023et.json` written with an empty
 `gappers` array and a note explaining the post-open caveat.
+
+### Setup Scan (16:41 ET, cloud)
+
+Scanned 60 watchlist tickers via `node scripts/setup-scan-cloud.mjs`
+(`config/rules.json` -> `watchlist_tiers.immediate`). Zero grade-A or
+grade-B hits — no ticker cleared 2+ setups or a single setup on today's
+data. No table to print (no hits).
+
+**Reliability note:** the sandbox's outbound network was flaky under the
+script's 8-way concurrency this run — first 5 attempts returned 34-60/60
+tickers as DNS/503 errors (confirmed via isolated test: 20 sequential
+requests succeeded 20/20, but concurrent bursts intermittently failed).
+Added retry-with-backoff (3-6 attempts, longer backoff on HTTP 429) to
+`alpacaJson()` in `scripts/setup-scan-cloud.mjs` to fix this — a
+robustness-only change, no scan logic touched. Final clean run: 59/60
+tickers scanned successfully, 1 error (GFS, HTTP 429 after max retries).
+Data file `data/setup-scan_cloud_2026-08-11_1641ET.json`.
+
+No Telegram/ClickUp send — 0 grade-A hits (per routine: notify only if
+>=1 grade-A hit).
