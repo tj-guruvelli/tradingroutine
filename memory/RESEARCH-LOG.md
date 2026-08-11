@@ -4954,3 +4954,80 @@ No grade-A hits -> no Telegram alert per STEP 4 rule. Post-close run (18:38
 ET, market closed) — Setup A not checkable, matches routine expectation.
 Candidates only, not orders — feed to `/trade` if pursued (full
 safety-check gate applies).
+
+## 2026-08-11 — Pre-Market Research (Day 24, Tuesday)
+
+**Account snapshot (live via `alpaca.sh`):** Equity $100,000.00 | Cash
+$100,000.00 (100%) | Buying power $400,000 | Positions: 0 | Open orders: 0 |
+Daytrade count: n/a (0 recent trades). Equity still flat at $100,000 vs. the
+$10,000 baseline in CLAUDE.md — mismatch flagged Jul 27, unresolved 25th
+straight session, operator review pending.
+
+**Market context:**
+- **Oil — dominant catalyst today.** WTI $83.91 (+2.2%, Investing.com) /
+  other prints ~$82.13 (+5%, Schwab); Brent $89.11 (+1.58%, Business
+  Insider Markets). Driver: Strait of Hormuz escalation — Iran named a
+  hardline ex-IRGC commander to its top security post, a suspected Iranian
+  missile reportedly struck an ADNOC-linked vessel in the strait over the
+  weekend, and Foreign Minister Araghchi says Tehran isn't in direct talks
+  with the U.S. despite Washington's "deal is near" framing (Trump also
+  reportedly demanding compensation from Iran per Benzinga). ~20-25% of
+  global seaborne crude transits the strait — genuine supply-shock tail
+  risk, not noise. Partially offset by a prior +2.5M bbl US inventory
+  build (wk of 7/31). US oil reserves reported at lowest level in 43 years
+  (Business Insider).
+- **Equities:** Futures mixed/soft — SPY -0.02%, QQQ -0.01% premarket
+  (WebSearch fallback, Apify returned junk on 2 attempts for this query,
+  noted per fallback rule). CVX +4.48% to $194.91 on the crude spike — real
+  energy-sector beneficiary but a same-morning >4% print, and this session's
+  Alpaca quote pull returned a stale prior-close timestamp, not a live
+  premarket tick, so no confirmed safe entry level. 10Y yield 4.73%, 2Y
+  4.03%. One WebSearch summary cited Fed funds futures pricing ~52% odds of
+  a September *hike* — flagged as needing independent verification, since
+  it cuts against the dovish/jobs-miss-cheered rally narrative logged Aug
+  10; not used to inform today's call either way.
+- **This week's data:** CPI tomorrow (Wed Aug 12, 8:30am) — headline
+  forecast +0.1% MoM / 3.4% YoY, core +0.2% MoM / 2.5% YoY (MarketWatch econ
+  calendar). PPI Thursday (Aug 13, 8:30am) — forecast +0.2%, core +0.3%.
+  Today: NFIB optimism index (6am, forecast 97.0) and existing home sales
+  (10am, forecast 4.05M) — second-tier, unlikely to move the tape much.
+- **Gaps this run:** Apify RAG queries for today's BMO earnings names and
+  S&P sector YTD rankings returned empty/junk (Nasdaq earnings calendar
+  "data not available," Morningstar/State Street sector pages didn't
+  render live figures) — no confirmed earnings-binary names to exclude
+  today, but also no positive confirmation none exist. No open positions,
+  so this gap doesn't block today's call.
+
+**Trade ideas (2, both HOLD/watch-only — no entry):**
+1. **CVX** — catalyst is real (Iran/Hormuz oil-supply risk, +4.48% on
+   crude spike) but unconfirmed at a live premarket level (stale quote),
+   and the move is macro-driven, not idiosyncratic to Chevron — doesn't
+   clear the confluence rule's 2-indicator technical bar without a live
+   `combined_analysis` read. Watch for open confirmation; re-check same-day
+   R:R before considering (would need entry not already >5% above
+   yesterday's close and a real stop level).
+2. **Energy sector broadly (XLE)** — same Hormuz catalyst, cleaner way to
+   express a sector view than chasing a single >4% mover if the thesis
+   firms up intraday. Not sized today — no confirmed technical confluence
+   yet, and one sector-momentum trade isn't worth burning a weekly slot
+   (0/3 used, week of Aug 10) ahead of tomorrow's CPI print.
+
+**Risk factors:**
+- Strait of Hormuz escalation — real tail risk for a sharp oil/vol spike if
+  the strait sees disruption; energy longs and short-vol positions both
+  exposed.
+- CPI print tomorrow 8:30am — a hot surprise (headline or core above
+  forecast) could reprice rate-cut odds and hit richly-valued growth names;
+  argues against sizing new risk into the print.
+- Elevated yields (10Y 4.73%) sitting alongside a reported ~52%
+  September-hike probability that reads inconsistent with the broader
+  easing narrative — unverified, watch for confirmation or correction
+  before treating it as real.
+- Persistent account-baseline mismatch ($100k live equity vs. $10k
+  CLAUDE.md baseline) remains open, unresolved 25 sessions running.
+
+**Decision: HOLD.** No company-specific, confirmed-live catalyst clears the
+entry checklist. CVX/XLE thesis is real but unconfirmed at open and macro-
+driven; CPI print tomorrow argues for staying flat into it rather than
+sizing new risk today. 24 trading days since launch (Jul 9) with zero
+entries. Weekly trade count: 0/3 (week of Aug 10).
