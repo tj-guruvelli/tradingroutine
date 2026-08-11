@@ -1,0 +1,7 @@
+{
+  "scanned_at": "2026-08-11T14:23:00Z",
+  "note": "Second same-day run (10:23 ET) — market already open (see market-open HOLD commit 8b0c345 earlier today). Alpaca snapshot dailyBar now reflects today's in-progress session, not a pre-market baseline, so gap_pct degenerates toward ~0 for every symbol by design of scripts/gappers-alpaca.sh (see script header comment). This run intentionally follows the cloud routine as scheduled; zero hits is expected/uninformative post-open, not a real market signal.",
+  "deep_dive_cap": 5,
+  "gap_threshold_pct": 5.0,
+  "gappers": []
+}

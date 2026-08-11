@@ -5043,3 +5043,18 @@ quick-scan table, no deep dive, no Telegram/ClickUp send (per routine: only
 notify if hits > 0 or the scan errored; this run didn't error). Data file
 `data/premarket_gappers_2026-08-11.json` written with an empty `gappers`
 array.
+
+## 2026-08-11 — Gappers (auto-scan 10:23 ET, cloud, second run)
+
+Second scheduled fire of this routine today; market is already open (see
+market-open HOLD entry, 8b0c345). Re-scanned watchlist via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0) — 0 rows returned.
+Note: this script's gap math compares current price to Alpaca's `dailyBar`
+close, which is only a valid pre-market baseline before the regular session
+opens. Post-open, `dailyBar` tracks today's own in-progress session, so
+`gap_pct` collapses toward 0 for every symbol regardless of actual overnight
+gaps — the empty result here is an artifact of running the scan past the
+open, not new market information. Zero hits — no quick-scan table, no deep
+dive, no Telegram/ClickUp send. Data file
+`data/premarket_gappers_2026-08-11_1023et.json` written with an empty
+`gappers` array and a note explaining the post-open caveat.
