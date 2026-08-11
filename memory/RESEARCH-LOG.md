@@ -5058,3 +5058,36 @@ open, not new market information. Zero hits — no quick-scan table, no deep
 dive, no Telegram/ClickUp send. Data file
 `data/premarket_gappers_2026-08-11_1023et.json` written with an empty
 `gappers` array and a note explaining the post-open caveat.
+
+## 2026-08-11 — Gappers (auto-scan 11:21 ET, cloud, third run)
+
+Third scheduled fire today; market open ~1h51m. Re-scanned watchlist via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0) — this time the
+script returned one raw candidate: **ZIM**, prev_close $24.83, current
+$26.68, gap_pct +7.45%, volume 26,888.
+
+Before running catalyst research, cross-checked against a live quote and
+today's 15Min bars (`scripts/alpaca.sh quote ZIM` / `bars ZIM 15Min`):
+ZIM's live quote printed ap $24.81 / bp $21.61 at 15:23:29Z, and every 15Min
+bar from 13:30Z (session open) through 15:15Z sat inside a $24.62-$25.00
+range — no trade anywhere near $26.68. The scan's "current" value is a
+stale/bad snapshot artifact (bad latestTrade or latestQuote echo), not a
+real price. ZIM is effectively flat on the session, not gapping. This is
+the same root-cause class flagged in the 10:23 ET entry above (dailyBar/
+snapshot math degrades post-open) plus a second, distinct failure mode: a
+stale current-price echo on top of it.
+
+**Discarded as a false positive** — not treated as a real hit, no deep-dive
+research spent on it, no Telegram/ClickUp notification sent (zero genuine
+hits, scan did not error). Data file
+`data/premarket_gappers_2026-08-11_1121et.json` written with the discarded
+candidate logged under `discarded_false_positives` and an empty `gappers`
+array.
+
+**Process note:** `scripts/gappers-alpaca.sh` has now produced unreliable
+output on 2 of 3 runs today, both post-open (10:23 ET zero-hits-by-design,
+11:21 ET a stale-data false positive). Recommend the operator restrict this
+cloud routine's cron schedule to pre-market hours only (before 9:30 ET), or
+have the script hard-fail/warn when invoked after the open rather than
+silently emitting degraded or spurious rows — not fixed here, flagged for
+the operator per read-only/research-only scope of this routine.

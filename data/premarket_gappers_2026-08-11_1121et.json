@@ -1,0 +1,10 @@
+{
+  "scanned_at": "2026-08-11T15:21:00Z",
+  "note": "Third same-day run (11:21 ET) — market open ~1h51m. scripts/gappers-alpaca.sh watchlist returned one raw candidate, ZIM (prev_close 24.83, current 26.68, gap_pct +7.45%, volume 26888). Verified against a live quote (ap 24.81 / bp 21.61, timestamp 15:23:29Z) and 15Min bars for the session (13:30-15:15Z): ZIM traded in a tight 24.62-25.00 range all day with no print near 26.68 anywhere in the bar history. The 26.68 'current' value is a stale/bad snapshot artifact (likely a stale latestTrade or latestQuote echo), not a real price. Same root-cause class as the 10:23 ET run's zero-hits note: scripts/gappers-alpaca.sh's premarket-gap math is unreliable once run post-open. Treated as a false positive and excluded from gappers below; no deep-dive performed, no notification sent (no genuine hits).",
+  "deep_dive_cap": 5,
+  "gap_threshold_pct": 5.0,
+  "discarded_false_positives": [
+    {"symbol": "ZIM", "reported_gap_pct": 7.45, "reported_current": 26.68, "verified_current": 24.81, "reason": "stale snapshot data, not corroborated by live quote or intraday bars"}
+  ],
+  "gappers": []
+}
