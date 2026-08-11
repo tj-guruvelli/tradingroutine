@@ -5031,3 +5031,15 @@ entry checklist. CVX/XLE thesis is real but unconfirmed at open and macro-
 driven; CPI print tomorrow argues for staying flat into it rather than
 sizing new risk today. 24 trading days since launch (Jul 9) with zero
 entries. Weekly trade count: 0/3 (week of Aug 10).
+
+## 2026-08-11 — Gappers (auto-scan 08:31 ET, cloud)
+
+Scanned 69 watchlist tickers via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0). Only 6 symbols had fresh today-dated premarket quotes/
+trades this early (AMKR, META, GOOG, ONDS, NIO, OKLO) — thin premarket
+liquidity across the rest of the watchlist at this hour. None of the 6
+cleared the 5% threshold; largest mover was NIO at -3.63%. Zero hits — no
+quick-scan table, no deep dive, no Telegram/ClickUp send (per routine: only
+notify if hits > 0 or the scan errored; this run didn't error). Data file
+`data/premarket_gappers_2026-08-11.json` written with an empty `gappers`
+array.
