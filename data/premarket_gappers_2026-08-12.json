@@ -1,0 +1,76 @@
+{
+  "scanned_at": "2026-08-12T13:25:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 108.035,
+      "gap_pct": 19.64,
+      "premarket_volume": 888269,
+      "catalyst": "CoreWeave reported Q2 2026 results after Tuesday's close: revenue $2,575M (up from $1,212M a year ago) and a narrower-than-expected loss of -$1.03/share vs -$1.49 consensus.",
+      "headlines": [],
+      "catalyst_detail": "CoreWeave reported Q2 2026 earnings after market close on Aug 11: revenue $2,575M vs $1,212M a year ago (~112% YoY growth), EPS -$1.03 vs -$1.49 consensus (beat, narrower loss than feared). Investor materials reference a large backlog figure (~$104B).",
+      "why": "Earnings beat plus explosive YoY revenue growth in AI/GPU-cloud demand pulls in momentum buyers already primed on the AI-infra trade; the narrower-than-feared loss removes a near-term bear-case overhang.",
+      "impact": "Premarket volume (888K) and a 19.6% single-session gap read as a classic post-earnings pop, not a slow grind. NBIS gapping similarly today on its own earnings suggests a sector-wide AI-datacenter re-rating (read-through), not a CRWV-only event — a large one-day move like this after already-elevated 2026 AI-infra multiples carries real fade/mean-revert risk.",
+      "horizon": "SHORT_TERM — this is an earnings-day reaction; no confluence check run yet. Treat as a headline pop, not a confirmed swing entry, until price settles and technicals are checked at /trade.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used (week of Aug 10) — no existing holding displaced. Against today's own list, CRWV is rank 1 by gap size, but at $108 a 7-10% stop is ~$7.50-10.80 risk, requiring ~$15-22 of further upside to clear the 2:1 R:R minimum after an already-19.6% pop — a stretch. Today is also the CPI print day flagged in this morning's Pre-Market Research HOLD call, arguing against sizing new risk before confluence is confirmed."
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 226.35,
+      "gap_pct": 17.34,
+      "premarket_volume": 566000,
+      "catalyst": "Nebius Group released Q2 2026 results before today's open (Aug 12); pre-print consensus called for revenue near $535-578M.",
+      "headlines": [],
+      "catalyst_detail": "Nebius reported Q2 2026 results before market open today. Pre-earnings consensus was revenue near $535-578M. Stock was already up over 100% YTD in 2026 heading into the print, with a pre-print mean analyst price target near $252 (~35% implied upside). Premarket action points to a beat/raise reaction.",
+      "why": "An earnings beat stacked on an already-strong AI-cloud growth narrative pulls in the same momentum-buyer cohort as CRWV; a disclosed large institutional stake reinforces the AI-infra thesis.",
+      "impact": "566K premarket volume on a stock that has already multiplied in value this year — the move reads as earnings confirmation of an existing bull thesis rather than a fresh one-off headline spike. Strongly correlated with CRWV's move today (same AI-datacenter/GPU-cloud trade) — best treated as one basket-level bet, not two independent signals.",
+      "horizon": "SHORT_TERM tag for the immediate premarket pop (earnings reaction, no confluence run yet); the underlying AI-infra buildout thesis is structural and could support a LONG_TERM swing only after the pop settles and confluence/price action confirm.",
+      "opportunity_cost": "Directly correlated with CRWV (same AI-datacenter/GPU-cloud trade) — taking both would concentrate risk in one theme and would likely fail scripts/corr-gate.mjs if both otherwise cleared confluence. Realistically only one of {CRWV, NBIS} should get a trade slot this week given the 3-trades/week cap and correlation risk, not both."
+    },
+    {
+      "rank": 3,
+      "symbol": "BE",
+      "price": 233.67,
+      "gap_pct": 10.49,
+      "premarket_volume": 277571,
+      "catalyst": "Bloom Energy reported record Q2 2026 results (Aug 6 IR release) and announced an expanded MiTAC partnership for AI onsite power generation.",
+      "headlines": [],
+      "catalyst_detail": "Bloom Energy's investor-relations page headlines record Q2 2026 results and an expanded partnership with MiTAC around AI-onsite power — positioning Bloom's fuel-cell systems as backup/primary power for AI data centers.",
+      "why": "Continuation of the AI-datacenter power-demand theme; an expanded partnership with an established server/AI-hardware player signals recurring revenue growth in a fast-growing behind-the-meter power niche.",
+      "impact": "277K premarket volume on a stock that has already re-rated sharply higher over recent sessions (up mid-single-digits % in the prior session per CNBC) — this reads as trend continuation rather than a fresh one-day headline spike, though a run this steep raises near-term mean-reversion risk.",
+      "horizon": "LONG_TERM lean — the AI-datacenter power-demand thesis is structural (contract/partnership-based, not headline-only) and aligns with the current AI-infra rotation; still needs a confluence check before sizing a swing position.",
+      "opportunity_cost": "Also sits in the AI-infra/power theme alongside CRWV and NBIS — a third correlated name in the same macro trade. Its contract-based catalyst is arguably more durable than CRWV/NBIS's single-print pop, but BE has already run further and sits further from a fresh breakout, raising chase risk at $233.67."
+    },
+    {
+      "rank": 4,
+      "symbol": "ZIM",
+      "price": 26.21,
+      "gap_pct": 6.81,
+      "premarket_volume": 65123,
+      "catalyst": "ZIM remains under a signed cash-merger agreement with Hapag-Lloyd at $35.00/share; a regulatory (antitrust) notification surfaced about a week ago as the deal moves toward clearance.",
+      "headlines": [],
+      "catalyst_detail": "ZIM is under a signed cash-merger agreement to be acquired by Hapag-Lloyd for $35.00/share (~$4.2B deal value, announced Feb 16, 2026). A competition-authority notification filing surfaced roughly a week ago, signaling the deal is progressing through antitrust review.",
+      "why": "Merger-arbitrage dynamics: as regulatory-clearance odds firm up, the market compresses the spread between the current price ($26.21) and the $35.00 deal price, drawing in arb-focused buyers.",
+      "impact": "Only 65K premarket volume, the lowest of the five — this is a slow-grinding arb re-rating on regulatory-milestone news, not a fresh operational headline spike. Roughly 25% of spread remains to the $35 deal price, so further re-rating is plausible on additional clearance milestones, but it's event-driven on a regulatory timeline rather than organic business momentum.",
+      "horizon": "LONG_TERM by mechanics (deal-close arb runs weeks-to-months), but this is a special-situation merger-arb trade, not a momentum swing — VWAP/RSI/200-SMA technicals are largely irrelevant to a fixed-price cash deal, so it's a poor structural fit for the strategy's technical Confluence rule even though the catalyst itself is real and durable.",
+      "opportunity_cost": "Lowest-conviction setup of the five for this playbook (lowest volume, and deal-arb mechanics don't map onto the Confluence rule as designed) — would rank last for a discretionary slot this week; capital is better allocated to CRWV/NBIS/BE/AMKR if only 1-2 of the week's 3 trade slots go to today's gappers."
+    },
+    {
+      "rank": 5,
+      "symbol": "AMKR",
+      "price": 57.16,
+      "gap_pct": 5.27,
+      "premarket_volume": 140701,
+      "catalyst": "Amkor Technology signed a $1.5B multi-year strategic partnership with Nvidia (announced Jul 23, 2026) to expand US advanced chip-packaging/test capacity, ahead of Amkor's own August earnings report.",
+      "headlines": [],
+      "catalyst_detail": "Amkor and Nvidia announced a $1.5B multi-year agreement on Jul 23, 2026, including an Nvidia prepayment to fund expansion of Amkor's US advanced chip-packaging and test operations. Today's move comes just ahead of Amkor's own upcoming August earnings report.",
+      "why": "Direct commercial tie-in to Nvidia's AI-chip supply chain (packaging/test capacity) re-rates AMKR as an AI-infra beneficiary; today's pop looks like anticipatory buying into the first earnings print that will discuss the deal's ramp.",
+      "impact": "140K premarket volume on a stock that had dropped sharply earlier this year — this reads partly as a bounce off depressed levels plus AI-supply-chain re-rating. Earnings are still pending and the exact date wasn't confirmed in this scan, so a binary earnings event sits directly ahead of any entry — a live concern under the strategy's no-earnings-binary rule.",
+      "horizon": "SHORT_TERM lean — the imminent, unconfirmed earnings date overrides the otherwise-structural Nvidia-deal thesis until the print clears; re-evaluate for LONG_TERM only after earnings.",
+      "opportunity_cost": "Sits in the same AI-supply-chain basket as CRWV/NBIS/BE, and additionally carries an unconfirmed near-term earnings date that would likely disqualify a fresh pre-earnings entry under the no-earnings-binary rule regardless of its rank on today's list."
+    }
+  ]
+}

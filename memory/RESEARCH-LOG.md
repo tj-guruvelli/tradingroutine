@@ -5171,3 +5171,124 @@ discipline argues against sizing new risk into a binary macro release, and
 no idiosyncratic single-name setup clears the confluence bar regardless. 25
 trading days since launch (Jul 9) with zero entries. Weekly trade count:
 0/3 (week of Aug 10).
+
+## 2026-08-12 — Gappers (auto-scan 09:31 ET, cloud)
+
+Watchlist scan (Alpaca, GAP_THRESHOLD=5.0) returned 5 qualifying names, all
+price >=$3 and |gap%| >=5 — fewer than the 10-cap so all 5 got full deep-dive
+(no ranks 6-10 to note as quick-scan-only). CPI print today (flagged in this
+morning's Pre-Market Research HOLD) is a live macro overhang across all five.
+
+### Part A — Quick scan
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 108.04 | +19.64% | 888,269 | Q2 2026 earnings beat: rev $2,575M vs $1,212M YoY, EPS -$1.03 vs -$1.49 est |
+| 2 | NBIS | 226.35 | +17.34% | 566,000 | Q2 2026 earnings released before today's open; likely beat on ~$535-578M consensus |
+| 3 | BE | 233.67 | +10.49% | 277,571 | Record Q2 2026 results (Aug 6) + expanded MiTAC AI-onsite-power partnership |
+| 4 | ZIM | 26.21 | +6.81% | 65,123 | Hapag-Lloyd $35.00/sh cash-merger arb; antitrust notification filed ~1wk ago |
+| 5 | AMKR | 57.16 | +5.27% | 140,701 | $1.5B Nvidia chip-packaging deal (Jul 23) re-rating, ahead of Aug earnings |
+
+### Part B — Deep dive
+
+#### Deep dive: CRWV $108.04 +19.64%
+- Catalyst: Reported Q2 2026 earnings after Tuesday's close (Aug 11): revenue
+  $2,575M vs $1,212M a year ago (~112% YoY growth), EPS -$1.03 vs -$1.49
+  consensus (beat, narrower loss than feared). Backlog referenced at ~$104B.
+- Why: Earnings beat + explosive YoY growth in AI/GPU-cloud demand pulls in
+  momentum buyers already primed on the AI-infra trade; narrower-than-feared
+  loss removes a near-term bear overhang.
+- Impact: 888K premarket volume + 19.6% gap reads as a classic post-earnings
+  pop. NBIS gapping similarly today on its own print suggests a sector-wide
+  AI-datacenter read-through, not CRWV-only — a move this size after already
+  elevated 2026 AI-infra multiples carries real fade/mean-revert risk.
+- Horizon: SHORT_TERM — earnings-day reaction, no confluence check run yet.
+  Treat as a headline pop until price settles and technicals confirm at /trade.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of
+  Aug 10) — nothing existing to displace. Rank 1 by gap size, but at $108 a
+  7-10% stop is ~$7.50-10.80 risk, needing ~$15-22 further upside to clear
+  2:1 R:R after an already-19.6% pop — a stretch. Today is also the CPI
+  print flagged in this morning's HOLD call, arguing against new risk before
+  confluence is confirmed.
+
+#### Deep dive: NBIS $226.35 +17.34%
+- Catalyst: Released Q2 2026 results before today's open; pre-print
+  consensus called for revenue near $535-578M. Stock already up >100% YTD
+  in 2026 heading into the print, pre-print mean price target ~$252 (~35%
+  implied upside). Premarket action points to a beat/raise reaction.
+- Why: Earnings beat stacked on an already-strong AI-cloud growth narrative
+  pulls in the same momentum-buyer cohort as CRWV; a disclosed large
+  institutional stake reinforces the AI-infra thesis.
+- Impact: 566K premarket volume on a stock that has already multiplied in
+  value this year — reads as earnings confirmation of an existing bull
+  thesis, not a fresh one-off spike. Strongly correlated with CRWV's move
+  today — best treated as one basket-level bet, not two independent signals.
+- Horizon: SHORT_TERM tag for the immediate pop (earnings reaction, no
+  confluence run yet); the AI-infra buildout thesis is structural and could
+  support a LONG_TERM swing only after the pop settles and confluence confirms.
+- Opportunity cost: Directly correlated with CRWV (same AI-datacenter/GPU-
+  cloud trade) — taking both would concentrate risk in one theme and would
+  likely fail scripts/corr-gate.mjs if both cleared confluence. Realistically
+  only one of {CRWV, NBIS} should get a trade slot this week, not both.
+
+#### Deep dive: BE $233.67 +10.49%
+- Catalyst: IR page headlines record Q2 2026 results (Aug 6) and an
+  expanded MiTAC partnership for AI-onsite power — positioning Bloom's
+  fuel-cell systems as backup/primary power for AI data centers.
+- Why: Continuation of the AI-datacenter power-demand theme; an expanded
+  partnership with an established server/AI-hardware player signals
+  recurring revenue growth in a fast-growing behind-the-meter power niche.
+- Impact: 277K premarket volume on a stock that has already re-rated
+  sharply higher over recent sessions (up mid-single-digits % the prior
+  session per CNBC) — reads as trend continuation, though a run this steep
+  raises near-term mean-reversion risk.
+- Horizon: LONG_TERM lean — contract/partnership-based power-demand thesis
+  is structural and aligns with the current AI-infra rotation; still needs
+  a confluence check before sizing a swing position.
+- Opportunity cost: A third name correlated with the AI-infra/power theme
+  alongside CRWV and NBIS. Catalyst arguably more durable than CRWV/NBIS's
+  single-print pop, but BE has already run further and sits further from a
+  fresh breakout, raising chase risk at $233.67.
+
+#### Deep dive: ZIM $26.21 +6.81%
+- Catalyst: Under a signed cash-merger agreement to be acquired by
+  Hapag-Lloyd for $35.00/share (~$4.2B deal, announced Feb 16, 2026); a
+  competition-authority notification filing surfaced ~1 week ago, signaling
+  progress through antitrust review.
+- Why: Merger-arb dynamics — as regulatory-clearance odds firm up, the
+  market compresses the spread between $26.21 and the $35.00 deal price,
+  drawing in arb-focused buyers.
+- Impact: Only 65K premarket volume, lowest of the five — a slow-grinding
+  arb re-rating on a regulatory milestone, not a fresh operational spike.
+  ~25% of spread remains to the $35 deal price; further re-rating depends on
+  the regulatory timeline, not organic business momentum.
+- Horizon: LONG_TERM by mechanics (deal-close arb runs weeks-to-months), but
+  this is a special-situation merger-arb trade, not a momentum swing —
+  VWAP/RSI/200-SMA are largely irrelevant to a fixed-price cash deal, a poor
+  structural fit for the strategy's technical Confluence rule even though
+  the catalyst itself is real and durable.
+- Opportunity cost: Lowest-conviction setup of the five for this playbook
+  (lowest volume, arb mechanics don't map onto the Confluence rule) — would
+  rank last for a discretionary slot this week; capital better allocated to
+  CRWV/NBIS/BE/AMKR if only 1-2 of the week's 3 slots go to today's gappers.
+
+#### Deep dive: AMKR $57.16 +5.27%
+- Catalyst: Signed a $1.5B multi-year strategic partnership with Nvidia
+  (Jul 23, 2026) to expand US advanced chip-packaging/test capacity,
+  including an Nvidia prepayment to fund the buildout; today's move comes
+  just ahead of Amkor's own August earnings report.
+- Why: Direct commercial tie-in to Nvidia's AI-chip supply chain
+  (packaging/test capacity) re-rates AMKR as an AI-infra beneficiary;
+  today's pop looks like anticipatory buying into the first print that will
+  discuss the deal's ramp.
+- Impact: 140K premarket volume on a stock that had dropped sharply earlier
+  this year — reads partly as a bounce off depressed levels plus AI-supply-
+  chain re-rating. Earnings are still pending and the exact date wasn't
+  confirmed in this scan — a binary earnings event sits directly ahead of
+  any entry, a live concern under the no-earnings-binary rule.
+- Horizon: SHORT_TERM lean — the imminent, unconfirmed earnings date
+  overrides the otherwise-structural Nvidia-deal thesis until the print
+  clears; re-evaluate LONG_TERM only after earnings.
+- Opportunity cost: Same AI-supply-chain basket as CRWV/NBIS/BE, plus an
+  unconfirmed near-term earnings date that would likely disqualify a fresh
+  pre-earnings entry under the no-earnings-binary rule regardless of rank.
