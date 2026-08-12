@@ -5171,3 +5171,55 @@ discipline argues against sizing new risk into a binary macro release, and
 no idiosyncratic single-name setup clears the confluence bar regardless. 25
 trading days since launch (Jul 9) with zero entries. Weekly trade count:
 0/3 (week of Aug 10).
+
+### Gappers (auto-scan 08:28 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | $106.78 | +18.25% | 888,269 | CoreWeave up sharply after strong Q2 2026 results after Monday's close — $2.575B revenue, $1.510B adj. EBITDA, record $104B AI cloud backlog. |
+
+Only 1 of ~60 watchlist tickers cleared the ±5% gap threshold this run —
+ranks 2-10 don't exist today, deep-dive cap (5) not needed beyond CRWV.
+Apify RAG web browser returned 0 pages on the first two catalyst-query
+attempts (transient), succeeded on retry — Benzinga fallback wasn't needed.
+
+#### Deep dive: CRWV $106.78 +18.25%
+- Catalyst: CoreWeave reported Q2 FY2026 results after the close on Aug 11:
+  $2.575B revenue, $1.510B adjusted EBITDA, and a record $104B AI cloud
+  contracted backlog, disclosed via 8-K. The print followed a $2.6B loan-
+  facility close two days earlier (financing flexibility for AI
+  infrastructure). Stock jumped from a $90.32 prior close to an after-hours
+  print of $104.52 (+18.52%) by 19:59 ET Aug 11, and Alpaca's pre-market
+  snapshot this morning shows it holding near $106.78 (+18.25% gap). A
+  same-day CEO interview headline frames the print as an earnings
+  "blowout" alongside a "stock retreat" — signaling some intraday give-back
+  even amid the beat.
+- Why: Revenue/EBITDA beat plus a record contracted backlog print
+  (visibility into forward AI-cloud demand) pulls in momentum and growth
+  buyers on a pure-play GPU/AI-infrastructure name, and reduces the
+  demand-durability overhang that had left the stock down ~35% over the
+  trailing 12 months into the print.
+- Impact: The move originated after Monday's close and has carried through
+  into pre-market Tuesday — a fresh earnings reaction, not a stale
+  multi-day drift. Normal daily volume is heavy (~29.6M shares in the Aug
+  11 session per StockTitan), so today's 888K pre-market volume is just the
+  early tape; expect much larger confirming (or fading) volume at the open.
+  Fundamentals are mixed under the headline beat: -25.4% net margin,
+  -$22.6B net balance-sheet position, and net EPS-estimate cuts (4 cuts vs.
+  2 raises in the last 30 days) — plus a COO Form 4 sale (13,608 shares,
+  Aug 10) and two pending Form 144 insider-sale filings. No other name in
+  today's scan gapped alongside it, so no confirmed sector-wide
+  read-through from peers (NBIS/IREN) yet.
+- Horizon: SHORT_TERM — the pop is real and catalyst-driven, but heavy debt
+  load, a negative net-margin/EPS-cut backdrop, insider selling into the
+  print, and today's own scan showing no confirmed sector-rotation
+  alignment (per this morning's pre-market entry) argue for treating this
+  as a reactive earnings-gap setup, not a confirmed structural re-rate — do
+  not carry past the week without a later Confluence-rule pass.
+- Opportunity cost: No open positions exist to displace (0/6 held) and the
+  weekly trade count is 0/3, so CRWV wouldn't bump another holding — but it
+  would consume the week's only live candidate from today's scan. A ~18%
+  overnight gap on an earnings reaction typically needs a wide stop to
+  survive normal post-earnings chop (the CEO-interview "stock retreat"
+  framing hints at exactly that), which widens risk-per-share and makes
+  clearing the 2:1 reward:risk minimum at a sane stop distance uncertain —
+  research flag only, no order size or entry recommended here.
