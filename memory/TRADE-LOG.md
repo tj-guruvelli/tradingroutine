@@ -205,3 +205,15 @@ unresolved, operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-Open call was HOLD: CVX/oil move macro-driven off Strait of Hormuz escalation, no idiosyncratic confluence, CPI print tomorrow argued against new risk. Gappers auto-scan found 0 qualifying moves. 24 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 10). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Aug 12, Market-Open (Day 25, Wednesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders — matches today's Pre-Market Research snapshot.
+Pre-Market Research decision was HOLD: today's 8:30am CPI print is the
+dominant catalyst, no idiosyncratic single-name setup clears the confluence
+bar, CVX/XLE Hormuz thesis remains unconfirmed/contradictory (unchanged
+from Aug 11). No planned tickers to validate, Steps 3-7 skipped. 25 trading
+days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week
+of Aug 10). Equity flat at $100,000 — still the confirmed-live-vs-$10k
+baseline mismatch flagged Jul 27, unresolved 27th straight session,
+operator review pending.
