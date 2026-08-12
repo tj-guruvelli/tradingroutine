@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-08-12T20:38:53.814Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "PEPG",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 2.51,
+      "prev_daily_high": 3.14,
+      "prev_daily_close": 2.9,
+      "sma200": 3.8,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 2.97,
+      "rsi14": 72.79,
+      "adx14": 31.36,
+      "ema9": 2.45,
+      "ema21": 2.21,
+      "premarket_volume": 0,
+      "daily_volume": 177967,
+      "avg_daily_volume_30": 79649,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
