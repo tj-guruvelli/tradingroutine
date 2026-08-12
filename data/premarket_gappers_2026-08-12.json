@@ -1,0 +1,62 @@
+{
+  "scanned_at": "2026-08-12T15:29:15Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ZIM",
+      "price": 23.155,
+      "gap_pct": -7.64,
+      "premarket_volume": 21075,
+      "catalyst": "No confirmed same-day headline; move follows a weak Q1 2026 report and comes a week ahead of Aug 19 Q2 results.",
+      "headlines": [],
+      "catalyst_detail": "No dated same-day headline located via search. ZIM's Q1 2026 results (May 20) showed an $86M net loss on $1.40B revenue and a $5M adjusted EBIT loss vs a much stronger prior-year quarter, and shares already sit ~18% below their 52-week high. An unconfirmed March 2026 piece floated a $35/share Hapag-Lloyd buyout-arbitrage thesis, but the current price (~$23) trades nowhere near that level, so that thesis has either not materialized or was speculative and should not be treated as a live catalyst.",
+      "why": "Absent a dated headline, the read is macro/sector: container freight rates have been softening industry-wide, and traders appear to be de-risking single-name shipping exposure ahead of ZIM's Aug 19 earnings after a weak Q1 print.",
+      "impact": "Looks like continued distribution/de-risking rather than a one-day shock — consistent with the multi-week downtrend (18% off 52-wk high). Contrasts with the LPG/BWLP gas-carrier subsector, which is up today — this reads as idiosyncratic container-shipping weakness, not a shipping-sector-wide selloff.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing positions to displace (0/6 open). This is the wrong direction for a long entry regardless — an avoid/short-bias read, not a buy candidate — and even setting direction aside, no dated catalyst clears the Confluence rule's 'at least 1 catalyst documented' requirement."
+    },
+    {
+      "rank": 2,
+      "symbol": "BW",
+      "price": 8.715,
+      "gap_pct": -7.04,
+      "premarket_volume": 148249,
+      "catalyst": "Fading from its Aug 11 post-earnings after-hours spike (Q2 EPS beat, +42% AH move) as the pop unwinds intraday.",
+      "headlines": [],
+      "catalyst_detail": "BW reported Q2 2026 results Aug 11 after the close: EPS of $0.07 vs a $0.63 loss a year ago, adjusted EBITDA up 57% to $21.8M — shares spiked as much as 42% after hours and were reported up double digits premarket. Today's session shows a pullback from the $9.375 prior close to $8.715 (-7.04%), i.e. the stock is giving back a chunk of the post-earnings pop within 24 hours.",
+      "why": "Classic post-earnings-pop fade: an EPS/EBITDA beat drove an outsized AH/premarket spike, but the move is unwinding intraday as momentum buyers take profit and the market re-prices BW's longer-running balance-sheet concerns (separate coverage flagged BW down ~33% over the trailing 30 days into the print on other headwinds).",
+      "impact": "Reads as a one-day mean-reversion of an overextended earnings pop, not a durable re-rating — the prior 30-day downtrend argues for a fade rather than a sustained breakout. Worth watching whether it stabilizes above pre-earnings levels (~$9.4) or continues round-tripping the entire move.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing positions to displace. As a fading post-earnings gapper this is a lower-quality setup than a fresh breakout — a same-day entry would need a very tight stop to clear 2:1 R:R given it's already round-tripping, and it would consume one of the 3 weekly trade slots for what is likely at best a 1-2 day mean-reversion play."
+    },
+    {
+      "rank": 3,
+      "symbol": "BWLP",
+      "price": 23.505,
+      "gap_pct": 6.99,
+      "premarket_volume": 4736,
+      "catalyst": "BW LPG (VLGC/gas carrier, NYSE: BWLP / Oslo: BWLPG.OL) moving in sympathy with sector-mate Dorian LPG's dividend headline; own site cites a recent ~$17M vessel sale.",
+      "headlines": [],
+      "catalyst_detail": "No single dated headline pinpoints today's move. BW LPG's own site references the recent sale of the BW Levant Singapore vessel for ~$17M (balance-sheet/cash event, not earnings), and an earlier research note had Oslo-listed shares recovering toward $19-20 off a 52-week low of $10.16. Today's NYSE move tracks the same direction as Dorian LPG's special-dividend rally (see LPG below), suggesting a sector-wide VLGC/LPG-carrier bid rather than a BWLP-specific event.",
+      "why": "Read-through from Dorian LPG's dividend announcement appears to be lifting sentiment across the VLGC/LPG-carrier peer group, BWLP included; freight-rate volatility in this niche (rates have swung from $40-45k/day to $8k/day within a week per trade-press coverage) means sentiment shifts translate into outsized single-day moves.",
+      "impact": "Thin absolute volume (4,736 shares in today's scan) makes this look more like a headline/sector-sympathy pop than a volume-confirmed breakout — the peer-group catalyst (LPG) is real but BWLP's own volume doesn't confirm conviction.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing positions to displace. Given the light volume and no company-specific catalyst, this would rank behind LPG (its own peer with an actual dated catalyst) if only one gas-shipping name could be taken under the 3-trades/week cap."
+    },
+    {
+      "rank": 4,
+      "symbol": "LPG",
+      "price": 47.18,
+      "gap_pct": 6.25,
+      "premarket_volume": 1700,
+      "catalyst": "Dorian LPG declared an irregular/special cash dividend of $1.00/share; also carries strong recent EPS growth (>158% YoY).",
+      "headlines": [],
+      "catalyst_detail": "Marketbeat's live news feed for LPG shows the stock up on a declared irregular cash dividend of $1.00 per share — a real, dated capital-return catalyst. This follows a run of strong quarterly results (EPS growth of >158% YoY, with the prior quarter up 274% YoY per separate coverage), consistent with a company generating outsized free cash flow in the current VLGC freight-rate environment.",
+      "why": "A surprise/irregular dividend signals management confidence in sustained cash generation and directly rewards holders — a mechanical, income-driven buy trigger separate from any pure momentum story, explaining both the price pop and above-average interest.",
+      "impact": "Looks more durable than a typical headline spike: it's backed by real EPS growth and a cash-payout decision, not just sentiment. Read-through to sector-mate BWLP (up in sympathy) supports a genuine VLGC-subsector re-rating rather than isolated noise, though today's scanned volume (1,700 shares) is still thin for confirmation.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "No existing positions to displace (0/6 open, 0/3 weekly trades used). Of today's four names, LPG has the cleanest, most dated, most fundamentally-backed catalyst — if only one new trade is taken this week, this is the strongest candidate to validate against /trade's confluence/R:R gate, ahead of BW (fading pop), BWLP (thin volume, borrowed catalyst), and ahead of shorting/avoiding ZIM (no catalyst, wrong direction for a long)."
+    }
+  ]
+}

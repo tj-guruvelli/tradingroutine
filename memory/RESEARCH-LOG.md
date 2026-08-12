@@ -5171,3 +5171,130 @@ discipline argues against sizing new risk into a binary macro release, and
 no idiosyncratic single-name setup clears the confluence bar regardless. 25
 trading days since launch (Jul 9) with zero entries. Weekly trade count:
 0/3 (week of Aug 10).
+
+## 2026-08-12 — Gappers (auto-scan 11:23 ET, cloud)
+
+Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
+watchlist` against Alpaca). Note: this run fired mid-morning (11:23 ET, market
+already open ~2hrs) rather than premarket — scan and filters run unchanged
+regardless. 5 raw gaps >=5%: ZIM -7.64%, BW -7.04%, BWLP +6.99%, LPG +6.25%,
+AGMH -5.17%. AGMH fails the $3.00 price floor ($0.9957). **4 qualifying
+gappers** (gap>=5%, price>=$3). "volume" field is the script's session-volume
+figure, not true premarket volume (informational only, consistent with prior
+entries in this log). All 4 got the full deep-dive (well under the 5-name
+cap).
+
+### Gappers (auto-scan 11:23 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ZIM | 23.155 | -7.64% | 21,075 | No same-day headline found; follows a weak Q1 2026 report ($86M net loss), a week ahead of Aug 19 Q2 results. |
+| 2 | BW | 8.715 | -7.04% | 148,249 | Fading from its Aug 11 post-earnings AH spike (Q2 EPS beat, +42% AH) as the pop unwinds intraday. |
+| 3 | BWLP | 23.505 | +6.99% | 4,736 | Moving in sympathy with sector-mate Dorian LPG's dividend headline; own site cites a recent ~$17M vessel sale. |
+| 4 | LPG | 47.18 | +6.25% | 1,700 | Dorian LPG declared a $1.00/share irregular cash dividend (payable ~today, Aug 12); also strong recent EPS growth (>158% YoY). |
+
+Deep dive (4 hits, well under the 5-name cap — no ranks dropped):
+
+#### Deep dive: ZIM $23.155 -7.64%
+- Catalyst: No dated same-day headline located via search. ZIM's Q1 2026
+  results (May 20) showed an $86M net loss on $1.40B revenue and a $5M
+  adjusted EBIT loss vs a much stronger prior-year quarter, and shares
+  already sit ~18% below their 52-week high. An unconfirmed March 2026
+  piece floated a $35/share Hapag-Lloyd buyout-arbitrage thesis, but the
+  current price (~$23) trades nowhere near that level — that thesis has
+  either not materialized or was speculative and should not be treated as
+  a live catalyst.
+- Why: Absent a dated headline, the read is macro/sector — container
+  freight rates softening industry-wide, traders de-risking single-name
+  shipping exposure ahead of ZIM's Aug 19 earnings after a weak Q1 print.
+- Impact: Looks like continued distribution/de-risking rather than a
+  one-day shock — consistent with the multi-week downtrend (18% off 52-wk
+  high). Contrasts with the LPG/BWLP gas-carrier subsector, which is up
+  today — idiosyncratic container-shipping weakness, not a shipping-wide
+  selloff.
+- Horizon: SHORT_TERM — no structural catalyst identified; reads as a
+  pre-earnings drift into the Aug 19 print, not a thesis to hold through.
+- Opportunity cost: No existing positions to displace (0/6 open). Wrong
+  direction for a long entry regardless — an avoid/short-bias read, not a
+  buy candidate — and no dated catalyst clears the Confluence rule's
+  "at least 1 catalyst documented" requirement either way.
+
+#### Deep dive: BW $8.715 -7.04%
+- Catalyst: BW reported Q2 2026 results Aug 11 after the close — EPS $0.07
+  vs a $0.63 loss a year ago, adjusted EBITDA up 57% to $21.8M — shares
+  spiked as much as 42% after hours and were reported up double digits
+  premarket. Today's session shows a pullback from the $9.375 prior close
+  to $8.715 (-7.04%), giving back a chunk of the post-earnings pop within
+  24 hours.
+- Why: Classic post-earnings-pop fade — an EPS/EBITDA beat drove an
+  outsized AH/premarket spike, now unwinding intraday as momentum buyers
+  take profit and the market re-prices BW's longer-running balance-sheet
+  concerns (separate coverage flagged BW down ~33% over the trailing 30
+  days into the print on other headwinds).
+- Impact: Reads as a one-day mean-reversion of an overextended earnings
+  pop, not a durable re-rating — the prior 30-day downtrend argues for a
+  fade rather than a sustained breakout. Watch whether it stabilizes above
+  pre-earnings levels (~$9.4) or keeps round-tripping the entire move.
+- Horizon: SHORT_TERM — earnings-pop-then-fade pattern, no structural
+  catalyst beyond the one print; not a multi-week hold candidate.
+- Opportunity cost: No existing positions to displace. As a fading
+  post-earnings gapper this is a lower-quality setup than a fresh
+  breakout — a same-day entry would need a very tight stop to clear 2:1
+  R:R given it's already round-tripping, and would consume one of the 3
+  weekly trade slots for what is likely at best a 1-2 day mean-reversion
+  play.
+
+#### Deep dive: BWLP $23.505 +6.99%
+- Catalyst: No single dated headline pinpoints today's move. BW LPG's own
+  site references the recent sale of the BW Levant Singapore vessel for
+  ~$17M (balance-sheet/cash event, not earnings), and an earlier research
+  note had Oslo-listed shares recovering toward $19-20 off a 52-week low
+  of $10.16. Today's NYSE move tracks the same direction as Dorian LPG's
+  special-dividend rally (see LPG below), suggesting a sector-wide
+  VLGC/LPG-carrier bid rather than a BWLP-specific event.
+- Why: Read-through from Dorian LPG's dividend announcement appears to be
+  lifting sentiment across the VLGC/LPG-carrier peer group, BWLP included;
+  freight-rate volatility in this niche (rates have swung from
+  $40-45k/day to $8k/day within a week per trade-press coverage) means
+  sentiment shifts translate into outsized single-day moves.
+- Impact: Thin absolute volume (4,736 shares in today's scan) makes this
+  look more like a headline/sector-sympathy pop than a volume-confirmed
+  breakout — the peer-group catalyst (LPG) is real but BWLP's own volume
+  doesn't confirm conviction.
+- Horizon: SHORT_TERM — no company-specific structural catalyst
+  identified for BWLP itself; the move looks borrowed from LPG's dividend
+  headline and freight-rate volatility rather than a durable
+  BWLP-specific thesis.
+- Opportunity cost: No existing positions to displace. Given the light
+  volume and no company-specific catalyst, this would rank behind LPG
+  (its own peer with an actual dated catalyst) if only one gas-shipping
+  name could be taken under the 3-trades/week cap.
+
+#### Deep dive: LPG $47.18 +6.25%
+- Catalyst: Dorian LPG declared an irregular/special cash dividend of
+  $1.00 per share — a real, dated capital-return catalyst (record date
+  already passed per a prior scan's finding, payable ~Aug 12, i.e. today).
+  This follows a run of strong quarterly results (EPS growth >158% YoY,
+  prior quarter up 274% YoY per separate coverage), consistent with
+  outsized free cash flow generation in the current VLGC freight-rate
+  environment.
+- Why: A special dividend signals management confidence in sustained cash
+  generation and directly rewards holders — a mechanical, income-driven
+  buy trigger separate from any pure momentum story, explaining both the
+  price pop and above-average interest.
+- Impact: Looks more durable than a typical headline spike — backed by
+  real EPS growth and a cash-payout decision, not just sentiment.
+  Read-through to sector-mate BWLP (up in sympathy) supports a genuine
+  VLGC-subsector re-rating rather than isolated noise, though today's
+  scanned volume (1,700 shares) is still thin for confirmation.
+- Horizon: LONG_TERM — a structural capital-allocation catalyst (special
+  dividend + sustained EPS growth) rather than a one-day headline; worth
+  tracking for a multi-day/week swing entry if it later clears the
+  Confluence rule (>=2 of VWAP/RSI/200-SMA/insider-signal) on a follow-up
+  /trade check.
+- Opportunity cost: No existing positions to displace (0/6 open, 0/3
+  weekly trades used). Of today's four names, LPG has the cleanest, most
+  dated, most fundamentally-backed catalyst — if only one new trade is
+  taken this week, this is the strongest candidate to actually validate
+  against /trade's confluence/R:R gate, ahead of BW (fading pop), BWLP
+  (thin volume, borrowed catalyst), and ahead of shorting/avoiding ZIM
+  (no catalyst, wrong direction for a long).
