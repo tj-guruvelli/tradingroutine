@@ -5092,3 +5092,82 @@ setups or a single setup. No table to print. Data file
 
 No Telegram/ClickUp send — 0 grade-A hits (per routine: notify only if
 >=1 grade-A hit).
+
+## 2026-08-12 — Pre-Market Research (Day 25, Wednesday)
+
+**Account snapshot (live via `alpaca.sh`):** Equity $100,000.00 | Cash
+$100,000.00 (100%) | Buying power $400,000 | Positions: 0 | Open orders: 0.
+Equity still flat at $100,000 vs. the $10,000 baseline in CLAUDE.md —
+mismatch flagged Jul 27, unresolved 26th straight session, operator review
+pending.
+
+**Market context (Apify RAG web browser; TradingEconomics + TradingView +
+WSJ/NDTV/MarketWatch headlines):**
+- **CPI day — the dominant catalyst.** July CPI prints today 8:30am ET.
+  Consensus per yesterday's log: headline +0.1% MoM / 3.4% YoY, core +0.2%
+  MoM / 2.5% YoY. Cleveland Fed inflation nowcast (updated 08/11): August
+  MoM 0.35% / YoY 3.42%, core MoM 0.20% / YoY 2.43% — nowcast running hotter
+  than consensus on headline MoM, roughly in line on core. WSJ live-blog
+  headline: "Dow Futures Climb Ahead of CPI Data" — tape is calm/constructive
+  heading into the print, not defensive. PPI follows tomorrow (Thu Aug 13).
+- **Oil — still Hormuz-driven, now with a bearish counter-signal.** WTI
+  $83.34 (+0.17% day, +6.65% month, +33% YoY, TradingEconomics), Brent
+  $88.90-88.96 (~flat). Trump said the US has "total control over the
+  Strait of Hormuz" as talks remain deadlocked — rhetoric hardening: even
+  as Pakistan's defense minister says the US/Iran are "close to some sort
+  of arrangement" and Iran-Oman talks have reportedly reached an "advanced
+  stage." Contradictory signals = elevated but unclear-direction risk. New
+  bearish counterweight: US crude inventories rose 9.1M bbl last week, the
+  biggest weekly build since February — normally bearish for price, but the
+  geopolitical premium is still winning for now. Sensex closed -0.24%
+  (-180pts) on Hormuz-deadlock spillover into Asia trade overnight.
+- **Equities modestly green pre-CPI:** S&P proxy 7744.21 (+0.21%), Dow
+  53827 (+0.07%), Nasdaq 29667 (+0.48%) — TradingEconomics cross-asset
+  board. 10Y yield 4.674% (little changed).
+- **VIX 15.39, -0.32%** (TradingView) — calm, no fear signal ahead of the
+  print.
+- **Notable side-signal:** Gold $4412.91 (+0.98%), Silver $66.26 (+2.46%) —
+  a real safe-haven bid building into CPI, worth noting as a macro-caution
+  tell even though it isn't a tradeable idea on this watchlist.
+- **Gaps this run:** Sector-momentum-YTD query returned an unrelated,
+  unusable result (bad search match); no confirmed sector-rotation read
+  today. Same-day earnings-calendar queries kept resolving to CPI-related
+  content instead of an earnings list — no confirmed earnings-binary names
+  to exclude today, but also no positive confirmation none exist. No open
+  positions, so neither gap blocks today's call.
+
+**Trade ideas (all HOLD/watch-only — no entry):**
+1. **CPI-day macro sit-out.** No idiosyncratic, confluence-confirmed
+   single-name catalyst today — the tape is dominated by the 8:30am print.
+   Consistent with strategy discipline (documented Aug 11: don't size new
+   risk into a binary macro print), stay flat through the release; only
+   reassess post-print for a same-day reactive setup if a name clears
+   confluence off a fresh, idiosyncratic catalyst.
+2. **CVX / XLE (Hormuz energy expression) — unchanged from Aug 11, still
+   not actionable.** Oil's move is macro/geopolitical, not idiosyncratic to
+   any single name, and today's signal is more contradictory than
+   yesterday's (hardening rhetoric + reported advanced talks + a bearish
+   inventory build, all at once). No confirmed technical confluence read
+   this run. Watch only.
+3. **No new sector or single-name idea clears the entry checklist today** —
+   default HOLD stands.
+
+**Risk factors:**
+- CPI print 8:30am ET — a hot surprise (headline/core above forecast) could
+  push yields higher and hit richly-valued growth names; a cool surprise
+  could extend the current modest equity strength. Binary event — argues
+  for staying flat into it, per strategy rule.
+- Strait of Hormuz — genuine supply-shock tail risk with conflicting signals
+  (hardening Trump rhetoric vs. reportedly advanced Iran-Oman talks); could
+  gap oil/energy either direction intraday.
+- Large bearish crude-inventory build (+9.1M bbl, biggest since February)
+  sitting underneath the geopolitical premium — a Hormuz de-escalation could
+  see oil reprice down sharply and quickly.
+- Persistent $100k live equity vs. $10k CLAUDE.md baseline mismatch —
+  unresolved 26 sessions running, operator review still pending.
+
+**Decision: HOLD.** CPI print today is the defining catalyst; strategy
+discipline argues against sizing new risk into a binary macro release, and
+no idiosyncratic single-name setup clears the confluence bar regardless. 25
+trading days since launch (Jul 9) with zero entries. Weekly trade count:
+0/3 (week of Aug 10).
