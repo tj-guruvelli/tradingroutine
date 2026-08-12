@@ -1,0 +1,6 @@
+{
+  "scanned_at": "2026-08-12T14:26:50Z",
+  "deep_dive_cap": 5,
+  "note": "0 genuine gappers. Raw scan returned 1 row (LPG, gap_pct=7.09) but it is a post-open dailyBar artifact (same failure mode documented 2026-08-11 10:23ET run): market was already open (10:25 ET) when this scan fired, so Alpaca's dailyBar tracks today's own in-progress session instead of the prior completed session, producing a spurious gap vs. a stale/wide quote rather than a real move off yesterday's close. Real gap using prevDailyBar close ($43.08) vs. last trade ($44.64) is 3.62%, below the 5% threshold. Also, LPG is a watchlist-parser false positive (extracted from the parenthetical \"(BW LPG)\" text next to ticker BWLP, not an intentional watchlist entry) and its dailyBar volume (855 shares) is far below the 50000 premarket_volume gate. Excluded on both grounds.",
+  "gappers": []
+}

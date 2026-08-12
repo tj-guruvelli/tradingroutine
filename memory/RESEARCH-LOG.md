@@ -5171,3 +5171,35 @@ discipline argues against sizing new risk into a binary macro release, and
 no idiosyncratic single-name setup clears the confluence bar regardless. 25
 trading days since launch (Jul 9) with zero entries. Weekly trade count:
 0/3 (week of Aug 10).
+
+## 2026-08-12 — Gappers (auto-scan 10:25 ET, cloud)
+
+Scanned 69 watchlist tickers via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0). Raw output: 1 row (LPG, gap_pct=7.09%, "current"
+$47.805 vs. `dailyBar` close $44.64). Both fail on inspection — 0 genuine
+hits:
+
+- **Post-open artifact.** Market was already open (10:25 ET) when this ran,
+  same failure mode documented in the 2026-08-11 10:23 ET entry: past the
+  open, Alpaca's `dailyBar` tracks today's own in-progress session instead
+  of the prior completed session, so the script's gap math compares a
+  same-day quote to a same-day trade instead of a real overnight gap.
+  Checked the actual prior close (`prevDailyBar.c` = $43.08 from 08/11):
+  real gap vs. the latest trade ($44.64) is 3.62%, under the 5% threshold.
+  The 7.09% figure came from `latestQuote` midpoint ($47.805), which is
+  unreliable here — bid/ask was $44.53/$51.08, a ~14.7% spread on a
+  low-price stock, and dailyBar volume was only 855 shares/33 trades by
+  10:25am (vs. 29,221 shares the full prior session) — thin liquidity, not
+  a real move.
+- **Watchlist-parser false positive.** LPG isn't an intentional watchlist
+  entry — `memory/WATCHLIST.md`'s ticker-soup regex picked it up from the
+  parenthetical "(BW LPG)" next to the real entry BWLP. (Also emits other
+  noise tokens from that line: BW, CMB, OL.) Separately fails the
+  `premarket_volume >= 50000` gate (855 << 50000) regardless.
+
+No quick-scan table, no deep dive, no Telegram/ClickUp send (per routine:
+only notify if hits > 0 or the scan errored; this run didn't error). Data
+file `data/premarket_gappers_2026-08-12.json` written with an empty
+`gappers` array and the reasoning above. Watchlist-parser false-positive
+issue not fixed here (out of scope for this read-only routine) — flagged
+for the operator.
