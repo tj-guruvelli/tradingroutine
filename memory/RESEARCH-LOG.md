@@ -5298,3 +5298,15 @@ Deep dive (4 hits, well under the 5-name cap — no ranks dropped):
   against /trade's confluence/R:R gate, ahead of BW (fading pop), BWLP
   (thin volume, borrowed catalyst), and ahead of shorting/avoiding ZIM
   (no catalyst, wrong direction for a long).
+
+### Setup Scan (16:38 ET, cloud)
+Full-universe scan via `scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes,
+`config/rules.json` watchlist_tiers.immediate, 60 candidates checked). 1
+hit, grade B, 0 grade-A hits.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| PEPG | B | Momentum confluence | daily swing | RSI 72.79, ADX 31.36, EMA9 $2.45 > EMA21 $2.21, px $2.51 |
+
+No Telegram alert sent — 0 grade-A hits (matches local `/setup-scan` quiet
+rule).
