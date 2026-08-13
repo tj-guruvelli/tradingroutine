@@ -1,0 +1,54 @@
+{
+  "scanned_at": "2026-08-13T13:22:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "LUNR",
+      "price": 14.69,
+      "gap_pct": -13.49,
+      "premarket_volume": 481974,
+      "catalyst": "Q2 2026 earnings released before the open; shares extending Wednesday's/this morning's post-earnings decline as the market weighs a wider net loss and heavy share dilution against a record backlog.",
+      "headlines": [
+        "Why Is Intuitive Machines Stock Falling Thursday? (benzinga.com, Aug 13) - Q2 2026 earnings released today before market open"
+      ],
+      "catalyst_detail": "Intuitive Machines (NASDAQ: LUNR) reported Q2 2026 results before today's open (analysts had modeled $221.12M revenue, -$0.07 EPS). The stock gapped down premarket and has continued fading through the morning (Benzinga showed -10.49% to $14.75 at 9:10am ET; this scan caught it lower still at $14.69, -13.49%). Per Benzinga's \"Why Is It Moving\" tag, shares are lower after the company reported results the market read as weaker than the backlog headline suggested. This continues the same fundamental story flagged in this morning's earlier scan: record ~$1.8B backlog and 4x YoY revenue growth, but a wider net loss and heavy dilution (weighted shares up ~38% YoY) from equity raises funding recent acquisitions.",
+      "why": "A backlog-and-revenue beat is normally bullish, but the market is pricing the deteriorating bottom line and rising share count instead - the stock has continued sliding intraday rather than stabilizing, suggesting sellers are not satisfied by the headline growth story and the post-earnings-call commentary (call was this morning) reinforced rather than reversed the initial reaction.",
+      "impact": "Continuation move, not a one-day spike - the decline has widened from -9.5% to -13.5% over the course of the pre-market session on real, dated news (an earnings release + live conference call), with premarket volume (~482K) already exceeding this morning's earlier read. No stated sector-wide read-through; this reads as LUNR-specific (dilution/cash-burn concerns), not a space-sector rotation.",
+      "horizon": "SHORT_TERM - single earnings-reaction move; no structural change to the underlying backlog/contract-win thesis, but the growing dilution overhang argues against treating today's drop as a dip-buy without a clear post-call reset in guidance or buyback signal.",
+      "opportunity_cost": "Account is flat (0/6 open positions, 0/3 weekly trades used, $100K equity), so nothing existing to displace. This is a gap DOWN and a stock still actively falling intraday - not a long setup under this strategy; would need to stabilize and clear the Confluence rule separately before any entry is considered."
+    },
+    {
+      "rank": 2,
+      "symbol": "OPEN",
+      "price": 3.225,
+      "gap_pct": -7.73,
+      "premarket_volume": 440243,
+      "catalyst": "Announced a $650M 0% convertible notes offering plus its first-ever share buyback (45.3M shares, ~5% of shares out) this morning; stock fell ~8% on the news despite the buyback framing.",
+      "headlines": [
+        "Opendoor Reduces Shares Outstanding by 5% in First-Ever Share Buyback, and Raises $440 Million of Growth Capital at 0% Coupon (globenewswire.com via stocktitan.net, Aug 13, 6:00am ET)"
+      ],
+      "catalyst_detail": "Opendoor (NASDAQ: OPEN) announced today (pre-market, 6:00am ET) a $650M offering of 0% Convertible Senior Notes due 2030, paired with its first-ever share repurchase (~45.3M shares / 5% of shares outstanding for $158M at $3.49) and capped-call transactions (cap price $6.98, ~$52.5M cost). Net effect: ~$440M of new growth capital, structured so the company expects no net share dilution below ~$10.38/share (current price ~$3.21-3.29) and <5% dilution even at $20. Conversion price is $4.71 (35% premium to Aug 12 close). Settlement expected Aug 19, subject to closing conditions. This follows Opendoor's Aug 4 Q2 earnings (revenue/contract beat but Q3 guidance miss, stock -8.7% that day) and continues a string of down sessions.",
+      "why": "Despite management framing this as shareholder-friendly (buyback + minimal near-term dilution risk), the market is reading it as $650M of new senior debt plus a capital raise from a company already burning cash (Q2 operating cash outflow ~$718M annualized run-rate per StockTitan's own calc), on top of a stock already reeling from the Aug 4 guidance miss. A convertible-notes raise this soon after a guidance disappointment reads as balance-sheet defense, not offense, to a market already skeptical of the path to profitability.",
+      "impact": "Real, dated news (8-K-triggering financing announcement, not rumor); reported volume ~34.8x average per StockTitan, confirming this is a volume-backed institutional reaction, not thin premarket noise. This adds to - not replaces - the prior Aug 4/5 guidance-miss selloff, so the move looks like a continuation of an existing negative thesis rather than a fresh one-day spike likely to mean-revert quickly. No stated sector-wide read-through; OPEN/real-estate-platform-specific financing event.",
+      "horizon": "SHORT_TERM - this is a financing-event reaction stacked on an already-deteriorating guidance thesis; nothing in the release changes the underlying growth/profitability debate, so treat as continuation of an existing downtrend, not a new structural catalyst.",
+      "opportunity_cost": "Account is flat (0/6 open positions, 0/3 weekly trades used). This is a gap DOWN on a financing/dilution-risk headline, not a long setup under this strategy; also notable is OPEN trading at $3.225, in the sub-$3-adjacent low-priced-stock zone this bot should watch for slippage/liquidity risk if it were ever considered on a reversal."
+    },
+    {
+      "rank": 3,
+      "symbol": "ONDS",
+      "price": 9.125,
+      "gap_pct": -6.75,
+      "premarket_volume": 2417161,
+      "catalyst": "Q2 2026 earnings released this morning: record $83.8M revenue (+67% QoQ, 13x YoY) and raised full-year guidance, but shares are down premarket - reads as an EPS miss/profit-taking against a stock that had already run up sharply into the print.",
+      "headlines": [
+        "Ondas Posts Record Q2 2026 Revenue of $83.8 Million on Strong Bookings and Backlog Growth; Raises Full-Year Outlook (stocktitan.net, Aug 13, 8:00am ET)"
+      ],
+      "catalyst_detail": "Ondas Holdings (NASDAQ: ONDS) reported Q2 2026 results this morning before the 8:30am ET call: record revenue of $83.8M (+67% sequentially, +13x YoY, +85% YoY on a pro forma organic basis). Q2 new orders reached $175M, plus another $105M booked so far in Q3. Backlog was $613M reported ($757M pro forma including recent DZYNE/Cyberhawk acquisitions). Cash position is $1.4B. Management raised FY2026 revenue guidance to $525-550M and signaled an accelerated timeline to Adjusted EBITDA profitability. Despite the headline beat-and-raise, the stock is down premarket - consistent with earlier wire coverage describing an \"earnings miss despite revenue beat,\" pointing to an EPS/bottom-line disappointment overshadowing the top-line strength.",
+      "why": "ONDS has been one of the market's hottest momentum names into this print (recent stocktitan rankings show it as a top 52-week/monthly gainer, helped by a string of defense contract wins and the high-profile ex-Mossad-director hire on Aug 3 that alone moved the stock +11.75%). A revenue-beat-but-EPS-miss print into a name that's already priced for perfection is a classic sell-the-news setup: profit-taking after a large run tends to dominate even genuinely strong top-line numbers.",
+      "impact": "Real, dated earnings news with heavy premarket volume (2.4M shares, well above the other two gappers), consistent with a broad, institutional reaction rather than thin pre-market noise. Given the string of bullish contract-win headlines over the past two weeks, this reads as a healthy pullback/profit-taking in an extended stock rather than a thesis-breaking event - no negative read-through to defense/autonomous-systems peers is evident from available sources.",
+      "horizon": "LONG_TERM - the underlying catalysts (record backlog, raised guidance, accelerating defense order flow, new Mossad-connected leadership hire) are structural, not headline-only; today's dip looks like digestion of a big run rather than a change in the growth trajectory, worth tracking for a later entry if it stabilizes and clears the Confluence rule on a subsequent /trade check.",
+      "opportunity_cost": "Account is flat (0/6 open positions, 0/3 weekly trades used, $100K equity). This is a gap DOWN, not a long setup today under this strategy's rules; if ONDS stabilizes, it would be the strongest LONG_TERM candidate of today's three gappers given the raised guidance and backlog growth, but sizing/R:R analysis is deferred to a later /trade check, not decided here."
+    }
+  ]
+}

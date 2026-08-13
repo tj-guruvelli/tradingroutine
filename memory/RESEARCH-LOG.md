@@ -5409,3 +5409,103 @@ Deep dive (2 hits, well under the 5-name cap — no ranks dropped):
   OPEN trades at $3.275, close to the sub-$3 low-priced-stock zone this
   bot should watch for slippage/liquidity risk if it were ever
   considered.
+
+### Gappers (auto-scan 09:22 ET, cloud, second run)
+
+Watchlist re-scan (60 tickers). 3 of 60 cleared all filters
+(|gap%|>=5, price>=3, premarket_volume>=50000); ZIM, LAKE, APT hit the
+gap threshold but were dropped on the volume filter. All 3 got the
+deep-dive treatment (within the 5-name cap). LUNR and OPEN also appeared
+in this morning's 08:27 ET scan — see above for the prior read; both
+have moved further and/or have fresh news since, so re-researched below
+rather than duplicated.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | $14.69 | -13.49% | 481,974 | Q2 2026 earnings (before open); decline extending through the morning on wider net loss/dilution concerns. |
+| 2 | OPEN | $3.225 | -7.73% | 440,243 | Priced $650M 0% convertible notes + first-ever $158M share buyback this morning; stock down ~8% on the financing news. |
+| 3 | ONDS | $9.125 | -6.75% | 2,417,161 | Q2 2026 earnings: record $83.8M revenue (+67% QoQ), raised FY guidance; stock down on apparent EPS miss / profit-taking after a big run. |
+
+#### Deep dive: LUNR $14.69 -13.49%
+- Catalyst: Intuitive Machines (NASDAQ: LUNR) reported Q2 2026 results
+  before today's open (analysts modeled $221.12M revenue, -$0.07 EPS).
+  Decline has extended through the pre-market session (Benzinga showed
+  -10.49% to $14.75 at 9:10am ET; this scan caught it lower at $14.69,
+  -13.49%), continuing the same story flagged in this morning's earlier
+  scan — record ~$1.8B backlog and 4x YoY revenue growth, but a wider
+  net loss and heavy dilution (weighted shares up ~38% YoY).
+- Why: The market is pricing the deteriorating bottom line and rising
+  share count over the backlog headline. The stock has continued sliding
+  intraday rather than stabilizing after this morning's conference call,
+  suggesting the call reinforced rather than reversed the initial
+  reaction.
+- Impact: Continuation move on real, dated news, not a one-day spike —
+  the decline widened from -9.5% to -13.5% over the pre-market session,
+  with volume (~482K) exceeding this morning's earlier read. No stated
+  sector-wide read-through; LUNR-specific (dilution/cash-burn concerns).
+- Horizon: SHORT_TERM — single earnings-reaction move; no structural
+  change to the backlog/contract-win thesis, but the growing dilution
+  overhang argues against a dip-buy without a clear post-call reset.
+- Opportunity cost: 0/6 open positions, 0/3 weekly trades used — nothing
+  to displace. Gap DOWN and still actively falling intraday — not a long
+  setup; would need to stabilize and clear Confluence separately.
+
+#### Deep dive: OPEN $3.225 -7.73%
+- Catalyst: Opendoor (NASDAQ: OPEN) announced this morning (6:00am ET) a
+  $650M offering of 0% Convertible Senior Notes due 2030, paired with its
+  first-ever share repurchase (~45.3M shares / 5% of shares out for
+  $158M at $3.49) and capped-call transactions (cap $6.98, ~$52.5M
+  cost). Net ~$440M new growth capital; structured for no net dilution
+  below ~$10.38/share. Conversion price $4.71 (35% premium to Aug 12
+  close). Settlement expected Aug 19. Follows the Aug 4 Q2 earnings
+  guidance miss (-8.7% that day) and continues a string of down sessions.
+- Why: Despite the shareholder-friendly framing (buyback + capped
+  dilution), the market is reading $650M of new senior debt plus a
+  capital raise from a cash-burning company (~$718M/quarter operating
+  outflow per StockTitan) as balance-sheet defense, not offense, on top
+  of an already-skeptical post-guidance-miss tape.
+- Impact: Real, dated 8-K-triggering financing news with ~34.8x average
+  volume per StockTitan — a volume-confirmed institutional reaction, not
+  thin pre-market noise. Adds to, rather than replaces, the prior Aug
+  4/5 guidance-miss selloff — reads as continuation, not a fresh
+  one-day spike likely to mean-revert quickly. No sector-wide
+  read-through; OPEN-specific financing event.
+- Horizon: SHORT_TERM — financing-event reaction stacked on an already-
+  deteriorating guidance thesis; nothing here changes the underlying
+  growth/profitability debate.
+- Opportunity cost: 0/6 open positions, 0/3 weekly trades used — nothing
+  to displace. Gap DOWN on a financing/dilution-risk headline, not a
+  long setup. OPEN trades at $3.225, in the sub-$3-adjacent low-priced
+  zone to watch for slippage/liquidity risk on any future reversal.
+
+#### Deep dive: ONDS $9.125 -6.75%
+- Catalyst: Ondas Holdings (NASDAQ: ONDS) reported Q2 2026 results this
+  morning (release ~8:00am ET, call 8:30am ET): record revenue of $83.8M
+  (+67% sequentially, 13x YoY, +85% YoY pro forma organic). Q2 new
+  orders $175M plus another $105M booked so far in Q3. Backlog $613M
+  reported ($757M pro forma incl. DZYNE/Cyberhawk). Cash $1.4B.
+  Management raised FY2026 revenue guidance to $525-550M and signaled an
+  accelerated timeline to Adjusted EBITDA profitability. Despite the
+  beat-and-raise, shares are down premarket — consistent with wire
+  coverage describing an "earnings miss despite revenue beat" (EPS/
+  bottom-line miss overshadowing the top-line strength).
+- Why: ONDS has been one of the market's hottest momentum names into
+  this print (recent top 52-week/monthly gainer rankings, helped by a
+  string of defense contract wins and the Aug 3 ex-Mossad-director hire
+  that alone moved the stock +11.75%). A revenue-beat/EPS-miss print into
+  a name already priced for perfection is a classic sell-the-news setup.
+- Impact: Real, dated earnings news with heavy premarket volume (2.4M
+  shares, well above the other two gappers) — a broad, institutional
+  reaction, not thin noise. Given the string of bullish contract-win
+  headlines over the past two weeks, this reads as healthy profit-taking
+  in an extended stock, not a thesis-breaking event; no negative
+  read-through to defense/autonomous-systems peers found.
+- Horizon: LONG_TERM — the underlying catalysts (record backlog, raised
+  guidance, accelerating defense order flow, new leadership hire) are
+  structural, not headline-only; today's dip looks like digestion of a
+  big run rather than a change in trajectory.
+- Opportunity cost: 0/6 open positions, 0/3 weekly trades used. Gap
+  DOWN, not a long setup today; if ONDS stabilizes, it would be the
+  strongest LONG_TERM candidate of today's three gappers given raised
+  guidance and backlog growth, but sizing/R:R is deferred to a later
+  /trade check, not decided here.
