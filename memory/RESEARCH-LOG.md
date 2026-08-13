@@ -5509,3 +5509,30 @@ rather than duplicated.
   strongest LONG_TERM candidate of today's three gappers given raised
   guidance and backlog growth, but sizing/R:R is deferred to a later
   /trade check, not decided here.
+
+## 2026-08-13 — Gappers (auto-scan 10:32 ET, cloud, third run)
+
+Watchlist re-scan (60 tickers, `scripts/gappers-alpaca.sh watchlist`,
+GAP_THRESHOLD=5.0). 3 raw gaps >=5%: AGMH +9.41% ($1.0436), APT -7.43%
+($4.98), BWLP +7.29% ($24.13). AGMH dropped on the $3.00 price floor.
+APT and BWLP hit gap% and price but were dropped on the volume filter
+(APT vol 1,457; BWLP vol 5,200 — both far under the 50,000 threshold),
+same treatment the 09:22 ET run gave APT/ZIM/LAKE today. **0 qualifying
+gappers this run** — no table, no deep dive. LUNR and OPEN (this
+morning's earlier hits) have both fallen back under the 5% threshold on
+this snapshot and did not reappear.
+
+Catalyst-research note: before applying the volume filter, ran Apify RAG
+web browser + a Benzinga WebFetch fallback for APT and BWLP anyway (in
+case the volume read was a script artifact worth double-checking) —
+Benzinga returned HTTP 403 for both tickers, and Apify results were
+low-quality (empty scrapes, content-farm mirror sites, a paywalled
+AAII "why is BWLP up 5.17%" page blocked by Incapsula). No confirmed
+single-day catalyst surfaced for either name; BWLP's context is
+generic sector/momentum (LPG shipping, near 52-wk high, Danelfin AI
+Buy 8/10, next earnings not until Aug 28 — no earnings-driven trigger
+today). Not logged as trade research since neither cleared the
+volume filter.
+
+No Telegram/ClickUp notification sent (0 qualifying hits, no scan
+error) per routine STEP 6.
