@@ -5521,3 +5521,15 @@ hit, grade B, 0 grade-A hits.
 
 No Telegram alert sent — 0 grade-A hits (matches local `/setup-scan` quiet
 rule).
+
+### Setup Scan (18:43 ET, cloud)
+Full-universe scan via `scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes,
+`config/rules.json` watchlist_tiers.immediate, 60 candidates checked). 1
+hit, grade B, 0 grade-A hits.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SATL | B | Momentum confluence | daily swing | RSI 67.05, ADX 29.06, EMA9 $5.10 > EMA21 $4.72, px $5.02 |
+
+No Telegram alert sent — 0 grade-A hits (matches local `/setup-scan` quiet
+rule).
