@@ -5509,3 +5509,40 @@ rather than duplicated.
   strongest LONG_TERM candidate of today's three gappers given raised
   guidance and backlog growth, but sizing/R:R is deferred to a later
   /trade check, not decided here.
+
+### Gappers (auto-scan 11:39 ET, cloud, third run)
+
+Watchlist re-scan (60 tickers via `scripts/gappers-alpaca.sh watchlist`,
+GAP_THRESHOLD=5.0). Fired mid-morning (11:39 ET, market open ~2hrs) rather
+than premarket — scan and filters run unchanged regardless, consistent with
+the 08/12 11:23 ET entry's precedent. Only 2 raw gaps >=5%: BW -7.69%, AGMH
++8.37%. AGMH fails the $3.00 price floor ($1.0336, same as yesterday).
+**1 qualifying gapper.** "Vol" field is the script's session-volume figure,
+not true premarket volume (informational only, consistent with prior
+entries). Deep dive on the 1 hit (well under the 5-name cap).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | 8.88 | -7.69% | 82,088 | Extending its multi-day fade from the Aug 11 post-earnings AH spike — third straight down session. |
+
+#### Deep dive: BW $8.88 -7.69%
+- Catalyst: BW reported Q2 2026 results Aug 11 after the close — revenue
+  $319.7m vs $138.9m a year ago, EPS $0.07 vs a prior-year loss, net
+  income $10.5m from ongoing operations — and shares spiked as much as
+  42% after hours. Aug 12 already pulled back 7.04% intraday to $8.715;
+  today extends the fade further to $8.88. No fresh same-day headline
+  found beyond the ongoing unwind of the earnings pop.
+- Why: Classic multi-day post-earnings-pop fade — momentum/AH buyers
+  from the Aug 11 spike are still unwinding, compounded by a standing
+  credibility overhang (a March 2026 Wolfpack Research short report
+  challenged the legitimacy of BW's $2.4B flagship contract counterparty
+  — old news, not today's trigger, but a live discount on the name).
+- Impact: Reads as continued mean-reversion, not a fresh one-day shock —
+  this is now day 3 of the round-trip (Aug 11 AH +42%, Aug 12 -7.04%,
+  Aug 13 further down). No peer/sector read-through identified.
+- Horizon: SHORT_TERM, earnings-pop-then-fade pattern spanning three
+  sessions now, no structural catalyst beyond the one print.
+- Opportunity cost: 0/6 open positions, 0/3 weekly trades used — nothing
+  to displace. Gap DOWN and a low-quality setup on its third down session
+  either way (strategy is long-only, no shorts) — not a candidate under
+  the Confluence rule as-is.
