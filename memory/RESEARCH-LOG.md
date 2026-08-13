@@ -5172,6 +5172,90 @@ no idiosyncratic single-name setup clears the confluence bar regardless. 25
 trading days since launch (Jul 9) with zero entries. Weekly trade count:
 0/3 (week of Aug 10).
 
+## 2026-08-13 — Pre-Market Research (Day 26, Thursday)
+
+**Account snapshot (live via `alpaca.sh`):** Equity $100,000.00 | Cash
+$100,000.00 (100%) | Buying power $400,000 | Positions: 0 | Open orders: 0.
+Equity still flat at $100,000 vs. the $10,000 baseline in CLAUDE.md —
+mismatch flagged Jul 27, unresolved 27th straight session, operator review
+pending.
+
+**Market context (Apify RAG web browser + WebSearch fallback — Apify's oil-
+price and "top catalysts" queries returned unrelated page content this run,
+noted as a gap below; TradingEconomics/Bloomberg/CNBC/Cboe/BLS confirm the
+rest):**
+- **PPI day — the dominant catalyst, follow-through from yesterday's tame
+  CPI.** July PPI prints today 8:30am ET alongside initial jobless claims.
+  Consensus: headline PPI +0.2% MoM / 4.9% YoY (prior -0.3% MoM), core PPI
+  +0.3% MoM / 4.1% YoY. Initial claims forecast 202K vs. 199K prior;
+  continuing claims forecast 1,800K vs. 1,801K prior. Yesterday's CPI came
+  in tame (headline +0.1% MoM, core +0.2%) and "added to early stock gains
+  on AI earnings" per Schwab — tape entered today constructive, not
+  defensive, but PPI is still a binary macro print.
+- **Oil pulling back, no longer the dominant risk narrative.** WTI $82.11
+  (-1.39% day), Brent $87.92 (-1.19% day) per TradingEconomics — both down
+  from Aug 12 levels (WTI $83.34, Brent ~$88.9), a continuation of the
+  bearish-inventory-build pressure flagged yesterday overtaking the
+  Hormuz geopolitical premium. No fresh Hormuz escalation headline found
+  this run — the CVX/XLE Hormuz-expression thesis from Aug 11-12 is stale
+  and not being refreshed by today's news flow.
+- **Equities modestly green pre-PPI:** S&P futures +0.08%, SPY +0.19%, DIA
+  +0.26%, QQQ +0.09%, IWM +0.18% premarket (CNBC/Benzinga). Sentiment
+  "cautiously optimistic," supported by a retreat in Treasury yields.
+- **VIX $14.60, +0.34%** (Cboe, TradingView) — nine-month low territory,
+  well off the 52-week high of 35.30 and just above the 52-week low of
+  13.38. Calm/complacent regime, no fear signal into PPI.
+- **Earnings before today's open:** Brookfield (BN, ~$0.88 est.), NetEase
+  (NTES), JD.com (JD), Tapestry (TPR), Nu Holdings (NU). Applied Materials
+  (AMAT) reports after today's close (~$3.40 EPS est.). **None of these
+  are on `memory/WATCHLIST.md`** — confirmed via grep, zero overlap — so
+  no earnings-binary exclusion needed and no idiosyncratic catalyst for a
+  tracked name either.
+- **Sector momentum:** July saw a sharp reversal — Energy +12% (Select
+  Sector Energy) on the oil rally, while Technology faced AI-valuation
+  headwinds. Industrials/Materials flagged as supported by AI-infra capex
+  and defense/energy buildout; Health Care flagged for biotech efficiency
+  gains. Today's oil pullback (see above) cuts against chasing the Energy
+  momentum trade near-term.
+- **Gaps this run:** Apify RAG queries for "WTI/Brent oil price" and "top
+  stock market catalysts today" both resolved to unrelated/garbage page
+  content (an ASX wrap, a dictionary page) rather than the requested
+  topic — fell back to WebSearch per the routine's fallback clause, noted
+  here per instructions. No held-ticker news check needed (0 positions).
+
+**Trade ideas (all HOLD/watch-only — no entry):**
+1. **PPI-day macro sit-out.** Same discipline as yesterday's CPI call: no
+   idiosyncratic, confluence-confirmed single-name catalyst today, and the
+   8:30am print is a binary macro event. Stay flat through the release;
+   reassess post-print only if a name clears confluence off a fresh,
+   idiosyncratic catalyst.
+2. **Energy/oil — no longer actionable, reversed from Aug 11-12.** Oil is
+   now pulling back (WTI -1.39%, Brent -1.19%) rather than spiking, so the
+   CVX/XLE Hormuz-expression idea from earlier this week is stale; no new
+   sector thesis to replace it today.
+3. **No new sector or single-name idea clears the entry checklist today** —
+   default HOLD stands.
+
+**Risk factors:**
+- PPI print + jobless claims 8:30am ET — a hot PPI surprise could reverse
+  yesterday's tame-CPI relief rally and pressure richly-valued growth
+  names; argues for staying flat into a binary release, per strategy rule.
+- AMAT reports after today's close — a large semiconductor-capex bellwether
+  that could move broader Tech/AI sentiment tomorrow regardless of today's
+  positioning; nothing actionable pre-print, just a heads-up for tomorrow's
+  research.
+- Oil's reversal (bearish inventory build now outweighing Hormuz premium)
+  could still whipsaw either direction if a fresh Middle East headline
+  breaks intraday.
+- Persistent $100k live equity vs. $10k CLAUDE.md baseline mismatch —
+  unresolved 27 sessions running, operator review still pending.
+
+**Decision: HOLD.** PPI print today is the defining catalyst; no
+watchlist-name earnings or idiosyncratic setup clears the confluence bar,
+and the Aug 11-12 energy/Hormuz thesis has reversed rather than confirmed.
+26 trading days since launch (Jul 9) with zero entries. Weekly trade count:
+0/3 (week of Aug 10).
+
 ## 2026-08-12 — Gappers (auto-scan 11:23 ET, cloud)
 
 Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
