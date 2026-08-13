@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-08-13T20:40:19.709Z",
+  "ny_time": "16:40",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "SATL",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 5.02,
+      "prev_daily_high": 5.98,
+      "prev_daily_close": 5.98,
+      "sma200": 4.46,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 6.01,
+      "rsi14": 67.05,
+      "adx14": 29.06,
+      "ema9": 5.1,
+      "ema21": 4.72,
+      "premarket_volume": 0,
+      "daily_volume": 496193,
+      "avg_daily_volume_30": 297049,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
