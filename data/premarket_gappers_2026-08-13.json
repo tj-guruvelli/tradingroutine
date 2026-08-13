@@ -1,0 +1,38 @@
+{
+  "scanned_at": "2026-08-13T12:27:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "LUNR",
+      "price": 15.37,
+      "gap_pct": -9.48,
+      "premarket_volume": 481974,
+      "catalyst": "Reported Q2 2026 results this morning: record $1.8B backlog and revenue up 4x YoY, but wider net loss and heavy dilution overshadowed the headline growth.",
+      "headlines": [
+        "Intuitive Machines Reports Second Quarter 2026 Financial Results; Continues Record Backlog Expansion With Quarter-end Backlog of $1.8 Billion (globenewswire.com, Aug 13)"
+      ],
+      "catalyst_detail": "Intuitive Machines (Nasdaq: LUNR) reported Q2 2026 results before the open (press release 07:30 ET, conference call 08:30 ET). Revenue hit a record $206.2M (vs $50.3M a year ago, driven by the new Lanteris/Maxar spacecraft-production business), and backlog rose to $1.76B (+$1.55B YTD, including $612.8M of acquired Lanteris backlog plus a new $1.34B multi-satellite award). Full-year guidance is $900M-$1B revenue with Adjusted EBITDA turning positive. But net loss widened to -$62.8M (vs -$38.2M a year ago), EPS -$0.29 (vs -$0.22), operating cash flow was -$59.8M for the quarter, and weighted-average shares outstanding grew from 117.4M to 162.2M YoY (heavy dilution from equity raises funding the Lanteris/Goonhilly acquisitions).",
+      "why": "A backlog-and-revenue beat would normally be a bullish catalyst, but the market is instead pricing the deteriorating bottom line: losses widened, cash burn accelerated (-$59.8M operating cash flow in the quarter alone), and share count grew ~38% YoY. That combination reads as \"growth bought with dilution and losses,\" which caps the upside read on an otherwise strong top-line print — classic sell-the-news on a richly-valued, pre-profit name.",
+      "impact": "Move looks driven by real, dated news (an earnings release, not rumor) with elevated volume expected once the market opens; extended-trading quotes (Benzinga/Marketbeat) already show LUNR down ~9.6% pre-market. Peer space names (Rocket Lab, SpaceX-linked movers) were not reported down in sympathy, so this reads as LUNR-specific fundamentals, not a sector rotation out of space stocks. Sustainability is uncertain — the 8:30am ET earnings call could reframe the narrative either way; a same-day fade of the initial reaction is plausible given the backlog beat.",
+      "horizon": "SHORT_TERM — this is a single earnings-print reaction; no structural change to the long-term backlog/contract-win thesis (which is arguably improving), so don't treat today's drop alone as a trend change without watching how the stock trades post-conference-call.",
+      "opportunity_cost": "Account currently has 0/6 open positions and 0/3 weekly trades used, so nothing to displace. This is a gap DOWN, not a long setup — not a same-day buy candidate under this strategy. Would only become relevant as a long if it stabilizes and later clears the Confluence rule on a separate /trade check; as-is, sizing/R:R analysis doesn't apply since no entry is being considered today."
+    },
+    {
+      "rank": 2,
+      "symbol": "OPEN",
+      "price": 3.275,
+      "gap_pct": -6.29,
+      "premarket_volume": 440243,
+      "catalyst": "Continuing to sell off after Wednesday's Q2 earnings — beat on Q2 numbers but a weak Q3 revenue outlook is driving a second straight down day.",
+      "headlines": [
+        "Why Is Opendoor Technologies Stock Falling Thursday? (benzinga.com) - Q2 beat but Q3 revenue outlook falls short"
+      ],
+      "catalyst_detail": "Opendoor Technologies (Nasdaq: OPEN) reported Q2 2026 results Tuesday after the close. Coverage (Benzinga) describes the print as \"everything is up, except costs\" — revenue and volume metrics improved, but Q3 revenue guidance came in below Street expectations, and a JPMorgan note flagged the path to profitability (\"ANI milestone\") as improving but not yet delivered. The stock fell Wednesday on the guidance miss and is extending that decline again this (Thursday) morning, down another ~6-8% pre-market on top of Wednesday's drop.",
+      "why": "A soft forward-quarter revenue guide after a headline beat is a classic guidance-driven selloff — traders price the outlook, not the trailing quarter, and a heavily-shorted (19.16% short interest per Benzinga), pre-profit, high-beta name like OPEN amplifies that reaction over multiple sessions as momentum and short sellers keep pressing the move.",
+      "impact": "This reads as a multi-day continuation of a single guidance-driven event, not a fresh one-day headline spike — today's premarket volume (~440K) is well below OPEN's ~38-55M average daily volume, consistent with early pre-market positioning ahead of a heavier regular-session move rather than a volume-confirmed capitulation. No stated sector-wide read-through; this looks OPEN/real-estate-platform-specific (guidance/cost mix), not a broader housing-sector move.",
+      "horizon": "SHORT_TERM — headline/guidance-driven, still fading from Tuesday's print with no new structural catalyst since; treat as a multi-day fade to let play out rather than a durable thesis change, per TRADING-STRATEGY's SHORT_TERM definition.",
+      "opportunity_cost": "Account has 0/6 open positions and 0/3 weekly trades used, so nothing existing to displace. This is a gap DOWN and a weak-guidance name with a large already-realized 2-day decline — not a long setup under this strategy's rules; would need to reverse and clear Confluence separately before any entry is considered. Also note OPEN trades at $3.275, close to the sub-$3 low-priced-stock zone this bot should watch for slippage/liquidity risk if it were ever considered."
+    }
+  ]
+}
