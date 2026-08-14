@@ -1,0 +1,77 @@
+{
+  "scanned_at": "2026-08-14T20:39:12.175Z",
+  "ny_time": "16:39",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "CRWV",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 104.61,
+      "prev_daily_high": 117.49,
+      "prev_daily_close": 106.23,
+      "sma200": 93.09,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 110.27,
+      "rsi14": 63.75,
+      "adx14": 20.14,
+      "ema9": 93.25,
+      "ema21": 87.71,
+      "premarket_volume": 0,
+      "daily_volume": 1711448,
+      "avg_daily_volume_30": 898635,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "PEPG",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 2.53,
+      "prev_daily_high": 3.05,
+      "prev_daily_close": 2.98,
+      "sma200": 3.79,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 2.99,
+      "rsi14": 74.16,
+      "adx14": 36.17,
+      "ema9": 2.63,
+      "ema21": 2.34,
+      "premarket_volume": 0,
+      "daily_volume": 150292,
+      "avg_daily_volume_30": 85000,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "LUNR",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 19.11,
+      "prev_daily_high": 17.65,
+      "prev_daily_close": 17.56,
+      "sma200": 19.27,
+      "sma200_window_days": 200,
+      "pmh": 18.36,
+      "today_hod": 20.47,
+      "rsi14": 57.66,
+      "adx14": 25.41,
+      "ema9": 15.77,
+      "ema21": 15.52,
+      "premarket_volume": 1020,
+      "daily_volume": 670485,
+      "avg_daily_volume_30": 347298,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
