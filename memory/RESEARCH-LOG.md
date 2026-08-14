@@ -5533,3 +5533,93 @@ hit, grade B, 0 grade-A hits.
 
 No Telegram alert sent — 0 grade-A hits (matches local `/setup-scan` quiet
 rule).
+
+## 2026-08-14 — Pre-Market Research (Day 27, Friday)
+
+**Account snapshot (live via `alpaca.sh`):** Equity $100,000.00 | Cash
+$100,000.00 (100%) | Buying power $400,000 | Positions: 0 | Open orders: 0.
+Equity still flat at $100,000 vs. the $10,000 baseline in CLAUDE.md —
+mismatch flagged Jul 27, unresolved 30th straight session, operator review
+pending.
+
+**Market context (Apify RAG web browser; TradingEconomics + Investing.com +
+Markets Insider + Cboe + FRED + Schwab):**
+- **Soft PPI is today's catalyst.** Zacks premarket wrap: "Pre-Markets in
+  Green on Soft PPI, Falling Oil Prices and Bond Yields" — a second
+  soft/in-line inflation print this week (July CPI came in-line Wed 8/12)
+  extending the post-CPI rally and pushing back rate-hike fears.
+- **Equities — calm, modestly green premarket, extending Thursday's rally.**
+  S&P 500 futures 7,827-7,828 (+0.06-0.07%), Nasdaq 100 futures 30,246.25
+  (+0.19%), Dow futures 53,852 (-0.15%, lagging). Thursday 8/13 cash close:
+  S&P 500 7,798.99 (+50.49, +0.65%) — "SP500 Today: Tops 7800 as Inflation
+  Cools, Oil Slides" was the day's headline. Asian markets on track for
+  their best week since June (KOSPI exited bear-market territory) on the
+  same softer-US-inflation/tech-rebound theme. Applied Materials reported
+  and SMIC rallied — chip-equipment news a secondary futures driver.
+- **VIX 14.50 (-0.89%), prev close 14.63** (Cboe) — near the 52-week low
+  (13.38) vs. high (35.30). Complacent tape while the index sits near highs;
+  worth flagging as a risk factor, not a signal on its own.
+- **Oil — easing this morning, still Hormuz-elevated on a multi-day view.**
+  WTI $81.79-81.81 (Investing.com/Markets Insider, +0.5-0.7% day), $81.53
+  per TradingEconomics (+0.35% day, +2.43% month, +31.55% YoY — crude was up
+  nearly 5% earlier this week on US pressure on Iran to reopen the Strait of
+  Hormuz). Brent $86.85-87.26 (roughly flat, mixed across sources). IEA
+  warned of the widest global oil-supply deficit in five years for 2026;
+  Iran-Oman talks on reopening Hormuz still unresolved. Today's softer print
+  is a one-day easing inside that larger elevated-risk-premium backdrop, not
+  a reversal of it.
+- **Rates:** 10Y 4.657% (+0.34%), 30Y 5.235% (+0.46%) — long end still
+  elevated despite the calm short-term tape. Market has recently shifted
+  from pricing Fed cuts toward a possible H2 hike under new Fed chair Kevin
+  Warsh (2 meetings held, rates unchanged so far) per Schwab's sector note —
+  a background risk, not today's driver.
+- **Sector momentum (Schwab Sector Views, monthly, as of 7/31 — most recent
+  available, no fresher source found):** More Favored — Financials, Health
+  Care, Industrials, Materials. Neutral — Communication Services, Consumer
+  Staples, Energy, Information Technology. Less Favored — Utilities. Least
+  Favored — Consumer Discretionary, Real Estate. Trailing-12mo performance:
+  Energy +41.7% (best, but Schwab flags valuations/earnings expectations as
+  now elevated), Information Technology +27.2%, Health Care +21.3%,
+  Industrials +19.5%, vs. S&P 500 +17.4% (12mo).
+- **Earnings today:** No clean, confirmed same-day US pre-market earnings
+  list surfaced this run (queries kept resolving to generic/non-US results)
+  — a recurring search gap noted in several past entries. No confirmed
+  earnings-binary names to exclude, but also no positive confirmation none
+  exist; doesn't block today's call since there are no open positions.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+**Trade ideas (all HOLD/watch-only — no entry):**
+1. **Post-CPI/PPI inflation-cooling rally — macro-driven, not idiosyncratic.**
+   Two soft/in-line prints this week (CPI Wed, PPI today) are lifting the
+   whole tape; S&P sits near 7,800+ highs with VIX at 14.5. No single-name
+   catalyst identified today — sitting out an index-level move is consistent
+   with strategy discipline, not a missed setup.
+2. **Financials / Industrials / Materials (Schwab "More Favored") — watch
+   only.** Thematically fits today's soft-PPI/steady-rates backdrop, but no
+   company-specific catalyst or confluence read (RSI/VWAP/200-SMA/insider)
+   available this run. Flag for a future session with a real trigger.
+3. **Energy — pass, not chase.** Best trailing-12mo sector (+41.7%), but
+   Schwab itself flags stretched valuations/earnings expectations, and
+   today's price action shows oil easing on the soft PPI print rather than
+   extending. No idiosyncratic entry signal.
+
+**Risk factors:**
+- Complacency: VIX 14.50 near its 52-week low while the S&P sits near highs
+  — thin cushion if a negative surprise hits.
+- Strait of Hormuz / Iran situation remains unresolved (IEA supply-deficit
+  warning, unresolved Iran-Oman talks) — genuine oil-supply tail risk that
+  could reverse today's calm tape intraday.
+- Fed policy uncertainty under new chair Kevin Warsh — market has shifted
+  from pricing cuts toward a possible H2 hike; a hawkish surprise could hit
+  richly-valued growth names.
+- Elevated long-end yields (30Y 5.235%) despite the calm short-term tape.
+- Persistent $100k live equity vs. $10k CLAUDE.md baseline mismatch —
+  unresolved 30 sessions running, operator review still pending.
+- Data gap: same-day US earnings calendar not cleanly confirmed via search
+  (recurring gap, doesn't block today's HOLD call given zero positions).
+
+**Decision: HOLD.** No idiosyncratic single-name catalyst identified; today's
+tape is a continuation of the post-CPI/PPI inflation-cooling rally
+(index-level, not stock-specific), and low VIX + a stretched S&P near highs
+argue for discipline over chasing. 27 trading days since launch (Jul 9) with
+zero entries. Weekly trade count: 0/3 (week of Aug 10).
