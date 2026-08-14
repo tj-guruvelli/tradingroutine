@@ -5866,3 +5866,118 @@ read — noted in the deep dive, not resolved.
   long-only framework, and the Alpaca-vs-Benzinga price conflict means the
   trigger itself is unconfirmed — does not clear the bar for a trade idea
   regardless of available slots. Research only, not a trade recommendation.
+
+## 2026-08-14 — Gappers (auto-scan 11:42 ET, cloud)
+
+Fourth watchlist scan of the day (memory/WATCHLIST.md, ~60 tickers via
+`scripts/gappers-alpaca.sh watchlist` against Alpaca, GAP_THRESHOLD=5.0).
+3 raw gaps ≥5%: BKSY -7.15%, APT +6.77%, NBIS -5.49%. All 3 clear the $3.00
+price floor; 3 well under the top-10 cap so all got the full deep-dive
+(no ranks 6-10 to note).
+
+**Data quality flag — read before trusting this table.** All 3 rows this
+run conflict with independently-verified live prices, confirmed by pulling
+direct Alpaca quotes and 1-min bars for each symbol at ~11:40 ET:
+- BKSY: scan says $28.375 (-7.15%); direct 1-min bars show trades clustering
+  $30.5–31, essentially flat vs. the $30.56 prior close.
+- APT: scan says $5.835 (+6.77%) on 462 shares; a direct quote check shows a
+  ~14.5% bid/ask spread and zero trades in the prior 20 minutes — the stock
+  isn't printing right now.
+- NBIS: scan says $252.48 (-5.49%); SeekingAlpha's live quote and Alpaca's
+  own 1-min bars both show NBIS trading $266–271, i.e. **up** ~+4.5% on the
+  session, not down. This is the 3rd straight run today (09:51, 10:35, now
+  11:42) where NBIS's Alpaca-snapshot gap read has disagreed with
+  independently-verified live prices, in the same direction each time.
+
+Root cause, read from `scripts/gappers-alpaca.sh` source: the script's
+prev-close baseline uses the snapshot's `dailyBar.c`. Its own code comments
+say this is only a valid stand-in for "yesterday's close" **pre-market**
+(before today's session has printed a bar). This run fired at 11:42 ET,
+2h12m after the 09:30 ET open — by then `dailyBar.c` reflects the
+still-forming intraday bar, not a stable baseline, so the computed gap is
+noise. The routine's own documented cadence (`routines/gappers-cloud.md`,
+CLOUD CADENCE NOTE) schedules a run at "10:00 CT / 11:00 ET, second hour" —
+already outside the premarket window the gap math assumes — so this will
+recur on the last scheduled run of every day until fixed. Recommend the
+operator add a time-of-day guard (skip or clearly relabel gap_pct once the
+regular session has opened) to `scripts/gappers-alpaca.sh`.
+
+Given the above, none of the 3 rows below should be treated as confirmed
+real moves. Table and deep-dives are logged per the routine's format, with
+the conflict folded into each write-up rather than silently dropped.
+
+### Gappers (auto-scan 11:42 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BKSY | $28.375 | -7.15% | 18,474 | Scan read looks stale — direct bars show BKSY flat ~$30.5-31, not down 7% |
+| 2 | APT | $5.835 | +6.77% | 462 | No real catalyst; near-zero volume, no trades in a 20-min bars check |
+| 3 | NBIS | $252.48 | -5.49% | 173,529 | Burry AI-overcapacity short + Aug 12 guidance overhang (same as 10:35 log) — but live quotes show NBIS up ~+4.5%, not down |
+
+#### Deep dive: BKSY $28.375 -7.15%
+- Catalyst: BlackSky (satellite imagery, NYSE) rallied 26.5% five days ago
+  on a reaffirmed 2026 outlook and Gen-3 satellite ramp; a 6-hour-old
+  SimplyWall.St piece debates whether the post-rally price is still a
+  bargain given a new contract. No fresh negative headline found today.
+  Direct Alpaca 1-min bars checked ~11:40 ET show trades clustering
+  $30.5-31, essentially flat vs. the $30.56 prior close the scan used — not
+  the $28.375/-7.15% the snapshot endpoint reported.
+- Why: No mechanism identified for a real -7% move; the scan's gap read
+  does not match the directly-queried trade tape. Most likely a stale/wide
+  snapshot quote (the live quote carried condition code "R" with a bid/ask
+  of $30.26/$34.81, consistent with an IEX free-feed NBBO artifact, not a
+  real print).
+- Impact: Not sustainable because it isn't real — corroborating 1-min bars
+  show BKSY trading flat around $30.5-31 all morning, not making a new low.
+- Horizon: SHORT_TERM, and likely not even a real move — do not treat as a
+  signal pending a clean quote confirmation.
+- Opportunity cost: N/A — data quality doesn't support a trade decision
+  either way. If BKSY is already held, no action indicated since the
+  underlying tape shows no real deterioration.
+
+#### Deep dive: APT $5.835 +6.77%
+- Catalyst: No news-based catalyst found — search results were generic
+  syndicated "technical levels" articles from content-mill domains (mostly
+  404/dead pages), not real news. Alpaca's own quote at 11:40 ET shows a
+  wide, likely-stale spread (bid $5.44 / ask $6.23, ~14.5%) and zero trades
+  in the prior 20 minutes — APT did not print during that window. Original
+  scan volume was only 462 shares.
+- Why: Cannot establish a mechanism — no catalyst, and the "gap" is built
+  on essentially no live trading. Reads as a thin/illiquid stock with a
+  stale last-print rather than a real intraday move.
+- Impact: Not sustainable / not real. 462 shares of volume and zero trades
+  in a 20-min bars check confirm this ticker isn't trading enough right now
+  to trust any price off it.
+- Horizon: SHORT_TERM — moot, since there's no real move to fade or hold;
+  treat as noise.
+- Opportunity cost: Skip. Fails the basic liquidity bar for any position
+  size; would not clear a sane stop distance or the 2:1 R:R minimum given
+  the spread alone eats ~14% of the price.
+
+#### Deep dive: NBIS $252.48 -5.49%
+- Catalyst: Same setup as the 10:35 ET deep dive: NBIS reported Q2 2026
+  earnings before the open Wed Aug 12 (revenue +454% YoY) but shares fell
+  on FY guidance tied to the "Vineland project"; D.A. Davidson's Gil Luria
+  reiterated Neutral/$175 PT. On top of that, Michael Burry has publicly
+  doubled down on an AI-overcapacity short spanning Oracle, Micron, and
+  Nebius. This run's Alpaca snapshot again disagrees with independent
+  sources: SeekingAlpha's live quote (~11:37-11:38 ET) showed NBIS at
+  $266-267, +4.4-4.6% intraday; a direct 1-min bars pull confirms trades in
+  the $268-271 range as of 11:23 ET — NBIS is up on the session, not down
+  5.49%. Third straight scan today with this conflict.
+- Why: A real bearish mechanism exists (Burry short thesis + earnings
+  guidance overhang), but the magnitude/direction implied by this scan's
+  own gap_pct is not corroborated by live data — the stock is actually
+  green on the session per two independent checks.
+- Impact: Cannot assess sustainability of a move the underlying tape
+  doesn't confirm happened. Treat the Alpaca snapshot's -5.49% as an
+  artifact of the script's dailyBar-based prev-close logic (pre-market-only
+  by its own code comments); this run fired well outside that window.
+- Horizon: SHORT_TERM if treating the Burry/earnings overhang as the real
+  story (headline-driven, no new structural catalyst since the 10:35 log);
+  but the scan's direction is likely wrong — live data says up, not down.
+- Opportunity cost: Do not act on this scan's implied direction. If
+  considering NBIS at all, price any entry off a live quote/chart, not this
+  routine's output, given the repeated data conflict today. Account remains
+  flat (0/6 positions, 0/3 weekly trades used) — no displacement question
+  either way since nothing here clears the bar for a trade idea.
