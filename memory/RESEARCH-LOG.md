@@ -5623,3 +5623,131 @@ tape is a continuation of the post-CPI/PPI inflation-cooling rally
 (index-level, not stock-specific), and low VIX + a stretched S&P near highs
 argue for discipline over chasing. 27 trading days since launch (Jul 9) with
 zero entries. Weekly trade count: 0/3 (week of Aug 10).
+
+## 2026-08-14 — Gappers (auto-scan 08:58 ET, cloud)
+
+Watchlist scan (memory/WATCHLIST.md, ~60 tickers via `scripts/gappers-alpaca.sh
+watchlist` against Alpaca, GAP_THRESHOLD=5.0). Only 3 raw gaps >=5%: RCAT
++11.2%, AMPX +8.76%, ONDS +5.73%. All 3 clear the $3.00 price floor and the
+50,000-volume floor. **3 qualifying gappers** (gap>=5%, price>=$3), all up
+gaps — well under the top-10 cap, so no ranks 6-10 to note. "Vol" field is
+the script's prior-completed-session full-day volume, not true premarket
+volume (informational only, consistent with prior entries in this log). All
+3 got the full deep-dive (well under the 5-name cap). RCAT and ONDS share
+the identical same-day catalyst (a Trump-administration drone-tariff
+story); AMPX's catalyst is inferred sector read-through, not a confirmed
+company-specific headline — flagged explicitly below.
+
+### Gappers (auto-scan 08:58 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RCAT | 11.365 | +11.2% | 376,372 | New Trump drone tariffs shield US makers from foreign rivals — RCAT named directly alongside AeroVironment, Kratos, Ondas. |
+| 2 | AMPX | 12.98 | +8.76% | 252,009 | No AMPX-specific headline found; likely sector read-through from the same drone-tariff story, or residual Aug 4 earnings-beat momentum. |
+| 3 | ONDS | 9.415 | +5.73% | 2,233,728 | Same drone-tariff story as RCAT — Ondas named directly alongside Red Cat as a beneficiary. |
+
+Deep dive (3 hits, well under the 5-name cap — no ranks dropped):
+
+#### Deep dive: RCAT $11.365 +11.2%
+- Catalyst: Benzinga's top same-day story reports new tariffs on
+  foreign-made drones (largely aimed at low-cost Chinese suppliers)
+  intended to shield US drone manufacturers from foreign competition. Red
+  Cat Holdings (NASDAQ: RCAT) is named directly alongside AeroVironment,
+  Kratos, and Ondas as a beneficiary. RCAT closed Monday Aug 12 at $10.23;
+  Benzinga's premarket quote showed +10.51% to $11.40 as of 8:46am ET, in
+  line with this scan's +11.2% read. RSI 67, short interest 23.2% (4.36
+  days to cover), 52-week range $5.77-$18.78, consensus analyst price
+  target $18.60.
+- Why: Tariffs on foreign (largely Chinese) drone imports raise the
+  relative cost of overseas competitors, read as bullish for domestic
+  small-cap drone makers like Red Cat gaining market share and pricing
+  power. This is a policy/regulatory catalyst, not company-specific news,
+  so the whole US drone/defense-tech complex re-rated together in the same
+  session.
+- Impact: Real, dated, same-day catalyst (a tariff action), not rumor.
+  Clear sector-wide read-through: three other tickers (AeroVironment,
+  Kratos, and today's own #3 gapper Ondas) moved on the identical story,
+  confirming a genuine sector rotation rather than an RCAT-specific spike.
+  High existing short interest (23.2%) raises the odds some of today's pop
+  is short-covering. This scan's "volume" field is RCAT's prior completed
+  session's full-day volume (376,372 vs. a 12.89M average daily volume per
+  Benzinga), not true premarket volume, so sustainability into the open
+  can't be confirmed from this data source alone.
+- Horizon: LONG_TERM, tentatively — a tariff is a structural/regulatory
+  catalyst rather than a one-day headline, and it fits a defense/hardware
+  sector-rotation read; but confirm the tariff isn't reversed/challenged
+  before treating this as a durable multi-week thesis.
+- Opportunity cost: Account is flat (0/6 open positions, 0/3 weekly trades
+  used, $100,000 equity), so nothing existing to displace. RCAT is the
+  #1-ranked gapper today and has the cleanest single-name catalyst of the
+  three. Taking it would use 1 of 3 weekly trade slots and up to $20,000
+  (20% equity cap); actual stop distance and 2:1 R:R clearance are not
+  evaluated here — this is research only, not a trade recommendation.
+
+#### Deep dive: AMPX $12.98 +8.76%
+- Catalyst: No AMPX-specific news dated today (Aug 14) surfaced via Apify
+  RAG search or Benzinga's quote page — the most recent Benzinga item is an
+  Aug 4 Q2 2026 earnings release (revenue more than doubled YoY to $34.0M,
+  net loss narrowed 20% YoY) and older items (a Jim Cramer buy call, a May
+  short-seller report from Manatee Research). Benzinga's premarket quote
+  shows AMPX +5.27% to $12.89 as of 8:46am ET, roughly matching this scan's
+  +8.76% read off Monday's $11.94 close.
+- Why: With no distinct AMPX headline today, the likely mechanism is sector
+  read-through from the same drone-tariff story lifting RCAT and ONDS:
+  Amprius makes high-energy-density silicon-anode batteries used in
+  aviation/eVTOL/UAS applications, so a policy tailwind for domestic drone
+  makers could plausibly extend demand expectations to its battery supply
+  chain. This is inferred, not confirmed by any AMPX-specific article.
+- Impact: Treat with more caution than RCAT/ONDS since the catalyst is
+  inferred rather than a discrete, dated, company-specific event. AMPX
+  carries its own elevated short interest (16.62%) and a ~7.47M average
+  daily volume vs. today's thin prior-session volume reading (252,009), so
+  a move without a fresh dated press release reads more like a beta/
+  sympathy pop than a confirmed sustainable trend — risk of fading once the
+  market opens if no AMPX-specific news emerges.
+- Horizon: SHORT_TERM — no dated, company-specific catalyst confirmed;
+  reads as a sympathy move off the drone-tariff headline (or residual drift
+  off the Aug 4 earnings beat), not a fresh structural catalyst, so treat
+  as fade risk within the session/week absent a confirming AMPX-specific
+  development.
+- Opportunity cost: Account is flat (0/6 open positions, 0/3 weekly trades
+  used, $100,000 equity). Ranked #2 of today's 3 gappers by |gap%|, but the
+  unconfirmed/inferred catalyst puts it behind RCAT for capital priority
+  today. Taking it would use 1 of 3 weekly trade slots and up to $20,000
+  (20% cap); stop/R:R math not evaluated here — research only, not a trade
+  recommendation.
+
+#### Deep dive: ONDS $9.415 +5.73%
+- Catalyst: Same same-day Benzinga story as RCAT: new tariffs on
+  foreign-made drones are described as shielding US drone/defense-tech
+  makers from foreign rivals, with Ondas Holdings (NASDAQ: ONDS) named
+  explicitly alongside Red Cat, AeroVironment, and Kratos as a beneficiary.
+  This scan shows ONDS +5.73% to $9.415 vs. Wednesday's $8.905 close. Other
+  (lower-confidence, undated-in-search) coverage found separately flags
+  ONDS's history of volatile swings — a StocksToTrade note on insider-sale-
+  driven pullbacks and a SimplyWallSt mention of a prior 19% single-day pop
+  tied to an Israeli defense/tactical-attack drone contract win.
+- Why: Identical mechanism to RCAT: tariffs on foreign drone imports raise
+  costs for overseas competitors, which the market is reading as expanding
+  domestic drone-tech makers' addressable market and pricing power — hence
+  the coordinated same-day move across four named tickers in one article.
+- Impact: Confirmed, dated, same-day policy catalyst with clear sector-wide
+  read-through (RCAT and ONDS are today's #1 and #3 gappers, both cited in
+  the identical article, plus AeroVironment/Kratos moving too) — this is
+  not an ONDS-idiosyncratic spike. ONDS's own history of volatile reversals
+  (per the referenced insider-sale note) argues for caution chasing the
+  pop; today's "volume" field (2,233,728) is prior-session full-day volume,
+  not confirmed premarket volume, so follow-through into the open isn't
+  verifiable from this data source alone.
+- Horizon: LONG_TERM, tentatively — same reasoning as RCAT: a tariff is a
+  structural/regulatory catalyst rather than a one-day headline, and ONDS
+  is a named direct beneficiary; confirm no legal/political reversal risk
+  before treating as a durable multi-week thesis.
+- Opportunity cost: Account is flat (0/6 open positions, 0/3 weekly trades
+  used, $100,000 equity). Ranked #3 of today's 3 gappers. If RCAT is chosen
+  as the primary way to play this tariff thesis (higher gap%, cleaner
+  standalone headline), adding ONDS would use a 2nd of 3 weekly trade slots
+  on the same underlying catalyst — flag correlation risk between
+  RCAT/ONDS/AMPX (all reacting to the same headline) against the
+  strategy's correlation gate (blocks new entry if a symbol correlates
+  >0.75 with 2+ open positions) before stacking more than one. Sizing/R:R
+  not evaluated here — research only, not a trade recommendation.
