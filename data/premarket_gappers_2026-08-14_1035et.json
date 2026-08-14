@@ -1,0 +1,22 @@
+{
+  "scanned_at": "2026-08-14T14:35:11Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 248.685,
+      "gap_pct": -6.06,
+      "premarket_volume": 110861,
+      "catalyst": "Michael Burry disclosed he's adding to AI-overcapacity short positions in Oracle, Micron and Nebius, layering onto post-earnings weakness from Nebius's Aug 12 Q2 report.",
+      "headlines": [
+        "Michael Burry Doubles Down on Oracle, Micron Nebius Shorts After Saying It's Like 'Shooting Fish in a Barrel' (benzinga.com)"
+      ],
+      "catalyst_detail": "Nebius (NBIS) reported Q2 2026 earnings before the open on Wed Aug 12: revenue up 454% YoY, but shares fell anyway on FY guidance tied to what Benzinga's analyst coverage calls the \"controversial Vineland project\" — analyst Gil Luria (D.A. Davidson) reiterated Neutral with a $175 price target, well below the stock's current level. On top of that post-earnings overhang, Benzinga is reporting Michael Burry has doubled down on AI-overcapacity short bets across Oracle, Micron, and Nebius, warning excess AI compute capacity could hit the market by 2028. Note: Benzinga's live quote (fetched ~10:19am ET) showed NBIS at $264.39, +3.67% intraday, day range $256.90-$271.66 — materially different from this scan's Alpaca snapshot of $248.685 (-6.06% vs prior close). The two data sources disagree on both price and direction at nearly the same timestamp; treat the Alpaca gap_pct as the scan trigger but do not rely on it alone for a real-time price read.",
+      "why": "Two bearish forces are stacked: (1) a post-earnings guidance overhang from Tuesday's report — strong top-line growth undercut by guidance concerns tied to the Vineland project — that's been weighing on the stock since Wed's open, and (2) a prominent short-seller (Burry) publicly reiterating and adding to a Nebius short as part of a broader AI-overcapacity thesis, which can pressure sentiment and invite momentum selling from other shorts/algos reading the headline.",
+      "impact": "Mixed signal given the price-source conflict: Alpaca's snapshot implies a fresh leg down (-6.06%), but Benzinga's near-simultaneous live quote shows the stock actually up 3.67% on the session, inside a $256.90-$271.66 range — i.e., NBIS looks like it may be chopping/recovering intraday, not making a clean new low. RSI 63, short interest very elevated (28.17%, 2.41 days to cover), sector read-through is direct (Burry's short list groups Oracle, Micron, Nebius together as one AI-overcapacity trade, so this could be a multi-name theme rather than NBIS-specific). Given the data conflict, sustainability of any single-direction move can't be confirmed from this scan alone.",
+      "horizon": "SHORT_TERM — the Burry headline is fresh short-seller commentary layered on a 2-day-old earnings reaction; no new structural catalyst here (no new guidance, no new contract), so treat as a headline-driven overhang likely to keep the stock choppy/volatile near-term rather than a basis for a durable multi-week thesis.",
+      "opportunity_cost": "Account is flat (0/6 open positions, 0/3 weekly trades used, $100,000 equity), so nothing existing to displace. This is a gap-down/bearish setup, not a long entry candidate under the strategy's long-only framework, and the Alpaca-vs-Benzinga price conflict means the trigger itself is unconfirmed — does not clear the bar for a trade idea regardless of available slots. Research only, not a trade recommendation."
+    }
+  ]
+}
