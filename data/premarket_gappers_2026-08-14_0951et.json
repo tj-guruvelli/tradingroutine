@@ -1,0 +1,22 @@
+{
+  "scanned_at": "2026-08-14T13:51:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BWLP",
+      "price": 20.89,
+      "gap_pct": -6.66,
+      "premarket_volume": 576,
+      "catalyst": "No dated BWLP-specific catalyst found beyond a same-day administrative release announcing the Q2 2026 earnings date (Aug 28); does not typically explain a -6.66% move.",
+      "headlines": [
+        "BW LPG Limited – Q2 2026 Financial Report Release and Earnings Presentation on 28 August 2026 (bwlpg.com, Aug 14)"
+      ],
+      "catalyst_detail": "BW LPG's own press-release page shows exactly one same-day (Aug 14, 07:00 CEST) item: a non-regulatory notice that Q2 2026 results will be released and presented on Aug 28, 2026 — a scheduling announcement, not results or guidance. No earnings, M&A, downgrade, insider-sale, or sector (VLGC/LPG freight-rate) story dated today surfaced via two Apify RAG searches or a Benzinga fallback (Benzinga returned HTTP 403, blocked). Stock fell from a $22.38 prior close to $20.89.",
+      "why": "No confirmed mechanism connects today's actual news (an earnings-date scheduling notice) to a -6.66% drop. The prior-session volume field Alpaca returns for this name is only 576 shares — far below what a $700M+ market-cap NYSE-listed shipping name would normally print — so this reads as a thin/stale snapshot rather than a liquid, broadly-traded move; a large percentage move on very light volume is more consistent with a wide bid-ask/illiquidity artifact than a fundamentals-driven repricing.",
+      "impact": "Unconfirmed and low-conviction. No dated, company-specific negative catalyst found, no sector read-through identified (no peer LPG/VLGC shipping names checked moved similarly), and the volume data available cannot confirm real participation behind the move. Highest-probability read: noise/thin-liquidity gap, likely to mean-revert once normal volume returns, but this can't be verified from the data sources available to this scan.",
+      "horizon": "SHORT_TERM — no structural catalyst identified; absent a confirmed news driver, default to treating an unexplained gap as headline/noise-driven and not a basis for a multi-day thesis.",
+      "opportunity_cost": "Account is flat (0/6 open positions, 0/3 weekly trades used, $100,000 equity), so nothing existing to displace. With no confirmed catalyst and a possible data/liquidity artifact behind the move, this does not clear the bar to consult for a new entry regardless of available trade slots — the Confluence rule requires a real catalyst-backed setup, and none was found here. Research only, not a trade recommendation."
+    }
+  ]
+}

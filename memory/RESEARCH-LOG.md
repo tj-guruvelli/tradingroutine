@@ -5751,3 +5751,60 @@ Deep dive (3 hits, well under the 5-name cap — no ranks dropped):
   strategy's correlation gate (blocks new entry if a symbol correlates
   >0.75 with 2+ open positions) before stacking more than one. Sizing/R:R
   not evaluated here — research only, not a trade recommendation.
+
+## 2026-08-14 — Gappers (auto-scan 09:51 ET, cloud)
+
+Second watchlist scan of the day (memory/WATCHLIST.md, ~60 tickers via
+`scripts/gappers-alpaca.sh watchlist` against Alpaca, GAP_THRESHOLD=5.0).
+Only 1 raw gap >=5%: BWLP -6.66%. Clears the $3.00 price floor; the
+premarket-volume floor doesn't apply — the script's "volume" field is prior
+full-day volume (576 shares), not a populated premarket_volume field, and
+that figure itself is unusually thin for this name. **1 qualifying gapper**
+— well under the top-10 cap, so no ranks 6-10 to note. Got the full
+deep-dive (well under the 5-name cap). No confirmed BWLP-specific catalyst
+found: two Apify RAG searches turned up only a same-day administrative
+earnings-date announcement (Q2 report on Aug 28) plus stale May/June
+articles; the Benzinga fallback returned HTTP 403 (blocked, not "no
+result" — noted per the routine's fallback rule). Read as likely
+noise/thin-liquidity, not catalyst-driven.
+
+### Gappers (auto-scan 09:51 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BWLP | $20.89 | -6.66% | 576 | No dated company-specific catalyst; only a same-day earnings-date scheduling notice found |
+
+#### Deep dive: BWLP $20.89 -6.66%
+- Catalyst: BW LPG's own press-release page shows exactly one same-day
+  (Aug 14, 07:00 CEST) item: a non-regulatory notice that Q2 2026 results
+  will be released and presented on Aug 28, 2026 — a scheduling
+  announcement, not results or guidance. No earnings, M&A, downgrade,
+  insider-sale, or sector (VLGC/LPG freight-rate) story dated today
+  surfaced via two Apify RAG searches or a Benzinga fallback (Benzinga
+  returned HTTP 403, blocked). Stock fell from a $22.38 prior close to
+  $20.89.
+- Why: No confirmed mechanism connects today's actual news (an
+  earnings-date scheduling notice) to a -6.66% drop. The prior-session
+  volume field Alpaca returns for this name is only 576 shares — far below
+  what a $700M+ market-cap NYSE-listed shipping name would normally print
+  — so this reads as a thin/stale snapshot rather than a liquid, broadly-
+  traded move; a large percentage move on very light volume is more
+  consistent with a wide bid-ask/illiquidity artifact than a
+  fundamentals-driven repricing.
+- Impact: Unconfirmed and low-conviction. No dated, company-specific
+  negative catalyst found, no sector read-through identified (no peer
+  LPG/VLGC shipping names checked moved similarly), and the volume data
+  available cannot confirm real participation behind the move.
+  Highest-probability read: noise/thin-liquidity gap, likely to
+  mean-revert once normal volume returns, but this can't be verified from
+  the data sources available to this scan.
+- Horizon: SHORT_TERM, no structural catalyst identified — absent a
+  confirmed news driver, default to treating an unexplained gap as
+  headline/noise-driven and not a basis for a multi-day thesis.
+- Opportunity cost: Account is flat (0/6 open positions, 0/3 weekly trades
+  used, $100,000 equity), so nothing existing to displace. With no
+  confirmed catalyst and a possible data/liquidity artifact behind the
+  move, this does not clear the bar to consider for a new entry regardless
+  of available trade slots — the Confluence rule requires a real
+  catalyst-backed setup, and none was found here. Research only, not a
+  trade recommendation.
