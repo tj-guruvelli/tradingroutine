@@ -1,0 +1,49 @@
+{
+  "scanned_at": "2026-08-14T15:42:21Z",
+  "deep_dive_cap": 5,
+  "data_quality_warning": "All 3 flagged gappers in this run conflict with independently-verified live quotes/bars pulled directly from Alpaca and third-party sources. Root cause: scripts/gappers-alpaca.sh's prev-close baseline uses snapshot dailyBar.c, which its own code comments say is only a valid 'yesterday's close' proxy PRE-MARKET; this run fired at 11:42 ET, 2h12m after the 09:30 ET open, when dailyBar reflects the still-forming intraday bar, not a stable baseline. This is the 3rd run today (09:51, 10:35, 11:42) with this issue; see memory/RESEARCH-LOG.md for the running detail. Recommend the operator add a time-of-day guard to gappers-alpaca.sh so post-open cloud runs skip the raw threshold filter or clearly separate premarket vs intraday gap semantics.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BKSY",
+      "price": 28.375,
+      "gap_pct": -7.15,
+      "premarket_volume": 18474,
+      "catalyst": "Scan read looks like a stale/artifact price -- direct 1-min bars at ~11:40 ET show BKSY trading flat $30.5-31, not down 7%",
+      "headlines": ["BlackSky Technology (BKSY) Is Up 26.5% After Reaffirming 2026 Outlook", "Is BlackSky Technology (BKSY) A Bargain As Its New Contract..."],
+      "catalyst_detail": "BlackSky (satellite imagery, NYSE) rallied 26.5% five days ago on a reaffirmed 2026 outlook and Gen-3 satellite ramp; a 6-hour-old SimplyWall.St piece debates whether the post-rally price is still a bargain given a new contract. No fresh negative headline found today. Direct Alpaca 1-min bars checked ~11:40 ET show trades clustering $30.5-31, essentially flat vs the $30.56 prior close the scan used -- not the $28.375/-7.15% the snapshot endpoint reported.",
+      "why": "No mechanism identified for a real -7% move; the scan's gap read does not match the directly-queried trade tape. Most likely a stale/wide-spread snapshot quote (the live quote carried condition code 'R' with a bid/ask of $30.26/$34.81, consistent with an IEX free-feed NBBO artifact, not a real print).",
+      "impact": "Not sustainable because it isn't real -- corroborating 1-min bars show BKSY trading flat around $30.5-31 all morning, not making a new low. Flag as a probable snapshot-data artifact from scripts/gappers-alpaca.sh's dailyBar-based prev-close logic, which the script's own comments say is valid pre-market only; this run fired well after the 09:30 ET open.",
+      "horizon": "SHORT_TERM, and likely not even a real move -- do not treat as a signal pending a clean quote confirmation.",
+      "opportunity_cost": "N/A -- data quality doesn't support a trade decision either way. If BKSY is already held, no action indicated since the underlying tape shows no real deterioration."
+    },
+    {
+      "rank": 2,
+      "symbol": "APT",
+      "price": 5.835,
+      "gap_pct": 6.77,
+      "premarket_volume": 462,
+      "catalyst": "No real catalyst found; extremely thin volume (462 sh) and zero trades in a 20-min bars check -- likely a stale/illiquid print, not a real move",
+      "headlines": [],
+      "catalyst_detail": "No news-based catalyst found -- search results were generic syndicated 'technical levels' articles from content-mill domains (mostly 404/dead pages), not real news. Alpaca's own quote at 11:40 ET shows a wide, likely-stale spread (bid $5.44 / ask $6.23, ~14.5%) and zero trades in the prior 20 minutes -- APT did not print during that window. Original scan volume was only 462 shares.",
+      "why": "Cannot establish a mechanism -- no catalyst, and the 'gap' is built on essentially no live trading. Reads as a thin/illiquid stock with a stale last-print rather than a real intraday move.",
+      "impact": "Not sustainable / not real. 462 shares of volume and zero trades in a 20-min bars check confirm this ticker isn't trading enough right now to trust any price off it.",
+      "horizon": "SHORT_TERM -- moot, since there's no real move to fade or hold; treat as noise.",
+      "opportunity_cost": "Skip. Fails the basic liquidity bar for any position size; would not clear a sane stop distance or the 2:1 R:R minimum given the spread alone eats ~14% of the price."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 252.48,
+      "gap_pct": -5.49,
+      "premarket_volume": 173529,
+      "catalyst": "Michael Burry AI-overcapacity short thesis (Oracle/Micron/Nebius) layered on Aug 12 Q2 guidance overhang -- same catalyst as the 10:35 ET log; but live quotes again show NBIS UP ~+4.5% on the session, not down 5.49%",
+      "headlines": ["NBIS Stock Just Got a $1 Billion AI Catalyst", "Why Is NBIS Stock Surging Over 5% Premarket Today?"],
+      "catalyst_detail": "Same setup as the 10:35 ET deep dive: NBIS reported Q2 2026 earnings before the open Wed Aug 12 (revenue +454% YoY) but shares fell on FY guidance tied to the 'Vineland project'; D.A. Davidson's Gil Luria reiterated Neutral/$175 PT. On top of that, Michael Burry has publicly doubled down on an AI-overcapacity short spanning Oracle, Micron, and Nebius. This run's Alpaca snapshot again disagrees with independent sources: SeekingAlpha's live quote (~11:37-11:38 ET) showed NBIS at $266-267, +4.4-4.6% intraday; a direct 1-min bars pull confirms trades in the $268-271 range as of 11:23 ET -- NBIS is UP on the session, not down 5.49%. This is the 3rd straight scan today (09:51-adjacent, 10:35, now 11:42) where the Alpaca snapshot's gap read for a post-open ticker conflicts with independently-verified live prices.",
+      "why": "A real bearish mechanism exists (Burry short thesis + earnings guidance overhang), but the magnitude/direction implied by this scan's own gap_pct is not corroborated by live data -- the stock is actually green on the session per two independent checks (SeekingAlpha snapshot + Alpaca's own 1-min bars).",
+      "impact": "Cannot assess sustainability of a move the underlying tape doesn't confirm happened. Treat the Alpaca snapshot's -5.49% as an artifact of the script's dailyBar-based prev-close logic, which its own code comments say is valid pre-market only -- this run fired 2h12m after the 09:30 ET open, well outside that window.",
+      "horizon": "SHORT_TERM if treating the Burry/earnings overhang as the real story (headline-driven, no new structural catalyst since the 10:35 log); but note the scan's direction is likely wrong -- live data says up, not down.",
+      "opportunity_cost": "Do not act on this scan's implied direction. If considering NBIS at all, price any entry off a live quote/chart, not this routine's output, given the repeated data conflict today."
+    }
+  ]
+}
