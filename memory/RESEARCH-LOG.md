@@ -6018,6 +6018,21 @@ per routine rule (hits = 0, no scan error).
 
 0 errors. Full deep-dive skipped (no candidates).
 
+### Gappers (auto-scan 09:24 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`,
+7 minutes before the open — quotes fresher than the 08:36 ET pass. One
+symbol cleared the gap filter, AGMH at +8.87% (0.9106 -> 0.9913, vol 540),
+but fails the routine's price >= $3.00 floor, so it's excluded. **0
+qualifying hits.** No catalyst research or deep-dive run. No Telegram sent
+per routine rule (hits = 0, no scan error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No symbols cleared gap + price + volume filters |
+
+0 errors. Full deep-dive skipped (no candidates).
+
 ## 2026-08-14 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
