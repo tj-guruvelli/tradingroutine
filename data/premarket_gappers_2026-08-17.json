@@ -2,5 +2,31 @@
   "scanned_at": "2026-08-17T08:36:00-04:00",
   "deep_dive_cap": 5,
   "gap_threshold": 5.0,
-  "gappers": []
+  "gappers": [],
+  "runs": [
+    {
+      "scanned_at": "2026-08-17T08:36:00-04:00",
+      "window": "premarket",
+      "hits": 0,
+      "gappers": []
+    },
+    {
+      "scanned_at": "2026-08-17T11:16:00-04:00",
+      "window": "mid-session (second run, outside premarket)",
+      "hits": 0,
+      "raw_candidates_rejected": [
+        {
+          "symbol": "TRMD",
+          "gap_pct": -7.46,
+          "reason": "volume 2724 < 50000 gate; also dailyBar/spread-midpoint artifact, not a real move"
+        },
+        {
+          "symbol": "BWLP",
+          "gap_pct": -7.28,
+          "reason": "volume 3560 < 50000 gate; also dailyBar/spread-midpoint artifact, not a real move"
+        }
+      ],
+      "gappers": []
+    }
+  ]
 }

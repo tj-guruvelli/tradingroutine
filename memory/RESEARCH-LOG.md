@@ -6018,6 +6018,35 @@ per routine rule (hits = 0, no scan error).
 
 0 errors. Full deep-dive skipped (no candidates).
 
+### Gappers (auto-scan 11:16 ET, cloud, second run)
+
+Watchlist scan (69 tickers from `memory/WATCHLIST.md`, 60 returned a fresh
+today-timestamped quote/trade) via `scripts/gappers-alpaca.sh watchlist`,
+`GAP_THRESHOLD=5.0`. This run fired mid-session (11:16 ET), well outside the
+premarket window the script's prev-close logic assumes. Raw output: 2 rows
+crossed 5.0% — TRMD -7.46% (30.48→28.21) and BWLP -7.28% (23.14→21.46).
+Both are rejected as data artifacts, not real gappers:
+
+- Volume gate: both fail `premarket_volume >= 50000` outright (TRMD vol
+  2,724; BWLP vol 3,560 — thinly traded names).
+- Root cause confirmed via direct snapshot pull: at this hour `dailyBar.c`
+  is today's in-progress running price (same as `latestTrade.p`, not
+  yesterday's close), while the script's "current" is the mid of a very
+  wide bid/ask spread (TRMD bid $25.97 / ask $30.44; BWLP bid $19.75 / ask
+  $23.16) on low-print names. The resulting "gap" is spread-midpoint vs
+  last-trade noise, not a price move — both symbols' actual dailyBar
+  range today is tight (TRMD $30.12-30.48, BWLP $23.03-23.30). Same
+  known dailyBar-based artifact flagged for NBIS in the 2026-08-14 11:42
+  ET log entry; script docstring itself notes prev-close logic is
+  premarket-only.
+
+**0 real hits.** No catalyst research or deep-dive run. No Telegram sent
+per routine rule (hits = 0, no scan error). 0 scan errors.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No symbols cleared the gap+volume filter this scan (2 raw hits rejected as spread/timing artifacts — see above) |
+
 ## 2026-08-14 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
