@@ -6064,6 +6064,25 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 4 grade-B hits.**
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 
+### Setup Scan (18:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 4 grade-B hits.**
+0 errors. Same 4 tickers as the 16:38 ET scan (post-close, daily bars
+unchanged; RCAT's intraday px shifted from $9.06 to $10.42). No
+Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LUNR | B | Momentum confluence | daily swing | RSI 63.01, ADX 24.63, EMA9 $16.42 > EMA21 $15.84, px $20.34 |
+| UMAC | B | Momentum confluence | daily swing | RSI 72.14, ADX 23.10, EMA9 $27.18 > EMA21 $24.42, px $26.09 |
+| KTOS | B | Momentum confluence | daily swing | RSI 70.33, ADX 28.19, EMA9 $60.22 > EMA21 $55.84, px $63.29 |
+| RCAT | B | Momentum confluence | daily swing | RSI 65.60, ADX 21.82, EMA9 $9.85 > EMA21 $9.24, px $10.42 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
+
 ## 2026-08-14 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
