@@ -259,3 +259,25 @@ the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-Open call was HOLD: post-CPI/PPI inflation-cooling rally is index-level not idiosyncratic, low VIX (14.50) plus a stretched S&P near highs argued for discipline. Gappers auto-scan flagged RCAT/AMPX/ONDS on a drone-tariff headline but none cleared the 2-indicator confluence bar — research only, not carried into a trade. 27 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 10). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 31st straight session, operator review pending.
+
+### Aug 17, Market-Open (Day 28, Monday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. No dated Pre-Market Research entry existed for
+today (only a Gappers auto-scan) — ran pre-market research inline via the
+Apify RAG web browser tool per routine fallback. Market context (Schwab
+Market Update, TradingEconomics calendar, Cboe, 9:10am ET): S&P 500
+7,785.76 (-0.17%), Dow -0.20%, Nasdaq -0.28%; VIX 15.05 (+5.68%, prior
+close 14.25); 10Y yield 4.71%; WTI crude $82.91 (+0.62%, no Iran
+resolution in sight). Friday's surprise drop in July retail sales plus
+weak jobs data raised consumer-caution concerns; Fed minutes and
+Walmart/Home Depot earnings due this week; CME FedWatch showing 64% odds
+of a Fed rate *hike* by year-end — a hawkish surprise, not a tailwind.
+Gappers auto-scan (08:36 ET, cloud) found 0 hits >=5% gap — no
+idiosyncratic single-name setup to evaluate. Decision: HOLD — rising VIX,
+soft consumer data, hawkish Fed repricing, and unresolved Iran risk argue
+for discipline over chasing a flat/down tape; no catalyst cleared the
+2-indicator confluence bar. No planned tickers to validate, Steps 2-7
+skipped. 28 trading days since launch (Jul 9) with zero entries. Weekly
+trade count: 0/3 (week of Aug 17). Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 32nd
+straight session, operator review pending.
