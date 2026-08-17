@@ -6016,3 +6016,95 @@ unchanged). No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-17 — Pre-Market Research (Day 28, Monday)
+
+**Account snapshot (live via `alpaca.sh`):** Equity $100,000.00 | Cash
+$100,000.00 (100%) | Buying power $400,000 | Positions: 0 | Open orders: 0.
+Equity still flat at $100,000 vs. the $10,000 baseline in CLAUDE.md —
+mismatch flagged Jul 27, unresolved 33rd straight session, operator review
+pending.
+
+**Market context (Apify RAG web browser; TradingEconomics + Cboe + CNBC +
+TradingView + Kiplinger + Schwab):**
+- **Quiet week overall, per The Patel Investor's weekly plan** — no single
+  dominant catalyst today. Market stepping away from tech earnings into big
+  retail earnings this week (Home Depot, Target, Lowe's, TJX, Walmart —
+  spread across the week, not confirmed today specifically). Fed (July FOMC)
+  meeting minutes drop Wednesday 8/19 — the week's headline macro event per
+  Kiplinger's economic calendar, alongside a run of housing-market data.
+  Oil and long-end yields flagged by multiple sources as the two biggest
+  standing macro risks until the Iran conflict fully resolves.
+- **VIX 14.91 (+4.63%, +0.66), prev close 14.25** (Cboe, as of ~11:02 ET).
+  Still deep in the lower half of its 52-week range (13.38 low / 35.30
+  high) despite today's bounce — complacent-tape backdrop persists even
+  with the uptick.
+- **Oil — elevated, Iran/Strait of Hormuz-driven.** Brent $89.26 (+0.83%,
+  TradingEconomics) — "rose above $89.0 on Monday, as investors assessed
+  the uncertain outlook for the US-Iran conflict." Renewed fighting in
+  Lebanon and attacks on vessels in the Strait of Hormuz cited as ongoing
+  risk; Hormuz shipping traffic collapsed to 5 commodity vessels Saturday
+  and 0 Sunday vs. 31 the prior weekend. No major supply outage confirmed
+  yet, which is capping further upside. WTI $82.85 (+0.54%). Both up
+  materially on a 12-month view (Brent +34%, WTI +32%).
+- **S&P 500 futures:** search results this run failed to resolve to a clean
+  premarket futures read (query kept mis-parsing on the "S&P" string) — a
+  data gap, noted rather than guessed. No confirmed pre-open index-level
+  number to report.
+- **Sector momentum (Schwab Sector Views, monthly, as of 7/31 — same
+  snapshot as last cited, no fresher edition found):** More Favored —
+  Financials, Health Care, Industrials, Materials. Neutral — Communication
+  Services, Consumer Staples, Energy, Information Technology. Less
+  Favored — Utilities. Least Favored — Consumer Discretionary, Real
+  Estate. Trailing-6mo: Energy +21.3% (top, oil/Iran-driven, but Schwab
+  flags valuation/earnings-expectation risk if the conflict resolves),
+  Information Technology +14.7%, Real Estate +14.3%, Industrials +11.3%,
+  vs. Consumer Discretionary -10.4% (worst) and Communication Services
+  -6.5% (weak retail-adjacent backdrop worth watching into this week's
+  retail earnings).
+- **Earnings today (Mon BMO):** H World Group ($HTHT), BitFuFu ($FUFU),
+  InspireMD ($NSPR) — small-caps, none on the watchlist, none material.
+  Bigger retail names (HD/TGT/LOW/TJX/WMT) report later this week, not
+  confirmed as today's prints.
+- **Econ calendar:** No CPI/PPI/jobs print today; housing data spread
+  through the week, July FOMC minutes Wednesday 8/19 is the standout.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+**Trade ideas (all HOLD/watch-only — no entry):**
+1. **Energy — pass, not chase.** Best trailing-6mo sector (+21.3%) on
+   Iran/oil strength, but the catalyst is macro/geopolitical, not
+   idiosyncratic to any single watchlist name, and Schwab itself flags the
+   sector's valuation as vulnerable to a conflict de-escalation surprise.
+   No confluence check run on a specific ticker this session.
+2. **Financials / Health Care / Industrials (Schwab "More Favored") —
+   watch only.** Fits the broader favorability read, but no company-specific
+   catalyst or technical confluence (RSI/VWAP/200-SMA/insider) was checked
+   this run. Flag for a future session with a real trigger.
+3. **Retail earnings week — wait for prints.** HD/TGT/LOW/TJX/WMT results
+   this week are the cleanest read on consumer health given Consumer
+   Discretionary's -10.4% 6mo underperformance; no actionable entry until
+   an actual print + reaction is in hand.
+
+**Risk factors:**
+- Iran/Strait of Hormuz conflict unresolved — Hormuz shipping traffic
+  collapsed over the weekend (0 vessels Sunday vs. 31 the prior weekend);
+  a real escalation or de-escalation headline could move oil and Energy
+  sharply either way, intraday.
+- July FOMC minutes Wednesday could reprice rate-cut/hike odds under new
+  Fed chair Kevin Warsh — a background risk into a "quiet" week.
+- VIX still near its 52-week low despite today's bounce — thin cushion for
+  a negative surprise.
+- Consumer Discretionary is the worst-performing sector 6mo YTD (-10.4%)
+  heading into a week of major retail earnings — binary-event risk for
+  that group.
+- Data gap: S&P 500 futures read failed to resolve cleanly this run
+  (search mis-parse); no confirmed premarket index-level number.
+- Persistent $100k live equity vs. $10k CLAUDE.md baseline mismatch —
+  unresolved 33 sessions running, operator review still pending.
+
+**Decision: HOLD.** No idiosyncratic single-name catalyst identified; the
+week's real events (Fed minutes, retail earnings) haven't happened yet, oil/
+Iran risk is a macro overhang rather than an entry signal, and low VIX
+argues for discipline over chasing sector-level momentum. 28 trading days
+since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of
+Aug 17).
