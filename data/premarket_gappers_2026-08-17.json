@@ -1,6 +1,57 @@
 {
-  "scanned_at": "2026-08-17T08:36:00-04:00",
+  "scanned_at": "2026-08-17T14:17:00Z",
   "deep_dive_cap": 5,
-  "gap_threshold": 5.0,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "APT",
+      "price": 5.925,
+      "gap_pct": 8.42,
+      "premarket_volume": 985,
+      "catalyst": "No confirmed same-day catalyst found; only stale generic technical-level commentary from non-primary sources.",
+      "headlines": [
+        "Alpha Pro Tech (APT) Holds Gains: Stock Rises 1.15% Toward Key Resistance at $5.54 (Aug 7, 2026, pipelineawareness.org)",
+        "Alpha Pro Tech (APT) Edges Higher at $5.41 as Defensive Demand Bolsters Support (att.prernaup.in)"
+      ],
+      "catalyst_detail": "RAG search surfaced only generic technical-level commentary pieces (support/resistance chatter) from non-primary aggregator/content-farm domains, all dated May-Aug 2026, none matching today. No earnings, M&A, guidance, filing, or contract news surfaced anywhere in the results.",
+      "why": "No identifiable news mechanism. Session volume of just 985 shares is far below normal liquidity for this name, meaning a handful of prints could swing the last-trade price without reflecting genuine buying pressure — the 8.4% gap reading may be a thin-print/stale-quote artifact rather than a real repricing.",
+      "impact": "Not sustainable-looking: no volume confirmation, no catalyst. Reads as a data/liquidity artifact rather than a real gap; high odds of mean-reverting or simply correcting once more volume prints.",
+      "horizon": "SHORT_TERM, no structural catalyst identified — if the move is real at all, treat as noise, not a multi-day thesis.",
+      "opportunity_cost": "Fails the Entry Checklist's 'specific catalyst' box and no Confluence check (VWAP/RSI/200-SMA/insider) was run. Against the currently empty 0/6 position book this displaces nothing, but with no catalyst and no volume confirmation, no stop distance can be justified to even attempt a 2:1 R:R plan — not investable as-is."
+    },
+    {
+      "rank": 2,
+      "symbol": "LPG",
+      "price": 52.09,
+      "gap_pct": 6.83,
+      "premarket_volume": 5138,
+      "catalyst": "No confirmed same-day catalyst found; most recent substantive news is a stale May 2026 dividend/earnings item.",
+      "headlines": [
+        "LPG Stock Jumps As Dividend And Analyst Upgrade Fuel... (May 20, 2026, stockstotrade.com)",
+        "Dorian LPG Ltd. (LPG) Faces Headwinds, Stock Declines 3.14%... (May 27, 2026, vacances-passion.org)"
+      ],
+      "catalyst_detail": "Search results are all stale: a May 2026 dividend-and-analyst-upgrade writeup, a separate May 2026 sector-headwind decline piece, and a generic stocktitan overview page. No same-day (Aug 17) article surfaced. LPG shipping is rate-sensitive (VLGC freight); no confirmation of a fresh freight-rate headline today.",
+      "why": "No same-day mechanism found. A sector-wide LPG/VLGC freight-rate move is plausible (rates can jump on OPEC+ export news or canal-transit disruptions) but nothing in the research surfaced a dated trigger for today specifically.",
+      "impact": "Volume (5,138) is thin relative to a name that normally trades far higher — same stale-quote-artifact concern as APT. Cannot confirm sustainability without a real, dated catalyst.",
+      "horizon": "SHORT_TERM, no durable thesis identified from available research — do not carry.",
+      "opportunity_cost": "Fails Entry Checklist (no catalyst, no confluence check run). Would not displace anything in the empty position book; not investable as-is pending a same-day catalyst confirmation."
+    },
+    {
+      "rank": 3,
+      "symbol": "BW",
+      "price": 10.93,
+      "gap_pct": 6.22,
+      "premarket_volume": 45776,
+      "catalyst": "No same-day catalyst confirmed; most relevant news on record is a stale Mar 2026 $2.4B AI-power-deal notice-to-proceed.",
+      "headlines": [
+        "BW Stock Surges 46% on $2.4B AI Power Deal (Mar 4, 2026, koalagains.com)",
+        "Are Investors Undervaluing Babcock & Wilcox Enterprises? (Dec 12, 2025, simplywall.st)"
+      ],
+      "catalyst_detail": "Most relevant hit is a March 4, 2026 article on BW receiving a 'full notice to proceed' on a $2.4B AI-power-related project — a real, named catalyst but ~5.5 months old, not a same-day trigger. Fundamentals show declining revenue (-29% YoY most recent quarter per koalagains) alongside a simplywall.st call that shares are ~23% undervalued vs analyst targets — a mixed signal.",
+      "why": "If today's move is a continuation of the AI-power-buildout thesis (BW does energy/environmental tech relevant to data-center power demand), it could be sector read-through from AI-power headlines elsewhere in the market rather than fresh company-specific news. Not confirmed from available research.",
+      "impact": "Volume (45,776) is the highest of the three and the most believable of the three moves, but still unconfirmed against BW's normal daily volume and no same-day headline explains the specific timing. Read with caution — may be residual momentum on the AI-power theme rather than new information.",
+      "horizon": "SHORT_TERM pending confirmation — a LONG_TERM read is possible only if the AI-power-buildout thesis is verified as still-active (would align with an Industrials/Utilities-adjacent sector-rotation read), but nothing here confirms that as of today.",
+      "opportunity_cost": "Best of the three candidates today (real named catalyst on record, highest volume) but still fails the Confluence rule as-run (no VWAP/RSI/200-SMA/insider check performed) and the 'specific catalyst' box is only conditionally checked (stale, not same-day). Against the empty position book this displaces nothing, but per the max-3-new-trades/week cap this is the one that would consume a weekly slot ahead of APT/LPG if the operator chooses to act — contingent on same-day confirmation and a 2:1 R:R stop plan not built here."
+    }
+  ]
 }

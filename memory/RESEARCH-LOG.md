@@ -6018,6 +6018,97 @@ per routine rule (hits = 0, no scan error).
 
 0 errors. Full deep-dive skipped (no candidates).
 
+### Gappers (auto-scan 10:17 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`.
+**3 hits ≥5.0% gap** (up from 0 at the 08:36 ET run — moves developed after
+the open). All 3 fall within the top-5 deep-dive cap, so every row below got
+the full deep-dive treatment (no quick-scan-only rows today).
+
+**Data quality flag:** none of the 3 catalyst searches turned up a same-day
+(Aug 17) news item. APT and LPG results were entirely stale (May-Aug 2026
+technical-level commentary, much of it from non-primary content-farm domains)
+with thin session volume (985 and 5,138 shares respectively) — both moves
+read as likely thin-print/stale-quote artifacts rather than real repricings.
+BW's most relevant hit was a real, named catalyst ($2.4B AI-power-deal notice
+to proceed) but dated Mar 4, 2026 (~5.5 months stale), with the highest
+volume of the three (45,776) — the most plausible of the three but still
+unconfirmed for today specifically. No trade recommended on any of the 3;
+Entry Checklist's "specific catalyst" box is unmet for all three as of this
+scan.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.93 | +8.42% | 985 | No confirmed same-day catalyst (stale technical-level commentary only) |
+| 2 | LPG | $52.09 | +6.83% | 5,138 | No confirmed same-day catalyst (stale May dividend/earnings news only) |
+| 3 | BW | $10.93 | +6.22% | 45,776 | No same-day catalyst; stale Mar 2026 $2.4B AI-power-deal notice-to-proceed |
+
+#### Deep dive: APT $5.93 +8.42%
+- Catalyst: RAG search surfaced only generic technical-level commentary from
+  non-primary aggregator/content-farm domains, dated May-Aug 2026, none
+  matching today. No earnings, M&A, guidance, filing, or contract news found.
+- Why: No identifiable news mechanism. Session volume of 985 shares is far
+  below normal liquidity — a handful of prints could swing the last-trade
+  price without reflecting genuine buying pressure.
+- Impact: Not sustainable-looking — no volume confirmation, no catalyst.
+  Reads as a data/liquidity artifact, high odds of reverting once more
+  volume prints.
+- Horizon: SHORT_TERM, no structural catalyst identified — if the move is
+  real at all, treat as noise, not a multi-day thesis.
+- Opportunity cost: Fails the Entry Checklist's catalyst box and no
+  Confluence check was run. Displaces nothing against the empty 0/6 position
+  book, but no stop distance can be justified for a 2:1 R:R plan without a
+  real catalyst — not investable as-is.
+
+#### Deep dive: LPG $52.09 +6.83%
+- Catalyst: All results stale — a May 2026 dividend/analyst-upgrade
+  writeup, a separate May 2026 sector-headwind decline piece, and a generic
+  overview page. No same-day article surfaced. LPG shipping is rate-
+  sensitive (VLGC freight); no confirmation of a fresh freight-rate headline
+  today.
+- Why: No same-day mechanism found. A sector-wide LPG/VLGC freight-rate move
+  is plausible but nothing in the research surfaced a dated trigger for
+  today specifically.
+- Impact: Volume (5,138) is thin relative to this name's normal turnover —
+  same stale-quote-artifact concern as APT. Cannot confirm sustainability
+  without a real, dated catalyst.
+- Horizon: SHORT_TERM, no durable thesis identified from available research
+  — do not carry.
+- Opportunity cost: Fails Entry Checklist (no catalyst, no confluence check
+  run). Displaces nothing against the empty position book; not investable
+  as-is pending same-day catalyst confirmation.
+
+#### Deep dive: BW $10.93 +6.22%
+- Catalyst: Most relevant hit is a March 4, 2026 article on BW receiving a
+  "full notice to proceed" on a $2.4B AI-power-related project — real,
+  named, but ~5.5 months stale. Fundamentals show declining revenue (-29%
+  YoY most recent quarter) alongside a simplywall.st call that shares are
+  ~23% undervalued vs analyst targets — a mixed signal.
+- Why: If today's move continues the AI-power-buildout thesis (BW does
+  energy/environmental tech relevant to data-center power demand), it could
+  be sector read-through from AI-power headlines elsewhere rather than fresh
+  company-specific news. Not confirmed from available research.
+- Impact: Volume (45,776) is the highest of the three and the most
+  believable move, but still unconfirmed against BW's normal daily volume
+  and no same-day headline explains the specific timing — may be residual
+  momentum on the AI-power theme rather than new information.
+- Horizon: SHORT_TERM pending confirmation — a LONG_TERM read is possible
+  only if the AI-power-buildout thesis is verified as still-active (would
+  align with an Industrials/Utilities-adjacent sector-rotation read), but
+  nothing here confirms that as of today.
+- Opportunity cost: Best of the three today (real named catalyst on record,
+  highest volume) but still fails the Confluence rule as-run (no VWAP/RSI/
+  200-SMA/insider check performed) and the catalyst box is only
+  conditionally checked (stale, not same-day). Displaces nothing against the
+  empty position book, but per the max-3-new-trades/week cap this is the one
+  that would consume a weekly slot ahead of APT/LPG if the operator chooses
+  to act — contingent on same-day confirmation and a 2:1 R:R stop plan not
+  built here.
+
+3 catalyst fetches + 3 fundamentals fetches, 0 errors (Apify RAG web browser
+succeeded on all 6 queries; content quality was the issue, not fetch
+failures).
+
 ## 2026-08-14 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
