@@ -5999,6 +5999,25 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 3 grade-B hits.**
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
 
+## 2026-08-17
+
+### Gappers (auto-scan 08:36 ET, cloud)
+
+Watchlist scan (69 tickers from `memory/WATCHLIST.md`, 64 returned by Alpaca
+snapshot) via `scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`. Only
+8/64 symbols carried a fresh (today-timestamped) quote/trade this early in
+premarket — the rest still showed Friday 2026-08-14 close data, correctly
+excluded by the script's stale-quote guard. **0 hits ≥5.0% gap.** Largest
+mover was BE at +4.24% (229.85 → 239.59), below threshold. No catalyst
+research or deep-dive run (nothing cleared the gap filter). No Telegram sent
+per routine rule (hits = 0, no scan error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No symbols ≥5.0% gap this scan |
+
+0 errors. Full deep-dive skipped (no candidates).
+
 ## 2026-08-14 — Setup Scan (18:39 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
