@@ -6100,3 +6100,106 @@ unchanged). No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-18 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser worked for most topics (oil, VIX, futures/tape,
+economic calendar) but returned garbled off-topic results (dictionary/
+Wikipedia "letter S" pages) on three separate retries of the general
+"top catalysts today" query — treated as a tool glitch, not a real
+result; catalyst picture pieced together instead from the tape-wrap and
+oil-news sources below. `tradingview-data` MCP not loaded this run (not
+in this routine's toolset) — confluence checks (RSI/VWAP/200-SMA/insider)
+not run; no trade ideas below clear Tier-1 as a result.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — confirmed live via `alpaca.sh account`/
+  `positions`/`orders`. Same confirmed-live-vs-$10k-baseline mismatch
+  flagged 2026-07-27, unresolved 34th straight session, operator review
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 17).
+
+### Market Context (Apify RAG web browser, Tue 8/18 ~7am ET)
+- **Oil — Brent extending gains on Iran/Hormuz risk**: Brent ~$90.70-90.82
+  (TradingEconomics), up a 3rd straight session, +37.9% YoY; WTI
+  ~$84.90-84.91 (+0.4-0.5%). Driver: the Jun US-Iran interim memorandum
+  (60-day negotiating window) expired Monday and Trump said he isn't
+  interested in extending it; Iran and Oman continue negotiating a
+  Hormuz shipping-traffic arrangement without US involvement — an
+  unresolved, headline-sensitive overhang, same Hormuz thesis flagged
+  repeatedly since Aug 11.
+- **VIX — rising, 3rd straight up session**: 15.86-15.87 (+4.4-4.5% on
+  the day). 5-day path: 14.55 (8/12) -> 14.63 -> 14.25 (8/14 low) -> 15.19
+  (8/17) -> 15.86 (8/18) — steady climb off the recent low, though still
+  under its own 20-day MA (~16.4), so not yet "elevated" by its own
+  trend, just moving fast in that direction.
+- **Tape — tech-specific weakness, broader market more resilient**:
+  S&P 500 cash ~7,712 (-0.4%), Nasdaq -1.4%, Dow ~flat. Mega-cap tech
+  led down (Microsoft -3.0%, Meta -3.5%, Oracle -2.6%) while value/
+  cyclical names were green (Caterpillar +2.9%, Goldman Sachs +1.1%,
+  Exxon +0.9%) — reads as rotation out of high-multiple AI/tech, not a
+  broad risk-off day. Schwab's open-of-day wrap: "Stocks Flat, Yields Up
+  Awaiting Retailer Results" — 10Y yield ~4.74% and rising is the
+  proximate pressure on rate-sensitive tech. Monday 8/17 close: Dow -270+
+  pts on oil/Iran-tension pressure (CNBC).
+- **Econ/earnings calendar (week of Aug 17-23)**: Retailer earnings
+  (Walmart/Home Depot, consistent with the 8/17 log) and Fed minutes
+  land mid-week; Thursday brings PPI + jobless claims, Friday a jobs
+  report — none of that is today's print, but it's overnight-hold risk
+  for anything opened this week. Nasdaq's own earnings-calendar page
+  rendered no data for today (JS-heavy page, scrape limitation) — no
+  clean same-day earnings list obtained; nothing on the account's
+  watchlist flagged via other sources either.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met —
+confluence tooling unavailable this run):
+1. **Energy (XLE/XOM) — watch only, not actionable.** Catalyst: Brent's
+   3-session climb on the expired US-Iran MOU and unresolved Hormuz
+   shipping-traffic talks; XOM +0.9% intraday per the tape snapshot
+   above. No RSI/VWAP/200-SMA check run (no MCP this session) and no
+   entry/stop/target set. Real opposing risk: Iran and Oman are actively
+   negotiating a transit arrangement — a resolution there could unwind
+   the geopolitical premium fast, same two-sided setup flagged for
+   CVX/XLE since Aug 11.
+2. **Value/cyclical rotation (CAT, GS, XOM industrials/financials/energy)
+   — observation only, no single name/catalyst.** Today's green-vs-red
+   split (CAT/GS/XOM up, MSFT/META/ORCL down) reads as a rotation signal
+   tied to rising yields ahead of Fed minutes, not a dated, name-specific
+   catalyst — doesn't clear the strategy's "specific catalyst" bar for
+   any one ticker.
+3. **No idiosyncratic single-name setup identified.** No gappers scan is
+   part of this routine (separate cron); nothing else surfaced a
+   dated, company-specific catalyst today.
+
+### Risk Factors
+- **Rising VIX (3rd straight day, +4.4% today) + rising 10Y yield
+  (4.74%)** — the combination pressuring high-multiple tech specifically;
+  a new long into that trend without confluence confirmation would be
+  chasing, not confluence-based entry.
+- **Unresolved Iran/Hormuz risk** — two-sided: escalation extends the
+  oil rally (bullish energy names), a de-escalation/transit deal
+  unwinds it fast (bearish). Not a clean one-way catalyst to size against.
+- **Fed minutes + retailer earnings (Walmart/Home Depot) mid-week** —
+  event risk for anything opened and held into it.
+- **Confluence tooling unavailable this run** (`tradingview-data` MCP not
+  loaded) — no RSI/VWAP/200-SMA/insider check possible for any candidate
+  above; both trade ideas are catalyst-only sketches, not confluence-
+  cleared setups.
+- **Apify catalysts query glitch** (3 retries returned unrelated "letter
+  S" content) — general catalyst picture pieced together from the
+  oil/VIX/tape sources instead; flagging in case the same glitch recurs
+  on a future run and masks a real catalyst.
+
+### Decision
+**HOLD — no trades.** Rising VIX and rising yields are pressuring
+mega-cap tech while value/cyclicals stay green — a rotation, not a broad
+selloff, but not a confluence-cleared entry either given no MCP access
+this run. The one real catalyst (Brent's 3-session Iran/Hormuz-driven
+climb) is two-sided and unresolved — Iran/Oman are actively negotiating
+a transit arrangement that could reverse it. No single-name idea clears
+the strategy's documented-catalyst-plus-confluence bar. Zero positions,
+zero orders — patience over activity. Weekly trade count unchanged: 0/3
+(week of Aug 17).
