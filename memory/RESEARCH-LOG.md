@@ -6237,3 +6237,78 @@ gap filter). No Telegram sent per routine rule (hits = 0, no scan error).
 | - | - | - | - | - | No symbols >=5.0% gap this scan |
 
 0 errors. Full deep-dive skipped (no candidates).
+
+### Gappers (auto-scan 11:20 ET, cloud)
+
+Watchlist scan (69 tickers parsed from `memory/WATCHLIST.md`) via
+`scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`. This run fired
+~106 min after the 9:30 ET open (scheduler ran outside the intended
+premarket window) -- flagging per the same convention as the Aug 17 11:16 ET
+run: "volume" here is Alpaca's most-recently-completed-session full-day
+volume, not true intraday premarket volume, and is used as the
+`premarket_volume` gate proxy per the routine's data source limits. **4 raw
+candidates >=5.0% gap; 2 hits after the price/volume gates.**
+
+Rejected: APT (-8.07%, vol 285 < 50k gate), BKSY (-7.63%, vol 8,010 < 50k
+gate). Both price and volume were consistent with a stale/thin-print gap,
+not a real move.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | $28.52 | -6.66% | 74,611 | Pulling back after a drone-sector momentum run (+23% week, ~$33.87 by Aug 14) amid valuation-concern profit-taking |
+| 2 | NBIS | $242.30 | -5.21% | 133,548 | Continuing to pull back after last Wednesday's ~34% post-earnings surge; sell-side flags valuation risk after a 221% YTD rally |
+
+0 errors. Deep dive on both (cap 5, only 2 cleared the gate).
+
+#### Deep dive: UMAC $28.52 -6.66%
+- Catalyst: Unusual Machines (drone components) rallied hard in early-to-mid
+  August, +23.4% over the week to Aug 10 (247wallst) amid broader drone-group
+  strength, reaching ~$33.87 by Aug 14 (StockTitan). It has since given back
+  roughly 16% into this snapshot ($28.52 vs. $30.55 prior close). No new
+  negative company-specific headline found today; an earlier koalagains piece
+  on a prior single-day drop flagged the same "profit-taking tied to mounting
+  valuation concerns" pattern.
+- Why: No fresh negative catalyst -- momentum unwind/profit-taking after an
+  outsized, headline-driven multi-day rally; thin float and high beta in the
+  small-cap drone group amplify both the run-up and the give-back.
+- Impact: Reads as continuation of a multi-day mean-reversion, not a one-day
+  headline spike -- the stock has been sliding since the Aug 14 high, so
+  today's move is incremental bleed. Sector read-through: broader drone names
+  (RCAT, ONDS, AMPX) rallied on a shared tariff/defense headline Aug 14 and
+  are worth checking for a similar pullback.
+- Horizon: SHORT_TERM -- no durable new catalyst, a momentum name unwinding a
+  headline-driven spike; nothing here suggests a structural re-rate.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of Aug
+  17) -- no existing holding displaced. But entering mid-slide (not a fresh
+  breakout) makes a sane stop distance for the 2:1 R:R minimum hard to define
+  without a confluence check (RSI/VWAP/200-SMA unavailable in this cloud
+  routine); would also compete with NBIS for one of this week's 3 trade slots
+  if both were pursued. Research only, not a trade recommendation.
+
+#### Deep dive: NBIS $242.30 -5.21%
+- Catalyst: Nebius Group (AI cloud/infra) surged ~34% on an earnings beat
+  roughly a week ago, extending a 221% YTD rally (Seeking Alpha, rated Hold
+  on valuation). Coverage also notes progress on a Microsoft compute deal
+  (Vineland data-center-expansion approval) around the same window. Today's
+  move continues a post-earnings giveback: prev close $255.61 -> $242.30.
+- Why: Classic post-earnings-spike fade -- an outsized one-day pop invites
+  profit-taking and multiple-compression once initial momentum buying fades,
+  especially with sell-side already flagging expensive valuation into the
+  pullback.
+- Impact: Looks like continuation of the post-earnings mean-reversion, not a
+  fresh negative catalyst -- no new adverse headline found today. Volume
+  (133,548, prior full session) clears the 50k gate, consistent with active
+  repositioning rather than a thin/stale print. Sector read-through:
+  megacap-AI-capex-linked names worth checking for a shared pullback given
+  its Microsoft compute-deal exposure.
+- Horizon: SHORT_TERM -- the Microsoft compute-deal progress and AI-cloud
+  growth are structurally interesting, but the immediate move is a
+  post-spike fade tail; sizing today would be chasing a pullback from an
+  already-extended 221% YTD run.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used (week of Aug
+  17) -- no existing holding displaced. Market context this week reads
+  rising-yield/late-cycle rotation pressuring high-multiple tech (per Aug
+  17-18 RESEARCH-LOG), so an NBIS entry would need a clean confluence read
+  (unavailable this cloud run) to justify sizing into an extended-valuation
+  name mid-pullback at a sane 2:1 stop. Research only, not a trade
+  recommendation.
