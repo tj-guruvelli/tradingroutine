@@ -6220,3 +6220,20 @@ filter). No Telegram sent per routine rule (hits = 0, no scan error).
 | — | — | — | — | — | No symbols ≥5.0% gap this scan |
 
 0 errors. Full deep-dive skipped (no candidates).
+
+### Gappers (auto-scan 09:15 ET, cloud)
+
+Watchlist scan (69 tickers parsed from `memory/WATCHLIST.md`) via
+`scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`. 9/69 symbols
+carried a fresh (today-timestamped) quote/trade this close to the open
+(up from 6/69 at 08:16 ET) - the rest still showed Monday 2026-08-17 close
+data, correctly excluded by the script's stale-quote guard. **0 hits >=5.0%
+gap.** Largest mover among the fresh set was ONDS at -4.94% (9.00 -> 8.555),
+below threshold. No catalyst research or deep-dive run (nothing cleared the
+gap filter). No Telegram sent per routine rule (hits = 0, no scan error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| - | - | - | - | - | No symbols >=5.0% gap this scan |
+
+0 errors. Full deep-dive skipped (no candidates).
