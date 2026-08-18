@@ -6203,3 +6203,20 @@ a transit arrangement that could reverse it. No single-name idea clears
 the strategy's documented-catalyst-plus-confluence bar. Zero positions,
 zero orders — patience over activity. Weekly trade count unchanged: 0/3
 (week of Aug 17).
+
+### Gappers (auto-scan 08:16 ET, cloud)
+
+Watchlist scan (69 tickers parsed from `memory/WATCHLIST.md`, 64 returned by
+Alpaca snapshot) via `scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`.
+Only 6/64 symbols carried a fresh (today-timestamped) quote/trade this early
+in premarket — the other 58 still showed Monday 2026-08-17 close data,
+correctly excluded by the script's stale-quote guard. **0 hits ≥5.0% gap.**
+Largest mover among the fresh set was ONDS at -4.11% (9.00 → 8.63), below
+threshold. No catalyst research or deep-dive run (nothing cleared the gap
+filter). No Telegram sent per routine rule (hits = 0, no scan error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No symbols ≥5.0% gap this scan |
+
+0 errors. Full deep-dive skipped (no candidates).
