@@ -6237,3 +6237,73 @@ gap filter). No Telegram sent per routine rule (hits = 0, no scan error).
 | - | - | - | - | - | No symbols >=5.0% gap this scan |
 
 0 errors. Full deep-dive skipped (no candidates).
+
+### Gappers (auto-scan 10:16 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist`, `GAP_THRESHOLD=5.0`,
+full watchlist (~60 tickers synced with `config/rules.json`
+watchlist_tiers.immediate). **2 hits >=5.0% gap** after filtering for
+price >= $3.00 (both symbols cleared; `premarket_volume` field not
+populated by the wrapper — filter skipped per routine rule, "volume" values
+below are prior-completed-session volume, not live premarket volume). Both
+of the 2 hits received the deep-dive treatment (cap of 5 stated, not
+needed today).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BWLP | $24.62 | +7.89% | 1,918 | No dated-today headline found; nearest news is Aug 14 Q2-earnings-date notice (Aug 28 release) |
+| 2 | UMAC | $33.18 | +6.30% | 64,472 | At Needham drone/robotics investor conference today (Aug 17-18); riding Aug 6 Q2 revenue +687% YoY print + Aug 13 $30M Powerus investment |
+
+#### Deep dive: BWLP $24.62 +7.89%
+- Catalyst: No same-day (Aug 18) news identified for BW LPG (NYSE: BWLP)
+  across StockTitan/Morningstar/ChartMill/MarketChameleon. Most recent
+  dated item is Aug 14's notice that Q2 2026 results release Aug 28
+  (itself only a +1.62% mover); vessel-sale and dividend news is from
+  June/July and already priced in.
+- Why: No identified mechanism — no earnings, M&A, guidance, or insider
+  filing dated today. Reported volume is only 1,918 shares (prior
+  session), thin enough that a few prints could move the last trade
+  without reflecting real demand.
+- Impact: Does not look sustainable — no volume confirmation, no dated
+  catalyst, no LPG-shipping peer read-through (Avance Gas, Dorian LPG not
+  flagged). Reads as thin-print noise, high mean-reversion odds.
+- Horizon: SHORT_TERM, no structural catalyst identified; earnings not
+  until Aug 28, nothing to hold toward.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used, so nothing
+  to displace — but BWLP fails the Confluence rule outright (no
+  documented catalyst), so it can't clear the Entry Checklist regardless
+  of size; a sub-8% gap with a 7-10% stop also would not clear 2:1 R:R at
+  a sane stop distance.
+
+#### Deep dive: UMAC $33.18 +6.30%
+- Catalyst: No single same-day press release, but a stack of dated
+  developments: Aug 6 Q2 2026 shareholder letter (revenue ~$16.7M, +687%
+  YoY, +106% QoQ, 34.7% gross margin, $229.6M cash); Aug 13 news of a $30M
+  strategic investment into Powerus (counter-UAS maker) plus a >$5M
+  Powerus purchase order to UMAC; company is presenting at the Needham
+  Virtual Industrial Tech, Robotics & Power conference through today
+  (Aug 17-18).
+- Why: Sector momentum (US drone/defense-tech names on DoD Drone
+  Dominance Program tailwinds, per the Aug 14 RCAT/ONDS/AMPX entry above)
+  plus investor-conference visibility and hard fundamental proof points
+  (687% revenue growth, Powerus tie-up) pulling in momentum buyers.
+- Impact: 64,472 prior-session volume is reasonable liquidity for a
+  ~$1.5B market cap name. Stock is near its 52-week high ($34.93 vs
+  current $33.18, 52-wk range $7.25-$34.93) and up ~245% over the
+  trailing year — reads as continuation of an established uptrend, not a
+  one-day spike. Consistent with the broader drone/defense group (RCAT,
+  ONDS, AMPX) moving together repeatedly this month.
+- Horizon: LONG_TERM — catalyst stack (687% revenue growth, DoD Drone
+  Dominance Program tailwind, Powerus investment, Russell 2000 inclusion)
+  is structural and aligns with Technology/Industrials being favored in
+  an early/mid-cycle sector-rotation phase per TRADING-STRATEGY.md; a
+  plausible swing candidate if it later clears Confluence.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — nothing to
+  displace. UMAC is the stronger of today's two candidates (BWLP fails
+  Confluence outright). At ~$33 with a 10% trailing stop (~$29.70, ~$3.30
+  risk), a 2:1 R:R target (~$36.30) sits just under the 52-week high as
+  resistance — workable on paper but still needs an actual
+  VWAP/RSI/200-SMA/insider-signal check via `/trade` before any order.
+  Research only, not a trade recommendation.
+
+0 errors.

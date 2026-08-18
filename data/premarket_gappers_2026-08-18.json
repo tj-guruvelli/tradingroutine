@@ -1,5 +1,38 @@
 {
-  "scanned_at": "2026-08-18T09:15:00-04:00",
+  "scanned_at": "2026-08-18T14:22:18Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BWLP",
+      "price": 24.615,
+      "gap_pct": 7.89,
+      "premarket_volume": 1918,
+      "catalyst": "No same-day (Aug 18) headline found; most recent dated news is the Aug 14 announcement that Q2 2026 results release Aug 28 (+1.62% reaction that day).",
+      "headlines": [
+        "BW LPG Limited – Q2 2026 Financial Report Release and Earnings Presentation on 28 August 2026 (StockTitan, 08/14/2026)"
+      ],
+      "catalyst_detail": "No fresh, dated-today news identified for BW LPG (NYSE: BWLP) despite direct queries against StockTitan, Morningstar, ChartMill and MarketChameleon. The most recent company news is an Aug 14 notice that Q2 2026 results will be released Aug 28 (that item itself only moved the stock +1.62%). Prior items (BW Levant/BW Elm vessel sales, Q1 dividend, newbuild order) are all from June/July and already priced in.",
+      "why": "No identified mechanism (no earnings beat, M&A, guidance change, or insider filing dated today). Volume field shows only 1,918 shares for the most recent completed session — thin enough that a handful of prints could move the last trade materially without reflecting real demand; treat as a data-quality caveat on the gap itself.",
+      "impact": "Does not look sustainable on current evidence: no volume confirmation, no dated catalyst, no peer LPG-shipping read-through (Avance Gas, Dorian LPG not flagged as moving). Reads as noise/thin-print gap rather than a real move; high probability of mean-reversion.",
+      "horizon": "SHORT_TERM — no structural catalyst identified; earnings not until Aug 28, so nothing to hold toward. If the print is real it is headline-lag noise, not a durable thesis.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used, so no existing holding would be displaced. Against UMAC (this list's other candidate), BWLP would not need to displace it — but BWLP fails the Confluence rule outright (no documented catalyst = fails the 'at least 1 catalyst' requirement), so it cannot clear the Entry Checklist regardless of size. A sub-8% gap with a strategy-standard 7-10% stop also would not clear the 2:1 minimum R:R at a sane stop distance."
+    },
+    {
+      "rank": 2,
+      "symbol": "UMAC",
+      "price": 33.18,
+      "gap_pct": 6.3,
+      "premarket_volume": 64472,
+      "catalyst": "Unusual Machines is presenting today (Aug 17-18) at the Needham Virtual Industrial Tech, Robotics & Power 1x1 Conference, layered on strong recent fundamentals (Q2 revenue +687% YoY) and an Aug 13 $30M strategic investment into Powerus.",
+      "headlines": [
+        "Unusual Machines (UMAC) Stock Is Climbing Today: Is the Whole Drone Group Moving? (247wallst.com, 08/10/2026)"
+      ],
+      "catalyst_detail": "No single same-day press release, but a stack of recent, dated developments: Aug 6 Q2 2026 shareholder letter reported revenue of ~$16.7M (+687% YoY, +106% QoQ), 34.7% gross margin, $229.6M cash; Aug 13 news disclosed a $30M strategic equity investment into Powerus (a counter-UAS/interceptor maker) plus a >$5M Powerus purchase order to UMAC; the company is at the Needham Growth conference through today (Aug 17-18), which typically brings investor-visibility flows.",
+      "why": "Sector momentum (US drone/defense-tech names running on DoD Drone Dominance Program tailwinds, per the Aug 14 RESEARCH-LOG entry on RCAT/ONDS/AMPX) combined with investor-conference visibility and hard fundamental proof points (687% revenue growth, Powerus tie-up) pulling in momentum buyers.",
+      "impact": "Volume of 64,472 (prior session) is reasonable for a ~$1.5B market-cap name. Stock is near 52-week highs (52-wk range $7.25-$34.93, current $33.18) and up ~245% over the trailing year per Investing.com — reads as continuation of an established uptrend, not a one-day spike. Sector read-through: consistent with the broader drone/defense group (RCAT, ONDS, AMPX) that has moved together repeatedly this month.",
+      "horizon": "LONG_TERM — catalyst stack (687% revenue growth, DoD Drone Dominance Program tailwind, Powerus investment, Russell 2000 inclusion) is structural, and aligns with Technology/Industrials being favored in an early/mid-cycle sector-rotation phase per TRADING-STRATEGY.md; a plausible multi-day/week swing candidate if it later clears the Confluence rule.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used — no existing holding to displace. UMAC is the stronger of today's two candidates (BWLP fails Confluence outright on missing catalyst). At ~$33 with a 10% trailing stop (~$29.70, ~$3.30 risk), a 2:1 R:R target (~$36.30, +10%) sits just under the 52-week high ($34.93) as resistance — workable on paper but still needs an actual VWAP/RSI/200-SMA/insider-signal check via /trade before any order. Research only, not a trade recommendation."
+    }
+  ]
 }
