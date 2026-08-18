@@ -6328,3 +6328,21 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-18 — Setup Scan (18:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits.**
+0 errors. Post-close run — figures unchanged from the 16:38 ET scan (market
+closed at 16:00 ET). No Telegram/ClickUp notify sent per routine rule (0
+grade-A hits).
+
+### Setup Scan (18:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LUNR | B | Momentum confluence | daily swing | RSI 67.28, ADX 24.08, EMA9 $17.21 > EMA21 $16.25, px $19.63 |
+| UMAC | B | Momentum confluence | daily swing | RSI 61.82, ADX 25.42, EMA9 $27.77 > EMA21 $24.94, px $30.63 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
