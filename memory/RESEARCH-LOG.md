@@ -6454,3 +6454,11 @@ clears the strategy's documented-catalyst-plus-confluence bar, and
 confluence tooling was unavailable this run regardless. Zero positions,
 zero orders — patience over activity. Weekly trade count unchanged: 0/3
 (week of Aug 17).
+
+### Gappers (auto-scan 08:17 ET, cloud)
+Full watchlist (~60 tickers) scanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3, premarket_volume field not populated by
+Alpaca snapshot so no volume filter applied). Zero symbols cleared the 5%
+gap threshold as of 08:17 ET. Largest movers below threshold: CRWV -3.57%,
+NIO -0.99% (informational only, both under the 5% cap). No quick-scan
+table, no deep-dive, no Telegram alert per routine rule (hits=0, no error).
