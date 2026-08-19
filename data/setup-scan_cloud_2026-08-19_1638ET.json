@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-08-19T20:38:55.298Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "ZIM",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 27.35,
+      "prev_daily_high": 29.56,
+      "prev_daily_close": 28.5,
+      "sma200": 23.84,
+      "sma200_window_days": 200,
+      "pmh": 26.7,
+      "today_hod": 27.5,
+      "rsi14": 63.79,
+      "adx14": 20.9,
+      "ema9": 27.12,
+      "ema21": 26.24,
+      "premarket_volume": 3583,
+      "daily_volume": 139163,
+      "avg_daily_volume_30": 61846,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
