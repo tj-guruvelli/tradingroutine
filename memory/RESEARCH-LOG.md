@@ -6462,3 +6462,47 @@ Alpaca snapshot so no volume filter applied). Zero symbols cleared the 5%
 gap threshold as of 08:17 ET. Largest movers below threshold: CRWV -3.57%,
 NIO -0.99% (informational only, both under the 5% cap). No quick-scan
 table, no deep-dive, no Telegram alert per routine rule (hits=0, no error).
+
+### Gappers (auto-scan 09:20 ET, cloud)
+Full watchlist (~60 tickers) rescanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3, volume field populated this run). 1 symbol
+cleared the 5% gap threshold. Deep-dive cap: 5 (only 1 hit, so all of it
+got the deep dive).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ZIM | $26.90 | -5.63% | 139,163 | Q2 2026 earnings beat (rev $1.78B +9% YoY, NI $64M vs $24M) but arb spread widened ahead of pending $35/sh Hapag-Lloyd buyout |
+
+#### Deep dive: ZIM $26.90 -5.63%
+- Catalyst: ZIM released Q2 2026 results this morning before market open
+  (no conference call, per standing practice while the merger is
+  pending). Revenue $1.78B (+9% YoY), net income $64M vs $24M, adjusted
+  EBITDA +4% to $491M on higher freight rates and 3% volume growth to
+  922K TEUs. FY2026 guidance held at adjusted EBITDA $2.0-2.4B / adjusted
+  EBIT $700M-$1.1B. Reiterated the pending $35.00/share all-cash
+  acquisition by Hapag-Lloyd (shareholder-approved July 28, targeted
+  close Q4 2026, Israeli Golden Share carve-out into "New ZIM" already
+  structured).
+- Why: Merger-arb dynamics dominate ZIM's price action, not fundamentals
+  — deal is a fixed $35 cash price, so the trading price reflects a
+  deal-completion-probability/timing discount rather than earnings
+  momentum. At $26.90 vs $35 deal price, the ~30% spread is unusually
+  wide for a deal targeted to close in ~4-5 months — the print read as a
+  reason to discount closing timeline/regulatory risk despite the EBITDA
+  beat.
+- Impact: Premarket volume (139K) is modest for an earnings-day print, so
+  this looks like an arb-spread re-rating, not a liquidity-driven
+  overreaction — but not a "buy the dip" momentum setup given the hard
+  $35 cash floor is pending regulatory approval, not price action. No
+  sector-wide read-through — other shipping names on the watchlist
+  (HAFN, BWLP, TRMD, CMBT) not similarly gapping, confirming deal-
+  specific, not a freight-rate/sector event.
+- Horizon: SHORT_TERM — the widening spread is a market judgment on
+  deal-close probability/timing, not a fresh momentum or sector-rotation
+  thesis; no clean technical stop exists since the thesis is deal
+  completion, not chart structure.
+- Opportunity cost: Zero open positions and this is the only gapper
+  today, so it displaces nothing on today's list. A merger-arb
+  earnings-gap trade doesn't cleanly fit our momentum/swing strategy —
+  no sane technical stop distance exists, so it likely can't clear the
+  2:1 R:R bar at a defensible stop. Research only; no size recommended.
