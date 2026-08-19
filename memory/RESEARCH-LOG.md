@@ -6346,3 +6346,111 @@ grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-19 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser worked well for oil, VIX, and general tape (via a
+CNBC Daily Open fetch); the literal `S&P 500 futures` and `sector momentum`
+queries drifted off-topic (Spotify/YouTube/Wikipedia "letter S" pages) same
+as the Aug 18 run's catalyst-query glitch — worked around with a re-phrased
+tape query instead. `tradingview-data` MCP not loaded this run — no RSI/
+VWAP/200-SMA/insider confluence checks; no trade ideas below clear Tier-1.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — confirmed live via `alpaca.sh account`/
+  `positions`/`orders`. Same confirmed-live-vs-$10k-baseline mismatch
+  flagged 2026-07-27, unresolved 35th straight session, operator review
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 17).
+
+### Market Context (Apify RAG web browser + CNBC Daily Open, Wed 8/19 ~7am ET)
+- **Oil — Brent extending gains, 4th straight session on Iran/Hormuz risk**:
+  Brent $91.76 (TradingEconomics, +0.82% daily, +37.3% YoY). Driver: no
+  Iran-US negotiations per Trump, naval blockade still in effect, Iranian
+  forces intensified hostilities (8 vessel attacks in the Strait this
+  month incl. UAE/Saudi-linked ships). US crude inventories fell 328k
+  bbl last week. Same unresolved Hormuz overhang flagged since Aug 11,
+  now a 4th consecutive up session (was 3rd on Aug 18).
+- **VIX — pulled back slightly, still historically low**: 15.76 (-0.51%,
+  -0.08 vs 15.84 prev close), day range 15.76-15.95, 52wk range
+  13.38-35.30 — near the low end despite the oil/yield backdrop. Cboe's
+  own research note flags SPX skew in the 99th percentile (elevated
+  downside-hedging demand) even as headline VIX stays calm — a
+  complacency-vs-tail-risk divergence worth tracking, not actionable on
+  its own.
+- **Tape — bond yields the dominant pressure, IPO mania on the side**:
+  CNBC Daily Open (8/19): global long-dated yields at multi-decade highs
+  (30Y hit its highest since June 2007 per Aug 17 coverage; 10Y ~4.67-
+  4.71%) keeping a lid on stock gains; Asia-Pacific lower Wed, weaker
+  Europe/US open predicted. Unitree Robotics (Chinese humanoid-robot
+  maker) IPO'd in Shanghai up ~484% on debut — notable risk-appetite
+  signal, not US-tradable. Trump paused 50% tariffs on ~$20B of Canadian
+  goods after a "deal" with Ottawa — a de-escalation, mildly risk-on.
+  FOMC July minutes due today (3 dissenters voted to hike last meeting)
+  — Fed pricing has swung hawkish: Sept rate-cut odds down to ~30% from
+  ~50% a week ago per CME FedWatch, some pricing pointing to a Dec hike;
+  former Fed voter Bullard said "now would be a good time" to hike.
+  Sector: tech leads month-to-date (+7%), communication services lags.
+  Notable single-name moves from recent sessions: Micron +4% (AI-capex
+  read-through from Anthropic's reported $11.5B Q2 revenue, ~14x YoY);
+  Nike at 2014-era lows (-39% YTD, competitive pressure); refiners
+  (Valero, Marathon Petroleum, Phillips 66) at record highs on Hormuz-
+  constrained diesel margins (~$100/bbl); Boeing down on an Apache
+  helicopter crash and Army flight stand-down.
+- **Earnings today (before the bell)**: Target, Lowe's, TJX — none held,
+  none on Tier-1 watchlist per last confluence check.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met —
+confluence tooling unavailable this run):
+1. **Energy/refiners (XLE, VLO, MPC, PSX) — watch only, not actionable.**
+   Catalyst: Brent's 4th straight up session on unresolved Hormuz risk,
+   refiners at record highs on Hormuz-constrained diesel margins. No RSI/
+   VWAP/200-SMA check run, no entry/stop/target set. Opposing risk: same
+   as every prior log — a Hormuz de-escalation unwinds the premium fast.
+2. **AI-capex/chip (MU) — observation only, not actionable.** Anthropic's
+   reported 14x YoY Q2 revenue jump drove chip-stock strength in recent
+   sessions (Micron +4% on the report). No fresh same-day catalyst today,
+   no confluence check — a momentum note, not a dated setup.
+3. **No idiosyncratic single-name setup identified.** No gappers scan is
+   part of this routine (separate cron); nothing else surfaced a dated,
+   company-specific catalyst for a name not already covered above.
+
+### Risk Factors
+- **Multi-decade-high bond yields** (30Y highest since June 2007, 10Y
+  ~4.7%) — the dominant cross-asset pressure on equities, expected to
+  keep a lid on gains into today's open.
+- **Hawkish Fed repricing** — Sept cut odds down to ~30% from ~50% a week
+  ago, some pricing now points to a December hike instead; FOMC July
+  minutes (3 dissenters favored a hike) due today could reinforce this.
+- **Unresolved Iran/Hormuz risk, 4th straight oil up-session** — two-
+  sided: further escalation extends the energy/refiner rally, a
+  de-escalation reverses it fast. Same non-actionable overhang flagged
+  since Aug 11.
+- **VIX/skew divergence** — headline VIX near 52wk lows (15.76) while
+  Cboe flags SPX skew at the 99th percentile — tail-risk hedging demand
+  elevated despite a calm-looking headline number; worth monitoring for
+  a violent VIX catch-up move.
+- **Confluence tooling unavailable this run** (`tradingview-data` MCP not
+  loaded) — no RSI/VWAP/200-SMA/insider check possible for either idea
+  above.
+- **Apify query drift** — the literal `S&P 500 futures` and `sector
+  momentum` search queries returned unrelated content (same failure mode
+  as Aug 18's catalyst query); worked around via a rephrased tape query
+  and a direct CNBC Daily Open fetch, but flagging in case it masks
+  something on a future run where no workaround is tried.
+- **Baseline mismatch** — equity still $100,000 vs. the ~$10,000
+  documented starting capital, unresolved 35th straight session.
+
+### Decision
+**HOLD — no trades.** Multi-decade-high bond yields and a hawkish Fed
+repricing (Sept cut odds down to ~30%, FOMC minutes due today) are the
+dominant cross-asset pressure into the open; the one clean catalyst
+(Brent's 4th straight up-session on Hormuz risk) is two-sided and
+unresolved, same as every session since Aug 11. No single-name idea
+clears the strategy's documented-catalyst-plus-confluence bar, and
+confluence tooling was unavailable this run regardless. Zero positions,
+zero orders — patience over activity. Weekly trade count unchanged: 0/3
+(week of Aug 17).
