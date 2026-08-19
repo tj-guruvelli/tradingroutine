@@ -6567,3 +6567,18 @@ tanker sector. Deep-dive cap: 5 (both hits got the deep dive).
   under a long-bias-only strategy (200-SMA filter, no shorting) with no
   documented catalyst clearing the Confluence rule. Research only, no
   trade.
+
+## 2026-08-19 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 1 grade-B hit.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| ZIM | B | Momentum confluence | daily swing | RSI 63.79, ADX 20.9, EMA9 $27.12 > EMA21 $26.24, px $27.35 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
