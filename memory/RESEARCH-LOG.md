@@ -6582,3 +6582,16 @@ bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 1 grade-B hit.**
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+### Setup Scan (18:38 ET, cloud)
+Full-universe scan (60 tickers checked, same source/method as 16:38 run).
+**0 grade-A hits, 1 grade-B hit** — identical hit to the 16:38 run (same
+ticker, same setup, unchanged after-hours). 0 errors. No Telegram/ClickUp
+notify sent per routine rule (0 grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| ZIM | B | Momentum confluence | daily swing | RSI 63.79, ADX 20.9, EMA9 $27.12 > EMA21 $26.24, px $27.35 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
