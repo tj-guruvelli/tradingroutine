@@ -1,23 +1,34 @@
 {
-  "scanned_at": "2026-08-19T13:20:07Z",
+  "scanned_at": "2026-08-19T15:15:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "ZIM",
-      "price": 26.90,
-      "gap_pct": -5.63,
-      "premarket_volume": 139163,
-      "catalyst": "ZIM reported Q2 2026 results before the open (revenue $1.78B +9% YoY, net income $64M vs $24M) but shares gapped down as the merger-arb spread widened ahead of the pending $35/share Hapag-Lloyd buyout.",
-      "headlines": [
-        "ZIM Reports Strong Results for the Second Quarter of 2026, Benefiting from its Leading Transpacific Position, Agile Commercial Approach and Efficient Cost Structure",
-        "ZIM's $35 Buyout: An Arbitrage Play With a Solid Floor"
-      ],
-      "catalyst_detail": "ZIM released Q2 2026 results this morning before market open (no conference call, per standing practice while the merger is pending). Revenue was $1.78B (+9% YoY), net income rose to $64M from $24M, adjusted EBITDA +4% to $491M on higher freight rates and 3% volume growth to 922K TEUs. Full-year 2026 guidance held at adjusted EBITDA $2.0-2.4B / adjusted EBIT $700M-$1.1B. The company reiterated the pending $35.00/share all-cash acquisition by Hapag-Lloyd, shareholder-approved July 28, targeted to close Q4 2026 subject to regulatory approval (Israeli Golden Share carve-out into a new 'New ZIM' entity already structured).",
-      "why": "Merger-arb dynamics dominate ZIM's price action, not fundamentals -- the deal is a fixed $35 cash price, so the trading price reflects a deal-completion-probability/timing discount rather than earnings momentum. At $26.90 vs the $35 deal price, the spread (~30%) is unusually wide for a deal targeted to close in ~4-5 months, suggesting the print (despite the EBITDA beat) read as a reason to discount closing timeline/regulatory risk rather than a reason to buy the operating story.",
-      "impact": "Premarket volume (139K) is modest for an earnings-day print, so the -5.6% gap looks more like an arb-spread re-rating than a liquidity-driven overreaction, but with a hard $35 cash floor pending regulatory approval this is not a 'buy the dip' momentum setup. No sector-wide read-through -- other shipping names (HAFN, BWLP, TRMD, CMBT) are not on our data as similarly gapping, confirming this is deal-specific, not a freight-rate/sector event.",
-      "horizon": "SHORT_TERM -- the widening spread is a market judgment on deal-close probability/timing (targeted Q4 2026), not a fresh momentum or sector-rotation thesis; doesn't fit TRADING-STRATEGY.md's structural/swing-hold criteria since there's no clean technical stop (the trade is really a binary bet on deal completion, not price action).",
-      "opportunity_cost": "Zero open positions and this is the only gapper today, so it displaces nothing on today's list. Per hard caps (max 6 positions, max 3 new trades/week, 20% cap, min 2:1 R:R), a merger-arb earnings-gap trade doesn't cleanly fit our momentum/swing strategy -- no sane technical stop distance exists since the thesis is deal-close probability, not chart structure, so it likely can't clear the 2:1 R:R bar at a defensible stop. Research only; not recommending a specific size."
+      "symbol": "TRMD",
+      "price": 28.93,
+      "gap_pct": -6.84,
+      "premarket_volume": 8224,
+      "catalyst": "No company-specific news found for today; TORM (product tanker) trades down alongside sector peer BWLP, pointing to a sector-wide pullback rather than an idiosyncratic event.",
+      "headlines": [],
+      "catalyst_detail": "No fresh company-specific headline located (Apify RAG search and Benzinga fallback both returned only stale prior-week pricing/analyst pages, not a same-day catalyst). TORM's own investor-relations page still shows Aug 14 pricing data, not today's session. The move coincides with a similar-magnitude decline in peer BW LPG (BWLP), both LPG/product-tanker names, on the same session.",
+      "why": "No fixed-income/earnings/M&A catalyst identified — most consistent explanation is sector-wide softness in tanker/shipping freight-rate sentiment tied to crude-oil price swings (oil move affects both crude-tanker economics and refined-product shipping demand), not a company-specific print.",
+      "impact": "Volume on this print (8,224 shares vs TORM's typical daily volume near 490K per investor-relations data) is far below normal turnover, so this reads as thin, low-conviction tape rather than a heavy-volume repricing — a one-session move likely to mean-revert, not a durable break. Sector-wide read-through: BWLP down a similar magnitude same session, both product-tanker names.",
+      "horizon": "SHORT_TERM -- no structural catalyst identified and volume is too thin to support a durable thesis; expect fade/no follow-through absent a confirmed news item.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used, so this displaces nothing on the board. Not actionable regardless: this is a downside gap and TRADING-STRATEGY.md's 200-SMA rule is long-bias only (no short entries), and no catalyst is documented per the Confluence rule (no entry without ≥2 indicators + 1 documented catalyst) -- research only, no trade."
+    },
+    {
+      "rank": 2,
+      "symbol": "BWLP",
+      "price": 22.01,
+      "gap_pct": -6.78,
+      "premarket_volume": 9303,
+      "catalyst": "No company-specific news found for today; a Perplexity Finance snippet attributes a recent BWLP pullback to falling oil prices (WTI/Brent) after eased US-Iran tensions, consistent with a sector-wide LPG/tanker move rather than single-name news.",
+      "headlines": [],
+      "catalyst_detail": "No same-day company-specific headline located (Apify RAG search and Benzinga fallback returned only aggregator/analyst pages). A dated Perplexity Finance snippet notes BW LPG shares falling roughly 3.5% as oil prices tumbled 7-9% on US-Iran de-escalation headlines -- directionally consistent with today's move but not confirmed as today's specific driver. MarketBeat's BWLP news feed shows a Wall Street Zen upgrade to Buy (Aug 8) and a 54.1% short-interest decline in July, neither of which explains a down move.",
+      "why": "Best available explanation is macro/sector: softer crude pricing pressures LPG shipping economics and freight-rate sentiment across the tanker complex, not a company-specific event. Peer TORM (TRMD) down a similar magnitude same session reinforces a sector read rather than single-name news.",
+      "impact": "Volume (9,303 shares) is thin relative to BWLP's typical turnover, so this looks like a low-conviction, thin-tape move rather than a heavy-volume repricing -- likely to mean-revert absent a confirmed catalyst. Sector-wide read-through: TRMD down a comparable amount same session.",
+      "horizon": "SHORT_TERM -- no structural, company-specific catalyst identified; a macro/oil-driven wobble across tankers typically fades once crude stabilizes.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used, so this displaces nothing on the board. Not actionable regardless: downside gap under a long-bias-only strategy (200-SMA filter, no shorting) with no documented catalyst clearing the Confluence rule -- research only, no trade."
     }
   ]
 }

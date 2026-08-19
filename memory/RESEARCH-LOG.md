@@ -6506,3 +6506,64 @@ got the deep dive).
   earnings-gap trade doesn't cleanly fit our momentum/swing strategy —
   no sane technical stop distance exists, so it likely can't clear the
   2:1 R:R bar at a defensible stop. Research only; no size recommended.
+
+### Gappers (auto-scan 11:15 ET, cloud, third run)
+Full watchlist (~60 tickers) rescanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3, `premarket_volume` field not populated by
+Alpaca snapshot so no volume filter applied). ZIM no longer clears the 5%
+threshold this run. 2 symbols cleared, both downside gaps in the product-
+tanker sector. Deep-dive cap: 5 (both hits got the deep dive).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | $28.93 | -6.84% | 8,224 | No company-specific news found; down alongside sector peer BWLP — sector-wide read, not idiosyncratic |
+| 2 | BWLP | $22.01 | -6.78% | 9,303 | No company-specific news found; dated Perplexity Finance snippet ties a prior BWLP pullback to falling oil prices — sector-wide read, not idiosyncratic |
+
+#### Deep dive: TRMD $28.93 -6.84%
+- Catalyst: No fresh company-specific headline located (Apify RAG search
+  and Benzinga fallback — Benzinga 403'd, so used Apify only — both
+  returned only stale prior-week pricing/analyst pages, not a same-day
+  catalyst). TORM's own investor-relations page still shows Aug 14
+  pricing, not today's session. Move coincides with a similar-magnitude
+  decline in peer BW LPG (BWLP), both LPG/product-tanker names, same
+  session.
+- Why: No earnings/M&A/guidance catalyst identified — most consistent
+  explanation is sector-wide softness in tanker/shipping freight-rate
+  sentiment tied to crude-oil price swings, not a company-specific print.
+- Impact: Volume on this print (8,224 shares vs TORM's typical daily
+  volume near 490K per its own investor-relations data) is far below
+  normal turnover — thin, low-conviction tape, not a heavy-volume
+  repricing; likely to fade absent a confirmed news item. Sector-wide
+  read-through: BWLP down a similar magnitude same session.
+- Horizon: SHORT_TERM — no structural catalyst identified and volume is
+  too thin to support a durable thesis.
+- Opportunity cost: 0 open positions and 0/3 weekly trades used, so this
+  displaces nothing on the board. Not actionable regardless: downside gap
+  under a long-bias-only strategy (200-SMA filter, no shorting) with no
+  documented catalyst clearing the Confluence rule. Research only, no
+  trade.
+
+#### Deep dive: BWLP $22.01 -6.78%
+- Catalyst: No same-day company-specific headline located (Apify RAG
+  search and Benzinga fallback — Benzinga 403'd, so used Apify only). A
+  dated Perplexity Finance snippet notes BW LPG shares falling ~3.5% as
+  oil prices tumbled 7-9% on US-Iran de-escalation headlines — directionally
+  consistent but not confirmed as today's specific driver. MarketBeat's
+  BWLP feed shows only a Wall Street Zen upgrade to Buy (Aug 8) and a
+  short-interest decline in July — neither explains a down move.
+- Why: Best available explanation is macro/sector — softer crude pricing
+  pressures LPG shipping economics and freight-rate sentiment across the
+  tanker complex, not a company-specific event. Peer TRMD down a
+  comparable amount same session reinforces a sector read.
+- Impact: Volume (9,303 shares) is thin relative to BWLP's typical
+  turnover — low-conviction, thin-tape move, likely to mean-revert absent
+  a confirmed catalyst. Sector-wide read-through: TRMD down a comparable
+  amount same session.
+- Horizon: SHORT_TERM — no structural, company-specific catalyst
+  identified; macro/oil-driven tanker wobbles typically fade once crude
+  stabilizes.
+- Opportunity cost: 0 open positions and 0/3 weekly trades used, so this
+  displaces nothing on the board. Not actionable regardless: downside gap
+  under a long-bias-only strategy (200-SMA filter, no shorting) with no
+  documented catalyst clearing the Confluence rule. Research only, no
+  trade.
