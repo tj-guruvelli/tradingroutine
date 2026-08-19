@@ -6506,3 +6506,108 @@ got the deep dive).
   earnings-gap trade doesn't cleanly fit our momentum/swing strategy —
   no sane technical stop distance exists, so it likely can't clear the
   2:1 R:R bar at a defensible stop. Research only; no size recommended.
+
+### Gappers (auto-scan 10:22 ET, cloud)
+Full watchlist (~60 tickers) rescanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3). 4 symbols cleared the 5% gap threshold — a
+big shift from the two zero/one-hit scans earlier today. Deep-dive cap: 5
+(all 4 got the deep dive; none dropped to quick-scan-only).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | KLIC | $92.45 | +7.86% | 5,457 | Continued rally off Q3 FY2026 earnings (rev $330.4M vs $148.4M YoY) and return to profitability |
+| 2 | LAKE | $12.97 | +7.77% | 632 | No same-day catalyst confirmed; next earnings call not until Sept 9 |
+| 3 | ZIM | $29.02 | +7.32% | 58,121 | Q2 2026 earnings released today; reversed from -5.6% (09:20 ET scan) to +7.3% intraday on the Hapag-Lloyd arb spread |
+| 4 | BW | $9.25 | +7.00% | 14,998 | No same-day catalyst confirmed; nearest real news is Aug 14 senior-notes redemption |
+
+Note: "Vol" above is last-completed-session full-day volume (Alpaca snapshot
+has no distinct premarket-volume field, per `scripts/gappers-alpaca.sh`'s own
+comment) — not intraday premarket volume. No filter applied on it.
+
+#### Deep dive: KLIC $92.45 +7.86%
+- Catalyst: Continued follow-through off KLIC's Q3 FY2026 print (reported
+  within the last ~1-2 weeks): net revenue $330.4M vs $148.4M YoY and
+  $242.6M in Q2 FY2026, a swing back to GAAP profitability. No news item
+  dated today was found — today's gap looks like momentum continuation,
+  not a fresh headline.
+- Why: Semis-equipment names are repricing on AI/advanced-packaging capex
+  tailwinds; the sharp revenue reacceleration plus a profitability
+  inflection is pulling in momentum buyers re-rating off a low base.
+- Impact: Volume data (5,457, last-session full-day figure, not true
+  premarket) is too thin a base to judge conviction. Sector read-through
+  worth checking against other watchlist semis/AI-infra names (AMKR,
+  SYNA, STM, CRWV, NBIS) before treating as KLIC-idiosyncratic — not
+  checked this run.
+- Horizon: LONG_TERM — earnings-driven profitability inflection is a
+  structural catalyst, not a one-day headline; worth a swing look if it
+  clears confluence on a later /trade check.
+- Opportunity cost: Zero open positions, displaces nothing. Strongest
+  fundamental story of today's 4 gappers — highest-priority candidate for
+  a confluence check against the week's 0/3 new-trade cap. Stop
+  distance/R:R not evaluated; research only.
+
+#### Deep dive: LAKE $12.97 +7.77%
+- Catalyst: No same-day catalyst found. Research surfaced only stale
+  support/resistance commentary (early-to-mid July) and confirmation that
+  the next earnings call is Sept 9 — three weeks out.
+- Why: Cannot confirm a news-driven mechanism. Likeliest explanation is
+  thin-float technical volatility — volume (632, last-session full-day
+  figure) is the thinnest of today's 4 names, so a small order can move
+  the print disproportionately.
+- Impact: Reads as a one-day (or intraday) headline-free spike, a strong
+  mean-revert candidate rather than a durable move. No sector-wide
+  read-through found.
+- Horizon: SHORT_TERM — no durable thesis identified; should not be
+  carried past the session absent a same-day news item surfacing later.
+- Opportunity cost: Zero open positions, displaces nothing. Weakest of
+  the 4 — no documented catalyst means it cannot clear the strategy's
+  catalyst-plus-confluence bar as-is.
+
+#### Deep dive: ZIM $29.02 +7.32%
+- Catalyst: Q2 2026 earnings released this morning as scheduled. Per this
+  morning's 09:20 ET scan (already logged today), ZIM was DOWN -5.63% as
+  the merger-arb spread on the pending $35.00/share all-cash Hapag-Lloyd
+  buyout widened despite an EBITDA/revenue beat. By this 10:22 ET scan
+  ZIM has reversed to +7.32% vs yesterday's close — a large same-day
+  round-trip, not a second fresh catalyst.
+- Why: Same mechanism as this morning — ZIM trades on deal-completion
+  probability/timing, not fundamentals, while the merger is pending. The
+  intraday reversal suggests the market re-priced the arb spread twice in
+  one session (likely profit-taking on the morning overreaction plus
+  dip-buying into the fixed $35 cash floor) — inference, not confirmed by
+  a second news item.
+- Impact: Volume (58,121, last-session full-day figure) is the highest of
+  today's 4 names but still not a true premarket figure. A same-day
+  double-digit-point swing argues for elevated event-day volatility, not
+  a clean momentum signal; the $35 cash floor caps upside to ~20% from
+  here regardless of direction.
+- Horizon: SHORT_TERM — unchanged from this morning's read: deal-timing
+  risk, not a momentum/sector-rotation thesis. No clean technical stop
+  exists since the thesis is deal completion, not chart structure.
+- Opportunity cost: Zero open positions, displaces nothing. Already
+  logged once today as research-only/no-size-recommended at 09:20 ET on
+  the same reasoning — this scan doesn't change that call.
+
+#### Deep dive: BW $9.25 +7.00%
+- Catalyst: No same-day catalyst confirmed. Research repeatedly surfaced
+  the unrelated UK company Babcock International Group plc instead of
+  NYSE:BW (Babcock & Wilcox Enterprises) — a name-collision risk worth
+  flagging. The only relevant dated news found was the Aug 14 redemption
+  of $61.4M in 6.50% Senior Notes and an Aug 11-dated note on a Q1
+  earnings/bookings beat — neither dated today.
+- Why: Cannot confirm a same-day mechanism. If the move continues last
+  week's deleveraging/earnings-beat story, it would read as reduced
+  balance-sheet risk plus operational momentum pulling in buyers.
+- Impact: Volume (14,998, last-session full-day figure) is moderate.
+  Data-quality flag: BW is not explicitly listed in memory/WATCHLIST.md —
+  it was almost certainly picked up by `scripts/gappers-alpaca.sh`'s
+  prose-parsing regex from the "(BW LPG)" parenthetical annotating BWLP
+  on the watchlist's shipping-sector line, not intentionally added. BW is
+  a real, valid NYSE ticker so the data itself is legitimate, but its
+  inclusion in the scan universe looks accidental and should be reviewed
+  (add explicitly to the watchlist or exclude from parsing).
+- Horizon: SHORT_TERM — no fresh structural catalyst confirmed today.
+- Opportunity cost: Zero open positions, displaces nothing. Given the
+  unconfirmed catalyst and the watchlist-inclusion data-quality flag,
+  this is not actionable research as-is — would need same-day news
+  confirmation before it's even eligible for a /trade check.

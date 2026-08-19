@@ -1,23 +1,74 @@
 {
-  "scanned_at": "2026-08-19T13:20:07Z",
+  "scanned_at": "2026-08-19T10:22:18-04:00",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "ZIM",
-      "price": 26.90,
-      "gap_pct": -5.63,
-      "premarket_volume": 139163,
-      "catalyst": "ZIM reported Q2 2026 results before the open (revenue $1.78B +9% YoY, net income $64M vs $24M) but shares gapped down as the merger-arb spread widened ahead of the pending $35/share Hapag-Lloyd buyout.",
+      "symbol": "KLIC",
+      "price": 92.45,
+      "gap_pct": 7.86,
+      "premarket_volume": 5457,
+      "catalyst": "Continued rally off Q3 FY2026 earnings (revenue $330.4M vs $148.4M YoY, $242.6M QoQ) and return to profitability.",
       "headlines": [
-        "ZIM Reports Strong Results for the Second Quarter of 2026, Benefiting from its Leading Transpacific Position, Agile Commercial Approach and Efficient Cost Structure",
-        "ZIM's $35 Buyout: An Arbitrage Play With a Solid Floor"
+        "Kulicke and Soffa Industries (KLIC) Is Up 5.7% After Return To Profitability",
+        "Kulicke & Soffa (NASDAQ: KLIC) reported fiscal Q3 2026 net revenue of $330.4 million"
       ],
-      "catalyst_detail": "ZIM released Q2 2026 results this morning before market open (no conference call, per standing practice while the merger is pending). Revenue was $1.78B (+9% YoY), net income rose to $64M from $24M, adjusted EBITDA +4% to $491M on higher freight rates and 3% volume growth to 922K TEUs. Full-year 2026 guidance held at adjusted EBITDA $2.0-2.4B / adjusted EBIT $700M-$1.1B. The company reiterated the pending $35.00/share all-cash acquisition by Hapag-Lloyd, shareholder-approved July 28, targeted to close Q4 2026 subject to regulatory approval (Israeli Golden Share carve-out into a new 'New ZIM' entity already structured).",
-      "why": "Merger-arb dynamics dominate ZIM's price action, not fundamentals -- the deal is a fixed $35 cash price, so the trading price reflects a deal-completion-probability/timing discount rather than earnings momentum. At $26.90 vs the $35 deal price, the spread (~30%) is unusually wide for a deal targeted to close in ~4-5 months, suggesting the print (despite the EBITDA beat) read as a reason to discount closing timeline/regulatory risk rather than a reason to buy the operating story.",
-      "impact": "Premarket volume (139K) is modest for an earnings-day print, so the -5.6% gap looks more like an arb-spread re-rating than a liquidity-driven overreaction, but with a hard $35 cash floor pending regulatory approval this is not a 'buy the dip' momentum setup. No sector-wide read-through -- other shipping names (HAFN, BWLP, TRMD, CMBT) are not on our data as similarly gapping, confirming this is deal-specific, not a freight-rate/sector event.",
-      "horizon": "SHORT_TERM -- the widening spread is a market judgment on deal-close probability/timing (targeted Q4 2026), not a fresh momentum or sector-rotation thesis; doesn't fit TRADING-STRATEGY.md's structural/swing-hold criteria since there's no clean technical stop (the trade is really a binary bet on deal completion, not price action).",
-      "opportunity_cost": "Zero open positions and this is the only gapper today, so it displaces nothing on today's list. Per hard caps (max 6 positions, max 3 new trades/week, 20% cap, min 2:1 R:R), a merger-arb earnings-gap trade doesn't cleanly fit our momentum/swing strategy -- no sane technical stop distance exists since the thesis is deal-close probability, not chart structure, so it likely can't clear the 2:1 R:R bar at a defensible stop. Research only; not recommending a specific size."
+      "catalyst_detail": "KLIC's Q3 FY2026 print (reported within the last ~1-2 weeks) showed net revenue of $330.4M, up from $148.4M a year ago and $242.6M in Q2 FY2026 -- a return to GAAP profitability after prior-year losses. Today's +7.86% gap reads as continued follow-through momentum on that report rather than a fresh same-day headline; no new news item dated today was found in research.",
+      "why": "Semiconductor equipment names are repricing on AI/advanced-packaging capex tailwinds; KLIC's sequential and YoY revenue reacceleration plus a swing to profitability is pulling in momentum buyers re-rating the stock off a low base.",
+      "impact": "Volume field (5,457, last-completed-session full-day volume per script limitation, not true premarket volume) is too small a base to judge conviction from this data alone. Sector read-through: watchlist carries other semis-equipment/AI-infra names (AMKR, SYNA, STM, CRWV, NBIS) -- worth checking for sympathy moves before treating this as KLIC-idiosyncratic.",
+      "horizon": "LONG_TERM -- the earnings-driven profitability inflection is a structural catalyst (not a one-day headline), and semis-equipment sits in the Early/Late-cycle favored-sector zone per TRADING-STRATEGY.md depending on where we are in the cycle; worth a multi-day/week swing look if it clears confluence on a later /trade check.",
+      "opportunity_cost": "Zero open positions, so this displaces nothing today. Against the week's 0/3 new-trade cap, KLIC is the strongest fundamental story of today's 4 gappers (real earnings inflection vs. BW/LAKE's unclear catalysts and ZIM's arb-driven whipsaw) -- highest-priority candidate for a confluence check if only one slot is used this week. Stop distance/R:R not evaluated here; research only."
+    },
+    {
+      "rank": 2,
+      "symbol": "LAKE",
+      "price": 12.97,
+      "gap_pct": 7.77,
+      "premarket_volume": 632,
+      "catalyst": "No same-day catalyst confirmed in research; next earnings call is Sept 9 (future), not today.",
+      "headlines": [
+        "Lakeland Industries (LAKE) Advances 1.35% to $12.03 -- upcoming quarterly results flagged as a potential catalyst (Aug 7 article)",
+        "Lakeland Industries IR: Fiscal Q2 2026 conference call scheduled for September 9"
+      ],
+      "catalyst_detail": "Research turned up only stale technical-level commentary (support/resistance notes from early-to-mid July) and a forward-looking earnings-call date of September 9 -- three weeks out. No dated news item explains today's +7.77% move. Volume (632, last-session full-day figure per script's own limitation) is the thinnest of today's 4 gappers, consistent with a low-liquidity name where a small order can move the print disproportionately.",
+      "why": "Without a confirmed catalyst, the likeliest mechanism is thin-float technical volatility rather than a fundamental repricing -- cannot confirm a news-driven mechanism from available sources.",
+      "impact": "Given the very low volume base and absence of a real catalyst, this reads as a one-day (or even intraday) headline-free spike that is a strong mean-revert candidate, not a durable move. No sector-wide read-through found.",
+      "horizon": "SHORT_TERM -- no durable thesis identified; a move without a confirmed catalyst on thin volume should not be carried past the session absent a same-day news item surfacing later.",
+      "opportunity_cost": "Zero open positions, displaces nothing today. Weakest candidate of the 4 -- no documented catalyst means it cannot clear the strategy's catalyst-plus-confluence bar as-is; would need a same-day news item to surface before it's even eligible for a /trade check."
+    },
+    {
+      "rank": 3,
+      "symbol": "ZIM",
+      "price": 29.015,
+      "gap_pct": 7.32,
+      "premarket_volume": 58121,
+      "catalyst": "Q2 2026 earnings released today (Aug 19) before the open; stock reversed sharply intraday around the pending $35/sh Hapag-Lloyd buyout arb spread.",
+      "headlines": [
+        "ZIM to Release Second Quarter 2026 Results on Wednesday, August 19, 2026 (before U.S. markets open)",
+        "ZIM shares closed up nearly 2%, holding near the pending $35/share Hapag-Lloyd all-cash buyout price"
+      ],
+      "catalyst_detail": "ZIM reported Q2 2026 results this morning as previously scheduled. Per this morning's 08:17/09:20 ET gappers scans (already logged today), ZIM was DOWN -5.63% at 09:20 ET as the merger-arb spread on the pending $35.00/share all-cash Hapag-Lloyd buyout widened despite an EBITDA/revenue beat. By this 10:22 ET scan, ZIM has reversed to +7.32% versus yesterday's close -- a large same-day round-trip, not a fresh catalyst.",
+      "why": "Same mechanism flagged this morning: ZIM trades on deal-completion-probability/timing, not fundamentals, while the merger is pending. Today's intraday reversal from -5.6% to +7.3% suggests the market re-priced the arb spread twice in one session -- likely profit-taking on the morning's overreaction plus dip-buying into the fixed $35 cash floor, but this is inference, not a confirmed second catalyst.",
+      "impact": "Volume (58,121, last-session full-day figure) is the highest of today's 4 names but still a daily-not-premarket figure per the script's known limitation. A same-day double-digit-point swing in an arb name argues for elevated event-day volatility, not a clean momentum signal -- the $35 cash floor caps upside to about +20% from here regardless of direction.",
+      "horizon": "SHORT_TERM -- unchanged from this morning's read: deal-completion timing risk, not a momentum or sector-rotation thesis. No clean technical stop exists since the underlying thesis is deal completion.",
+      "opportunity_cost": "Zero open positions, displaces nothing today. Already logged once today as research-only/no-size-recommended at 09:20 ET on the same reasoning -- this scan does not change that call; still doesn't cleanly fit the momentum/swing strategy's stop-distance requirements."
+    },
+    {
+      "rank": 4,
+      "symbol": "BW",
+      "price": 9.245,
+      "gap_pct": 7.0,
+      "premarket_volume": 14998,
+      "catalyst": "No same-day catalyst confirmed; nearest real news is the Aug 14 redemption of $61.4M in 6.50% Senior Notes (deleveraging).",
+      "headlines": [
+        "Babcock & Wilcox Enterprises completed redemption of the entire $61.4 million of its 6.50% Senior Notes due 2026 (Aug 14)",
+        "Babcock & Wilcox shares surged over 5% following a Q1 beat and bookings quarter (dated ~Aug 11)"
+      ],
+      "catalyst_detail": "Research for 'BW' kept returning results for the unrelated UK company Babcock International Group plc -- a name-collision risk worth flagging. The only relevant, dated BW (NYSE, Babcock & Wilcox Enterprises) news found was the Aug 14 debt redemption and an Aug 11-dated note on a Q1 earnings/bookings beat. Neither is dated today; no confirmed same-day trigger for the +7.0% move.",
+      "why": "Cannot confirm a same-day mechanism. If the move is a continuation of the deleveraging/earnings-beat story from the prior week, it would read as reduced balance-sheet risk plus operational momentum pulling in buyers.",
+      "impact": "Volume (14,998, last-session full-day figure) is moderate. Data-quality flag: BW is not in memory/WATCHLIST.md's explicit ticker list -- it was almost certainly picked up by scripts/gappers-alpaca.sh's prose-parsing regex from the '(BW LPG)' parenthetical annotating BWLP on the watchlist's shipping-sector line, not intentionally added. BW itself is a real, valid NYSE ticker so the data returned is legitimate, but its inclusion in the scan universe looks accidental and should be reviewed (add explicitly or exclude).",
+      "horizon": "SHORT_TERM -- no fresh structural catalyst confirmed today; treat any position idea as unconfirmed until a same-day news item is found.",
+      "opportunity_cost": "Zero open positions, displaces nothing today. Given the unconfirmed catalyst and the watchlist-inclusion data-quality flag, this is not actionable research as-is -- would need same-day news confirmation before it's even eligible for a /trade check."
     }
   ]
 }
