@@ -6708,3 +6708,188 @@ OPEN -1.95%, AMPX -0.47% (informational only, all under the 5% cap). Most
 watchlist names show no fresh premarket trade/quote timestamp yet this
 early (basic/IEX data feed limitation, not a scan error). No quick-scan
 table, no deep-dive, no Telegram alert per routine rule (hits=0, no error).
+
+### Gappers (auto-scan 10:16 ET, cloud)
+
+Full watchlist (69 tickers) scanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3). **4 hits.** Deep-dive cap is top 5 by |gap%|;
+only 4 names cleared the threshold, so all 4 got the full deep dive and no
+ticker was dropped to quick-scan-only.
+
+**Two data caveats on this run — both material:**
+
+1. **Raw script output was wrong at this hour and was corrected.**
+   `gappers-alpaca.sh` derives `prev_close` from `dailyBar.c`, which is the
+   right baseline pre-market but becomes *today's in-progress bar* once the
+   session opens. Firing at 10:16 ET, the raw script returned only 2 rows and
+   **both were artifacts of wide single-venue IEX quotes**: `BW -7.21%`
+   (quoted 8.83 x 10.17, a 15% spread, while its last trade was 8.95 — i.e.
+   -1.76%, not a gapper) and `UMAC +6.32%` (quoted 26.19 x 30.00 while its
+   last trade was 26.35 — i.e. **-6.84%, down, not up**). Rows below are
+   recomputed as `latestTrade` vs `prevDailyBar.c`.
+2. **IEX feed only.** `feed=sip` returns HTTP 403 on this account, so every
+   volume figure is IEX-only (roughly 1-3% of consolidated tape). The
+   routine's `premarket_volume >= 50000` gate was therefore **not** applied as
+   an absolute filter — an IEX count is not comparable to a consolidated
+   threshold and would have wrongly excluded every name. Liquidity is judged
+   relatively instead.
+
+Also excluded: **QMMM** (+17.64%) and **PTNM** (-16.04%) — both screened above
+threshold but their latest daily bars are dated 2025-09-26 and 2025-10-03,
+i.e. stale/dead listings, not real gappers. **WLDS** (-6.02%, $2.50) fails the
+price>=$3 rule.
+
+Because this fired at 10:16 ET rather than pre-market, 3 of 4 rows are
+**intraday breakdowns, not opening gaps**: UMAC opened 27.99 vs 28.285 (-1.0%)
+then sold to 26.10; ONDS opened 8.89 vs 8.915 (-0.3%) then sold to 8.33. Only
+AVAV (167.11 vs 172.775, -3.3%) and BMNR (21.41 vs 20.23, +5.8%) gapped at the
+bell.
+
+| Rank | Sym | $Price | Gap% | Vol (IEX) | Catalyst |
+| ---- | --- | ------ | ---- | --------- | -------- |
+| 1 | UMAC | 26.35 | -6.84 | 11,698 | No company news; giving back post-Q2 run with the whole drone complex |
+| 2 | ONDS | 8.365 | -6.17 | 329,084 | No company news; sector de-risking despite record Q2 and raised FY26 guide |
+| 3 | BMNR | 21.375 | +5.66 | 955,852 | ETH proxy rallying with ETH (ETHA +8.42%); 5.82M ETH treasury + $4B buyback |
+| 4 | AVAV | 163.80 | -5.19 | 3,633 | Continued derating into earnings — SCAR-program litigation, restatements, $89M impairment |
+
+**Tape context:** SPY -0.43%, QQQ -0.54%, IWM -1.23%, XLI -0.37%,
+**ITA -1.03%**, ETHA +8.42%, IBIT +4.49%.
+
+**Dominant finding — correlated drone-sector unwind, not four separate
+stories.** Nine watchlist drone/defense/space names are red in unison with no
+single-name news explaining any of them individually:
+
+| UMAC | ONDS | AVAV | RCAT | SATL | RR | KTOS | LUNR | RKLB |
+| ---- | ---- | ---- | ---- | ---- | -- | ---- | ---- | ---- |
+| -6.84 | -6.17 | -5.19 | -4.75 | -4.52 | -4.27 | -3.68 | -3.51 | -2.70 |
+
+ITA is only -1.03%, so this is a **small-cap drone momentum unwind, not a
+broad defense selloff** — consistent with IWM -1.23% leading the tape down.
+Under the correlation gate (block a new entry correlating >0.75 with 2+ open
+positions) and the "exit a sector after 2 failed trades" rule, this argues
+against **any** long in this complex today, however attractive a single chart
+looks. Three of today's four rows are the same trade in three tickers.
+
+#### Deep dive: UMAC $26.35 -6.84%
+- **Catalyst:** No dated company-specific news. Last real event was the Aug 6
+  Q2 FY2026 report: record revenue $16.7M on military demand, cash $229.6M,
+  headcount doubled to 240, gross margin 34.7% — but GAAP EPS -$0.16 vs +$0.08
+  expected. Management guided Q3 revenue to pause sequentially while capacity
+  investments come online, then ramp in Q4 against the Department of War Drone
+  Dominance program. Stock ran ~23% the week after that print and is +100% YTD.
+- **Why:** Momentum unwind, not news. A crowded, retail-heavy small cap that
+  doubled YTD is first sold when the sector bid disappears, and the guided Q3
+  pause hands holders a ready-made reason to take profits into weakness.
+- **Impact:** Sector flush, not a thesis break — but not one to catch. IEX
+  volume 11,698 vs 118,018 prior session: the decline is on *thin*
+  participation, which cuts both ways (no heavy institutional distribution,
+  but also no visible absorption or capitulation to mark a bottom).
+- **Horizon:** SHORT_TERM — headline-free give-back that should resolve within
+  days; the Drone Dominance story is long-term but nothing about it changed today.
+- **Opportunity cost:** Account is flat ($100,000, zero positions, 0/3 weekly
+  trades), so nothing to displace. Real cost is the weekly slot plus the
+  sector-correlation budget shared with ONDS and AVAV. Fails before sizing:
+  this is a long-only momentum strategy and this is a -6.8% breakdown with no
+  support reclaimed — no entry trigger, and no stop that is both 3%+ away
+  (never-within-3% rule) and tight enough for 2:1 against an undefined target.
+  **Not actionable.**
+
+#### Deep dive: ONDS $8.365 -6.17%
+- **Catalyst:** Nothing dated to today. Standing fundamentals are unusually
+  strong: Q2 2026 revenue $83.8M vs $6.3M y/y, FY26 guidance raised to
+  $525-550M, platform-level profitability guided for Q4 2026. Nine analysts at
+  Strong Buy, avg PT $19.42 (>2x current); Oppenheimer lifted PT to $18 from
+  $16. Opened essentially flat (8.89 vs 8.915) then sold through the morning to
+  8.33 — an intraday breakdown that began *after* the bell, not a news gap.
+- **Why:** Correlated sector de-risking overwhelming company fundamentals.
+  ONDS trades as a high-beta drone name first; with IWM -1.23% and the group
+  down 3-7%, group beta is setting the price. The absence of any company-specific
+  negative is exactly what makes it a flush rather than a thesis break.
+- **Impact:** Of the four, this is where the selloff most clearly contradicts
+  the fundamentals — the best pullback candidate, but not today. Volume is
+  heaviest of the decliners (329,084 IEX vs low tens of thousands), so real
+  supply is being distributed, and a name giving up 6% on rising volume with no
+  news usually has more to go before stabilizing.
+- **Horizon:** LONG_TERM — the underlying catalyst is structural (a guidance
+  reset from $6.3M to $83.8M quarterly revenue with Q4 profitability guided),
+  so a *stabilized* pullback is a legitimate multi-week swing candidate once
+  the sector stops falling, subject to a later Confluence check.
+- **Opportunity cost:** Nothing to displace; cost is the weekly slot and the
+  drone-correlation budget. Of today's four this has the best claim on that
+  slot and could plausibly clear 2:1 — a stop under today's 8.30 low sits ~3.5%
+  below spot (clears the 3% minimum) and the analyst target zone gives >2:1 on
+  a reasonable first target. **But the entry trigger does not exist yet** — the
+  strategy buys strength, not a knife mid-descent. Correct action: carry ONDS
+  as the sector's stabilization candidate, re-check on a reclaim. Do not buy today.
+
+#### Deep dive: BMNR $21.375 +5.66%
+- **Catalyst:** Only green name on the list, entirely explained by its
+  underlying asset — ETH is sharply higher (ETHA +8.42%, IBIT +4.49%). BMNR
+  holds 5,815,164 ETH (~4.8% of total ETH supply) plus 210 BTC, total crypto +
+  cash ~$11.4B, with >5.06M ETH staked and ~$287M projected annualized staking
+  yield at full scale. Over 20.8M shares repurchased since July 1 under a $4B
+  authorization; recently added to the Russell 1000. None of that is *today's*
+  news — today's news is the ETH price.
+- **Why:** Pure NAV pass-through on a crypto-treasury vehicle. The share price
+  is a leveraged claim on an ETH balance sheet, so an 8% ETH move mechanically
+  re-rates the equity, amplified by buyback share-count shrinkage and
+  post-Russell index demand.
+- **Impact:** **The critical tell is that BMNR is *underperforming* its own
+  driver: +5.66% vs ETHA +8.42%.** A NAV proxy capturing only two-thirds of its
+  asset's move on a strong day is seeing its premium compress — buying here
+  means paying for ETH exposure with a decaying wrapper on top. Volume is real
+  (955,852 IEX, highest on the list) so the move is liquid and tradable, but
+  read-through is to crypto only; it shares no driver with the nine red drone
+  names and is not a hedge against them, just an unrelated bet.
+- **Horizon:** SHORT_TERM — a directional ETH bet dressed as an equity;
+  single-day crypto moves this size mean-revert routinely, and the premium
+  compression vs ETHA argues the equity is the worse expression of that bet.
+- **Opportunity cost:** No holding to displace; cost is one of three weekly
+  slots spent on crypto beta rather than the equity setups this strategy is
+  built for. R:R is technically achievable but poor in context: the 3% minimum
+  stop pushes a stop to ~20.70, *below* today's 20.735 low, and 2:1 from 21.375
+  then needs ~22.65 — *above* today's 21.76 high. The trade only works if the
+  stock makes a fresh high immediately, i.e. chasing an already-extended
+  intraday move. Against ONDS, the weaker use of the same slot.
+
+#### Deep dive: AVAV $163.80 -5.19%
+- **Catalyst:** The only name here that actually gapped at the open (172.775
+  close -> 167.11 open -> 162.77). No single new headline; a sustained derating
+  in which AVAV is the weakest link on a day the whole group sells. Standing
+  negatives are substantial: securities class actions alleging misleading
+  disclosures on competition and contract risk in the U.S. Space Force SCAR
+  program; terminated BADGER antenna contract; $89M goodwill impairment in the
+  space unit; restatements of prior earnings. FY2026 revenue +141% to $1.98B
+  but a $265.1M net loss and -$5.40 EPS, a 28% miss; stock -22% YTD. Earnings
+  approaching with analysts openly split (KeyCorp/Citi/William Blair bullish;
+  Citizens/Canaccord/Piper cutting).
+- **Why:** Confidence unwind ahead of a binary event. When a company has
+  restated earnings and is being sued over disclosure quality, the market
+  discounts the next print rather than anticipating it — so sector weakness
+  gets amplified here specifically, which is why AVAV is falling ~5x ITA.
+- **Impact:** Continuation of a genuine derating, not a spike to fade. Unlike
+  UMAC/ONDS, where fundamentals are intact and only the tape is weak, AVAV has
+  real accounting and litigation overhangs justifying a lower multiple, falling
+  into an earnings date that could extend the move either way. Read-through runs
+  the other way here: AVAV's weakness is arguably part of what is dragging
+  sentiment across the smaller drone names, rather than the reverse.
+  *(Volume 3,633 IEX is uninformative — AVAV is large and liquid; this reflects
+  IEX's small tape share, not low interest.)*
+- **Horizon:** SHORT_TERM — any bounce is a mechanical oversold reaction with
+  unresolved litigation and restatement overhangs underneath and an earnings
+  print approaching; the opposite of a durable structural catalyst.
+- **Opportunity cost:** Nothing to displace, but the clearest pass of the four
+  regardless of slots. Fails the entry checklist on *quality* before R:R
+  matters: restatements + active securities litigation + a pending earnings
+  date is un-underwritable for a swing hold, and the "exit a sector after 2
+  failed trades" discipline argues for reducing drone exposure today, not
+  adding the most damaged name in it. Even as a bounce trade, no stop survives
+  an earnings gap, so 2:1 is not honestly achievable.
+
+**Scan decision: NO TRADES.** Research-only routine (STEP 8) — no orders
+placed, no orders contemplated. Three of four rows are one correlated
+drone-sector unwind, and the fourth is an extended crypto proxy underperforming
+its own NAV driver. ONDS is the single name carried forward as a watch item
+pending stabilization and a Confluence check. Weekly trade count unchanged:
+0/3 (week of Aug 17). Account flat at $100,000 — baseline mismatch vs the
+~$10,000 documented starting capital persists (37th session).
