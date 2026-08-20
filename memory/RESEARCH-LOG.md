@@ -6708,3 +6708,11 @@ OPEN -1.95%, AMPX -0.47% (informational only, all under the 5% cap). Most
 watchlist names show no fresh premarket trade/quote timestamp yet this
 early (basic/IEX data feed limitation, not a scan error). No quick-scan
 table, no deep-dive, no Telegram alert per routine rule (hits=0, no error).
+
+### Gappers (auto-scan 09:17 ET, cloud, second run)
+Full watchlist (~60 tickers) rescanned via `scripts/gappers-alpaca.sh
+watchlist` (GAP_THRESHOLD=5.0, price>=$3). Zero symbols cleared the 5% gap
+threshold as of 09:17 ET, unchanged from the 08:17 run. Largest movers
+below threshold: RDW -2.10%, RKLB -1.87%, ONDS -1.68%, OPEN -1.67%, AMPX
+-0.47% (informational only, all under the 5% cap). No quick-scan table, no
+deep-dive, no Telegram alert per routine rule (hits=0, no error).
