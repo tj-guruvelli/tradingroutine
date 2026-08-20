@@ -6595,3 +6595,106 @@ notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-20 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser worked for oil (Brent) and VIX; the `S&P 500 futures`,
+`top catalysts`, `earnings today`, `economic calendar`, and `sector momentum`
+queries drifted off-topic again (Wikipedia "S" pages, JS-only calendar
+chrome, unrelated JPMorgan/Facebook results, or 0 hits) — same failure mode
+flagged Aug 18/19. Fell back to native WebSearch per routine rule for
+futures levels and today's earnings calendar. `tradingview-data` MCP not
+loaded this run — no RSI/VWAP/200-SMA/insider confluence checks.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — confirmed live via `alpaca.sh account`/
+  `positions`/`orders`. Same confirmed-live-vs-$10k-baseline mismatch
+  flagged 2026-07-27, unresolved 36th straight session, operator review
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 17).
+
+### Market Context (Apify RAG web browser + WebSearch fallback, Thu 8/20 ~7am ET)
+- **Oil — Brent jumps on new Iran sanctions escalation ("Operation Economic
+  Fury")**: Brent $93.88-93.91 (TradingEconomics/Markets Insider, +2.47-
+  2.50% daily, +38.78% YoY, highest since July 24). Driver: Trump announced
+  a sweeping new economic-sanctions package targeting Iran — cutting off
+  banks, businesses, shipping registries, cash transfers, and smuggling
+  networks from international channels — aimed at forcing negotiations
+  over the conflict, nuclear program, and Hormuz control. US still
+  blockading Iranian ports; UAE suspended economic ties with Iran after
+  accusing Tehran of missile strikes on its territory. This is an
+  escalation, not a continuation, of the Hormuz risk flagged since Aug 11 —
+  worth tracking closely, still two-sided (a negotiation breakthrough
+  unwinds the premium fast).
+- **VIX — ticked up modestly, still low**: 15.13 (Cboe, as of 11:01am UTC /
+  7am ET), +1.61% (+0.24 vs 14.89 prev close), open 14.91, day range so far
+  14.91-15.30, 52wk range 13.38-35.30. Still well off the 52wk high — no
+  fear spike despite the oil escalation.
+- **Futures — modestly green, crowd leaning bullish**: S&P 500 futures
+  +0.16%, Nasdaq 100 futures +0.42%, Dow futures +0.06%, Russell 2000
+  futures +0.24% (CNBC premarket, via WebSearch). Polymarket's "S&P 500 up
+  or down Aug 20" contract implies ~66% odds of a higher close. Traders
+  balancing a busy earnings/macro calendar against the Iran escalation
+  headline.
+- **Earnings today (before the bell)**: Walmart, Alibaba, Deere, Advance
+  Auto Parts, NetEase, Futu Holdings, Autohome, Daqo New Energy, ScanSource,
+  LSI Industries. After close: Ross Stores, Flowers Foods, OSI Systems.
+  None held, none on `memory/WATCHLIST.md` (checked WMT/DE/BABA/ROST
+  explicitly — no match). Walmart + Ross Stores + Deere same-day is a
+  retail/industrial read-through worth a glance in market-open but not a
+  Tier-1 catalyst for us today.
+- **Economic calendar**: no clean same-day US print extracted this run
+  (MarketWatch/BLS pages returned blocked/empty content, TradingEconomics
+  calendar returned only JS-chrome, no rendered event rows). No FOMC/CPI/
+  PPI/jobs release identified as due today from available sources — treat
+  as an open gap, not a confirmed "nothing scheduled."
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met —
+confluence tooling unavailable this run):
+1. **Energy/refiners (XLE, VLO, MPC, PSX) — watch only, not actionable.**
+   Catalyst: fresh Iran-sanctions escalation ("Operation Economic Fury")
+   pushed Brent to a 2.5%+ up day and its highest print since July 24. No
+   RSI/VWAP/200-SMA check run, no entry/stop/target set. Opposing risk: a
+   swift negotiation move would unwind the premium fast, same as every
+   prior log on this theme.
+2. **Retail earnings reaction (WMT, ROST) — observation only, not
+   actionable.** Same-day Walmart (BMO) and Ross Stores (AMC) prints could
+   move consumer-discretionary/staples sector sentiment, but neither is on
+   the watchlist and no confluence check was run — a note for context, not
+   a dated setup.
+3. **No idiosyncratic single-name setup identified.** No gappers scan is
+   part of this routine (separate cron); nothing else surfaced a dated,
+   company-specific catalyst for a name not already covered above.
+
+### Risk Factors
+- **Iran sanctions escalation ("Operation Economic Fury")** — the dominant
+  new headline risk; two-sided (further escalation extends the energy
+  rally and could pressure broader risk sentiment, a negotiation
+  breakthrough reverses the oil move fast). Directly follows the Hormuz
+  overhang flagged since Aug 11 — this is the sharpest single-day step-up
+  in that story yet.
+- **Confluence tooling unavailable this run** (`tradingview-data` MCP not
+  loaded) — no RSI/VWAP/200-SMA/insider check possible for either idea
+  above.
+- **Apify query drift, five of eight queries this run** — `S&P 500
+  futures`, `top catalysts`, `earnings today`, `economic calendar`, and
+  `sector momentum YTD` all returned off-topic or empty results (same
+  failure mode as Aug 18/19). Worked around futures + earnings via
+  WebSearch fallback; catalysts, econ calendar, and sector momentum remain
+  unfilled gaps this run — flagging in case a real print/catalyst is
+  hiding behind the search-engine drift.
+- **Baseline mismatch** — equity still $100,000 vs. the ~$10,000
+  documented starting capital, unresolved 36th straight session.
+
+### Decision
+**HOLD — no trades.** A fresh Iran-sanctions escalation is driving Brent to
+its highest print since July 24, but futures are still modestly green
+(S&P +0.16%) and VIX remains low (15.13) — no risk-off confirmation yet,
+just a two-sided geopolitical headline consistent with the unresolved
+Hormuz story flagged since Aug 11. No single-name idea clears the
+strategy's documented-catalyst-plus-confluence bar, and confluence tooling
+was unavailable this run regardless. Zero positions, zero orders —
+patience over activity. Weekly trade count unchanged: 0/3 (week of Aug 17).
