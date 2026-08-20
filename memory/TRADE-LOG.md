@@ -336,3 +336,10 @@ skipping Steps 3-7. 31 trading days since launch (Jul 9) with zero entries.
 Weekly trade count: 0/3 (week of Aug 17). Equity flat at $100,000 — still
 the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved
 37th straight session, operator review pending.
+
+### Aug 20 — EOD Snapshot (Day 31, Thursday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-Open call was HOLD: two-sided Iran-sanctions/Brent spike with no risk-off confirmation (VIX 15.13, S&P +0.16%), same-day WMT/ROST earnings and energy/refiners logged watch-only, no idiosyncratic single-name catalyst identified. Gappers auto-scan (11:14 ET) found 10 hits but flagged a deepening drone-sector unwind — no trades taken. 31 trading days since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of Aug 17). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 38th straight session, operator review pending.
