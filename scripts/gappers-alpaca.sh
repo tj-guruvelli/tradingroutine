@@ -82,32 +82,35 @@ today = os.environ["TODAY_UTC"]
 data = json.loads(os.environ["SNAPSHOT_JSON"])
 rows = []
 for sym, snap in data.items():
-    # Pre-market: today's session hasn't started, so Alpaca's "dailyBar" is
-    # still carrying the most recently COMPLETED session (i.e. yesterday's
-    # close) — that's the correct baseline for a premarket gap. "prevDailyBar"
-    # is one session further back and is stale for this purpose. Only fall
-    # back to prevDailyBar if dailyBar is missing outright (e.g. no trades
-    # in the most recent session).
+    # Baseline must be the last COMPLETED session. Alpaca's "dailyBar" carries
+    # yesterday's close pre-market but rolls over to today's own (partial) bar
+    # once the session is underway — and it does so mid-morning, not at 09:30.
+    # Measuring against today's own bar yields a near-zero or nonsense gap, so
+    # skip dailyBar whenever it is already stamped today and use prevDailyBar.
     daily = snap.get("dailyBar") or {}
     prev = snap.get("prevDailyBar") or {}
-    prev_close = daily.get("c") or prev.get("c") or 0.0
-    # Pick whichever of quote/trade is more recent, but only trust it if it's
-    # actually from today's session — thinly-traded names can carry Monday's
-    # closing quote/trade forward unchanged, which produces a fake "gap"
-    # against dailyBar (stale bid/ask spread noise, not a real move).
+    daily_is_today = str(daily.get("t", "")).startswith(today)
+    baseline_bar = prev if daily_is_today else daily
+    prev_close = baseline_bar.get("c") or prev.get("c") or 0.0
+    # Prefer the last actual trade. A quote mid is only a fallback for names
+    # with no print yet, and is rejected when the spread is wide — a stale or
+    # one-sided ask (e.g. bid 4.51 / ask 5.26 on a $5.23 stock) otherwise
+    # manufactures a multi-percent "gap" out of pure spread noise.
     quote = snap.get("latestQuote") or {}
     trade = snap.get("latestTrade") or {}
-    quote_px = (quote["ap"] + quote["bp"]) / 2.0 if quote.get("ap") and quote.get("bp") else None
+    bid, ask = quote.get("bp"), quote.get("ap")
+    quote_px = None
+    if bid and ask:
+        mid = (bid + ask) / 2.0
+        if (ask - bid) / mid <= 0.02:
+            quote_px = mid
     trade_px = trade.get("p")
-    candidates = []
-    if quote_px and str(quote.get("t", "")).startswith(today):
-        candidates.append((quote["t"], quote_px))
     if trade_px and str(trade.get("t", "")).startswith(today):
-        candidates.append((trade["t"], trade_px))
-    if not candidates:
-        continue  # no fresh premarket data for this symbol — skip, don't fake it
-    candidates.sort(key=lambda c: c[0])
-    current = candidates[-1][1]
+        current = trade_px
+    elif quote_px and str(quote.get("t", "")).startswith(today):
+        current = quote_px
+    else:
+        continue  # no fresh, trustworthy print for this symbol — skip, don't fake it
     if not prev_close: continue
     gap = (current - prev_close) / prev_close * 100.0
     if abs(gap) < thresh: continue
