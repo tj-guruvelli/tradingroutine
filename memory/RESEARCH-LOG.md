@@ -6698,3 +6698,13 @@ Hormuz story flagged since Aug 11. No single-name idea clears the
 strategy's documented-catalyst-plus-confluence bar, and confluence tooling
 was unavailable this run regardless. Zero positions, zero orders —
 patience over activity. Weekly trade count unchanged: 0/3 (week of Aug 17).
+
+### Gappers (auto-scan 08:17 ET, cloud)
+Full watchlist (~60 tickers) scanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0, price>=$3, premarket_volume field not populated by
+Alpaca snapshot so no volume filter applied). Zero symbols cleared the 5%
+gap threshold as of 08:17 ET. Largest movers below threshold: ONDS -2.13%,
+OPEN -1.95%, AMPX -0.47% (informational only, all under the 5% cap). Most
+watchlist names show no fresh premarket trade/quote timestamp yet this
+early (basic/IEX data feed limitation, not a scan error). No quick-scan
+table, no deep-dive, no Telegram alert per routine rule (hits=0, no error).
