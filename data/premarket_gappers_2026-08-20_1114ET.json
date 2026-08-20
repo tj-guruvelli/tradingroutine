@@ -1,0 +1,122 @@
+{
+  "scanned_at": "2026-08-20T15:14:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "UMAC",
+      "price": 25.74,
+      "gap_pct": -9.0,
+      "premarket_volume": 27449,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No dated company-specific catalyst for 2026-08-20; the StockTitan feed shows nothing after Aug 13 (Powerus S-4 effectiveness, $30M strategic equity investment). Background: UMAC spiked ~22% on Aug 13-14 on Trump's Section 232 proclamation imposing 100% tariffs on imported UAS over 25kg and key components, effective Sept 3 2026, then ran roughly +23% on the week to ~$27 by Monday. Today is that tariff-momentum trade unwinding into a risk-off tape as the Treasury-buyback rally faded, long-end yields reversed higher, Walmart guidance disappointed and oil rose on Iran tensions.",
+      "why": "UMAC is the highest-beta, lowest-revenue name in the NDAA-compliant drone-component basket, so it captured the largest share of the Section 232 tariff bid and gives back the most when the sector de-risks. With no fresh news to defend a ~$27 print, momentum longs from last week's +23% run took profits as speculative small caps sold off.",
+      "impact": "Reads as a multi-day spike unwind rather than a thesis break: the 100% tariff still takes effect Sept 3 and the company holds $229.6M cash on 687% YoY Q2 revenue growth. IEX volume (27,449) is uninformative on absolute level, but sector read-through is unambiguous, ONDS, AVAV, RCAT, KTOS, RDW and SATL are all down 5-8% together, which points at macro rotation rather than a single-name problem.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Displaces nothing, the book is 0 positions and $100,000 cash, so all six slots and all three weekly trades are open. The binding constraint is quality, not capacity: this is a falling knife with no dated catalyst, and TRADING-STRATEGY's Entry Checklist wants a specific catalyst plus 2-of-4 confluence, neither of which is present mid-unwind. A 2:1 R:R is not honestly achievable, any stop tight enough to respect the 7-10% band sits inside today's own 9% range and would be taken out by noise. Within today's list it also ranks behind ONDS on fundamentals, so it would be the wrong drone name to pick even if the sector were buyable."
+    },
+    {
+      "rank": 2,
+      "symbol": "ONDS",
+      "price": 8.22,
+      "gap_pct": -7.8,
+      "premarket_volume": 715796,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No dated catalyst for 2026-08-20; the feed ends Aug 18 with an agreement to acquire Aran Defense for ~$33M to expand Israeli manufacturing. Background: ONDS reported record Q2 2026 revenue of $83.8M on Aug 13, up 67% sequentially and more than 13x YoY against ~$68M consensus, and raised FY26 guidance to $525-550M, yet the stock fell 7% on the print. Today extends that established sell-the-good-news pattern into the broader Aug 20 risk-off session.",
+      "why": "ONDS trades on a forward-revenue multiple with GAAP losses, so it behaves as a long-duration asset: rising 30-year yields compress its terminal value, and the Aug 13 reaction already showed the raised guide was priced in. Serial acquisitions (Cyberhawk, Aran Defense) add integration and dilution concerns that get repriced when the sector bid disappears.",
+      "impact": "The most concerning of the group. This is the third leg down since the Aug 13 print despite raised guidance, which suggests genuine multiple compression rather than a one-day flush. Read-through is negative for the cohort: ONDS is the fundamental leader with a real $525-550M revenue guide, and if the best-capitalised name cannot hold, the weaker names (UMAC, RCAT, SATL) should be expected to underperform further. Volume 715,796 IEX is the heaviest real participation in the drone complex today, so this is being distributed, not drifting.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Nothing to displace with an empty book. Carried forward from the 10:16 ET scan as the single watch item and it stays there, but it is not entry-ready: no dated catalyst today, and buying the third down-leg of an active de-rating inverts the Confluence rule rather than satisfying it. The honest cost of acting now is one of three weekly trades spent on a knife that has already ignored one set of good numbers. Waiting for stabilisation plus a confluence check costs nothing given zero open positions."
+    },
+    {
+      "rank": 3,
+      "symbol": "AVAV",
+      "price": 161.21,
+      "gap_pct": -6.69,
+      "premarket_volume": 8463,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No dated catalyst for 2026-08-20; the IR newsroom shows nothing after Aug 7 (Michael D. Ruppert appointed to the board), and Q1 FY2027 is not due until roughly Sept 8 2026, so this is not an earnings reaction. Background: AVAV fell ~4% to ~$174 on Aug 18 in the Nasdaq sell-off, making today's -6.7% to $161 a second leg lower. The name is down roughly 25% YTD and carries a securities-fraud class action tied to the Jan 20 2026 guidance shock that dropped it 15.8% in a day.",
+      "why": "AVAV is the large-cap anchor of the drone/defense complex, so index and sector-ETF outflows hit it hardest in dollar terms. With rates backing up and no contract news to offset, there was no marginal buyer. The Aug 13 tariff proclamation was also a smaller relative benefit to AVAV, already a domestic prime, than to the small caps, so it takes the drawdown without having had the same spike.",
+      "impact": "Leans more sustainable than the small caps: second down day in three sessions on top of a 25% YTD decline reads as persistent institutional distribution rather than a flush. Sector read-through runs the other way here, AVAV breaking below $165 removes the valuation-floor argument that supports the higher-beta names. IEX volume 8,463 is meaningless for a large liquid name and reflects IEX tape share, not interest.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "The clearest pass of the five regardless of slots. It fails the Entry Checklist on quality before R:R even matters: an active securities class action plus an earnings print inside the likely holding window is un-underwritable for a swing hold, and no stop survives an earnings gap, so the 2:1 minimum is not achievable in good faith. The sector discipline in TRADING-STRATEGY (exit a sector after 2 failed trades) argues for reducing drone exposure today rather than adding the most damaged name in it."
+    },
+    {
+      "rank": 4,
+      "symbol": "RGTI",
+      "price": 15.875,
+      "gap_pct": -6.67,
+      "premarket_volume": 274893,
+      "catalyst": "8-K filed today discloses director Dr. Ray Johnson resigned effective Aug 28, following an Aug 19 C-suite reorg, into a session where long-end yields backed up and hit long-duration tech.",
+      "headlines": [],
+      "catalyst_detail": "The only name in today's top five with a genuinely dated filing. An 8-K signed by CFO Jeffrey Bertelsen and filed Aug 20 2026 discloses that Dr. Ray Johnson gave notice of resignation from the board on Aug 19, effective Aug 28, with the company stating the decision was not due to any disagreement over operations, policies or practices. It follows an Aug 19 release creating a dedicated Systems Delivery Organization, promoting David Rivas to COO and naming Andrew Bestwick CTO effective Aug 18. Separately the whole quantum complex has been in a rates-driven rotation, with IonQ, D-Wave and Rigetti all off 5-6% on Aug 18 as the 30-year yield hit a 19-year high.",
+      "why": "Governance churn, a director departure plus a C-suite reorg inside 48 hours, is a confidence hit for a pre-profit name whose valuation rests entirely on execution credibility. It lands on top of the dominant mechanism: quantum names are the purest long-duration assets listed in the US, so a back-up in the long end compresses the present value of distant cash flows more than in any other sector.",
+      "impact": "A multi-day rates-driven de-rating rather than a one-day spike. RGTI had run ~32% in the prior month, so there is unwind fuel, and it remains ~16% down YTD. Balance sheet is unimpaired, $541.3M cash, no debt, and a letter of intent for up to $100M in CHIPS Act funding. Read-through: IonQ, QBTS and QUBT move on the same duration mechanism, so quantum should be treated as one correlated position, not diversification.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Nothing to displace, but note it is not sector diversification away from today's drone unwind, it is the same long-duration risk factor in a different wrapper, so taking it would concentrate rather than spread exposure. The catalyst is real but points the wrong way for a long, and a governance-driven drop has no defined technical stop level, so the 2:1 R:R cannot be framed. Correlation gate (scripts/corr-gate.mjs) would need to clear before this could sit alongside any other speculative-growth name."
+    },
+    {
+      "rank": 5,
+      "symbol": "BMNR",
+      "price": 21.565,
+      "gap_pct": 6.6,
+      "premarket_volume": 1286367,
+      "catalyst": "ETH surged ~18-20% today to ~$2,275-2,300 on expanded US Treasury long-bond buybacks and a $1.9B crypto short-liquidation cascade; BMNR is a levered ETH-treasury proxy.",
+      "headlines": [],
+      "catalyst_detail": "ETH climbed from below $1,920 to above $2,100 and touched $2,300 in its strongest daily advance of the summer, after the US Treasury announced it will more than double repurchases of 10-, 20- and 30-year debt, pushing the 30-year yield down 10bp to 5.18% and improving risk appetite. More than $1.9B of crypto shorts were liquidated in 24 hours and US spot ETH ETFs took ~$189M of net inflows on Aug 19. BitMine holds roughly 5.82M ETH, about 4.8% of circulating supply, worth ~$11.4B including cash, with ~5.07M ETH staked, and has repurchased over 20.8M of its own shares since early July under a $4B authorisation.",
+      "why": "BMNR's NAV is almost entirely ETH, so an ~18% move in the token mechanically revalues the treasury, and the buyback shrinks the share count against a rising asset base. The asymmetry is the tell: BMNR is up only 6.6% against ETH's ~18%, so the mNAV premium is compressing and the equity is capturing well under one-for-one of the token move.",
+      "impact": "One-day spike in character and entirely derivative of ETH. The driver is a macro liquidity event plus forced short covering, not a change in BitMine's business, and the same Treasury-buyback rally had already faded intraday with yields reversing, which is precisely what is pressuring the other nine rows on this list. Read-through to MARA, WULF and other crypto-treasury proxies, and to BLSH at rank 9 on the bitcoin leg. Volume 1,286,367 IEX is the heaviest on the list, consistent with a real liquidation-driven squeeze.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Would displace nothing on the book, but it is the weakest use of a weekly trade on this list. Buying a levered ETH proxy that is underperforming its own NAV driver by more than 11 points means paying for the wrapper while the wrapper is being marked down, so the reward side of a 2:1 is already impaired before a stop is chosen. Chasing day two of a short-squeeze also violates the patience-over-activity rule, and a stop placed outside ETH's own daily range would be far wider than the 7-10% band allows."
+    },
+    {
+      "rank": 6,
+      "symbol": "RCAT",
+      "price": 9.26,
+      "gap_pct": -6.42,
+      "premarket_volume": 77748,
+      "catalyst": null,
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "SATL",
+      "price": 5.22,
+      "gap_pct": -5.61,
+      "premarket_volume": 91955,
+      "catalyst": null,
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "KTOS",
+      "price": 57.21,
+      "gap_pct": -5.44,
+      "premarket_volume": 33225,
+      "catalyst": null,
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "BLSH",
+      "price": 28.33,
+      "gap_pct": 5.43,
+      "premarket_volume": 14667,
+      "catalyst": "No company news; tracks a sharp bitcoin rally (BTC +3.9% intraday to ~$72,025, +11% over two sessions).",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "RDW",
+      "price": 11.71,
+      "gap_pct": -5.41,
+      "premarket_volume": 170806,
+      "catalyst": null,
+      "headlines": []
+    }
+  ],
+  "notes": "Intraday run (11:14 ET), not pre-market. Baseline is the prior session close (prevDailyBar); premarket_volume is Alpaca IEX-only partial-session volume and is NOT comparable across names, so the >=50k volume filter was not applied. scripts/gappers-alpaca.sh as committed on main mis-scored this run (see branch claude/eager-wozniak-hfn1k9)."
+}

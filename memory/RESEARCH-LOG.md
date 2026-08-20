@@ -6893,3 +6893,108 @@ its own NAV driver. ONDS is the single name carried forward as a watch item
 pending stabilization and a Confluence check. Weekly trade count unchanged:
 0/3 (week of Aug 17). Account flat at $100,000 — baseline mismatch vs the
 ~$10,000 documented starting capital persists (37th session).
+
+### Gappers (auto-scan 11:14 ET, cloud)
+
+**Scan integrity note — read this before the table.** This run fired
+mid-session, not pre-market, and `scripts/gappers-alpaca.sh` as committed on
+`main` returns wrong numbers under that condition. Two defects, both verified
+live against raw Alpaca snapshots:
+
+1. **Stale baseline.** The script uses `dailyBar` as the prior close. Alpaca
+   rolls `dailyBar` over to *today's own partial bar* mid-morning (it had not
+   yet rolled at the 10:16 ET run, which is why that scan was clean), so the
+   gap gets measured against today instead of yesterday.
+2. **Spread-mid contamination.** It takes whichever of trade/quote is newer,
+   and a stale or one-sided ask turns pure spread noise into a "gap."
+
+Raw output of the committed script this run was: `BKSY +7.41%` (real: -4.44%)
+and `APT -6.60%` (real: -2.24%) as the top two hits — **both entirely phantom**
+— and `UMAC -6.81%` against a true -9.00%. The table below is recomputed
+against `prevDailyBar` using last trade only. Fix committed to branch
+`claude/eager-wozniak-hfn1k9`, **not** merged to `main` — operator review
+pending, since the scanner feeds `/trade` and market-open. Pre-market runs are
+unaffected either way.
+
+| Rank | Sym | $Price | Gap% | Vol (IEX) | Catalyst |
+| ---- | --- | ------ | ---- | --------- | -------- |
+| 1 | UMAC | 25.74 | -9.00 | 27,449 | No dated news; Section 232 drone-tariff momentum trade unwinding |
+| 2 | ONDS | 8.22 | -7.80 | 715,796 | No dated news; third leg down since the Aug 13 record Q2 / raised guide |
+| 3 | AVAV | 161.21 | -6.69 | 8,463 | No dated news; second leg of sector-anchor distribution, no earnings until ~Sept 8 |
+| 4 | RGTI | 15.875 | -6.67 | 274,893 | 8-K filed today: director Ray Johnson resigns eff. Aug 28, after Aug 19 C-suite reorg |
+| 5 | BMNR | 21.565 | +6.60 | 1,286,367 | ETH +18-20% on Treasury buyback expansion + $1.9B short liquidation |
+| 6 | RCAT | 9.26 | -6.42 | 77,748 | No company news — sector unwind only |
+| 7 | SATL | 5.22 | -5.61 | 91,955 | No company news — sector unwind only |
+| 8 | KTOS | 57.21 | -5.44 | 33,225 | No company news — sector unwind only |
+| 9 | BLSH | 28.33 | +5.43 | 14,667 | No company news; tracks BTC +3.9% intraday to ~$72,025 (+11% over two sessions) |
+| 10 | RDW | 11.71 | -5.41 | 170,806 | No company news — sector unwind only |
+
+**Deep-dive cap: 5** (ranks 1-5). Ranks 6-10 got quick-scan catalyst only, by
+design — not silently dropped. All four of those drone/space names returned
+*no* company-specific news, which is itself the finding.
+
+**Breadth — this is the real story.** 49 of 64 watchlist names red, median
+-1.19%. The entire drone/defense/space complex moved as one block:
+
+| UMAC | ONDS | AVAV | RCAT | SATL | KTOS | RDW | DPRO | LUNR | RR | BKSY | RKLB |
+| ---- | ---- | ---- | ---- | ---- | ---- | --- | ---- | ---- | -- | ---- | ---- |
+| -9.00 | -7.80 | -6.69 | -6.42 | -5.61 | -5.44 | -5.41 | -4.82 | -4.64 | -4.57 | -4.44 | -3.65 |
+
+At the 10:16 ET scan this same cohort read -6.84 / -6.17 / -5.19 / -4.75 /
+-4.52 / -3.68 / -3.51 / -2.70. **The unwind deepened through late morning
+rather than stabilising** — every name is 2-3 points worse three hours in, and
+the count of 5%+ decliners went from 3 to 8. By an 11:26 ET re-check UMAC was
+-9.14 and ONDS -8.13, still extending. Only crypto proxies (BMNR, BLSH) are
+green; mega-caps are roughly flat (QCOM +1.61, MA +0.75), so this is a
+speculative-growth de-risking, not a market-wide sell-off.
+
+**Common driver:** the Treasury-buyback rally faded and long-end yields
+reversed higher, hitting long-duration/pre-profit equities. RGTI (quantum) is
+the same duration trade in a different wrapper — *not* diversification away
+from the drone names.
+
+#### Deep dive: UMAC $25.74 -9.00%
+- **Catalyst:** No dated company-specific catalyst for today; nothing after Aug 13 (Powerus S-4 effectiveness, $30M strategic equity investment). Background: UMAC spiked ~22% Aug 13-14 on Trump's Section 232 proclamation imposing 100% tariffs on imported UAS over 25kg and key components, effective Sept 3 2026, then ran ~+23% on the week to ~$27 by Monday. Today is that tariff-momentum trade unwinding into a risk-off tape.
+- **Why:** Highest-beta, lowest-revenue name in the NDAA-compliant drone-component basket, so it captured the largest share of the tariff bid and gives back the most when the sector de-risks. No fresh news to defend a ~$27 print, so momentum longs took profits.
+- **Impact:** Multi-day spike unwind rather than a thesis break — the 100% tariff still takes effect Sept 3, and the company holds $229.6M cash on 687% YoY Q2 revenue growth. Sector read-through unambiguous (ONDS/AVAV/RCAT/KTOS/RDW/SATL all -5 to -8% together). *(IEX volume uninformative on absolute level.)*
+- **Horizon:** SHORT_TERM — positioning unwind off a parabolic week with no fundamental news; the structural tariff catalyst is intact into September.
+- **Opportunity cost:** Displaces nothing — 0 positions, $100,000 cash, all six slots and all three weekly trades open. The binding constraint is quality, not capacity: a falling knife with no dated catalyst fails the Entry Checklist on both "specific catalyst" and 2-of-4 confluence. 2:1 R:R not honestly achievable — any stop inside the 7-10% band sits within today's own 9% range and dies to noise. Also ranks behind ONDS on fundamentals, so the wrong drone name even if the sector were buyable.
+
+#### Deep dive: ONDS $8.22 -7.80%
+- **Catalyst:** No dated catalyst today; feed ends Aug 18 (agreement to acquire Aran Defense, ~$33M, Israeli manufacturing capacity). Background: record Q2 2026 revenue of $83.8M on Aug 13, +67% sequentially and >13x YoY against ~$68M consensus, FY26 guide raised to $525-550M — and the stock fell 7% on the print. Today extends that sell-the-good-news pattern.
+- **Why:** Forward-revenue multiple with GAAP losses, so it behaves as a long-duration asset — rising 30-year yields compress terminal value, and the Aug 13 reaction showed the raised guide was already priced. Serial acquisitions (Cyberhawk, Aran) add integration/dilution concerns that reprice when the sector bid disappears.
+- **Impact:** The most concerning of the group. Third leg down since Aug 13 *despite* raised guidance — that is multiple compression, not a one-day flush. Negative read-through for the cohort: ONDS is the fundamental leader with a real $525-550M guide, and if the best-capitalised name cannot hold, the weaker names underperform further. Volume 715,796 IEX is the heaviest real participation in the drone complex today — being distributed, not drifting.
+- **Horizon:** SHORT_TERM — yield-driven multiple compression; backlog and raised FY26 guide say the business is intact, but the de-rating is not finished.
+- **Opportunity cost:** Nothing to displace. Stays the single carried-forward watch item from the 10:16 scan but is *not* entry-ready: no dated catalyst, and buying the third down-leg of an active de-rating inverts the Confluence rule rather than satisfying it. Acting now spends one of three weekly trades on a name that already ignored one set of good numbers; waiting costs nothing with an empty book.
+
+#### Deep dive: AVAV $161.21 -6.69%
+- **Catalyst:** No dated catalyst; nothing after Aug 7 (Michael D. Ruppert appointed to the board). Q1 FY2027 not due until ~Sept 8 2026, so this is not an earnings reaction. Background: -4% to ~$174 on Aug 18 in the Nasdaq sell-off, making today a second leg lower; ~25% down YTD with a securities-fraud class action tied to the Jan 20 2026 guidance shock (-15.8% in a day).
+- **Why:** Large-cap anchor of the complex, so index and sector-ETF outflows hit hardest in dollar terms. Rates backing up, no contract news to offset, no marginal buyer. The Aug 13 tariff proclamation was a smaller relative benefit to an already-domestic prime, so it takes the drawdown without having had the spike.
+- **Impact:** Leans more sustainable than the small caps — second down day in three sessions on top of a 25% YTD decline reads as persistent institutional distribution. Read-through runs the *other* way here: AVAV losing $165 removes the valuation-floor argument supporting the higher-beta names. *(IEX volume 8,463 meaningless for a large liquid name.)*
+- **Horizon:** SHORT_TERM — no fundamental news; next real catalyst is the ~Sept 8 print with the $117.3M Army P550 award and record backlog.
+- **Opportunity cost:** The clearest pass of the five regardless of slots. Fails the Entry Checklist on *quality* before R:R matters — an active securities class action plus an earnings print inside the likely holding window is un-underwritable for a swing hold, and no stop survives an earnings gap, so 2:1 is unachievable in good faith. The "exit a sector after 2 failed trades" discipline argues for reducing drone exposure today, not adding the most damaged name in it.
+
+#### Deep dive: RGTI $15.875 -6.67%
+- **Catalyst:** The only top-five name with a genuinely dated filing. An 8-K signed by CFO Jeffrey Bertelsen and filed Aug 20 2026 discloses that Dr. Ray Johnson gave notice of board resignation on Aug 19, effective Aug 28, stated as not due to any disagreement over operations, policies or practices. Follows an Aug 19 release creating a Systems Delivery Organization, promoting David Rivas to COO and naming Andrew Bestwick CTO effective Aug 18. Separately the quantum complex has been in a rates rotation (IonQ/D-Wave/Rigetti all -5 to -6% Aug 18 as the 30-year hit a 19-year high).
+- **Why:** Governance churn — a director exit plus a C-suite reorg inside 48 hours — is a confidence hit for a pre-profit name valued entirely on execution credibility. It lands on top of the dominant mechanism: quantum names are the purest long-duration assets listed in the US, so a back-up in the long end compresses distant cash flows more than anywhere else.
+- **Impact:** Multi-day rates-driven de-rating, not a one-day spike. ~32% run in the prior month gives unwind fuel; still ~16% down YTD. Balance sheet unimpaired ($541.3M cash, no debt, LOI for up to $100M CHIPS Act funding). Read-through: IonQ, QBTS, QUBT share the duration mechanism — treat quantum as one correlated position.
+- **Horizon:** SHORT_TERM — driven by the long end of the curve plus a non-disagreement board exit, both of which reverse quickly if yields stabilise.
+- **Opportunity cost:** Nothing to displace, but note it is **not** diversification away from today's drone unwind — same long-duration risk factor, different wrapper, so taking it concentrates rather than spreads exposure. The catalyst is real but points the wrong way for a long, and a governance-driven drop offers no defined technical stop, so 2:1 cannot be framed. `scripts/corr-gate.mjs` would need to clear before it could sit alongside any other speculative-growth name.
+
+#### Deep dive: BMNR $21.565 +6.60%
+- **Catalyst:** ETH climbed from below $1,920 to above $2,100, touching $2,300 — its strongest daily advance of the summer — after the US Treasury announced it will more than double repurchases of 10-, 20- and 30-year debt, pushing the 30-year yield down 10bp to 5.18%. Over $1.9B of crypto shorts were liquidated in 24 hours; US spot ETH ETFs took ~$189M net inflows Aug 19. BitMine holds ~5.82M ETH (~4.8% of circulating supply), ~$11.4B including cash, ~5.07M ETH staked, and has repurchased over 20.8M shares since early July under a $4B authorisation.
+- **Why:** NAV is almost entirely ETH, so an ~18% token move mechanically revalues the treasury, and the buyback shrinks share count against a rising asset base. The asymmetry is the tell — BMNR is up only 6.6% against ETH's ~18%, so the mNAV premium is *compressing* and the equity captures well under one-for-one.
+- **Impact:** One-day spike in character and entirely derivative of ETH. Driver is a macro liquidity event plus forced short covering, not a business change — and that same Treasury-buyback rally already faded intraday with yields reversing, which is precisely what is pressuring the other nine rows here. Read-through to MARA/WULF and to BLSH at rank 9 on the bitcoin leg. Volume 1,286,367 IEX is the heaviest on the list, consistent with a real squeeze.
+- **Horizon:** SHORT_TERM — a liquidation-driven squeeze on a macro headline that already lost momentum within the same session; the position is really an ETH price bet.
+- **Opportunity cost:** Displaces nothing, but the weakest use of a weekly trade on this list. Buying a levered ETH proxy that is underperforming its own NAV driver by 11+ points means paying for the wrapper while the wrapper is marked down — the reward side of a 2:1 is impaired before a stop is chosen. Chasing day two of a short squeeze also violates patience-over-activity, and a stop outside ETH's own daily range would far exceed the 7-10% band.
+
+**Scan decision: NO TRADES.** Research-only routine (STEP 8) — no orders
+placed, none contemplated. Eight of ten rows are one correlated
+drone/defense/space unwind that is *deepening*, not stabilising; the ninth
+(RGTI) is the same long-duration factor in a different sector; the tenth and
+BLSH are crypto proxies both underperforming their own NAV drivers. Not one
+row has a dated bullish catalyst. ONDS remains the single carried-forward
+watch item pending stabilisation and a Confluence check. Weekly trade count
+unchanged: 0/3 (week of Aug 17). Account flat at $100,000, 0 positions, 0 open
+orders — baseline mismatch vs the ~$10,000 documented starting capital
+persists (37th session).
