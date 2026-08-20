@@ -6998,3 +6998,17 @@ watch item pending stabilisation and a Confluence check. Weekly trade count
 unchanged: 0/3 (week of Aug 17). Account flat at $100,000, 0 positions, 0 open
 orders — baseline mismatch vs the ~$10,000 documented starting capital
 persists (37th session).
+
+### Setup Scan (16:39 ET, cloud)
+Full-universe scan, 60 candidates checked, 0 errors. 0 grade-A hits, 4 grade-B.
+
+| TICKER | GRADE | SETUP(S)            | TIMEFRAME    | TRIGGER |
+| ------ | ----- | -------------------- | ------------ | ------- |
+| RTX    | B     | Momentum confluence  | daily swing  | RSI 60, ADX 40, EMA9 $221.72 > EMA21 $216.79 |
+| BMNR   | B     | Momentum confluence  | daily swing  | RSI 65, ADX 25, EMA9 $18.60 > EMA21 $17.92 |
+| ZIM    | B     | Momentum confluence  | daily swing  | RSI 57, ADX 20, EMA9 $27.18 > EMA21 $26.34 |
+| APT    | B     | Momentum confluence  | daily swing  | RSI 55, ADX 20, EMA9 $5.34 > EMA21 $5.26 |
+
+No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
+Candidates only; none traded, none contemplated — full safety-check gate
+applies at `/trade`.
