@@ -151,3 +151,47 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (7th week flagged, still no operator action)
 - Keep trade limits and confluence rule unchanged — no rule proven wrong; this week's discipline held up even with real catalysts in play
 ### Overall Grade: C
+
+## Week ending 2026-08-21
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -1.3% (~7,782.84 → 7,681) |
+| Bot vs S&P | +1.3% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a genuinely volatile week (30Y yield highest since Jun 2007, hot PPI print, Iran-sanctions/Hormuz headline risk, WMT/ROST earnings) — no forced trades, no chasing the two-sided Brent/geopolitical headline
+- Caught and correctly invalidated a real script bug same-day: the 10:16 ET gappers auto-scan flagged 2 "hits" (BWLP, LPG) that were stale-`dailyBar` artifacts from a post-open trigger, not real gaps — verified via live quotes before any research time was spent, zero false signal reached a trade decision
+- Setup-scan (Alpaca-bars fallback) kept surfacing candidates weekly (BMNR grade-B, RSI 69.6/ADX 26.55) despite `tradingview-data` MCP still down — the fallback pipeline is functioning as a real second read, not just a stopgap
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- Bot beat the S&P this week (flat vs. -1.3%) — first week this phase the zero-entry stance was rewarded rather than costly, though this is variance, not skill
+### What Didn't Work
+- 6th consecutive zero-entry week (32 trading days since launch, Jul 9) — the streak itself is now the dominant fact about this account, independent of this week's favorable variance
+- `tradingview-data` MCP still down (30+ consecutive sessions) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, 3rd week running this exact fix was proposed and not shipped
+- New confirmed bug this week (`scripts/gappers-alpaca.sh` uses stale `dailyBar` once market is open, fabricating gap signals on a post-9:30 trigger) — caught and worked around today, but not yet fixed at the source; will recur on every future post-open Gappers trigger until patched
+- Missing dated Market-Open/Pre-Market TRADE-LOG entries on Aug 18 and Aug 21 (2 of 5 sessions) — same intermittent logging gap flagged in each of the last 3 weekly reviews, still unresolved
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (39 straight sessions / 8th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- A structural bug (stale `dailyBar` post-open) sitting undiscovered for weeks until a routine happened to fire post-open is a reminder that "no trades taken" doesn't mean "no risk" — this one would have fed fabricated gap-down signals into research time, or worse, a trade decision, on a differently-timed trigger
+- Proposed infrastructure fixes (technical fallback wiring, TRADE-LOG logging gaps, baseline mismatch) that get re-flagged 3-8 weeks running without shipping are a process failure distinct from the trading discipline itself, which continues to hold up under real catalysts
+- This week's outperformance vs. S&P (flat vs. -1.3%) is not evidence the zero-entry stance is working — it is a single data point in a down week; the multi-week opportunity cost from Aug 7 (-3.6% missed) still dominates the phase-to-date picture
+### Adjustments for Next Week
+- Fix `scripts/gappers-alpaca.sh` at the source: prefer `prevDailyBar` once `now > 9:30 ET`, or validate `dailyBar`'s timestamp against today's session start, before trusting any post-open Gappers trigger again
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 3rd straight week, now blocking real candidate promotion (e.g., this week's BMNR grade-B) not just a hypothetical one
+- Investigate the Aug 18/Aug 21 missing TRADE-LOG entry pattern — 4th week running with at least one missing dated entry
+- Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (8th week flagged, still no operator action) — recommend the operator either reconcile the number or explicitly confirm $100k is correct so this stops re-flagging
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
+### Overall Grade: C
