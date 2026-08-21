@@ -7134,3 +7134,14 @@ Full-universe scan, 60 candidates checked, 0 errors. 0 grade-A hits, 1 grade-B.
 No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
 Candidates only; none traded, none contemplated — full safety-check gate
 applies at `/trade`.
+
+### Setup Scan (18:38 ET, cloud)
+Full-universe scan, 60 candidates checked, 0 errors. 0 grade-A hits, 1 grade-B.
+
+| TICKER | GRADE | SETUP(S)            | TIMEFRAME    | TRIGGER |
+| ------ | ----- | -------------------- | ------------ | ------- |
+| BMNR   | B     | Momentum confluence  | daily swing  | RSI 69.6, ADX 26.55, EMA9 $19.19 > EMA21 $18.25 |
+
+No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
+Candidates only; none traded, none contemplated — full safety-check gate
+applies at `/trade`.
