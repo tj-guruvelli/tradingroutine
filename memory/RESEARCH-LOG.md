@@ -7123,3 +7123,14 @@ notification (Step 7 skip per "only if action was taken"). 38 trading days
 since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of
 Aug 17). Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
 flagged Jul 27 remains unresolved, operator review still pending.
+
+### Setup Scan (16:39 ET, cloud)
+Full-universe scan, 60 candidates checked, 0 errors. 0 grade-A hits, 1 grade-B.
+
+| TICKER | GRADE | SETUP(S)            | TIMEFRAME    | TRIGGER |
+| ------ | ----- | -------------------- | ------------ | ------- |
+| BMNR   | B     | Momentum confluence  | daily swing  | RSI 69.6, ADX 26.55, EMA9 $19.19 > EMA21 $18.25 |
+
+No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
+Candidates only; none traded, none contemplated — full safety-check gate
+applies at `/trade`.
