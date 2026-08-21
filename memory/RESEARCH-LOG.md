@@ -7067,3 +7067,9 @@ No planned tickers to validate — skipping a Steps 3.5-equivalent chart read.
 | ---- | --- | ------ | ---- | --- | -------- |
 
 0 hits — full 73-ticker watchlist scanned at 5.0% gap threshold, max move was QBTS +1.81%. No catalyst research or deep-dive run (nothing cleared the bar).
+
+### Gappers (auto-scan 09:19 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+
+0 hits — full 73-ticker watchlist scanned at 5.0% gap threshold, max move was BMNR +3.09%. No catalyst research or deep-dive run (nothing cleared the bar).
