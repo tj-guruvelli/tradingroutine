@@ -7113,3 +7113,13 @@ irregularly-updated names. Needs a fix (e.g. always prefer `prevDailyBar`
 once `now > 9:30 ET`, or check `dailyBar`'s own timestamp against today's
 session start) before this routine is trusted again in a post-open trigger
 window.
+
+### Midday scan (cloud) — NO-OP (verified, not assumed)
+`bash scripts/alpaca.sh positions` and `orders` both returned `[]`. Nothing
+to cut at -7%, no trailing stops to cancel or tighten, no thesis to
+invalidate — Steps 3-5 had an empty input set. No sharp unexplained move to
+research (Step 6 n/a — no positions). No action taken -> no ClickUp
+notification (Step 7 skip per "only if action was taken"). 38 trading days
+since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of
+Aug 17). Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
+flagged Jul 27 remains unresolved, operator review still pending.
