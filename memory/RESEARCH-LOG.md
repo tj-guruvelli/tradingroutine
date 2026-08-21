@@ -7027,3 +7027,37 @@ Same four names as the 16:39 ET run, unchanged setups.
 No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
 Candidates only; none traded, none contemplated — full safety-check gate
 applies at `/trade`.
+
+## 2026-08-21 — Pre-market Research
+
+### Account
+- Equity: $100,000
+- Cash: $100,000 (100%)
+- Buying power: $400,000
+- Daytrade count: 0 (0 positions, 0 open orders)
+
+### Market Context
+- WTI / Brent: WTI $86.96 (+0.13, +0.52%); Brent $93.67 (-0.11, -0.12%) — oilprice.com / Markets Insider
+- S&P 500 futures: +0.08% premarket, Dow futures +0.05%, Russell 2000 +0.33%; prediction markets ~65% odds of a higher open (WebSearch fallback — Benzinga)
+- VIX: 15.70 (-0.31, -1.94%), day range 15.63-15.88 — Investing.com
+- Today's catalysts: 30Y yield +6bp to 5.25%, 10Y ~4.70% despite Bessent buyback signals; gold +0.5% to $4,540 (week +3.6%) — safe-haven bid narrowing equity relief; Aug 20 close saw staples/discretionary lag, energy outperform on oil strength; Iran-sanctions rhetoric (Bessent) still in focus. Flash Manufacturing/Services PMI due 9:45am ET. (WebSearch fallback — Bloomberg/ts2.tech)
+- Earnings before open: UI (Ubiquiti, $34.1B cap, EPS est. $4.15), BJ (BJ's Wholesale, $12.3B cap, EPS est. $1.20) — both BMO. Also CTBC Financial (2891.TW), Scatec ASA (SCATC.OL) — non-US, not actionable.
+- Economic calendar: August PPI ran hot — headline +0.7% MoM (vs +0.4% consensus), core +0.2% in line; YoY final-demand PPI +1.6% (hottest since April), core YoY +2.2%. FOMC meeting under a week out. No CPI/jobs print confirmed for today — flagged as a gap, check calendar directly at open. (WebSearch fallback — Nasdaq/Kiplinger)
+- Sector momentum (YTD): Energy +32.1% and Technology +30.7% lead; Transportation +26.3%, Capital Goods +25.2%. Laggards: Consumer Discretionary -4.3%, Services -1.3%. Financials +9.8%, Retail +4.2%. (WebSearch fallback — Westmount/csimarket)
+
+### Trade Ideas
+No idea clears the documented-catalyst-plus-2-indicator-confluence bar today:
+- UI / BJ earnings (BMO) are watch-only — earnings-day gaps don't fit the swing/momentum entry checklist (no defensible stop, per prior logs on ZIM/AVAV).
+- Energy/Tech remain the YTD sector-momentum leaders (unchanged theme), but no fresh idiosyncratic single-name catalyst identified this run to pair with that macro tailwind.
+No planned tickers to validate — skipping a Steps 3.5-equivalent chart read.
+
+### Risk Factors
+- Hot PPI print (headline +0.7% vs +0.4% consensus) reinforces the hawkish-Fed repricing theme flagged in recent sessions; FOMC under a week out.
+- Long-end yields elevated (30Y 5.25%, 10Y 4.70%) — headwind for long-duration/growth names.
+- Gold's YTD/weekly strength (+3.6% week) signals a persistent safe-haven bid alongside the equity tape — mixed risk signal, not confirmed risk-off (VIX still sub-16, futures green).
+- Iran-sanctions rhetoric ongoing, two-sided/unresolved (consistent with prior sessions).
+- Two of two US earnings prints today (UI, BJ) carry gap risk for anyone holding into the print — n/a currently (0 positions).
+- Apify RAG web browser had a weak hit rate this run (4 of 7 queries needed WebSearch fallback: S&P futures, catalysts, econ calendar, sector momentum) — cross-check at open if any of these numbers matter for an entry decision.
+
+### Decision
+**HOLD** — no idiosyncratic single-name catalyst cleared the confluence bar; hot PPI + elevated long-end yields argue for discipline over chasing a green-but-fragile premarket tape. 0 positions, 0 open orders, weekly trade count 0/3 (week of Aug 17). Equity still flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27 remains unresolved, operator review still pending.
