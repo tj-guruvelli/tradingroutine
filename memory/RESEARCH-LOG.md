@@ -7073,3 +7073,43 @@ No planned tickers to validate — skipping a Steps 3.5-equivalent chart read.
 | ---- | --- | ------ | ---- | --- | -------- |
 
 0 hits — full 73-ticker watchlist scanned at 5.0% gap threshold, max move was BMNR +3.09%. No catalyst research or deep-dive run (nothing cleared the bar).
+
+### Gappers (auto-scan 10:16 ET, cloud) — DATA BUG, false positives
+Raw scan flagged 2 "hits" at the 5.0% threshold:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BWLP | $22.85 | -7.66% | 6,169 | INVALIDATED — see below |
+| 2 | LPG | $47.88 | -7.23% | 2,660 | INVALIDATED — see below |
+
+**Both are false positives, not real gaps.** This run fired at 10:16 ET — 46
+minutes after the 9:30 open, not premarket. `scripts/gappers-alpaca.sh` picks
+Alpaca's `dailyBar.c` as the gap baseline on the documented assumption that
+premarket, `dailyBar` still carries the most-recently-*completed* session's
+close. That assumption breaks once the market is open: `dailyBar` then
+reflects *today's* in-progress bar, not yesterday's close, and the resulting
+`prev_close`/`current` pair is comparing two intraday ticks against each
+other, not a real overnight gap.
+
+Live cross-check via `scripts/alpaca.sh quote`:
+- BWLP: bid/ask $24.79/$24.83 — flat vs. prev_close $24.74 (~+0.4%), not
+  -7.66%. Independent research (ChartMill, TheDesperateTrader, Danelfin) all
+  show BWLP trading $24.7-24.8, up ~5% on the day, next earnings Aug 28.
+- LPG: ask $51.81 — flat vs. prev_close $51.61 (~+0.4%), not -7.23%.
+  StockTitan shows LPG at $51.84 (+4.42%) as of 09:58 ET. Independent
+  sources describe a name up on the day, not down.
+
+Verified gap count for this run: **0**. No deep-dive research performed —
+would have researched a catalyst for a price move that never happened.
+Raw (invalidated) scan output saved to
+`data/premarket_gappers_2026-08-21_1016ET.json` for the record; `gappers`
+array is empty, `raw_scan_hits` holds what the buggy scan returned.
+
+**Flag for operator:** this is a script bug in `scripts/gappers-alpaca.sh`,
+not a one-off. Any future post-open trigger of this routine (or of the
+local `/gappers` command) will hit the same stale-`dailyBar` logic and can
+produce fabricated gap-down/gap-up signals for thinly-traded or
+irregularly-updated names. Needs a fix (e.g. always prefer `prevDailyBar`
+once `now > 9:30 ET`, or check `dailyBar`'s own timestamp against today's
+session start) before this routine is trusted again in a post-open trigger
+window.

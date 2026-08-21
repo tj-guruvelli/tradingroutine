@@ -1,0 +1,10 @@
+{
+  "scanned_at": "2026-08-21T14:16:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "raw_scan_hits": [
+    {"symbol": "BWLP", "prev_close": 24.74, "current": 22.845, "gap_pct": -7.66, "volume": 6169},
+    {"symbol": "LPG", "prev_close": 51.61, "current": 47.88, "gap_pct": -7.23, "volume": 2660}
+  ],
+  "anomaly": "scripts/gappers-alpaca.sh flagged BWLP and LPG as -7.66%/-7.23% gappers, but this run fired at 10:16 ET (46min post-open), not premarket. Live Alpaca quote cross-check: BWLP bid/ask 24.79/24.83 (~flat vs prev_close 24.74), LPG ask 51.81 (~flat vs prev_close 51.61). Both raw hits are false positives from a stale-price bug in the script's post-open dailyBar handling (see RESEARCH-LOG for detail). No real gappers this run; verified gap count = 0."
+}
