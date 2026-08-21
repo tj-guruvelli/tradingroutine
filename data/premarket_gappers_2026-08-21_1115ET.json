@@ -1,0 +1,12 @@
+{
+  "scanned_at": "2026-08-21T15:15:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "raw_scan_hits": [
+    {"symbol": "TRMD", "prev_close": 32.24, "current": 29.84, "gap_pct": -7.44, "volume": 3803},
+    {"symbol": "LPG", "prev_close": 51.585, "current": 47.855, "gap_pct": -7.23, "volume": 6034},
+    {"symbol": "BWLP", "prev_close": 24.74, "current": 26.51, "gap_pct": 7.15, "volume": 9189},
+    {"symbol": "UMAC", "prev_close": 27.47, "current": 25.58, "gap_pct": -6.88, "volume": 29236}
+  ],
+  "anomaly": "scripts/gappers-alpaca.sh flagged 4 raw hits at 11:15 ET (1h45m post-open), same stale-dailyBar bug documented at 10:16 ET today. Cross-checked all 4 against actual 5-min trade bars (scripts/alpaca.sh bars): TRMD traded 31.88-32.47 all session (last ~32.24, not 29.84); LPG traded 51.58-51.97 all session (last ~51.63, not 47.86); BWLP traded 24.56-24.82 all session, essentially flat (last ~24.74, not 26.51); UMAC traded 26.30-27.95 all session (last ~27.49, not 25.58). None of the 'current' prices used by the scan match any actual trade today -- they came from stale/one-sided NBBO quote snapshots on thin-volume names, not real moves. Verified gap count = 0. This is the 2nd confirmed false-positive event today (see 10:16ET file) -- script still needs the fix (prefer prevDailyBar once now > 9:30 ET, or validate dailyBar's timestamp) before this routine is trusted on a post-open trigger."
+}

@@ -7113,3 +7113,46 @@ irregularly-updated names. Needs a fix (e.g. always prefer `prevDailyBar`
 once `now > 9:30 ET`, or check `dailyBar`'s own timestamp against today's
 session start) before this routine is trusted again in a post-open trigger
 window.
+
+### Gappers (auto-scan 11:15 ET, cloud) — DATA BUG recurs, false positives
+
+Raw scan flagged 4 "hits" at the 5.0% threshold:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | $29.84 | -7.44% | 3,803 | INVALIDATED — see below |
+| 2 | LPG | $47.86 | -7.23% | 6,034 | INVALIDATED — see below |
+| 3 | BWLP | $26.51 | +7.15% | 9,189 | INVALIDATED — see below |
+| 4 | UMAC | $25.58 | -6.88% | 29,236 | INVALIDATED — see below |
+
+**All 4 are false positives — same script bug flagged at 10:16 ET today,
+now with new tickers.** This run fired at 11:15 ET, 1h45m post-open, well
+past the window where `scripts/gappers-alpaca.sh`'s `dailyBar`-as-baseline
+logic is valid.
+
+Cross-checked all 4 against actual 5-min trade bars (`scripts/alpaca.sh
+bars SYM 5Min ...`), not just quotes:
+- TRMD: traded $31.88-$32.47 the entire session, last print ~$32.24. Not
+  $29.84 — that "current" came from a one-sided/stale quote (bid $27.35,
+  ask $32.33 — a $5 spread on a $30 name).
+- LPG: traded $51.58-$51.97 all session, last print ~$51.63. Not $47.86.
+- BWLP: traded $24.56-$24.82 all session — essentially flat. Not $26.51.
+  This is the same ticker invalidated at 10:16 ET, now showing the
+  opposite-signed fake move.
+- UMAC: traded $26.30-$27.95 all session, last print ~$27.49. Not $25.58.
+
+None of the scan's "current" prices match any real trade today. Verified
+gap count for this run: **0**. No deep-dive research performed. Raw
+(invalidated) scan output saved to
+`data/premarket_gappers_2026-08-21_1115ET.json` for the record.
+
+**Flag for operator — confirmed recurring, not a one-off:** this is the
+2nd false-positive event from `scripts/gappers-alpaca.sh` today (10:16 ET
+and 11:15 ET), both post-open, both on thin-volume names (BWLP/LPG repeat
+across both runs; TRMD/UMAC newly this run). The stale-`dailyBar` baseline
+issue previously flagged is confirmed still unpatched. Recommend disabling
+or gating this routine's post-open trigger window until the script is
+fixed (prefer `prevDailyBar` once `now > 9:30 ET`, or validate `dailyBar`'s
+own timestamp against today's session start) — as-is it will keep
+generating fabricated gap signals on illiquid names whenever it fires
+after the open.
