@@ -7061,3 +7061,9 @@ No planned tickers to validate — skipping a Steps 3.5-equivalent chart read.
 
 ### Decision
 **HOLD** — no idiosyncratic single-name catalyst cleared the confluence bar; hot PPI + elevated long-end yields argue for discipline over chasing a green-but-fragile premarket tape. 0 positions, 0 open orders, weekly trade count 0/3 (week of Aug 17). Equity still flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27 remains unresolved, operator review still pending.
+
+### Gappers (auto-scan 08:17 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+
+0 hits — full 73-ticker watchlist scanned at 5.0% gap threshold, max move was QBTS +1.81%. No catalyst research or deep-dive run (nothing cleared the bar).
