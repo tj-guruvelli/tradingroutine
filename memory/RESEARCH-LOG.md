@@ -7340,3 +7340,19 @@ since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of
 Aug 24). Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
 flagged Jul 27 remains unresolved, 42nd straight session, operator review
 still pending.
+
+## 2026-08-24 — Setup Scan (16:39 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:39 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 73.3, ADX 29, EMA9 $19.92 > EMA21 $18.67, px $24.12 |
+| BLSH | B | Momentum confluence | daily swing | RSI 66.99, ADX 23.48, EMA9 $26.69 > EMA21 $25.41, px $30.28 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
