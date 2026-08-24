@@ -7329,3 +7329,36 @@ hits==0 gate.
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | no candidates cleared the $3 price floor |
+
+### Gappers (auto-scan 11:15 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 1 raw candidate. 1
+hit cleared the filter (price/gap floors), under the 10-cap, and got the
+full deep-dive (5-cap not binding). Same ticker (APT) as the 09:20 ET scan
+— gap widened from 5.46% to 7.95% on unchanged premarket volume.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.635 | +7.95% | 749 | No same-day catalyst found — repeat scan, no fresh news since 09:20 ET |
+
+#### Deep dive: APT $5.635 +7.95%
+- Catalyst: No confirmed same-day catalyst. Two Apify RAG queries ("APT
+  stock news today catalyst", "Alpha Pro Tech APT NYSE stock business
+  fundamentals recent developments") returned an Aptos (crypto, ticker
+  collision) result cluster, a SimplyWall.st snippet quoting a stale
+  $16.47 price from an unrelated prior period (doesn't match today's
+  $5.635 print), and generic Nasdaq/CNN quote pages with no dated news.
+  Benzinga fallback 403'd again.
+- Why: Unconfirmed — no mechanism identified connecting any located
+  research to today's move.
+- Impact: Premarket volume is unchanged at 749 shares since the 09:20 ET
+  scan even as the gap widened from 5.46% to 7.95% — volume not
+  confirming the move, consistent with a thin-liquidity quote artifact
+  (wide spread ticking against a small share count) rather than a real
+  breakout. No sector read-through identified.
+- Horizon: SHORT_TERM — no catalyst, volume not confirming; nothing to
+  hold past confirmation.
+- Opportunity cost: 0 open positions and 0/3 weekly trades used, so this
+  displaces nothing. Not actionable regardless: no documented catalyst to
+  clear the Confluence rule, and a stop wide enough to survive the spread
+  on ~749-share premarket volume would blow past a sane 2:1 R:R. Third
+  consecutive no-catalyst read on APT today — flag as noise, not a setup.

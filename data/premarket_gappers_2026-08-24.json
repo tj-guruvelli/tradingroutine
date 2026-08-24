@@ -29,6 +29,20 @@
       "impact": "Premarket volume of 749 shares is noise-level on a thinly traded name (WATCHLIST.md itself flags APT as unresolved/needing clarification). Reads as a quote artifact, not a sustainable move.",
       "horizon": "SHORT_TERM",
       "opportunity_cost": "No existing position displaced (0 open, 0/3 weekly trades used), but the setup can't clear a sane 2:1 R:R at this volume/spread and has no documented catalyst to satisfy the Confluence rule. Not investable on today's information."
+    },
+    {
+      "rank": 3,
+      "symbol": "APT",
+      "price": 5.635,
+      "gap_pct": 7.95,
+      "premarket_volume": 749,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No confirmed same-day catalyst, second scan of the day (gap widened from 5.46% at 09:20 ET to 7.95% at 11:15 ET on unchanged volume). Searches returned an Aptos (crypto, ticker collision) top-result cluster, a stale SimplyWall.st snippet quoting a $16.47 price from an unrelated prior period, and generic Nasdaq/CNN quote pages with no dated news. Benzinga fallback 403'd again.",
+      "why": "Unconfirmed — no mechanism identified connecting any located research to today's move.",
+      "impact": "Premarket volume unchanged at 749 shares since the 09:20 ET scan despite the gap widening — volume not confirming the move, consistent with a thin-liquidity quote artifact rather than a real breakout. No sector read-through identified.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing position displaced (0 open, 0/3 weekly trades used), but the setup still can't clear a sane 2:1 R:R at this volume/spread and has no documented catalyst to satisfy the Confluence rule. Not investable on today's information."
     }
   ]
 }
