@@ -7145,3 +7145,118 @@ Full-universe scan, 60 candidates checked, 0 errors. 0 grade-A hits, 1 grade-B.
 No grade-A hits — no Telegram alert sent (matches local `/setup-scan` rule).
 Candidates only; none traded, none contemplated — full safety-check gate
 applies at `/trade`.
+
+## 2026-08-24 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser worked cleanly for oil (Brent), VIX, earnings, and
+sector momentum. The `S&P 500 futures` query drifted off-topic again
+(mangled to bare "S" — Wikipedia/Pinterest junk) — same recurring failure
+mode as Aug 18-20. Fell back to native WebSearch for futures levels and for
+context on the Iran conflict headline. `tradingview-data` MCP not loaded
+this run — no RSI/VWAP/200-SMA/insider confluence checks.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — confirmed live via `alpaca.sh account`/
+  `positions`/`orders`. Same confirmed-live-vs-$10k-baseline mismatch
+  flagged 2026-07-27, unresolved 40th straight session, operator review
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (new week of Aug 24).
+
+### Market Context (Apify RAG web browser + WebSearch fallback, Mon 8/24 ~7am ET)
+- **VIX pops off recent lows**: 16.01 (Cboe, as of 11:05am UTC), +5.82%
+  (+0.88 vs 15.13 prev close), open 15.90. Not an extreme print (52wk
+  range 13.38-35.30) but a real risk-off tick, not noise.
+- **Futures — modestly red, crowd leaning bearish**: S&P 500 futures
+  -0.11% premarket (WebSearch/Investing.com); Polymarket's "S&P 500 up or
+  down Aug 24" contract implies only ~45% odds of a higher open. Reason
+  cited: a "critical week" — Nvidia earnings (Wed), a pivotal Fed Chair
+  Kevin Warsh speech at Jackson Hole, and "intensifying economic warfare"
+  in the Middle East.
+- **Iran conflict — active war, not just sanctions rhetoric.** Per Cboe
+  derivatives-research commentary and WebSearch: **US conducted strikes
+  over the weekend**; markets are waiting on Iran's response. Background
+  (WebSearch/Wikipedia): the 2026 Iran war began Feb 28 with US-Israeli
+  strikes that killed Khamenei; ~8M bbl/day has been disrupted via the
+  Strait of Hormuz. Oil had eased into early August on hopes of a Hormuz
+  transit deal, but that deal never materialized and rhetoric re-escalated.
+  Treasury Sec. Bessent reiterated plans for the "toughest sanctions in
+  history" against Iran. This is a materially bigger escalation than the
+  "Operation Economic Fury" sanctions headline flagged Aug 20 — now an
+  active-war overhang, still two-sided (an Iran de-escalation signal would
+  unwind both the oil and vol premium fast).
+- **Oil — Brent pulling back from its rally, not extending it**: $92.72-93
+  (TradingEconomics/Markets Insider), -1.4% to -1.8% on the day, prev close
+  $93.55-94.39. Read: profit-taking ahead of the expected US sanctions
+  announcement, not a fresh escalation leg — consistent with a "sell the
+  rumor" move after last week's sharp rally.
+- **Sector momentum YTD 2026 — defensive rotation intact/deepening**:
+  Energy +22%, Materials +16.5%, Consumer Staples +15% leading; Technology,
+  Consumer Discretionary, and Financials **negative** YTD; Mag7 -8% YTD.
+  Same rotation-out-of-growth theme as prior logs, now with harder numbers
+  attached. Reinforces sticking to energy/defensive sleeves over chasing
+  tech dip-buys.
+- **Earnings today (before the bell)**: PDD Holdings, XPEV (XPeng), NSSC
+  (Napco Security), BIRMF (BioRem). After close: TUYA. None held, none on
+  `memory/WATCHLIST.md` — no Tier-1 relevance, noted for context only
+  (PDD/XPEV are US-listed China ADRs, a read-through for broader China-
+  exposure sentiment, not a same-day setup for us).
+- **Economic calendar this week**: Fed Chair Kevin Warsh's Jackson Hole
+  speech is the headline macro event (exact day not pinned down this run —
+  Kiplinger confirms it's this week, ties back to the split-decision July
+  FOMC outcome); more inflation data and a revised consumer-sentiment
+  print also due this week per the same source. No specific print
+  identified as landing today (Monday) specifically — treat as an open gap.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met —
+confluence tooling unavailable this run):
+1. **Energy (XLE and majors) — watch only, not actionable.** Catalyst:
+   sector already YTD leader (+22%) and the active Iran-war overhang keeps
+   a structural bid under the group, but Brent itself is pulling back
+   today (-1.4/-1.8%) — no clean fresh-breakout entry, no RSI/VWAP/200-SMA
+   check run.
+2. **China ADRs (PDD, XPEV) earnings reaction — observation only, not
+   actionable.** Same-day prints could move broader China-sentiment/risk
+   appetite; neither is on the watchlist, no confluence check run, no
+   defensible stop identified pre-earnings.
+3. **No idiosyncratic single-name setup identified.** No gappers scan is
+   part of this routine (separate cron); nothing else surfaced a dated,
+   company-specific catalyst for a name not already covered above.
+
+### Risk Factors
+- **Active Iran war, US strikes over the weekend, Iran response pending** —
+  the dominant risk today. Two-sided: further escalation (Hormuz closure
+  risk, retaliatory strikes) extends both the energy trade and the VIX pop;
+  a de-escalation signal reverses both fast. Materially sharper than the
+  "sanctions escalation" framing used in the Aug 20 log — this is now a
+  live-fire overhang, not just a policy threat.
+- **VIX +5.8% and futures red** — first real (if modest) risk-off
+  confirmation in recent sessions; prior logs (Aug 18-21) all noted low
+  VIX/green-futures as the reason two-sided headlines didn't clear a HOLD
+  bar. Today's setup argues for discipline even more directly.
+- **Nvidia earnings (this week) + Fed Chair Jackson Hole speech (this
+  week)** — two more major volatility catalysts stacked on top of the
+  geopolitical overhang; not a reason to act today, but a reason not to
+  add risk into it.
+- **Confluence tooling unavailable this run** (`tradingview-data` MCP not
+  loaded) — no RSI/VWAP/200-SMA/insider check possible for either idea
+  above.
+- **Apify query drift, one of eight queries this run** — `S&P 500 futures`
+  again returned off-topic junk (same recurring failure mode as Aug
+  18-20); worked around via WebSearch. Oil/VIX/earnings/sector-momentum
+  queries all worked cleanly this run, an improvement over Aug 20.
+- **Baseline mismatch** — equity still $100,000 vs. the ~$10,000
+  documented starting capital, unresolved 40th straight session.
+
+### Decision
+**HOLD — no trades.** First real (if modest) risk-off signal in weeks: VIX
++5.8% to 16.01, S&P futures -0.11% premarket, against a backdrop of an
+active Iran war (US strikes over the weekend, Iran response pending),
+Brent pulling back off its rally on sanctions-announcement jitters, and a
+stacked macro week ahead (Nvidia earnings, Fed Chair Jackson Hole speech).
+No single-name idea clears the strategy's documented-catalyst-plus-
+confluence bar, and confluence tooling was unavailable this run regardless.
+Zero positions, zero orders — patience over activity. New week: weekly
+trade count 0/3 (week of Aug 24).
