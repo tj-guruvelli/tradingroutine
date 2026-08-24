@@ -7260,3 +7260,14 @@ No single-name idea clears the strategy's documented-catalyst-plus-
 confluence bar, and confluence tooling was unavailable this run regardless.
 Zero positions, zero orders — patience over activity. New week: weekly
 trade count 0/3 (week of Aug 24).
+
+### Gappers (auto-scan 08:23 ET, cloud)
+`GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist` scanned all 69
+watchlist tickers — **0 hits**. Sanity-checked with `GAP_THRESHOLD=0.0`:
+only 5 of 69 symbols even had a fresh today-timestamped premarket
+quote/trade this early (08:23 ET) — NBIS -3.4%, ONDS -1.9%, NIO -1.4%,
+RCAT -0.9%, OPEN -0.9% — none cleared the 5% gap bar, so no false-negative
+from stale data. No catalyst research run (nothing to research), no
+Telegram alert sent per routine gating (hits=0, no error). Saved
+`data/premarket_gappers_2026-08-24.json` with an empty `gappers` array for
+the record.
