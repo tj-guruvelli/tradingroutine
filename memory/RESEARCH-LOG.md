@@ -7319,3 +7319,13 @@ today, no rank 6-10 quick-scan-only rows).
   this volume/spread, and there's no documented catalyst to satisfy the
   Confluence rule's "at least 1 catalyst" requirement even before an
   indicator check. Not investable on today's information.
+
+### Gappers (auto-scan 10:12 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 1 raw candidate;
+1 excluded (WLDS, price $2.725 < $3 floor). 0 hits cleared the filter —
+no quick-scan or deep-dive rows this run, no Telegram alert sent per the
+hits==0 gate.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | no candidates cleared the $3 price floor |
