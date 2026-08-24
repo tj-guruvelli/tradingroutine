@@ -1,0 +1,34 @@
+{
+  "scanned_at": "2026-08-24T13:20:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "LAKE",
+      "price": 11.86,
+      "gap_pct": 5.80,
+      "premarket_volume": 4050,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No confirmed same-day catalyst. Best hit was a MarketScreener snippet referencing a Q1 earnings beat and premarket jump, but its own timestamp does not line up with today and could not be verified as today's driver.",
+      "why": "Unconfirmed — no verified mechanism connecting available research to today's move.",
+      "impact": "Premarket volume of 4,050 shares is too thin to represent a real institutional move; reads as a wide-spread/thin-liquidity quote artifact rather than a durable breakout. No sector read-through identified.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing position displaced (0 open, 0/3 weekly trades used), but at this volume a stop wide enough to survive the spread would blow past a sane 2:1 R:R, and no documented catalyst exists to satisfy the Confluence rule. Not investable on today's information."
+    },
+    {
+      "rank": 2,
+      "symbol": "APT",
+      "price": 5.505,
+      "gap_pct": 5.46,
+      "premarket_volume": 749,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": "No confirmed same-day catalyst. Searches surfaced a mismatched Hong Kong ticker (APT Satellite, 01045.HK), stale August 7/10 price snapshots, and an Aug 6 Q2 2026 filing (Rev $18.67M, EPS $0.18) — 18 days old, not a same-day event.",
+      "why": "Unconfirmed — no mechanism identified.",
+      "impact": "Premarket volume of 749 shares is noise-level on a thinly traded name (WATCHLIST.md itself flags APT as unresolved/needing clarification). Reads as a quote artifact, not a sustainable move.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "No existing position displaced (0 open, 0/3 weekly trades used), but the setup can't clear a sane 2:1 R:R at this volume/spread and has no documented catalyst to satisfy the Confluence rule. Not investable on today's information."
+    }
+  ]
+}

@@ -7260,3 +7260,62 @@ No single-name idea clears the strategy's documented-catalyst-plus-
 confluence bar, and confluence tooling was unavailable this run regardless.
 Zero positions, zero orders — patience over activity. New week: weekly
 trade count 0/3 (week of Aug 24).
+
+### Gappers (auto-scan 09:20 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 3 raw candidates;
+1 excluded (AGMH, price $1.09 < $3 floor). 2 hits cleared the filter —
+both under the 10-cap and both got the full deep-dive (5-cap not binding
+today, no rank 6-10 quick-scan-only rows).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LAKE | $11.86 | +5.80% | 4,050 | No same-day catalyst found — most relevant hit was a prior Q1 earnings-beat/premarket-jump headline, undated precisely, likely stale |
+| 2 | APT | $5.505 | +5.46% | 749 | No same-day catalyst found — most recent filing was the Aug 6 Q2 10-Q/8-K (Rev $18.67M, EPS $0.18), 18 days old |
+
+#### Deep dive: LAKE $11.86 +5.80%
+- Catalyst: No fresh, dated, company-specific news located across two Apify
+  RAG queries ("LAKE stock news today catalyst", "Lakeland Industries stock
+  premarket August 24") or the Benzinga fallback (403, blocked). Best hit
+  was a MarketScreener snippet — "Lakeland Industries Swings to Fiscal Q1
+  Earnings, Revenue Rises; Shares Jump Premarket" — but the page's own
+  timestamp ("6 days ago" / "10/06 MT") doesn't line up with today and
+  can't be confirmed as the driver of this print.
+- Why: Unconfirmed. If the stale earnings headline is in fact resurfacing
+  (e.g. an analyst note referencing it), that would be a fundamentals
+  echo, not a fresh mechanism — no verified link established.
+- Impact: Premarket volume is 4,050 shares — a couple of round lots on a
+  micro-float name. That is not enough volume to represent a real
+  institutional move; this reads as a wide-spread/thin-liquidity quote
+  artifact far more than a durable breakout. No peer/sector read-through
+  identified (PPE/industrial-apparel peers not screened this run).
+- Horizon: SHORT_TERM — no verified fresh catalyst and volume too thin to
+  support a thesis; do not carry any exposure past confirmation.
+- Opportunity cost: Zero open positions and 0/3 weekly trades used, so
+  this wouldn't displace an existing holding. But absent a real catalyst
+  and with premarket volume this thin, it can't even be sized safely — a
+  stop wide enough to survive the spread on a name trading in the
+  low-thousands of shares premarket would blow past a sane 2:1 R:R. Not
+  investable on today's information; would need same-day confirmation
+  (real volume, a dated press release) before reconsidering.
+
+#### Deep dive: APT $5.505 +5.46%
+- Catalyst: Same result — no dated, same-day catalyst found. Three Apify
+  RAG queries ("APT stock news today catalyst", "APT business fundamentals
+  recent developments", "Alpha Pro Tech NYSE APT stock premarket August
+  24") returned a mismatched Hong Kong ticker (APT Satellite, 01045.HK —
+  different company), stale August 7/10 price snapshots, and the Aug 6
+  Q2 2026 filing (Rev $18.67M, EPS $0.18) — 18 days old, not a same-day
+  event. Benzinga fallback also returned 403.
+- Why: Unconfirmed. No mechanism identified connecting any located
+  research to today's premarket move.
+- Impact: Premarket volume is 749 shares — effectively noise-level on a
+  thinly traded name (WATCHLIST.md itself flags APT as an unresolved
+  ticker needing manual clarification). Reads as a quote artifact, not a
+  sustainable move; no sector read-through identified.
+- Horizon: SHORT_TERM — no catalyst, negligible volume, nothing to hold
+  past confirmation.
+- Opportunity cost: Same as LAKE — no existing position displaced (0 open,
+  0/3 weekly trades used), but the setup can't clear a sane 2:1 R:R at
+  this volume/spread, and there's no documented catalyst to satisfy the
+  Confluence rule's "at least 1 catalyst" requirement even before an
+  indicator check. Not investable on today's information.
