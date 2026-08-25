@@ -7580,3 +7580,81 @@ Deep-dive cap 5 (n/a here, only 1 hit so it got the full deep dive).
   20% max size, min 2:1 R:R): premarket volume here is too thin to
   support an entry decision pre-open, so this isn't actionable regardless
   of what it would displace. Research only, no size recommendation.
+
+### Gappers (auto-scan 11:20 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 3 raw candidates;
+1 dropped (WLDS, price $2.335 < $3.00 price floor). 2 passed filters.
+Deep-dive cap 5 (n/a here, only 2 hits so both got the full deep dive).
+Note: UMAC flipped from the +7.04% premarket gap logged at 10:21 ET to a
+-7.35% gap now — a full reversal on thin volume both times; treat as a
+liquidity whipsaw, not two separate signals.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | $23.19 | -7.35% | 21,384 | No fresh headline — continued whipsaw in the drone-reshoring momentum trade |
+| 2 | BKSY | $23.52 | -6.89% | 5,392 | No fresh headline — likely profit-taking after Aug 6 Q2 beat + Aug 11 contract win |
+
+#### Deep dive: UMAC $23.19 -7.35%
+- Catalyst: No new company-specific news, filing, or press release dated
+  8/25 found (Perplexity Finance, CNN, Robinhood all checked). Perplexity
+  Finance notes UMAC "rebounded, gaining 6.41% to close at $20.60" ~5 days
+  ago, recovering part of a sharp decline triggered the prior Thursday —
+  UMAC has been whipsawing for over a week on the broader drone-reshoring/
+  defense theme. This is the second gap signal on UMAC today: 10:22 ET
+  flagged it UP +7.04% premarket on only 9,662 shares; this 11:20 ET
+  snapshot shows it DOWN -7.35% vs yesterday's close ($25.03 → $23.19), a
+  full reversal. Robinhood's cached page shows a materially different
+  intraday range ($24.37–$25.45, last $24.59, +0.9%) — flagging this
+  discrepancy; Alpaca's live API snapshot is the trusted source here.
+- Why: No discrete news-driven mechanism identified. Most likely continued
+  high-beta chop in a low-float defense/drone name on thin liquidity — a
+  no-catalyst mean-reversion swing, not a fundamental repricing.
+- Impact: Volume field is the prior COMPLETED session's full-day volume
+  (21,384 shares), not true premarket volume — thin regardless. Two
+  conflicting gap signals on UMAC in one session (up at 10:22 ET, down at
+  11:20 ET) is a thin-liquidity whipsaw, not a reliable move. Check
+  ONDS/RCAT/AVAV/KTOS/DPRO for a shared move to confirm/deny a real
+  sector event vs. UMAC-specific noise.
+- Horizon: SHORT_TERM — no structural catalyst, and the print reverses an
+  already-thin premarket signal from earlier the same session; not
+  actionable without a fresh intraday recheck.
+- Opportunity cost: Account flat (0 open positions) — no existing holding
+  displaced. Only 2 gappers today, no ranking tradeoff beyond conviction.
+  At this liquidity/reliability, UMAC wouldn't clear a sane 2:1 R:R
+  stop-distance test pre-open; taking it would spend 1 of the max-3-new-
+  trades/week budget on a low-conviction, catalyst-free signal. Research
+  only, no size recommendation.
+
+#### Deep dive: BKSY $23.52 -6.89%
+- Catalyst: No fresh 8/25 headline found across BlackSky's IR press-
+  release page, StockTitan, and Perplexity Finance. Most recent verified
+  news: 8/6 Q2 2026 earnings (revenue +50% YoY to $33.3M) and an 8/11
+  "seven-figure, multi-year international contract" win. A Perplexity
+  Finance snippet shows a recent session where BKSY "closed up 2.63%...
+  but gave back gains and fell sharply in after-hours (~-4.6%)" — choppy
+  sentiment even around good fundamental news, consistent with a stock
+  that ran hard on the 8/6–8/11 catalysts now seeing profit-taking rather
+  than a new negative trigger.
+- Why: Mechanism reads as post-earnings-run profit-taking / momentum
+  exhaustion, not a new negative catalyst — no fresh bad news found.
+  Matches a repeating pattern: BKSY was flagged mid-June with a Jefferies
+  downgrade to Hold (PT $50) explicitly citing valuation "after a sharp
+  rally earlier in 2026."
+- Impact: BKSY's summer rally (June downgrade cited a sharp prior rally;
+  since then a strong Q2 beat and a new contract win) makes a ~7%
+  pullback with no new negative catalyst read as normal mean-reversion
+  within an uptrend, not a broken thesis. Check peer gov't/defense-
+  satellite names (RKLB, PL if on watchlist) for sector-wide read-through
+  vs. BKSY-specific weakness.
+- Horizon: SHORT_TERM — absent a new negative catalyst this looks like
+  normal profit-taking volatility inside an existing uptrend; would need
+  a lower-low / broken-support confirmation to call it a real trend
+  change, and a fresh dip-buy setup check at market open before treating
+  it as a LONG_TERM re-entry.
+- Opportunity cost: Account flat (0 open positions) — no existing holding
+  displaced. Against the 3-new-trades/week and min-2:1-R:R rules: a
+  countertrend dip-buy into BKSY without a fresh confirming catalyst is
+  exactly the low-conviction setup the Confluence rule (2 of VWAP/RSI/
+  200-SMA/insider signal) is meant to filter out. Research only — would
+  need that confluence check plus real volume confirmation before any
+  /trade sizing.
