@@ -7494,3 +7494,13 @@ single-name idea clears the strategy's documented-catalyst-plus-
 confluence bar, and confluence tooling was unavailable this run
 regardless. Zero positions, zero orders — patience over activity. Weekly
 trade count 0/3 (week of Aug 24).
+
+### Gappers (auto-scan 08:23 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 0 raw candidates
+— no ticker on the watchlist gapped ±5% premarket. Script exited clean
+(no error). No hits, no deep-dive, no notification (per routine rule:
+only notify if hits > 0 or the scan errored).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | 0 hits |
