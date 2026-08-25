@@ -7374,3 +7374,123 @@ sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-25 — Pre-Market Research (cloud routine)
+
+Apify RAG web browser worked cleanly for VIX, oil, and market-catalysts
+queries. `S&P 500 futures premarket` and `sector momentum YTD` both
+drifted off-topic again — futures query stalled/timed out mid-run, sector
+query returned a Spanish Wikipedia "letter S" page — same recurring
+query-drift failure mode flagged Aug 18-24. Futures data recovered from
+the CNBC live-blog hit on the catalysts query instead; sector momentum has
+no substitute this run, logged as a gap. `tradingview-data` MCP not loaded
+this run — no RSI/VWAP/200-SMA/insider confluence checks possible.
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x margin)
+- Positions: 0 | Open orders: 0 — confirmed live via `alpaca.sh account`/
+  `positions`/`orders`. Same confirmed-live-vs-$10k-baseline mismatch
+  flagged 2026-07-27, unresolved 43rd straight session, operator review
+  pending — not re-litigating here.
+- Weekly trade count: 0/3 (week of Aug 24).
+
+### Market Context (Apify RAG web browser, Tue 8/25 ~7am ET)
+- **VIX cooling off yesterday's pop**: 15.83 spot (Cboe, as of 11:02am
+  UTC), -0.13% (-0.02) vs. prev close 15.85; open 15.71. Down from Aug
+  24's 16.01 print — the modest risk-off tick from Monday did not carry
+  through overnight.
+- **Futures green, risk-on tone into a stacked catalyst week**: S&P 500
+  futures +0.5%, Nasdaq 100 futures +1%, Dow futures +237pts (+0.4%) as of
+  ~6:30am ET (CNBC). Monday's cash session was red (S&P -0.28%, Nasdaq
+  -0.76%, chip/tech-led) — futures bounce reads as dip-buying ahead of
+  the week's binary catalysts, not a resolved risk view.
+- **This week's stacked catalysts, all still ahead of us**: Nvidia
+  earnings Wednesday after the close (the single biggest name-level
+  volatility event); July PCE price index Wednesday; Fed Chair Kevin
+  Warsh's Jackson Hole speech Friday, following last week's Treasury
+  buyback-program announcement aimed at taming long-dated yields. UBS
+  (via CNBC) advising "stay invested," expects S&P 500 EPS +25% this year.
+- **Rates — drifting lower on Treasury buyback speculation, still
+  elevated**: 10Y ~4.67-4.70% (down ~3bp on the morning after a CNBC
+  report that Treasury may tap its $1T General Account to fund bond
+  purchases), 30Y ~5.20%, 2Y ~4.22%. Same elevated-yield backdrop flagged
+  Aug 19, marginally easing rather than reversing.
+- **Oil — steady, two-sided sanctions overhang unchanged**: Brent $92.11
+  (-0.07%), WTI $85.06 (~flat). Treasury Secretary Bessent announced
+  expanded secondary sanctions targeting countries doing business with
+  Iran on Monday; traders reading it as steady-state rather than a fresh
+  supply-disruption leg — consistent with the "active but unresolved"
+  framing carried since Aug 24.
+- **Risk-on cross-asset signals elsewhere**: Bitcoin >$80k (+2-3%,
+  extending last week's 20%-in-3-days squeeze), gold at a 3+ month high
+  ($4,677/oz, +15% MTD) on dollar weakness — mixed read against still-
+  elevated yields; not a clean confirmation either way for equities.
+- **Earnings today (before the bell)**: Bank of Montreal (BMO), Dick's
+  Sporting Goods (DKS) — neither held, neither on `memory/WATCHLIST.md`,
+  context only. After close: Intuit, Box, Zoom (also not held/watchlisted).
+- **Economic calendar today**: Consumer confidence data at 10am ET — the
+  one same-day print identified this run (watching for cracks in consumer
+  resilience per the CNBC live-blog). No CPI/PPI/jobs release dated today
+  specifically; PCE and the Fed Chair speech both land later this week,
+  not today.
+- **Sector momentum YTD**: query failed (off-topic drift, see above) — no
+  data this run, treat prior Aug 24 read (Energy/Materials/Staples
+  leading, Tech/Discretionary/Financials/Mag7 negative YTD) as the last
+  confirmed snapshot, not re-verified today.
+- Held tickers: none (0 open positions) — no held-ticker news to check.
+
+### Trade Ideas
+None cleared to Tier-1 (documented-catalyst + confluence bar not met —
+confluence tooling unavailable this run):
+1. **Energy/Iran-sanctions sleeve — watch only, not actionable.** Catalyst:
+   expanded U.S. secondary sanctions on Iran-linked trade (Bessent, Mon),
+   but Brent/WTI are flat-to-slightly-down today, not breaking out — no
+   clean entry trigger, no RSI/VWAP/200-SMA check run.
+2. **Pre-Nvidia semiconductor/AI momentum — explicitly avoid, not
+   actionable.** Nvidia reports Wednesday after close; entering any
+   semis-adjacent name into that binary event this week violates the
+   strategy's own catalyst-with-defensible-stop discipline (event risk,
+   not a technical setup) — flagged as a "do not chase" rather than an
+   idea to pursue.
+3. **No idiosyncratic single-name setup identified.** No gappers scan is
+   part of this routine (separate cron); nothing else surfaced a dated,
+   company-specific catalyst for a name not already covered above.
+
+### Risk Factors
+- **Nvidia earnings (Wed) + July PCE (Wed) + Fed Chair Jackson Hole
+  speech (Fri)** — three major, distinct volatility catalysts inside this
+  single week, stacked back-to-back. Argues strongly against opening new
+  swing exposure now that would still be open into Wednesday's print.
+- **VIX easing (15.83) while futures are green** — no risk-off
+  confirmation today, but Monday's cash session was red and the futures
+  bounce hasn't been tested — thin evidence either direction; do not read
+  the futures pop as an all-clear.
+- **Elevated long-end yields, only modestly relieved** — 10Y still ~4.67-
+  4.70%, 30Y ~5.20% despite the Treasury buyback speculation; the
+  mismatch between falling yields (bond-buying speculation) and still-
+  rising alternative assets (gold, bitcoin) is a mixed signal, not a
+  resolved one.
+- **Iran sanctions active and unresolved** — expanded secondary sanctions
+  announced Monday, oil steady rather than spiking; still two-sided (a
+  fresh escalation or a de-escalation signal would move oil and vol
+  quickly either way).
+- **Confluence tooling unavailable this run** (`tradingview-data` MCP not
+  loaded) — no RSI/VWAP/200-SMA/insider check possible for either idea
+  above.
+- **Apify query drift, two of eight queries this run** — `S&P 500 futures
+  premarket` stalled and `sector momentum YTD` returned an off-topic
+  Spanish-language page, same recurring failure mode flagged Aug 18-24;
+  futures data recovered via the catalysts-query hit, sector momentum has
+  no substitute today (gap, not fabricated).
+- **Baseline mismatch** — equity still $100,000 vs. the ~$10,000
+  documented starting capital, unresolved 43rd straight session.
+
+### Decision
+**HOLD — no trades.** VIX easing (15.83) and futures green (S&P +0.5%,
+Nasdaq 100 +1%) offer no clear directional edge against a week that
+stacks Nvidia earnings (Wed), July PCE (Wed), and the Fed Chair's Jackson
+Hole speech (Fri) — three binary catalysts in four sessions. No
+single-name idea clears the strategy's documented-catalyst-plus-
+confluence bar, and confluence tooling was unavailable this run
+regardless. Zero positions, zero orders — patience over activity. Weekly
+trade count 0/3 (week of Aug 24).
