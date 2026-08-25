@@ -7658,3 +7658,18 @@ liquidity whipsaw, not two separate signals.
   200-SMA/insider signal) is meant to filter out. Research only — would
   need that confluence check plus real volume confirmation before any
   /trade sizing.
+
+## 2026-08-25 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 1 grade-B hit.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 76.53, ADX 31.74, EMA9 $20.76 > EMA21 $19.16, px $24.92 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
