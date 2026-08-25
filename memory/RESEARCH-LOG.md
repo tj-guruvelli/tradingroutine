@@ -7542,3 +7542,41 @@ Deep-dive cap 5 (n/a here, only 1 hit so it got the full deep dive).
   R:R — hard to justify without confluence confirmation. Would spend one
   of only 3 weekly trade slots on a thin-volume, single-leg-catalyst setup.
   Research only, no size recommendation.
+
+### Gappers (auto-scan 10:21 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 1 raw candidate.
+Deep-dive cap 5 (n/a here, only 1 hit so it got the full deep dive).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | $26.215 | +7.04% | 9,662 | No fresh same-day headline — reads as continuation of drone-reshoring sector momentum |
+
+#### Deep dive: UMAC $26.215 +7.04%
+- Catalyst: No new company-specific news, filing, or press release dated
+  8/25 found (checked CNN, Robinhood, company IR site, TipRanks feed —
+  most recent items are an 8/18 earnings-call recap and mid-August
+  analyst price-target notes). UMAC has been on a multi-week run
+  (~+99% over 30 days as of early June per Tickeron, another ~25% leg to
+  near 52-wk highs around 8/20 per Perplexity Finance) tied to U.S.
+  drone-reshoring/defense tailwinds — including a Trump administration
+  tariff announcement on imported drones/components (~8/16) and a
+  CENTCOM multinational attack-drone task force story (~8/17). Today's
+  move reads as continuation of that run, not a fresh event.
+- Why: No discrete mechanism identified for today specifically. If
+  sector-momentum continuation: drone/defense reshoring theme (tariffs on
+  foreign drone parts, DoD Blue-UAS wins, peer momentum in ONDS/RCAT/AVAV)
+  keeps pulling momentum buyers into a low-float, high-beta name.
+- Impact: Premarket volume is only 9,662 shares vs. ~6.4M avg daily volume
+  (Robinhood) — negligible, well below a 50K premarket-volume bar. Not a
+  volume-confirmed move; at this liquidity the 7% print is unreliable and
+  could reverse entirely at the open. Check ONDS/RCAT/AVAV/KTOS/DPRO at
+  the open for a shared sector move to confirm the reshoring-theme read;
+  absent that, treat as noise from thin premarket liquidity.
+- Horizon: SHORT_TERM — no new structural catalyst identified today, and
+  the print itself is unconfirmed by volume. Not actionable as a long
+  entry without a real intraday volume/price recheck at the open.
+- Opportunity cost: Only 1 gapper today, so no ranking tradeoff vs. other
+  gappers. Against the hard caps (max 6 positions, max 3 new trades/week,
+  20% max size, min 2:1 R:R): premarket volume here is too thin to
+  support an entry decision pre-open, so this isn't actionable regardless
+  of what it would displace. Research only, no size recommendation.

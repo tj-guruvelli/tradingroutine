@@ -1,23 +1,23 @@
 {
-  "scanned_at": "2026-08-25T13:19:00Z",
+  "scanned_at": "2026-08-25T14:21:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "BE",
-      "price": 214.68,
-      "gap_pct": 5.18,
-      "premarket_volume": 412038,
-      "catalyst": "Shares climbing after a disclosure filed Aug 21 showed former House Speaker Nancy Pelosi bought $4.25M-$14.5M of Bloom Energy stock.",
+      "symbol": "UMAC",
+      "price": 26.215,
+      "gap_pct": 7.04,
+      "premarket_volume": 9662,
+      "catalyst": "No fresh same-day headline found; move reads as continuation of UMAC's ongoing drone-reshoring/defense-sector momentum run rather than a new discrete catalyst.",
       "headlines": [
-        "Bloom Energy Stock Moves Higher: What's Happening? (Benzinga)",
-        "Recent Filing Shows That Rep. Nancy Pelosi Bought Over $4.25M Worth of Bloom Energy Stock (Benzinga)"
+        "Unusual Machines (UMAC) Stock Is Climbing Today: Is the Whole Drone Group Moving? (247wallst.com, Aug 10)",
+        "Unusual Machines shares surged roughly 25% to a near 52-week high -- Riding The Drone Reshoring Wave (Perplexity Finance, ~Aug 20)"
       ],
-      "catalyst_detail": "A congressional disclosure filed August 21, 2026 revealed Rep. Nancy Pelosi purchased between $4.25M and $14.5M of Bloom Energy (NYSE:BE) stock, with the underlying transaction dated back to July. The filing drew fresh investor attention Monday Aug 24 (shares closed $204.11, up on the day) and the move extended into Tuesday's premarket, up 5.18% to $214.68 on ~412K premarket volume. This layers on top of BE's blowout Q2 print (EPS +680% YoY, raised FY26 guidance) reported 7/29, which is a month-old catalyst, not today's driver.",
-      "why": "Congressional stock-trade disclosures act as an attention/sentiment catalyst -- retail and momentum traders often chase high-profile 'smart money' filings like Pelosi's, especially layered on an already-hot AI-power-infrastructure name. Per TRADING-STRATEGY.md's Confluence rule, an insider/political-disclosure signal counts as one leg, but no VWAP/RSI/200-SMA confirmation has been checked yet -- this catalyst alone does not clear the 2-of-4 confluence bar.",
-      "impact": "Premarket volume (412K) is a small fraction of BE's ~14.4M average daily volume, so this reads as an early, thin move, not yet volume-confirmed. Disclosure-driven pops are backward-looking (the trade itself happened in July) and typically fade within a session or two once the headline cycle passes, absent a new fundamental catalyst. No sector-wide read-through -- this is stock-specific/idiosyncratic, not a peer-group move (no other power/AI-infra names gapping alongside it today).",
-      "horizon": "SHORT_TERM -- headline/attention-driven (political-disclosure buzz on a month-old fundamental catalyst), not a new structural development. Expect fade within days unless volume confirms and a fresh catalyst emerges.",
-      "opportunity_cost": "Only 1 gapper cleared the 5% threshold today, so no ranking tradeoff vs. other gappers. Against the hard caps (max 6 open positions, max 3 new trades/week, 20% max size, min 2:1 R:R), chasing BE this far above Monday's close, near its volatile 52-week range ($44.64-$351.28), would need a tight stop to clear 2:1 R:R -- hard to justify without RSI/VWAP/200-SMA confirmation. Taking this trade would use one of only 3 weekly trade slots on a thin-volume, headline-only setup rather than a fully confluence-confirmed one. Research only, no size recommendation."
+      "catalyst_detail": "No new company-specific news, filing, or press release dated Aug 25 was found via web search (CNN, Robinhood, company IR site, TipRanks feed all checked -- most recent items are an Aug 18 earnings-call recap and analyst price-target notes from mid-August). UMAC has been on a multi-week run (roughly +99% over 30 days as of early June per Tickeron, another ~25% leg to near 52-week highs around Aug 20 per Perplexity Finance) tied to U.S. drone-reshoring/defense-tailwind themes -- including a Trump administration tariff announcement on imported drones/components (~Aug 16) and a CENTCOM multinational attack-drone task force story (~Aug 17). Today's premarket move looks like a continuation of that run, not a fresh event.",
+      "why": "No identifiable discrete mechanism for today specifically. If this is sector-momentum continuation, the mechanism is: drone/defense reshoring theme (tariffs on foreign drone parts, DoD Blue-UAS program wins, peer momentum in ONDS/RCAT/AVAV) keeps pulling in momentum buyers on a low-float, high-beta name, compounding prior gains rather than reacting to new information.",
+      "impact": "Premarket volume is only 9,662 shares vs. ~6.4M average daily volume (Robinhood) -- effectively negligible, well below the routine's 50K premarket-volume filter had it applied to this data source. This is not a volume-confirmed move; at this liquidity the 7% gap print is unreliable and could reverse entirely at the open. Sector read-through: other drone names on the watchlist (ONDS, RCAT, AVAV, KTOS, DPRO) should be checked at market open for a shared move, which would support the reshoring-theme read; absent that confirmation, treat this as noise from thin premarket liquidity.",
+      "horizon": "SHORT_TERM -- no new structural catalyst identified today; even the broader reshoring theme, while structural, isn't newly re-triggered today, and the print itself is unconfirmed by volume. Do not treat as an actionable long entry without a real intraday volume/price recheck at the open.",
+      "opportunity_cost": "Only 1 gapper cleared the 5% threshold today, so no ranking tradeoff vs. other gappers on this list. Against the hard caps (max 6 open positions, max 3 new trades/week, 20% max size, min 2:1 R:R): the premarket volume here is too thin to support a real entry decision pre-open, so this would not be actionable even before weighing it against existing holdings. Research only, no size recommendation."
     }
   ]
 }
