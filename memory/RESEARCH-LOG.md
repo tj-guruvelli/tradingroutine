@@ -7504,3 +7504,41 @@ only notify if hits > 0 or the scan errored).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | 0 hits |
+
+### Gappers (auto-scan 09:19 ET, cloud)
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 1 raw candidate.
+Deep-dive cap 5 (n/a here, only 1 hit so it got the full deep dive).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $214.68 | +5.18% | 412,038 | Shares climbing on disclosure that Rep. Nancy Pelosi bought $4.25M-$14.5M of BE stock (filed 8/21) |
+
+#### Deep dive: BE $214.68 +5.18%
+- Catalyst: A congressional disclosure filed August 21, 2026 revealed Rep.
+  Nancy Pelosi purchased between $4.25M and $14.5M of Bloom Energy
+  (NYSE:BE) stock, transaction dated back to July. The filing drove
+  investor attention Monday 8/24 (closed $204.11) and extended into
+  Tuesday's premarket, up 5.18% to $214.68 on ~412K premarket volume.
+  Layers on top of BE's blowout Q2 print (EPS +680% YoY, raised FY26
+  guidance) from 7/29 — that catalyst is a month old, not today's driver.
+- Why: Congressional-trade disclosures are an attention/sentiment
+  catalyst — traders chase high-profile "smart money" filings, especially
+  on an already-hot AI-power-infrastructure name. Per TRADING-STRATEGY.md's
+  Confluence rule, this insider/political-disclosure signal counts as one
+  leg only; VWAP/RSI/200-SMA were not checked this run, so confluence is
+  NOT confirmed (this is research, not a signed-off setup).
+- Impact: Premarket volume (412K) is a small fraction of BE's ~14.4M avg
+  daily volume — thin, not yet volume-confirmed. Disclosure pops are
+  backward-looking (trade happened in July) and typically fade within a
+  session or two absent a fresh fundamental catalyst. No sector-wide
+  read-through — no other power/AI-infra names gapping alongside it.
+- Horizon: SHORT_TERM — headline/attention-driven on a stale fundamental
+  catalyst; expect fade within days unless volume confirms and a new
+  catalyst emerges.
+- Opportunity cost: Only 1 gapper today, so no ranking tradeoff vs. other
+  gappers. Against the hard caps (max 6 positions, max 3 new trades/week,
+  20% max size, min 2:1 R:R), chasing BE this far above Monday's close on
+  a volatile 52-wk range ($44.64-$351.28) needs a tight stop to clear 2:1
+  R:R — hard to justify without confluence confirmation. Would spend one
+  of only 3 weekly trade slots on a thin-volume, single-leg-catalyst setup.
+  Research only, no size recommendation.

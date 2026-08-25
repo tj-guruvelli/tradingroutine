@@ -1,5 +1,23 @@
 {
-  "scanned_at": "2026-08-25T12:24:24Z",
+  "scanned_at": "2026-08-25T13:19:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 214.68,
+      "gap_pct": 5.18,
+      "premarket_volume": 412038,
+      "catalyst": "Shares climbing after a disclosure filed Aug 21 showed former House Speaker Nancy Pelosi bought $4.25M-$14.5M of Bloom Energy stock.",
+      "headlines": [
+        "Bloom Energy Stock Moves Higher: What's Happening? (Benzinga)",
+        "Recent Filing Shows That Rep. Nancy Pelosi Bought Over $4.25M Worth of Bloom Energy Stock (Benzinga)"
+      ],
+      "catalyst_detail": "A congressional disclosure filed August 21, 2026 revealed Rep. Nancy Pelosi purchased between $4.25M and $14.5M of Bloom Energy (NYSE:BE) stock, with the underlying transaction dated back to July. The filing drew fresh investor attention Monday Aug 24 (shares closed $204.11, up on the day) and the move extended into Tuesday's premarket, up 5.18% to $214.68 on ~412K premarket volume. This layers on top of BE's blowout Q2 print (EPS +680% YoY, raised FY26 guidance) reported 7/29, which is a month-old catalyst, not today's driver.",
+      "why": "Congressional stock-trade disclosures act as an attention/sentiment catalyst -- retail and momentum traders often chase high-profile 'smart money' filings like Pelosi's, especially layered on an already-hot AI-power-infrastructure name. Per TRADING-STRATEGY.md's Confluence rule, an insider/political-disclosure signal counts as one leg, but no VWAP/RSI/200-SMA confirmation has been checked yet -- this catalyst alone does not clear the 2-of-4 confluence bar.",
+      "impact": "Premarket volume (412K) is a small fraction of BE's ~14.4M average daily volume, so this reads as an early, thin move, not yet volume-confirmed. Disclosure-driven pops are backward-looking (the trade itself happened in July) and typically fade within a session or two once the headline cycle passes, absent a new fundamental catalyst. No sector-wide read-through -- this is stock-specific/idiosyncratic, not a peer-group move (no other power/AI-infra names gapping alongside it today).",
+      "horizon": "SHORT_TERM -- headline/attention-driven (political-disclosure buzz on a month-old fundamental catalyst), not a new structural development. Expect fade within days unless volume confirms and a fresh catalyst emerges.",
+      "opportunity_cost": "Only 1 gapper cleared the 5% threshold today, so no ranking tradeoff vs. other gappers. Against the hard caps (max 6 open positions, max 3 new trades/week, 20% max size, min 2:1 R:R), chasing BE this far above Monday's close, near its volatile 52-week range ($44.64-$351.28), would need a tight stop to clear 2:1 R:R -- hard to justify without RSI/VWAP/200-SMA confirmation. Taking this trade would use one of only 3 weekly trade slots on a thin-volume, headline-only setup rather than a fully confluence-confirmed one. Research only, no size recommendation."
+    }
+  ]
 }
