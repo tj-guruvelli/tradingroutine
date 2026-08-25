@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-08-25T20:38:54.935Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "BMNR",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 24.92,
+      "prev_daily_high": 24.94,
+      "prev_daily_close": 24.14,
+      "sma200": 22.91,
+      "sma200_window_days": 200,
+      "pmh": 24.14,
+      "today_hod": 25.76,
+      "rsi14": 76.53,
+      "adx14": 31.74,
+      "ema9": 20.76,
+      "ema21": 19.16,
+      "premarket_volume": 12839,
+      "daily_volume": 3102694,
+      "avg_daily_volume_30": 1445081,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
