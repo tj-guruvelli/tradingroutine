@@ -7756,3 +7756,44 @@ No gappers cleared threshold — 0 of 69 watchlist tickers had |gap%| >= 5.0
 (min price $3, min premarket vol 50k where populated). No quick-scan table,
 no deep dive. `data/premarket_gappers_2026-08-26.json` written with empty
 `gappers: []` array for the record.
+
+### Gappers (auto-scan 09:23 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AMPX | $10.80 | +6.2% | 276,195 | No fresh headline found today; reads as continued momentum off the Aug 4 Q2 beat-and-raise + recent investor-conference visibility. |
+
+Only 1 of 60 watchlist tickers cleared threshold (WLDS gapped -8.08% but
+was excluded, price $2.39 < $3 min). Deep-dive cap is 5; only 1 hit so the
+single ticker gets the full deep dive below.
+
+#### Deep dive: AMPX $10.80 +6.2%
+
+- Catalyst: No new AMPX-specific news dated Aug 26 was found via Apify RAG
+  (queries covered general news + fundamentals). Most recent hard catalyst
+  is the Aug 4, 2026 Q2 report: revenue $34.0M (+126% YoY, record), gross
+  margin 27% (up from 20% in Q1), 2026 revenue guidance raised to at least
+  $140M (2nd consecutive raise), a new $24M European drone-manufacturer
+  order, and a multi-year Stark Future e-motorcycle supply deal (>$100M
+  opportunity). AMPX presented at Canaccord Genuity (Aug 11-12) and UBS
+  Energy Transition (Aug 13) investor conferences since. Several Form 4 /
+  Form 144 insider filings landed Aug 25 (direction not confirmed from the
+  scrape).
+- Why: No single new event explains today's move. Likely continuation of
+  post-earnings momentum in a low-float, thinly-traded small-cap, possibly
+  reinforced by same-day defense/drone-sector strength (AVAV disclosed a
+  $51M U.S. Army Switchblade order today) — AMPX supplies silicon-anode
+  cells into drone/defense customers (e.g. Redwire).
+- Impact: Premarket volume (276K sh) cleared the 50K screen but no ADV
+  baseline was pulled this run to judge it against normal turnover — flagged
+  as a data gap. Absent a fresh catalyst, a low-float momentum gap like this
+  is more likely to fade than hold. Sector read-through (drone/defense) is
+  plausible but not independently verified beyond the single AVAV headline.
+- Horizon: SHORT_TERM — no discrete new catalyst confirmed for today; the
+  real driver (Aug 4 earnings) is 3 weeks stale and already priced in.
+- Opportunity cost: 0 open positions and 0/3 weekly trades used this week
+  (per TRADE-LOG), so this would not displace an existing holding or
+  another gapper. AMPX's thin premarket turnover and small float raise
+  slippage/stop risk; no ATR-based stop distance was run (`scripts/size.mjs`)
+  this session — 2:1 R:R feasibility is unconfirmed. Research only, no
+  trade recommendation.

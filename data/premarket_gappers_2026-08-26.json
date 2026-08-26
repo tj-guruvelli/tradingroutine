@@ -1,5 +1,20 @@
 {
-  "scanned_at": "2026-08-26T12:30:06Z",
+  "scanned_at": "2026-08-26T13:23:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "AMPX",
+      "price": 10.80,
+      "gap_pct": 6.2,
+      "premarket_volume": 276195,
+      "catalyst": "No fresh headline found for today; price action reads as continued momentum off the Aug 4 Q2 beat-and-raise plus recent investor-conference visibility.",
+      "headlines": [],
+      "catalyst_detail": "No new AMPX-specific news item was found dated Aug 26. The most recent hard catalyst remains the Aug 4, 2026 Q2 report: revenue $34.0M (+126% YoY, record), gross margin 27% (up from 20% in Q1), 2026 revenue guidance raised to at least $140M (2nd straight raise), plus a new $24M European drone-manufacturer order and a multi-year Stark Future e-motorcycle supply deal (>$100M opportunity). Since then AMPX presented at Canaccord Genuity (Aug 11-12) and UBS Energy Transition (Aug 13) investor conferences. Several Form 4 / Form 144 insider filings landed Aug 25, direction not confirmed from the scrape.",
+      "why": "No single new event explains today's move; likely continuation of post-earnings momentum in a low-float, thinly-traded small-cap, possibly reinforced by same-day defense/drone-sector strength (AVAV disclosed a $51M U.S. Army Switchblade order today) given AMPX supplies silicon-anode cells into drone/defense customers (Redwire).",
+      "impact": "Premarket volume (276K sh) cleared the 50K screen but no baseline ADV was pulled this run to judge it against normal turnover, so sustainability is unconfirmed — flagged as a data gap. Absent a fresh catalyst, a low-float momentum gap like this is more likely to fade than hold. Sector read-through (drone/defense) is plausible but not verified beyond the single AVAV headline.",
+      "horizon": "SHORT_TERM — no discrete new catalyst was confirmed for today; the real driver (Aug 4 earnings) is 3 weeks stale and already priced in. Treat as headline/momentum-adjacent until a same-day source surfaces.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used this week, so this would not displace an existing holding or another gapper. However AMPX's thin premarket turnover and small float raise slippage/stop risk, and no ATR-based stop distance was run (scripts/size.mjs) — this is research only; whether it clears the 2:1 R:R minimum is unconfirmed."
+    }
+  ]
 }
