@@ -7749,3 +7749,10 @@ catalyst plus confluence to act on pre-open.
 not a missing-key issue) on two attempts — no ClickUp alert sent. Not
 escalated since today's call is HOLD (non-urgent) and env vars all
 verified present at session start.
+
+### Gappers (auto-scan 08:30 ET, cloud)
+
+No gappers cleared threshold — 0 of 69 watchlist tickers had |gap%| >= 5.0
+(min price $3, min premarket vol 50k where populated). No quick-scan table,
+no deep dive. `data/premarket_gappers_2026-08-26.json` written with empty
+`gappers: []` array for the record.
