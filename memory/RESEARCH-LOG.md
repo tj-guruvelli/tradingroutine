@@ -7859,3 +7859,17 @@ notification sent this run — 0 verified hits, no scan error.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
 for the full safety-check gate.
+
+### Setup Scan (18:39 ET, cloud)
+
+60 tickers scanned (`watchlist_tiers.immediate`), 0 errors. 0 grade-A hits, 3 grade-B hits. Same 3 names as the 16:38 ET run this session (market closed at 18:39 ET — daily-bar inputs unchanged, numbers near-identical).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 78.0, ADX 34.5, EMA9 $21.57 > EMA21 $19.68, px $24.82 |
+| BLSH | B | Momentum confluence | daily swing | RSI 70.3, ADX 27.6, EMA9 $28.39 > EMA21 $26.44, px $30.59 |
+| BWLP | B | Momentum confluence | daily swing | RSI 74.0, ADX 27.4, EMA9 $23.70 > EMA21 $22.72, px $23.45 |
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
+for the full safety-check gate.
