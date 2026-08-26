@@ -1,0 +1,12 @@
+{
+  "scanned_at": "2026-08-26T14:17:04Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "raw_scan_hits": [
+    {"symbol": "APT", "prev_close": 5.32, "current": 5.74, "gap_pct": 7.89, "volume": 421},
+    {"symbol": "ZIM", "prev_close": 27.84, "current": 25.87, "gap_pct": -7.08, "volume": 2138},
+    {"symbol": "WLDS", "prev_close": 2.6, "current": 2.42, "gap_pct": -6.92, "volume": 4869},
+    {"symbol": "UMAC", "prev_close": 23.9, "current": 25.275, "gap_pct": 5.75, "volume": 5123}
+  ],
+  "anomaly": "scripts/gappers-alpaca.sh flagged APT/ZIM/WLDS/UMAC as gappers, but this run fired at 10:15 ET (45min post-open), not premarket -- same stale-dailyBar bug documented 2026-08-21. Live Alpaca quote cross-check: APT mid ~5.325 (~flat vs true prior close 5.32), ZIM mid ~27.835 (~flat vs true prior close 28.09, not the 27.84 the script used as prev_close), WLDS excluded anyway (price $2.42 < $3 min), UMAC live quote spread too wide/stale to trust (bid 23.74 / ask 27.55) and daily bars (Aug25 close 24.325, today's in-progress bar 23.825-24.51) show no real 5.75% move. All 4 raw hits are false positives from the script comparing intraday ticks post-open, not a real overnight gap. Operator flag from 2026-08-21 (fix dailyBar/prevDailyBar selection once now > 9:30 ET) remains unresolved -- this is the second confirmed recurrence. No real gappers this run; verified gap count = 0."
+}

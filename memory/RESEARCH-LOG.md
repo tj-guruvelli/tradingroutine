@@ -7797,3 +7797,51 @@ single ticker gets the full deep dive below.
   slippage/stop risk; no ATR-based stop distance was run (`scripts/size.mjs`)
   this session — 2:1 R:R feasibility is unconfirmed. Research only, no
   trade recommendation.
+
+### Gappers (auto-scan 10:15 ET, cloud) — DATA BUG, false positives
+
+Raw scan flagged 4 "hits" at the 5.0% threshold:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.74 | +7.89% | 421 | INVALIDATED — see below |
+| 2 | ZIM | $25.87 | -7.08% | 2,138 | INVALIDATED — see below |
+| 3 | WLDS | $2.42 | -6.92% | 4,869 | INVALIDATED — see below |
+| 4 | UMAC | $25.275 | +5.75% | 5,123 | INVALIDATED — see below |
+
+**All 4 are false positives, not real gaps.** This run fired at 10:15 ET —
+45 minutes after the 9:30 open, not premarket. This is the same
+stale-`dailyBar` bug first documented on 2026-08-21 (see that date's entry):
+post-open, `dailyBar` reflects today's in-progress bar rather than
+yesterday's completed close, so `prev_close`/`current` end up comparing two
+intraday ticks against each other instead of a real overnight gap. **This is
+the second confirmed recurrence** — the 2026-08-21 operator flag to fix
+`scripts/gappers-alpaca.sh`'s baseline selection (prefer `prevDailyBar` once
+`now > 9:30 ET`, or check `dailyBar`'s own timestamp) remains unresolved.
+
+Live cross-check via `scripts/alpaca.sh quote` + `bash scripts/alpaca.sh
+bars SYM 1Day <start> <end>`:
+- APT: live mid ~$5.325 — flat vs. true prior close $5.32 (Aug 25 daily
+  bar), not +7.89%.
+- ZIM: live mid ~$27.835 — flat vs. Aug 25 daily-bar close $28.09 (the real
+  prior close). The script used $27.84 as `prev_close`, which is actually
+  today's (Aug 26) in-progress daily-bar close, not yesterday's — exactly
+  the documented bug mechanism.
+- WLDS: excluded by the $3 price floor regardless (price $2.42).
+- UMAC: live quote bid/ask $23.74/$27.55 is a stale/wide print, not
+  trustworthy; Aug 25 daily-bar close was $24.325 and today's in-progress
+  bar ranges $23.825–$24.51 — no real ~+5.75% move.
+
+Verified gap count for this run: **0**. No deep-dive research performed —
+would have researched a catalyst for price moves that never happened. Raw
+(invalidated) scan output saved to
+`data/premarket_gappers_2026-08-26_1015ET.json` for the record;
+`data/premarket_gappers_2026-08-26.json` (the 08:30/09:23 runs' file, which
+holds the genuine AMPX hit) was left untouched.
+
+**Repeat flag for operator:** `scripts/gappers-alpaca.sh` still has no
+time-of-day guard on its `dailyBar`/`prevDailyBar` selection. Any cloud
+trigger of this routine (or the local `/gappers` command) between 9:30 ET
+and whenever `prevDailyBar` next becomes stale-safe will keep producing
+fabricated gap signals for thin/illiquid names. No Telegram/ClickUp
+notification sent this run — 0 verified hits, no scan error.
