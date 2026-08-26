@@ -7845,3 +7845,83 @@ trigger of this routine (or the local `/gappers` command) between 9:30 ET
 and whenever `prevDailyBar` next becomes stale-safe will keep producing
 fabricated gap signals for thin/illiquid names. No Telegram/ClickUp
 notification sent this run — 0 verified hits, no scan error.
+
+**FIXED this session** (11:20 ET run below) — `scripts/gappers-alpaca.sh`
+now detects the dailyBar/prevDailyBar rollover from the bar's own date
+field instead of assuming dailyBar is always the prior close. This is the
+2nd confirmed recurrence (2026-08-21, 2026-08-26 10:15 ET) of the same
+bug; fix applied in commit `6838b32`.
+
+### Gappers (auto-scan 11:20 ET, cloud) — post-fix run
+
+Raw watchlist scan at `GAP_THRESHOLD=5.0` returned 8 rows; after the
+`price >= 3.0` and `premarket_volume >= 50000` gates, **2 verified hits**
+(both real moves, cross-checked against the fixed baseline — no repeat of
+the stale-dailyBar bug):
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QBTS | $17.83 | -7.93% | 415,171 | CFO resignation (Markovich) atop a multi-week quantum-sector selloff |
+| 2 | RR | $1.855 | -6.31% | 108,251 | Pre-earnings de-risking ahead of today's Q2 print, high (26.1%) short interest |
+
+6 rows failed the volume gate (thin/illiquid — BWLP, APT, WLDS, UMAC,
+PEPG, LPG, all <20K shares) and were excluded, not deep-dived; kept in
+`data/premarket_gappers_2026-08-26_1120ET.json` under
+`excluded_by_volume_gate` for the record.
+
+#### Deep dive: QBTS $17.83 -7.93%
+- Catalyst: CFO John Markovich resigned (announced Mon Aug 24 evening/Tue
+  Aug 25), Greg Golkov named acting CFO — on top of a sector-wide quantum
+  selloff running since ~Aug 18 (IONQ/RGTI/QUBT/QBTS moving together),
+  tied to rising Treasury yields (~4.7%) pressuring high-multiple growth
+  names.
+- Why: leadership-transition uncertainty plus rate pressure on an
+  unprofitable, >600x-trailing-sales name compounds into a sharper
+  single-day drop than peers; stock now near 52-week low, below 200-day
+  SMA.
+- Impact: reads as continuation/acceleration of an existing multi-week
+  downtrend (-21% over 3 months, -54% off 52-week high as of Aug 24), not
+  a fresh one-day shock. Fundamentals mixed-to-positive (backlog +8x YoY
+  to $40.7M, 2 system deliveries expected Q4) but cash burn heavy (H1 adj.
+  EBITDA -$69.9M) — vulnerable to any negative headline. Sector-wide
+  read-through confirmed (quantum names moving as a bloc all week).
+- Horizon: SHORT_TERM — the specific trigger (CFO resignation headline)
+  isn't a structural catalyst; the broader downtrend is rate-driven
+  sentiment, not a documented guidance/regime change, so treat as
+  headline-adjacent for any trade decision even though the trend predates
+  today.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — would not
+  displace an existing holding. Strategy is long-biased (200-SMA filter
+  requires price > 200-SMA for new longs); this is a downside gap with a
+  negative catalyst, so it doesn't fit as a long candidate under current
+  rules. Research only, no trade recommendation.
+
+#### Deep dive: RR $1.855 -6.31%
+- Catalyst: Richtech Robotics reports Q2 FY2026 earnings today (Wed Aug
+  26); analysts model a loss of ~$0.05/share on ~$1.55M revenue. Short
+  interest unusually high (26.1% of float, +182% YoY, 8.3 days to cover).
+  Follows a rocky stretch: delayed 10-Q, Q1 restatement, Nasdaq
+  late-filing notice, ongoing Nasdaq compliance/delisting deadline (Nov
+  24, 2026).
+- Why: traders de-risking/unwinding call-option positioning ahead of an
+  earnings print from a small-cap, high-short, thinly-profitable name;
+  live quotes matched the reported move closely as of ~11:16 ET.
+- Impact: likely earnings-day volatility, not a durable trend break — RR
+  swung +21.6% on a buyback headline two sessions ago. With the print
+  still pending, today's move reads as positioning/anticipation and could
+  reverse hard once numbers are out. No sector-wide read-through —
+  company-specific (earnings timing + high short float + delisting
+  overhang).
+- Horizon: SHORT_TERM — explicitly event-driven (same-day earnings),
+  high odds of a sharp reversal either direction intraday.
+- Opportunity cost: 0 open positions, 0/3 weekly trades used — would not
+  displace an existing holding or the QBTS candidate above. Both are
+  downside gaps and don't fit the strategy's long-bias entry rules; RR
+  additionally carries earnings-day binary risk and a delisting overhang,
+  making a sane 2:1 R:R stop distance hard to justify same-day. Research
+  only, no trade recommendation.
+
+Sources used (all non-Yahoo, per the search-side enforcement rule):
+cnn.com/markets/stocks/QBTS, trefis.com, marketbeat.com,
+stocktitan.net, moomoo.com. Saved to
+`data/premarket_gappers_2026-08-26_1120ET.json`.
