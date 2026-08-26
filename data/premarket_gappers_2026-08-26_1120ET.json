@@ -1,0 +1,42 @@
+{
+  "scanned_at": "2026-08-26T15:20:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "QBTS",
+      "price": 17.83,
+      "gap_pct": -7.93,
+      "premarket_volume": 415171,
+      "catalyst": "D-Wave Quantum extending a multi-week quantum-stock selloff, sharpened by this week's CFO resignation.",
+      "headlines": [],
+      "catalyst_detail": "CFO John Markovich resigned (announced Mon Aug 24 evening/Tue Aug 25), with Greg Golkov named acting CFO; TipRanks flagged the news as a negative. This lands on top of a sector-wide quantum-stock slide running since ~Aug 18, tied to rising Treasury yields (~4.7%) pressuring high-multiple, long-duration growth names (IONQ/RGTI/QUBT/QBTS have moved together most sessions this stretch).",
+      "why": "Leadership-transition uncertainty (CFO departure) compounds with macro rate pressure on an unprofitable, richly-valued growth name (QBTS trades >600x trailing sales) into a sharper single-day drop than peers. Stock is now near its 52-week low and below its 200-day SMA.",
+      "impact": "Reads as continuation/acceleration of an existing multi-week downtrend (down ~21% over 3 months, 54% off 52-week high as of Aug 24) rather than a fresh one-day shock. Fundamentals are mixed-to-positive (order backlog +8x YoY to $40.7M, two system deliveries expected Q4) but cash burn is heavy (H1 adj. EBITDA -$69.9M), leaving the stock vulnerable to any negative headline. Sector-wide read-through confirmed — quantum names have moved as a bloc all week.",
+      "horizon": "SHORT_TERM — the immediate driver (CFO resignation headline) is not a structural catalyst; underlying multi-week downtrend is rate-driven sentiment, not a documented regime/guidance change, so treat as headline-adjacent for trade-decision purposes even though the trend itself is not new.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used this week, so this would not displace an existing holding. Strategy is long-biased (200-SMA filter requires price > 200-SMA for new longs) and this is a downside gap with negative catalyst — does not fit as a long candidate; would only be actionable as a short, which is outside the observed rule set here. Research only, no trade recommendation."
+    },
+    {
+      "rank": 2,
+      "symbol": "RR",
+      "price": 1.855,
+      "gap_pct": -6.31,
+      "premarket_volume": 108251,
+      "catalyst": "Richtech Robotics reports Q2 FY2026 earnings today; pre-print de-risking against a high short-interest base is driving the move.",
+      "headlines": [],
+      "catalyst_detail": "Multiple sources confirm Richtech Robotics (RR) reports Q2 FY2026 results today (Wed Aug 26); analysts model a loss of ~$0.05/share on ~$1.55M revenue. Short interest is unusually high — 26.1% of float, up 182% YoY, 8.3 days to cover — a setup prone to violent pre/post-earnings swings. This follows a rocky stretch: a delayed 10-Q, a Q1 restatement, a Nasdaq late-filing notice, and an ongoing Nasdaq compliance/delisting deadline (Nov 24, 2026).",
+      "why": "Traders de-risking or unwinding call-option positioning ahead of an earnings print from a small-cap, high-short, thinly-profitable name explains the sharp intraday drop; live quotes matched the reported move closely as of ~11:16 ET.",
+      "impact": "Likely earnings-day volatility rather than a durable trend break — RR has swung sharply on news before (e.g. a buyback announcement drove +21.6% two sessions ago). With the print still pending, today's move looks like positioning/anticipation, not a verdict; direction could reverse hard once numbers are out. No sector-wide read-through — company-specific (earnings timing + high short float + delisting overhang).",
+      "horizon": "SHORT_TERM — explicitly headline/event-driven (same-day earnings print), high likelihood of a sharp reversal either direction within the session.",
+      "opportunity_cost": "0 open positions and 0/3 weekly trades used this week, so this would not displace an existing holding or the QBTS candidate above. Both are downside gaps and don't fit the strategy's long-bias entry rules; RR additionally carries earnings-day binary risk and a Nasdaq delisting overhang, which would make sizing a same-day long/short call especially hard to justify at a sane 2:1 R:R stop distance. Research only, no trade recommendation."
+    }
+  ],
+  "excluded_by_volume_gate": [
+    {"symbol": "BWLP", "price": 22.095, "gap_pct": -10.8, "premarket_volume": 6864},
+    {"symbol": "APT", "price": 5.70, "gap_pct": 7.14, "premarket_volume": 421},
+    {"symbol": "WLDS", "price": 2.425, "gap_pct": -6.73, "premarket_volume": 4869},
+    {"symbol": "UMAC", "price": 22.77, "gap_pct": -6.39, "premarket_volume": 18146},
+    {"symbol": "PEPG", "price": 3.235, "gap_pct": -5.69, "premarket_volume": 8784},
+    {"symbol": "LPG", "price": 47.835, "gap_pct": -5.6, "premarket_volume": 4799}
+  ]
+}
