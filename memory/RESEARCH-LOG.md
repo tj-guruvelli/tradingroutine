@@ -7845,3 +7845,17 @@ trigger of this routine (or the local `/gappers` command) between 9:30 ET
 and whenever `prevDailyBar` next becomes stale-safe will keep producing
 fabricated gap signals for thin/illiquid names. No Telegram/ClickUp
 notification sent this run — 0 verified hits, no scan error.
+
+### Setup Scan (16:38 ET, cloud)
+
+60 tickers scanned (`watchlist_tiers.immediate`), 0 errors. 0 grade-A hits, 3 grade-B hits.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 78, ADX 34.5, EMA9 $21.57 > EMA21 $19.68, px $24.82 |
+| BLSH | B | Momentum confluence | daily swing | RSI 70.3, ADX 27.6, EMA9 $28.39 > EMA21 $26.44, px $30.59 |
+| BWLP | B | Momentum confluence | daily swing | RSI 74.0, ADX 27.4, EMA9 $23.70 > EMA21 $22.72, px $23.45 |
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
+for the full safety-check gate.
