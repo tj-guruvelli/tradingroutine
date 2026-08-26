@@ -7690,3 +7690,62 @@ no new tickers rotated in.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-08-26 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders | 0 daytrades. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending.
+
+**Market context:**
+- **Oil:** Brent $85.94, −2.98% (−$2.64) as of 07:02 ET (Markets Insider) —
+  third straight down-session (Bloomberg), 52wk range $58.72–$126.41.
+- **S&P futures:** −0.1% premarket; Treasuries retreating across the curve
+  ahead of the PCE print, shrugging off the oil decline.
+- **VIX:** 15.64, +1.23% (+$0.19) vs. prev close 15.45 (Cboe official data,
+  as of 11:02 ET) — mild uptick, still well inside the 52wk range
+  (13.38–35.30) and near 2026 lows.
+- **Today's catalysts:** (1) Core PCE — Fed's preferred inflation gauge —
+  8:30am ET, alongside Q2 GDP second estimate, personal income/spending,
+  and July durable goods orders, all 8:30am ET. (2) **Nvidia (NVDA)
+  earnings** — options imply a 5.4% post-earnings move; also CRM, CRWD,
+  SNPS, A, HPQ, OKTA, WSM reporting today (mix of before/after close, not
+  cleanly split in sources checked). Nasdaq-100 futures −0.2% heading in.
+- **Sector momentum YTD** (as of 8/7, S&P Global/Westmount): Technology
+  +7.3% (leader), Materials +6.1%, Industrials +3.3%, Consumer Disc +2.8%,
+  Health Care +2.0%, Communications +1.3%, Financials +1.2%, Staples
+  +0.2%; Real Estate −0.5%, Utilities −1.4%, Energy −3.3% (laggards) —
+  though Energy had a sharp +12% July reversal on the oil rally that is
+  now unwinding (today's −2.98% Brent print continues that unwind).
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser returned garbled/off-topic
+  results for the "S&P 500 futures" and "sector momentum" queries (matched
+  unrelated "S"/Astrid S pages) — fell back to native WebSearch for those
+  two plus catalysts/earnings/econ-calendar, per routine fallback rule.
+  Yahoo-exclusion suffix applied to all Apify queries; no Yahoo-sourced
+  figures used above.
+
+**Risk factors:** Two binary/event risks stacked same-morning — PCE at
+8:30am ET (rate-expectations swing either direction) and NVDA earnings
+(5.4% implied move, AI-complex read-through to SMCI/AVGO/AMD) — high
+event risk for any new same-day entry. Energy/oil continuing to unwind its
+July spike (3rd down day) argues against new energy longs. No
+`tradingview-data` MCP available this cloud run — no confluence/technical
+check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+today — no confluence tooling available and both major catalysts (PCE,
+NVDA) land same-day, which argues for letting the print land before
+sizing anything in the AI/semis or rate-sensitive complex. Watch-only,
+no entry/stop/target: (1) AI/semis read-through (SMCI, AVGO, AMD) post-
+NVDA print, (2) rate-sensitive sectors (XLK, homebuilders) post-PCE.
+
+**Decision: HOLD.** No open positions, no planned trades. Patience over
+activity — event-heavy day (PCE + NVDA) with no clean single-name
+catalyst plus confluence to act on pre-open.
+
+**Notification note:** `scripts/clickup.sh` returned HTTP 500 (server-side,
+not a missing-key issue) on two attempts — no ClickUp alert sent. Not
+escalated since today's call is HOLD (non-urgent) and env vars all
+verified present at session start.
