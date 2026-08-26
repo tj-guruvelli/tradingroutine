@@ -84,13 +84,21 @@ rows = []
 for sym, snap in data.items():
     # Pre-market: today's session hasn't started, so Alpaca's "dailyBar" is
     # still carrying the most recently COMPLETED session (i.e. yesterday's
-    # close) — that's the correct baseline for a premarket gap. "prevDailyBar"
-    # is one session further back and is stale for this purpose. Only fall
-    # back to prevDailyBar if dailyBar is missing outright (e.g. no trades
-    # in the most recent session).
+    # close) — that's the correct baseline for a premarket gap. Once today's
+    # regular session opens, Alpaca rolls "dailyBar" over to today's
+    # in-progress bar and "prevDailyBar" becomes yesterday's completed close
+    # instead. Detect this by the bar's own date rather than trusting a
+    # fixed clock cutoff (holidays/halts shift when the rollover happens):
+    # if dailyBar's timestamp is today, it's the in-progress bar and
+    # prevDailyBar is the real prior close (confirmed recurring false-positive
+    # bug, 2026-08-21 and 2026-08-26 — see RESEARCH-LOG).
     daily = snap.get("dailyBar") or {}
     prev = snap.get("prevDailyBar") or {}
-    prev_close = daily.get("c") or prev.get("c") or 0.0
+    daily_date = str(daily.get("t", ""))[:10]
+    if daily and daily_date == today:
+        prev_close = prev.get("c") or 0.0
+    else:
+        prev_close = daily.get("c") or prev.get("c") or 0.0
     # Pick whichever of quote/trade is more recent, but only trust it if it's
     # actually from today's session — thinly-traded names can carry Monday's
     # closing quote/trade forward unchanged, which produces a fake "gap"
