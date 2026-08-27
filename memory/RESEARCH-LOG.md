@@ -7943,3 +7943,19 @@ pullback (now multi-day) stabilizes despite the sector's YTD lead.
 activity — no clean single-name catalyst plus confluence to act on
 pre-open, and today's live earnings (MRVL) plus NVDA read-through argue
 for waiting on confirmation.
+
+### Gappers (auto-scan 08:25 ET, cloud)
+
+60-ticker watchlist scanned via `scripts/gappers-alpaca.sh watchlist`
+(GAP_THRESHOLD=5.0), 0 errors. **0 hits at 5% threshold** — max move seen
+was ORCL +1.65% (diagnostic re-run at GAP_THRESHOLD=0.0 to confirm data
+was flowing, not silently broken). Only 6 of 60 watchlist symbols carried
+a fresh today-session quote/trade this early in premarket (ORCL, ONDS,
+RCAT, GOOG, NIO, OPEN) — normal for thin premarket liquidity at 08:25 ET,
+not the stale-`dailyBar` bug flagged 2026-08-21/2026-08-26 (that bug fires
+post-9:30-open; this run is premarket and `gappers-alpaca.sh` now guards
+on `dailyBar` timestamp + requires a same-day quote/trade before computing
+a gap). No deep-dive research run — no candidates to research. No
+Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+routine's quiet rule). Raw output saved to
+`data/premarket_gappers_2026-08-27.json`.
