@@ -8073,3 +8073,15 @@ recheck before any action.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidate only, not an order — feed to `/trade`
 for the full safety-check gate.
+
+### Setup Scan (18:38 ET, cloud)
+
+60 tickers scanned (`watchlist_tiers.immediate`), 0 errors. 0 grade-A hits, 1 grade-B hit.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| CMBT | B | Momentum confluence | daily swing | RSI 62.7, ADX 29.6, EMA9 $17.65 > EMA21 $17.03, px $18.22 |
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). Candidate only, not an order — feed to `/trade`
+for the full safety-check gate.
