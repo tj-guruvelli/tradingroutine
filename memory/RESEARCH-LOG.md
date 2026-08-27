@@ -8061,3 +8061,15 @@ given the earnings beat + advancing M&A; BWLP is a secondary candidate on
 fundamentals despite no fresh headline; APT lacks a documented catalyst;
 BKSY's down-gap conflicts with same-day AAII data and needs a market-open
 recheck before any action.
+
+### Setup Scan (16:39 ET, cloud)
+
+60 tickers scanned (`watchlist_tiers.immediate`), 0 errors. 0 grade-A hits, 1 grade-B hit.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| CMBT | B | Momentum confluence | daily swing | RSI 62.7, ADX 29.6, EMA9 $17.65 > EMA21 $17.03, px $18.22 |
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). Candidate only, not an order — feed to `/trade`
+for the full safety-check gate.

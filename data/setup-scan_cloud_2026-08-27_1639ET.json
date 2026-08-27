@@ -1,0 +1,31 @@
+{
+  "scanned_at": "2026-08-27T20:39:04.594Z",
+  "ny_time": "16:39",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "CMBT",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 18.22,
+      "prev_daily_high": 18.03,
+      "prev_daily_close": 17.65,
+      "sma200": 13.37,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 18.41,
+      "rsi14": 62.73,
+      "adx14": 29.61,
+      "ema9": 17.65,
+      "ema21": 17.03,
+      "premarket_volume": 0,
+      "daily_volume": 117733,
+      "avg_daily_volume_30": 54723,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
