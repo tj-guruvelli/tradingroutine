@@ -7943,3 +7943,88 @@ pullback (now multi-day) stabilizes despite the sector's YTD lead.
 activity — no clean single-name catalyst plus confluence to act on
 pre-open, and today's live earnings (MRVL) plus NVDA read-through argue
 for waiting on confirmation.
+
+### Gappers (auto-scan 09:17 ET, cloud)
+
+Apify RAG web browser returned "Scraped 0 pages" on every query today,
+including a bare test query with no site exclusions — confirmed tool-side
+outage, not a query-syntax issue. Fell back to native WebSearch for all
+catalyst/deep-dive research per the routine's fallback rule; Yahoo domains
+blocked via `blocked_domains` on every call, no Yahoo-sourced figures used
+below. Benzinga WebFetch fallback also failed (403 on both tickers).
+
+2 of 60 watchlist tickers cleared threshold (gap% >= 5.0, price >= $3).
+Deep-dive cap is 5; both hits get the full deep dive below.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $226.75 | +5.98% | 223,884 | Goldman Sachs raised its price target on Nebius to $328 from $286 (Buy) after Q2 revenue rose 454% YoY and turned adjusted EBITDA positive. |
+| 2 | BE | $229.68 | +5.19% | 349,339 | Bloom Energy extends its rally after disclosure that Nancy Pelosi's household bought a multimillion-dollar stake, layered on top of blowout Q2 earnings and raised FY26 guidance. |
+
+#### Deep dive: NBIS $226.75 +5.98%
+
+- Catalyst: Nebius Group (NBIS) gapped up ~6% pre-market after a
+  six-session slide, driven by Goldman Sachs raising its price target to
+  $328 from $286 (Buy). Q2 revenue hit $582.3M, up 454% YoY, with adjusted
+  EBITDA turning positive at $236.2M for the first time. The company also
+  priced an upsized $5B convertible note to fund accelerated AI/data-center
+  buildout, and shareholders approved all AGM proposals (2025 accounts,
+  board reappointments, auditor, governance authorizations) on Aug 25.
+- Why: An analyst price-target hike plus a blowout growth print (454% YoY
+  revenue, first positive adjusted EBITDA) pulled in momentum buyers after
+  a multi-day pullback; the convertible-note financing also removes a
+  near-term funding overhang that had been weighing on the stock.
+- Impact: Premarket volume (223.9K) clears the 50K screen and the move
+  follows a real earnings beat plus analyst upgrade rather than a single
+  headline spike, so it reads as more durable than a one-day pop — though
+  the prior six-day slide and fresh dilution risk from the convertible
+  offering are worth tracking. AI-infrastructure peers have shown similar
+  demand-driven strength, suggesting some sector read-through rather than a
+  name-specific spike alone.
+- Horizon: LONG_TERM — structural growth story (454% YoY revenue, AI-infra
+  capacity expansion) plus fresh capital from the convertible raise fits a
+  still-intact AI-infrastructure momentum theme, worth a multi-day swing
+  look if it clears Confluence on a later `/trade` check.
+- Opportunity cost: Only 2 gappers cleared the 5% watchlist screen today
+  (NBIS, BE), both AI-infra-adjacent. With 0 open positions, taking NBIS
+  wouldn't displace an existing holding, but entering both today would use
+  2 of the week's 3 new-trade slots. At a stop below the pre-market low
+  (roughly 5-7% below $226.75), the move would need to continue several
+  percent further to clear a 2:1 reward:risk minimum — plausible given the
+  size of the recent range but unconfirmed without an ATR-based stop run
+  (`scripts/size.mjs`). Research only, no trade recommendation.
+
+#### Deep dive: BE $229.68 +5.19%
+
+- Catalyst: Bloom Energy (BE) extended a rally (+5.2% pre-market today)
+  after congressional disclosure filings dated Aug 21 revealed Nancy
+  Pelosi's household bought 15,000 Class A shares plus 200 call options
+  ($100 strike, June 2027 expiry) in late July, worth an estimated
+  $4.25M-$14.5M. This built on an already-strong move from Q2 earnings
+  (adjusted EPS $0.78 vs $0.41 est., revenue $1.07B vs $827M est.) and a
+  raised FY26 guide to $2.55-$2.85 adjusted EPS / $3.9B-$4.2B revenue, plus
+  an expanded MiTAC AI-data-center microgrid deal (~250MW contracted
+  capacity).
+- Why: A high-profile insider-style disclosure (Pelosi stake) acted as a
+  retail/momentum sentiment trigger layered on top of a genuine fundamental
+  catalyst — an earnings beat with a large guidance raise and expanding
+  AI-power-demand contracts.
+- Impact: Premarket volume (349K) is solid and the move stacks a real
+  guidance raise plus expanding AI-power contracts on top of the disclosure
+  headline, so it looks like more than a pure headline spike, though the
+  political-disclosure layer specifically could fade once attention moves
+  on. There is plausible sector-wide read-through to other AI-power/
+  on-site-generation names given the broader AI-power-demand narrative.
+- Horizon: LONG_TERM — the guidance raise and expanding AI-data-center
+  power contracts are structural, aligning with an AI-infrastructure/power-
+  demand rotation theme, worth a multi-day swing look pending Confluence
+  check; the Pelosi-disclosure layer itself is a SHORT_TERM sentiment
+  kicker on top of that base.
+- Opportunity cost: Same 2-gapper day as NBIS — taking BE would use
+  another of the week's 3 new-trade slots (2 of 3 if paired with NBIS).
+  With 0 open positions and a 6-position/20%-per-position cap, sizing isn't
+  constrained by existing holdings today, but stacking two same-week
+  entries limits room for later setups. At a stop below the pre-market low
+  (roughly 5-7% below $229.68), the setup needs a comparable percentage
+  upside to clear a 2:1 reward:risk minimum — check against
+  TRADING-STRATEGY.md's Entry Checklist before any `/trade` call.
