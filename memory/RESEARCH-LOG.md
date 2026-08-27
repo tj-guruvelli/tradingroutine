@@ -7943,3 +7943,121 @@ pullback (now multi-day) stabilizes despite the sector's YTD lead.
 activity — no clean single-name catalyst plus confluence to act on
 pre-open, and today's live earnings (MRVL) plus NVDA read-through argue
 for waiting on confirmation.
+
+### Gappers (auto-scan 10:17 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | $5.70 | +7.75% | n/a (thin, prior-session daily bar) | Testing technical resistance levels; no company-specific news found |
+| 2 | BWLP | $25.86 | +7.44% | n/a (thin, prior-session daily bar) | Strong technical/fundamental momentum (Minervini screen); no fresh headline |
+| 3 | BKSY | $23.42 | -7.25% | n/a (thin, prior-session daily bar) | Data conflict — AAII same-day snapshot shows +1.76%, not a confirmed drop |
+| 4 | ZIM | $29.92 | +6.46% | n/a (thin, prior-session daily bar) | Q2 earnings beat (Aug 19) + advancing $4.2B Hapag-Lloyd/FIMI acquisition |
+
+Only 4 tickers on the ~60-name watchlist cleared the ±5% gap / $3 price
+filter this scan — all 4 got the full deep-dive (below cap of 5, so
+nothing was dropped to quick-scan-only). `gappers-alpaca.sh`'s volume
+field is the prior completed session's full-day volume, not a true
+premarket-volume figure (Alpaca's snapshot endpoint has no distinct
+premarket-volume field) — the `premarket_volume >= 50000` filter from the
+routine spec could not be applied; noted as a data gap rather than
+silently treated as passing.
+
+#### Deep dive: APT $5.70 +7.75%
+- Catalyst: No company-specific news, filing, or press release found —
+  only generic syndicated technical-level commentary (Zacks-style).
+  Alpha Pro Tech is a thin microcap (PPE/safety, building products).
+- Why: No documented catalyst → reads as technical/momentum-driven price
+  action in a thin, low-float name where a small order imbalance can
+  produce an outsized % move.
+- Impact: Volume backing the move looks minimal vs. the prior session —
+  consistent with illiquidity-driven noise, high mean-revert risk. No
+  sector read-through identified.
+- Horizon: SHORT_TERM — no durable catalyst; thin-volume technical pops
+  typically fade once early buyers take profit.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used, so no
+  existing holding displaced — but with no documented catalyst this
+  likely can't clear the Confluence rule (catalyst + 2 aligned
+  indicators). Better to save a weekly trade slot for ZIM (below).
+
+#### Deep dive: BWLP $25.86 +7.44%
+- Catalyst: No same-day headline found (one source access-denied, one
+  several-months-old momentum writeup). Standing fundamental backdrop:
+  quarterly EPS growth accelerated to +140.9% YoY (from prior declines of
+  -51.9%/-59.3%/-90.3%), sales growth accelerated to +37.0%, profit
+  margin jumped 3.3%→14.2% QoQ, FY EPS estimates revised up +71.8% over 3
+  months.
+- Why: BWLP passes the Minervini Trend Template at a 10/10 technical
+  rating (price above rising 50/150/200-day SMAs, near 52-week highs) —
+  the accelerating EPS/margin trend is real fundamental confirmation
+  consistent with today's gap even absent a fresh headline.
+- Impact: Today's gap volume looks thin vs. BWLP's implied typical
+  liquidity (~$3.66B market cap) — unclear if today's specific move is
+  volume-backed or a thin-liquidity spike on a genuinely strong
+  multi-month uptrend. Sector read-through: BWLP and ZIM (below) both sit
+  in the shipping/tanker complex — check freight-rate data before
+  treating these as two unrelated single-name moves.
+- Horizon: LONG_TERM — EPS/sales/margin acceleration and upward estimate
+  revisions are structural, not headline-driven; a name suited to a
+  multi-week swing hold if a later /trade check confirms Confluence.
+- Opportunity cost: No existing position displaced (0/6 open); would use
+  1 of 3 weekly trade slots. If both BWLP and ZIM pass Confluence, rank
+  by stop-distance/R:R at trade time — taking both plus a third idea this
+  week would hit the 3-trade weekly cap.
+
+#### Deep dive: BKSY $23.42 -7.25%
+- Catalyst: No single acute negative catalyst found. AAII's same-day
+  (Aug 27) article actually shows BKSY up 1.76% intraday as of their
+  snapshot, citing 1 analyst downgrade in the past month and a Value
+  Grade of F ("Ultra Expensive"). BKSY is +33.95% YTD, +8.96% MTD in
+  August, having hit a $32.39 August high before pulling back. NYSE
+  delisting proceedings (Aug 10) apply to BKSY's warrants (BKSY.W), not
+  the common stock; Q2 earnings (beat, reported Aug 6) are stale.
+- Why: Reads as valuation-driven profit-taking after an extended run — a
+  high-beta AI/space-intel story stock with a fresh downgrade and
+  "Ultra Expensive" grade giving sellers a reason to trim into strength,
+  not a company-specific negative event.
+- Impact: Alpaca's -7.25% gap conflicts with AAII's same-day +1.76%
+  reading — likely a premarket-vs-regular-session mismatch, not a
+  confirmed 7% drawdown. Flag for market-open recheck; do not act on this
+  print alone. If real, could read through to satellite/space-intel names
+  on the watchlist (RDW, LUNR, ASTS, PL) given no BKSY-specific bad news.
+- Horizon: SHORT_TERM if real — valuation/positioning-driven, not
+  thesis-breaking, but too noisy to call durable given the data conflict.
+- Opportunity cost: Not a buy candidate on a down gap without a confirmed
+  mean-reversion setup at market open. Data conflict makes this
+  watch-only, not a claim against the 3-trade weekly cap.
+
+#### Deep dive: ZIM $29.92 +6.46%
+- Catalyst: Q2 2026 earnings (Aug 19) beat big — EPS $0.53 vs. -$0.02
+  est., revenue $1.78B. Separately, the pending $4.2B Hapag-Lloyd/FIMI
+  acquisition continues to advance — a former director of Israel's
+  Shipping and Ports Authority publicly backed the deal in an article
+  dated today (Aug 27), against opposition from the current Shipping
+  Authority director and Zim's own workers' union.
+- Why: The earnings beat pulls in momentum buyers on its own; positive
+  M&A-process developments (debt-free fleet post-deal, Hapag-Lloyd
+  commercial agreements) reduce deal-completion uncertainty and support
+  re-rating toward deal-implied value.
+- Impact: Momentum backdrop is real — +11.14% over the past month,
+  +27.55% YTD (TradingView), Buy/Strong Buy technical ratings across
+  1-week/1-month horizons. Sector read-through: BWLP (above) sits in the
+  same shipping/tanker complex — check freight-rate indices before
+  sizing either as fully idiosyncratic.
+- Horizon: LONG_TERM — the M&A process is structural and the Q2 beat
+  supports the fundamental case; fits a multi-day/week swing hold if
+  Confluence confirms at trade time. Note: shipping isn't one of
+  TRADING-STRATEGY.md's four sector-rotation phases explicitly — treat as
+  an idiosyncratic M&A/earnings story, not a sector-rotation play.
+- Opportunity cost: No existing position displaced. Strongest-catalyst
+  candidate of today's 4 (earnings beat + advancing M&A vs. APT's
+  no-catalyst pop, BWLP's stale-but-real fundamental trend, BKSY's
+  unconfirmed down-gap) — ranks first for a /trade confluence check if
+  only one weekly slot gets used. Must still verify stop distance clears
+  2:1 min R:R and check the correlation gate against BWLP given shared
+  shipping-sector exposure.
+
+**Gappers decision: WATCH-ONLY, no orders placed** (research-only routine
+per Step 8). ZIM is the standout candidate for a /trade confluence check
+given the earnings beat + advancing M&A; BWLP is a secondary candidate on
+fundamentals despite no fresh headline; APT lacks a documented catalyst;
+BKSY's down-gap conflicts with same-day AAII data and needs a market-open
+recheck before any action.

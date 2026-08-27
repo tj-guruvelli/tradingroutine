@@ -1,0 +1,72 @@
+{
+  "scanned_at": "2026-08-27T14:17:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "APT",
+      "price": 5.70,
+      "gap_pct": 7.75,
+      "premarket_volume": null,
+      "catalyst": "Alpha Pro Tech shares are gaining ground and testing technical resistance levels, per syndicated Zacks-style coverage; no company-specific news (earnings/M&A/contract) identified.",
+      "headlines": [
+        "Alpha Pro Tech Ltd. (APT) Gains Ground as Technical Levels ...",
+        "Alpha Pro Tech (APT) Advances 2.1% to $5.36, Testing ..."
+      ],
+      "catalyst_detail": "No company-specific news, filing, or press release surfaced in the research window. Coverage found was generic syndicated technical-level commentary (Zacks-style) with no named catalyst. Alpha Pro Tech makes PPE/safety and building products; it is a thinly traded microcap (source volume field ~1,077 shares on the reference daily bar).",
+      "why": "With no documented fundamental catalyst, the move reads as technical/momentum-driven price action in an extremely thin, low-float name, where a small order imbalance can produce an outsized percentage move.",
+      "impact": "Volume backing the move is minimal versus the prior session, consistent with illiquidity-driven noise rather than an institutionally-backed move — high mean-revert risk. No sector-wide read-through identified.",
+      "horizon": "SHORT_TERM, no durable catalyst identified — a thin-volume technical pop typically fades once early buyers take profit.",
+      "opportunity_cost": "0/6 positions open and 0/3 weekly trades used, so APT would not displace an existing holding. But with no documented catalyst it likely cannot clear the Confluence rule (documented catalyst + 2 aligned indicators); better to preserve a weekly trade slot for a higher-conviction setup on today's list (ZIM) than to force this one."
+    },
+    {
+      "rank": 2,
+      "symbol": "BWLP",
+      "price": 25.86,
+      "gap_pct": 7.44,
+      "premarket_volume": null,
+      "catalyst": "BW LPG continues to show strong technical and fundamental momentum, having passed Minervini Trend Template screens on accelerating EPS and sales growth (per a ChartMill writeup); no fresh same-day headline identified.",
+      "headlines": [
+        "BW LPG Ltd (NYSE:BWLP) Shows Strong Momentum and Fundamentals",
+        "Why BW LPG Limited's (BWLP) Stock Is Up 5.17%"
+      ],
+      "catalyst_detail": "No single-day news catalyst identified in today's research window (one source returned access-denied, another was a several-month-old momentum writeup). Standing fundamental backdrop: quarterly EPS growth accelerated to +140.9% YoY (from prior declines of -51.9%/-59.3%/-90.3%), quarterly sales growth accelerated to +37.0%, and profit margin jumped from 3.3% to 14.2% quarter-over-quarter. Analyst FY EPS estimates have been revised up 71.8% over the last 3 months.",
+      "why": "BWLP passes the Minervini Trend Template with a 10/10 technical rating (price above rising 50/150/200-day SMAs, near 52-week highs). The accelerating EPS/margin trend is the kind of fundamental confirmation that keeps institutional buyers engaged, consistent with today's gap even absent a fresh headline.",
+      "impact": "Today's gap volume (source field ~10.8K shares) looks thin relative to BWLP's implied typical liquidity (~$3.66B market cap), so it's unclear whether today's move is backed by real volume or is a thin-liquidity spike layered on a genuinely strong multi-month uptrend. Sector read-through: BWLP and ZIM (also gapping up today) both sit in the shipping/tanker complex — worth checking freight-rate data before treating these as two unrelated idiosyncratic moves.",
+      "horizon": "LONG_TERM, the EPS/sales/margin acceleration and upward estimate revisions are structural, not headline-driven — a name a multi-week swing hold could suit if a later /trade check confirms Confluence.",
+      "opportunity_cost": "No existing position to displace (0/6 open). Would use 1 of 3 weekly trade slots. If both BWLP and ZIM pass Confluence at trade time, rank by stop-distance/R:R to decide which to take, since taking both plus a third idea this week would hit the 3-trade weekly cap."
+    },
+    {
+      "rank": 3,
+      "symbol": "BKSY",
+      "price": 23.42,
+      "gap_pct": -7.25,
+      "premarket_volume": null,
+      "catalyst": "AAII's same-day note (Aug 27) shows BKSY actually up 1.76% intraday as of their snapshot, citing 1 analyst downgrade in the past month and an 'Ultra Expensive' valuation grade — a data conflict with today's Alpaca premarket gap-down print.",
+      "headlines": [
+        "Why BlackSky Technology Inc.'s (BKSY) Stock Is Down 6.90% | AAII"
+      ],
+      "catalyst_detail": "No single acute negative catalyst found. AAII's same-day (Aug 27) article shows BKSY up 1.76% intraday as of their snapshot, flagging 1 analyst downgrade in the past month and a Value Grade of F ('Ultra Expensive'). BKSY is up 33.95% YTD and 8.96% month-to-date in August, having hit a $32.39 August high — the stock is pulling back from that high. Older items (Aug 10) reference NYSE beginning delisting proceedings for BKSY's warrants (BKSY.W, not the common stock); Q2 earnings (reported Aug 6, beat on revenue) are over two weeks stale.",
+      "why": "Reads as valuation-driven profit-taking after an extended run — a high-beta AI/space-intelligence story stock with a fresh analyst downgrade and an 'Ultra Expensive' grade giving sellers a reason to trim into strength, not a company-specific negative event.",
+      "impact": "The Alpaca snapshot's -7.25% gap conflicts with AAII's same-day +1.76% reading, so today's data quality is questionable — likely a premarket-vs-regular-session-price mismatch rather than a confirmed 7% drawdown. Flag for the market-open recheck; do not act on this print alone. If real, this could read through to the broader satellite/space-intel names (RDW, LUNR, ASTS, PL on the watchlist) given no BKSY-specific bad news.",
+      "horizon": "SHORT_TERM if real — valuation/positioning-driven, not thesis-breaking, but too noisy to call durable given the data conflict.",
+      "opportunity_cost": "Not a buy candidate on a down gap without a confirmed mean-reversion setup at market open. Data conflict makes this watch-only — not a claim against the 3-trade weekly cap."
+    },
+    {
+      "rank": 4,
+      "symbol": "ZIM",
+      "price": 29.915,
+      "gap_pct": 6.46,
+      "premarket_volume": null,
+      "catalyst": "ZIM Integrated Shipping continues to climb on a strong Q2 earnings beat (EPS $0.53 vs -$0.02 est., reported Aug 19) plus continued progress toward its $4.2B Hapag-Lloyd/FIMI acquisition, backed today by a former Israeli shipping-authority director against union/regulator opposition.",
+      "headlines": [
+        "Former shipping chief backs new Zim, challenging warnings over $4.2 billion deal"
+      ],
+      "catalyst_detail": "ZIM reported Q2 2026 earnings Aug 19 with EPS of $0.53 vs. a -$0.02 estimate (a large beat) and revenue of $1.78B. Separately, the pending $4.2B acquisition of Zim by Hapag-Lloyd and Israeli PE fund FIMI continues to advance — a former director of Israel's Shipping and Ports Authority publicly backed the deal in an article dated today (Aug 27), against opposition from Israel's current Shipping Authority director and Zim's own workers' union, who call it a 'destructive financial transaction.'",
+      "why": "The earnings beat pulls in momentum buyers on its own; layered on top, continued positive developments in the M&A process (a debt-free fleet post-deal, Hapag-Lloyd commercial agreements) reduce deal-completion uncertainty and support the stock re-rating toward deal-implied value.",
+      "impact": "Volume/momentum backdrop is real — ZIM is +11.14% over the past month and +27.55% YTD per TradingView, with Buy/Strong Buy technical ratings across 1-week and 1-month horizons. Sector read-through: BWLP (also on today's gapper list) sits in the same shipping/tanker complex, suggesting a possible sector-wide freight-rate tailwind rather than two unrelated single-name moves — worth checking freight-rate indices before sizing either.",
+      "horizon": "LONG_TERM, the M&A process is structural and the Q2 beat supports the fundamental case — fits a multi-day/week swing hold if Confluence confirms at trade time. Note: NYSE-listed shipping isn't one of TRADING-STRATEGY.md's four sector-rotation phases explicitly, so treat this as an idiosyncratic M&A/earnings story rather than a sector-rotation play.",
+      "opportunity_cost": "No existing position to displace. Strongest-catalyst candidate of today's 4 gappers (earnings beat + advancing M&A vs. APT's no-catalyst technical pop, BWLP's stale-but-real fundamental trend, and BKSY's unconfirmed/conflicting down-gap) — ranks first for a /trade confluence check if only one of the 3 weekly slots gets used. Must still verify stop distance clears the 2:1 min R:R and check the correlation gate against BWLP given shared shipping-sector exposure."
+    }
+  ]
+}
