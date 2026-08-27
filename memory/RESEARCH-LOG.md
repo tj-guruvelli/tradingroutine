@@ -7873,3 +7873,73 @@ for the full safety-check gate.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
 for the full safety-check gate.
+
+## 2026-08-27 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders | 0 daytrades. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending. 36
+trading days since launch (Jul 9) with zero entries. Weekly trade count:
+0/3 (week of Aug 24).
+
+**Market context:**
+- **Oil:** WTI $81.36 (−1.06%), Brent $86.93 (−1.03%) as of today
+  (TradingEconomics) — continuing this week's unwind: US sanctions on Iran
+  proved less aggressive than feared, and Iran/Oman reached an agreement
+  over Strait of Hormuz waters/revenues — de-escalatory, bearish for crude.
+- **S&P futures:** +0.35% premarket; prediction markets show ~71% odds of
+  a higher open, per Benzinga. Tailwind from NVDA's beat, strong durable
+  goods data, and resumed Mideast diplomacy.
+- **VIX:** 15.21, down 1.55% — low, no risk-off signal, near 2026 lows.
+- **Today's catalysts:** NVDA earnings (Aug 26 close) beat big — EPS $2.22
+  (2x YoY), revenue $96.2B (+106% YoY), Q3 guide $108B ±2%, AWS committed
+  to 2M Nvidia GPUs — but stock reaction was positive-not-extreme (NVDA has
+  faded the day after its last 4 earnings prints despite beats), so
+  AI/semis read-through (AVGO, AMD, MRVL) carries elevated volatility risk
+  today. Retail-earnings cluster this morning: RY, TD, DG, DLTR, BURL, BBY,
+  MRVL, ADSK, WDAY, AFRM, ULTA.
+- **Econ calendar:** No major US data scheduled today — CPI/PPI/GDP/PCE
+  all already released earlier this week (PCE was yesterday, Aug 26); 10Y
+  yield sits at 4.66% on sticky-inflation repricing.
+- **Sector momentum YTD 2026:** Energy (+22%) leads, with Consumer
+  Staples, Industrials, Materials also in the leading quadrant; Healthcare
+  a surprising top performer as a flight-to-safety/defensive play.
+  Technology, Communications, Consumer Discretionary, Financials lagging —
+  rotation away from 2025's tech leadership into defensive/cyclical names.
+  Real Estate/Utilities improving off a low base.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser (`mcp__Apify__apify--rag-web-browser`)
+  returned "Scraped 0 pages" on every query today, including a bare test
+  query with no site exclusions — a tool-side outage, not a query-syntax
+  issue. Fell back to native WebSearch for all 6 research queries per the
+  routine's fallback rule. Yahoo domains blocked via WebSearch's
+  `blocked_domains` param on every call; no Yahoo-sourced figures used
+  above. `tradingview-data` MCP not loaded this cloud run — no
+  confluence/technical check possible.
+
+**Risk factors:** AI/semis complex (AVGO, AMD, MRVL) carries elevated
+same-day volatility as the market digests NVDA's beat-but-muted reaction,
+with MRVL itself reporting today — a live single-name earnings risk, not
+just read-through. Energy's YTD leadership is fighting a multi-day oil
+unwind (Iran de-escalation), arguing against fresh energy longs despite
+the sector's strong 2026. Dense same-day retail-earnings cluster (DG,
+DLTR, BURL, BBY, ULTA) raises consumer-discretionary/staples cross-name
+volatility. Sticky-inflation repricing keeps the 10Y elevated (4.66%),
+a headwind for rate-sensitive names. No `tradingview-data` MCP this run —
+no confluence/technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and both live catalysts (NVDA
+read-through, MRVL earnings today) argue for letting today's prints and
+reaction settle before sizing anything. Watch-only, no entry/stop/target:
+(1) AI/semis read-through (AVGO, AMD) post-NVDA, pending confirmation NVDA
+doesn't repeat its post-earnings fade pattern; (2) Healthcare (XLV) as the
+2026 defensive-momentum standout, pending a documented single-name
+catalyst; (3) Energy — hold off on new longs until the current oil
+pullback (now multi-day) stabilizes despite the sector's YTD lead.
+
+**Decision: HOLD.** No open positions, no planned trades. Patience over
+activity — no clean single-name catalyst plus confluence to act on
+pre-open, and today's live earnings (MRVL) plus NVDA read-through argue
+for waiting on confirmation.
