@@ -8164,3 +8164,11 @@ Warsh-speech directional move once the speech content is known.
 activity — a Fed Chair Jackson Hole address is a defined binary event a
 few hours after this research runs; no catalyst-plus-confluence setup
 justifies risk ahead of it.
+
+### Gappers (auto-scan 09:19 ET, cloud)
+
+No gappers cleared threshold — 0 of 69 watchlist tickers had |gap%| >= 5.0
+(min price $3, min premarket vol 50k where populated). Largest move was
+BWLP at -4.51%, below the cutoff. No quick-scan table, no deep dive.
+`data/premarket_gappers_2026-08-28.json` written with empty `gappers: []`
+array for the record. No Telegram/ClickUp notification sent (0 hits).
