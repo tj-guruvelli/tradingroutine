@@ -8085,3 +8085,82 @@ for the full safety-check gate.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidate only, not an order — feed to `/trade`
 for the full safety-check gate.
+
+## 2026-08-28 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders | 0 daytrades. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending. 37
+trading days since launch (Jul 9) with zero entries. Weekly trade count:
+0/3 (week of Aug 24).
+
+**Market context:**
+- **Oil:** WTI $83.10 (−0.51%), Brent $88.22 (−0.34%) as of today
+  (TradingEconomics) — Brent holding above $88, rebounded from the prior
+  session as market attention shifts from Middle East de-escalation toward
+  an escalating Russia-Ukraine war.
+- **S&P futures:** Little changed / Nasdaq 100 futures −0.1% premarket.
+  Initial AI-trade enthusiasm off NVDA's beat this week has faded; Marvell
+  (MRVL) fell >7% after-hours post-earnings, weighing on semis sentiment.
+  Broader tape is holding back ahead of the Jackson Hole speech (below).
+- **VIX:** 15.21 (Aug 27 close, most recent available) — still low, near
+  2026 lows, no risk-off signal.
+- **Today's catalyst — Fed Chair Jackson Hole speech:** Fed Chair Kevin
+  Warsh delivers his Jackson Hole keynote today at 10:00 AM ET — the
+  dominant single event of the day. Market is watching for whether Warsh
+  reads the recent long-yield rise as sufficient tightening or signals
+  another hike is still on the table; ~40% odds of a September hike are
+  currently priced (not a cut) off this week's hotter-than-expected PCE.
+  Binary, high-impact macro event — classic day to let it pass rather than
+  position ahead of it.
+- **MRVL earnings (secondary catalyst):** Reported Thursday after close,
+  stock down >7% AH — a live single-name/semis-sentiment risk at the open
+  despite NVDA's own beat-and-raise this week (Q3 guide $108B ±2%, revenue
+  +106% YoY).
+- **Econ calendar:** No major US data release scheduled today — CPI/PPI/
+  jobs/PCE all already out this week (core PCE released Aug 26 at 3.7%
+  YoY, hotter than expected). Today's action is Fed-speech-driven, not
+  data-driven.
+- **Sector momentum YTD 2026 — sourcing conflict, flagged not acted on:**
+  One source (Westmount/mid-year outlook writeups) has Technology (XLK)
+  as the top performer (+27.5%), with semis/energy/defense/industrials
+  also leading and Communication Services/Consumer Discretionary/REITs/
+  Consumer Staples lagging. This directly contradicts yesterday's
+  (2026-08-27) logged read of Energy leading YTD with Technology lagging.
+  Given the conflict, treat sector-rotation signal as unreliable today —
+  no rotation trade should be sized off either reading alone.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser (`mcp__Apify__apify--rag-web-browser`)
+  returned garbled/unusable results on 5 of 6 queries today — searches
+  containing "S&P 500" resolved to junk "letter S definition" pages, and
+  the oil/VIX/sector-momentum queries reported pages "scraped" but
+  returned empty page text. Only the earnings-calendar query returned
+  usable content. Fell back to native WebSearch for oil, S&P futures,
+  VIX, today's catalysts, econ calendar, and sector momentum per the
+  routine's fallback rule. Yahoo domains blocked via WebSearch's
+  `blocked_domains` param on every call; no Yahoo-sourced figures used
+  above. `tradingview-data` MCP not loaded this cloud run — no
+  confluence/technical check possible.
+
+**Risk factors:** Jackson Hole is a binary macro event (10 AM ET) against
+a hawkish backdrop (hot PCE, ~40% September-hike odds) — capable of a
+sharp move either direction; sizing anything ahead of it is undisciplined.
+MRVL's post-earnings drop adds a live semis/AI-complex volatility risk
+independent of the Fed event. Sector-momentum data conflicts across
+sources (Tech reported as both leader and laggard YTD) — no reliable
+rotation signal today. No `tradingview-data` MCP this run — no confluence/
+technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and the pending Jackson Hole speech
+argues for waiting on confirmation before sizing anything. Watch-only, no
+entry/stop/target: (1) Semis/AI complex (AVGO, AMD) — watch whether
+MRVL's drop triggers broader read-through selling or stays idiosyncratic;
+(2) Rate-sensitive sectors (financials, REITs, utilities) for a post-
+Warsh-speech directional move once the speech content is known.
+
+**Decision: HOLD.** No open positions, no planned trades. Patience over
+activity — a Fed Chair Jackson Hole address is a defined binary event a
+few hours after this research runs; no catalyst-plus-confluence setup
+justifies risk ahead of it.
