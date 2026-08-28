@@ -195,3 +195,46 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (8th week flagged, still no operator action) — recommend the operator either reconcile the number or explicitly confirm $100k is correct so this stops re-flagging
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-08-28
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | +0.5% (7,674.37 → 7,711.76) |
+| Bot vs S&P | -0.5% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a genuinely catalyst-dense week (active Iran-war risk-off tick Mon, NVDA earnings Wed, core PCE Wed, MRVL earnings Thu, Fed Chair Jackson Hole speech Fri) — zero forced trades into any of the stacked binary events
+- Correctly avoided sizing AI/semis read-through (AVGO, AMD) around the NVDA/MRVL prints and passed on fresh energy longs into a multi-day Brent/WTI unwind
+- Caught the Aug 26 10:15 ET gappers false positives (APT, ZIM, WLDS, UMAC) via live-quote/bars cross-check before spending any deep-dive research time on fabricated signals
+- Flagged data conflicts instead of acting on them — sector-momentum reads contradicted each other Aug 27 vs Aug 28, and BKSY's -7.25% gap conflicted with same-day AAII data — both correctly left as watch-only, not sized
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- 7th consecutive zero-entry week (37 trading days since launch, Jul 9) — sat in 100% cash through a modestly positive (+0.5%) S&P week
+- Apify RAG web browser degraded sharply this week — near-total outage Aug 27 ("Scraped 0 pages" on every query, including a bare test query) and garbled/unusable results on 5 of 6 queries Aug 28, plus partial drift Aug 26 — a worse failure mode than prior weeks' occasional single-query drift; WebSearch fallback carried most of the week's research
+- `scripts/gappers-alpaca.sh`'s stale-`dailyBar` bug recurred a **2nd confirmed time** (Aug 26, 10:15 ET run, 4 fabricated gap signals) — the Aug 21 fix proposal (prefer `prevDailyBar` once `now > 9:30 ET`, or validate `dailyBar`'s own timestamp) still hasn't shipped, 5 days after the first recurrence
+- `tradingview-data` MCP still down the entire week (8th consecutive week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a **4th straight week** this exact fix has been proposed and not shipped
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (9th consecutive weekly review), unresolved 47 straight sessions — no operator response yet
+### Key Lessons
+- Two confirmed recurrences of the same stale-`dailyBar` bug (Aug 21, then Aug 26) show a documented-but-unshipped fix compounds risk every time the routine happens to fire post-open — this is now an established pattern, not a one-off
+- A near-total single-day Apify outage (Aug 27) shows the WebSearch fallback path is doing first-class work, not just backstopping occasional drift — it deserves monitoring as a primary dependency going forward
+- Infrastructure proposals re-flagged 3-4+ weeks running without shipping (technical fallback wiring, gappers bug fix, baseline mismatch) are a distinct process failure, separate from the trading discipline itself, which kept correctly filtering real catalysts (Iran war, NVDA, MRVL, Jackson Hole) without forcing a trade
+### Adjustments for Next Week
+- Fix `scripts/gappers-alpaca.sh` at the source (prefer `prevDailyBar` once `now > 9:30 ET`, or validate `dailyBar`'s own timestamp) — now a 2nd confirmed recurrence, top priority
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — 4th straight week this fix has been proposed and not shipped
+- Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (9th week flagged, 47 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
+### Overall Grade: C
