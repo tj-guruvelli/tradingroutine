@@ -8164,3 +8164,11 @@ Warsh-speech directional move once the speech content is known.
 activity — a Fed Chair Jackson Hole address is a defined binary event a
 few hours after this research runs; no catalyst-plus-confluence setup
 justifies risk ahead of it.
+
+### Gappers (auto-scan 11:17 ET, cloud)
+
+Watchlist scan (~60 tickers, GAP_THRESHOLD=5.0) returned 1 raw candidate
+(AGMH, -6.88%); 1 dropped (AGMH, price $0.9685 < $3.00 price floor). 0
+hits cleared the filter — no quick-scan or deep-dive rows this run, no
+Telegram alert sent per the hits==0 gate. `data/premarket_gappers_2026-08-28.json`
+written with empty `gappers: []` array for the record.
