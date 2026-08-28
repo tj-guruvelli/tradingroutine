@@ -8189,3 +8189,21 @@ grade-B hits.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
 for the full safety-check gate.
+
+### Setup Scan (18:38 ET, cloud)
+
+Full-universe scan, 60/60 tickers checked, 0 errors, via
+`node scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes, cloud variant —
+no `stock_score` gate on Setup B, see routine note). 0 grade-A hits, 3
+grade-B hits. Identical hits/values to the 16:38 ET run this session —
+market closed since 16:00 ET, same last daily bar/quote for all three.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 79.7, ADX 39.7, EMA9 $22.91 > EMA21 $20.65, px $23.74 |
+| CMBT | B | Momentum confluence | daily swing | RSI 68.5, ADX 30.0, EMA9 $17.77 > EMA21 $17.14, px $18.19 |
+| BCI | B | Momentum confluence | daily swing | RSI 66.1, ADX 26.1, EMA9 $25.14 > EMA21 $24.72, px $25.43 |
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
+for the full safety-check gate.
