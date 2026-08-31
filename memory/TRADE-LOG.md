@@ -401,3 +401,10 @@ review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. No dated Market-Open or Pre-Market TRADE-LOG entry found for today. Week of Aug 24 closes at 0/3 trades. 37 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 47th straight session, operator review pending.
+
+### Aug 31 — EOD Snapshot (Day 38, Monday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Pre-Market Research (cloud) was HOLD on an Iran-ceasefire-expiry oil spike (Brent +5.8%) with no clean single-name catalyst; gappers auto-scan (10:18 ET) reproduced the known post-open dailyBar bug, 0 verified hits; midday scan was a no-op (0 positions/orders, nothing to cut or tighten); setup-scan found 0 grade-A / 3 grade-B hits, below the alert bar. New week — 0/3 trades (week of Aug 31). 38 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 48th straight session, operator review pending.
