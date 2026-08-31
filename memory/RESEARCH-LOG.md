@@ -8301,3 +8301,12 @@ risk-off hedge idea given the VIX pop and live geopolitical risk.
 Iran-US military exchange driving a same-morning oil spike and VIX pop,
 stacked with hawkish Fed rhetoric, is a textbook day to let the tape
 settle rather than chase a headline-driven move. Patience over activity.
+
+### Gappers (auto-scan 08:24 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | 0 hits — no watchlist ticker gapped ≥5% premarket |
+
+No deep dive (0 hits). Scanner sanity-checked against AAPL/TSLA/NVDA at a
+0.1% floor to confirm the Alpaca pipeline was live (NVDA +0.7% premarket) —
+this is a genuine quiet morning, not a scan failure.
