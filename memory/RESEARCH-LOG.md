@@ -8207,3 +8207,97 @@ market closed since 16:00 ET, same last daily bar/quote for all three.
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). Candidates only, not orders — feed to `/trade`
 for the full safety-check gate.
+
+## 2026-08-31 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders | 0 daytrades. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending. 38
+trading days since launch (Jul 9) with zero entries. New week — 0/3 trades
+(week of Aug 31).
+
+**Market context:**
+- **Oil:** Brent $91.14 (+5.83%), real-time premarket as of ~06:50 EDT,
+  prior close $86.12 (Investing.com) — corroborated by Oilprice.com
+  (Brent $91.12, +3.43%, 10-min delay) and TradingEconomics.com (Brent
+  $90.84, +3.11%). WTI $86.41 (+3.61%, Oilprice.com, 10-min delay).
+  Driver: the 60-day US-Iran ceasefire expired with no deal — US struck
+  two Iranian rocket launchers on Larak Island (first acknowledged US
+  strike on Iranian positions since late July), Iranian state media
+  reported retaliatory strikes on US bases in Jordan, new Iran sanctions
+  announced, and Strait of Hormuz transit was near-zero over the weekend
+  (5 vessels Saturday, 0 Sunday vs. 31 the prior weekend) — Investing.com.
+- **S&P futures:** −0.1%; Nasdaq-100 futures just above flat (CNBC, via
+  WebSearch — Apify RAG misfired on this query, see sourcing note).
+  Friday's cash close: S&P 7,679.35 (−0.4%), Dow 53,395.1 (−0.3%), Nasdaq
+  29,267.4 (−0.6%) (Investing.com). Month-to-date heading into today: Dow
+  +2.1%, S&P +3%, Nasdaq +4% — on track for their first monthly gain
+  since May despite this morning's Iran-driven dip.
+- **VIX:** 15.20 (+5.34%), 7:01 AM EDT; prior close 14.43; day range
+  15.16–15.28 (CNBC) — first real risk-off pop in over a week, tracking
+  the oil/Iran headline.
+- **Today's catalyst — Iran/Hormuz escalation (dominant):** Active
+  military exchange (see oil driver above) is the clear top mover —
+  simultaneous oil spike + VIX pop + softer equity futures.
+- **Fed Chair Kevin Warsh — hawkish Jackson-Hole-week follow-through:**
+  Remarks that "we have work to do" on inflation raised bets on a hike at
+  the Sept 15–16 FOMC, pushed yields up and gold to a ~2-week low (Hindu
+  Business Line, citing Geojit Investments).
+- **Econ calendar:** No CPI/PPI/FOMC/jobs today. Only US prints: Dallas
+  Fed Manufacturing Index at 2:30 PM ET (1.3 vs. 0.7 prior) and 3-/6-month
+  bill auctions at 3:30 PM (TradingEconomics). Rest of the week is the
+  real data risk: ISM Manufacturing PMI Tue Sep 1; ISM Services PMI +
+  jobless claims Thu Sep 3; Nonfarm Payrolls Fri Sep 4 (consensus ~42K,
+  prior 58K).
+- **Earnings today (BMO):** No mega-cap names. Investing.com's calendar
+  lists mostly small-cap/ADR names for Monday: HUBG, OGN, SAIC, MDRX,
+  PSNY, ANAB, Grupo Mexico, Toyota Industries, Didi Global — BMO/AMC
+  timing not confirmed in the scrape; none are watchlist tickers.
+- **Sector momentum YTD — sourcing conflict again, flagged not acted on:**
+  One reading (csimarket/Westmount) has Energy (+32.1%) and Technology
+  (+30.7%) as YTD leaders. A second reading (Investing.com's momentum-
+  status piece) has Consumer Staples/Industrials/Materials/Energy
+  currently *leading* and Technology/Communications/Consumer
+  Discretionary/Financials *lagging* — i.e. Tech flips from top YTD
+  performer to a current laggard depending on source/window. Same
+  leader/laggard contradiction logged 2026-08-28 with different sectors
+  in the crossfire — sector-rotation signal treated as unreliable again;
+  no rotation trade sized off either reading.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser (`mcp__Apify__apify--rag-web-browser`)
+  returned usable content for oil, VIX, catalysts, earnings, and the econ
+  calendar (21 items checked, zero finance.yahoo.com hits — one incidental
+  Yahoo citation buried in a Wikipedia footnote was discarded, not used
+  for any figure). The S&P/Nasdaq-futures and sector-momentum queries both
+  misfired (matched an unrelated Wikipedia "S" article / returned empty
+  page text) — fell back to native WebSearch for both, per the routine's
+  fallback rule, with `finance.yahoo.com`/`uk.`/`sg.` blocked via
+  `blocked_domains`. No Yahoo-sourced figures used anywhere in this entry.
+  `tradingview-data` MCP not loaded this cloud run — no confluence/
+  technical check possible.
+
+**Risk factors:** Live Iran-US military escalation is the dominant risk —
+oil +3-6%, VIX +5.3%, equity futures softer, with real potential to extend
+or reverse sharply on the next headline (any de-escalation signal could
+unwind the oil spike as fast as it built). Fed Chair Warsh's hawkish
+inflation rhetoric adds a second, compounding crosscurrent (higher hike
+odds, higher yields) on top of the geopolitical shock. Nonfarm payrolls
+Friday (Sep 4) is this week's binary macro event. Sector-momentum data
+conflicts across sources for a second consecutive session — no reliable
+rotation signal. No `tradingview-data` MCP this run — no confluence/
+technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and an active, still-developing
+war/oil-shock morning argues strongly against sizing anything until the
+headline flow settles. Watch-only, no entry/stop/target: (1) Energy
+complex (XLE, VLO, oil majors) — watch whether the Iran/Hormuz escalation
+sustains the oil rally into a multi-day trend or reverses on the first
+de-escalation headline; (2) Defensive sectors (utilities, staples) as a
+risk-off hedge idea given the VIX pop and live geopolitical risk.
+
+**Decision: HOLD.** No open positions, no planned trades. An active
+Iran-US military exchange driving a same-morning oil spike and VIX pop,
+stacked with hawkish Fed rhetoric, is a textbook day to let the tape
+settle rather than chase a headline-driven move. Patience over activity.
