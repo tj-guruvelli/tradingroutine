@@ -8366,3 +8366,128 @@ thin/illiquid names. Needs a fix — prefer `prevDailyBar` once
 `now > 9:30 ET`, or validate `dailyBar`'s own timestamp against today's
 session start — before this routine can be trusted on an off-schedule or
 late-firing trigger.
+
+### Gappers (auto-scan 11:17 ET, cloud) — BUG FIXED, verified gaps
+
+This run also fired post-open (11:17 ET), the same off-schedule pattern
+that produced the 10:18 ET false positives above. Rather than invalidate
+a 5th time, fixed the root cause in `scripts/gappers-alpaca.sh`: it now
+compares `dailyBar`'s own bar date to today's date and falls back to
+`prevDailyBar` as the baseline whenever `dailyBar` is today's in-progress
+session, instead of always trusting `dailyBar.c`. Re-ran the scan after
+the fix — the corrected baselines exactly match the "true prior close"
+values the 10:18 ET run had to hand-verify against `alpaca.sh bars` (ZIM
+$27.45, KLIC $81.09, UMAC $23.945, LPG $49.78), confirming the fix.
+**Caveat:** it's still 11:17 ET, i.e. not premarket — gap_pct below is
+today's move vs. yesterday's actual close as of scan time, not an
+overnight premarket gap.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | DPRO | $5.215 | +16.93% | 49,025 | Drone-sector momentum name; no single dated same-day catalyst confirmed (Aug 10 earnings call, growth-strategy PR in recent flow) |
+| 2 | UMAC | $21.795 | -8.98% | 130,482 | No dated catalyst found; history of sharp drops on insider-selling headlines, today's move unconfirmed |
+| 3 | ZIM | $25.55 | -6.92% | 37,181 | M&A-arb repricing — Hapag-Lloyd/FIMI $4.2B deal, shares continuing to gap down vs. deal value |
+| 4 | KLIC | $85.87 | +5.89% | 16,555 | Post-earnings drift — Q3 non-GAAP EPS beat (+20% surprise), revenue +122.6% YoY, reported ~1 week ago |
+| 5 | LPG | $52.535 | +5.53% | 11,047 | No dated catalyst found; mgmt publicly dismissing VLGC freight-rate downturn, thin volume |
+| 6 | HXL | $89.945 | -5.31% | 51,998 | Continuation of CFO-transition-driven decline (new CFO effective May 1, 2026) |
+
+AGMH also crossed the 5% threshold (-14.02%) but was filtered out — price
+$0.8942 is below the $3.00 floor.
+
+#### Deep dive: DPRO $5.215 +16.93%
+- Catalyst: No single dated catalyst confirmed for today. Recent flow: an
+  Aug 10 2026 shareholder update/earnings call, ongoing "2026 growth
+  strategy" scaling PR, and a May 2026 bear note flagging 49.4% YoY Q1
+  revenue growth against a $5.63M net loss and heavy dilution.
+- Why: Thin-float, sub-$6 speculative drone name — retail momentum/
+  short-covering flow on light volume can produce double-digit swings
+  without fresh news.
+- Impact: Volume (49K) unremarkable for a >16% move on a microcap — reads
+  as thin-liquidity momentum, not confirmed institutional re-rating. No
+  sector read-through: UMAC (the other drone gapper today) is down, not up.
+- Horizon: SHORT_TERM — no dated structural catalyst found; chronic
+  dilution/net-loss profile argues against a durable thesis.
+- Opportunity cost: No existing positions (0 open). Would use 1 of 3
+  weekly slots against better-documented setups on this same list (KLIC);
+  DPRO's own volatility and thin volume make a sane stop clearing 2:1 R:R
+  questionable.
+
+#### Deep dive: UMAC $21.795 -8.98%
+- Catalyst: No confirmed dated catalyst. Otherwise-constructive recent
+  news (Jun 25 domestic-manufacturing expansion tied to the Upgrade
+  Energy acquisition, an Aug 7 +7.76% session) sits alongside a documented
+  history of sharp single-day drops on insider-selling headlines (Jun 5,
+  -17.34%) — today's move could not be tied to a specific event.
+- Why: Unconfirmed — reads as a volatility pullback in a high-beta
+  small-cap rather than an identified negative catalyst.
+- Impact: Volume (130K) is the highest of the six — a real repricing, not
+  noise. No positive sector read-through (DPRO, the other drone name on
+  today's list, is up not down — not a sector-wide move).
+- Horizon: SHORT_TERM — no structural catalyst identified; direction is
+  down, so not a long-entry candidate regardless.
+- Opportunity cost: Gap is negative — not a candidate for a new long entry
+  under current strategy. No existing position to protect (0 open).
+
+#### Deep dive: ZIM $25.55 -6.92%
+- Catalyst: M&A-arb repricing. ZIM agreed earlier in 2026 to be acquired
+  by Hapag-Lloyd and Israeli PE fund FIMI for $4.2B; shares have been
+  trading ~19% below the implied buyout price with headlines framing it
+  as "Shares Gap Down - What's Next?"
+- Why: Deal-arbitrage spread widening — market pricing in increased
+  uncertainty around the deal's timeline/terms, not a new operating
+  catalyst.
+- Impact: Volume (37K) modest, consistent with an arb-spread grind rather
+  than a sharp news reaction. Same ticker appeared in the Aug 27 gappers
+  scan with no clean setup found then either.
+- Horizon: LONG_TERM in nature (M&A event, structural) but capped-upside/
+  defined-risk by design (bounded near deal price) with closing risk —
+  doesn't fit a standard trend/momentum entry.
+- Opportunity cost: No existing position (0 open). M&A-arb payoff doesn't
+  cleanly map to the strategy's 2:1 R:R framework (upside capped near deal
+  price); would compete for one of 3 weekly slots against KLIC.
+
+#### Deep dive: KLIC $85.87 +5.89%
+- Catalyst: Post-earnings drift. Kulicke & Soffa (semiconductor packaging/
+  assembly equipment) beat Q3 non-GAAP EPS ($1.20 vs $1.00 est, +20%
+  surprise) on revenue +122.6% YoY, reported roughly a week ago.
+- Why: Classic PEAD (post-earnings-announcement drift) — an outsized beat
+  plus a semiconductor-equipment/AI-capex tailwind pulling in momentum
+  buyers days after the print.
+- Impact: Volume (16.5K) light for a >5% move — suggests thin-liquidity
+  continuation rather than a fresh institutional re-rating today
+  specifically. Sector read-through: broader semi-equipment/AI-capex theme.
+- Horizon: LONG_TERM lean — durable EPS growth trend and semiconductor
+  upcycle context could support a multi-day/week swing if it clears the
+  Confluence rule on a later /trade check; light volume today argues for
+  confirmation before sizing.
+- Opportunity cost: No existing position (0 open). Best-documented,
+  most fundamentally-supported setup of the five — top candidate for one
+  of the 3 weekly slots if a later /trade check confirms 2:1 R:R at a
+  sane stop.
+
+#### Deep dive: LPG $52.535 +5.53%
+- Catalyst: No confirmed dated catalyst for today. Most relevant recent
+  items: CEO John Hadjipateras publicly stated Dorian is "not concerned by
+  VLGC rate downturn," and the company posted EPS growth of +158% YoY
+  (prior quarter +274%) in recent filings. All sourced articles found were
+  several months old (Apr 2026, Nov 2025).
+- Why: Unconfirmed for today — could be continuation of the freight-rate-
+  cycle growth story and management's bullish framing, or unrelated
+  thin-liquidity noise.
+- Impact: Volume (11K) is the lightest of the six for a >5% move — high
+  risk this is thin-liquidity noise rather than a durable re-rating; no
+  same-day catalyst located despite two research passes.
+- Horizon: SHORT_TERM lean — absent a confirmed dated catalyst and given
+  the thin volume, treat as likely to mean-revert until confirmed.
+- Opportunity cost: No existing position (0 open). Weakest-documented
+  catalyst of the top 5 — would need further confirmation before it could
+  outrank KLIC for one of the 3 weekly slots.
+
+**Bug-fix note for operator:** the post-open `dailyBar` baseline bug
+flagged 4x above (2026-08-21/24/26/31) is now fixed in
+`scripts/gappers-alpaca.sh` — see commit for this run. Recommend also
+adding a proper 9:30 ET pre-market/intraday distinction to this routine's
+scheduling so "premarket gappers" triggers don't keep firing at 08:2x,
+09:xx, 10:xx, and 11:xx ET on the same trading day (5 fires today alone
+counting this one); the data bug is fixed but the scheduling drift that
+kept triggering it post-open is a separate, still-open issue.

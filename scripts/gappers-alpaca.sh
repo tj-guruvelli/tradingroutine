@@ -84,13 +84,22 @@ rows = []
 for sym, snap in data.items():
     # Pre-market: today's session hasn't started, so Alpaca's "dailyBar" is
     # still carrying the most recently COMPLETED session (i.e. yesterday's
-    # close) — that's the correct baseline for a premarket gap. "prevDailyBar"
-    # is one session further back and is stale for this purpose. Only fall
-    # back to prevDailyBar if dailyBar is missing outright (e.g. no trades
-    # in the most recent session).
+    # close) — that's the correct baseline for a premarket gap. But once the
+    # session opens, Alpaca flips "dailyBar" to today's in-progress bar, so
+    # using its close as the baseline compares two intraday ticks against
+    # each other instead of a real overnight gap (fabricated gap signals —
+    # 4x recurrence logged in RESEARCH-LOG 2026-08-21/24/26/31). Detect this
+    # by comparing dailyBar's own bar date to today's date: if it matches,
+    # dailyBar is the in-progress session and prevDailyBar (the actual last
+    # completed close) is the correct baseline instead.
     daily = snap.get("dailyBar") or {}
     prev = snap.get("prevDailyBar") or {}
-    prev_close = daily.get("c") or prev.get("c") or 0.0
+    daily_date = str(daily.get("t", ""))[:10]
+    if daily and daily_date == today:
+        baseline = prev
+    else:
+        baseline = daily if daily else prev
+    prev_close = baseline.get("c") or 0.0
     # Pick whichever of quote/trade is more recent, but only trust it if it's
     # actually from today's session — thinly-traded names can carry Monday's
     # closing quote/trade forward unchanged, which produces a fake "gap"
@@ -119,7 +128,7 @@ for sym, snap in data.items():
         # Alpaca's snapshot has no distinct premarket-volume field; this is
         # the most recent completed session's full-day volume, not today's
         # premarket volume.
-        "volume": daily.get("v") or prev.get("v") or 0,
+        "volume": baseline.get("v") or 0,
     })
 rows.sort(key=lambda r: abs(r["gap_pct"]), reverse=True)
 print(json.dumps(rows, indent=2))
