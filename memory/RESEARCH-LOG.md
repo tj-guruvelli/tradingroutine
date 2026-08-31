@@ -8310,3 +8310,59 @@ settle rather than chase a headline-driven move. Patience over activity.
 No deep dive (0 hits). Scanner sanity-checked against AAPL/TSLA/NVDA at a
 0.1% floor to confirm the Alpaca pipeline was live (NVDA +0.7% premarket) —
 this is a genuine quiet morning, not a scan failure.
+
+### Gappers (auto-scan 10:18 ET, cloud) — DATA BUG, false positives
+
+Raw scan flagged 4 "hits" at the 5.0% threshold:
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ZIM | $29.38 | +7.21% | 928 | INVALIDATED — see below |
+| 2 | KLIC | $75.04 | -7.00% | 2,685 | INVALIDATED — see below |
+| 3 | UMAC | $25.435 | +6.98% | 11,579 | INVALIDATED — see below |
+| 4 | LPG | $53.035 | +5.54% | 628 | INVALIDATED — see below |
+
+**All 4 are false positives, not real gaps.** This run fired at 10:18 ET —
+48 minutes after the 9:30 open, not premarket — the same stale-`dailyBar`
+bug first documented on 2026-08-21 and recurring 2026-08-24 and 2026-08-26:
+post-open, `dailyBar` reflects today's in-progress bar rather than
+yesterday's completed close, so `prev_close`/`current` end up comparing two
+intraday ticks against each other instead of a real overnight gap. **This
+is the fourth confirmed recurrence** — the 2026-08-21 operator flag to fix
+`scripts/gappers-alpaca.sh`'s baseline selection (prefer `prevDailyBar` once
+`now > 9:30 ET`, or check `dailyBar`'s own timestamp) remains unresolved.
+
+Live cross-check via `scripts/alpaca.sh bars SYM 1Day 2026-08-25 2026-08-31`
+(true prior close = Aug 28 daily bar) and `scripts/alpaca.sh quote`:
+- ZIM: true prior close $27.45 vs today's actual range $27.29-27.405
+  (vol 928) — no real move. Script used $27.405 as `prev_close` (today's
+  own in-progress bar).
+- KLIC: true prior close $81.09 vs today's actual range $80.52-82.39
+  (vol 2,685) — no real move. The script's `current` of $75.04 doesn't
+  appear anywhere in today's actual trading range.
+- UMAC: true prior close $23.945 vs today's actual range $23.62-24.16
+  (vol 11,579) — no real move. The script's `current` of $25.435 is above
+  today's actual high.
+- LPG: true prior close $49.78 vs today's actual range $50.25 flat on only
+  19 trades — no real move. The script's `current` of $53.035 is outside
+  today's actual range.
+
+All 4 live quotes also showed abnormally wide bid/ask spreads (12-17%),
+consistent with thin/stale post-open liquidity, not genuine repricing.
+
+Verified gap count for this run: **0**. No deep-dive research performed —
+would have researched a catalyst for a price move that never happened. Raw
+(invalidated) scan output saved to
+`data/premarket_gappers_2026-08-31_1018ET.json` for the record;
+`data/premarket_gappers_2026-08-31.json` (the 08:24 ET run's file, the
+genuine premarket scan) is untouched. No Telegram/ClickUp notification sent
+this run — 0 verified hits, no scan error, matches the precedent set on
+2026-08-21/24/26.
+
+**Flag for operator (4th occurrence):** `scripts/gappers-alpaca.sh` still
+has no post-open guard. Any trigger of this routine (or `/gappers`) after
+9:30 ET will keep reproducing fabricated gap-up/gap-down signals on
+thin/illiquid names. Needs a fix — prefer `prevDailyBar` once
+`now > 9:30 ET`, or validate `dailyBar`'s own timestamp against today's
+session start — before this routine can be trusted on an off-schedule or
+late-firing trigger.

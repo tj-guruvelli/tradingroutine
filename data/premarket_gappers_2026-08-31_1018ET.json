@@ -1,0 +1,12 @@
+{
+  "scanned_at": "2026-08-31T14:18:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "raw_scan_hits": [
+    {"symbol": "ZIM", "prev_close": 27.405, "current": 29.38, "gap_pct": 7.21, "volume": 928},
+    {"symbol": "KLIC", "prev_close": 80.685, "current": 75.04, "gap_pct": -7.0, "volume": 2685},
+    {"symbol": "UMAC", "prev_close": 23.775, "current": 25.435, "gap_pct": 6.98, "volume": 11579},
+    {"symbol": "LPG", "prev_close": 50.25, "current": 53.035, "gap_pct": 5.54, "volume": 628}
+  ],
+  "anomaly": "scripts/gappers-alpaca.sh flagged ZIM/KLIC/UMAC/LPG as gappers, but this run fired at 10:18 ET (48min post-open), not premarket -- same stale-dailyBar bug documented 2026-08-21, recurred 2026-08-24 and 2026-08-26, still unresolved. Cross-check via scripts/alpaca.sh bars (1Day, 2026-08-25..2026-08-31): true prior close (Aug 28 daily bar) vs today's actual in-progress range -- ZIM true prior close 27.45 vs today's range 27.29-27.405 (vol 928, no real move); KLIC true prior close 81.09 vs today's range 80.52-82.39 (vol 2685, no real move; the script's 'current' of 75.04 does not appear anywhere in today's actual trading range); UMAC true prior close 23.945 vs today's range 23.62-24.16 (vol 11579, no real move; script's 'current' of 25.435 is outside today's actual high); LPG true prior close 49.78 vs today's range 50.25 flat on only 19 trades (script's 'current' of 53.035 is outside today's actual range). Live quote cross-check via scripts/alpaca.sh quote also showed abnormally wide bid/ask spreads on all 4 (12-17%), consistent with thin/stale post-open liquidity, not genuine repricing. All 4 raw hits are false positives from the script comparing intraday ticks post-open against each other, not a real overnight gap. Operator flag from 2026-08-21 (fix dailyBar/prevDailyBar baseline selection once now > 9:30 ET) remains unresolved -- this is the fourth confirmed recurrence. No real gappers this run; verified gap count = 0."
+}
