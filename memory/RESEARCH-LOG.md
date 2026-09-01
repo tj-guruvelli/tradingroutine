@@ -8398,3 +8398,18 @@ result as 16:38 ET run).
 
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
+
+## 2026-09-01 — Pre-Market Research (cloud)
+
+### Gappers (auto-scan 08:31 ET, cloud)
+
+Watchlist scan (69 raw tokens parsed from WATCHLIST.md, GAP_THRESHOLD=5.0)
+returned 8 symbols with fresh premarket quotes (thinly-traded names had no
+today-timestamped quote/trade yet at this hour and were skipped, per script
+design — not a data bug). Top mover RGTI at -3.07%, below the 5% threshold.
+0 of 8 cleared the filter. No quick-scan table, no deep dive.
+`data/premarket_gappers_2026-09-01.json` written with empty `gappers: []`
+array for the record.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
