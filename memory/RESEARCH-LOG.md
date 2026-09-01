@@ -8413,3 +8413,49 @@ array for the record.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 09:25 ET, cloud)
+
+Re-scan of the full watchlist (GAP_THRESHOLD=5.0) via
+`scripts/gappers-alpaca.sh watchlist`. 2 raw candidates: AGMH (-11.39%,
+$0.9215 — excluded, below $3 price floor) and CRWV (-5.22%, $80.45, vol
+359,268 — passes). 1 of 2 cleared the filter after price screen. Deep-dive
+cap: 5 (only 1 hit, so it gets the full deep dive).
+
+`data/premarket_gappers_2026-09-01_0925ET.json` written with the 1-row
+result (second same-day file, per the same-day-rerun naming convention
+used 2026-08-31).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | $80.45 | -5.22% | 359,268 | CEO Michael Intrator sold 300k+ shares (~$27.3M); AI-infra names under renewed selling pressure amid Burry-short headlines |
+
+#### Deep dive: CRWV $80.45 -5.22%
+
+- Catalyst: Two insider Form 4 sales hit the tape — CEO Michael Intrator
+  sold 300,000+ shares (~$27.3M) and GC Kristen McVeety sold 2,100 shares.
+  No new earnings/guidance event today (last report Aug 11 was strong: Q2
+  revenue $1.21B, adj. EBITDA margin 62%, $30.1B backlog, $4B OpenAI
+  expansion deal on top of the existing $11.9B deal). AI-infrastructure/
+  cloud names broadly under pressure amid recirculated Michael
+  Burry-shorting-AI-favorites headlines.
+- Why: Insider selling from the CEO reads as a negative signal on its own,
+  compounding a broader risk-off rotation out of high-multiple AI/cloud
+  infra names. No documented positive catalyst behind the move — sentiment/
+  overhang-driven, not a fundamental deterioration.
+- Impact: Premarket volume (359K) is a small fraction of CRWV's 27.29M
+  average daily volume — thin tape, not volume-confirmed. Sector
+  read-through is real: CRWV's second sub-6% single-day drop in ~7 weeks
+  (also -5.7% on Jul 15), consistent with an ongoing multi-week AI-infra
+  derating rather than a one-off spike.
+- Horizon: SHORT_TERM — CEO sale + Burry-short headlines are sentiment
+  overhangs, not structural change; backlog and OpenAI contracts unchanged.
+  Likely fades absent a new fundamental catalyst.
+- Opportunity cost: N/A for a long — this is a gap DOWN with no documented
+  positive catalyst, failing the strategy's "Bottom-fish" guardrail (no
+  long entry without a documented catalyst; drawdown alone is not a
+  catalyst) and the Confluence rule. 0/6 open positions, 0/3 trades used
+  this week — no displacement question, the setup simply doesn't clear the
+  entry bar as a long. Not a short candidate; strategy is long-only stocks.
+
+Notification sent via Telegram (1 hit clears the "hits > 0" gate).
