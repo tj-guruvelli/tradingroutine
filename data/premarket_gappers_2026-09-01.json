@@ -1,5 +1,23 @@
 {
-  "scanned_at": "2026-09-01T12:31:00Z",
+  "scanned_at": "2026-09-01T14:16:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 210.14,
+      "gap_pct": 7.02,
+      "premarket_volume": 96708,
+      "catalyst": "Nvidia disclosed it expanded its stake in Nebius to roughly 9.3% via a $3.8B addition, per an SEC filing, on top of Nebius's recent multi-billion-dollar AI-infrastructure agreement with Microsoft.",
+      "headlines": [
+        "Nvidia invests $3.8B in Nebius, AI cloud platform (LinkedIn/press roundup)",
+        "Nebius announces multi-billion dollar agreement with Microsoft for AI infrastructure (nebius.com newsroom)"
+      ],
+      "catalyst_detail": "Nvidia added more than $3.8B to its Nebius position (per a recent SEC filing), pushing its stake to ~9.3% and making Nebius ~12% of Nvidia's investment portfolio. This follows Nebius's separately announced multi-year, multi-billion-dollar deal to deliver dedicated AI capacity to Microsoft from its new Vineland, NJ data center. Nebius reported 684% YoY revenue growth in Q1 as a fast-scaling neocloud/GPU-infrastructure operator.",
+      "why": "A large strategic investor (Nvidia) increasing its equity stake signals conviction in Nebius's GPU-infrastructure buildout and de-risks the neocloud thesis for other investors; combined with the confirmed Microsoft capacity deal, this reads as fundamental demand validation (not just a rumor), pulling in momentum and AI-theme buyers.",
+      "impact": "Volume so far this session (~97K shares by 10:16 ET) reads light versus NBIS's typical multi-million-share daily turnover, so today's move is not yet volume-confirmed as a durable breakout — could still be early-session thinness rather than weak conviction. Sector-wide read-through: positive for other neocloud/AI-infrastructure names (CoreWeave-type peers) given the demand signal for GPU capacity providers; also a positive data point for the broader AI capex trade.",
+      "horizon": "LONG_TERM — this is a structural catalyst (strategic stake increase + confirmed hyperscaler capacity contract), not a one-day headline; it aligns with continued AI-infrastructure buildout and would fit a multi-day/week swing hold if it clears the Confluence rule on a later /trade check.",
+      "opportunity_cost": "Zero open positions and 0/3 trades used this week (week of Aug 31), so this would displace nothing. It is the only gapper on today's list (1 of 60 watchlist tickers cleared the 5% threshold), so no cross-list ranking tradeoff. Whether it clears the 2:1 reward:risk minimum depends on stop placement versus the post-gap high — not assessed here; that check belongs to /trade, not this scan."
+    }
+  ]
 }
