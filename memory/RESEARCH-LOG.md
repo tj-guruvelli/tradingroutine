@@ -8424,3 +8424,13 @@ since launch (Jul 9) with zero entries. Weekly trade count: 0/3 (week of
 Aug 31). Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
 flagged Jul 27 remains unresolved, 49th straight session, operator review
 still pending.
+
+### Setup Scan (16:39 ET, cloud)
+
+Full-universe scan, 60/60 tickers checked, 0 errors, via
+`node scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes, cloud variant —
+no `stock_score` gate on Setup B, see routine note). 0 grade-A hits, 0
+grade-B hits — no setups triggered this run.
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
