@@ -8398,3 +8398,88 @@ result as 16:38 ET run).
 
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
+
+## 2026-09-01 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders | 0 daytrades. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending. 39
+trading days since launch (Jul 9) with zero entries. Week of Aug 31 still
+0/3 trades. **Market is open today** — Labor Day is Sep 7, 2026, not Sep 1
+(confirmed via TSX/NYSE/Nasdaq official holiday calendars).
+
+**Market context:**
+- **Oil:** Brent $92.10 (+1.78), WTI $87.75 (+2.32), ~6:50-7:00 AM ET
+  (Markets Insider/Businessinsider) — a continuation of Aug 31's Iran/
+  Hormuz-driven spike (Brent was $91.14 that morning), now roughly
+  +1-2% further on top of that move.
+- **VIX:** 15.85 (+0.93, +6.23%), 7:03 AM EDT; prev close 14.92, open
+  14.95, day high 15.96, day low 14.95 (CNBC) — cross-checked against
+  TradingView (15.84, +4.82% trailing 24h). Second consecutive morning
+  VIX pop (Aug 31 was 15.20/+5.34%) tracking the oil move; CNBC also
+  flagged "risk-reward outlook for stocks is getting worse" (Citadel
+  Securities, Aug 31 headline) as the backdrop.
+- **S&P/Dow/Nasdaq futures:** Not obtained this run — every Apify RAG
+  query for S&P futures resolved to unrelated pages (a Wikipedia "S"
+  letter article, a YouTube channel, a Schwab article with no scraped
+  body) despite 3 attempts with different phrasing. Flagging as a gap
+  rather than guessing; matches the same S&P/Nasdaq-futures misfire
+  pattern logged 2026-08-31 (fell back to WebSearch that day — WebSearch
+  not invoked this run to conserve budget given oil/VIX/econ-calendar
+  data was already sufficient for a HOLD call).
+- **Econ calendar (TradingEconomics, Tue Sep 1 - Mon Sep 8 window):**
+  No CPI/PPI today — BLS schedule confirms next PPI release is Aug data
+  on Sep 10, 2026. Today's US releases: **ISM Manufacturing PMI (Aug)
+  55.6 actual vs. 55.2 forecast / 55.0 prior** — a beat, solidly
+  expansionary; S&P Global Manufacturing PMI Final (Aug) 53.9 vs. 53.2
+  forecast/prior — also a beat; ISM Manufacturing Employment (Aug) 52.8
+  vs. 52.5 prior; ISM Manufacturing New Orders (Aug) 56.7; JOLTs Job
+  Openings (Jul) 7.359M vs. 7.3M forecast / 7.4M prior — roughly flat.
+  Rest of the week: Fed Barr speech, Fed Beige Book, Fed Waller speech,
+  Fed Hammack speech, Fed Balance Sheet update (Sep 2), and **Non Farm
+  Payrolls (Aug)** due Friday Sep 4 — TradingEconomics lists 58K/42.0K
+  as the two comparison figures (order ambiguous in the scrape; Aug 31's
+  entry logged consensus ~42K, prior 58K — treat that as the more
+  reliable read, cross-check Friday).
+- **Sector momentum YTD:** Not researched this run (query list
+  prioritized oil/VIX/econ-calendar given the two prior sessions logged
+  a persistent leader/laggard sourcing conflict with no reliable
+  rotation signal either time — not worth a third query on unreliable
+  data).
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser used for all queries, with
+  `-site:finance.yahoo.com -site:uk.finance.yahoo.com
+  -site:sg.finance.yahoo.com` appended to every query per the
+  search-side-enforcement rule. Zero Yahoo hits surfaced or used. The
+  S&P-futures queries repeatedly matched irrelevant pages (see above) —
+  no Yahoo involved, just bad search-result targeting; no fallback to
+  WebSearch invoked this run. `tradingview-data` MCP not loaded this
+  cloud run — no confluence/technical check possible.
+
+**Risk factors:** VIX popping +6% for a second straight morning while
+oil extends its Iran/Hormuz-driven rally is a real, building risk-off
+signal — but it's now crosscurrent against a clean ISM Manufacturing PMI
+beat (55.6, expansionary) and a JOLTs print roughly in line. No clean
+directional read from the data itself. This week is macro-heavy: four
+Fed speakers, a Beige Book, and Nonfarm Payrolls Friday — any of which
+could move the tape sharply. S&P/Nasdaq futures level unconfirmed this
+run (see gap above) — entering blind on index direction is not an
+option today regardless.
+
+**Trade ideas:** None identified this run. No single-name research was
+performed (this session's queries were macro-only: oil, VIX, econ
+calendar) and no `tradingview-data` confluence check was available —
+per the strategy's entry checklist, a specific catalyst plus ≥2
+confluence indicators is a hard requirement before any idea reaches the
+log, and neither was assembled today. Watch-only: manufacturing/
+industrials complex (XLI, XLB) on the ISM beat if it's corroborated by
+tomorrow's data holding up; energy (XLE, oil majors) on whether the
+Iran/Hormuz oil rally extends into a third day or fades.
+
+**Decision: HOLD.** No open positions, no planned trades. First trading
+day of a macro-heavy week (Fed speakers, Beige Book, NFP Friday) with
+conflicting signals (VIX/oil risk-off pop vs. a strong ISM manufacturing
+beat) and no confluence tooling available — a clear day to let data and
+Fed commentary accumulate rather than chase either signal. Patience
+over activity.
