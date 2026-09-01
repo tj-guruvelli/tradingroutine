@@ -8434,3 +8434,14 @@ grade-B hits — no setups triggered this run.
 
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
+
+### Setup Scan (18:39 ET, cloud)
+
+Full-universe scan, 60/60 tickers checked, 0 errors, via
+`node scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes, cloud variant —
+no `stock_score` gate on Setup B, see routine note). 0 grade-A hits, 0
+grade-B hits — no setups triggered this run (third scan today, same
+result as 16:38/16:39 ET runs).
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches local
+`/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
