@@ -8539,3 +8539,17 @@ partly-offsetting macro crosscurrents (cooling-but-unresolved Iran/Hormuz
 risk, and a fresh tech/AI premarket pullback) ahead of a data-heavy week
 into FOMC is a day to let the tape settle, not chase either move.
 Patience over activity.
+
+
+### Gappers (auto-scan 08:21 ET, cloud)
+
+Watchlist scan (69 raw tokens parsed from WATCHLIST.md, GAP_THRESHOLD=5.0)
+returned only 6 symbols with fresh premarket quotes (thinly-traded names
+had no today-timestamped quote/trade yet at this hour and were skipped,
+per script design — not a data bug). Top mover NIO at -3.21%, below the 5%
+threshold. 0 of 6 cleared the filter. No quick-scan table, no deep dive.
+`data/premarket_gappers_2026-09-02.json` written with empty `gappers: []`
+array for the record.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
