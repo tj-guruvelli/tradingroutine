@@ -8600,3 +8600,24 @@ overwritten with the newer `scanned_at` timestamp, `gappers: []` unchanged.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Setup Scan (16:38 ET, cloud)
+
+Full-universe scan via `scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes,
+no local MCP). 60 candidates checked from `watchlist_tiers.immediate`, 0
+errors. 0 grade-A hits, 3 grade-B hits (Momentum confluence: ADX14 > 20 AND
+EMA9 > EMA21 — stock_score gate dropped per cloud-variant deviation).
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+RR      B      Momentum confluence   daily swing   RSI 53, ADX 21.4, EMA9 1.81 > EMA21 1.76
+BWLP    B      Momentum confluence   daily swing   RSI 61, ADX 25.7, EMA9 23.97 > EMA21 23.23
+BCI     B      Momentum confluence   daily swing   RSI 73, ADX 28.7, EMA9 25.45 > EMA21 24.98
+```
+
+Run at 16:38 ET — post-close (market closed 16:00 ET), so these are
+end-of-day bar reads, not live intraday triggers. No grade-A hits — no
+Telegram/ClickUp notification sent (matches the ">= 1 grade-A hit" gate).
+`data/setup-scan_cloud_2026-09-02_1638ET.json` written for the record.
+Candidates only — no orders placed; feed to `/trade` for the full
+safety-check gate if pursued.
