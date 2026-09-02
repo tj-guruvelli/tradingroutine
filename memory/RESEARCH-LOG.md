@@ -8553,3 +8553,17 @@ array for the record.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 09:18 ET, cloud)
+
+Re-scan ~1hr after the 08:21 ET run, same watchlist/threshold
+(GAP_THRESHOLD=5.0). Still 0 symbols cleared the 5% gap filter. Sanity
+check at GAP_THRESHOLD=0.5 confirms the data pipeline is live (NIO -3.7%,
+BE -1.78%, RKLB -1.05%, BMNR -1.03%, ONDS +0.85%) — this is a real "no
+gappers" reading, not a script/data fault. NIO's premarket move continued
+to fade (-3.21% at 08:21 -> -3.7% now), still below threshold. No
+quick-scan table, no deep dive. `data/premarket_gappers_2026-09-02.json`
+overwritten with the newer `scanned_at` timestamp, `gappers: []` unchanged.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
