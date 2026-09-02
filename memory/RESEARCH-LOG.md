@@ -8582,3 +8582,21 @@ with the newer `scanned_at` timestamp, `gappers: []` unchanged.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 11:15 ET, cloud)
+
+Re-scan post-open (11:15 ET, ~1h45m after 9:30 open). Raw scan returned two
+rows: KLIC +7.24% (prev_close $78.735 -> $84.435) and TRMD +7.08%
+(prev_close $33.06 -> $35.40), both clearing the 5% gap and $3 price
+floors. Both excluded on the volume gate: `volume` field = 6,154 (KLIC)
+and 16,709 (TRMD), well under the 50,000 floor. Same known data bug as the
+10:17 ET run and the 08-31 10:18 ET run (5th occurrence): the script's
+`volume` field is today's forming daily-bar volume, not true premarket
+volume — post-open it's mechanically low for a while after the open
+regardless of real activity, so it under-reports and wrongly gates out
+otherwise-qualifying gappers. 0 of 2 raw hits cleared all three filters.
+No quick-scan table, no deep dive. `data/premarket_gappers_2026-09-02.json`
+overwritten with the newer `scanned_at` timestamp, `gappers: []` unchanged.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
