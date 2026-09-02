@@ -8621,3 +8621,25 @@ Telegram/ClickUp notification sent (matches the ">= 1 grade-A hit" gate).
 `data/setup-scan_cloud_2026-09-02_1638ET.json` written for the record.
 Candidates only — no orders placed; feed to `/trade` for the full
 safety-check gate if pursued.
+
+### Setup Scan (18:38 ET, cloud)
+
+Full-universe scan via `scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes,
+no local MCP). 60 candidates checked from `watchlist_tiers.immediate`, 0
+errors. 0 grade-A hits, 3 grade-B hits (Momentum confluence: ADX14 > 20 AND
+EMA9 > EMA21 — stock_score gate dropped per cloud-variant deviation). Same
+three names as the 16:38 ET run (BCI, BWLP, RR) — expected, still using the
+same closed daily bar 2h later.
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+BCI     B      Momentum confluence   daily swing   RSI 73, ADX 28.7, EMA9 25.45 > EMA21 24.98
+BWLP    B      Momentum confluence   daily swing   RSI 61, ADX 25.7, EMA9 23.97 > EMA21 23.23
+RR      B      Momentum confluence   daily swing   RSI 53, ADX 21.4, EMA9 1.81 > EMA21 1.76
+```
+
+Run at 18:38 ET — post-close, end-of-day bar reads. No grade-A hits — no
+Telegram/ClickUp notification sent (matches the ">= 1 grade-A hit" gate).
+`data/setup-scan_cloud_2026-09-02_1838ET.json` written for the record.
+Candidates only — no orders placed; feed to `/trade` for the full
+safety-check gate if pursued.
