@@ -8445,3 +8445,97 @@ result as 16:38/16:39 ET runs).
 
 No Telegram/ClickUp notification sent (0 grade-A hits — matches local
 `/setup-scan` quiet rule). No candidates to feed to `/trade` this run.
+
+
+## 2026-09-02 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 |
+0 open positions | 0 open orders. Confirmed live via `alpaca.sh
+account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-baseline
+mismatch flagged 2026-07-27 — unresolved, operator review pending. 40
+trading days since launch (Jul 9) with zero entries. Week of Aug 31 stands
+at 0/3 trades.
+
+**Market context:**
+- **Oil:** WTI $90.30 (+0.09, essentially flat), 06:58 AM ET (Markets
+  Insider/Business Insider). Brent $95.08 (+0.43, +0.45%), prev close
+  $94.65 (Markets Insider). Driver: oil jumped again Sep 1 after US forces
+  struck Iranian targets around the Strait of Hormuz, WTI advanced toward
+  $91 intraday before settling back near flat this morning — the Iran/
+  Hormuz military escalation (active since Aug 31, Dow fell >400pts that
+  session) remains the dominant macro thread, just not accelerating
+  further overnight.
+- **S&P/Dow/Nasdaq futures:** Broad-based weakness, tech-led — QQQ
+  (Nasdaq-100) −0.59%, SPY −0.29%, DIA (Dow) −0.19% premarket (CNBC/
+  WebSearch fallback — Apify RAG misfired on this query again, see
+  sourcing note). Driver: pullback in tech/AI names on cooling AI-capex
+  momentum, ahead of a data-heavy week that feeds the Fed's Sep 16-17
+  FOMC decision.
+- **VIX:** Not confirmed to a specific level this run — Cboe's page showed
+  a "+2.69%" change indicator with no absolute quote captured, and a CNBC
+  headline referenced VIX "touching a year-to-date low" as of Aug 28.
+  Logging as a research gap rather than citing an unverified number; last
+  confirmed level in this log was 15.20 (Aug 31, +5.34% on the initial
+  Iran/Hormuz strike).
+- **Today's catalyst — Iran/Hormuz escalation (still dominant, cooling):**
+  Same military-exchange thread as Aug 31/Sep 1, oil no longer accelerating
+  this morning — watching for the next headline in either direction.
+- **AI/tech cooldown (secondary, growing):** Nasdaq-100 futures underperformance
+  premarket + the ongoing narrative of investor caution on AI infrastructure
+  spend (per futures-driver note above) — a second crosscurrent independent
+  of the oil/Iran thread.
+- **Econ calendar today (Wed Sep 2):** ADP Employment Report (8:15 AM ET,
+  Aug), Factory Orders (10:00 AM, Jul), Durable Goods Orders final (10:00
+  AM, Jul), Beige Book (2:00 PM). Bank of Canada meeting (9:45 AM). Rest of
+  week: Trade Balance + ISM Non-Mfg Thu Sep 3; Employment Report (NFP) Fri
+  Sep 4. Bigger prints later in Sept: PPI (10th), CPI (11th), FOMC decision
+  (16th).
+- **Earnings today (BMO):** 7 reports before the open per Digrin's
+  calendar (111 total today) — Brown-Forman (BF-A), Ollie's Bargain Outlet
+  (OLLI), Sprinklr (CXM), G-III Apparel (GIII), REX American Resources
+  (REX), Daktronics (DAKT), StealthGas (GASS). None are current watchlist
+  tickers.
+- **Sector momentum YTD:** Most recent reliable read (ETF Database, dated
+  Jul 2, first-half-2026 recap — not live/today's data) has Technology
+  (XLK +33%), Energy (XLE +21%), and Industrials (XLI +20%) as 2026 H1
+  leaders. Treat as directional/stale, not a live rotation signal —
+  sector-momentum queries have produced conflicting or garbage results in
+  prior sessions (see Aug 28/31 notes) and today's own direct query
+  misfired (see sourcing note).
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser returned usable content for
+  oil, econ calendar, and earnings. It misfired on both the "S&P 500
+  futures" and "sector momentum" queries a second session in a row —
+  matched unrelated pages (a Wikipedia "S" letter article, a Vietnamese
+  Wikipedia stub, an e-commerce site) instead of real results, likely an
+  issue with how the tool's underlying search handles the literal string
+  "S&P". Fell back to native WebSearch for the futures query (worked,
+  cited above) and to a secondary Apify query for sector data (worked).
+  Zero finance.yahoo.com hits across all queries — Yahoo ban held.
+  `tradingview-data` MCP not loaded this cloud run — no confluence/
+  technical check possible.
+
+**Risk factors:** Iran/Hormuz military escalation remains live but is not
+accelerating this morning — real risk of a fast reversal (further
+de-escalation) or a fast re-escalation (further strikes) on the next
+headline, in either direction. A second, independent crosscurrent is
+tech/AI-led premarket weakness (QQQ −0.59%) ahead of a data-heavy week
+(ADP today, NFP Friday) that will shape Fed rate-path expectations into
+the Sep 16-17 FOMC. VIX level unconfirmed this run — treat volatility risk
+as unquantified rather than assuming it's still low. No `tradingview-data`
+MCP this run — no confluence/technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and two live, partially-conflicting
+macro threads (Iran/oil vs. tech/AI cooldown) argue against sizing
+anything today. Watch-only, no entry/stop/target: (1) Energy complex (XLE,
+integrated majors) — watch whether Iran/Hormuz tensions reignite oil
+strength or continue to cool; (2) Mega-cap tech/semis (XLK-related) —
+watch whether today's premarket AI-cooldown weakness extends into a
+multi-day pullback or is a one-day dip-buy setup once technicals confirm.
+
+**Decision: HOLD.** No open positions, no planned trades. Two live,
+partly-offsetting macro crosscurrents (cooling-but-unresolved Iran/Hormuz
+risk, and a fresh tech/AI premarket pullback) ahead of a data-heavy week
+into FOMC is a day to let the tape settle, not chase either move.
+Patience over activity.
