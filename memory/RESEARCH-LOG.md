@@ -8749,3 +8749,17 @@ array for the record.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 09:16 ET, cloud)
+
+Watchlist scan (GAP_THRESHOLD=5.0). Premarket data coverage improved vs the
+08:19 run — 10 of 64 symbols now carry a today-timestamped quote/trade (OPEN,
+BMNR, META, BE, NIO, ORCL, ONDS, GOOG, MSFT, NBIS), up from 3. Largest move
+is OPEN at +3.39%, still well under the 5% threshold; no symbol cleared the
+filter. 0 of 64 cleared. No quick-scan table, no deep dive.
+`data/premarket_gappers_2026-09-03.json` updated with a fresh `scanned_at`,
+`gappers: []` still empty (verified via a diagnostic GAP_THRESHOLD=0.0 pass,
+not a volume-gate artifact this time).
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
