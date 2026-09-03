@@ -8749,3 +8749,88 @@ array for the record.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 11:11 ET, cloud)
+
+Watchlist scan (`GAP_THRESHOLD=5.0`) — 2 of the watchlist symbols cleared
+the 5% gap filter this run, both gap-downs. `premarket_volume` field was
+not populated by the scanner (only raw `volume` was), so the volume gate
+was not applied per the routine's own fallback rule. Deep dive cap: 5
+(both hits fall within it — no ranks 6-10 to note).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BKSY | $19.50 | -7.03% | 9,796 | Extending decline on continued CFO insider selling — no fresh same-day catalyst |
+| 2 | UMAC | $22.14 | -6.50% | 21,469 | Scan shows a gap down, but live quotes conflict — see deep dive |
+
+#### Deep dive: BKSY $19.50 -7.03%
+
+- Catalyst: No same-day (Sep 3) BKSY-specific news found. Most relevant
+  recent driver: CFO Henry Edward Dubois sold ~4,000 shares (~$95K) around
+  Aug 31-Sep 1, part of a pattern of insider disposals (CEO also sold
+  15,000+ shares in June); MarketBeat directly linked a prior one-day
+  -6.5% drop (Sep 1) to insider selling. No earnings, contract wins, or
+  company-specific headlines surfaced for today; next earnings not until
+  Nov 5.
+- Why: Repeated insider stock sales during a name already down over 70%
+  from its all-time high ($52.88) read as a bearish signal absent an
+  offsetting catalyst, triggering momentum/technical selling that
+  compounds day over day.
+- Impact: Reads as continuation of an existing multi-week downtrend
+  (~-15% over the trailing week per TradingView), not a fresh one-day
+  headline spike — BKSY has repeat-gapped down across recent sessions
+  (Aug 20 -7.1%, Sep 1 -6.5%, today -7.03%). Scan volume of only ~9.8K
+  shares is thin relative to BKSY's ~732K average daily volume, so
+  today's premarket move looks like low-liquidity drift rather than a
+  confirmed capitulation/distribution event. No sector-wide read-through
+  found among satellite/geospatial-intel peers.
+- Horizon: SHORT_TERM — no structural catalyst (M&A, guidance reset, new
+  contract) identified for today; this is diffuse insider-selling-driven
+  weakness, and the strategy's 200-SMA long-bias filter already excludes
+  it from a long entry regardless.
+- Opportunity cost: Book has 0/6 positions open and 0/3 weekly trades
+  used, so no existing holding would be displaced. But BKSY fails the
+  Confluence rule outright as a long candidate — it is a gap DOWN with no
+  documented bullish catalyst, and the strategy only takes longs when
+  price is above the 200-SMA. Not investable under current rules
+  regardless of rank; would need a reversal setup (oversold RSI plus
+  volume capitulation) before it could clear the Entry Checklist.
+
+#### Deep dive: UMAC $22.14 -6.50%
+
+- Catalyst: Today's dominant drone-sector news is AeroVironment's $464.8M
+  U.S. Army "Enduring-High Energy Laser" production contract (first-ever
+  U.S. directed-energy production award), announced ~9:25am ET. UMAC has
+  no matching award but is catching sector read-across as a
+  counter-UAS/NDAA-compliant name — TradingView and 24/7 Wall St. both
+  quote UMAC trading near $23.9-24.0 today, roughly flat-to-up versus
+  Tuesday's ~$23.68 close, **not** down 6.5%. UMAC fundamentals: Q2 FY26
+  revenue $16.72M vs $9.19M consensus (+687% YoY), still GAAP-unprofitable
+  (-$0.16 EPS) but adjusted EBITDA loss narrowing to ~$400K, $229.6M cash
+  on hand, stock +85% YTD.
+- Why: If the scan's -6.5% figure is accurate, it would run counter to
+  today's sector catalyst and instead reflect profit-taking/mean-reversion
+  after an ~85% YTD run in a name that has whipsawed 5-9% in either
+  direction repeatedly over the past month. If the live-price sources are
+  correct instead, the modest UP move is pure sector read-through with no
+  UMAC-specific news.
+- Impact: **Data-quality flag** — Alpaca's snapshot `current` (22.14) vs.
+  `prev_close` (23.68) does not match same-day quotes from TradingView/24/7
+  Wall St (~$23.9-24.0), a live +1-2% move. Treat today's UMAC gap_pct as
+  unconfirmed until cross-checked against a fresh `alpaca.sh` quote before
+  any action. Drone-sector peers (AVAV +6%, RCAT +3%) are broadly higher
+  today, which argues against a UMAC-specific -6.5% gap down absent
+  contradicting news.
+- Horizon: SHORT_TERM — even taking the sector-strength read at face
+  value, today's move is contract-news-driven with financial impact
+  "filtering in gradually" per AeroVironment management's own guidance, a
+  headline pop on peer news rather than a UMAC-specific structural
+  catalyst.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  displacement issue. But this ticker is not actionable today regardless:
+  the scan's own gap_pct conflicts with live pricing, so it fails the
+  basic "confirm the number" step before any Entry Checklist work. If the
+  up-move read is correct, UMAC already ran +85% YTD and is extended
+  versus a fresh entry; it would need a pullback/consolidation setup with
+  volume confirmation before it could clear the 2:1 R:R bar at a sane
+  stop.
