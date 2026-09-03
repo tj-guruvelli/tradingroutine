@@ -8733,3 +8733,19 @@ resolve one way or the other.
 re-escalating geopolitical risk (Iran/Hormuz), a rising-yields
 crosscurrent, and Friday's NFP print all argue for letting the tape settle
 rather than chasing the oil/energy move today. Patience over activity.
+
+### Gappers (auto-scan 08:19 ET, cloud)
+
+Watchlist scan (69 raw tokens parsed from WATCHLIST.md, GAP_THRESHOLD=5.0,
+64 symbols returned by Alpaca snapshot endpoint). Only 3 of 64 had a
+today-timestamped premarket quote/trade (OPEN, NIO, MSFT) — the rest
+still carried yesterday's 15:59:59 ET closing quote/trade forward, so
+were correctly skipped per script design (not a data bug; free IEX feed
+premarket coverage is thin this early). Of the 3 fresh symbols: OPEN
+-0.32%, NIO -1.17%, MSFT +0.61% — none within range of the 5% threshold.
+0 of 64 cleared the filter. No quick-scan table, no deep dive.
+`data/premarket_gappers_2026-09-03.json` written with empty `gappers: []`
+array for the record.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
