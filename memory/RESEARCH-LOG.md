@@ -8842,3 +8842,24 @@ was not applied per the routine's own fallback rule. Deep dive cap: 5
   versus a fresh entry; it would need a pullback/consolidation setup with
   volume confirmation before it could clear the 2:1 R:R bar at a sane
   stop.
+
+### Setup Scan (16:38 ET, cloud)
+
+Full-universe scan via `scripts/setup-scan-cloud.mjs` (Alpaca bars/quotes,
+no local MCP). 60 candidates checked from `watchlist_tiers.immediate`, 0
+errors. 0 grade-A hits, 3 grade-B hits (Momentum confluence: ADX14 > 20 AND
+EMA9 > EMA21 — stock_score gate dropped per cloud-variant deviation).
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+CMBT    B      Momentum confluence   daily swing   RSI 72, ADX 32.2, EMA9 18.17 > EMA21 17.55
+BCI     B      Momentum confluence   daily swing   RSI 73, ADX 30.0, EMA9 25.58 > EMA21 25.08
+BWLP    B      Momentum confluence   daily swing   RSI 62, ADX 24.6, EMA9 24.04 > EMA21 23.33
+```
+
+Run at 16:38 ET — post-close (market closed 16:00 ET), so these are
+end-of-day bar reads, not live intraday triggers. No grade-A hits — no
+Telegram/ClickUp notification sent (matches the ">= 1 grade-A hit" gate).
+`data/setup-scan_cloud_2026-09-03_1638ET.json` written for the record.
+Candidates only — no orders placed; feed to `/trade` for the full
+safety-check gate if pursued.
