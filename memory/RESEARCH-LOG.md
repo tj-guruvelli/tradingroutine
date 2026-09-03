@@ -8643,3 +8643,93 @@ Telegram/ClickUp notification sent (matches the ">= 1 grade-A hit" gate).
 `data/setup-scan_cloud_2026-09-02_1838ET.json` written for the record.
 Candidates only — no orders placed; feed to `/trade` for the full
 safety-check gate if pursued.
+
+## 2026-09-03 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-
+baseline mismatch flagged 2026-07-27 — unresolved, operator review
+pending. 41 trading days since launch (Jul 9) with zero entries. Week of
+Aug 31 stands at 0/3 trades.
+
+**Market context:**
+- **Oil:** Brent $97.42 (+1.79, +1.87%), prev close $95.63 (Markets
+  Insider/TradingEconomics). Up 22.5-22.8% over the past month, +45%
+  YoY. Driver: Iran/Hormuz conflict re-escalated this week — US struck
+  Iran, Tehran retaliated with attacks on US bases in Bahrain, Jordan,
+  Kuwait, and Iraq (first exchange since a lull in late July). 6
+  commodity vessels transited the Strait of Hormuz Wed vs. a 13-vessel
+  10-day average — real but so-far-contained supply friction, not a
+  closure.
+- **S&P/Dow/Nasdaq futures:** Mixed/flat — Dow +0.07%, S&P 500 −0.05%,
+  Nasdaq 100 −0.11%, Russell 2000 −0.08% (WebSearch fallback — Apify RAG
+  misfired on this query again, third session running, see sourcing
+  note). Also a rising-bond-yields crosscurrent flagged in coverage
+  (Treasury sell-off pressuring the stock rally) independent of the
+  Iran/oil thread.
+- **VIX:** 15.42 (+0.22, +1.45%), open 15.25, day range 15.08-15.44, per
+  Cboe as of 11:02 AM ET. Only modestly elevated despite the Iran
+  re-escalation — market not pricing panic yet (52-wk range 13.38-35.30).
+- **Today's catalyst — Iran/Hormuz re-escalation (primary, live):** Same
+  thread flagged Aug 31/Sep 1/Sep 2 but a genuine step up — first direct
+  US-Iran exchange in weeks, not just cooling aftermath. Oil re-accelerating
+  (Brent +1.87% today vs. +0.45% Sep 2). Watch for further headlines in
+  either direction; Trump said Wed the renewed hostilities "would not last
+  too long."
+- **Econ calendar today (Thu Sep 3):** Per Sep 2 log's forward look — Trade
+  Balance + ISM Non-Mfg expected today; PPI schedule confirmed via BLS but
+  no specific September release date pulled this run (see sourcing note).
+  NFP (Employment Report) Fri Sep 4 — WebSearch coverage explicitly flagged
+  "critical upcoming labor market data" as a second premarket driver
+  alongside the Iran thread.
+- **Earnings today (BMO):** 12 of 52 total reports before the open per
+  Digrin's calendar — Ciena (CIEN), Toro (TTC), Victoria's Secret (VSXY),
+  Campbell Soup (CPB), Brady (BRC), Zegna (ZGN), Wiley (WLY), Hello Group
+  (MOMO), Lands' End (LE), Genesco (GCO), Canaan (CAN), Duluth Trading
+  (DLTH). None are current watchlist tickers.
+- **Sector momentum YTD:** Energy is the standout — best-performing S&P
+  500 sector on 26 of the year's trading sessions (most of any sector,
+  +42.8% YTD), Technology second (24 sessions, +26.1% YTD), Communication
+  Services -3.9% YTD (Kobeissi Letter/Bespoke data via Apify). Schwab's
+  Jul-31 6-12mo sector outlook (More Favored: Financials, Health Care,
+  Industrials; Least Favored: Consumer Discretionary, Real Estate) is
+  consistent directionally but is a stale monthly read, not live.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG web browser handled oil, VIX, earnings, and
+  (on a second, reworded attempt) sector momentum cleanly. It misfired on
+  the literal "S&P 500 futures" query again (third session in a row —
+  matched unrelated pages: a German/Italian Wikipedia "S" letter article,
+  a Spanish dictionary entry, Spotify) and also failed on "economic
+  calendar" and "Iran oil market impact" queries (matched a Wikipedia
+  timeline article and generic JPMorgan/nav pages instead of current data).
+  Fell back to native WebSearch for the futures query only (worked, cited
+  above); the econ-calendar specifics and a direct Iran-market-impact read
+  are logged as gaps rather than guessed. Zero finance.yahoo.com hits
+  across all queries — Yahoo ban held. `tradingview-data` MCP not loaded
+  this cloud run — no confluence/technical check possible.
+
+**Risk factors:** Iran/Hormuz conflict re-escalation is the dominant live
+risk — a genuine step up in hostilities (not just aftermath cooling like
+Sep 1-2), oil re-accelerating, and Trump's "won't last too long" comment
+unconfirmed by events yet. VIX still only modestly elevated (15.42) —
+room for a much sharper repricing if the Strait of Hormuz sees an actual
+supply disruption rather than contained friction. Independent second
+crosscurrent: a bond-yield sell-off pressuring the broader equity rally,
+plus Friday's NFP print as a near-term Fed-path catalyst. No
+`tradingview-data` MCP this run — no confluence/technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and an actively re-escalating (not
+cooling) geopolitical risk argues against sizing anything today. Watch-only,
+no entry/stop/target: (1) Energy complex (XLE, integrated majors) — YTD
+sector leader, now with a live oil-supply catalyst; wait for confluence
+tooling and a pullback/consolidation entry rather than chasing the
+Brent spike. (2) Broader market — mixed/flat futures with a rising-yields
+crosscurrent argue for staying flat until the Iran/Hormuz and NFP catalysts
+resolve one way or the other.
+
+**Decision: HOLD.** No open positions, no planned trades. An actively
+re-escalating geopolitical risk (Iran/Hormuz), a rising-yields
+crosscurrent, and Friday's NFP print all argue for letting the tape settle
+rather than chasing the oil/energy move today. Patience over activity.
