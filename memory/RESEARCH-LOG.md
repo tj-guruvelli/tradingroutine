@@ -8884,3 +8884,98 @@ No grade-A hits — no Telegram/ClickUp notification sent (matches the ">= 1
 grade-A hit" gate). `data/setup-scan_cloud_2026-09-03_1838ET.json` written
 for the record. Candidates only — no orders placed; feed to `/trade` for
 the full safety-check gate if pursued.
+
+## 2026-09-04 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-
+baseline mismatch flagged 2026-07-27 — unresolved, operator review
+pending. 42 trading days since launch (Jul 9) with zero entries. Week of
+Aug 31 stands at 0/3 trades.
+
+**Market context:**
+- **Oil:** Brent (Nov) $95.91 (+0.41%), WTI (Oct) $91.93 (+0.69%) — CNBC,
+  as of ~7am ET. Iran/Hormuz conflict still live (US carried out a second
+  round of strikes on Iran this week per Saxo APAC desk); Strait of Hormuz
+  traffic still constrained but no fresh escalation overnight — Trump said
+  Wed the renewed hostilities "would be short-lived."
+- **S&P/Dow/Nasdaq futures:** Mixed, modest — Dow −0.06%, S&P 500 +0.04%,
+  Nasdaq-100 +0.4% as of 5:50am ET (CNBC live blog). Thursday's regular
+  session was the real move: S&P 500 +1.1% to 7,747.71 (best day in a
+  month), Nasdaq Composite +1.4% to 26,584.06, Dow +1.2% to 53,686.11 —
+  driven by Fed Governor Waller's dovish pivot (signaled he'd support
+  holding rates at 3.5-3.75% at the Sept 15-16 meeting). Week-to-date the
+  S&P is on pace for +0.5%, Nasdaq +0.7%, Dow +0.2%.
+- **VIX:** 15.20 close (Cboe, −5.79% on the day) / 14.15 open per CNBC
+  quote (prev close 14.32, day range 14.13-14.25, 52-wk range 13.38-35.30).
+  Source figures diverge slightly but both show a sharp pullback from
+  recent highs — benign, risk-on read, consistent with Thursday's rally.
+- **Today's dominant catalyst — August jobs report (NFP), due 8:30am ET
+  (after this research is filed):** Consensus +53,000 payrolls, unemployment
+  4.1%, vs. a loss of 23,000 jobs in July (Dow Jones survey via CNBC). ADP
+  private payrolls Wed came in weak at 38,000 (vs. 47,000 consensus) —
+  smallest gain since early 2026, reinforcing a labor-cooling narrative.
+  Waller said his Sept rate call will be "heavily influenced" by Aug CPI
+  (due Sept 11); markets now price roughly even odds of a hike vs.
+  near-certainty earlier in the week. A weak NFP print would extend
+  Thursday's dovish-repricing rally; a strong one could reverse it fast.
+- **Earnings today (Fri Sep 4):** Thin day, nothing on the watchlist —
+  National Beverage (FIZZ), Hurco (HURC), VivoPower (VIVO), Children's
+  Place (PLCE), Bridgford (BRID), Culp (CULP), PharmaCyte Biotech (PMCB),
+  all small/micro-cap (Investing.com calendar). The real post-earnings
+  moves already happened Thursday: Lululemon −18% (slashed FY guidance
+  again, now guiding revenue down 5-7%), Oxford Industries −16% (guidance
+  cut), Docusign +4% (beat + raised full-year guidance), Adobe −1.4%
+  after-hours (named a new CEO). Next week's bigger prints: Oracle +
+  Adobe (Sep 10), Kroger (Sep 11).
+- **Sector momentum YTD:** Not independently re-sourced this run (query
+  malformed — see sourcing note). Carrying forward Sep 3's read as a
+  stale reference only: Energy YTD leader (+42.8%), Technology second
+  (+26.1%). Separately, Ned Davis Research downgraded US equities to
+  underweight / upgraded Europe ex-UK to overweight Thursday on relative
+  valuation (Saxo) — a global-allocation signal, not sector-specific, and
+  not actionable under this strategy's US-stocks-only scope.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG handled oil, VIX, catalysts/earnings
+  cleanly. It misfired again on the literal "S&P 500 futures" and "S&P
+  500 sector momentum YTD" queries (ampersand truncation — matched
+  unrelated "S" letter/dictionary/Wikipedia pages both times, same known
+  issue flagged repeatedly the last several sessions) and on the
+  "economic calendar" query (matched calendar-tool landing pages, not
+  specific releases). Futures figures recovered from the "top stock
+  market catalysts" query's CNBC hit instead; sector momentum was not
+  re-sourced and is logged as a gap (stale carry-forward only) rather
+  than guessed; no additional economic-calendar detail beyond NFP was
+  recovered this run. Zero finance.yahoo.com hits across all queries —
+  Yahoo ban held. `tradingview-data` MCP not loaded this cloud run — no
+  confluence/technical check possible.
+
+**Risk factors:** NFP at 8:30am ET is the dominant near-term catalyst and
+lands after this research is filed — a weak print extends Thursday's
+Waller-dovish rally, a strong one could snap it back toward hike-odds
+repricing. Iran/Hormuz remains a live but non-escalating overhang (oil
+still elevated, Hormuz traffic still constrained). Independent bond-market
+risk: Mohamed El-Erian told CNBC Friday the global government-bond sell-off
+is "likely not over," and the 30-year yield has held above 5% for 55
+straight sessions — a stretch not seen since 2006 — a structural drag on
+equity valuations regardless of today's print. The yen's sharp ~2% rally
+Thursday (biggest daily gain in over a month, to ~155.3-155.9/USD) raises
+BOJ-hike/intervention volatility risk for cross-asset positioning. No
+`tradingview-data` MCP this run — no confluence/technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar.
+No confluence tooling available, and NFP hasn't printed yet at the time of
+this research — sizing anything ahead of a jobs report that could swing
+the rate-path narrative either direction is exactly the kind of chasing
+the strategy avoids. Watch-only, no entry/stop/target: (1) Energy complex
+(XLE, integrated majors) — stale Sep 3 read still shows it as YTD sector
+leader with an intact (not accelerating) oil catalyst; wait for confluence
+tooling and a real pullback entry. (2) Broad market — Thursday's rally was
+single-catalyst (Waller) driven; today's NFP is the actual test of whether
+it holds. Stay flat until the print lands and the tape reacts.
+
+**Decision: HOLD.** No open positions, no planned trades. NFP due at
+8:30am ET (after this filing) is the dominant near-term catalyst and
+argues against any pre-print positioning; Iran/Hormuz overhang persists;
+no confluence tooling this run. Patience over activity.
