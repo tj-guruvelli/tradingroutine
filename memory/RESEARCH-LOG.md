@@ -9115,3 +9115,22 @@ prefers real trade prints over quote-midpoints, so both the recurring
 post-open false-positive bug and the newly-found wide-quote artifact are
 fixed at the source — this class of bug should not recur regardless of
 when this routine or `/gappers` next fires.
+
+## 2026-09-04 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 5 grade-B hits.**
+0 errors. No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 68.10, ADX 42.31, EMA9 $24.02 > EMA21 $22.10, px $24.92 |
+| BLSH | B | Momentum confluence | daily swing | RSI 72.82, ADX 38.14, EMA9 $32.76 > EMA21 $30.00, px $33.30 |
+| BWLP | B | Momentum confluence | daily swing | RSI 63.55, ADX 23.97, EMA9 $24.15 > EMA21 $23.44, px $21.31 |
+| HAFN | B | Momentum confluence | daily swing | RSI 72.41, ADX 20.82, EMA9 $8.48 > EMA21 $8.14, px $9.04 |
+| DPRO | B | Momentum confluence | daily swing | RSI 76.47, ADX 20.56, EMA9 $5.25 > EMA21 $4.88, px $5.19 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
