@@ -238,3 +238,42 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (9th week flagged, 47 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-09-04
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | +0.09% (7,711.76 → 7,718.60) |
+| Bot vs S&P | -0.09% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- **Shipped a fix that had been re-proposed 4+ straight weeks**: `scripts/gappers-alpaca.sh`'s stale-`dailyBar` post-open false-positive bug (5th confirmed recurrence, Sep 4 11:15 ET run — KLIC/BWLP/LPG fabricated) was root-caused and patched at the source instead of manually invalidated again — now derives the prev-close baseline from the bars' own timestamps, not wall-clock time, and prefers real trade prints over wide/stale quote-midpoints (a 2nd, previously-undetected bug found while verifying the fix, which would have produced a false BKSY hit). Re-ran post-fix and surfaced 2 real hits (DPRO, BMNR) that the stale-baseline bug had simultaneously been masking
+- Discipline held all 5 sessions through a live Iran/Hormuz re-escalation (first direct US-Iran military exchange in weeks, Brent +1.8-5.8% at various points, VIX pops) and Friday's NFP print — no forced trades into an actively unresolved geopolitical/macro binary
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- 8th consecutive zero-entry week (42 trading days since launch, Jul 9) — sat in 100% cash through a roughly flat (+0.09%) S&P week, though opportunity cost was minimal this particular week
+- `tradingview-data` MCP still down the entire week (5th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now the 5th straight week this exact fix has been proposed and not shipped
+- New Apify RAG web browser failure pattern identified: the literal "S&P 500 futures"/"S&P 500 weekly performance" query specifically misfires (matches unrelated "S"-letter Wikipedia/Wiktionary pages and Spotify instead of real data) — reproduced 3+ sessions running in RESEARCH-LOG (Sep 1-3) and again during this review's own S&P week-performance lookup; WebSearch fallback covered it every time, but the query itself needs rewording (e.g. avoid a bare "S&P 500" root match) to stop wasting an Apify call each time
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (53 straight sessions / 10th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- A fix that gets re-proposed weekly without shipping (gappers stale-baseline bug, 4+ weeks running) finally landed only once a 5th recurrence forced the root-cause work instead of another one-off invalidation — process lesson holds: flag-and-defer doesn't converge, only actually patching does
+- The Apify RAG web browser's "S&P 500" misfire is narrow and reproducible enough to be a query-phrasing bug, not a general degradation — worth a targeted workaround rather than continued fallback-and-log
+### Adjustments for Next Week
+- Reword the Apify RAG web browser's S&P-500-performance/futures query (e.g. quote the full index name or add disambiguating terms) so it stops matching the "S" Wikipedia article and burning a call before falling back to WebSearch
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 5th straight week, now the sole remaining item on last week's list still unshipped
+- Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (10th week flagged, 53 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's real infra win (gappers fix shipped) shows the operational backlog can move when root-caused instead of re-flagged
+### Overall Grade: C
