@@ -8995,3 +8995,17 @@ written with `gappers: []`.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 10:14 ET, cloud)
+
+Full-watchlist scan (GAP_THRESHOLD=5.0) via `scripts/gappers-alpaca.sh
+watchlist`. Raw scan returned 0 rows at threshold — 0 of 60 watchlist
+symbols cleared the 5% gap filter. Sanity check at GAP_THRESHOLD=0.0
+confirms the pipeline is live: all 60 symbols returned fresh quotes, top
+mover AMKR at only +3.09% (LMT +3.05%, OKLO +2.66%, GFS +2.4%, MA +1.65%)
+— a real "no gappers" reading post-open, not a script/data fault. No
+quick-scan table, no deep dive (nothing to rank).
+`data/premarket_gappers_2026-09-04.json` written with `gappers: []`.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
