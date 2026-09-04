@@ -1,0 +1,40 @@
+{
+  "scanned_at": "2026-09-04T15:23:48Z",
+  "note": "Off-schedule run at 11:15 ET (session already open ~1h45m), not premarket. scripts/gappers-alpaca.sh had two confirmed data bugs (see memory/RESEARCH-LOG.md 2026-09-04 entry) that fabricated fake gaps in KLIC/BWLP/LPG/BKSY and hid real ones in DPRO/BMNR. Both bugs were root-caused and fixed in this run before producing the numbers below. Original 08:19 ET premarket file (data/premarket_gappers_2026-09-04.json, 0 hits) is untouched.",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "DPRO",
+      "price": 5.895,
+      "gap_pct": -8.32,
+      "premarket_volume": 30744,
+      "catalyst": "No fresh single-day negative headline found; looks like profit-taking after a multi-week defense-sector rally.",
+      "headlines": [
+        "Radar Anomaly: Draganfly's Options Surge Signals Strategy Shift (MarketBeat via TradingView)",
+        "Draganfly Inc (DPRO) Stock Forecast: Analyst Ratings (Strong Buy, 3 analysts, $11.17 PT)"
+      ],
+      "catalyst_detail": "No company-specific negative catalyst found for today. Draganfly (drone/defense OEM) has been on a strong multi-week run (+45-47% over the trailing week/month per TradingView) on a pivot into US/Canada defense infrastructure: a DEVCOM counter-drone contract, new military leadership hires, and a recent ~$50M financing round. A call-option volume surge was flagged in recent coverage as a sign of institutional repositioning around that defense pivot. Last quarter's print was weak (EPS -0.33 vs -0.18 est, an -81% surprise; revenue $2.66M vs $3.64M est), but that's not a fresh trigger for today specifically.",
+      "why": "High-beta (beta ~3.5) small-cap momentum name giving back part of a rapid multi-week gain; no news-driven mechanism identified for today's specific move, consistent with mean-reversion after the options-driven repricing spike noted in recent coverage.",
+      "impact": "Volume ~30-31K shares on the US print is ordinary for this thinly-traded name, not a multiple of typical volume, so this reads as a normal pullback rather than a panic/news dump. No sector-wide read-through checked (no other drone/defense names cleared today's gap list).",
+      "horizon": "SHORT_TERM, one-line reasoning: no structural catalyst tied to today's move specifically; the defense-pivot thesis (DEVCOM, financing) is a separate multi-week story already priced in over the last month, not today's driver.",
+      "opportunity_cost": "Not a current TRADING-STRATEGY.md sector-rotation focus. Entering here would use one of the 3 weekly trade slots on a name where today's own price feed showed a stale/wide quote earlier in this same scan (data-quality flag), off just a one-day -8% pullback with no identified catalyst -- unlikely to clear a clean 2:1 R:R at a sane stop until the driver is confirmed. Research only, not a recommendation."
+    },
+    {
+      "rank": 2,
+      "symbol": "BMNR",
+      "price": 24.835,
+      "gap_pct": -6.07,
+      "premarket_volume": 853824,
+      "catalyst": "No BMNR-specific negative headline found; likely tracking a broader ETH/crypto pullback given BMNR's Ethereum-treasury business model.",
+      "headlines": [
+        "BMNR Stock Price Outlook: Can BitMine's Ethereum Bet Trigger a Rally to $24? (Coinpedia via TradingView)"
+      ],
+      "catalyst_detail": "No company-specific negative catalyst found. BitMine Immersion Technologies operates as an Ethereum treasury vehicle: ~5.74M ETH held (~4.8% of ETH's circulating supply, nearing its internal 'Alchemy of 5%' target), plus ~206 BTC, with combined crypto/cash/securities ~$11.1B. It also runs an ETH staking platform (MAVAN, ~4.88M ETH staked) and was recently added to the Russell 1000. Recent coverage has been bullish (Russell inclusion, treasury growth); today's decline looks driven by the crypto market itself rather than a BMNR-specific event.",
+      "why": "BMNR trades largely as a leveraged proxy on ETH's spot price via its treasury holdings -- a broad ETH/crypto pullback moves BMNR's implied NAV per share directly. Most likely mechanism absent any BMNR-specific news.",
+      "impact": "Volume ~850K shares is well above the other names on today's list and appears to be a real, actively-traded move (confirmed against the actual last-trade print, not a stale quote -- this scan's quote-based pricing was independently found unreliable today, see log). Expect correlation with other crypto-linked equities (miners, other ETH/BTC treasury vehicles) rather than a BMNR-isolated move; not independently verified against spot ETH price this run.",
+      "horizon": "SHORT_TERM, one-line reasoning: consistent with daily crypto-market beta rather than a structural change to BMNR's own business; would need to confirm against spot ETH price action before treating as anything more than daily volatility in a name whose whole thesis is levered ETH exposure.",
+      "opportunity_cost": "Run scripts/corr-gate.mjs BMNR before any entry -- high correlation risk with other crypto-linked names likely already on the book or on today's list. A single down day in a treasury-vehicle stock is not a differentiated setup on its own; would use one of the 3 weekly trade slots on a name whose price is really a bet on ETH, not BMNR's own operations. Research only, not a recommendation."
+    }
+  ]
+}

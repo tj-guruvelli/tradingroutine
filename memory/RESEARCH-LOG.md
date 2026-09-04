@@ -8995,3 +8995,123 @@ written with `gappers: []`.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 11:15 ET, cloud) — DATA BUG root-caused and FIXED
+
+Off-schedule trigger, 1h45m after the 9:30 open, not premarket. Raw scan
+(pre-fix) flagged 3 "hits": KLIC +7.14%, BWLP +6.63%, LPG -5.54%. This is
+the **fifth confirmed recurrence** of the stale-`dailyBar` bug first flagged
+2026-08-21 and repeated 2026-08-24/26/31 (see those entries) — every prior
+occurrence was manually invalidated and re-flagged for the operator, but
+`scripts/gappers-alpaca.sh` itself was never actually patched. This run
+fixed it instead of re-flagging it a sixth time.
+
+**Root cause 1 (the recurring one):** post-open, Alpaca's `dailyBar` holds
+*today's* forming/completed bar, not yesterday's close, so the script's
+`prev_close = dailyBar.c` compared today's price to itself. Fix: derive
+which bar is "today's" from the bar dates themselves (`dailyBar.t` vs
+`prevDailyBar.t`), not wall-clock time — use `prevDailyBar.c` as the
+baseline whenever `dailyBar` carries today's date, so the fix is correct
+whether the routine fires premarket or mid-session.
+
+**Root cause 2 (new, found while verifying the fix):** even with the
+correct baseline, the script's `current` price picked the freshest of
+quote-midpoint or last-trade — but thin names carry stale/wide one-sided
+quotes (BWLP bid/ask $21.31/$25.02, a 15% spread; BKSY $20.62/$23.50, 14%)
+that produce a fake midpoint far from the real last print. This is what
+fabricated the BWLP hit (real trade-based gap: +1.8%) and also would have
+produced a false BKSY hit (-6.79% via quote-mid; real trade-based gap:
+-0.19%, i.e. flat) had it not been caught. Fix: prefer the latest actual
+trade print; only fall back to quote-midpoint if no trade posted today, and
+only if the spread is ≤2% of price.
+
+Live cross-check confirms both fixes: KLIC real gap (prevDailyBar $78.775 →
+last trade $80.93-81.00) is +2.7-2.8%, not +7.14%. LPG real gap is well
+under 3%. Both fixes applied directly to `scripts/gappers-alpaca.sh`
+(comments in the script explain the mechanism and cite this entry).
+
+**Unlike every prior occurrence, this run also missed real gaps** — the
+same stale-baseline bug that fabricated KLIC/BWLP/LPG simultaneously hid
+QMMM/PTNM (stale, ~1-year-old quotes/trades — not real, correctly excluded
+by the existing today-freshness filter once checked) and, genuinely, DPRO
+and BMNR. Re-running the fixed script end-to-end:
+
+### Gappers (auto-scan 11:15 ET, cloud, post-fix) — 2 verified hits
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | DPRO | $5.895 | -8.32% | 30,744 | No fresh negative headline; reads as profit-taking after a multi-week defense-pivot rally |
+| 2 | BMNR | $24.835 | -6.07% | 853,824 | No BMNR-specific headline; likely tracks a broader ETH/crypto pullback (BMNR = ETH-treasury vehicle) |
+
+Deep-dive cap 5, both ranks get full deep dive (only 2 hits total).
+
+#### Deep dive: DPRO $5.895 -8.32%
+- Catalyst: No company-specific negative catalyst found for today.
+  Draganfly (drone/defense OEM) has been on a strong multi-week run
+  (+45-47% over the trailing week/month per TradingView) on a pivot into
+  US/Canada defense infrastructure — a DEVCOM counter-drone contract, new
+  military leadership hires, and a recent ~$50M financing round. A
+  call-option volume surge was flagged in recent coverage as institutional
+  repositioning around that pivot. Last quarter's print was weak (EPS -0.33
+  vs -0.18 est, -81% surprise; revenue $2.66M vs $3.64M est), but that's not
+  a fresh trigger for today specifically.
+- Why: High-beta (beta ~3.5) small-cap momentum name giving back part of a
+  rapid multi-week gain; no news-driven mechanism identified for today's
+  move specifically, consistent with mean-reversion after the
+  options-driven repricing spike noted in recent coverage.
+- Impact: Volume ~30-31K shares on the US print is ordinary for this
+  thinly-traded name, not a multiple of typical volume — reads as a normal
+  pullback, not a panic/news dump. No sector-wide read-through checked (no
+  other drone/defense names cleared today's gap list).
+- Horizon: SHORT_TERM — no structural catalyst tied to today's move
+  specifically; the defense-pivot thesis is a separate multi-week story
+  already priced in over the last month, not today's driver.
+- Opportunity cost: Not a current TRADING-STRATEGY.md sector-rotation
+  focus. Entering here would use one of the 3 weekly trade slots on a name
+  whose own price feed showed a stale/wide quote earlier in this same scan
+  (data-quality flag), off just a one-day -8% pullback with no identified
+  catalyst — unlikely to clear a clean 2:1 R:R at a sane stop until the
+  driver is confirmed. Research only, not a recommendation.
+
+#### Deep dive: BMNR $24.835 -6.07%
+- Catalyst: No company-specific negative catalyst found. BitMine Immersion
+  Technologies operates as an Ethereum treasury vehicle: ~5.74M ETH held
+  (~4.8% of ETH's circulating supply, nearing its internal "Alchemy of 5%"
+  target), plus ~206 BTC, combined crypto/cash/securities ~$11.1B. It also
+  runs an ETH staking platform (MAVAN, ~4.88M ETH staked) and was recently
+  added to the Russell 1000. Recent coverage has been bullish (Russell
+  inclusion, treasury growth); today's decline looks driven by the crypto
+  market itself rather than a BMNR-specific event.
+- Why: BMNR trades largely as a leveraged proxy on ETH's spot price via its
+  treasury holdings — a broad ETH/crypto pullback moves BMNR's implied NAV
+  per share directly. Most likely mechanism absent any BMNR-specific news.
+- Impact: Volume ~850K shares is well above the other names on today's list
+  and appears to be a real, actively-traded move (confirmed against the
+  actual last-trade print, not a stale quote — this scan's quote-based
+  pricing was independently found unreliable today, see above). Expect
+  correlation with other crypto-linked equities (miners, other ETH/BTC
+  treasury vehicles) rather than a BMNR-isolated move; not independently
+  verified against spot ETH price action this run.
+- Horizon: SHORT_TERM — consistent with daily crypto-market beta rather
+  than a structural change to BMNR's own business; would need to confirm
+  against spot ETH price action before treating as anything more than daily
+  volatility in a name whose whole thesis is levered ETH exposure.
+- Opportunity cost: Run `scripts/corr-gate.mjs BMNR` before any entry —
+  high correlation risk with other crypto-linked names likely already on
+  the book or on today's list. A single down day in a treasury-vehicle
+  stock is not a differentiated setup on its own; would use one of the 3
+  weekly trade slots on a name whose price is really a bet on ETH, not
+  BMNR's own operations. Research only, not a recommendation.
+
+Raw (pre-fix, invalidated) scan output was not saved separately — the fix
+was applied and verified before writing any data file. Full result saved to
+`data/premarket_gappers_2026-09-04_1123ET.json`; the original 08:19 ET
+premarket file (`data/premarket_gappers_2026-09-04.json`, 0 hits) is
+untouched. Telegram notification sent (2 verified hits).
+
+**Operator flag resolved:** `scripts/gappers-alpaca.sh` now selects its
+`prev_close` baseline from the bars' own dates (not wall-clock time) and
+prefers real trade prints over quote-midpoints, so both the recurring
+post-open false-positive bug and the newly-found wide-quote artifact are
+fixed at the source — this class of bug should not recur regardless of
+when this routine or `/gappers` next fires.
