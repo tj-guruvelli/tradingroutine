@@ -8979,3 +8979,19 @@ it holds. Stay flat until the print lands and the tape reacts.
 8:30am ET (after this filing) is the dominant near-term catalyst and
 argues against any pre-print positioning; Iran/Hormuz overhang persists;
 no confluence tooling this run. Patience over activity.
+
+### Gappers (auto-scan 08:19 ET, cloud)
+
+Full-watchlist scan (GAP_THRESHOLD=5.0) via `scripts/gappers-alpaca.sh
+watchlist`. Raw scan returned 0 rows at threshold — 0 of ~60 watchlist
+symbols cleared the 5% gap filter. Sanity check at GAP_THRESHOLD=0.0
+confirms the data pipeline is live but thin this early (only 5 of ~60
+symbols carried a fresh today-timestamped premarket quote/trade at all:
+NIO -1.95%, MSFT -0.42%, GOOG +0.36%, ONDS +1.25%, OPEN +1.44%) — a real
+"no gappers" reading, not a script/data fault; most of the watchlist
+simply hasn't traded premarket yet at 08:19 ET. No quick-scan table, no
+deep dive (nothing to rank). `data/premarket_gappers_2026-09-04.json`
+written with `gappers: []`.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
