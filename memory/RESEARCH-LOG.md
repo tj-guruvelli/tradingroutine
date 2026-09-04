@@ -8995,3 +8995,21 @@ written with `gappers: []`.
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+### Gappers (auto-scan 09:17 ET, cloud)
+
+Full-watchlist scan (GAP_THRESHOLD=5.0) via `scripts/gappers-alpaca.sh
+watchlist`. Raw scan returned 0 rows at threshold — 0 of ~60 watchlist
+symbols cleared the 5% gap filter. Sanity check at GAP_THRESHOLD=0.0
+confirms the data pipeline is live and thickening as the open approaches
+(12 of ~60 symbols now carry a fresh premarket quote, up from 5 at 08:19
+ET): BMNR -4.86%, ORCL +3.21%, NIO -2.21%, BE +1.63%, NBIS +1.59%, MSFT
+-0.49%, CRWV +0.49%, LUNR +0.37%, ONDS -0.26%, OPEN +0.16%, GOOG +0.14%,
+RGTI +0.10%. BMNR closest to the gate but still under 5% — a real "no
+gappers" reading, not a script/data fault. No quick-scan table, no deep
+dive (nothing to rank). `data/premarket_gappers_2026-09-04_0917ET.json`
+written with `gappers: []` (suffixed — `_2026-09-04.json` already holds
+the 08:19 ET run).
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
