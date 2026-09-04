@@ -1,0 +1,123 @@
+{
+  "scanned_at": "2026-09-04T20:38:54.690Z",
+  "ny_time": "16:38",
+  "candidates_checked": 60,
+  "hits": [
+    {
+      "symbol": "HAFN",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 9.04,
+      "prev_daily_high": 9.03,
+      "prev_daily_close": 8.93,
+      "sma200": 7.19,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 9.25,
+      "rsi14": 72.41,
+      "adx14": 20.82,
+      "ema9": 8.48,
+      "ema21": 8.14,
+      "premarket_volume": 0,
+      "daily_volume": 125765,
+      "avg_daily_volume_30": 82055,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BWLP",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 21.31,
+      "prev_daily_high": 24.67,
+      "prev_daily_close": 24.58,
+      "sma200": 17.85,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 25.08,
+      "rsi14": 63.55,
+      "adx14": 23.97,
+      "ema9": 24.15,
+      "ema21": 23.44,
+      "premarket_volume": 0,
+      "daily_volume": 32341,
+      "avg_daily_volume_30": 17536,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BMNR",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 24.92,
+      "prev_daily_high": 26.59,
+      "prev_daily_close": 26.44,
+      "sma200": 22.34,
+      "sma200_window_days": 200,
+      "pmh": 25.06,
+      "today_hod": 25.47,
+      "rsi14": 68.1,
+      "adx14": 42.31,
+      "ema9": 24.02,
+      "ema21": 22.1,
+      "premarket_volume": 3765,
+      "daily_volume": 2669618,
+      "avg_daily_volume_30": 1586747,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BLSH",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 33.3,
+      "prev_daily_high": 36.93,
+      "prev_daily_close": 36.21,
+      "sma200": 34.05,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 36.01,
+      "rsi14": 72.82,
+      "adx14": 38.14,
+      "ema9": 32.76,
+      "ema21": 30,
+      "premarket_volume": 0,
+      "daily_volume": 126664,
+      "avg_daily_volume_30": 66734,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "DPRO",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 5.19,
+      "prev_daily_high": 6.52,
+      "prev_daily_close": 6.43,
+      "sma200": 6.23,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 6.44,
+      "rsi14": 76.47,
+      "adx14": 20.56,
+      "ema9": 5.25,
+      "ema21": 4.88,
+      "premarket_volume": 0,
+      "daily_volume": 200307,
+      "avg_daily_volume_30": 46303,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
