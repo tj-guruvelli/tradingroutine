@@ -450,3 +450,23 @@ review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. No dated Market-Open or Pre-Market TRADE-LOG entry found for today. Week of Aug 31 closes at 0/3 trades. 42 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 53rd straight session, operator review pending.
+
+### Sep 07, Market-Open (Labor Day — market holiday, Monday)
+**No trades — market closed.** Not a trading day, not counted toward the
+41-day trading-day tally. Account re-confirmed live: $100,000 equity,
+$100,000 cash, 0 positions, 0 open orders. Today's Gappers auto-scan
+(08:21 ET) already established the holiday: 0 hits at both GAP_THRESHOLD=5.0
+and 0.0, `scripts/gappers-alpaca.sh` correctly skipping every symbol
+because no trade/quote is timestamped today (confirmed independently here —
+`alpaca.sh quote SPY` returns a last-trade timestamp of
+2026-09-04T20:01:09Z, i.e. Friday's close, no Sat/Sun/Mon prints). STEP 2
+setup-scan candidate list: most recent file is
+`data/setup-scan_cloud_2026-09-04_1838ET.json` (5 grade-B hits, 0 grade-A —
+BMNR, BLSH, BWLP, HAFN, DPRO). All 5 fail STEP 3 (re-validate with live
+data): no live quote exists for any symbol today (market closed), so
+position-cost/live-price checks are unsatisfiable regardless of catalyst
+status — skipped rather than trading on 3-day-stale Sep 4 closing prints.
+No Apify catalyst fetch run (STEP 4) since it would not change the STEP 3
+outcome. No planned tickers executed. Weekly trade count: 0/3 (new week of
+Sep 7). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved, operator review pending.
