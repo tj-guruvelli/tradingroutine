@@ -349,7 +349,12 @@ async function scanTicker(sym, headers, dataBase, ctx) {
       || (!inPremarketHours && avgDailyVolume30 > 0 && latestDailyVolume >= 1.5 * avgDailyVolume30);
     if (!passesGate) return { symbol: sym, result: 'excluded_volume_gate' };
 
-    // Setup A — TJL breakout (formulas copied from tjl-cloud.md).
+    // Setup A — TJL breakout (formulas copied from tjl-cloud.md). Gated to
+    // 10:00-15:30 ET because intraday_breakout needs a live session (today's
+    // PMH and today's HOD only mean something while the session is running).
+    // setupACheckable is echoed per-ticker below and also rolled up at the
+    // top level (grade_a_possible) so a post-close run states plainly that
+    // Setup A was not evaluated, instead of silently reading as "no hit".
     const dailyBreakout = currPx > prevDailyHigh && prevDailyClose > sma200;
     const setupACheckable = ctx.nyHM >= '10:00' && ctx.nyHM <= '15:30';
     let setupAHit = false;
@@ -436,10 +441,22 @@ async function main() {
     .filter((r) => r.result === 'error')
     .map((r) => ({ symbol: r.symbol, reason: r.reason }));
 
+  // Setup A is only checkable 10:00-15:30 ET (see scanTicker). This is a
+  // single run-level gate (ctx.nyHM), not a per-ticker outcome, so it's the
+  // same for every symbol scanned this run — roll it up once at the top
+  // level rather than making a caller re-derive it from setup_a_checkable
+  // on individual hit rows (and error/no-setup rows never carry that field
+  // at all).
+  const grade_a_possible = ctx.nyHM >= '10:00' && ctx.nyHM <= '15:30';
+  const aCheckableCount = grade_a_possible ? watchlist.length : 0;
+
   const output = {
     scanned_at: new Date().toISOString(),
     ny_time: nyHM,
     candidates_checked: watchlist.length,
+    grade_a_possible,
+    setup_a_evaluated_at_ny: grade_a_possible ? nyHM : null,
+    ...(grade_a_possible ? {} : { setup_a_skipped_reason: 'outside 10:00-15:30 ET' }),
     hits,
     errors,
   };
@@ -450,6 +467,11 @@ async function main() {
   writeFileSync(outPath, JSON.stringify(output, null, 2) + '\n');
 
   console.log(JSON.stringify(output, null, 2));
+  console.error(
+    grade_a_possible
+      ? `setup-scan-cloud.mjs: Setup A checkable for ${aCheckableCount}/${watchlist.length} symbols (ny_time ${nyHM}, within 10:00-15:30 ET).`
+      : `setup-scan-cloud.mjs: Setup A NOT evaluated for any of ${watchlist.length} symbols (ny_time ${nyHM}, outside 10:00-15:30 ET) — grade A was unreachable this run.`,
+  );
 }
 
 main().catch((e) => fail(e.message || String(e), e));

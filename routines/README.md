@@ -11,21 +11,26 @@ the env-var check block and the commit-and-push step are load-bearing.
 | `market-open.md` | `30 8 * * 1-5` | TRADE-LOG.md | only if a trade fired |
 | `midday.md` | `0 12 * * 1-5` | TRADE-LOG.md, RESEARCH-LOG.md | only if action taken |
 | `daily-summary.md` | `0 15 * * 1-5` | TRADE-LOG.md | always (1 message) |
-| `setup-scan-cloud.md` | `30 15,17 * * 1-5` | `data/setup-scan_cloud_*.json`, `RESEARCH-LOG.md` | only if grade-A hit |
+| `setup-scan-cloud.md` | `30 10,13,15 * * 1-5` | `data/setup-scan_cloud_*.json`, `RESEARCH-LOG.md` | only if grade-A hit |
 | `weekly-review.md` | `0 16 * * 5` | WEEKLY-REVIEW.md, TRADING-STRATEGY.md | always (1 message) |
 | `reflect.md` | `30 16 * * 1-5` (proposed, NOT yet scheduled on claude.ai) | hypotheses.jsonl, TRADING-STRATEGY.md (max ONE variable/cycle), strategy-versions/ | only if a change applied |
 | `tjr-cloud.md` | `0 * 13-21 * * 1-5` (hourly, ~NY 08:00-16:00) | `data/tjr_state_*.json` | only on new entry/exit |
 
 Spacing rule: routines stay >= 30 minutes apart so two never run simultaneously
 and race a commit. setup-scan moved off `0 15` (collided with daily-summary) to
-`30 15,17`; the old 19:00 pass was dropped (crosses UTC midnight in the cloud
-cron, low value).
+`30 15,17`, then again (2026-09-07) to `30 10,13,15`: the old `30 15,17` slots
+(16:30/18:30 ET) sat entirely after the 15:30 ET close, so Setup A's
+10:00-15:30 ET intraday-breakout gate never evaluated in 61/61 runs and grade
+A was unreachable. `30 10,13,15` puts two fires (11:30, 14:30 ET) inside that
+window, so grade A can now actually occur; the third fire (16:30 ET) lands
+after the close and produces next-day daily-swing (grade B/C) candidates for
+market-open to read, same as before.
 
 **LIVE as cloud routines 2026-07-25** — all seven trading routines above exist
 on claude.ai (environment `trading-bot`, repo `tj-guruvelli/tradingroutine`,
 model `claude-sonnet-5`, Apify RAG browser replaces Perplexity for research).
 Cloud crons are stored in UTC (CDT = UTC-5): `0 11`, `0 12,13,14,15`, `30 13`,
-`0 17`, `0 20`, `30 20,22`, `0 21 Fri`. DST caveat: when CST (UTC-6) returns in
+`0 17`, `0 20`, `30 15,18,20`, `0 21 Fri`. DST caveat: when CST (UTC-6) returns in
 November, every fire time drifts 1 hour later in local terms — re-shift the UTC
 crons then. `tjl-cloud.md` is deliberately NOT scheduled: it is a day-trading
 strategy, and the account goal is beating the S&P via swing holds, not day

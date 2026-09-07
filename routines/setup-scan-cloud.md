@@ -38,7 +38,13 @@ IMPORTANT — PERSISTENCE:
 STEP 1 — Run the scanner script:
     node scripts/setup-scan-cloud.mjs
 Capture its stdout — one JSON object:
-    { scanned_at, ny_time, candidates_checked, hits: [...], errors: [...] }
+    { scanned_at, ny_time, candidates_checked, grade_a_possible,
+      setup_a_evaluated_at_ny, setup_a_skipped_reason (only present when
+      grade_a_possible is false), hits: [...], errors: [...] }
+`grade_a_possible` is a run-level flag (true only 10:00-15:30 ET, see CLOUD
+CADENCE NOTE below) — check it before assuming a 0-grade-A result means no
+setups fired; it may mean Setup A was never evaluated this run. The script
+also prints a one-line stderr summary of how many symbols were A-checkable.
 The script already scans the full watchlist internally (`config/rules.json`
 → `watchlist_tiers.immediate`) with capped concurrency (8 parallel in-flight
 fetches) — unlike `/tjl-cloud`'s 10-ticker-per-run agent loop, there's no
@@ -84,13 +90,23 @@ On push failure: git pull --rebase origin main, then push again. Never
 force-push.
 
 STEP 6 — Never auto-trade. A hit here is a candidate, not an order. Feed it
-to `/trade` — full safety-check gate applies there.
+to `/trade` (local) or let `market-open.md` pick it up from the latest
+`data/setup-scan_cloud_*.json` on its next run (cloud) — full safety-check
+gate and live re-validation apply either way.
 
-CLOUD CADENCE NOTE:
+CLOUD CADENCE NOTE (updated 2026-09-07):
+Live cron is `30 10,13,15 * * 1-5` America/Chicago = 11:30 / 14:30 / 16:30 ET.
+The 11:30 ET and 14:30 ET fires are the ones where Setup A (and therefore
+grade A, which needs Setup A plus at least one other setup) can evaluate —
+both land inside the scanner's 10:00-15:30 ET intraday-breakout window, so
+`grade_a_possible` is true and Setup A actually runs. The 16:30 ET fire lands
+after the 15:30 ET cutoff, `grade_a_possible` is false, and it produces
+next-day daily-swing (grade B/C only) candidates for `market-open.md` to read
+the following session. Before this change the cron was `30 15,17` (16:30 /
+18:30 ET), entirely after the close: Setup A never evaluated in 61/61 runs
+and grade A was unreachable. Check `grade_a_possible` and
+`setup_a_skipped_reason` in the script's JSON output (or `setup_a_checkable`
+per hit) rather than assuming from the clock.
 Claude Code cloud routines enforce a 1-hour minimum interval — no true
-intraday repetition. Recommended cron:
-    0 15,17,19 * * 1-5   (15:00/17:00/19:00 UTC = 10:00/12:00/14:00 ET,
-                           matching tjl-cloud's own suggested cadence since
-                           this is the same kind of intraday scanner)
-Max-tier plans allow more frequent routines than Pro — check your plan's
-routine-interval limit before assuming 3x/day is the ceiling.
+intraday repetition. Max-tier plans allow more frequent routines than Pro —
+check your plan's routine-interval limit before assuming 3x/day is the ceiling.
