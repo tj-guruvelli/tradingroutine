@@ -9155,3 +9155,88 @@ ran after the 16:00 ET close, so the same latest daily bar backs both.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-07 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders`. Still the confirmed-live-vs-$10k-
+baseline mismatch flagged 2026-07-27 — unresolved, operator review
+pending, 54th straight session. 43 trading days since launch (Jul 9) with
+zero entries. New week — 0/3 trades (week of Sep 7).
+
+**Market context:**
+- **Oil:** WTI $92.16 (+0.68, +0.74%), Brent $97.38 (+1.10, +1.14%), both
+  per Markets Insider premarket futures table as of 06:56-07:06 AM ET.
+  Both sides up modestly premarket — consistent with the ongoing
+  Iran/Middle East conflict thread flagged repeatedly since late Aug.
+- **Futures:** Mixed/flat — Dow -0.48% (53,182), S&P 500 -0.12% (7,712.75),
+  Nasdaq 100 +0.05% (29,579.50) per Markets Insider (06:56 AM ET);
+  Bloomberg's ES1/NQ1/DM1 mini-futures print small gains instead (+0.11%,
+  +0.07%, +0.46% respectively) at essentially the same timestamp — sources
+  disagree on sign for Dow/S&P, so treat premarket tape as genuinely flat
+  rather than directional. Gold $4,392.37 (-0.83%), Silver $65.64 (-0.79%).
+- **VIX:** 15.16 (+0.63, +4.34%) at 7:03 AM EDT per CNBC, prev close 14.53
+  (Fri Sep 4, Cboe). Day range 14.99-15.16, open 15.02, 52-wk range
+  13.38-35.30. Modest premarket uptick, still well inside a calm range —
+  no panic signal.
+- **Sector momentum (Schwab Sector Views, as of Sep 4):** More Favored —
+  Financials, Health Care, Industrials, Materials. Neutral — Communication
+  Services, Consumer Staples, Energy, Information Technology. Less
+  Favored — Utilities. Least Favored — Consumer Discretionary, Real
+  Estate. Trailing 6-month performance: Energy +21.3% (best), Info Tech
+  +14.7%, Real Estate +14.3%, Industrials +11.3%, Utilities +8.1%,
+  Financials +7.2%, Health Care +5.5%, Consumer Staples +1.8%, Materials
+  +1.5%, Communication Services -6.5%, Consumer Discretionary -10.4%
+  (worst). S&P 500 index +6.8% (6mo) / +17.4% (12mo). Energy's strength is
+  explicitly tied to the Iran conflict — Schwab flags the sector's
+  near-term outlook as "heavily dependent on the trajectory of U.S.-Iran
+  hostilities" (two-sided risk). September rate-hike odds ~50/50 per
+  Bloomberg WIRP as of Sep 3.
+- **Earnings today (Mon Sep 7):** No noteworthy announcements (ii.co.uk
+  earnings calendar). Tomorrow (Tue Sep 8): GameStop Corp (NYSE:GME) AMC —
+  not a current watchlist ticker.
+- **Econ calendar today:** Search degraded — TradingEconomics page
+  returned only nav/filter chrome, no actual event rows this run. Logged
+  as a gap, consistent with recurring econ-calendar sourcing issues in
+  prior sessions.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Yahoo ban held (zero finance.yahoo.com hits across
+  all queries). The literal "S&P 500 futures" and "S&P 500 sector
+  momentum" queries misfired again (recurring issue — third+ session in a
+  row, see Sep 3 log) — garbled hits (Thai/Indian exchange pages,
+  Wikipedia's "S" letter article, Pinterest). Rewording without the
+  literal "S&P" phrasing ("SPX futures", "stock market sector
+  performance") fixed it cleanly both times. "Top stock market catalysts"
+  query also degraded (irrelevant Indian-market pages) — logged as a gap
+  rather than guessed. `tradingview-data` MCP not loaded this cloud run —
+  no confluence/technical check possible.
+
+**Risk factors:** Iran/Middle East conflict remains the dominant driver
+behind Energy-sector strength and elevated oil (WTI ~$92, Brent ~$97) —
+genuinely two-sided (Schwab's own framing: outlook hinges entirely on the
+hostilities trajectory, could reverse sharply on de-escalation). VIX
+ticked up modestly premarket (+4.34% to 15.16) but stays well within a
+calm historical range — not a stress signal yet. ~50/50 September
+rate-decision odds (Bloomberg WIRP) is a live crosscurrent for
+Financials/Utilities/Real Estate. No `tradingview-data` MCP this run — no
+confluence/technical check possible.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar
+— no confluence tooling available, and premarket tape itself is flat/
+directionless. Watch-only, no entry/stop/target: (1) Energy complex (XLE,
+integrated majors) — best 6-month sector performer (+21.3%) with a live
+catalyst, but Schwab rates it only Neutral given the outlook is a coin
+flip on Iran hostilities; wait for confluence tooling and a
+pullback/consolidation entry rather than chasing the oil bid. (2)
+Financials (XLF) — Schwab's "More Favored" pick on a steeper yield curve
+and improved capital-markets activity; watch for a confluence-confirmed
+entry once tooling is available. (3) Consumer Discretionary — worst
+6-month performer (-10.4%), Least Favored — reinforces staying away per
+the strategy's sector-momentum rule; no action needed, zero exposure
+already.
+
+**Decision: HOLD.** No open positions, no planned trades. Flat/mixed
+premarket tape, a genuinely two-sided Iran/oil catalyst, no confluence
+tooling this run, and 43 trading days of zero entries all argue for
+patience over activity.
