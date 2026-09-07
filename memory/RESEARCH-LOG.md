@@ -9155,3 +9155,15 @@ ran after the 16:00 ET close, so the same latest daily bar backs both.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-07 — Gappers (auto-scan 08:21 ET, cloud)
+
+**0 hits.** Market holiday (Labor Day, 2026-09-07) — no trading session
+today, so no fresh trade/quote timestamped "today" exists for any watchlist
+symbol; `scripts/gappers-alpaca.sh` correctly skips every symbol rather than
+fabricate a price (see script's `current is None: continue` guard). Verified
+at both GAP_THRESHOLD=5.0 and GAP_THRESHOLD=0.0 — same empty result, ruling
+out a threshold-filtering false negative. 69 symbols parsed off
+`memory/WATCHLIST.md` (in line with the ~60-ticker `config/rules.json`
+watchlist_tiers.immediate universe plus a few prose false-positives). 0
+errors. No Telegram/ClickUp notify sent per routine rule (0 hits, no error).
