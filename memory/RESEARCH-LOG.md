@@ -9167,3 +9167,7 @@ out a threshold-filtering false negative. 69 symbols parsed off
 `memory/WATCHLIST.md` (in line with the ~60-ticker `config/rules.json`
 watchlist_tiers.immediate universe plus a few prose false-positives). 0
 errors. No Telegram/ClickUp notify sent per routine rule (0 hits, no error).
+
+**Re-run 10:12 ET (cloud, duplicate schedule firing):** re-scanned
+watchlist, same 0 hits / same Labor Day cause. No new data — not
+overwriting the entry above. No notify sent (0 hits, no error).
