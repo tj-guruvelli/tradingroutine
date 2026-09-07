@@ -1,0 +1,57 @@
+{
+  "scanned_at": "2026-09-07T22:38:40.970Z",
+  "ny_time": "18:38",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "HAFN",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 9.04,
+      "prev_daily_high": 9.25,
+      "prev_daily_close": 9.22,
+      "sma200": 7.21,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": null,
+      "rsi14": 75.92,
+      "adx14": 22.93,
+      "ema9": 8.63,
+      "ema21": 8.24,
+      "premarket_volume": 0,
+      "daily_volume": 157866,
+      "avg_daily_volume_30": 83122,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BWLP",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 21.31,
+      "prev_daily_high": 25.08,
+      "prev_daily_close": 24.78,
+      "sma200": 17.91,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": null,
+      "rsi14": 64.85,
+      "adx14": 23.75,
+      "ema9": 24.27,
+      "ema21": 23.57,
+      "premarket_volume": 0,
+      "daily_volume": 40387,
+      "avg_daily_volume_30": 18325,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}

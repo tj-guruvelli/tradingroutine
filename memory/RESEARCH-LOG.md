@@ -9199,3 +9199,20 @@ rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+### Setup Scan (18:38 ET, cloud)
+
+Re-run at 18:38 ET (later fire, same Labor Day session). Full-universe scan
+(60 tickers via `scripts/setup-scan-cloud.mjs` against Alpaca bars/quotes).
+**0 grade-A hits, 2 grade-B hits — identical symbols/grade to the 16:38 ET
+run above** (no new daily bar since market was closed today). 0 errors.
+`grade_a_possible: false` — 18:38 ET is outside the 10:00-15:30 ET window.
+No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | RSI 75.92, ADX 22.93, EMA9 $8.63 > EMA21 $8.24, px $9.04 |
+| BWLP | B | Momentum confluence | daily swing | RSI 64.85, ADX 23.75, EMA9 $24.27 > EMA21 $23.57, px $21.31 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
