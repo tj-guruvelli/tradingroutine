@@ -25,3 +25,6 @@ ruvector.db
 
 # graphify concept-graph output (built by another agent in this repo) — never committed
 graphify-out/
+
+# calibration raw Alpaca caches (35MB, re-fetchable by scripts/calibrate-entry-bar.mjs)
+data/calibration/raw/
