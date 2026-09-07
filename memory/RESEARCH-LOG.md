@@ -9171,3 +9171,8 @@ errors. No Telegram/ClickUp notify sent per routine rule (0 hits, no error).
 **Re-run 10:12 ET (cloud, duplicate schedule firing):** re-scanned
 watchlist, same 0 hits / same Labor Day cause. No new data — not
 overwriting the entry above. No notify sent (0 hits, no error).
+
+**Re-run 11:11 ET (cloud, duplicate schedule firing):** re-scanned
+watchlist, same 0 hits / same Labor Day cause (`clock` endpoint confirms
+`is_open:false`, next_open 2026-09-08T09:30:00-04:00). No new data — not
+overwriting the entry above. No notify sent (0 hits, no error).
