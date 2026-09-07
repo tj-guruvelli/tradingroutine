@@ -1,0 +1,1955 @@
+{
+  "generated_at": "2026-09-07T09:49:57.609Z",
+  "window": {
+    "start": "2026-07-09",
+    "end": "2026-09-04",
+    "trading_days": 42
+  },
+  "universe": {
+    "requested": 60,
+    "resolved": 60,
+    "exclusions": [
+      {
+        "symbol": "KOG.OL",
+        "reason": "not present in watchlist_tiers.immediate — no exclusion needed"
+      }
+    ]
+  },
+  "sample_times_et": [
+    "11:30",
+    "14:30"
+  ],
+  "default_thresholds": {
+    "adx": 20,
+    "rsi": 30
+  },
+  "aggregate": {
+    "totalGradeA": 0,
+    "daysWithGradeA": 0,
+    "A": 0,
+    "B": 126,
+    "C": 0,
+    "AB": 0,
+    "AC": 0,
+    "BC": 0,
+    "symbolDaySamples": 460,
+    "volGateExcluded": 4580,
+    "dailyBreakoutOnly": 62,
+    "intradayBreakoutOnly": 1
+  },
+  "per_day": [
+    {
+      "day": "2026-07-09",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-10",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-13",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-14",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-15",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 57,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 57,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-16",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-17",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-20",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-21",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-22",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-23",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 57,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 57,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-24",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 3,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-27",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-28",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 51,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 51,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-29",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-30",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-07-31",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 51,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 51,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-03",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-04",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-05",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-06",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-07",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-10",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-11",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-12",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-13",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 53,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 53,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-14",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 49,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 49,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-17",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 4,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 4,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 4,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 4,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-18",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-19",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-20",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 4,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 4,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 4,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 4,
+          "numVolGateExcluded": 52,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-21",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-24",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 1,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 2,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 2,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-25",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-26",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 55,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-27",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 1,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 1,
+          "numVolGateExcluded": 56,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-28",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-08-31",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-09-01",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 0,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 0,
+          "numVolGateExcluded": 58,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-09-02",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 1,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 54,
+          "numDailyBreakoutOnly": 0,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-09-03",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 53,
+          "numDailyBreakoutOnly": 2,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 3,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 3,
+          "numVolGateExcluded": 53,
+          "numDailyBreakoutOnly": 3,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    },
+    {
+      "day": "2026-09-04",
+      "samples": {
+        "11:30": {
+          "numA": 0,
+          "numB": 5,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 5,
+          "numVolGateExcluded": 49,
+          "numDailyBreakoutOnly": 3,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        },
+        "14:30": {
+          "numA": 0,
+          "numB": 5,
+          "numC": 0,
+          "numAB": 0,
+          "numAC": 0,
+          "numBC": 0,
+          "numGradeA": 0,
+          "numGradeB": 5,
+          "numVolGateExcluded": 49,
+          "numDailyBreakoutOnly": 3,
+          "numIntradayBreakoutOnly": 0,
+          "gradeASymbols": []
+        }
+      }
+    }
+  ],
+  "grade_a_list": [],
+  "sensitivity": {
+    "adx_threshold": {
+      "15": 0,
+      "20": 0,
+      "25": 0
+    },
+    "setup_a_alone": 0,
+    "setup_b_strict": 60,
+    "rsi_threshold": {
+      "30": 0,
+      "35": 0,
+      "40": 0
+    }
+  },
+  "confluence_proxy": {
+    "literalCount": 115,
+    "lenientCount": 270,
+    "evaluable": 441,
+    "vwapUnavailable": 19
+  },
+  "cross_check": [
+    {
+      "file": "data/setup-scan_cloud_2026-07-27_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-27_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-28_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-28_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-29_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-29_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-30_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-31_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-07-31_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-03_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-03_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-04_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-04_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-05_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-05_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-06_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-06_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-07_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-07_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-10_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-10_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-11_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-12_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-12_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-14_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-14_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-17_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 4,
+      "ourBCount": 4,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-17_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 4,
+      "ourBCount": 4,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-18_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-18_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-19_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-19_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-20_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 4,
+      "ourBCount": 4,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-20_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 4,
+      "ourBCount": 4,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-21_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-21_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-24_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-24_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 2,
+      "ourBCount": 2,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-25_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-25_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-26_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-26_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-27_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-27_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 1,
+      "ourBCount": 1,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-28_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-28_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-31_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-08-31_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-01_1639ET.json",
+      "ny_time": "16:39",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-01_1839ET.json",
+      "ny_time": "18:39",
+      "prodBCount": 0,
+      "ourBCount": 0,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-02_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-02_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-03_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-03_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 3,
+      "ourBCount": 3,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-04_1638ET.json",
+      "ny_time": "16:38",
+      "prodBCount": 5,
+      "ourBCount": 5,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    },
+    {
+      "file": "data/setup-scan_cloud_2026-09-04_1838ET.json",
+      "ny_time": "18:38",
+      "prodBCount": 5,
+      "ourBCount": 5,
+      "onlyProd": [],
+      "onlyOurs": [],
+      "agree": true
+    }
+  ]
+}
