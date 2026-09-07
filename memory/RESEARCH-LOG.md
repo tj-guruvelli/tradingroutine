@@ -9176,3 +9176,26 @@ overwriting the entry above. No notify sent (0 hits, no error).
 watchlist, same 0 hits / same Labor Day cause (`clock` endpoint confirms
 `is_open:false`, next_open 2026-09-08T09:30:00-04:00). No new data — not
 overwriting the entry above. No notify sent (0 hits, no error).
+
+## 2026-09-07 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits.**
+0 errors. `grade_a_possible: false` — 16:38 ET is outside the 10:00-15:30 ET
+window, so Setup A never evaluated (expected for this fire per the cloud
+cadence note). Today is Labor Day (market holiday, no session) — daily bars
+still reflect Friday 2026-09-04's close; only 2 of the 5 tickers that hit
+Setup B on 2026-09-04 (BWLP, HAFN) still clear the ADX14>20 + EMA9>EMA21 bar
+today, likely from quote-based current-price drift shifting RSI/EMA9 slightly
+since the last full daily bar. No Telegram/ClickUp notify sent per routine
+rule (0 grade-A hits).
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | RSI 75.92, ADX 22.93, EMA9 $8.63 > EMA21 $8.24, px $9.04 |
+| BWLP | B | Momentum confluence | daily swing | RSI 64.85, ADX 23.75, EMA9 $24.27 > EMA21 $23.57, px $21.31 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
