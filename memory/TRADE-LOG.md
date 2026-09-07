@@ -470,3 +470,10 @@ No Apify catalyst fetch run (STEP 4) since it would not change the STEP 3
 outcome. No planned tickers executed. Weekly trade count: 0/3 (new week of
 Sep 7). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
 mismatch flagged Jul 27, unresolved, operator review pending.
+
+### Sep 07 — EOD Snapshot (Labor Day — market holiday, Monday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Market closed for Labor Day, not a trading day — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-04`, no Mon prints). Zero trades, zero open positions, zero open orders. Weekly trade count: 0/3 (week of Sep 7). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending. Market reopens Tue Sep 8.
