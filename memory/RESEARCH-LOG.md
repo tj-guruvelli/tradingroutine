@@ -9949,3 +9949,25 @@ better research this pass. 0 errors.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-08 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 2 grade-B hits**:
+HAFN and BWLP both clear Setup B (ADX14 > 20 AND EMA9 > EMA21; note the local
+`/setup-scan` stock_score>=6 gate is dropped here, MCP-only). Setup A
+(TJL breakout) not checkable for either ticker this run — `setup_a_checkable:
+false` on both, consistent with `grade_a_possible: false`
+(`setup_a_skipped_reason: "outside 10:00-15:30 ET"`) — this is the 16:30 ET
+Chicago cron fire, after the 15:30 ET intraday-breakout cutoff. No grade-A
+hit, so no Telegram/ClickUp notify sent per routine rule.
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | ADX 22.9, EMA9 $8.63 > EMA21 $8.24, RSI 75.9, px $8.96 vs SMA200 $7.21 |
+| BWLP | B | Momentum confluence | daily swing | ADX 23.8, EMA9 $24.27 > EMA21 $23.57, RSI 64.9, px $23.12 vs SMA200 $17.91 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
