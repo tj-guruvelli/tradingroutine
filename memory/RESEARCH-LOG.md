@@ -9177,6 +9177,95 @@ watchlist, same 0 hits / same Labor Day cause (`clock` endpoint confirms
 `is_open:false`, next_open 2026-09-08T09:30:00-04:00). No new data — not
 overwriting the entry above. No notify sent (0 hits, no error).
 
+## 2026-09-08 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-04` —
+stale field, last real activity Friday's close; market reopens today after
+Monday's Labor Day holiday). Day-trade count not returned by the account
+wrapper. Still the confirmed-live-vs-$10k-baseline mismatch flagged
+2026-07-27 — unresolved, operator review pending. 43rd trading day since
+launch (Jul 9) with zero entries (Sep 7 was a market holiday, not counted).
+Week of Sep 7 stands at 0/3 trades.
+
+**Market context:**
+- **Oil:** Brent $98.65 (+1.70%), highest since Jul 23, briefly testing
+  $99/bbl — Saudi Arabia reported attacks halting operations at several
+  energy facilities in the south of the kingdom; Iran-backed Houthi
+  militants claimed responsibility for hitting the 400k-bbl/day Jazan
+  refinery. WTI $93.93 (+2.68%, "war premium returns," back above $91 per
+  Oilprice.com's technical note). Adds to the still-live Iran/Hormuz
+  overhang; Chinese crude imports strengthened in August (more Persian
+  Gulf purchases).
+- **S&P 500 futures:** ES +0.49% premarket (7,714 vs. 7,712.25 open,
+  Investing.com/Barchart) — risk-on tape shrugging off the oil spike so
+  far.
+- **VIX:** 15.79 (+0.49, +3.20%), 07:03 ET premarket print (Moomoo) — still
+  a low absolute level, but the intraday pop tracks the oil-driven
+  headline risk rather than a broad risk-off move.
+- **Today's catalysts:** No CPI/PPI/jobs/FOMC print today. Next major
+  release is PPI (Aug) Thu Sep 10, 8:30am ET, then CPI (Aug) Fri Sep 11 —
+  both ahead of the Sep 15-16 FOMC. Last Friday's August NFP beat sharply
+  (+162k vs. +53k consensus), re-pricing hawkish and pressuring yields —
+  still the dominant overhang into this week's inflation prints. Fed Gov.
+  Waller has signaled a preference to hold rates steady but said the call
+  is data-dependent.
+- **Earnings today (Tue Sep 8):** 41 reports total, mostly time-TBD. Before
+  open: ABM Industries (ABM), United Natural Foods (UNFI), Canaan (CAN) —
+  none on the watchlist. After close: Casey's General Stores (CASY),
+  ServiceTitan (TTAN), + others not on the watchlist per the excerpt
+  retrieved.
+- **Sector momentum YTD:** Industrials (XLI) leading, Communications (XLC)
+  and Technology (XLK) close behind/near-surpassing. Energy (XLE) negative
+  YTD despite today's oil spike; Healthcare (XLV) and Consumer
+  Discretionary (XLY) also lagging. Directionally consistent with the
+  cycle-momentum playbook (tech/comms leadership) but not independently
+  confirmed against `combined_analysis` — `tradingview-data` MCP not
+  loaded this cloud run, no confluence/technical check possible.
+- No open positions — no held-ticker news check needed.
+- **Sourcing note:** Apify RAG handled oil, VIX, earnings-calendar cleanly.
+  "S&P 500 futures premarket" and "top stock market catalysts" both
+  misfired again (matched unrelated Vietnamese-language/Wikipedia/Spotify
+  pages — same recurring ampersand/short-query mismatch flagged in prior
+  entries); "S&P 500 sector momentum YTD" also misfired the same way.
+  Fell back to native WebSearch (with the same `-site:finance.yahoo.com`
+  exclusion) for all three and recovered clean Investing.com/Barchart,
+  TheStreet/CNBC/Schwab, and CSIMarket/Novel Investor/Benzinga hits
+  respectively. Zero finance.yahoo.com citations used in this entry —
+  Yahoo ban held (search results surfaced yahoo.com links in two of the
+  WebSearch result sets; none were cited or used for any figure above).
+
+**Risk factors:** Oil-driven geopolitical headline risk (Saudi refinery
+strikes, Houthi/Iran) could still broaden into a risk-off move even though
+futures are green pre-open — energy-security shocks have a habit of
+reversing risk sentiment fast. CPI (Fri) and PPI (Thu) both land this week
+ahead of the Sep 15-16 FOMC, with last Friday's hot NFP already having
+re-priced hawkish — elevated event risk into Thursday/Friday argues against
+adding exposure early in the week. 31 of today's 41 earnings reports have
+no confirmed time — watch for pre/post-market gaps in any name that
+overlaps the watchlist. No `tradingview-data` MCP this run — no
+confluence/technical check possible, so no name-level idea can clear the
+strategy's 2-indicator confluence bar today regardless of catalyst quality.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar —
+no confluence tooling available this run. Watch-only, no entry/stop/target:
+(1) Industrials/Communications/Technology sector momentum leaders (XLI,
+XLC, XLK) — YTD leadership intact per today's read; needs confluence
+tooling plus a specific single-name pullback setup before any entry. (2)
+Energy complex — today's Saudi-refinery-driven price spike is a fresh
+catalyst on a YTD-negative sector; worth a dedicated `/research` or
+`/sentiment` pass on integrated majors/E&Ps if the spike holds through the
+session, but not actionable pre-open without a specific name and stop
+level. (3) Broad market — CPI/PPI week ahead is the real test of whether
+last week's NFP-driven hawkish repricing holds; staying flat into the data
+avoids chasing either direction.
+
+**Decision: HOLD.** No open positions, no planned trades. Oil-driven
+headline risk plus a CPI/PPI-heavy week ahead of FOMC argues for staying
+flat; no confluence tooling this run to validate any single-name idea.
+Patience over activity.
+
 ## 2026-09-07 — Setup Scan (16:38 ET, cloud)
 
 Full-universe scan (60 tickers checked from `config/rules.json`
