@@ -9216,3 +9216,134 @@ No Telegram/ClickUp notify sent per routine rule (0 grade-A hits).
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-08 — Gappers (auto-scan 08:15 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+**4 hits**, all above the price/gap filters (no `premarket_volume` field
+populated by Alpaca's snapshot endpoint, so that filter was skipped per
+routine rule). All 4 fit under the 5-name deep-dive cap — no quick-scan-only
+ranks today. 0 errors.
+
+### Gappers (auto-scan 08:15 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 268.40 | +14.14% | 658,747 | Seeking Alpha rating upgrade: "AI-Memory-Style Frenzy" |
+| 2 | NBIS | 232.26 | +10.25% | 541,800 | AI-infra/neocloud sector rally; no dated headline confirmed |
+| 3 | CRWV | 91.84 | +8.58% | 524,722 | AI-infra/neocloud sector rally; no dated headline confirmed |
+| 4 | RGTI | 16.29 | +7.24% | 487,231 | Signed definitive $100M DoC agreement for quantum computing R&D (posted today) |
+
+#### Deep dive: BE $268.40 +14.14%
+
+- Catalyst: Seeking Alpha published a bullish rating-upgrade piece today
+  framing Bloom Energy's on-site solid-oxide fuel cell power as poised for
+  the kind of re-rating frenzy AI-memory/HBM stocks got. Builds on momentum
+  already in place: BE closed Thu Sep 4 up 7.35% at $252.87 on continued
+  fundamental strength (revenue $3.11B ttm +91% YoY, net income +936% YoY,
+  EPS +788% YoY), then gapped another ~5.9% pre-market this morning to
+  ~$267.72.
+- Why: AI data centers face a power-delivery bottleneck (grid interconnect
+  queues run 3-5+ years); Bloom's fuel cells deploy in months without grid
+  dependency, making it a direct beneficiary of the AI-power-shortage trade.
+  A sell-side rating upgrade plus a fresh narrative comparison pulls in
+  momentum/theme buyers on top of genuinely strong fundamentals.
+- Impact: Mixed sustainability read — fundamentals are real and the move has
+  run across multiple sessions, but the "AI-memory-style frenzy" framing is
+  speculative narrative-chasing that can unwind fast. Stock is pushing
+  toward its 52-week high ($351.28) after already ~5x off its 52-week low.
+  Sector read-through: NBIS, CRWV, RGTI all gapped the same morning,
+  signaling a broad AI-infrastructure/power risk-on tape, not BE-only.
+- Horizon: SHORT_TERM lean — no hard fundamental trigger today (no earnings,
+  no new contract, just a rating upgrade riding existing momentum), even
+  though the underlying AI-power-demand thesis is structurally LONG_TERM.
+- Opportunity cost: At $268 a 10% trailing stop is ~$27/share of risk;
+  clearing 2:1 R:R needs a ~$322 target, a stretch this extended (285x
+  trailing PE). Would eat into the 3-new-trades/week cap and 20%-per-position
+  ceiling versus a less-extended entry; RGTI's confirmed same-day, discrete
+  contract catalyst is a cleaner setup among today's gappers.
+
+#### Deep dive: NBIS $232.26 +10.25%
+
+- Catalyst: No fresh, dated (Sep 8) company-specific press release surfaced
+  despite multiple targeted searches. Context found: Nebius has repeatedly
+  gapped double digits this year on hyperscaler capacity deals (a $17.4B
+  multi-year Microsoft compute contract, Nvidia disclosing a 9.3% equity
+  stake) and a $4.5B convertible-note raise in mid-August that initially
+  triggered a dilution selloff before the stock resumed climbing.
+- Why: NBIS is one of the highest-beta "neocloud" plays on AI compute
+  demand; when the AI-infra trade is on, it moves with outsized amplitude
+  given its smaller float and rich valuation (~122x sales per the most
+  recent reporting found).
+- Impact: Cannot confirm sustainability without a same-day driver — flagged
+  as a research gap. Sector-wide participation (4/4 gappers all AI-infra/
+  power adjacent) argues this is a real risk-on rotation day for the theme
+  rather than a single-name flash, but NBIS carries dilution overhang from
+  its recent $4.5B convertible offering that could cap follow-through.
+- Horizon: SHORT_TERM, lean short-term given no confirmed structural
+  catalyst dated today; reassess as LONG_TERM only if a specific new
+  contract/partnership announcement surfaces.
+- Opportunity cost: Same 6-position/3-trades-per-week/20%-cap constraints
+  apply. A name already up 10%+ pre-market on an unconfirmed catalyst is a
+  weaker capital candidate than RGTI's dated, discrete contract catalyst
+  today; also highly correlated with CRWV (same theme, same-day movers) —
+  Confluence rule argues against taking both.
+
+#### Deep dive: CRWV $91.84 +8.58%
+
+- Catalyst: No company-specific news dated Sep 8 surfaced. Recent context:
+  CoreWeave gained 18% in August per Motley Fool coverage; a TradingView
+  community note flagged "CRWV, NBIS, IREN stocks jump" tied to broader AI
+  data-center enthusiasm; the CEO and general counsel both disclosed insider
+  stock sales in the past week (Sep 1 CEO sale of $27.3M, Aug 31 GC sale).
+- Why: Same sector mechanism as NBIS — CoreWeave is a pure-play AI GPU cloud
+  provider; when AI-infra sentiment turns risk-on (evident across all 4
+  gappers this morning), high-beta neoclouds see outsized moves.
+- Impact: Mixed signal — a genuine AI-capex tailwind (98% of CoreWeave's
+  capacity reportedly already contracted) argues for a real, multi-day
+  theme, but recent insider selling (CEO, GC) and analyst pieces flagging
+  interest expense running ~4x operating income are bearish undercurrents —
+  today's pop could be a sector-beta ride rather than company-specific
+  strength, raising mean-reversion risk if the broader rally stalls.
+- Horizon: SHORT_TERM, lean short-term — no discrete dated catalyst found;
+  treat as a sector-momentum ride, not a standalone thesis, until a specific
+  CRWV announcement surfaces.
+- Opportunity cost: Recent insider selling is a caution flag versus RGTI's
+  cleaner government-contract catalyst. Competes for the same "AI-infra
+  theme" bucket as NBIS — Confluence rule argues for at most one of
+  NBIS/CRWV given high same-sector, same-day correlation; run
+  `scripts/corr-gate.mjs` before any real entry.
+
+#### Deep dive: RGTI $16.29 +7.24%
+
+- Catalyst: Rigetti's investor-relations newsroom posted today (Sep 08,
+  2026) that it has signed a DEFINITIVE agreement with the U.S. Department
+  of Commerce for a $100M award to accelerate R&D on scaling and advancing
+  superconducting quantum computers — converting a May 21, 2026
+  letter-of-intent for the same amount into a binding, funded contract.
+- Why: A definitive, funded U.S. government R&D contract is a hard,
+  verifiable catalyst (not just sentiment) — it de-risks Rigetti's
+  technology roadmap and validates government-backed demand for quantum
+  computing, pulling in both fundamental and momentum buyers in a stock
+  that trades heavily on binary news (negative P/E, story-stock profile).
+- Impact: The strongest, most discrete catalyst of the four today —
+  converts an already-known LOI into funded, material news rather than
+  stale/re-hashed coverage. Price action (today's high $16.40 vs. 52-wk
+  range $12.53-$58.15) suggests room to run without being as extended as
+  BE, but as a small-cap quantum "story stock" moves can still overshoot
+  and mean-revert once the initial re-rating completes.
+- Horizon: LONG_TERM leaning, mixed with SHORT_TERM tape effects: the
+  contract itself is a durable, structural positive (government-funded
+  roadmap progress), but today's +7.24% on a modest $100M award relative to
+  a $5.08B market cap is also riding the broader AI/deep-tech risk-on tape
+  seen across BE/NBIS/CRWV today, so near-term follow-through depends on
+  whether that broader tape holds.
+- Opportunity cost: Cleanest catalyst of the four (dated, government-
+  verified, non-dilutive funding) — best-positioned of today's set to clear
+  a 2:1 R:R with a tight stop below today's low ($15.46). Would still
+  compete with existing open positions and the 3-trades/week cap; flagged
+  as the top research candidate among today's gappers for `/trade` to
+  evaluate, without prejudging a specific size here.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
