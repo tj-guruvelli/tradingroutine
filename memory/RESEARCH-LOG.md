@@ -9347,3 +9347,151 @@ ranks today. 0 errors.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-08 — Gappers (auto-scan 10:12 ET, cloud, dup firing)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+~2h after this morning's 08:15 ET run (market now open). **10 hits** (up from
+4 this morning — BE/NBIS/CRWV/RGTI carry over, plus QBTS, OKLO, SATL, ASTS,
+HAFN, UMAC newly clearing threshold). No `premarket_volume` field populated
+by Alpaca's snapshot endpoint (just `volume`), so that filter was skipped per
+routine rule, consistent with this morning's entry. Deep-dive capped at top 5
+by |gap%|: BE, QBTS, RGTI, CRWV, OKLO. Ranks 6-10 (SATL, ASTS, NBIS, HAFN,
+UMAC) get quick-scan only. 0 scan errors; several catalyst searches (OKLO,
+SATL, ASTS, HAFN, UMAC) returned no usable result from either the Apify RAG
+browser or the Benzinga WebFetch fallback (Benzinga 403'd on every ticker
+this run) — catalyst logged as null per routine rule rather than fabricated.
+
+### Gappers (auto-scan 10:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 275.00 | +8.75% | 233,817 | Continuation of this morning's Seeking Alpha "AI-Memory-Style Frenzy" rating upgrade |
+| 2 | QBTS | 18.01 | +8.69% | 340,677 | Quantum-sector-wide rally (QBTS/RGTI/IONQ/QUBT trending together); no dated headline |
+| 3 | RGTI | 16.31 | +7.30% | 355,556 | Same $100M DoC contract flagged this morning, plus sector rally |
+| 4 | CRWV | 95.62 | +7.04% | 420,158 | AI-infra/neocloud sector rally; no dated headline confirmed |
+| 5 | OKLO | 44.10 | +6.82% | 68,702 | No catalyst found (Apify + Benzinga fallback both failed) |
+| 6 | SATL | 4.925 | +6.14% | 33,700 | No catalyst found |
+| 7 | ASTS | 65.745 | +5.55% | 53,479 | No catalyst found |
+| 8 | NBIS | 238.835 | +5.47% | 175,578 | Palantir/Nebius partnership announced today (AI model ownership) |
+| 9 | HAFN | 8.73 | -5.31% | 20,219 | No catalyst found |
+| 10 | UMAC | 25.03 | +5.23% | 11,403 | No catalyst found |
+
+#### Deep dive: BE $275.00 +8.75%
+
+- Catalyst: Same catalyst as the 08:15 ET scan (Seeking Alpha bullish
+  rating-upgrade piece framing Bloom Energy's fuel cells for an
+  AI-memory-style re-rating), extending intraday from $268.40 at 08:15 ET to
+  $275.00 by 10:12 ET. No new dated headline found this pass.
+- Why: AI data centers face multi-year grid-interconnect bottlenecks;
+  Bloom's fuel cells sidestep that, so the rating upgrade plus continued
+  momentum keeps pulling in trend/theme buyers on top of genuinely strong
+  fundamentals (revenue +91% YoY, EPS +788% YoY per this morning's log).
+- Impact: Move has now run across multiple sessions, pushing further toward
+  the 52-week high ($351.28); today's volume (233,817) is moderate, not a
+  fresh spike — reads as continuation, not a new trigger. Sector
+  read-through: QBTS/RGTI gapping the same morning on an unrelated quantum
+  theme, not BE's AI-power theme; OKLO (nuclear-for-AI) is the closer
+  sector cousin, also up today.
+- Horizon: SHORT_TERM — no new dated catalyst since this morning; extended
+  technical picture near highs raises mean-revert risk within days even
+  though the underlying AI-power-demand thesis is structurally longer-term.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used, so no
+  existing holding displaced. BE failed this morning's Confluence check
+  (not a setup-scan hit, no VWAP/RSI/200-SMA confirmation) while now more
+  extended than the 08:15 ET print; RGTI's discrete, dated $100M contract
+  is a cleaner catalyst among today's names if only one trade goes out
+  this week.
+
+#### Deep dive: QBTS $18.01 +8.69%
+
+- Catalyst: No fresh dated headline for today found despite multiple
+  targeted searches. A live trending-tickers rail captured mid-scan showed
+  QBTS +8.99%, RGTI +7.63%, IONQ +8.27%, QUBT +5.62% moving together same
+  session, confirming a sector-wide quantum rally rather than a
+  QBTS-specific event. Underlying multi-month thesis is a proposed U.S.
+  government quantum-funding push (Motley Fool, Jul 2026 — stale, not
+  today's trigger).
+- Why: Small-cap quantum names tend to move as a basket; any positive
+  sector read-through lifts the whole group rather than one name
+  specifically.
+- Impact: Basket move, not company-specific — higher one-day-spike/
+  mean-revert risk since no QBTS-specific news justifies the size of the
+  move on its own; volume (340,677) is elevated, consistent with
+  speculative sector-wide flow.
+- Horizon: SHORT_TERM — sector-momentum trade with no company-specific
+  catalyst identified today; classic flow-driven gapper, fade risk high
+  once the group's momentum cools.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  existing holding displaced. Against RGTI (same sector, same-session
+  move, but a dated company-specific $100M contract), QBTS is the
+  weaker-documented of the two quantum names if only one gets taken this
+  week; neither clears the Confluence rule without live VWAP/RSI/200-SMA
+  data (unavailable this cloud run).
+
+#### Deep dive: RGTI $16.31 +7.30%
+
+- Catalyst: Same definitive ~$100M Dept. of Commerce quantum-computing R&D
+  contract flagged this morning, plus the same-session quantum-sector
+  rally noted above (RGTI +7.63% on the live trending rail at time of
+  search).
+- Why: A real government contract validates commercial/R&D demand for
+  RGTI's technology; sector-wide momentum amplifies the market's reaction
+  beyond what the contract size alone would justify.
+- Impact: Genuine dated catalyst plus a sector tailwind is more durable
+  than a pure sympathy move, but a >7% single-name pop in a still-early-
+  stage quantum company retains mean-revert risk once initial momentum
+  fades. No negative peer read-through noted.
+- Horizon: LONG_TERM lean on the contract itself (a new government R&D
+  relationship is structural), but near-term price action is SHORT_TERM/
+  sector-momentum amplified — would need to hold above pre-gap levels
+  after the initial pop to treat as a genuine multi-day swing candidate.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  existing holding displaced. Best-documented catalyst among today's top 5
+  (dated, company-specific, vs BE/QBTS/CRWV/OKLO's narrative-or-sector-only
+  reads); still needs the Confluence rule (≥2 of VWAP/RSI/200-SMA/insider)
+  confirmed live before counting as an actionable entry — unavailable in
+  this cloud run, so this remains research only.
+
+#### Deep dive: CRWV $95.62 +7.04%
+
+- Catalyst: Search results resolved to a stale (April 2026) article on
+  analyst price-target hikes (DA Davidson, BofA, Roth Capital) tied to
+  CoreWeave's Anthropic and Meta mega-deals — the AI-infra thesis behind
+  those upgrades is still structurally in place, but nothing dated to
+  today confirms a fresh trigger. The same search surfaced a same-day item
+  for peer NBIS (Palantir/Nebius partnership), suggesting today's move is
+  a neocloud-group rally rather than CRWV-specific news.
+- Why: If this is a continuation of the multi-week AI-infra/neocloud
+  re-rating, it is the secular AI-buildout thesis moving the whole group
+  rather than one new CRWV event.
+- Impact: Without a same-day trigger, a >7% move reads as sector-wide
+  risk-on flow rather than a CRWV-specific catalyst — higher chance of
+  giving back gains if the sector rotation fades. NBIS's confirmed
+  same-day Palantir-partnership news is the closest documented driver of
+  today's neocloud-group strength.
+- Horizon: SHORT_TERM — no company-specific dated catalyst confirmed
+  today; treat as a sector-momentum gap until CRWV-specific news surfaces.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  existing holding displaced. NBIS is the better-documented name in the
+  same neocloud group today (confirmed same-day partnership news) if only
+  one AI-infra name is taken this week.
+
+#### Deep dive: OKLO $44.10 +6.82%
+
+- Catalyst: No catalyst headline surfaced — both the Apify RAG search and
+  the Benzinga WebFetch fallback failed or returned only generic
+  quote/analysis pages, no dated news item. Logged as a research gap per
+  routine rule rather than fabricated.
+- Why: Unconfirmed. Plausible inference only: OKLO moved the same session
+  as BE (both AI-power/nuclear-for-AI theme), but that is not a sourced
+  catalyst.
+- Impact: Cannot assess sustainability without a documented trigger.
+- Horizon: SHORT_TERM by default in the absence of any documented
+  catalyst — do not treat an unconfirmed move as a durable thesis.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — no
+  existing holding displaced. Weakest-documented name in today's
+  deep-dive set; would be the first cut if forced to rank by catalyst
+  quality.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
