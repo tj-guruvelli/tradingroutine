@@ -9347,3 +9347,165 @@ ranks today. 0 errors.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-08 — Gappers (auto-scan 11:11 ET, cloud)
+
+Off-schedule re-fire ~1h41m after the 9:30 open (not premarket) — same
+pattern as the 2026-09-04 11:15 ET trigger. Watchlist scan via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0) returned 15 raw
+hits; 4 dropped on the `premarket_volume >= 50000` filter (BW 34,494, UMAC
+16,952, BKSY 3,926, WLDS 18,799), leaving 11 qualifying rows, capped at the
+top 10 by |gap%|. Saved to a time-suffixed file
+(`data/premarket_gappers_2026-09-08_1111ET.json`) rather than overwriting
+this morning's 08:15 ET `premarket_gappers_2026-09-08.json`, per the
+2026-09-04 precedent. Notably, this run resolved dated, confirmed catalysts
+for BE (S&P 500 index inclusion) and NBIS (Palantir sovereign-AI partner)
+that this morning's 08:15 ET scan flagged as unconfirmed — same names,
+better research this pass. 0 errors.
+
+### Gappers (auto-scan 11:11 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 99.25 | +11.09% | 592,858 | Analyst target hikes citing mega AI-cloud deals; CEO/GC insider selling this week |
+| 2 | SATL | 5.13 | +10.45% | 124,689 | No dated headline; 30-day momentum (+149%) on Q2 earnings + Merlin launches |
+| 3 | QBTS | 18.10 | +9.23% | 616,041 | Quantum-sector read-through from RGTI's DoC contract; no QBTS-specific news |
+| 4 | BE | 275.00 | +8.75% | 318,214 | Confirmed: selected for S&P 500 inclusion (Fri), extending the +7.35% surge |
+| 5 | NBIS | 244.75 | +8.08% | 318,212 | Confirmed: Palantir names Nebius preferred sovereign-AI infra partner (today) |
+| 6 | RGTI | 16.22 | +6.71% | 491,523 | $100M DoC quantum R&D contract (from this morning's scan, still active driver) |
+| 7 | OKLO | 44.00 | +6.56% | 119,165 | No fresh headline; AI-power/deep-tech risk-on tape |
+| 8 | ASTS | 66.30 | +6.44% | 110,901 | Berenberg Buy initiation ($92 PT) momentum, ~4 days old |
+| 9 | AMKR | 50.64 | +5.99% | 64,235 | Post-earnings momentum (Q2 EPS beat by 48.94%, Aug 26) |
+| 10 | RDW | 11.16 | +5.88% | 124,038 | Continuation of last week's post-Q2-beat rally |
+
+#### Deep dive: CRWV $99.25 +11.09%
+
+- Catalyst: No single fresh Sep-8 press release; multiple analysts raised
+  price targets this week citing CoreWeave's recent mega AI-cloud compute
+  deals. CEO ($27.3M, Sep 1) and general counsel (Aug 31) both disclosed
+  insider stock sales in the past week.
+- Why: Sell-side price-target increases citing large multi-year AI compute
+  contracts pull in momentum and institutional buyers; CoreWeave is directly
+  levered to AI-infra capex, so contract-driven re-rating gets amplified.
+- Impact: Multi-day trend, not a single-day spike — consistent with the
+  broader AI-infra/neocloud rally across NBIS/QBTS/BE/RGTI today. Insider
+  selling by CEO/GC is a mild overhang suggesting insiders see current
+  levels as rich, raising mean-reversion risk if the sector rally cools.
+- Horizon: SHORT_TERM leaning — analyst target hikes are reactive to
+  already-known deals, not a fresh structural catalyst; today's gap reads
+  as sector-wide risk-on continuation.
+- Opportunity cost: Highest-ranked gapper today (11.09%) but competes
+  directly with NBIS for AI-neocloud sector exposure — correlation rule
+  argues against holding both; insider selling is a real caution flag
+  versus RGTI's cleaner, dated government-contract catalyst. Run
+  `corr-gate.mjs` before any entry given today's whole sector is correlated.
+
+#### Deep dive: SATL $5.13 +10.45%
+
+- Catalyst: No dated Sep-8 press release found despite multiple searches.
+  Satellogic has been on a multi-week uptrend following Q2 2026 results
+  (Aug 5): revenue +259% YoY to $15.9M, first quarter of positive operating
+  income and positive adjusted EBITDA. New satellite launches (Merlin
+  program) cited as an ongoing catalyst thread.
+- Why: A small-cap, low-priced, thinly-traded name (124.7K shares) with a
+  genuine fundamental inflection attracts momentum/retail flow; low float
+  means moves amplify on modest dollar volume.
+- Impact: Cannot confirm sustainability without a same-day driver — flagged
+  as a research gap. History of outsized 30-day moves (+149%) suggests high
+  volatility; low absolute price ($5.13) and thin volume (~$640K notional)
+  make this an easily-overshot name.
+- Horizon: SHORT_TERM, lean cautious — no structural catalyst confirmed
+  today; treat any pop here as momentum/thin-float noise until a dated
+  press release surfaces.
+- Opportunity cost: Weakest-confirmed catalyst of the top 5. At $5.13/share
+  with thin volume, a 2:1 R:R at a sane stop is hard to size cleanly;
+  today's own list has stronger-catalyst names (RGTI, NBIS) that would be
+  preferred capital allocation ahead of an unconfirmed SATL pop.
+
+#### Deep dive: QBTS $18.10 +9.23%
+
+- Catalyst: No D-Wave-specific dated news for today. Move tracks a broad
+  quantum-computing sector rally alongside RGTI (+6.71% today on its
+  confirmed $100M DoC contract) — the same government-quantum-funding
+  narrative lifting RGTI appears to be lifting quantum peers by
+  association, absent D-Wave-specific news. D-Wave's own last reported
+  fundamentals (Q1 2026: $3.08M revenue, widening losses) are unrelated to
+  today's move.
+- Why: Quantum-computing names trade as a correlated basket on thematic
+  sentiment; a hard, dated catalyst in one name tends to re-rate sector
+  peers on the assumption government/enterprise quantum funding is
+  broadening, even without company-specific news.
+- Impact: Read-through move, not idiosyncratic — sustainability depends
+  entirely on whether RGTI's catalyst has genuine sector implications or is
+  name-specific. Weak underlying fundamentals make this read more like
+  speculative sector rotation than a fundamentals-driven re-rate.
+- Horizon: SHORT_TERM — no company-specific structural catalyst; classic
+  sector-momentum/read-through trade, high mean-reversion risk if RGTI's
+  contract proves RGTI-specific rather than sector-wide.
+- Opportunity cost: Weakest fundamental support of the top 5 (no revenue
+  catalyst, no dated news) — purely a beta play on RGTI's catalyst. RGTI
+  itself (today's rank 6, +6.71%) is the cleaner, more direct way to
+  express the same quantum-government-funding thesis with an actual
+  confirmed contract.
+
+#### Deep dive: BE $275.00 +8.75%
+
+- Catalyst: Confirmed — Bloom Energy was selected for S&P 500 index
+  inclusion (announced Fri Sep 4/5), triggering forced buying from index
+  funds that must hold all constituents; shares surged 7.35% on the
+  announcement session and are extending gains today as index funds
+  continue building positions ahead of the effective addition date. Layered
+  on an already-strong fundamental base: Q1 2026 revenue +130% YoY ($751.1M),
+  Q2 revenue +166% YoY, plus the ongoing AI-data-center power-shortage
+  narrative from this morning's 08:15 ET deep-dive.
+- Why: S&P 500 inclusion is a hard, mechanical catalyst — index funds
+  tracking trillions in assets must buy to match the index, creating
+  durable multi-day buying pressure independent of sentiment. Combined with
+  genuine hypergrowth fundamentals and the AI-power-shortage narrative, this
+  pulls in passive-flow and active momentum/thematic buyers simultaneously.
+- Impact: Highest-quality catalyst combination among today's gappers —
+  mechanical (index-fund) + fundamental (revenue hypergrowth) + thematic
+  (AI power). More durable than a pure headline spike since index buying
+  continues until rebalance completes. Risk: stock is ~5x off its 52-week
+  low at a rich multiple (~285x trailing PE), so a lot of good news may
+  already be priced in.
+- Horizon: LONG_TERM leaning for the index-inclusion/fundamental
+  combination (permanent inclusion, structural revenue growth), but
+  SHORT_TERM tape risk remains given how extended the stock already is.
+- Opportunity cost: Strongest combined catalyst of today's top 5, but also
+  the most extended entry (near highs, rich valuation) — a 10% trailing
+  stop risks a wide dollar loss per share. RGTI's dated contract catalyst
+  at a less-extended valuation may offer better R:R for similar AI-infra
+  theme exposure.
+
+#### Deep dive: NBIS $244.75 +8.08%
+
+- Catalyst: Confirmed — Palantir named Nebius its preferred sovereign AI
+  infrastructure partner today, embedding Nebius compute and inference
+  capacity inside Palantir's government/enterprise sovereign-AI perimeter.
+  A new, dated commercial partnership distinct from Nebius's prior
+  catalysts (Microsoft's $17.4B compute deal, Nvidia's 9.3% equity stake,
+  the August $4.5B convertible-note raise).
+- Why: A named partnership with Palantir — deep government/defense customer
+  relationships — validates Nebius as an approved infrastructure layer for
+  sovereign/regulated AI workloads, a higher-margin, stickier segment than
+  commoditized GPU-cloud rental, expanding Nebius's addressable market.
+- Impact: Genuine same-day, dated, named-counterparty catalyst — higher
+  confidence than this morning's 08:15 ET read (no dated headline found
+  then). Read-through reinforces the AI-infra/neocloud complex broadly
+  (CRWV also up on deal-driven analyst upgrades). Risk: NBIS still carries
+  dilution overhang from its August $4.5B convertible-note raise and trades
+  at a rich ~46x sales.
+- Horizon: LONG_TERM leaning — a named commercial partnership with a
+  blue-chip government-facing customer is a structural business-development
+  win, not a one-day headline — more likely to support a multi-day/week
+  move than SATL/QBTS's unconfirmed sector-momentum stories.
+- Opportunity cost: Second-strongest catalyst of today's top 5 (dated,
+  named counterparty) after BE's index inclusion. Directly competes with
+  CRWV for AI-neocloud sector allocation — correlation gate likely blocks
+  holding both; NBIS's fresher, more specific catalyst makes it the
+  stronger of the two on catalyst quality, though the convertible-dilution
+  overhang is a real offset to weigh against RGTI/BE.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
