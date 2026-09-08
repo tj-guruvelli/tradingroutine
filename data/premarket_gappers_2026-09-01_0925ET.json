@@ -1,0 +1,24 @@
+{
+  "scanned_at": "2026-09-01T13:25:08Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 80.45,
+      "gap_pct": -5.22,
+      "premarket_volume": 359268,
+      "catalyst": "CoreWeave CEO Michael Intrator disclosed a sale of 300,000+ shares (~$27.3M); AI-infrastructure names under renewed selling pressure amid reports of short bets against AI favorites.",
+      "headlines": [
+        "CoreWeave's CEO Dumps Over 300,000 Shares Worth $27.3 Million (Nasdaq)",
+        "CoreWeave GC Kristen McVeety Sells 2,100 Shares (Nasdaq)",
+        "Michael Burry Bought Beaten-Down Stocks And Shorted AI Favorites (Stocktwits)"
+      ],
+      "catalyst_detail": "Two insider Form 4 sales hit the tape: CEO Michael Intrator sold 300,000+ shares (~$27.3M) and General Counsel Kristen McVeety sold 2,100 shares. No new earnings or guidance event today — last report was Aug 11 and was strong (Q2 revenue $1.21B, adj. EBITDA margin 62%, $30.1B backlog, $4B OpenAI expansion deal on top of the existing $11.9B deal). Concurrently, AI-infrastructure/cloud names are under renewed sector-wide selling pressure amid recirculated reports that investor Michael Burry is shorting AI favorites.",
+      "why": "Insider selling from the CEO reads as a negative signal even without new fundamental news, and it's landing on top of a broader risk-off rotation out of high-multiple AI/cloud infrastructure names (Burry-short headlines). No documented positive catalyst is driving the move — it's sentiment/overhang-driven selling, not a fundamental deterioration.",
+      "impact": "Premarket volume (359K) is a small fraction of CRWV's 27.29M average daily volume, so this reads as thin premarket tape, not a volume-confirmed breakdown. Sector read-through is real: this is CRWV's second sub-6% single-day drop in the past ~7 weeks (also -5.7% on Jul 15), consistent with a stock in a broader multi-week AI-infra derating rather than a one-off headline spike.",
+      "horizon": "SHORT_TERM — the CEO stock sale and Burry-short headlines are sentiment overhangs, not structural changes; backlog ($30.1B) and OpenAI contracts are unchanged, so absent a new fundamental catalyst this reads as noise likely to fade rather than a durable repricing.",
+      "opportunity_cost": "N/A for a long entry — this is a gap DOWN with no documented positive catalyst, which fails the strategy's explicit 'Bottom-fish' guardrail (no long entry without a documented catalyst; drawdown alone is not a catalyst) and the Confluence rule (needs ≥2 indicators + ≥1 catalyst). Account currently has 0/6 open positions and 0/3 trades used this week, so there is no displacement question — this setup simply doesn't clear the entry bar as a long. Not a short candidate either; strategy is long-only stocks."
+    }
+  ]
+}

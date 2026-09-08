@@ -70,4 +70,13 @@ STEP 7 — COMMIT AND PUSH (mandatory):
   git commit -m "weekly review $DATE"
   git push origin main
 If TRADING-STRATEGY.md didn't change, add just WEEKLY-REVIEW.md.
-On push failure: git pull --rebase origin main, then push again. Never force-push.
+On push failure: retry up to 3 attempts total — run `git pull --rebase
+origin main` then `git push origin main` again. The .gitattributes union
+driver auto-resolves memory/RESEARCH-LOG.md, TRADE-LOG.md,
+WEEKLY-REVIEW.md, and BACKTEST-LOG.md conflicts. If a conflict remains in
+any OTHER file after a rebase, abort it (`git rebase --abort`) and push
+this commit to a rescue branch instead:
+`git push origin HEAD:refs/heads/rescue/weekly-review-$DATE-$NYHM` (or
+`-$DATE` if no NYHM). Print one line to the console and to the
+notification channel saying main was not updated and where the commit is.
+Never force-push.

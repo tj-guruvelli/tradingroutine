@@ -1,0 +1,21 @@
+{
+  "scanned_at": "2026-08-13T15:35:00Z",
+  "deep_dive_cap": 5,
+  "note": "Run fired 11:39 ET (market open ~2hrs) rather than premarket; scan and filters run unchanged regardless, consistent with prior 11:2x ET entries in RESEARCH-LOG.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BW",
+      "price": 8.88,
+      "gap_pct": -7.69,
+      "premarket_volume": 82088,
+      "catalyst": "Fading further from its Aug 11 post-earnings spike as the multi-day round-trip continues.",
+      "headlines": [],
+      "catalyst_detail": "BW reported Q2 2026 results Aug 11 after the close (EPS $0.07 vs a prior-year loss, revenue $319.7m vs $138.9m, net income $10.5m from ongoing operations, adjusted EBITDA up sharply) and shares spiked as much as 42% after hours. Aug 12 already showed a 7.04% intraday pullback to $8.715; today's session extends that fade further to ~$8.88 vs a ~$9.62 same-day reference (script's mid-session dailyBar baseline, not a true premarket gap after the open -- see caveat below).",
+      "why": "Classic post-earnings-pop fade: an EPS/revenue beat drove an outsized AH spike, and momentum/AH buyers are now unwinding the move over multiple sessions as the market re-prices BW's longer-running credibility overhang (a March 2026 Wolfpack Research short report challenged the legitimacy of BW's $2.4B flagship contract counterparty -- old news, not today's catalyst, but still a live discount on the stock).",
+      "impact": "Reads as continued mean-reversion of an overextended earnings pop, not a durable re-rating -- this is now day 3 of the round-trip (Aug 11 AH +42%, Aug 12 -7.04%, Aug 13 further down). No peer read-through identified; move looks BW-specific.",
+      "horizon": "SHORT_TERM, earnings-pop-then-fade pattern spanning three sessions now, no structural catalyst beyond the one print, not a multi-week hold candidate.",
+      "opportunity_cost": "No existing positions to displace (0/6 open, 0/3 weekly trades used). As a fading post-earnings gapper on its third down session this is a low-quality setup -- a same-day long entry would need a very tight stop to clear 2:1 R:R against a stock still round-tripping, and a short entry isn't supported by strategy (long-only equity rules)."
+    }
+  ]
+}

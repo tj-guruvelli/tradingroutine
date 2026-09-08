@@ -1,0 +1,9 @@
+# Append-only routine logs: concurrent cloud runs each append a new block
+# under the same date header, so a plain rebase/merge sees that as a content
+# conflict even though both additions are wanted. merge=union keeps every
+# added line from both sides (order not guaranteed on conflicting hunks, but
+# these files are append-only so it works out).
+memory/RESEARCH-LOG.md merge=union
+memory/TRADE-LOG.md merge=union
+memory/WEEKLY-REVIEW.md merge=union
+memory/BACKTEST-LOG.md merge=union

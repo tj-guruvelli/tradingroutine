@@ -1,0 +1,6 @@
+{
+  "scanned_at": "2026-08-13T14:32:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "note": "0 qualifying gappers. Raw scan (GAP_THRESHOLD=5.0) returned 3 symbols: AGMH (+9.41%, $1.0436 — dropped, price < $3.00 floor), APT (-7.43%, $4.98, vol 1,457 — dropped, premarket_volume < 50,000), BWLP (+7.29%, $24.13, vol 5,200 — dropped, premarket_volume < 50,000). Consistent with the 09:22 ET run's treatment of the same 'volume' field (script's prior-completed-session full-day volume, used as the premarket_volume proxy per routine convention in this log)."
+}
