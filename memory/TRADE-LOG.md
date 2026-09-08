@@ -477,3 +477,48 @@ mismatch flagged Jul 27, unresolved, operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Market closed for Labor Day, not a trading day — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-04`, no Mon prints). Zero trades, zero open positions, zero open orders. Weekly trade count: 0/3 (week of Sep 7). Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending. Market reopens Tue Sep 8.
+
+### Sep 08, Market-Open (Day 43, Tuesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. STEP 1 candidates: today's RESEARCH-LOG
+(2026-09-08, Gappers auto-scan 08:15 ET) — BE, NBIS, CRWV, RGTI, all AI-infra
+/quantum sector gappers. STEP 2 candidates: most recent setup-scan file is
+`data/setup-scan_cloud_2026-09-07_1838ET.json` (stale Labor Day data,
+re-run live inline this session since today's own file doesn't exist yet)
+— 2 grade-B hits, HAFN and BWLP, 0 grade-A. Merged candidate list: BE,
+NBIS, CRWV, RGTI, HAFN, BWLP. All 6 re-validated live (`alpaca.sh quote`,
+timestamps 09:36-09:37 ET) — quotes current, no stale-data issue.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- BE $274.00 — fails: not a setup-scan hit (no ADX>20+EMA9>EMA21 momentum
+  confluence today despite the rating-upgrade catalyst); already +14%
+  pre-market, no VWAP/RSI/200-SMA confirmation available to satisfy
+  confluence — skip rather than chase an extended gap on an unconfirmed
+  technical read.
+- NBIS $243.50 — fails: not a setup-scan hit; catalyst itself undocumented
+  ("no dated headline confirmed" per RESEARCH-LOG) and no confluence data —
+  skip.
+- CRWV $94.58 — fails: not a setup-scan hit; same undocumented-catalyst gap
+  as NBIS, plus recent CEO/GC insider selling flagged in RESEARCH-LOG
+  (bearish, not bullish, insider signal) — skip.
+- RGTI $16.94 — fails: cleanest catalyst of the four (definitive, dated
+  $100M DoC contract) but not a setup-scan hit today — no ADX/EMA momentum
+  confluence, and no VWAP/RSI/200-SMA data available to independently
+  confirm the ≥2-indicator confluence rule. Best candidate on record for a
+  future session once technical confirmation is available (tradingview-data
+  MCP not loaded this cloud run) — not traded blind on catalyst alone.
+- HAFN $8.74 — fails: RSI14 75.92 is overbought (TRADING-STRATEGY.md
+  Indicator Canon: ">70 = sell / no new long"), a direct rule violation for
+  a new long regardless of the price>SMA200 ($7.21) alignment; no catalyst
+  documented — skip.
+- BWLP $24.07 — fails confluence: only 1 of 4 indicators (price>SMA200
+  $17.91) confirms bullish; RSI14 64.85 is neutral (canon's buy trigger is
+  oversold <30, not "not overbought"), no VWAP/insider data; no catalyst
+  documented — skip.
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 7). 43 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved, operator review pending.
