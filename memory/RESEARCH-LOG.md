@@ -9347,3 +9347,206 @@ ranks today. 0 errors.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+### Gappers (auto-scan 09:24 ET, cloud, 2nd firing)
+
+Cap note: deep-dive cap is top 5 by |gap_pct| (BE, NBIS, CRWV, ORCL, BMNR).
+RGTI (rank 6) gets quick-scan catalyst only, no deep-dive fields — capped
+per routines/gappers-cloud.md STEP 3, not silently dropped.
+
+| Rank | Sym  | $Price | Gap%   | Vol       | Catalyst |
+| ---- | ---- | ------ | ------ | --------- | -------- |
+| 1    | BE   | 272.94 | +16.07 | 658,747   | New Seeking Alpha rating-upgrade piece ("AI-Memory-Style Frenzy"), 2nd AI-power catalyst today |
+| 2    | NBIS | 231.47 | +9.87  | 541,800   | Palantir/Nebius partnership on AI-model ownership — new dated catalyst not seen in 08:15 scan |
+| 3    | CRWV | 91.75  | +8.47  | 524,722   | Sympathy move with Oracle's pre-earnings rally; SA piece questions backlog/bond credit quality |
+| 4    | ORCL | 166.68 | +8.2   | 1,002,286 | Pre-earnings analyst target raises (Morgan Stanley, Mizuho) ahead of Thu Sep 10 FQ1 earnings |
+| 5    | BMNR | 24.8   | -6.2   | 1,734,327 | Gapping DOWN with crypto-equity basket (MSTR/COIN/CRCL) after BTC rejection at $82K |
+| 6    | RGTI | 16.13  | +6.19  | 487,231   | Quantum-sector rally continues — Stocktwits: QBTS/RGTI/QNT rally on $100M US govt stakes |
+
+#### Deep dive: BE $272.94 +16.07%
+
+- Catalyst: New Seeking Alpha rating-upgrade article today ("Bloom Energy
+  Could See An AI-Memory-Style Frenzy"), building directly on last week's
+  "Bloom Energy Just Won Another Catalyst" double-upgrade piece — part of a
+  steady stream of 10+ bullish SA notes over the past month. This is BE's
+  SECOND consecutive pre-market gap on the same AI-power-demand thesis
+  today (the 08:15 ET scan already flagged +14.14%); the stock has
+  extended further from Thu Sep 4's close of $252.87 (+7.35%) to ~$270-273
+  pre-market.
+- Why: AI data centers face a power-delivery bottleneck (grid interconnect
+  queues run 3-5+ years); Bloom's fuel cells deploy in months without grid
+  dependency, making it a direct AI-power-shortage beneficiary. A fresh
+  bullish note comparing BE to the AI-memory (HBM) re-rating frenzy adds a
+  new narrative hook pulling in momentum/theme buyers on top of an already
+  extended move.
+- Impact: Increasingly extended, multi-session move (not a single-day
+  spike) — today builds on this morning's own +14.14% print, both on
+  rating-upgrade narrative rather than new fundamental data. More likely a
+  genuine multi-day momentum run given persistence across two scans today,
+  but more vulnerable to a sharp mean-reversion given an already rich
+  valuation (285x+ trailing PE). Sector read-through: still part of the
+  same AI-infra/power risk-on cluster as NBIS/CRWV/RGTI.
+- Horizon: SHORT_TERM, lean short-term — still no hard fundamental trigger
+  (no earnings, no new contract, just another rating-upgrade note), even
+  though the underlying AI-power-demand thesis is structurally LONG_TERM.
+- Opportunity cost: At ~$273 a 10% trailing stop is ~$27/share; clearing
+  2:1 R:R needs a stretch target near $327, tougher now than this
+  morning's $268 print. Chasing a name already flagged and extended once
+  today conflicts with the no-chase rule (no entry within 3% of a print
+  already up >5% on the day). Would eat into the 3-trades/week cap and
+  20%-per-position ceiling; RGTI's confirmed, discrete government
+  quantum-stake news remains a cleaner setup among today's gappers.
+
+#### Deep dive: NBIS $231.47 +9.87%
+
+- Catalyst: Unlike the 08:15 scan (no dated company-specific driver
+  found), this run surfaced a fresh same-day item: Stocktwits reported
+  Palantir and Nebius announced a partnership letting companies own (not
+  rent) their AI models, published roughly 30-50 min before this scan.
+  Layers on Nebius's existing hyperscaler narrative ($17.4B Microsoft
+  compute contract, Nvidia's 9.3% stake) and the dilution overhang from
+  its mid-August $4.5B convertible-note raise.
+- Why: NBIS is one of the highest-beta neocloud plays on AI compute
+  demand; a named strategic partner (Palantir) and a differentiated
+  "own not rent" AI-model positioning gives it a discrete, company-specific
+  news hook today rather than pure sector beta, amplified by its smaller
+  float and rich valuation (~122x sales) in a risk-on AI-infra tape.
+- Impact: More sustainable read than this morning's assessment given a
+  same-day, dated, company-specific announcement rather than unconfirmed
+  momentum alone. Still carries dilution overhang from the August
+  convertible offering; valuation remains stretched. Sector-wide
+  participation continues (ORCL/CRWV/RGTI also gapping) — a real risk-on
+  rotation day for the theme, not a single-name flash.
+- Horizon: LONG_TERM lean, upgraded from this morning's SHORT_TERM call —
+  a named strategic partnership, if it holds up under further reporting,
+  is more structural than yesterday's unconfirmed momentum and aligns with
+  the early-cycle Technology favor in TRADING-STRATEGY.md's sector-rotation
+  table; still needs Confluence-rule confirmation (2+ of VWAP/RSI/200-SMA/
+  insider) on a later /trade check before treating as more than a headline
+  pop.
+- Opportunity cost: Run scripts/corr-gate.mjs before any entry — NBIS is
+  highly correlated with CRWV (same theme, same-day movers); Confluence
+  rule argues for at most one of the two. At $231 a 10% stop is ~$23/share,
+  needing ~$277 to clear 2:1 R:R, plausible only if the Palantir tie-up
+  proves durable beyond today's pop. Competes with BE/CRWV/RGTI for the
+  6-position cap and 3-trades/week limit.
+
+#### Deep dive: CRWV $91.75 +8.47%
+
+- Catalyst: No CRWV-specific news dated today, but two same-day threads:
+  (1) 24/7 Wall St — "Oracle Rallies 5% as Morgan Stanley Lifts Its Price
+  Target, CoreWeave Advances 3%," i.e. CRWV moving with ORCL's pre-earnings
+  rally and the broader AI tape; (2) a fresh Seeking Alpha piece today,
+  "CoreWeave: A Hundred Billion In Backlog And A Bond Market That Doesn't
+  Believe It," flagging that CRWV's bond market isn't pricing its
+  contracted backlog as safely as the equity narrative implies. Adds to
+  last week's on-file context: CEO ($27.3M) and GC insider sales, interest
+  expense ~4x operating income.
+- Why: Same sector mechanism as this morning — CoreWeave is a pure-play AI
+  GPU neocloud, moving with outsized amplitude on AI-infra sentiment.
+  Today's driver is more diffuse than a CRWV-only announcement — tracking
+  Oracle's earnings-anticipation rally and the broader AI trade rather
+  than new CRWV-specific news.
+- Impact: Mixed-to-cautious — today's move looks like sector beta (moving
+  WITH Oracle, not on its own news) layered on already-known bearish
+  undercurrents (insider selling) now reinforced by a same-day
+  credit-skepticism piece on the touted $100B backlog. Raises
+  mean-reversion risk if ORCL's rally fades post-target-raise-euphoria or
+  after Thursday's actual print.
+- Horizon: SHORT_TERM, same lean as this morning — no discrete CRWV
+  catalyst today, riding sector/Oracle sympathy; the fresh credit
+  skepticism is an additional caution flag, not a reason to upgrade
+  horizon.
+- Opportunity cost: Insider selling plus a new same-day credit-skepticism
+  article make CRWV the weakest-conviction name in today's AI-infra
+  cluster. Confluence rule argues against taking both NBIS and CRWV given
+  high same-sector, same-day correlation — NBIS's fresh, discrete Palantir
+  catalyst is the cleaner setup between the two; run scripts/corr-gate.mjs
+  before any real entry.
+
+#### Deep dive: ORCL $166.68 +8.2%
+
+- Catalyst: Verified — Oracle's fiscal Q1 FY27 earnings are scheduled
+  AFTER MARKET CLOSE this Thursday, September 10 (confirmed via Oracle's
+  own Sep 2 press release and multiple outlets). Today's +8.2% gap is NOT
+  earnings-driven — it is pre-earnings positioning. Morgan Stanley raised
+  its price target to $210 (from $207) while staying "cautious," and
+  Mizuho published a note arguing "100% upside" heading into the print;
+  the stock had already closed Thu Sep 4 up 3.08% and kept climbing into
+  results day. 24/7 Wall St flagged CoreWeave advancing 3% in the same
+  story — Oracle's rally is a proximate driver for part of CRWV's move too.
+- Why: Anticipatory momentum ahead of a binary, scheduled earnings event —
+  analyst target raises and bullish pre-earnings notes pull in momentum
+  buyers positioning for an AI-cloud-driven beat, not confirmation of one.
+  Oracle's forward P/E (~19.7x) is far cheaper than the neoclouds
+  (NBIS/CRWV run >100x sales), a fundamentally different valuation and
+  catalyst mechanism from the rest of today's AI-infra cluster despite
+  sharing the AI theme.
+- Impact: Different sustainability question than BE/NBIS/CRWV — a $457B
+  mega-cap with real, profitable financials (26.75% net margin, ~$17B TTM
+  net income, 27x trailing P/E) gapping into a KNOWN, dated catalyst
+  rather than a headline-driven neocloud pop. Today's move can fully
+  reverse Thursday/Friday on the actual print in either direction —
+  elevated event risk, not a stable momentum read-through. Sector
+  read-through: pulls CRWV up in sympathy today but is mechanistically
+  distinct (scheduled earnings event vs. neocloud backlog/momentum
+  narrative).
+- Horizon: SHORT_TERM, tightly bound to the Sep 10 earnings date — any
+  position today faces a binary reprice within 48 hours regardless of
+  direction; not a swing-hold setup until the print is known.
+- Opportunity cost: Entering ORCL now means holding through a scheduled
+  earnings gap-risk event within the week — conflicts with the no-chase
+  guardrail (no entry within 3% of a print already up >5% on the day) and
+  the documented-catalyst requirement (today's move is analyst-target-raise
+  speculation, not a confirmed fundamental print). A 10% trailing stop
+  (~$17/share) could be blown through cleanly by an earnings-day gap in
+  either direction. Competes with the AI-infra cluster for the 6-position
+  cap; cleaner alternative is to wait for Thursday's print and react to
+  confirmed results rather than pre-position into known binary risk.
+
+#### Deep dive: BMNR $24.8 -6.2%
+
+- Catalyst: Correction to the working assumption — BMNR (BitMine Immersion
+  Technologies) is an ETHEREUM-treasury company, not a bitcoin-treasury
+  company. Confirmed via BMNR's own press release today: ETH holdings
+  reached 5.93 million tokens (up from 5.74M in prior reporting), total
+  crypto + cash of $15.7B. Today's -6.2% gap tracks a broader, same-day
+  crypto-equity pullback — Stocktwits: "MSTR, COIN, CRCL Stocks Dip:
+  Crypto Equities Pull Back After Bitcoin's $82K Rejection." BMNR was up
+  46.5% in August (Nasdaq) and had been recovering toward $17.50-18
+  resistance in prior TradingView coverage, so this also reads partly as
+  profit-taking after a large recent run.
+- Why: BMNR's price is driven by (1) its NAV-per-share tied to ETH
+  holdings and (2) broad crypto-market risk sentiment; Bitcoin's rejection
+  at a key level ($82K) triggers basket-wide de-risking across
+  crypto-treasury/crypto-exposed equities (MSTR, COIN, CRCL, BMNR)
+  regardless of each company's specific underlying asset (BTC vs ETH) —
+  correlated sector selling, not a BMNR-specific negative.
+- Impact: Reads as sector-wide risk-off in crypto-linked equities rather
+  than a BMNR-specific problem — the underlying ETH-accumulation story is
+  intact and arguably strengthening (5.93M tokens, up from 5.74M).
+  Pre-market volume of 1.73M shares is the HIGHEST of today's 6 gappers,
+  consistent with a broad, high-participation de-risking move rather than
+  a thin/noisy print. Sector read-through: correlates with the MSTR/COIN/
+  CRCL crypto-equity basket, a wholly different cluster from the AI-infra
+  names (BE/NBIS/CRWV/RGTI) gapping UP today.
+- Horizon: SHORT_TERM — tied to Bitcoin's intraday level around $82K; a
+  BTC bounce would likely reverse this move quickly given BMNR's
+  high-beta NAV-tracking behavior, but continued BTC weakness could
+  extend the pullback. No structural BMNR-specific negative found.
+- Opportunity cost: This is a DOWN gap, not a long-entry candidate —
+  TRADING-STRATEGY.md's no-bottom-fish rule ("no long entry without a
+  documented catalyst; drawdown alone is not a catalyst") and the
+  stocks-only/long-bias framing both argue against treating this as a
+  new-trade setup today. Relevant only if BMNR is an existing open
+  position, in which case check this pullback against the -7% manual-cut
+  and 10% trailing-stop rules rather than adding; not a new-trade
+  candidate either way given the down-gap.
+
+Quick scan only (rank 6, deep-dive cap reached): RGTI $16.13 +6.19% —
+Stocktwits: "QBTS, RGTI, QNT Stocks Rally After $100M Quantum Deals: US
+Government Takes Stakes In All Three," extending the definitive DoC
+contract this morning's 08:15 scan already confirmed.
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
