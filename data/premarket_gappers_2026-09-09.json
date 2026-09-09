@@ -1,48 +1,34 @@
 {
-  "scanned_at": "2026-09-09T14:14:41Z",
+  "scanned_at": "2026-09-09T15:11:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "PEPG",
-      "price": 3.405,
-      "gap_pct": 6.41,
-      "premarket_volume": 14556,
-      "catalyst": null,
+      "symbol": "META",
+      "price": 656.28,
+      "gap_pct": 7.0,
+      "premarket_volume": 543325,
+      "catalyst": "BofA added META to its 'U.S. 1 List' and Meta reportedly plans to begin manufacturing its in-house AI chip this month, per Schwab Network market commentary.",
       "headlines": [],
-      "catalyst_detail": "No fresh news found for today's move via Apify RAG web browser (3 separate queries) or Benzinga's own quote page, which carries no \"Why Is It Moving\" note for PEPG (unlike SATL/META, which both had one). The only PEPG coverage surfaced is a stale March 31, 2026 piece on a -64% single-day crash tied to Phase 2 trial data, plus older analyst-target pieces -- none dated to Sept 9.",
-      "why": "Unclear -- no confirmed news mechanism found. A ~6% move on 14,556 shares vs a 933K average daily volume in a $222M market-cap biotech is more consistent with thin-liquidity noise than a real catalyst.",
-      "impact": "Does not look sustainable. Benzinga's own quote snapshot (captured ~9:21 AM ET, before this scan ran at 10:14 ET) already shows the stock back down to $3.21 from a $3.48 intraday high -- most of the gap had already faded before this scan captured it.",
-      "horizon": "SHORT_TERM, by default absent any identified catalyst -- reads as noise, not a setup worth tracking.",
-      "opportunity_cost": "No real catalyst to weigh against the hard caps. Account is flat (0/6 open positions, 0/3 weekly trades used per TRADE-LOG), so nothing is displaced either way; not a candidate without a confirmed catalyst."
+      "catalyst_detail": "BofA elevated Meta to its highest-conviction 'U.S. 1 List,' and separate coverage reports Meta plans to begin manufacturing its in-house AI chip in September. This layers onto the existing AI-monetization thesis from Sept 3 coverage (24/7 Wall St): Q2 2026 revenue +28% YoY to $60.8B, ad impressions +14%, price-per-ad +12%, GEM ad-ranking model driving an 8.3% ad-click and 15.7% conversion lift, Advantage+ crossing a $75B annualized run rate. No dated primary-source headline for today specifically (Sept 9) was located via Apify RAG (3 queries) or Benzinga (403, fallback to Apify).",
+      "why": "BofA's highest-conviction list placement plus confirmation of custom-silicon progress directly addresses the market's main bear case on META -- the $130-145B 2026 capex guide that crushed Q2 free cash flow to $784M from $8.55B a year earlier. In-house chip progress signals a path to lower Nvidia-GPU dependency and better long-run capex efficiency, which combined with already-strong ad-monetization data reads as a re-rating catalyst rather than an earnings-day move (Meta's Q2 print was July 29, six weeks stale).",
+      "impact": "543,325 premarket shares is a small fraction of META's typical multi-million-share session volume, so the print likely understates true participation this early. A 7% move on a mega-cap (~$40B+ market-cap swing) without a same-day earnings/8-K catalyst is unusual and suggests an analyst-driven re-rating rather than a single headline spike -- consistent with 24/7 Wall St's Sept 3 bull case citing a $790 (33% upside) 12-month target. Read-through: no peer (GOOGL, AMZN) move confirmed in the research pulled, so this reads as META-specific, not a sector-wide AI re-rate today.",
+      "horizon": "LONG_TERM if the BofA upgrade and AI-chip progress prove durable and align with the current AI-monetization/mega-cap-tech leadership phase -- but treat with SHORT_TERM caution since no dated Sept 9 primary-source headline was confirmed; verify with a live requote and direct BofA/8-K source before treating this as an established multi-day thesis.",
+      "opportunity_cost": "Account flat: 0/6 open positions, 0/3 weekly trades used (per TRADE-LOG) -- nothing displaced either way. At $656/share a 20%-of-equity cap buys very few shares, and the 2:1 R:R math at a sane 10% trailing-stop distance needs a live requote post-gap (entry near today's spike highs raises the risk side of that ratio); the stronger candidate of today's two gappers given a real institutional catalyst (BofA) versus SATL's catalyst/direction mismatch, but not confirmed to clear Confluence (>=2 of VWAP/RSI/200-SMA/insider) without tradingview-data MCP access this session."
     },
     {
       "rank": 2,
       "symbol": "SATL",
-      "price": 5.04,
-      "gap_pct": -5.79,
-      "premarket_volume": 39730,
-      "catalyst": "Satellogic named Frank D. \"Trey\" Whitworth, a former Director of the National Geospatial-Intelligence Agency (NGA), as company President (announced ~Sept 8).",
+      "price": 4.975,
+      "gap_pct": -7.01,
+      "premarket_volume": 86350,
+      "catalyst": "Satellogic named Frank D. \"Trey\" Whitworth, former Director of the National Geospatial-Intelligence Agency (NGA), as company President -- press release dated Sept 8, confirmed on Satellogic's own press room.",
       "headlines": [],
-      "catalyst_detail": "Satellogic appointed Frank D. \"Trey\" Whitworth -- a former Director of the NGA -- as company President, effective immediately, per coverage roughly 22 hours old at scan time. This follows an Aug 13 hire of Jamil Kawar as SVP Space Systems and an Aug 25 note on five-city investor meetings ahead of Space Week -- a pattern of building out government/defense-relations bench strength.",
-      "why": "A former top U.S. government geospatial-intelligence official joining as President is typically read as bullish for a satellite-imagery company pursuing government/defense contracts (added credibility and procurement relationships) -- but that reading is an inference from the headline, not confirmation of new contract flow.",
-      "impact": "The catalyst does not explain the move's direction: SATL is down -5.79% (this scan) to -4.49% (Benzinga, $5.11) despite what reads as positive personnel news. Likely explanations: the news is ~1-2 sessions old and already priced in, broader Aerospace & Defense softness, or profit-taking after a big run (52-wk range $1.25-$12.00, RSI 50, short interest an elevated 16.28%). Volume (39,730) is a small fraction of the 6.31M average, so the print may not reflect strong conviction either way.",
-      "horizon": "LONG_TERM catalyst (structural government-relations hire ahead of a public-sector-facing space-imagery business) but SHORT_TERM price action is negative and inconsistent with the catalyst's usual read -- watch for confirming contract news rather than chasing today's print.",
-      "opportunity_cost": "Account flat, nothing displaced. A down-gap on ostensibly positive personnel news is itself a caution flag; would need the Entry Checklist confluence rule (>=2 of VWAP/RSI/200-SMA/insider) plus a sane 2:1 R:R stop before qualifying -- neither established here."
-    },
-    {
-      "rank": 3,
-      "symbol": "META",
-      "price": 645.605,
-      "gap_pct": 5.26,
-      "premarket_volume": 337728,
-      "catalyst": "Meta officially launched Muse, its first personal AI agent, on Sept 8, 2026.",
-      "headlines": [],
-      "catalyst_detail": "Meta launched Muse on Sept 8, 2026: a personal AI agent running on a \"Secure VM\" gated by a \"Sentinel\" permission layer, with a free limited tier plus $20 and $100/month paid tiers. Functions include sending emails/messages, booking travel, and making purchases/payments -- broad account and agentic access, which multiple outlets flagged as a trust/privacy question given the scope requested (email, calendar, payments, health services).",
-      "why": "A first-party personal AI agent with payment and calendar access is a genuine new product category for Meta beyond chatbots, read by the market as expanding Meta's AI monetization surface (subscription tiers) and competitive position vs. OpenAI/Google agent products -- pulling in momentum buyers on real volume.",
-      "impact": "Looks like a real, volume-confirmed move rather than a headline spike likely to mean-revert same-day: volume (9.41M) is roughly in line with the 17.87M average, open $648.64, day range $638.56-$651.93. RSI is 69, approaching the strategy's overbought line (>70 = no new long per Indicator Canon), so a fresh long specifically today is late even if the underlying story has legs. No sector-wide read-through noted -- this is Meta-specific product news, not a broad AI-infra rally.",
-      "horizon": "LONG_TERM catalyst (new recurring-revenue product surface, not a one-day headline) but SHORT_TERM entry timing is poor -- RSI already near the overbought boundary argues for waiting on a pullback rather than chasing the +5% pop.",
-      "opportunity_cost": "Account flat (0/6 positions, 0/3 weekly trades), nothing displaced. At ~$646/share, a 20%-of-equity cap (~$2,000 on a $10k account) is only ~3 shares -- a full-cap position is a trivially small share count for a name this large relative to account size. 2:1 R:R at a sane stop not evaluated; RSI overbought argues against sizing this today regardless."
+      "catalyst_detail": "Satellogic's official press room confirms the Whitworth appointment was published Sept 8, one day before today's session. It sits alongside a Sept 3 release naming SynMax the exclusive maritime-intelligence channel for the upcoming Merlin constellation's data, an Aug 25 investor-roadshow announcement (NY/DC/SF/London/Paris ahead of World Space Business Week), and an Aug 13 SVP Space Systems hire -- a pattern of government/defense-relationship buildout, not a negative disclosure. No restatement, delisting notice, or guidance cut found in the recent press-release record.",
+      "why": "Nothing in the confirmed press-release record explains a down move -- if anything, a former NGA Director joining as President reads as a bullish government-relations signal for a sovereign-defense-facing satellite-imagery company. The -7.01% print most likely reflects 'sell the news' after a run-up into the appointment (this same story was already flagged by the 10:14 ET run today at a smaller -5.79% gap), continued Aerospace & Defense small-cap softness, or profit-taking at 52-week-range extremes (range ~$1.25-$12, RSI ~50, short interest 16%+ per the 10:14 ET note).",
+      "impact": "86,350 premarket shares is thin versus SATL's multi-million-share average daily volume, so the print likely overstates real conviction. Because the catalyst is confirmed positive but price direction is negative, this reads as continued unwind/profit-taking rather than a fresh bearish catalyst -- not a clean fade-the-spike short without an actual bearish trigger, and not a clean dip-buy without confirmation the selling has stopped.",
+      "horizon": "SHORT_TERM price action, but the underlying catalyst (NGA-director hire, government/defense pipeline reported 'approaching $1 billion' per a July Freedom Broker note, Merlin constellation launch slated Oct 2026) is structurally LONG_TERM. The mismatch between a positive structural catalyst and negative near-term price action means this needs confirming contract-award news, not today's print, before treating it as investable in either direction.",
+      "opportunity_cost": "Account flat: 0/6 open positions, 0/3 weekly trades used -- nothing displaced. A short here fails without a bearish catalyst to back it; a long fails momentum-confirmation while the stock is actively gapping down, regardless of the long-term thesis. Weaker of today's two gappers given the catalyst/direction mismatch -- neither direction clears Confluence or the Entry Checklist's 'specific catalyst' + 'sector in momentum' pairing as researched here."
     }
   ]
 }

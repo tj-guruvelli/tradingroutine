@@ -10332,3 +10332,97 @@ threshold by mid-morning; PEPG, SATL, META are new names. Deep-dive cap is
   small share count for a name this large relative to account size. 2:1
   R:R at a sane stop not evaluated; RSI overbought argues against sizing
   this today regardless.
+
+### Gappers (auto-scan 11:11 ET, cloud, 4th firing)
+Watchlist scan via `scripts/gappers-alpaca.sh` returned only 2 hits (down
+from 3 at 10:14 ET) — PEPG has faded below the 5% gap threshold; SATL and
+META both carry over from the prior run with wider gaps now (SATL -5.79%
+-> -7.01%, META +5.26% -> +7.0%). Deep-dive cap is 5; both hits get a full
+deep dive below.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | META | 656.28 | +7.0 | 543,325 | BofA added META to its "U.S. 1 List"; reported plans to begin in-house AI chip manufacturing this month. |
+| 2 | SATL | 4.975 | -7.01 | 86,350 | Former NGA Director Frank "Trey" Whitworth named President (Sept 8, confirmed via Satellogic press room). |
+
+#### Deep dive: META $656.28 +7.0%
+- Catalyst: BofA elevated Meta to its highest-conviction "U.S. 1 List," and
+  separate coverage reports Meta plans to begin manufacturing its in-house
+  AI chip in September. Layers onto the Sept 3 AI-monetization thesis
+  (24/7 Wall St): Q2 2026 revenue +28% YoY to $60.8B, ad impressions +14%,
+  price-per-ad +12%, GEM ad-ranking model driving an 8.3% ad-click / 15.7%
+  conversion lift, Advantage+ at a $75B annualized run rate. No dated
+  primary-source headline for today specifically (Sept 9) was located via
+  Apify RAG (3 separate queries) or Benzinga (403 on WebFetch, fell back to
+  Apify per routine).
+- Why: BofA's highest-conviction list placement plus confirmed custom-
+  silicon progress directly addresses the market's main bear case on
+  META — the $130-145B 2026 capex guide that crushed Q2 free cash flow to
+  $784M from $8.55B a year earlier. In-house chip progress signals lower
+  Nvidia-GPU dependency and better capex efficiency, which combined with
+  already-strong ad-monetization data reads as a re-rating catalyst rather
+  than an earnings-day move (Meta's Q2 print was July 29, six weeks stale).
+- Impact: 543,325 premarket shares is a small fraction of META's typical
+  multi-million-share session volume — likely understates true
+  participation this early. A 7% move on a mega-cap (~$40B+ market-cap
+  swing) without a same-day earnings/8-K catalyst is unusual and suggests
+  analyst-driven re-rating rather than a headline spike, consistent with
+  24/7 Wall St's Sept 3 bull case ($790 target, 33% upside). No peer
+  (GOOGL, AMZN) move confirmed in research pulled — reads as META-specific,
+  not sector-wide.
+- Horizon: LONG_TERM if the BofA upgrade and AI-chip progress prove
+  durable and align with the current AI-monetization/mega-cap-tech
+  leadership phase — but SHORT_TERM caution warranted since no dated
+  Sept 9 primary-source headline was confirmed; verify with a live
+  requote and direct BofA/8-K source before treating as an established
+  multi-day thesis.
+- Opportunity cost: Account flat (0/6 positions, 0/3 weekly trades per
+  TRADE-LOG), nothing displaced. At $656/share a 20%-of-equity cap buys
+  very few shares; 2:1 R:R at a sane 10% trailing-stop distance needs a
+  live requote post-gap (entry near today's spike highs raises the risk
+  side of that ratio). Stronger of today's two gappers given a real
+  institutional catalyst (BofA) versus SATL's catalyst/direction mismatch,
+  but not confirmed to clear Confluence (>=2 of VWAP/RSI/200-SMA/insider)
+  without tradingview-data MCP access this session.
+
+#### Deep dive: SATL $4.975 -7.01%
+- Catalyst: Satellogic named Frank D. "Trey" Whitworth, former Director of
+  the National Geospatial-Intelligence Agency (NGA), as company President
+  — press release dated Sept 8, confirmed on Satellogic's own press room.
+- Catalyst detail: Sits alongside a Sept 3 release naming SynMax the
+  exclusive maritime-intelligence channel for the upcoming Merlin
+  constellation's data, an Aug 25 investor-roadshow announcement (NY/DC/
+  SF/London/Paris ahead of World Space Business Week), and an Aug 13 SVP
+  Space Systems hire — a pattern of government/defense-relationship
+  buildout, not a negative disclosure. No restatement, delisting notice,
+  or guidance cut found in the recent press-release record.
+- Why: Nothing in the confirmed press-release record explains a down
+  move — if anything, a former NGA Director joining as President reads as
+  a bullish government-relations signal for a sovereign-defense-facing
+  satellite-imagery company. The -7.01% print most likely reflects "sell
+  the news" after a run-up into the appointment (this same story was
+  already flagged at 10:14 ET today with a smaller -5.79% gap), continued
+  Aerospace & Defense small-cap softness, or profit-taking at 52-week-
+  range extremes (range ~$1.25-$12, RSI ~50, short interest 16%+ per the
+  10:14 ET note).
+- Impact: 86,350 premarket shares is thin versus SATL's multi-million-
+  share average daily volume — likely overstates real conviction. Because
+  the catalyst is confirmed positive but price direction is negative, this
+  reads as continued unwind/profit-taking rather than a fresh bearish
+  catalyst — not a clean fade-the-spike short without an actual bearish
+  trigger, and not a clean dip-buy without confirmation the selling has
+  stopped.
+- Horizon: SHORT_TERM price action, but the underlying catalyst (NGA-
+  director hire, government/defense pipeline reported "approaching $1
+  billion" per a July Freedom Broker note, Merlin constellation launch
+  slated Oct 2026) is structurally LONG_TERM. The mismatch between a
+  positive structural catalyst and negative near-term price action means
+  this needs confirming contract-award news, not today's print, before
+  treating it as investable in either direction.
+- Opportunity cost: Account flat (0/6 positions, 0/3 weekly trades),
+  nothing displaced. A short here fails without a bearish catalyst to back
+  it; a long fails momentum-confirmation while the stock is actively
+  gapping down, regardless of the long-term thesis. Weaker of today's two
+  gappers given the catalyst/direction mismatch — neither direction clears
+  Confluence or the Entry Checklist's "specific catalyst" + "sector in
+  momentum" pairing as researched here.
