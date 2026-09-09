@@ -10180,3 +10180,61 @@ above the 50k floor regardless.
   to weigh Palantir-partnership durability vs. OpenAI-Astra-driven demand
   and each one's R:R at a sane stop distance — research only, no order
   sizing recommended here. No existing position to displace (account flat).
+
+### Gappers (auto-scan 09:17 ET, cloud, 2nd firing)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 98.95 | +10.76 | 1,735,851 | Extends Sept 8 neocloud rally into pre-market: OpenAI's new Astra model keeps CoreWeave's AI-compute backlog in focus. |
+| 2 | NBIS | 241.08 | +6.46 | 1,157,126 | Holds Sept 8 gain: Palantir named Nebius preferred sovereign AI infrastructure partner; deal carries no disclosed contract value yet. |
+
+Same 2 symbols as the 08:20 ET run (no new names crossed the 5%/$3 filter).
+Prices/gap% ticked up slightly for CRWV (98.20→98.95, +9.92%→+10.76%), NBIS
+unchanged to the penny ($241.08, +6.46%) — thin pre-market liquidity this
+early. Both already got a full deep dive this morning; refreshed below only
+where new information surfaced (CRWV CEO insider sale, NBIS deal-value
+caveat). No third ticker to promote into the cap.
+
+#### Deep dive: CRWV $98.95 +10.76% (update)
+- Catalyst: Unchanged thesis — CRWV closed Sept 8 +11.72% at $99.83 on the
+  OpenAI-Astra-driven neocloud rally (CRWV/NBIS/IREN), holding most of the
+  gain into Sept 9 pre-market. New this scan: Q2 2026 earnings (Aug 11)
+  showed revenue backlog near $104B and Nasdaq-100 inclusion, layered on
+  the already-known $22.4B OpenAI deal, $21B Meta expansion, and new
+  Anthropic partnership.
+- Why: Unchanged — OpenAI's Astra model reads as fresh proof of AI-compute
+  demand; CRWV is a primary GPU-cloud supplier to OpenAI, so renewed
+  roadmap enthusiasm pulls in momentum buyers, compounded by the
+  sector-wide neocloud read-through.
+- Impact: New flag — CEO Michael Intrator sold >300,000 shares (~$27.3M)
+  around Sept 1, days before this rally. Doesn't invalidate the demand
+  catalyst but is a caution sign worth tracking; underlying backlog
+  ($104B) still reads structural, not a pure headline spike.
+- Horizon: LONG_TERM catalyst / SHORT_TERM entry risk — unchanged from the
+  08:20 ET read; still a wait-for-pullback name, not a chase-the-gap one.
+- Opportunity cost: Unchanged — ~20 shares at the 20%-of-equity cap, one of
+  max-3-new-trades-per-week and max-6-open-positions. 2:1 R:R at a sane
+  10%-trailing-stop distance isn't established at the open.
+
+#### Deep dive: NBIS $241.08 +6.46% (update)
+- Catalyst: Unchanged — Palantir named Nebius its preferred sovereign AI
+  infrastructure partner Sept 8 (confirmed via nebius.com/newsroom joint
+  release); Nebius compute/inference to run inside Palantir's enterprise
+  perimeter.
+- Why: Unchanged — a named "preferred partner" deal with a heavily-followed
+  AI name (Palantir) validates Nebius as enterprise-grade sovereign-AI
+  infra and pulls in momentum buyers, layered on the same neocloud rally
+  lifting CRWV/IREN.
+- Impact: New flag — market commentary (24/7 Wall St via Pluang) notes the
+  Palantir deal "currently carries no disclosed contract value for Nebius,
+  making it more a credential than a firm deal" — a real risk to today's
+  pop holding. Nebius's own guidance targets $3.0-3.4B 2026 revenue off an
+  existing ~$40B backlog, so Palantir adds a distribution channel, not the
+  primary growth driver. Price unchanged to the penny since 08:20 ET —
+  thin pre-market tape, no fresh confirming or disconfirming flow yet.
+- Horizon: LONG_TERM catalyst / SHORT_TERM price-momentum risk — unchanged;
+  the no-disclosed-value caveat argues for waiting on a pullback rather
+  than chasing.
+- Opportunity cost: Unchanged — ~8 shares at the 20%-of-equity cap. CRWV
+  and NBIS remain correlated neocloud names on the same list;
+  `scripts/corr-gate.mjs` would block taking both. Research only, account
+  flat, no position displaced.
