@@ -167,6 +167,14 @@ research-only; execution happens in market-open or /trade (both of which run
 the full safety-check gate).
 
 CLOUD CADENCE NOTE:
+LIVE SCHEDULE: this routine fires FOUR times every trading day, at 08:00,
+09:00, 10:00 and 11:00 ET (cron `0 12,13,14,15 * * 1-5` UTC, plus a few
+minutes of platform jitter, so 08:20 / 09:17 / 10:14 / 11:11 ET are all
+normal). None of these is a duplicate or an off-schedule re-fire. EVERY run
+must append its section to memory/RESEARCH-LOG.md and commit AND push to
+main (STEP 7) regardless of how many earlier runs exist today; later runs
+overwrite data/premarket_gappers_${DATE}.json by design. Never skip the
+push because an earlier run already logged today.
 Claude Code cloud routines enforce a 1-hour minimum interval. This routine
 is intended to fire 3-4 times pre-market and early session, e.g.:
     0 7 * * 1-5   (07:00 CT = 08:00 ET, premarket)
