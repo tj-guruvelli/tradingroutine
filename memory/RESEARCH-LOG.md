@@ -9990,3 +9990,107 @@ grade-A hit, so no Telegram/ClickUp notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-09 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-08`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 55th straight session. 44th trading
+day since launch (Jul 9) with zero entries. Week of Sep 7 stands at 0/3
+trades.
+
+**Market context:**
+- **Oil:** Brent $100.44 (+2.57%), first close above $100/bbl since July.
+  WTI (Nov) $94.92 (+2.03%). Driver: the US military destroyed five
+  Iranian crude tankers Tuesday in retaliation for an attempted attack on
+  a US Navy warship; Iran has since targeted vessels transiting the Strait
+  of Hormuz. Goldman Sachs flagged rising odds of Brent > $120/bbl if
+  shipping attacks intensify. Direct continuation of the Iran/Hormuz
+  overhang flagged in prior sessions, now a step higher.
+- **S&P 500 futures:** Mixed read across sources — Barchart/Investing.com
+  had September E-mini (ESU26) +0.12% premarket, "finding footing" after
+  three losing sessions as oil/yields retreated; a same-morning
+  TheStreet/CNBC catalyst piece instead reported Nasdaq futures falling as
+  the Iran escalation lifted oil. Net: choppy, headline-driven tape, not a
+  clean risk-on or risk-off read this morning.
+- **VIX:** 15.72 (+2.75%) — still a low absolute level (de-risking, not
+  distress), but the third straight session of an oil/geopolitics-driven
+  intraday pop.
+- **Today's catalysts:** Light data day. 10-year yields easing off Tuesday's
+  highs above 4.8%. Copper hit a fresh record above $6.81/lb (+~20% YTD)
+  on data-center-driven demand. Global energy stocks (IXC) hit their
+  highest level since the ETF's Nov-2001 inception. Next hard prints:
+  PPI (Aug) Thu Sep 10, 8:30am ET; CPI (Aug) Fri Sep 11, 8:30am ET — both
+  ahead of the Sep 15-16 FOMC.
+- **Earnings today (Wed Sep 9):** Before open — SUNB, COO (Cooper
+  Companies); neither on the watchlist. Search results didn't return a
+  complete before-open list — treat as incomplete, not exhaustive.
+- **Sector momentum YTD:** Energy (XLE) leads at +42% YTD (cheapest sector
+  by P/E at ~13x, 16.3% ROE) — today's oil spike extends an
+  already-dominant trend rather than starting one. Materials +22% YTD but
+  3-month momentum fading (+3.1% vs Energy's +13.1% over 3mo). Health Care
+  strongest short-term momentum (+14.1% over 3mo, +24.1% 1yr). Momentum
+  classification: Leading = Consumer Staples, Industrials, Materials,
+  Energy; Lagging = Technology, Communications, Consumer Discretionary,
+  Financials — a rotation out of the Jul/Aug tech-momentum leadership
+  (Industrials/Comms/Tech led as of the Sep 8 entry) into defensive/cyclical
+  value, consistent with late-cycle positioning per
+  TRADING-STRATEGY.md's sector-rotation table. Not independently confirmed
+  against `combined_analysis` — `tradingview-data` MCP not loaded this
+  cloud run, no confluence/technical check possible.
+- **Held-ticker check:** No open positions — none needed. Checked RGTI
+  (this desk's standing best-catalyst watch name, per Sep 8 Market-Open) for
+  a same-day update: no fresh catalyst today — consolidating at $15.83
+  (+1.83%) above both key moving averages, RSI(14) cooled to 53.2 (down
+  from the overbought reading implied by its post-contract spike), on the
+  now-several-days-old $100M DoC/CHIPS Act contract. Nothing new to trade
+  on; still not independently confluence-checked (same MCP gap).
+- **Sourcing note:** Apify RAG (`mcp__Apify__apify--rag-web-browser`)
+  misfired on all 7 queries this run — returned unrelated dictionary/letter
+  definition pages, a Polish stock-exchange page, and empty `text` fields
+  instead of the requested topics (worse than the usual ampersand/short-query
+  mismatch noted in prior entries; looks like an upstream regression, not a
+  query-phrasing issue). Discarded entirely and fell back to native
+  WebSearch (same `-site:finance.yahoo.com -site:uk.finance.yahoo.com
+  -site:sg.finance.yahoo.com` exclusion, plus `blocked_domains` on the
+  WebSearch call itself) for all 7 topics — recovered clean CNBC/
+  TradingEconomics/Investing.com/Barchart/TheStreet/Investing.com hits.
+  Zero finance.yahoo.com citations used in this entry.
+
+**Risk factors:** Live US-Iran shooting exchange (tanker strikes, Hormuz
+shipping attacks) is a step beyond the "overhang" framing of prior sessions
+— genuine tail risk of a Hormuz transit disruption, which would spike oil
+further and could flip today's contained VIX (15.72) into a real risk-off
+move fast. Mixed premarket futures read (one source +0.12%, another
+reporting Nasdaq futures falling) signals a genuinely undecided, headline-
+reactive tape — not a session to lean into directionally. PPI (Thu) and CPI
+(Fri) both land this week ahead of the Sep 15-16 FOMC; an oil-driven
+inflation surprise on top of the crude spike would compound event risk. No
+`tradingview-data` MCP this run — no confluence/technical check possible,
+so no name-level idea (Energy-sector momentum or otherwise) can clear the
+strategy's 2-indicator confluence bar today regardless of catalyst quality.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar —
+no confluence tooling available this run. Watch-only, no entry/stop/target:
+(1) Energy-sector momentum (XLE/integrated majors/E&Ps) — cleanest,
+most durable catalyst combination today (dominant YTD leader + fresh
+geopolitical oil spike + sector at a multi-year relative high), but chasing
+a headline-driven commodity spike with no confluence tooling and genuine
+de-escalation risk (a ceasefire or naval de-conflict would reverse the move
+fast) makes this unsuitable for a same-day entry; worth a dedicated
+`/research` or `/sentiment` pass on a specific integrated major if the
+move holds past today. (2) RGTI — still the desk's best-documented,
+dated catalyst (confirmed $100M DoC contract) and no longer technically
+extended (RSI cooled to 53, consolidating above both MAs), but unchanged
+from Sep 8: no confluence tooling to independently confirm before sizing
+an entry. (3) Copper/Materials complex — fresh record high on structural
+data-center demand, but no single-name catalyst identified this session;
+Materials' fading 3-month momentum vs. Energy argues against treating this
+as the stronger of the two commodity plays right now.
+
+**Decision: HOLD.** No open positions, no planned trades. Live Iran/Hormuz
+shooting exchange, a genuinely mixed premarket tape, and a CPI/PPI-heavy
+week ahead of FOMC all argue for staying flat; no confluence tooling this
+run to validate any single-name idea. Patience over activity.
