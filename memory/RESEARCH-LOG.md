@@ -10238,3 +10238,97 @@ caveat). No third ticker to promote into the cap.
   and NBIS remain correlated neocloud names on the same list;
   `scripts/corr-gate.mjs` would block taking both. Research only, account
   flat, no position displaced.
+
+### Gappers (auto-scan 10:14 ET, cloud, off-schedule re-fire, 3rd firing)
+Watchlist scan via `scripts/gappers-alpaca.sh` returned only 3 hits (down
+from 2 at 08:20/09:17 ET) — CRWV/NBIS have both faded below the 5% gap
+threshold by mid-morning; PEPG, SATL, META are new names. Deep-dive cap is
+5; all 3 hits get a full deep dive below (none held back to quick-scan-only).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | PEPG | 3.41 | +6.41 | 14,556 | No confirmed catalyst found; only stale March 2026 coverage surfaced. |
+| 2 | SATL | 5.04 | -5.79 | 39,730 | Former NGA Director Frank "Trey" Whitworth named President (~Sept 8). |
+| 3 | META | 645.61 | +5.26 | 337,728 | Meta launched Muse, its first personal AI agent (Sept 8). |
+
+#### Deep dive: PEPG $3.41 +6.41%
+- Catalyst: No fresh news found for today's move via Apify RAG (3 separate
+  queries) or Benzinga's quote page, which carries no "Why Is It Moving"
+  note for PEPG (unlike SATL/META, both of which had one). The only PEPG
+  coverage surfaced is a stale March 31, 2026 piece on a -64% single-day
+  crash tied to Phase 2 trial data, plus older analyst-target pieces —
+  none dated to Sept 9.
+- Why: Unclear — no confirmed news mechanism found. A ~6% move on 14,556
+  shares vs. a 933K average daily volume in a $222M market-cap biotech
+  reads more like thin-liquidity noise than a real catalyst.
+- Impact: Does not look sustainable. Benzinga's own quote snapshot
+  (captured ~9:21 AM ET, before this scan ran at 10:14 ET) already shows
+  the stock back down to $3.21 from a $3.48 intraday high — most of the
+  gap had already faded before this scan captured it.
+- Horizon: SHORT_TERM, by default absent any identified catalyst — reads
+  as noise, not a setup worth tracking.
+- Opportunity cost: No real catalyst to weigh against the hard caps.
+  Account flat (0/6 open positions, 0/3 weekly trades per TRADE-LOG), so
+  nothing is displaced either way; not a candidate without a confirmed
+  catalyst.
+
+#### Deep dive: SATL $5.04 -5.79%
+- Catalyst: Satellogic named Frank D. "Trey" Whitworth — a former Director
+  of the National Geospatial-Intelligence Agency (NGA) — as company
+  President, effective immediately, per coverage roughly 22 hours old at
+  scan time. Follows an Aug 13 hire of Jamil Kawar as SVP Space Systems
+  and an Aug 25 note on five-city investor meetings ahead of Space Week —
+  a pattern of building out government/defense-relations bench strength.
+- Why: A former top U.S. government geospatial-intelligence official
+  joining as President typically reads as bullish for a satellite-imagery
+  company pursuing government/defense contracts (added credibility and
+  procurement relationships) — but that read is an inference from the
+  headline, not confirmation of new contract flow.
+- Impact: The catalyst does not explain the move's direction — SATL is
+  down -5.79% (this scan) to -4.49% (Benzinga, $5.11) despite what reads
+  as positive personnel news. Likely explanations: the news is ~1-2
+  sessions old and already priced in, broader Aerospace & Defense
+  softness, or profit-taking after a big run (52-wk range $1.25-$12.00,
+  RSI 50, short interest an elevated 16.28%). Volume (39,730) is a small
+  fraction of the 6.31M average, so the print may not reflect strong
+  conviction either way.
+- Horizon: LONG_TERM catalyst (structural government-relations hire ahead
+  of a public-sector-facing space-imagery business) / SHORT_TERM price
+  action is negative and inconsistent with the catalyst's usual read —
+  watch for confirming contract news rather than chasing today's print.
+- Opportunity cost: Account flat, nothing displaced. A down-gap on
+  ostensibly positive personnel news is itself a caution flag; would need
+  the Entry Checklist confluence rule (≥2 of VWAP/RSI/200-SMA/insider)
+  plus a sane 2:1 R:R stop before qualifying — neither established here.
+
+#### Deep dive: META $645.61 +5.26%
+- Catalyst: Meta officially launched Muse, its first personal AI agent, on
+  Sept 8, 2026: a personal agent running on a "Secure VM" gated by a
+  "Sentinel" permission layer, with a free limited tier plus $20 and
+  $100/month paid tiers. Functions include sending emails/messages,
+  booking travel, and making purchases/payments — broad account and
+  agentic access, which multiple outlets flagged as a trust/privacy
+  question given the scope requested (email, calendar, payments, health
+  services).
+- Why: A first-party personal AI agent with payment and calendar access is
+  a genuine new product category for Meta beyond chatbots, read by the
+  market as expanding Meta's AI monetization surface (subscription tiers)
+  and competitive position vs. OpenAI/Google agent products — pulling in
+  momentum buyers on real volume.
+- Impact: Looks like a real, volume-confirmed move rather than a headline
+  spike likely to mean-revert same-day: volume (9.41M) is roughly in line
+  with the 17.87M average, open $648.64, day range $638.56-$651.93. RSI is
+  69, approaching the strategy's overbought line (>70 = no new long per
+  Indicator Canon), so a fresh long specifically today is late even if the
+  underlying story has legs. No sector-wide read-through noted — this is
+  Meta-specific product news, not a broad AI-infra rally.
+- Horizon: LONG_TERM catalyst (new recurring-revenue product surface, not
+  a one-day headline) / SHORT_TERM entry timing is poor — RSI already
+  near the overbought boundary argues for waiting on a pullback rather
+  than chasing the +5% pop.
+- Opportunity cost: Account flat (0/6 positions, 0/3 weekly trades),
+  nothing displaced. At ~$646/share, a 20%-of-equity cap (~$2,000 on a
+  $10k account) is only ~3 shares — a full-cap position is a trivially
+  small share count for a name this large relative to account size. 2:1
+  R:R at a sane stop not evaluated; RSI overbought argues against sizing
+  this today regardless.

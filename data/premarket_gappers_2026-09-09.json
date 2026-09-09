@@ -1,34 +1,48 @@
 {
-  "scanned_at": "2026-09-09T13:17:21Z",
+  "scanned_at": "2026-09-09T14:14:41Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "CRWV",
-      "price": 98.95,
-      "gap_pct": 10.76,
-      "premarket_volume": 1735851,
-      "catalyst": "CoreWeave extends its Sept 8 neocloud rally into pre-market Sept 9 after OpenAI's new Astra model reignited enthusiasm for CRWV's $22.4B OpenAI compute deal.",
+      "symbol": "PEPG",
+      "price": 3.405,
+      "gap_pct": 6.41,
+      "premarket_volume": 14556,
+      "catalyst": null,
       "headlines": [],
-      "catalyst_detail": "CRWV closed Sept 8 up 11.72% to $99.83 on an OpenAI-Astra-driven rally that lifted the whole neocloud group (CRWV, NBIS, IREN), and is holding most of that gain in Sept 9 pre-market. The move followed a string of mega-deal news: CoreWeave's OpenAI contract has grown from an initial $11.9B to $22.4B, on top of a $21B Meta expansion and a new multi-year Anthropic partnership disclosed in the prior weeks. Q2 2026 earnings (Aug 11) showed revenue backlog near $104B and Nasdaq-100 inclusion, though CEO Michael Intrator also sold over 300,000 shares (~$27.3M) around Sept 1.",
-      "why": "OpenAI's Astra model release is read as fresh proof of accelerating AI-compute demand; since CRWV is contractually tied to OpenAI as a primary GPU-cloud supplier, renewed enthusiasm for OpenAI's roadmap pulls in momentum buyers on CRWV specifically, compounded by the same read-through across the whole neocloud group (NBIS, IREN also up).",
-      "impact": "Real volume behind the move (20.8M shares the prior session on a 551M-share float name), and the underlying driver (Astra demand plus a $104B contracted backlog across OpenAI/Meta/Anthropic) looks structural, not a pure headline spike. But CRWV remains extremely volatile -- down ~40% from its YTD high as recently as early August -- and the CEO's early-Sept insider sale is a caution flag, so a chase at +10-11% pre-market carries real give-back risk even though the catalyst itself looks durable.",
-      "horizon": "LONG_TERM catalyst / SHORT_TERM entry risk -- the AI-infrastructure buildout theme (OpenAI/Meta/Anthropic compute backlog) fits the current AI-infra sector-rotation phase and could be a multi-week swing thesis, but the stock's history of violent round-trips means chasing today's gap specifically is a short-term momentum bet, not a clean structural entry.",
-      "opportunity_cost": "At ~$99/share, a 20%-of-equity cap on a ~$10k account is ~20 shares. Taking this would use one of the max-3-new-trades-per-week and one of the max-6-open-position slots. A sane 10% trailing stop is roughly $10 away, so clearing the 2:1 R:R minimum needs a credible $20+ target not yet established at the open -- reads as a wait-for-pullback setup, not a chase-the-gap one. Account is flat, so no existing position to displace; CRWV and NBIS both being on today's list means taking both would concentrate sector risk (see corr-gate.mjs)."
+      "catalyst_detail": "No fresh news found for today's move via Apify RAG web browser (3 separate queries) or Benzinga's own quote page, which carries no \"Why Is It Moving\" note for PEPG (unlike SATL/META, which both had one). The only PEPG coverage surfaced is a stale March 31, 2026 piece on a -64% single-day crash tied to Phase 2 trial data, plus older analyst-target pieces -- none dated to Sept 9.",
+      "why": "Unclear -- no confirmed news mechanism found. A ~6% move on 14,556 shares vs a 933K average daily volume in a $222M market-cap biotech is more consistent with thin-liquidity noise than a real catalyst.",
+      "impact": "Does not look sustainable. Benzinga's own quote snapshot (captured ~9:21 AM ET, before this scan ran at 10:14 ET) already shows the stock back down to $3.21 from a $3.48 intraday high -- most of the gap had already faded before this scan captured it.",
+      "horizon": "SHORT_TERM, by default absent any identified catalyst -- reads as noise, not a setup worth tracking.",
+      "opportunity_cost": "No real catalyst to weigh against the hard caps. Account is flat (0/6 open positions, 0/3 weekly trades used per TRADE-LOG), so nothing is displaced either way; not a candidate without a confirmed catalyst."
     },
     {
       "rank": 2,
-      "symbol": "NBIS",
-      "price": 241.08,
-      "gap_pct": 6.46,
-      "premarket_volume": 1157126,
-      "catalyst": "Nebius holds its Sept 8 gain into pre-market Sept 9 after Palantir named Nebius its preferred sovereign AI infrastructure partner in a joint strategic partnership.",
+      "symbol": "SATL",
+      "price": 5.04,
+      "gap_pct": -5.79,
+      "premarket_volume": 39730,
+      "catalyst": "Satellogic named Frank D. \"Trey\" Whitworth, a former Director of the National Geospatial-Intelligence Agency (NGA), as company President (announced ~Sept 8).",
       "headlines": [],
-      "catalyst_detail": "Palantir Technologies and Nebius Group announced Sept 8 that Palantir named Nebius its preferred sovereign AI infrastructure partner, bringing Nebius compute and inference endpoints inside the Palantir enterprise perimeter so eligible Palantir customers can run open models on Nebius infrastructure while keeping control of data and models (confirmed via the joint press release on nebius.com/newsroom, dated Sept 8, 2026). NBIS rose about 6% on the news while PLTR dipped roughly 1%.",
-      "why": "A high-profile, named 'preferred partner' deal with Palantir -- itself a heavily-followed AI name -- validates Nebius as an enterprise-grade sovereign-AI infra provider and pulls in momentum buyers, layered on the same broader neocloud rally lifting CRWV and IREN the same day.",
-      "impact": "One market commentary (24/7 Wall St via Pluang) flagged that the deal currently carries no disclosed contract value for Nebius, making it more a credential than a firm near-term revenue deal -- a real risk to the durability of today's pop. Nebius's own guidance targets $3.0-3.4B 2026 revenue off an existing ~$40B backlog, so the Palantir tie-up adds a distribution channel rather than being the primary growth driver. NBIS has been choppy for weeks (round-tripping on Nvidia earnings, convertible-debt raises), so today's magnitude carries real mean-reversion risk even though the underlying catalyst is structurally positive. Sector-wide read-through confirmed (CRWV, IREN also up).",
-      "horizon": "LONG_TERM catalyst (new enterprise distribution channel, durable backlog growth) / SHORT_TERM price-momentum risk -- fits the AI-infra sector-rotation phase and is worth tracking for a swing entry on a pullback rather than chasing the pre-market pop, especially given the no-disclosed-value caveat on the deal itself.",
-      "opportunity_cost": "At ~$241/share, a 20%-of-equity cap is ~8 shares. CRWV and NBIS are both on today's own gapper list and both neocloud/AI-infra names that almost certainly move together (both rallied on the same Sept 8 sector move) -- taking both would concentrate sector risk and is exactly the scenario corr-gate.mjs exists to block (>0.75 correlation with 2+ open positions). Between the two, ranking would need to weigh Palantir-partnership durability (undisclosed value) vs. OpenAI-Astra-driven demand (contracted backlog) and each one's R:R at a sane stop distance -- research only, no order sizing recommended here. No existing position to displace (account flat)."
+      "catalyst_detail": "Satellogic appointed Frank D. \"Trey\" Whitworth -- a former Director of the NGA -- as company President, effective immediately, per coverage roughly 22 hours old at scan time. This follows an Aug 13 hire of Jamil Kawar as SVP Space Systems and an Aug 25 note on five-city investor meetings ahead of Space Week -- a pattern of building out government/defense-relations bench strength.",
+      "why": "A former top U.S. government geospatial-intelligence official joining as President is typically read as bullish for a satellite-imagery company pursuing government/defense contracts (added credibility and procurement relationships) -- but that reading is an inference from the headline, not confirmation of new contract flow.",
+      "impact": "The catalyst does not explain the move's direction: SATL is down -5.79% (this scan) to -4.49% (Benzinga, $5.11) despite what reads as positive personnel news. Likely explanations: the news is ~1-2 sessions old and already priced in, broader Aerospace & Defense softness, or profit-taking after a big run (52-wk range $1.25-$12.00, RSI 50, short interest an elevated 16.28%). Volume (39,730) is a small fraction of the 6.31M average, so the print may not reflect strong conviction either way.",
+      "horizon": "LONG_TERM catalyst (structural government-relations hire ahead of a public-sector-facing space-imagery business) but SHORT_TERM price action is negative and inconsistent with the catalyst's usual read -- watch for confirming contract news rather than chasing today's print.",
+      "opportunity_cost": "Account flat, nothing displaced. A down-gap on ostensibly positive personnel news is itself a caution flag; would need the Entry Checklist confluence rule (>=2 of VWAP/RSI/200-SMA/insider) plus a sane 2:1 R:R stop before qualifying -- neither established here."
+    },
+    {
+      "rank": 3,
+      "symbol": "META",
+      "price": 645.605,
+      "gap_pct": 5.26,
+      "premarket_volume": 337728,
+      "catalyst": "Meta officially launched Muse, its first personal AI agent, on Sept 8, 2026.",
+      "headlines": [],
+      "catalyst_detail": "Meta launched Muse on Sept 8, 2026: a personal AI agent running on a \"Secure VM\" gated by a \"Sentinel\" permission layer, with a free limited tier plus $20 and $100/month paid tiers. Functions include sending emails/messages, booking travel, and making purchases/payments -- broad account and agentic access, which multiple outlets flagged as a trust/privacy question given the scope requested (email, calendar, payments, health services).",
+      "why": "A first-party personal AI agent with payment and calendar access is a genuine new product category for Meta beyond chatbots, read by the market as expanding Meta's AI monetization surface (subscription tiers) and competitive position vs. OpenAI/Google agent products -- pulling in momentum buyers on real volume.",
+      "impact": "Looks like a real, volume-confirmed move rather than a headline spike likely to mean-revert same-day: volume (9.41M) is roughly in line with the 17.87M average, open $648.64, day range $638.56-$651.93. RSI is 69, approaching the strategy's overbought line (>70 = no new long per Indicator Canon), so a fresh long specifically today is late even if the underlying story has legs. No sector-wide read-through noted -- this is Meta-specific product news, not a broad AI-infra rally.",
+      "horizon": "LONG_TERM catalyst (new recurring-revenue product surface, not a one-day headline) but SHORT_TERM entry timing is poor -- RSI already near the overbought boundary argues for waiting on a pullback rather than chasing the +5% pop.",
+      "opportunity_cost": "Account flat (0/6 positions, 0/3 weekly trades), nothing displaced. At ~$646/share, a 20%-of-equity cap (~$2,000 on a $10k account) is only ~3 shares -- a full-cap position is a trivially small share count for a name this large relative to account size. 2:1 R:R at a sane stop not evaluated; RSI overbought argues against sizing this today regardless."
     }
   ]
 }
