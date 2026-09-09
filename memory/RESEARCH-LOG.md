@@ -10426,3 +10426,28 @@ deep dive below.
   gappers given the catalyst/direction mismatch — neither direction clears
   Confluence or the Entry Checklist's "specific catalyst" + "sector in
   momentum" pairing as researched here.
+
+## 2026-09-09 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 4 grade-B hits**:
+HAFN, BWLP, TRMD, and CMBT all clear Setup B (ADX14 > 20 AND EMA9 > EMA21;
+note the local `/setup-scan` stock_score>=6 gate is dropped here, MCP-only).
+Setup A (TJL breakout) not checkable for any ticker this run —
+`setup_a_checkable: false` across the board, consistent with
+`grade_a_possible: false` (`setup_a_skipped_reason: "outside 10:00-15:30
+ET"`) — this is the 16:30 ET Chicago cron fire, after the 15:30 ET
+intraday-breakout cutoff. No grade-A hit, so no Telegram/ClickUp notify sent
+per routine rule.
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | ADX 23.3, EMA9 $8.70 > EMA21 $8.30, RSI 67.6, px $8.91 vs SMA200 $7.22 |
+| BWLP | B | Momentum confluence | daily swing | ADX 22.4, EMA9 $24.20 > EMA21 $23.60, RSI 55.6, px $19.00 vs SMA200 $17.96 |
+| TRMD | B | Momentum confluence | daily swing | ADX 20.5, EMA9 $33.52 > EMA21 $32.14, RSI 71.8, px $35.57 vs SMA200 $27.40 |
+| CMBT | B | Momentum confluence | daily swing | ADX 36.0, EMA9 $18.66 > EMA21 $17.95, RSI 72.1, px $19.25 vs SMA200 $13.72 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
