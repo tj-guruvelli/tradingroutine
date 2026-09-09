@@ -529,3 +529,53 @@ mismatch flagged Jul 27, unresolved, operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-Open run screened 6 candidates (BE, NBIS, CRWV, RGTI, HAFN, BWLP) — all failed the confluence/momentum/catalyst checklist, none executed. Weekly trade count: 0/3 (week of Sep 7). 43 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 54th straight session, operator review pending.
+
+### Sep 09, Market-Open (Day 44, Wednesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders. STEP 1 candidates: today's RESEARCH-LOG
+(2026-09-09 Pre-Market — explicit Decision: HOLD, no confluence tooling
+this run, no ticker cleared the catalyst+confluence bar; Gappers auto-scan
+08:20 ET + 09:17 ET 2nd firing) — CRWV, NBIS deep-dived (both flagged
+research-only, no sizing recommended); RGTI carried forward as the desk's
+standing best-catalyst watch name. STEP 2 candidates: most recent
+setup-scan file is `data/setup-scan_cloud_2026-09-08_1838ET.json` (today's
+own file doesn't exist yet) — 2 grade-B hits, HAFN and BWLP, 0 grade-A,
+identical technical values to the Sep 08 file (unchanged since last
+session). Merged candidate list: CRWV, NBIS, RGTI, HAFN, BWLP. All 5
+re-validated live (`alpaca.sh quote`, timestamps ~09:37 ET) — quotes
+current.
+
+`tradingview-data` MCP not loaded this session (confirmed via tool search)
+— no independent confluence check possible for any candidate today,
+matching this morning's pre-market gap.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- CRWV $105.10 (ask) — fails: catalyst documented (OpenAI Astra / neocloud
+  rally, $104B backlog) but no confluence tooling available to confirm
+  ≥2-indicator alignment; RESEARCH-LOG already flags 2:1 R:R not
+  established at a sane 10% trailing-stop distance at this price — wait
+  for pullback, not a same-day entry.
+- NBIS $270.00 (ask) — fails: catalyst documented (Palantir preferred
+  sovereign-AI-infra partner) but flagged as carrying no disclosed
+  contract value; no confluence tooling to confirm — skip.
+- RGTI $15.62 (ask) — fails: cleanest catalyst on record (dated $100M DoC
+  contract), today's pre-market Held-ticker check noted RSI(14) cooled to
+  53.2 above both key MAs, but explicitly "not independently
+  confluence-checked" (same MCP gap) — not traded on an unconfirmed read.
+- HAFN $8.98 (ask) — fails: RSI14 75.92 is overbought (Indicator Canon:
+  ">70 = sell / no new long"), same data as Sep 08's setup-scan file,
+  direct rule violation regardless of price>SMA200 alignment; no catalyst
+  documented — skip (Apify RAG unreliable this session per pre-market
+  entry, not worth fetching for an already-disqualified candidate).
+- BWLP $24.18 (ask) — fails confluence: only 1 of 4 indicators
+  (price>SMA200 $17.91) confirms bullish; RSI14 64.85 is neutral (canon's
+  buy trigger is oversold <30, not merely "not overbought"), no
+  VWAP/insider data; no catalyst documented — skip.
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 7). 44 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 56th straight session, operator review
+pending.
