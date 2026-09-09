@@ -85,9 +85,9 @@ Cloud routines are stateless between runs — each run is a fresh clone with
 no memory except what's in git. Persist the scan result and the research log:
     git add data/setup-scan_cloud_${DATE}_*.json memory/RESEARCH-LOG.md
     git commit -m "setup-scan-cloud scan ${DATE} ${NYHM}ET"
-    git push origin main
+    git push origin HEAD:main
 On push failure: retry up to 3 attempts total — run `git pull --rebase
-origin main` then `git push origin main` again. The .gitattributes union
+origin main` then `git push origin HEAD:main` again. The .gitattributes union
 driver auto-resolves memory/RESEARCH-LOG.md, TRADE-LOG.md,
 WEEKLY-REVIEW.md, and BACKTEST-LOG.md conflicts. If a conflict remains in
 any OTHER file after a rebase, abort it (`git rebase --abort`) and push
@@ -95,7 +95,10 @@ this commit to a rescue branch instead:
 `git push origin HEAD:refs/heads/rescue/setup-scan-cloud-$DATE-$NYHM` (or
 `-$DATE` if no NYHM). Print one line to the console and to the
 notification channel saying main was not updated and where the commit is.
-Never force-push.
+Never force-push. Always push HEAD:main (not a bare `main`): the platform
+sometimes starts the session on a `claude/*` outcome branch, and a bare
+`git push origin main` then pushes nothing and reports success while the
+run's commit stays stranded on that branch.
 
 STEP 6 — Never auto-trade. A hit here is a candidate, not an order. Feed it
 to `/trade` (local) or let `market-open.md` pick it up from the latest

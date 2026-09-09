@@ -63,9 +63,12 @@ If ALPACA_ENDPOINT is paper, prepend "[PAPER]" to the message.
 STEP 6 — COMMIT AND PUSH (mandatory):
     git add memory/TAX-LOG.md
     git commit -m "quarterly tax review $DATE"
-    git push origin main
+    git push origin HEAD:main
 On push failure: git pull --rebase origin main, then push again.
-Never force-push.
+Never force-push. Always push HEAD:main (not a bare `main`): the platform
+sometimes starts the session on a `claude/*` outcome branch, and a bare
+`git push origin main` then pushes nothing and reports success while the
+run's commit stays stranded on that branch.
 
 STEP 7 — Refuse to interpret this as tax advice. If the numbers look wrong,
 say so — do NOT auto-file, do NOT propose adjustments. The log is for

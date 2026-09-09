@@ -36,4 +36,4 @@ If telegram exits nonzero, fall back to:
 STEP 7 — COMMIT AND PUSH:
     git add memory/RESEARCH-LOG.md
     git commit -m "gappers scan $DATE"
-    git push origin main
+    git push origin HEAD:main

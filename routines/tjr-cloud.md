@@ -60,8 +60,11 @@ assets: no message.
 STEP 5 — COMMIT AND PUSH (mandatory):
     git add data/tjr_state_*.json
     git commit -m "tjr-cloud scan ${DATE} ${NYHM}ET"
-    git push origin main
-On push failure: git pull --rebase origin main, then push again. Never force-push.
+    git push origin HEAD:main
+On push failure: git pull --rebase origin main, then push again. Never force-push. Always push HEAD:main (not a bare `main`): the platform
+sometimes starts the session on a `claude/*` outcome branch, and a bare
+`git push origin main` then pushes nothing and reports success while the
+run's commit stays stranded on that branch.
 
 STEP 6 — Refuse to auto-trade. This command never calls
 `scripts/alpaca.sh order` or touches a real position. If the operator wants

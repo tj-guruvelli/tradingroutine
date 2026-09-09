@@ -114,8 +114,11 @@ across its 30-min repetitions on Task Scheduler), each cloud run is a fresh
 clone with no memory except what's in git.
     git add data/tjl_watchlist_${DATE}_*.json
     git commit -m "tjl-cloud scan ${DATE} ${NYHM}ET"
-    git push origin main
-On push failure: git pull --rebase origin main, then push again. Never force-push.
+    git push origin HEAD:main
+On push failure: git pull --rebase origin main, then push again. Never force-push. Always push HEAD:main (not a bare `main`): the platform
+sometimes starts the session on a `claude/*` outcome branch, and a bare
+`git push origin main` then pushes nothing and reports success while the
+run's commit stays stranded on that branch.
 
 STEP 7 — Refuse to auto-trade. If the operator wants to enter a hit, they run
 /trade — which runs the full safety-check gate against config/rules.json.
