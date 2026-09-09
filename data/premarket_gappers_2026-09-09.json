@@ -1,0 +1,40 @@
+{
+  "scanned_at": "2026-09-09T12:24:40Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 98.20,
+      "gap_pct": 9.92,
+      "premarket_volume": 1735851,
+      "catalyst": "Neocloud rally: OpenAI's new Astra model gives CoreWeave's AI-compute backlog a fresh catalyst; CRWV led with a 12% gain Sept 8, extending into today's pre-market.",
+      "headlines": [
+        "Why is CoreWeave stock surging 16% today (Invezz)",
+        "Neocloud Stocks Jumped on Sept. 8, Led by CoreWeave's 12% Gain (TipRanks)"
+      ],
+      "catalyst_detail": "CoreWeave shares jumped ~12% on Tuesday Sept 8 (extending to +9.9% pre-market today) as OpenAI's newly announced 'Astra' AI model reignited demand expectations for AI compute. This lands on top of CoreWeave's existing large compute contracts: a ~$22.4B OpenAI deal, a $21B Meta compute-purchase agreement, and an April-2026 multi-year deal to run Anthropic's Claude models, all Nvidia-hardware-based GPU cloud infrastructure. The move was sector-wide: Nebius (NBIS) and IREN also rallied the same session.",
+      "why": "OpenAI's Astra launch raises near-term AI-compute consumption expectations; since CRWV is contractually tied to OpenAI as a primary GPU-cloud supplier, renewed enthusiasm for OpenAI's roadmap pulls in momentum buyers on CRWV specifically, compounded by the same read-through across the whole neocloud group.",
+      "impact": "Real volume behind the move (20.8M shares the prior session on a 551M-share float name) and the underlying driver (Astra plus an existing multi-billion-dollar contracted backlog) is structural, not a pure headline spike. But CRWV is extremely volatile, down ~40% from its YTD high as recently as early August before this rebound, so a chase at +10% pre-market carries real give-back risk even though the catalyst itself looks durable. Sector-wide read-through confirmed (NBIS, IREN).",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "At ~$98/share, a 20%-of-equity cap on a ~$10k account is ~20 shares. Taking this would use one of the max-3-new-trades-per-week and one of the max-6-open-position slots. At today's post-gap price, a sane 10% trailing stop is roughly $10 away; clearing the 2:1 R:R minimum needs a credible $20+ target, which isn't established at the open. Reads as a wait-for-pullback setup, not a chase-the-gap one. No existing position to displace (account is flat)."
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 241.08,
+      "gap_pct": 6.46,
+      "premarket_volume": 1157126,
+      "catalyst": "Palantir named Nebius its preferred sovereign AI infrastructure partner (announced Sept 8); Nebius compute/inference to run inside Palantir's enterprise perimeter.",
+      "headlines": [
+        "Here's why Nebius stock is soaring today and what to expect next (Invezz)",
+        "Palantir and Nebius partner to deliver a complete sovereign AI stack to Palantir customers (nebius.com press release)"
+      ],
+      "catalyst_detail": "Nebius rose 7.7% Tuesday Sept 8 (extending to +6.6% pre-market today) after Palantir named Nebius its preferred sovereign AI infrastructure partner in a joint strategic-partnership announcement. Under the deal, Nebius compute and inference endpoints will run inside the Palantir enterprise perimeter, giving Palantir's commercial customers a 'sovereign AI stack' combining Nebius infrastructure with Palantir's Foundry/AIP/Ontology software (confirmed directly from the joint press release on nebius.com/newsroom and Nebius's own X post, both dated Sept 8, 2026).",
+      "why": "A high-profile, named 'preferred partner' deal with Palantir, itself a heavily-followed AI name, validates Nebius as an enterprise-grade sovereign-AI infra provider and pulls in momentum buyers, layered on the same broader neocloud rally lifting CRWV and IREN the same day.",
+      "impact": "~15M shares traded the prior session on a name with a wide 52-week range ($63.80-$299.86) and a recent 20%+ six-session slide before this rebound. The Palantir tie-up itself is a real, durable commercial deal (official joint release, 'preferred partner' designation), but NBIS's price action has been headline-reactive and choppy for weeks, so today's magnitude carries real mean-reversion risk even though the underlying catalyst is structural. Sector-wide read-through confirmed (CRWV, IREN also up).",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "At ~$241/share, a 20%-of-equity cap is ~8 shares. CRWV and NBIS are both on today's own gapper list and both neocloud/AI-infra names that almost certainly move together, so taking both would concentrate sector risk and is exactly the scenario scripts/corr-gate.mjs exists to block (>0.75 correlation with 2+ open positions). Between the two, ranking would need to weigh Palantir-partnership durability vs. OpenAI-Astra-driven demand and each one's R:R at a sane stop distance. No existing position to displace (account flat)."
+    }
+  ]
+}

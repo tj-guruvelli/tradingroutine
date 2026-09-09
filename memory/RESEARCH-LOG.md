@@ -10094,3 +10094,89 @@ as the stronger of the two commodity plays right now.
 shooting exchange, a genuinely mixed premarket tape, and a CPI/PPI-heavy
 week ahead of FOMC all argue for staying flat; no confluence tooling this
 run to validate any single-name idea. Patience over activity.
+
+### Gappers (auto-scan 08:20 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 98.20 | +9.92 | 1,735,851 | Neocloud rally: OpenAI's new Astra model gives CoreWeave's AI-compute backlog a fresh catalyst; CRWV led with a 12% gain Sept 8, extending into today's pre-market. |
+| 2 | NBIS | 241.08 | +6.46 | 1,157,126 | Palantir named Nebius its preferred sovereign AI infrastructure partner (announced Sept 8); Nebius compute/inference to run inside Palantir's enterprise perimeter. |
+
+Only 2 symbols on the ~60-ticker watchlist cleared the |gap|>=5%, price>=$3
+filter this run — cap of top 10 not reached, so all rows above get the
+full quick-scan treatment. `premarket_volume` field is not populated by
+`scripts/gappers-alpaca.sh` (it returns prior-session `volume`, not
+today's premarket volume specifically); both symbols' volumes are well
+above the 50k floor regardless.
+
+#### Deep dive: CRWV $98.20 +9.92%
+- Catalyst: CoreWeave shares jumped ~12% on Tuesday Sept 8 (extending to
+  +9.9% pre-market today) as OpenAI's newly announced "Astra" AI model
+  reignited demand expectations for AI compute. This lands on top of
+  CoreWeave's existing large compute contracts — a ~$22.4B OpenAI deal,
+  a $21B Meta compute-purchase agreement, and an April-2026 multi-year deal
+  to run Anthropic's Claude models — all Nvidia-hardware-based GPU cloud
+  infrastructure. Move was sector-wide: Nebius (NBIS) and IREN also rallied
+  the same session (source: TipRanks "Neocloud Stocks Jumped on Sept. 8,
+  Led by CoreWeave's 12% Gain"; Invezz "Why is CoreWeave stock surging 16%
+  today"; PureAI CoreWeave/Anthropic deal writeup).
+- Why: OpenAI's Astra launch raises near-term AI-compute consumption
+  expectations; since CRWV is contractually tied to OpenAI as a primary
+  GPU-cloud supplier, renewed enthusiasm for OpenAI's roadmap pulls in
+  momentum buyers on CRWV specifically, compounded by the same read-through
+  across the whole neocloud group.
+- Impact: Real volume behind the move (20.8M shares the prior session on a
+  551M-share float name) and the underlying driver (Astra + an existing
+  multi-billion-dollar contracted backlog) is structural, not a pure
+  headline spike. But CRWV is extremely volatile — down ~40% from its
+  YTD high as recently as early August before this rebound — so a chase at
+  +10% pre-market carries real give-back risk even though the catalyst
+  itself looks durable. Sector-wide read-through confirmed (NBIS, IREN).
+- Horizon: LONG_TERM catalyst / SHORT_TERM entry risk — the AI-infrastructure
+  buildout theme (OpenAI/Meta/Anthropic compute backlog) fits the current
+  AI-infra sector-rotation phase and could be a multi-week swing thesis, but
+  the stock's history of violent round-trips means chasing today's gap
+  specifically is a short-term momentum bet, not a clean structural entry.
+- Opportunity cost: At ~$98/share, a 20%-of-equity cap on a ~$10k account is
+  ~20 shares. Taking this would use one of the max-3-new-trades-per-week and
+  one of the max-6-open-position slots. At today's post-gap price, a sane
+  10% trailing stop is roughly $10 away — clearing the 2:1 R:R minimum needs
+  a credible $20+ target, which isn't established at the open; this reads
+  as a wait-for-pullback setup, not a chase-the-gap one. No existing
+  position to displace (account is flat).
+
+#### Deep dive: NBIS $241.08 +6.46%
+- Catalyst: Nebius rose 7.7% Tuesday Sept 8 (extending to +6.6% pre-market
+  today) after Palantir named Nebius its preferred sovereign AI
+  infrastructure partner in a joint strategic-partnership announcement.
+  Under the deal, Nebius compute and inference endpoints will run inside
+  Palantir's enterprise perimeter, giving Palantir's commercial customers a
+  "sovereign AI stack" combining Nebius infrastructure with Palantir's
+  Foundry/AIP/Ontology software (confirmed directly from the joint press
+  release on nebius.com/newsroom and Nebius's own X post, both dated
+  Sept 8, 2026).
+- Why: A high-profile, named "preferred partner" deal with Palantir — itself
+  a heavily-followed AI name — validates Nebius as an enterprise-grade
+  sovereign-AI infra provider and pulls in momentum buyers; layered on the
+  same broader neocloud rally lifting CRWV and IREN the same day.
+- Impact: ~15M shares traded the prior session on a name with a wide
+  52-week range ($63.80-$299.86) and a recent 20%+ six-session slide before
+  this rebound. The Palantir tie-up itself is a real, durable commercial
+  deal (official joint release, "preferred partner" designation), but
+  NBIS's price action has been headline-reactive and choppy for weeks
+  (round-tripping on Nvidia earnings, convertible-debt raises, etc.), so
+  today's magnitude carries real mean-reversion risk even though the
+  underlying catalyst is structural. Sector-wide read-through confirmed
+  (CRWV, IREN also up).
+- Horizon: LONG_TERM catalyst (new enterprise distribution channel, durable
+  revenue potential) / SHORT_TERM price-momentum risk — fits the AI-infra
+  sector-rotation phase and is worth tracking for a swing entry on a
+  pullback rather than chasing the pre-market pop.
+- Opportunity cost: At ~$241/share, a 20%-of-equity cap is ~8 shares.
+  CRWV and NBIS are both on today's own gapper list and both neocloud/
+  AI-infra names that almost certainly move together (both rallied on the
+  same Sept 8 sector move) — taking both would concentrate sector risk and
+  is exactly the scenario `scripts/corr-gate.mjs` exists to block (>0.75
+  correlation with 2+ open positions). Between the two, ranking would need
+  to weigh Palantir-partnership durability vs. OpenAI-Astra-driven demand
+  and each one's R:R at a sane stop distance — research only, no order
+  sizing recommended here. No existing position to displace (account flat).
