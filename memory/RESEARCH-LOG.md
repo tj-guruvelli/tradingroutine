@@ -10675,3 +10675,17 @@ Only 1 of ~60 watchlist tickers cleared today's filters (LAKE -10.22% and AVAV +
 - Impact: Reads as mean-reversion after an outsized 2-day spike, not a new negative catalyst. Volume 267,995 is elevated but not extreme for this name. No other AI-infra names on today's list to confirm sector read-through — watch peers for whether this is CRWV-specific or a broader AI-infra rotation.
 - Horizon: SHORT_TERM — giveback of a headline-driven spike, not a new structural catalyst; expect continued chop/fade near-term, not a durable new trend.
 - Opportunity cost: Only gapper on today's list — no ranked competition. 0/6 open positions; weekly trade count (not position count) is the binding cap. $27.5B debt overhang keeps R:R marginal; a stop below the recent multi-day range would be needed to respect the "never within 3% of current price" rule, and 2:1 R:R at that distance is unconfirmed. Research only, no size recommended.
+
+### Gappers (auto-scan 11:11 ET, cloud, 4th firing)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AVAV | $155.75 | +10.56% | 74,961 | $465M Army E-HEL laser contract + first intl DCS for Locust counter-drone system, alongside a Q1 FY26 revenue/EPS beat |
+
+Only 1 of ~60 watchlist tickers cleared today's filters (LAKE -11.61% dropped for volume 1,339 < 50,000). Deep-dive cap is 5; only rank 1 exists to deep-dive.
+
+#### Deep dive: AVAV $155.75 +10.56%
+- Catalyst: AeroVironment reported Q1 FY2026 results on Sept 9: revenue $480.49M beat the $451.95M estimate, adjusted EPS $0.59 vs $0.22 consensus (165% beat), but posted a GAAP operating loss of $10.9M and issued FY2026 adjusted EPS guidance of $3.02-$3.34. Separately, AVAV won a roughly $465M U.S. Army contract for its enduring high-energy laser (E-HEL) program — the first production contract for U.S. military directed-energy systems — and its first international Direct Commercial Sale for the Locust counter-drone system.
+- Why: Stacking of a large revenue/EPS beat (BlueHalo-acquisition-driven bookings growth) with two fresh contract-win headlines (a $465M Army laser contract plus a first international DCS) pulls in momentum buyers in the defense-tech/counter-drone space, amplified by AVAV's high beta (3.24).
+- Impact: Premarket volume 74,961 clears the 50k floor but is still thin for a $7.5B market-cap, 38M-float name. The stock is in a deep multi-month downtrend (-43% YTD, -33.9% over 6 months, -24.5% over the last month), so today's pop reads as a bounce off oversold levels on contract-news/short-covering rather than a confirmed trend reversal. No sector-wide read-through identified among other defense/drone names on today's list.
+- Horizon: SHORT_TERM, real contract catalysts (E-HEL + Locust DCS) sit inside a stock with a deeply negative multi-month trend and a guidance cut last quarter — needs volume confirmation and a hold above resistance before treating as a trend change; default to fade risk within the week.
+- Opportunity cost: Only ticker to clear today's filters (LAKE dropped for volume). 0/6 open positions and 0/3 weekly trades used per last check, so entry would use a weekly slot rather than displace a holding. AVAV's 11.72% volatility/3.24 beta likely demands a wide stop to respect the never-within-3% rule; 2:1 R:R at that stop distance is unconfirmed — needs scripts/size.mjs and a confluence check before any sizing. Research only, no size recommended.
