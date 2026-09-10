@@ -10661,3 +10661,17 @@ Deep-dive cap: top 5 of 10 (only 6 qualified today; ranks 6-10 slots unfilled). 
 - Impact: Volume 893,356. Sector-wide, macro-driven move (not RGTI-specific) — explicit peer read-through to IonQ/D-Wave/QTUM basket. Likely to persist while yields stay elevated; any bounce would also be macro-driven, not RGTI-specific news.
 - Horizon: SHORT_TERM by default (no fresh structural catalyst), but RGTI remains the desk's standing best-catalyst watch name per the Sep 09 TRADE-LOG (dated $100M DoC contract) — that structural catalyst still stands, so a rate-driven pullback could offer a better entry price for the existing thesis if confluence later aligns.
 - Opportunity cost: 0/6 open positions — would use a weekly slot. RGTI already failed the Sep 09 confluence check (no independent confluence tooling that session); given its standing-watch status and documented catalyst, this pullback is worth re-checking confluence on ahead of LUNR/BMNR, which lack rules-compliant catalysts. Research only, no size recommended.
+
+### Gappers (auto-scan 10:14 ET, cloud, 3rd firing)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | $89.83 | -5.42% | 267,995 | Giving back this week's AI-momentum rally (OpenAI Astra tie-in, Hudson River Trading deal) amid renewed leverage-overhang scrutiny |
+
+Only 1 of ~60 watchlist tickers cleared today's filters (LAKE -10.22% and AVAV +7.82% both dropped for volume <50,000; OPEN -6.33% dropped for price <$3). Deep-dive cap is 5; only rank 1 exists to deep-dive.
+
+#### Deep dive: CRWV $89.83 -5.42%
+- Catalyst: CRWV rallied ~12-16% over Sept 8-9 2026 on a new AI-compute deal with Hudson River Trading and enthusiasm tied to OpenAI's Astra model, touching near $100. Q2 2026 earnings (Aug 11-12) showed revenue up 24% sequentially to $2.6B and >60% gross margin, but coverage has flagged the company's escalating debt, now $27.5B, funding its datacenter buildout. Today gave back part of the spike, trading ~$89.83 vs $94.975 prior close.
+- Why: Momentum buyers from the OpenAI Astra/Hudson River Trading news are taking profits as the rally stalls; the leveraged-balance-sheet bear case plus a volatile-rate environment (pressuring long-duration, capex-heavy growth names) are driving the giveback.
+- Impact: Reads as mean-reversion after an outsized 2-day spike, not a new negative catalyst. Volume 267,995 is elevated but not extreme for this name. No other AI-infra names on today's list to confirm sector read-through — watch peers for whether this is CRWV-specific or a broader AI-infra rotation.
+- Horizon: SHORT_TERM — giveback of a headline-driven spike, not a new structural catalyst; expect continued chop/fade near-term, not a durable new trend.
+- Opportunity cost: Only gapper on today's list — no ranked competition. 0/6 open positions; weekly trade count (not position count) is the binding cap. $27.5B debt overhang keeps R:R marginal; a stop below the recent multi-day range would be needed to respect the "never within 3% of current price" rule, and 2:1 R:R at that distance is unconfirmed. Research only, no size recommended.
