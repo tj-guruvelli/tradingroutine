@@ -1,0 +1,37 @@
+{
+  "scanned_at": "2026-09-10T12:20:56Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "META",
+      "price": 656.28,
+      "gap_pct": 7.0,
+      "premarket_volume": 1276194,
+      "catalyst": "Meta shares pop after launching Muse, a personal AI agent app; JPMorgan upgraded the stock following the AI product announcements",
+      "headlines": [
+        "JPMorgan upgrades Meta after company's recent AI product announcements (CNBC)",
+        "Meta shares pop on Muse AI agent reveal (CNBC)"
+      ],
+      "catalyst_detail": "Meta launched Muse, a new personal AI agent app, on Sept 8 2026, driving a sharp rally (closed +6.55% on Sept 9 at $653.69). JPMorgan followed with an upgrade on Sept 10 citing Meta's recent AI product announcements. Options traders have been making bullish bets on the stock following the launch.",
+      "why": "A high-profile consumer AI product launch (Muse) plus a same-day sell-side upgrade citing that launch pulls in both retail momentum buyers and options-driven gamma flow, reinforcing the move.",
+      "impact": "Move shows real follow-through, not a one-day spike: gap has extended into a second session (Sept 9 close +6.55%, Sept 10 premarket +7% vs prior close) and is backed by an analyst upgrade, not just headline chasing. Sector-wide AI-infrastructure news flow (Google's $15B Finland AI investment same day) suggests a broader AI-product theme, not purely META-idiosyncratic.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "Structural catalyst (new AI product line + analyst estimate revision) could support a multi-day/week swing hold if it clears the Confluence rule on a later /trade check. With only 2 qualifying gappers today, weekly trade-count (max 3/week) rather than the 10-slot cap is the binding constraint; entry is already ~7% above yesterday's close, so a stop must sit outside recent volatility to respect the \"never within 3% of current price\" rule, and a 2:1 R:R needs a defined support level from a technical check before this could displace an existing holding. Research only, no order size implied."
+    },
+    {
+      "rank": 2,
+      "symbol": "ONDS",
+      "price": 7.21,
+      "gap_pct": -5.57,
+      "premarket_volume": 1595346,
+      "catalyst": "No fresh dated catalyst found; likely pullback/profit-taking after a large multi-month run (52-week range $4.95-$15.28)",
+      "headlines": [],
+      "catalyst_detail": "No company-specific news dated Sept 9-10 2026 surfaced across two rounds of Apify searches. Ondas' own Investor Relations page's most recent press release is the Aug 18 Aran Defense acquisition announcement, already three weeks stale. ONDS is a small-cap defense/drone/autonomous-systems name that has run from a 52-week low of $4.95 to a high of $15.28; today's -5.57% move reads as a pullback within that range rather than a discrete headline event.",
+      "why": "Absent a specific news trigger, the drop is most consistent with profit-taking / mean-reversion in a high-beta small-cap momentum name after an extended run, rather than a company-specific negative catalyst.",
+      "impact": "Premarket volume (1.6M) is a small fraction of the stock's typical volume, a weak signal either way. Reads as a one-day pullback, not a fresh bearish catalyst; no peer/sector read-through identified.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "This is a gap DOWN, not a long entry candidate, and shorting is outside the strategy's playbook (long-only per Strategy Hard Rules). Not a trade candidate today regardless of the weekly trade-count or position caps; flagged for a fresh catalyst check before any future long entry given the absence of a clear driver here."
+    }
+  ]
+}
