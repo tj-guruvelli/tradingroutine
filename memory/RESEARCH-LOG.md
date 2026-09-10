@@ -10594,3 +10594,23 @@ the held-ticker step N/A) and no confluence tooling either — needs a fresh
 risk today, CPI tomorrow ahead of next week's FOMC, and no confluence
 tooling this run to validate any single-name idea all argue for staying
 flat. Patience over activity.
+
+### Gappers (auto-scan 08:20 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | META | 656.28 | +7.0% | 1,276,194 | Muse AI agent launch + JPMorgan upgrade on the AI announcements |
+| 2 | ONDS | 7.21 | -5.57% | 1,595,346 | No fresh dated catalyst found; reads as pullback after multi-month run |
+
+#### Deep dive: META $656.28 +7.0%
+- Catalyst: Meta launched Muse, a personal AI agent app, on Sept 8 2026, driving a sharp rally (closed +6.55% on Sept 9 at $653.69). JPMorgan followed with an upgrade on Sept 10 citing Meta's recent AI product announcements. Options traders have been making bullish bets on the stock following the launch.
+- Why: A high-profile consumer AI product launch plus a same-day sell-side upgrade citing that launch pulls in both retail momentum buyers and options-driven gamma flow, reinforcing the move.
+- Impact: Move shows real follow-through, not a one-day spike — gap has extended into a second session (Sept 9 close +6.55%, Sept 10 premarket +7% vs prior close), backed by an analyst upgrade. Sector-wide AI-infrastructure news flow (Google's $15B Finland AI investment same day) suggests a broader AI-product theme, not purely META-idiosyncratic.
+- Horizon: LONG_TERM — structural catalyst (new AI product line + analyst estimate revision) could support a multi-day/week swing if it clears the Confluence rule on a later /trade check.
+- Opportunity cost: With only 2 qualifying gappers today, weekly trade-count (max 3/week) is the binding constraint, not the 10-slot cap. Entry is already ~7% above yesterday's close, so a stop must sit outside recent volatility to respect the "never within 3% of current price" rule; a 2:1 R:R needs a defined support level from a technical check before this could displace an existing holding. Research only.
+
+#### Deep dive: ONDS $7.21 -5.57%
+- Catalyst: No company-specific news dated Sept 9-10 2026 surfaced across two rounds of Apify searches. Ondas' own Investor Relations page's most recent press release is the Aug 18 Aran Defense acquisition announcement, already three weeks stale. ONDS has run from a 52-week low of $4.95 to a high of $15.28; today's move reads as a pullback within that range.
+- Why: Absent a specific news trigger, the drop is most consistent with profit-taking / mean-reversion in a high-beta small-cap momentum name after an extended run.
+- Impact: Premarket volume (1.6M) is a small fraction of the stock's typical volume, a weak signal either way. Reads as a one-day pullback, not a fresh bearish catalyst; no peer/sector read-through identified.
+- Horizon: SHORT_TERM — no structural catalyst identified; absent a specific news driver this looks like noise/mean-reversion.
+- Opportunity cost: Gap DOWN, not a long entry candidate; shorting is outside the strategy's long-only playbook. Not a trade candidate today; flagged for a fresh catalyst check before any future long entry given the absence of a clear driver here.
