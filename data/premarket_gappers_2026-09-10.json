@@ -1,37 +1,85 @@
 {
-  "scanned_at": "2026-09-10T12:20:56Z",
+  "scanned_at": "2026-09-10T13:23:28Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "META",
-      "price": 656.28,
-      "gap_pct": 7.0,
-      "premarket_volume": 1276194,
-      "catalyst": "Meta shares pop after launching Muse, a personal AI agent app; JPMorgan upgraded the stock following the AI product announcements",
-      "headlines": [
-        "JPMorgan upgrades Meta after company's recent AI product announcements (CNBC)",
-        "Meta shares pop on Muse AI agent reveal (CNBC)"
-      ],
-      "catalyst_detail": "Meta launched Muse, a new personal AI agent app, on Sept 8 2026, driving a sharp rally (closed +6.55% on Sept 9 at $653.69). JPMorgan followed with an upgrade on Sept 10 citing Meta's recent AI product announcements. Options traders have been making bullish bets on the stock following the launch.",
-      "why": "A high-profile consumer AI product launch (Muse) plus a same-day sell-side upgrade citing that launch pulls in both retail momentum buyers and options-driven gamma flow, reinforcing the move.",
-      "impact": "Move shows real follow-through, not a one-day spike: gap has extended into a second session (Sept 9 close +6.55%, Sept 10 premarket +7% vs prior close) and is backed by an analyst upgrade, not just headline chasing. Sector-wide AI-infrastructure news flow (Google's $15B Finland AI investment same day) suggests a broader AI-product theme, not purely META-idiosyncratic.",
-      "horizon": "LONG_TERM",
-      "opportunity_cost": "Structural catalyst (new AI product line + analyst estimate revision) could support a multi-day/week swing hold if it clears the Confluence rule on a later /trade check. With only 2 qualifying gappers today, weekly trade-count (max 3/week) rather than the 10-slot cap is the binding constraint; entry is already ~7% above yesterday's close, so a stop must sit outside recent volatility to respect the \"never within 3% of current price\" rule, and a 2:1 R:R needs a defined support level from a technical check before this could displace an existing holding. Research only, no order size implied."
+      "symbol": "LUNR",
+      "price": 14.525,
+      "gap_pct": -7.43,
+      "premarket_volume": 292482,
+      "catalyst": "No dated catalyst found; analyst skepticism/mixed-fundamentals narrative despite record $1.8B Q2 backlog",
+      "headlines": [],
+      "catalyst_detail": "No single dated headline confirms today's move. Intuitive Machines reported Q2 2026 results with a record backlog of $1.8B, but coverage otherwise describes shares as driven by mixed fundamentals and analyst skepticism, with no fresh news item dated to today.",
+      "why": "Absent a same-day trigger, the drop reads as continuation of an existing derating - analyst skepticism about backlog-to-revenue conversion timing plus momentum unwind after an earlier run, not a discrete event.",
+      "impact": "Volume 292,482. With no fresh catalyst, this looks like noise/mean-reversion rather than a durable move. No sector-wide read-through identified.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "0/6 open positions, 0/3 weekly trades used - entry would use a weekly slot, not displace a holding. Fails the Confluence rule outright (requires >=1 documented catalyst; none found) - weakest of the top 5 on rules grounds vs ONDS or BE."
     },
     {
       "rank": 2,
       "symbol": "ONDS",
-      "price": 7.21,
-      "gap_pct": -5.57,
+      "price": 7.13,
+      "gap_pct": -6.61,
       "premarket_volume": 1595346,
-      "catalyst": "No fresh dated catalyst found; likely pullback/profit-taking after a large multi-month run (52-week range $4.95-$15.28)",
+      "catalyst": "Shares tumbled after Q2 net loss of $0.19/share vs $0.13 consensus; below 200-day SMA",
       "headlines": [],
-      "catalyst_detail": "No company-specific news dated Sept 9-10 2026 surfaced across two rounds of Apify searches. Ondas' own Investor Relations page's most recent press release is the Aug 18 Aran Defense acquisition announcement, already three weeks stale. ONDS is a small-cap defense/drone/autonomous-systems name that has run from a 52-week low of $4.95 to a high of $15.28; today's -5.57% move reads as a pullback within that range rather than a discrete headline event.",
-      "why": "Absent a specific news trigger, the drop is most consistent with profit-taking / mean-reversion in a high-beta small-cap momentum name after an extended run, rather than a company-specific negative catalyst.",
-      "impact": "Premarket volume (1.6M) is a small fraction of the stock's typical volume, a weak signal either way. Reads as a one-day pullback, not a fresh bearish catalyst; no peer/sector read-through identified.",
+      "catalyst_detail": "Ondas Q2 report showed a wider-than-expected net loss of $0.19/share vs $0.13 consensus; shares tumbled on the miss and are trading near the 52-week low, below the 200-day SMA.",
+      "why": "Earnings miss crystallized a pre-existing market concern - prior coverage already flagged profitability/execution-risk concerns tempering ONDS's monthly gains; the Q2 print confirmed that thesis and triggered the selloff.",
+      "impact": "Volume 1,595,346, elevated. Price below the 200-day SMA is a bearish technical signal, so this reads as technical deterioration, not just a 1-day spike.",
       "horizon": "SHORT_TERM",
-      "opportunity_cost": "This is a gap DOWN, not a long entry candidate, and shorting is outside the strategy's playbook (long-only per Strategy Hard Rules). Not a trade candidate today regardless of the weekly trade-count or position caps; flagged for a fresh catalyst check before any future long entry given the absence of a clear driver here."
+      "opportunity_cost": "0/6 open positions - would use a weekly slot. Disqualified on a hard rule (price < 200-SMA = no new long per Indicator Canon) - not a live opportunity-cost question until that technical resets."
+    },
+    {
+      "rank": 3,
+      "symbol": "BE",
+      "price": 259.85,
+      "gap_pct": -6.23,
+      "premarket_volume": 418565,
+      "catalyst": "Pulling back after multi-day rally on speculated (unconfirmed) S&P 500 inclusion; Clear Street raised PT to $330 from $290 same day",
+      "headlines": [],
+      "catalyst_detail": "Bloom Energy pulling back after a multi-day rally driven by speculated (not yet confirmed) S&P 500 index inclusion; separately, Clear Street raised its price target to $330 from $290 the same day.",
+      "why": "Classic sell-the-news/profit-taking after a speculative run - the index-inclusion catalyst is unconfirmed, so momentum buyers who front-ran it are taking profits; the price-target raise is bullish medium-term but isn't preventing today's pullback.",
+      "impact": "Volume 418,565. Reads as give-back after an outsized rally rather than a fresh negative catalyst. Watch for peer read-through in industrials/clean-energy names.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "0/6 open positions - would use a weekly slot. BE already failed the Sep 09 Market-Open confluence screen at a different price; today's pullback needs a fresh confluence check before ranking ahead of RGTI, which carries a firmer documented catalyst."
+    },
+    {
+      "rank": 4,
+      "symbol": "META",
+      "price": 650.5,
+      "gap_pct": 6.06,
+      "premarket_volume": 1276194,
+      "catalyst": "New AI agent \"Muse\" launch driving ~7-8% stock jump on AI-rebuild narrative",
+      "headlines": [],
+      "catalyst_detail": "Meta launched a new AI agent product (\"Muse\"), reported driving an approximate 7-8% stock jump as investors reward the AI-rebuild narrative.",
+      "why": "Product-launch catalyst directly tied to Meta's AI monetization thesis - the market is pricing in accelerating AI-driven growth/engagement, pulling in momentum buyers.",
+      "impact": "Volume 1,276,194 on a mega-cap that typically trades far higher volume - the % move is unusually large for META specifically, suggesting real repricing rather than noise.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "0/6 open positions - would use a weekly slot. Only upside gapper today with a clear, dated, structural catalyst - best opportunity-cost profile of the five if it clears Entry Checklist confluence. 20%-of-equity cap and 2:1 R:R at a sane stop distance still need checking - research only, no size recommended."
+    },
+    {
+      "rank": 5,
+      "symbol": "RGTI",
+      "price": 14.89,
+      "gap_pct": -5.94,
+      "premarket_volume": 893356,
+      "catalyst": "No company-specific news; sector-wide quantum-computing selloff (IonQ, D-Wave also down) on rising Treasury yields",
+      "headlines": [],
+      "catalyst_detail": "No company-specific catalyst - Rigetti is moving with the broader quantum-computing basket (peers IonQ, D-Wave also down) on rising Treasury yields pressuring unprofitable, long-duration growth names.",
+      "why": "Rate-sensitivity mechanism - quantum computing names trade as long-duration growth/speculative assets; higher yields compress their valuation multiples more than cash-generative names.",
+      "impact": "Volume 893,356. Sector-wide, macro-driven move - explicit peer read-through to IonQ/D-Wave/QTUM basket.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "0/6 open positions - would use a weekly slot. RGTI already failed the Sep 09 confluence check; given its standing-watch status and documented $100M DoC contract catalyst, this pullback is worth re-checking confluence on ahead of LUNR/BMNR. Research only, no size recommended."
+    },
+    {
+      "rank": 6,
+      "symbol": "BMNR",
+      "price": 23.53,
+      "gap_pct": -5.08,
+      "premarket_volume": 1009602,
+      "catalyst": "No dated catalyst; trading near bottom of 52-week range, general crypto-cycle risk sentiment",
+      "headlines": []
     }
   ]
 }

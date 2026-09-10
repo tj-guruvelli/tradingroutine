@@ -10614,3 +10614,50 @@ flat. Patience over activity.
 - Impact: Premarket volume (1.6M) is a small fraction of the stock's typical volume, a weak signal either way. Reads as a one-day pullback, not a fresh bearish catalyst; no peer/sector read-through identified.
 - Horizon: SHORT_TERM — no structural catalyst identified; absent a specific news driver this looks like noise/mean-reversion.
 - Opportunity cost: Gap DOWN, not a long entry candidate; shorting is outside the strategy's long-only playbook. Not a trade candidate today; flagged for a fresh catalyst check before any future long entry given the absence of a clear driver here.
+
+### Gappers (auto-scan 09:16 ET, cloud, 2nd firing)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | $14.53 | -7.43% | 292,482 | No dated catalyst found; analyst skepticism/mixed-fundamentals narrative despite record $1.8B Q2 backlog |
+| 2 | ONDS | $7.13 | -6.61% | 1,595,346 | Shares tumbled after Q2 net loss of $0.19/share vs $0.13 consensus; below 200-day SMA |
+| 3 | BE | $259.85 | -6.23% | 418,565 | Pulling back after multi-day rally on speculated (unconfirmed) S&P 500 inclusion; Clear Street raised PT to $330 from $290 same day |
+| 4 | META | $650.50 | +6.06% | 1,276,194 | New AI agent "Muse" launch driving ~7-8% stock jump on AI-rebuild narrative |
+| 5 | RGTI | $14.89 | -5.94% | 893,356 | No company-specific news; sector-wide quantum-computing selloff (IonQ, D-Wave also down) on rising Treasury yields |
+| 6 | BMNR | $23.53 | -5.08% | 1,009,602 | No dated catalyst; trading near bottom of 52-week range, general crypto-cycle risk sentiment |
+
+Deep-dive cap: top 5 of 10 (only 6 qualified today; ranks 6-10 slots unfilled). Rank 6 (BMNR) quick-scan only, no deep dive.
+
+#### Deep dive: LUNR $14.53 -7.43%
+- Catalyst: No single dated headline confirms today's move. Intuitive Machines reported Q2 2026 results with a record backlog of $1.8B, but coverage otherwise describes shares as "mixed fundamentals and analyst skepticism" driven, with no fresh news item dated to today.
+- Why: Absent a same-day trigger, the drop reads as continuation of an existing derating — analyst skepticism about backlog-to-revenue conversion timing plus momentum unwind after an earlier run, not a discrete event.
+- Impact: Volume 292,482. With no fresh catalyst, this looks like noise/mean-reversion rather than a durable move. No sector-wide read-through identified (no other space/lunar names on today's list).
+- Horizon: SHORT_TERM — no durable catalyst found; treat as headline/momentum noise, do not carry past the session.
+- Opportunity cost: 0/6 open positions, 0/3 weekly trades used — entry would use a weekly slot, not displace a holding. But LUNR fails TRADING-STRATEGY.md's Confluence rule outright (requires ≥1 documented catalyst; none found) — ranks #1 by |gap%| today but is the weakest of the top 5 on rules grounds vs. ONDS (dated earnings catalyst) or BE (dated index-inclusion catalyst).
+
+#### Deep dive: ONDS $7.13 -6.61%
+- Catalyst: Ondas Q2 report showed a wider-than-expected net loss of $0.19/share vs $0.13 consensus; shares tumbled on the miss and are trading near the 52-week low, below the 200-day SMA.
+- Why: Earnings miss crystallized a pre-existing market concern — prior coverage (Aug) already flagged "profitability issues and execution risks" tempering ONDS's monthly gains; the Q2 print confirmed that thesis and triggered the selloff.
+- Impact: Volume 1,595,346, elevated. Price below the 200-day SMA is a bearish technical signal (Indicator Canon: only long when price > 200-SMA), so this reads as technical deterioration, not just a 1-day spike, even though the EPS miss itself was a one-time event.
+- Horizon: SHORT_TERM — earnings-driven, no structural catalyst; price below 200-SMA fails the strategy's long-bias filter outright regardless of stabilization.
+- Opportunity cost: 0/6 open positions — would use a weekly slot, not displace a holding. Disqualified on a hard rule (price < 200-SMA = no new long per Indicator Canon) — not a live opportunity-cost question until that technical resets.
+
+#### Deep dive: BE $259.85 -6.23%
+- Catalyst: Bloom Energy pulling back after a multi-day rally driven by speculated (not yet confirmed) S&P 500 index inclusion; separately, Clear Street raised its price target to $330 from $290 the same day.
+- Why: Classic sell-the-news/profit-taking after a speculative run — the index-inclusion catalyst is unconfirmed, so momentum buyers who front-ran it are taking profits; the price-target raise is bullish medium-term but isn't preventing today's pullback.
+- Impact: Volume 418,565. Reads as give-back after an outsized rally (shares had peaked above $250 in mid-August then rallied further) rather than a fresh negative catalyst. Watch for peer read-through in industrials/clean-energy names; could stabilize once S&P inclusion is confirmed or denied.
+- Horizon: LONG_TERM optionality if S&P inclusion is later confirmed (structural, index-flow-driven event) — but SHORT_TERM/no-action today since inclusion is unconfirmed and the immediate move is a pullback, not a breakout.
+- Opportunity cost: 0/6 open positions — would use a weekly slot. BE already failed the Sep 09 Market-Open confluence screen (no confirmed 2:1 R:R at a sane stop distance) at a different price; today's pullback needs a fresh confluence check before ranking ahead of RGTI, which carries a firmer documented catalyst ($100M DoC contract per Sep 09 TRADE-LOG).
+
+#### Deep dive: META $650.50 +6.06%
+- Catalyst: Meta launched a new AI agent product ("Muse"), reported driving an approximate 7-8% stock jump as investors reward the AI-rebuild narrative.
+- Why: Product-launch catalyst directly tied to Meta's AI monetization thesis — the market is pricing in accelerating AI-driven growth/engagement, pulling in momentum buyers.
+- Impact: Volume 1,276,194 on a mega-cap that typically trades far higher volume — the % move is unusually large for META specifically, suggesting real repricing rather than noise. Likely broad read-through across mega-cap AI names, though none of today's other gappers are direct AI-mega-cap comps.
+- Horizon: LONG_TERM — a genuine product launch tied to the core AI thesis, not just a headline; worth tracking for a multi-day/week swing if it later passes the Confluence rule on a /trade check.
+- Opportunity cost: 0/6 open positions — would use a weekly slot. META is the only gapper on today's list to the upside with a clear, dated, structural catalyst — best opportunity-cost profile of the five if it clears Entry Checklist confluence (VWAP/RSI/200-SMA/insider). At $650.50, the 20%-of-equity position cap and 2:1 R:R at a sane stop distance still need checking before sizing — research only, no size recommended here.
+
+#### Deep dive: RGTI $14.89 -5.94%
+- Catalyst: No company-specific catalyst — Rigetti is moving with the broader quantum-computing basket (peers IonQ, D-Wave also down) on rising Treasury yields pressuring unprofitable, long-duration growth names.
+- Why: Rate-sensitivity mechanism — quantum computing names trade as long-duration growth/speculative assets; higher yields compress their valuation multiples more than cash-generative names.
+- Impact: Volume 893,356. Sector-wide, macro-driven move (not RGTI-specific) — explicit peer read-through to IonQ/D-Wave/QTUM basket. Likely to persist while yields stay elevated; any bounce would also be macro-driven, not RGTI-specific news.
+- Horizon: SHORT_TERM by default (no fresh structural catalyst), but RGTI remains the desk's standing best-catalyst watch name per the Sep 09 TRADE-LOG (dated $100M DoC contract) — that structural catalyst still stands, so a rate-driven pullback could offer a better entry price for the existing thesis if confluence later aligns.
+- Opportunity cost: 0/6 open positions — would use a weekly slot. RGTI already failed the Sep 09 confluence check (no independent confluence tooling that session); given its standing-watch status and documented catalyst, this pullback is worth re-checking confluence on ahead of LUNR/BMNR, which lack rules-compliant catalysts. Research only, no size recommended.
