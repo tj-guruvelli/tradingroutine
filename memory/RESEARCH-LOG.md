@@ -10701,3 +10701,15 @@ grade_a_possible: false (setup_a_skipped_reason: outside 10:00-15:30 ET) — 60/
 | TRMD   | B     | Momentum confluence  | daily swing | ADX 22.31, EMA9 33.91 > EMA21 32.44 |
 
 No grade-A hits (Setup A not evaluated this run — 16:38 ET fire lands after the 15:30 ET cutoff). No Telegram alert sent (0 grade-A). Candidates persisted to `data/setup-scan_cloud_2026-09-10_1638ET.json` for `market-open.md` to pick up next session.
+
+### Setup Scan (18:38 ET, cloud)
+grade_a_possible: false (setup_a_skipped_reason: outside 10:00-15:30 ET) — 60/60 candidates checked, 0 errors.
+
+| TICKER | GRADE | SETUP(S)             | TIMEFRAME   | TRIGGER |
+| ------ | ----- | -------------------- | ----------- | ------- |
+| CMCSA  | B     | Momentum confluence  | daily swing | ADX 25.5, EMA9 26.16 > EMA21 26.06 |
+| PEPG   | B     | Momentum confluence  | daily swing | ADX 46.75, EMA9 3.14 > EMA21 3.00 |
+| HAFN   | B     | Momentum confluence  | daily swing | ADX 24.09, EMA9 8.79 > EMA21 8.38 |
+| TRMD   | B     | Momentum confluence  | daily swing | ADX 22.31, EMA9 33.91 > EMA21 32.44 |
+
+No grade-A hits (Setup A not evaluated this run — 18:38 ET fire lands after the 15:30 ET cutoff). No Telegram alert sent (0 grade-A). Candidates persisted to `data/setup-scan_cloud_2026-09-10_1838ET.json` for `market-open.md` to pick up next session.
