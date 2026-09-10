@@ -10689,3 +10689,15 @@ Only 1 of ~60 watchlist tickers cleared today's filters (LAKE -11.61% dropped fo
 - Impact: Premarket volume 74,961 clears the 50k floor but is still thin for a $7.5B market-cap, 38M-float name. The stock is in a deep multi-month downtrend (-43% YTD, -33.9% over 6 months, -24.5% over the last month), so today's pop reads as a bounce off oversold levels on contract-news/short-covering rather than a confirmed trend reversal. No sector-wide read-through identified among other defense/drone names on today's list.
 - Horizon: SHORT_TERM, real contract catalysts (E-HEL + Locust DCS) sit inside a stock with a deeply negative multi-month trend and a guidance cut last quarter — needs volume confirmation and a hold above resistance before treating as a trend change; default to fade risk within the week.
 - Opportunity cost: Only ticker to clear today's filters (LAKE dropped for volume). 0/6 open positions and 0/3 weekly trades used per last check, so entry would use a weekly slot rather than displace a holding. AVAV's 11.72% volatility/3.24 beta likely demands a wide stop to respect the never-within-3% rule; 2:1 R:R at that stop distance is unconfirmed — needs scripts/size.mjs and a confluence check before any sizing. Research only, no size recommended.
+
+### Setup Scan (16:38 ET, cloud)
+grade_a_possible: false (setup_a_skipped_reason: outside 10:00-15:30 ET) — 60/60 candidates checked, 0 errors.
+
+| TICKER | GRADE | SETUP(S)             | TIMEFRAME   | TRIGGER |
+| ------ | ----- | -------------------- | ----------- | ------- |
+| CMCSA  | B     | Momentum confluence  | daily swing | ADX 25.5, EMA9 26.16 > EMA21 26.06 |
+| PEPG   | B     | Momentum confluence  | daily swing | ADX 46.75, EMA9 3.14 > EMA21 3.00 |
+| HAFN   | B     | Momentum confluence  | daily swing | ADX 24.09, EMA9 8.79 > EMA21 8.38 |
+| TRMD   | B     | Momentum confluence  | daily swing | ADX 22.31, EMA9 33.91 > EMA21 32.44 |
+
+No grade-A hits (Setup A not evaluated this run — 16:38 ET fire lands after the 15:30 ET cutoff). No Telegram alert sent (0 grade-A). Candidates persisted to `data/setup-scan_cloud_2026-09-10_1638ET.json` for `market-open.md` to pick up next session.
