@@ -10477,3 +10477,120 @@ Telegram/ClickUp notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-10 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-09`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 58th straight session. 45th trading
+day since launch (Jul 9) with zero entries. Week of Sep 7 stands at 0/3
+trades.
+
+**Market context:**
+- **Oil:** Brent $101.71-101.75/bbl (+0.49-0.53%), day range ~$100.2-102.7,
+  52wk range $58.72-126.41 (Markets Insider/Investing.com, ~07:00 ET). WTI
+  $97.08 (+1.07%, Oilprice.com, 10-min delay). Driver: Brent holding above
+  $100 on resumed US-Iran fighting and Strait of Hormuz disruption
+  fears — direct continuation of the Sep 9 entry's Iran/Hormuz overhang,
+  not a new catalyst.
+- **S&P 500 futures:** US500 (E-mini proxy) 7,649.75, +6.00 (+0.08%),
+  delayed quote ~06:59 ET (Investing.com) — day's range 7,646.00-7,666.25,
+  prev close 7,643.75. Flat/marginally green, not a directional signal
+  either way.
+- **VIX:** 16.64, +0.18 (+1.09%), 7:02 AM EDT (CNBC). Open 16.31, day range
+  16.29-16.64, prev close 16.46, 52wk range 13.38-35.30 — still a low
+  absolute level, third-plus straight session of a small oil/geopolitics-
+  driven pop, no distress signal.
+- **Today's catalysts:** Oil >$100 on the Iran/Hormuz overhang (above);
+  US PPI (Aug) print and an ECB rate decision both land today; Oracle
+  (ORCL) and Adobe (ADBE) report earnings after today's close — large-cap
+  tech/software catalysts worth a post-close check even with no current
+  exposure.
+- **Earnings today (Thu Sep 10):** Before open — Macy's (M), VinFast (VFS),
+  Tsakos Energy Navigation (TEN), MasterCraft Boat (MCFT), Designer Brands
+  (DBI), Lovesac (LOVE), 1-800-Flowers (FLWS), Waldencast (WALD), Endava
+  (DAVA), Kandi Technologies (KNDI), Shoe Station (SHOE) — none on the
+  watchlist. After close: Oracle (EPS est. ~1.74), Adobe (EPS est.
+  ~6.07-6.08), Copart (CPRT).
+- **Economic calendar:** PPI (Aug) MoM 0.0% (prior 0.4%, forecast 0.3%) —
+  cooler than expected; YoY 4.7% (prior 5.3%); Core PPI MoM 0.2%, YoY 4.2%
+  (prior 4.6%) — disinflationary surprise (TradingEconomics). Initial
+  jobless claims (wk 9/5) 206K (prior 205K, forecast 209K) — in line;
+  continuing claims 1,779K. ECB rate decision also today. CPI (Aug) is
+  tomorrow Sep 11, not today — don't conflate. FOMC is Sep 15-16, not this
+  week.
+- **Sector momentum:** Charles Schwab Sector Views, as of Sep 4, 2026
+  (trailing 6mo/12mo performance, S&P 500 weight): Info Tech (38.0% wt)
+  +14.7%/+27.2%; Energy (3.0% wt) +21.3%/+41.7% — best trailing return, but
+  Schwab rates it only **Neutral** forward, explicitly flagging "the
+  near-term outlook is heavily dependent on the trajectory of U.S.-Iran
+  hostilities" (directly relevant to today's oil catalyst — a two-sided,
+  reversible driver, not a clean trend); Real Estate (1.8% wt)
+  +14.3%/+12.9%; Industrials (8.9% wt) +11.3%/+19.5%; Utilities (2.2% wt)
+  +8.1%/+12.7%; Financials (11.8% wt) +7.2%/+7.1%; Health Care (8.9% wt)
+  +5.5%/+21.3%; Consumer Staples (4.6% wt) +1.8%/+7.3%; Materials (1.8%
+  wt) +1.5%/+11.8%; Communication Services (9.7% wt) -6.5%/+14.8%;
+  Consumer Discretionary (9.3% wt) -10.4%/-1.7% (worst YTD performer per
+  Bloomberg, via Schwab). S&P 500 index itself: +6.8%/+17.4%. Schwab's
+  forward (6-12mo) ratings: **More Favored** — Financials, Health Care,
+  Industrials, Materials; **Neutral** — Communication Services, Consumer
+  Staples, Energy, Information Technology; **Less Favored** — Utilities;
+  **Least Favored** — Consumer Discretionary, Real Estate. Not
+  independently confirmed against `combined_analysis` —
+  `tradingview-data` MCP not loaded this cloud run, no
+  confluence/technical check possible (same gap as Sep 8-9).
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`). RGTI (desk's standing best-catalyst watch name,
+  carried since Sep 8) not re-checked for fresh news this session — treat
+  as stale until a dedicated `/research` or `/sentiment` pass.
+- **Sourcing note — new Apify RAG finding:** The "S&P 500 futures
+  premarket today" and "S&P 500 sector momentum YTD" queries both
+  returned entirely irrelevant hits (Wikipedia's "S" letter page, Cambridge
+  Dictionary "S", YouTube, Vietnamese-language pages) on the first pass.
+  Root cause: the RAG browser appears to truncate any query at an
+  unescaped `&` — "S&P 500..." was effectively searched as just "S".
+  Fix: re-ran both queries with "&" spelled out as "and" ("S and P 500
+  futures premarket today", "S and P 500 sector performance year to date
+  2026") — both recovered clean, relevant hits (CNBC/Investing.com/CNN for
+  futures; Fidelity/State Street/Schwab for sector data). Worth carrying
+  into every future `&`-containing Apify query (S&P, P&L, R&D, etc.) —
+  spell it out rather than relying on the literal ampersand. Zero
+  finance.yahoo.com citations used or found across all 9 queries run this
+  session (7 original + 2 retries).
+
+**Risk factors:** Iran/Hormuz oil-supply overhang is now a multi-session
+pattern, not a one-off spike — a real de-escalation (ceasefire, naval
+de-conflict) would reverse the Energy-sector trade fast, while an escalation
+(an actual Hormuz transit disruption) would spike oil and could flip the
+still-contained VIX (16.64) into a real risk-off move. PPI print and an ECB
+rate decision both land today — event risk ahead of tomorrow's CPI and next
+week's FOMC (Sep 15-16). No `tradingview-data` MCP this run — no
+confluence/technical check possible, so no name-level idea can clear the
+strategy's 2-indicator confluence bar today regardless of catalyst quality.
+45 straight zero-trade trading days / the $100k-vs-$10k baseline mismatch
+remain unresolved — still pending operator review.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar —
+no confluence tooling available this run, watch-only, no entry/stop/target
+committed: (1) Energy-sector momentum (XLE) — best trailing 12mo return
+(+41.7%) and a live oil catalyst (Brent >$100 on Iran/Hormuz), but Schwab's
+own forward rating is Neutral specifically because the catalyst is
+reversible on any de-escalation headline; last-quoted XLE spread ($63.54
+bid / $67.56 ask, stale post-close data) is unusually wide and not a
+tradeable reference price on its own. (2) Financials or Materials sector
+rotation (XLF/XLB) — Schwab's "More Favored" forward rating (steeper yield
+curve and capital-markets activity for Financials; reshoring/infrastructure
+demand for Materials), but no single-name catalyst identified this
+session — a sector-level rating alone doesn't satisfy the Entry Checklist's
+"specific catalyst" requirement. (3) RGTI — still the desk's best-documented
+dated catalyst (confirmed $100M DoC contract), but carried forward
+unchanged since Sep 8 with no fresh news check this run (0 positions made
+the held-ticker step N/A) and no confluence tooling either — needs a fresh
+`/research` pass before it's actionable, not a same-day entry.
+
+**Decision: HOLD.** No open positions, no planned trades. PPI + ECB event
+risk today, CPI tomorrow ahead of next week's FOMC, and no confluence
+tooling this run to validate any single-name idea all argue for staying
+flat. Patience over activity.
