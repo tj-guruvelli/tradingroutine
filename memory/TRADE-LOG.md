@@ -586,3 +586,54 @@ pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders`. Market-Open screened 5 candidates (CRWV, NBIS, RGTI, HAFN, BWLP) — none cleared the confluence/momentum/catalyst checklist (tradingview-data MCP not loaded this session, no independent confluence check possible), none executed. Weekly trade count: 0/3 (week of Sep 7). 44 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 57th straight session, operator review pending.
+
+### Sep 10, Market-Open (Day 45, Thursday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-09`). STEP 1 candidates:
+today's RESEARCH-LOG (2026-09-10 Pre-Market — explicit Decision: HOLD, no
+confluence tooling this run; Gappers auto-scan 08:20 ET + 09:16 ET 2nd
+firing) — up-gapper META deep-dived (catalyst: Muse AI agent launch +
+same-day JPMorgan upgrade); down-gappers ONDS, LUNR, BE, RGTI, BMNR not
+long candidates (strategy is long-bias only, gap-down names excluded same
+as prior sessions). RGTI (standing best-catalyst watch name) is today's
+#5 down-gapper — no fresh long setup, carried forward unchanged. STEP 2
+candidates: most recent setup-scan file is
+`data/setup-scan_cloud_2026-09-09_1840ET.json` (today's own file doesn't
+exist yet) — 4 grade-B hits, 0 grade-A: HAFN, BWLP, TRMD, CMBT. Merged
+candidate list: META, HAFN, BWLP, TRMD, CMBT. All 5 re-validated live
+(`alpaca.sh quote`, timestamps ~09:37 ET) — quotes current.
+
+`tradingview-data` MCP not loaded this cloud run (confirmed via tool
+search) — no independent confluence check possible for any candidate
+today, matching every session since Sep 8.
+
+Pass/fail (TRADING-STRATEGY.md hard rules + Entry Checklist confluence:
+≥2 of {VWAP, RSI, 200-SMA, insider} must align):
+- META $653.83 (ask) — fails outright on TRADING-STRATEGY.md's explicit
+  "What this strategy does NOT do" rule: "no entry within 3% of a print
+  > 5% up on the day." META gapped +7% and is still +6-7% intraday —
+  direct chase-rule violation regardless of catalyst quality or
+  confluence; catalyst (Muse launch + JPM upgrade) documented but moot —
+  skip.
+- TRMD $35.57 (setup-scan) — fails: RSI14 71.78 is overbought (Indicator
+  Canon: ">70 = sell / no new long"), a direct rule violation for a new
+  long despite price>SMA200 ($27.40) alignment; no catalyst documented —
+  skip (already disqualified on a hard rule, not worth an Apify catalyst
+  fetch).
+- CMBT $19.25 (setup-scan) — fails: RSI14 72.13 is overbought (same
+  Indicator Canon rule), despite price>SMA200 ($13.72) alignment; no
+  catalyst documented — skip.
+- HAFN $9.15 (ask) — fails confluence: only 1 of 4 indicators
+  (price>SMA200 $7.22) confirms bullish; RSI14 67.62 is neutral (canon's
+  buy trigger is oversold <30, not merely "not overbought"), no
+  VWAP/insider data; no catalyst documented — skip.
+- BWLP $24.85 (ask) — fails confluence: only 1 of 4 indicators
+  (price>SMA200 $17.96) confirms bullish; RSI14 55.59 is neutral, no
+  VWAP/insider data; no catalyst documented — skip (same conclusion as
+  Sep 08/09 sessions).
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 7). 45 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 58th straight session, operator
+review pending.
