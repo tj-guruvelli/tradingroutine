@@ -277,3 +277,47 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (10th week flagged, 53 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's real infra win (gappers fix shipped) shows the operational backlog can move when root-caused instead of re-flagged
 ### Overall Grade: C
+
+## Week ending 2026-09-11
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -0.80% (7,718.60 → 7,656.98) |
+| Bot vs S&P | +0.80% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held every session this week (Mon Sep 7 Labor Day holiday, Tue-Fri Sep 8-11 trading) through a live CPI (Aug) print, ongoing Iran/Hormuz oil-supply headline risk, and Kroger earnings — no forced trades
+- Correctly caught and skipped META (Sep 10) on the explicit chase-rule violation — gapped +7%, still +6-7% intraday on a Muse AI launch + JPMorgan upgrade catalyst, but "no entry within 3% of a print > 5% up on the day" is a hard rule regardless of catalyst quality
+- Correctly rejected TRMD and CMBT (Sep 10) on RSI14 > 70 overbought (Indicator Canon: no new long) despite both clearing the price > 200-SMA leg — a real second hard-rule catch, not just a confluence-count fail
+- Correctly rejected HAFN and BWLP across multiple sessions this week (Sep 8-10) for failing the ≥2-indicator confluence rule (only 1 of 4 — price > 200-SMA — confirmed each time; RSI stayed neutral, not oversold)
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- 9th consecutive zero-entry week (46 trading days since launch, Jul 9) — sat in 100% cash through a modestly negative (-0.80%) S&P week; longest zero-entry streak of the challenge so far
+- `tradingview-data` MCP still down the entire week (6th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback (proven working in setup-scan-cloud.mjs since Aug 14) still hasn't been wired into the pre-market/gappers confluence check itself — now a 6th straight week this exact fix has been proposed and not shipped
+- Apify RAG web browser's S&P-500 close/performance query failed again this review despite last week's reworded, disambiguated query (avoided the bare "S&P 500" root, added "SPX") — both attempts returned Google-redirect search-result stubs with empty scraped text (0 usable characters), a step worse than prior weeks' partial-degradation pattern; WebSearch fully carried the S&P lookup instead, and even WebSearch itself returned two source values ~0.08% apart (7,656.98 vs 7,663.20) requiring cross-check — logged here as a widening gap, not just a query-phrasing issue
+- No Sep 11 Market-Open TRADE-LOG entry found (routine did not log one, per today's own EOD snapshot note) — same intermittent logging gap flagged in each of the last 5 weekly reviews, still unresolved
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (60 straight sessions / 11th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- This week's two hard-rule catches (META chase, TRMD/CMBT overbought) show the discipline logic itself doesn't depend on `tradingview-data` MCP uptime to correctly reject a bad entry — chase-rule and RSI checks run off live Alpaca quotes/setup-scan data independent of the down MCP; the MCP outage blocks *confirming a new long*, not *rejecting a bad one*, which is a meaningfully different (smaller) gap than "confluence is completely unsatisfiable"
+- The Alpaca-bars-fallback-into-confluence-check fix is now the single most overdue open item (6 weeks proposed, unshipped) — longer-running than the gappers stale-baseline bug was before it finally got root-caused and shipped in the Sep 4 review; worth treating with the same urgency that unblocked that fix
+- A second, differently-shaped Apify RAG failure on the same "S&P 500 weekly performance" fact (empty-text scrape vs. last week's off-topic-page mismatch) suggests the underlying issue may not be query phrasing at all — before proposing a third reworded query next week, consider whether this specific lookup should just default straight to WebSearch
+### Adjustments for Next Week
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 6th straight week, now the top-priority open item
+- Investigate the Sep 11 missing Market-Open TRADE-LOG entry — 6th week running with at least one missing dated entry
+- Escalate the $10k vs $100k baseline mismatch again in this week's ClickUp send (11th week flagged, 60 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Default the S&P-500 weekly-performance lookup straight to WebSearch rather than a 3rd reworded Apify RAG attempt, given two consecutive weeks of differently-shaped Apify failures on this exact fact
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's outperformance vs. S&P (+0.80%) is a single down-week data point, not evidence the zero-entry stance is working — the Aug 7 -3.6% missed week still dominates the phase-to-date opportunity-cost picture
+### Overall Grade: C
