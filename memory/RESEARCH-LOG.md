@@ -10814,3 +10814,18 @@ any confluence confirmation today.
 at 8:30 AM ET — event risk into the open — with no confluence tooling
 this run to validate any single-name idea regardless. Patience over
 activity.
+
+### Gappers (auto-scan 08:14 ET, cloud)
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Raw hits at the 5% gap threshold: 1 (OPEN, -5.67%). After the $3.00 price
+floor filter, 0 rows qualify — OPEN closed the filter at $2.83, under the
+floor. No catalyst research or deep-dive run this cycle (nothing to
+research). No Telegram alert sent per routine rule (hits == 0, scan did not
+error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No tickers cleared gap% >= 5.0 AND price >= $3.00 |
+
+Raw (sub-floor) candidate for reference, not actionable: OPEN $2.83
+(-5.67%), vol 2,123,071 — below the $3.00 price floor, excluded.
