@@ -10929,3 +10929,121 @@ ranked below the top-10 cap. Deep-dive cap is 5, so all 3 get full deep-dive
   cycle) - relevant only as a name to avoid adding to if already held. Does
   not compete for the week's 3-new-trade allowance as a long; a short is
   outside this strategy's long-bias, stocks-only framework.
+
+### Gappers (auto-scan 11:14 ET, cloud)
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). Raw
+hits: 4 (BW +8.36%, BMNR +7.41%, OKLO -6.75%, BE +6.34%). Price floor ($3.00):
+all 4 pass. Volume floor (`premarket_volume >= 50000`): all 4 pass (BW 65,617;
+BMNR 1,230,656; OKLO 137,413; BE 211,928). 4 of 4 raw hits qualify, all ranked
+below the top-10 cap. Deep-dive cap is 5, so all 4 get full deep-dive (no
+quick-scan-only rows this cycle).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $7.78 | +8.36% | 65,617 | No fresh dated catalyst found; small-cap/low-float noise against widening Q1 losses |
+| 2 | BMNR | $26.01 | +7.41% | 1,230,656 | ETH treasury build ($15.7B total) + fresh Cantor Fitzgerald PT raise to $63.60, riding the ETH rally |
+| 3 | OKLO | $37.18 | -6.75% | 137,413 | Continued CPI-driven de-risking in pre-revenue growth/nuclear names; high short interest (16.45%) |
+| 4 | BE | $274.85 | +6.34% | 211,928 | S&P 500 index inclusion (fresh catalyst this cycle) + Q2 revenue +165.5% YoY, guidance raised |
+
+#### Deep dive: BW $7.78 +8.36%
+- Catalyst: No same-day catalyst identified. Background: BW hit a 52-week
+  high near $16.44 in early April 2026 on a Q4 2025 earnings/revenue beat,
+  but Q1 2026 results (reported ~May 11) showed a net loss from continuing
+  operations of $79.6M vs a $15.6M loss in Q1 2025 - a sharply widening
+  loss - and one analysis flags an 8.2%/yr revenue decline (-29% in a
+  recent quarter). No new press release or filing found for today.
+- Why: Absent a dated catalyst, an 8%+ move in a sub-$10, thin-volume name
+  (~65.6K on the premarket-volume proxy) reads as low-float/high-beta
+  noise or short-term momentum/short-covering flow rather than a
+  fundamentals-driven re-rating.
+- Impact: No news found to explain durability; deteriorating fundamentals
+  (widening Q1 loss, declining revenue) argue against chasing the move.
+  Reads as a one-day, headline-free spike with high mean-reversion risk.
+- Horizon: SHORT_TERM - no structural catalyst identified this run;
+  worsening losses and falling revenue argue against a durable re-rating
+  even if the move continues near-term.
+- Opportunity cost: Fails the strategy's Entry Checklist (no documented
+  catalyst); a sub-$10 stock with widening losses is not worth a stop/R:R
+  workup this cycle. Would not compete meaningfully against BMNR/BE for
+  the week's capital or trade slots - flagged pass.
+
+#### Deep dive: BMNR $26.01 +7.41%
+- Catalyst: BitMine's most recent investor-relations release confirms ETH
+  holdings at 5.93M tokens with combined crypto/cash holdings of $15.7B.
+  Cantor Fitzgerald raised its price target to $63.60 from $30.60
+  (circulating in today's stock-price aggregator pages). Company still
+  holds ~206 BTC and runs the MAVAN institutional staking platform (~4.88M
+  ETH staked); recent Russell 1000 inclusion adds passive-fund flow.
+- Why: BMNR trades largely as a leveraged proxy for ETH: rising ETH prices
+  mechanically lift treasury/staking value, and today's large sell-side
+  target hike plus index-inclusion flow reinforce momentum buying on top
+  of that crypto beta.
+- Impact: Same caution as the 10:14 ET pass - this is crypto-sector beta,
+  not a standalone operating catalyst. The fresh analyst target hike is a
+  real, incremental datapoint but doesn't change the core read: durability
+  tracks ETH price and would likely fade if crypto cools.
+- Horizon: SHORT_TERM - unchanged from the 10:14 ET assessment; ETH-beta
+  plus analyst/index flow, not a new structural, company-specific
+  catalyst.
+- Opportunity cost: Wide 52-week range ($12.80-$65.60) makes a stop wide
+  enough to survive normal noise unlikely to clear the 2:1 R:R minimum at
+  a sane size. Would compete with BE for capital and one of the week's 3
+  new-trade slots; a leveraged single-asset crypto proxy sits awkwardly
+  inside a stocks-only strategy.
+
+#### Deep dive: OKLO $37.18 -6.75%
+- Catalyst: No new OKLO-specific headline found this cycle. Standing
+  background: $200M federal nuclear-AI initiative with Microsoft/Nvidia
+  (announced Jul 21), Meta/Switch power-purchase framework deals (not yet
+  binding PPAs), and recent first-NRC-license progress. Today's gap
+  widened from -5.62% at 10:14 ET to -6.75% now, consistent with the
+  CPI-driven pressure persisting into mid-morning rather than fading.
+- Why: Same macro-rate-sensitivity mechanism flagged at 10:14 ET: a
+  long-duration, pre-revenue, negative-FCF story stock is disproportionately
+  discounted when a hot CPI print lifts rate-hike odds; elevated short
+  interest (16.45%) can amplify the move in either direction.
+- Impact: Reads as macro/rate beta, not an OKLO-specific event, with
+  likely read-through to other high-multiple pre-revenue growth names on
+  the same CPI print. The gap extending deeper intraday (vs the 10:14 ET
+  print) suggests this is a persisting risk-off leg, not a one-off dip.
+- Horizon: SHORT_TERM for today's CPI-driven leg lower; the structural
+  nuclear/AI-power bull case (Microsoft/Nvidia initiative, Meta/Switch
+  framework deals) remains LONG_TERM but is disconnected from today's move
+  and not yet tradeable on fundamentals.
+- Opportunity cost: A -6.75% gap down is not a long entry under this
+  strategy (no catalyst supports a bounce, no confluence check run this
+  cycle); relevant only as a name to avoid adding to (0 open positions
+  currently) or to flag for a future short-squeeze setup given the high
+  short interest - not today's trade, and a short is outside this
+  strategy's long-bias framework.
+
+#### Deep dive: BE $274.85 +6.34%
+- Catalyst: A same-day stock-price aggregator page states BE rose 8% after
+  being selected for S&P 500 inclusion - a concrete, dated, index-flow
+  catalyst not identified in the 10:14 ET pass. Compounds the standing
+  thesis: Brookfield Renewable's up-to-$5B capital-light power
+  partnership, an expanded Oracle fuel-cell deal (up to 2.8GW), and Q2
+  2026 results showing revenue +165.5% YoY with full-year guidance raised
+  (Q1 2026 revenue was already +130.4% YoY to $751.1M).
+- Why: S&P 500 inclusion forces passive index-fund buying on top of the
+  existing AI-power-infrastructure re-rating narrative and genuine
+  hypergrowth revenue (130-165% YoY), compounding an already-strong
+  momentum trade.
+- Impact: Unlike the 10:14 ET read (no same-day headline found), this run
+  confirms a real, dated, structural catalyst (index inclusion) plus hard
+  revenue-growth numbers, meaningfully raising confidence this is not just
+  an extended, headline-free momentum move. Still trades at a rich ~30x
+  sales multiple near highs, so a reversal in AI-capex sentiment is the
+  key risk; peer read-through to the broader AI-power trade (OKLO's
+  long-term thesis, though OKLO is down today on unrelated macro).
+- Horizon: LONG_TERM - S&P 500 inclusion plus confirmed 130-165% YoY
+  revenue growth and raised guidance is a structural, multi-catalyst
+  thesis aligned with the current AI-power sector rotation; stronger
+  conviction than the 10:14 ET pass.
+- Opportunity cost: Best-documented catalyst of today's 4 gappers (dated
+  index-inclusion event plus confirmed hypergrowth financials). At the
+  20%-per-position cap it would compete with BMNR for capital and one of
+  the week's 3 new-trade slots; still needs a confluence/technical check
+  (no MCP available this run) and a stop distance clearing 2:1 R:R before
+  qualifying as an actual entry - flagged as the strongest research-only
+  candidate from today's scan, not a trade decision.
