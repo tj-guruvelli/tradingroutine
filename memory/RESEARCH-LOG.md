@@ -10839,3 +10839,93 @@ this cycle (nothing to research). No Telegram alert sent per routine rule
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | No tickers cleared gap% >= 5.0 across the watchlist |
+
+### Gappers (auto-scan 10:14 ET, cloud)
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). Raw
+hits: 5 (BW +8.64%, BMNR +8.24%, BE +6.46%, OKLO -5.62%, DPRO +5.21%). Price
+floor ($3.00): all 5 pass. Volume floor (`premarket_volume >= 50000`, script's
+known limitation - this field is actually the prior session's full-day volume,
+not true premarket volume): BW (38,196) and DPRO (5,146) dropped; BMNR
+(730,744), BE (139,200), OKLO (72,111) pass. 3 of 5 raw hits qualify, all 3
+ranked below the top-10 cap. Deep-dive cap is 5, so all 3 get full deep-dive
+(no quick-scan-only rows this cycle).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | $26.21 | +8.24% | 730,744 | ETH treasury build (nearing 5% of ETH supply) + Russell 1000 inclusion, riding a broad ETH rally (+7.95% today) |
+| 2 | BE | $275.18 | +6.46% | 139,200 | Continuation of the Brookfield/Oracle AI-data-center power re-rating and analyst target hikes; no fresh same-day headline found |
+| 3 | OKLO | $37.63 | -5.62% | 72,111 | Broad de-risking in pre-revenue growth/nuclear names on today's hot August CPI print lifting Fed rate-hike bets |
+
+#### Deep dive: BMNR $26.21 +8.24%
+- Catalyst: BitMine's ETH treasury has grown to 5.74-5.93M tokens plus 206
+  BTC, combined crypto/cash/securities near $11.1-15.7B, nearing its
+  internally stated "Alchemy of 5%" goal (~5% of ETH's circulating supply).
+  Added recurring revenue via its MAVAN institutional staking platform
+  (~4.88M ETH staked) and was added to the Russell 1000 Index. Today's move
+  coincides with a broad ETH rally.
+- Why: BMNR trades largely as a leveraged proxy for ETH - rising Ethereum
+  prices mechanically increase treasury and staking-income value, and Russell
+  1000 inclusion adds forced passive-fund buying on top of that crypto beta.
+- Impact: The scanner's volume field is stale prior-session volume, not true
+  premarket volume, so premarket conviction can't be confirmed this run. The
+  move tracks ETH's own +7.95% day rather than a standalone company event -
+  largely crypto-sector beta, likely to reverse if ETH cools. No BMNR-specific
+  negative or one-off headline found.
+- Horizon: SHORT_TERM - ETH-beta plus index-inclusion flow, not a new
+  structural catalyst; durability depends entirely on crypto holding gains.
+- Opportunity cost: BMNR is effectively a leveraged single-asset crypto bet,
+  which sits awkwardly inside a stocks-only strategy. Its wide 52-week range
+  ($12.80-$65.60) means a stop wide enough to survive normal noise likely
+  can't clear the 2:1 R:R minimum at a sane size. Would use one of the week's
+  3 new-trade slots and compete with BE and OKLO from this same list for the
+  20%-per-position cap.
+
+#### Deep dive: BE $275.18 +6.46%
+- Catalyst: Continuation of Bloom Energy's multi-month re-rating as an
+  AI-data-center power enabler (Brookfield Renewable's up-to-$5B capital-light
+  power partnership, an expanded Oracle fuel-cell deal) plus a string of
+  analyst price-target hikes. No distinct same-day headline found explaining
+  today's specific gap.
+- Why: Bloom is being repriced from a hardware seller into a capital-light
+  "power-as-a-service" infrastructure enabler for AI data centers; each
+  incremental partner/analyst datapoint reinforces momentum buying in a name
+  that has already multiplied off its 2025 lows.
+- Impact: At a reported ~30x sales near all-time highs, this reads as an
+  extended momentum move rather than a fresh anomaly. Without a same-day
+  headline, sustainability depends on the broader AI-power theme holding,
+  not new BE-specific news. Sector read-through: same AI-power-infrastructure
+  trade underlying OKLO's long-term thesis, though OKLO itself gapped down
+  today on unrelated macro.
+- Horizon: LONG_TERM structurally (AI power-demand theme aligns with current
+  sector rotation into power/infrastructure), but with no confirmed same-day
+  trigger, a new entry today would be chasing an already-extended move.
+- Opportunity cost: Competes with BMNR and OKLO from today's list for the
+  20%-per-position cap and one of the week's 3 new-trade slots. Absent a
+  fresh dated catalyst, the stop distance needed to survive normal volatility
+  this far into the move likely fails the 2:1 R:R minimum at a sane size.
+
+#### Deep dive: OKLO $37.63 -5.62%
+- Catalyst: Broad de-risking in speculative, pre-revenue growth/nuclear names
+  as today's August CPI print (8:30 AM ET) firmed and boosted Fed rate-hike
+  bets, per same-day Investing.com coverage. OKLO's standing bull case
+  (federal nuclear-AI initiative with Microsoft/Nvidia announced Jul 21,
+  Meta/Switch power-purchase framework deals, NRC licensing progress) is
+  unrelated background, not today's driver.
+- Why: OKLO is a long-duration, pre-revenue, negative-FCF story stock (H1
+  2026 net loss ~$81.6M, ~$3B cash) with no near-term earnings support; a hot
+  CPI print that lifts rate expectations disproportionately discounts
+  far-out cash flows for names like this, and its high short interest
+  (~18.7%) plus weak technicals amplify the move.
+- Impact: Reads as macro/rate-sensitivity beta rather than an OKLO-specific
+  negative event - no company headline found. Likely read-through to other
+  high-multiple, pre-revenue growth names selling off on the same CPI print
+  today (sector/style move, not idiosyncratic).
+- Horizon: SHORT_TERM for today's CPI-driven dip (rate-driven risk-off tends
+  to fade within days); the structural bull case is LONG_TERM but
+  disconnected from today's move and still needs framework agreements to
+  convert into binding PPAs before it's tradeable on fundamentals.
+- Opportunity cost: A -5.62% gap down is not a long entry under this
+  strategy (no catalyst supporting a bounce, no confluence check run this
+  cycle) - relevant only as a name to avoid adding to if already held. Does
+  not compete for the week's 3-new-trade allowance as a long; a short is
+  outside this strategy's long-bias, stocks-only framework.
