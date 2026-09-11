@@ -10713,3 +10713,104 @@ grade_a_possible: false (setup_a_skipped_reason: outside 10:00-15:30 ET) — 60/
 | TRMD   | B     | Momentum confluence  | daily swing | ADX 22.31, EMA9 33.91 > EMA21 32.44 |
 
 No grade-A hits (Setup A not evaluated this run — 18:38 ET fire lands after the 15:30 ET cutoff). No Telegram alert sent (0 grade-A). Candidates persisted to `data/setup-scan_cloud_2026-09-10_1838ET.json` for `market-open.md` to pick up next session.
+
+## 2026-09-11 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-09`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 60th straight session. 46th trading
+day since launch (Jul 9) with zero entries. Week of Sep 7 stands at 0/3
+trades (last trading day of the week).
+
+**Market context:**
+- **Oil:** WTI (Midland grade) $104.14, -1.29 (-1.22%), ~23-min delay
+  (Oilprice.com). Brent $105.47-105.58, down ~2.0% from a $107.63-107.68
+  prior close (two independent futures-quote sites). Both grades pulling
+  back today but still well above the $100 handle — continuation of the
+  multi-session Iran/Hormuz supply overhang flagged Sep 9-10, not a new
+  catalyst; today's move reads as partial de-escalation/give-back, not a
+  reversal.
+- **S&P 500 / Dow futures:** Could not get a clean current futures
+  point/percent change this run — the direct "S&P 500 futures premarket"
+  query returned irrelevant hits (letter/singer pages), a known Apify
+  RAG issue flagged Sep 10 (queries containing a literal "&" can get
+  mis-parsed); a follow-up query surfaced a "Dow Jones Futures Live" page
+  citing 52,390.00 but with no clear point-change context, and a separate
+  "Stock Market Today" piece (dated this morning, 4:39am ET) noting
+  yesterday's cash session closed with the **Dow -0.6% (-317 pts)** and
+  **Nasdaq -0.65%**, i.e. de-risking into today's CPI print. Treat
+  premarket futures direction as unconfirmed this run — not a clean
+  directional signal either way.
+- **VIX:** 17.25, -0.59 (-3.31%), last 7:02 AM EDT / data as of 11:02 AM
+  (Cboe direct + CNBC agree). Prev close 17.84, open 17.51, day range
+  17.07-17.71, 52wk range 13.38-35.30. Notably **cooling into a CPI
+  print**, not spiking — no fear-gauge stress signal despite today's event
+  risk.
+- **Today's catalysts:** **CPI (Aug) at 8:30 AM ET is the day's main
+  scheduled event** — consensus per one source expects +0.4% MoM; this is
+  the print flagged as "tomorrow" in the Sep 10 entry, now live today.
+  Also the Sep 11 (9/11) anniversary and ongoing tariff/geopolitical
+  headline risk called out generically by one dated piece, no fresh
+  single-name read-through identified. No PPI or FOMC today (FOMC remains
+  Sep 15-16).
+- **Earnings today (Fri Sep 11):** Kroger (KR) reported before open — EPS
+  1.09 vs 1.06 est (beat), revenue $34.6B vs $34.65B est (essentially
+  in-line); stock +0.90% pre-market to $56.95. Small/mid-cap prints before
+  open: Hooker Furnishings (HOFT, EPS beat), Rent the Runway (RENT),
+  MoneyHero (MNY), AnaptysBio (ANAB), VivoPower (VIVO), Cheetah Mobile
+  (CMCM), Anixa Biosciences (ANIX), OFS Credit (OCCI), Children's Place
+  (PLCE), Bridgford (BRID) — none on the watchlist, no action.
+- **Economic calendar:** CPI (Aug), 8:30 AM ET, today — see catalysts
+  above. No PPI, no Fed decision today; next FOMC Sep 15-16 unchanged.
+- **Sector momentum:** Query returned no usable sector-level data this
+  run (irrelevant hits, same literal-"&" Apify issue noted above and on
+  Sep 10 — this time the "and"-spelled-out workaround wasn't applied and
+  the retry surfaced individual-stock YTD leaders (SNDK +613%, MRNA
+  +363%) rather than sector breadth, not decision-useful). Falling back to
+  the Sep 10 Schwab Sector Views snapshot as the last-known reference
+  (now 1 session stale): Energy best trailing 12mo (+41.7%) but Neutral
+  forward due to Iran/Hormuz reversibility; Financials/Health
+  Care/Industrials/Materials rated More Favored; Consumer
+  Discretionary/Real Estate Least/Less Favored. Not independently
+  refreshed today — no `tradingview-data` MCP this session either (same
+  gap as every session since Sep 8), so no confluence/technical check is
+  possible for any name-level idea regardless of catalyst quality.
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`). RGTI (desk's standing best-catalyst watch name,
+  $100M DoC contract, carried since Sep 8) not re-checked for fresh news
+  this session — still stale pending a dedicated `/research` or
+  `/sentiment` pass.
+
+**Risk factors:** CPI (Aug) at 8:30 AM ET is today's binding event risk —
+a hot print could reprice rate-cut odds and hit both equities and the
+already-elevated oil trade; a cool print (in line with yesterday's
+disinflationary PPI surprise) could extend the VIX cooldown seen this
+morning. Iran/Hormuz oil overhang remains a live, reversible two-sided
+risk on top of the CPI event. No `tradingview-data` MCP this run — no
+confluence/technical check possible, so no name-level idea can clear the
+strategy's 2-indicator confluence bar today regardless of catalyst
+quality. 46 straight zero-trade trading days / the $100k-vs-$10k baseline
+mismatch remain unresolved — still pending operator review.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence
+bar — no confluence tooling available this run, watch-only, no
+entry/stop/target committed: (1) Sep 10 carryover setup-scan grade-B
+names (CMCSA, PEPG, HAFN, TRMD) — momentum-confluence hits from the
+scanner, but none re-validated with a fresh catalyst or confluence check
+this run, and a CPI print landing mid-morning argues against a same-day
+entry on any of them regardless. (2) RGTI — still the desk's
+best-documented dated catalyst ($100M DoC contract), but carried forward
+unchanged since Sep 8 with no fresh news or confluence check this
+session. (3) Energy-sector momentum (XLE) via the stale Sep 10 Schwab
+snapshot — best trailing return but Neutral forward rating specifically
+because the Iran/Hormuz catalyst is reversible; today's ~2% Brent/WTI
+pullback is itself evidence of that reversibility risk, not a new
+argument to enter. No single idea combines a fresh, dated catalyst with
+any confluence confirmation today.
+
+**Decision: HOLD.** No open positions, no planned trades. CPI (Aug) lands
+at 8:30 AM ET — event risk into the open — with no confluence tooling
+this run to validate any single-name idea regardless. Patience over
+activity.
