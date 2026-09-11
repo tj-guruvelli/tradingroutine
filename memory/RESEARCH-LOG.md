@@ -10829,3 +10829,13 @@ error).
 
 Raw (sub-floor) candidate for reference, not actionable: OPEN $2.83
 (-5.67%), vol 2,123,071 — below the $3.00 price floor, excluded.
+
+### Gappers (auto-scan 09:14 ET, cloud)
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Raw hits at the 5% gap threshold: 0. No catalyst research or deep-dive run
+this cycle (nothing to research). No Telegram alert sent per routine rule
+(hits == 0, scan did not error).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | No tickers cleared gap% >= 5.0 across the watchlist |
