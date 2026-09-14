@@ -11248,3 +11248,148 @@ get the full deep-dive below (no quick-scan-only ranks 3-10 today).
   only (gap-down names excluded) and ORCL gapped DOWN -6.6% —
   watchlist-only; would need to clear Entry Checklist confluence and 2:1
   R:R on a subsequent bounce/stabilization before consideration.
+
+### Gappers (auto-scan 09:13 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $205.09 | -10.12% | 390,111 | Nebius slides in a broad AI-stock selloff after Amodei's "pace the frontier" essay, backed by Altman/Musk, raised AI-capex-slowdown fears. |
+| 2 | CRWV | $81.18 | -8.96% | 640,957 | CoreWeave drops alongside NBIS in the same Amodei/Altman-driven selloff, giving back most of Friday's Oracle-earnings-driven neocloud rally. |
+| 3 | ORCL | $142.95 | -6.61% | 1,553,893 | Oracle extends its slide after TD Cowen cut its price target and a court stayed Project Jupiter permits, compounding today's AI-slowdown selloff. |
+
+3 of ~60 watchlist tickers cleared the 5% gap threshold this run — all
+gap-DOWN, all AI-infrastructure names. CRWV is new to today's list (wasn't
+over threshold at 08:20 ET); NBIS and ORCL continue from the 08:20 ET run
+with gap% little-changed. Vol column is each symbol's prior-completed-
+session full-day volume (Alpaca snapshot has no true premarket-volume
+field — see scripts/gappers-alpaca.sh comment), not today's premarket
+volume. Deep-dive cap is 5; since only 3 hits cleared, all 3 get the full
+deep-dive below (no quick-scan-only ranks 4-10 today).
+
+All three trace to one dominant, dated catalyst: Anthropic CEO Dario
+Amodei's Sat Sep 12 essay calling for AI labs to deliberately slow frontier
+AI-capability development (citing safety risk after a researcher resignation
+and a colleague's >10%-x-risk estimate), publicly endorsed by OpenAI's Sam
+Altman and Elon Musk over the following two days. That triggered a global
+AI-stock selloff today (SoftBank -10% Japan, SK Hynix -6%, Samsung -4%,
+ASML -5%, Nokia -8%, Micron -5%, Intel -6%, Nvidia -3% premarket per CNBC),
+landing hardest on the highest-beta AI-infrastructure/neocloud names — the
+same three symbols that rallied together on Oracle's Sep 11 earnings beat
+are now giving that move back in sympathy. This matches the dominant
+catalyst already logged in today's 08:20 ET Pre-Market Research section
+above (VIX +11%, oil/Hormuz, FOMC week) — today's gappers are a direct,
+name-level expression of that macro backdrop, not three unrelated moves.
+
+#### Deep dive: NBIS $205.09 -10.12%
+- Catalyst: Anthropic CEO Dario Amodei published an essay Sat Sep 12
+  urging AI labs to slow the pace of AI-capability development, citing
+  safety risk after an Anthropic researcher resigned warning the industry
+  is "gambling with our lives" and a colleague put >10% odds on AI
+  "killing all humans" within a decade. OpenAI's Sam Altman and Elon Musk
+  publicly endorsed "pacing" over the following two days, triggering a
+  global AI-stock selloff Mon Sep 14. No NBIS-specific news for today
+  turned up in research — this reads as pure sector/macro contagion into
+  the highest-beta neocloud name, compounding an already-volatile week
+  (NBIS/CRWV/IREN rallied together on Oracle's Sep 11 earnings beat, now
+  giving that move back).
+- Why: Neocloud/AI-infra names like NBIS are priced on continued explosive
+  AI capex and compute-demand growth; a credible signal that frontier labs
+  intend to slow capability development threatens that growth assumption,
+  so momentum investors de-risk the highest-multiple, highest-beta names
+  first — NBIS (Beta 1.44, PE 1,367x) fits that profile exactly.
+- Impact: 390K premarket volume vs 11.2M average daily full-session volume
+  is not yet a print confirming high-conviction distribution. Clearly
+  sector-wide, not idiosyncratic — CRWV and ORCL gapping down the same
+  morning on the same story, matching the identical selloff hitting
+  SoftBank/SK Hynix/ASML/Nvidia globally per CNBC. Durability depends on
+  whether "pacing" becomes a real, binding capex slowdown or stays a
+  PR/safety statement — one analyst quoted in the CNBC piece (Barringer,
+  Quilter Cheviot) argues inference demand still "far outstrips supply"
+  regardless, arguing for a partial fade rather than a structural
+  repricing.
+- Horizon: SHORT_TERM — a CEO essay plus public endorsements is a
+  sentiment shock, not a change to NBIS's contracted backlog or revenue;
+  absent a hyperscaler customer actually cutting AI capex guidance, expect
+  a partial mean-revert within days.
+- Opportunity cost: Zero open positions currently, nothing displaced, and
+  strategy is long-bias only (gap-down names excluded per standing rule).
+  NBIS gapped DOWN -10.1% — not an eligible long candidate today at any
+  R:R; watchlist-only. Would need Confluence (>=2 of VWAP/RSI/200-SMA/
+  insider) plus 2:1 R:R on a later stabilization/bounce before any /trade
+  check.
+
+#### Deep dive: CRWV $81.18 -8.96%
+- Catalyst: CoreWeave closed $88.99 (-0.15%) Fri Sep 11 and is down to
+  $81.78 premarket today (-8.10% per stockanalysis.com, -8.96% per Alpaca).
+  Company-specific news this past week was constructive, not negative: a
+  new Physical AI Field Engineering service launch (Sep 9-10), a DARPA
+  biological-research cloud deal with Parallel Works (Sep 9), and reports
+  that Leopold Aschenbrenner's Situational Awareness has been building
+  options positions in CRWV/AMD/BE (CNBC, Sep 11). Friday's rally that
+  lifted CRWV/NBIS/IREN together was driven by Oracle's strong quarterly
+  results boosting the whole neocloud group. Today's reversal has no
+  CRWV-specific negative catalyst — it tracks the same Amodei/Altman
+  "pace the frontier" AI-slowdown fear hitting NBIS, semis, and
+  hyperscalers globally.
+- Why: CoreWeave is the most AI-capex-levered name in the group (Q4 losses
+  -$1.93B, revenue +115% YoY, heavy Nvidia GPU dependency per Sep 10
+  supply-constraint coverage), so a sentiment shift toward "AI development
+  may slow" hits its valuation disproportionately versus more diversified
+  hyperscalers.
+- Impact: 640K premarket volume vs 17.7M average full-session volume —
+  moderate, not yet capitulation. Reads as sector rotation (NBIS + CRWV +
+  broader semis/AI-infra all down the same morning on the same headline)
+  rather than a CRWV-specific breakdown; the stock has been volatile all
+  month (from a $153 high to an $82 low, -40%+ off highs, per a Sep 1
+  Invezz piece flagging technical warning signs even before today), so
+  this extends an existing downtrend more than creates a new one.
+- Horizon: SHORT_TERM — no durable company-specific catalyst behind
+  today's drop; should stabilize once markets get more clarity on whether
+  hyperscaler capex guidance actually changes.
+- Opportunity cost: Zero open positions, nothing displaced; gap DOWN, not
+  an eligible long entry under the long-bias-only rule. Correlation-gate
+  note: NBIS and CRWV are moving together again exactly as they have all
+  month (both neocloud/AI-infra) — if either is later considered as a
+  long, check the other for correlation >0.75 before adding a second
+  position (scripts/corr-gate.mjs); currently moot with zero open
+  positions.
+
+#### Deep dive: ORCL $142.95 -6.61%
+- Catalyst: TD Cowen cut its ORCL price target to $240 from $300
+  (maintaining Buy), citing rising concern over Oracle's AI-data-center
+  capex, debt load, and free-cash-flow drag versus its $638B backlog, and
+  flagged Oracle's Oct 28 analyst day as the next major catalyst.
+  Separately, the New Mexico Supreme Court stayed key permits for Project
+  Jupiter (the Oracle/OpenAI AI data-center project) after an
+  environmental-group challenge, risking delays to new cloud capacity.
+  Both developments predate today and were already pressuring the stock
+  (down ~43% over the past three months per TradingView/Stocktwits
+  coverage); today's additional -6.6% premarket move layers the same
+  Amodei/Altman AI-slowdown story (CNBC: hyperscalers including
+  Microsoft/Amazon/Alphabet also lower) on top of that existing weakness.
+  Oracle had rallied on its Sep 11 earnings beat (the same catalyst that
+  lifted NBIS/CRWV/IREN), so today largely gives that pop back. Note: an
+  earlier RESEARCH-LOG entry today (08:20 ET run) also flagged founder
+  Larry Ellison filing to sell $7.5B in shares as a compounding factor —
+  not independently re-confirmed this run, carried forward for continuity.
+- Why: Oracle's bull case rests on converting its $638B AI-contract
+  backlog (OpenAI, Meta, xAI) into cash flow despite heavy capex and debt;
+  a broad narrative that AI development — and by extension infrastructure
+  buildout — may deliberately slow directly threatens that
+  backlog-conversion timeline, while the analyst price-target cut and
+  permit delay add company-specific reasons to de-risk right now.
+- Impact: 1.55M premarket volume is elevated but not decisive. Looks like
+  continuation of an existing multi-week fade (analyst target cut +
+  permitting delay) amplified by today's sector-wide AI-slowdown scare,
+  rather than a single-day headline spike — the same three-name
+  (NBIS/CRWV/ORCL) sympathy move argues for a shared macro driver, not an
+  ORCL-isolated event.
+- Horizon: SHORT_TERM for today's incremental move (macro sentiment
+  shock); the underlying TD Cowen/Project Jupiter overhang is more
+  structural and worth re-checking ahead of the Oct 28 analyst day, but
+  that's a separate, later research question, not today's driver.
+- Opportunity cost: Zero open positions, nothing displaced; ORCL gapped
+  DOWN -6.6% — not an eligible long entry under the long-bias-only rule.
+  If ORCL stabilizes on a later session, it would need to clear the Entry
+  Checklist (Confluence >=2 of VWAP/RSI/200-SMA/insider, documented
+  catalyst, 2:1 R:R) before consideration; the Oct 28 analyst day is a
+  reasonable forward checkpoint to revisit the thesis, not an entry today.
