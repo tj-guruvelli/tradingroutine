@@ -11478,3 +11478,132 @@ corner of the AI-capex trade.
   documented catalyst distinct from "oversold." Would compete with STM
   (today's only other gapper) for capital under the max-3-new-trades/week
   and 2:1 R:R minimum caps.
+
+### Gappers (auto-scan 11:14 ET, cloud, 4th firing)
+
+**Deep-dive cap: top 5 of 10.** Ranks 6-10 quick-scan only (not silently
+dropped — see table + Also Moving below).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | 6.985 | -12.03% | 67,858 | Giving back Friday's Q2-earnings-beat pop amid broader risk-off |
+| 2 | BE | 253.55 | -8.03% | 253,342 | Reversing part of AI-power-demand rally amid AI-slowdown selloff |
+| 3 | AMKR | 47.98 | -7.3% | 62,120 | Caught in global AI/semis selloff (Amodei/Altman/Musk AI-slowdown call) |
+| 4 | STM | 47.84 | -7.12% | 157,581 | Giving back ~150% 3-month run amid AI/semis selloff |
+| 5 | AGMH | 0.8247 | -6.67% | 70,754 | Volatile micro-cap AI-infra/crypto-miner name; no fresh dated catalyst |
+| 6 | CRWV | 83.20 | -6.47% | 492,509 | Direct hit as pure-play AI-compute name; already excluded in Market-Open |
+| 7 | KLIC | 81.05 | -5.97% | 4,053 | Semis selloff erasing Aug 25 Q3-beat gains |
+| 8 | SYNA | 95.205 | -5.72% | 6,598 | Semis selloff reversing Aug 15 Q4-report gains |
+| 9 | GFS | 44.30 | -5.64% | 28,140 | Broad semi sector pressure + insider selling + mixed sentiment |
+| 10 | BLSH | 37.145 | +5.59% | 21,161 | Crypto-platform stock bucking the risk-off tape |
+
+**Macro read-through:** All 9 down-gappers except AGMH/BW/BE are direct
+AI/semis-supply-chain names caught in today's dominant catalyst already
+logged in this morning's Pre-Market entry — Anthropic CEO Dario Amodei's
+public call for an industry-wide AI-development slowdown (backed by
+Altman, Musk), which hit Nvidia, Intel, Marvell, SK Hynix, Samsung,
+SoftBank, ASML, Infineon premarket globally. BW/BE read as idiosyncratic
+earnings-pop giveback / AI-power-proxy sympathy selling rather than direct
+hits. BLSH is the lone green mover, unrelated to the AI story (crypto
+volatility/volume).
+
+#### Deep dive: BW $6.985 -12.03%
+- Catalyst: Babcock & Wilcox popped ~9.2% Friday to $7.83 on continued
+  momentum from its Q2 2026 earnings beat and business-development
+  enthusiasm; today's -12% move largely erases that pop, despite mixed Aug
+  analyst commentary (some price-target cuts even as the immediate
+  reaction was bullish).
+- Why: A one-day speculative pop followed by profit-taking/mean reversion,
+  amplified by today's broad risk-off tape (AI-slowdown call, Hormuz oil
+  spike, hawkish FOMC odds hitting small-caps hardest).
+- Impact: Volume (67.9k) is thin for a >20% two-session swing on this
+  name — looks like a low-float, headline-driven whipsaw rather than a
+  durable repricing; likely mean-reverts further once market-wide risk-off
+  clears.
+- Horizon: SHORT_TERM — earnings-pop giveback into a risk-off macro tape,
+  not a name to carry.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used — nothing
+  displaced, but it's a red gapper and fails the long-bias-only rule
+  (same logic already applied to NBIS/CRWV/ORCL this morning); even
+  setting that aside, a fresh air-pocket entry would struggle to clear
+  2:1 R:R at a sane stop.
+
+#### Deep dive: BE $253.55 -8.03%
+- Catalyst: Bloom Energy has been one of the year's strongest AI-power-
+  demand plays after Q2 2026 revenue grew 165.5% YoY with raised
+  full-year guidance; today's -8% drop reverses part of that run as the
+  AI-slowdown call spooks capex-linked names, even though Bloom's
+  fuel-cell backlog is unrelated to frontier-model safety concerns.
+- Why: Sympathy selloff — Bloom trades as an AI-data-center-power proxy,
+  so a slowdown call aimed at frontier-model development is being priced
+  into the whole AI-infrastructure basket, Bloom included.
+- Impact: Volume (253k) is meaningful and the move tracks the broader
+  AI/semis complex (CRWV, STM, AMKR, GFS all red today too) — basket-wide
+  de-risking, not a Bloom-specific fundamental break; guidance/backlog
+  unchanged.
+- Horizon: SHORT_TERM — selloff is macro/sentiment-driven, not a change
+  to Bloom's own numbers, but no confirmed bottom signal yet.
+- Opportunity cost: No position displaced (0/6 open, 0/3 weekly).
+  Long-bias-only rule blocks it today regardless (red gapper, same logic
+  as NBIS/CRWV/ORCL this morning) — would need a green/basing day and a
+  fresh confluence check.
+
+#### Deep dive: AMKR $47.98 -7.3%
+- Catalyst: No dated Amkor-specific news today; recent coverage frames it
+  as a "bargain valuation" semiconductor packaging/test name (137%
+  3-year return) off a July Nvidia-linked $1.5B partnership. Today's move
+  is part of the global AI/semis selloff (Intel -5.7-6%, Marvell -6.2-7%,
+  SK Hynix -6%, ASML -4%+ same morning) after Amodei's AI-slowdown call,
+  backed by Altman and Musk.
+- Why: Sector-wide de-risking of AI/semis-supply-chain names on the
+  frontier-AI-slowdown headline, not an Amkor-specific event.
+- Impact: Read-through is clearly sector-wide (STM, GFS, KLIC, SYNA, CRWV
+  all down together) rather than Amkor-idiosyncratic — likely to track
+  the broader AI/semis tape rather than mean-revert on its own.
+- Horizon: SHORT_TERM — beta to a macro/sector headline, not a change in
+  Amkor's own fundamentals; reassess once the AI-slowdown narrative
+  stabilizes.
+- Opportunity cost: No position displaced. Red gapper — fails long-bias-
+  only rule today, same logic as this morning's exclusions; entering an
+  active sector selloff with no confirmed base makes a sane 2:1 R:R stop
+  hard to justify today.
+
+#### Deep dive: STM $47.84 -7.12%
+- Catalyst: STMicroelectronics had soared ~150% over the prior three
+  months into June, closing $51.51 Sep 11 with a bearish moving-average
+  cross but neutral oscillators after "mixed earnings." Today's move
+  extends that reversal, compounded by the AI/semis selloff hitting
+  European chip names (ASML, Infineon) especially hard.
+- Why: Giveback of an outsized prior run plus sympathy selling in the
+  semis complex on the AI-slowdown headline — momentum names hit hardest
+  in a risk-off tape.
+- Impact: Volume (157.6k) is solid and the move lines up with peer semis
+  (AMKR, GFS, KLIC, SYNA, CRWV) all red — genuine sector rotation out of
+  AI/semis rather than an STM-specific headline; watch for stabilization
+  rather than chase down.
+- Horizon: SHORT_TERM — profit-taking after a huge run into a risk-off
+  macro day, not a structural negative for STM.
+- Opportunity cost: No position displaced. Fails the long-bias-only rule
+  as a red gapper (consistent with this morning's exclusion logic); a
+  short-side trade isn't available under the stocks-long strategy rules.
+
+#### Deep dive: AGMH $0.8247 -6.67%
+- Catalyst: AGM Group Holdings is a volatile Nasdaq micro-cap ($0.82)
+  that pivoted from blockchain-ASIC/crypto-mining hardware toward AI
+  infrastructure, with an undated company update citing commercialization
+  progress and an expected pickup in hardware deliveries. History of
+  extreme single-day swings (a 454% spike logged Sep 2025); no same-day
+  headline found for today's move.
+- Why: Likely a mix of low-float volatility and sympathy selling in the
+  AI-infrastructure-hardware theme amid today's broader risk-off tape,
+  rather than a specific new negative catalyst.
+- Impact: Volume (70.8k) is modest for a sub-$1 stock with this history —
+  reads as noise/volatility typical of this name; low signal confidence
+  given no dated catalyst was confirmed.
+- Horizon: SHORT_TERM — nothing structural identified; too volatile and
+  thinly documented for a multi-day swing thesis without a confirmed
+  catalyst.
+- Opportunity cost: No position displaced. Red gapper — long-bias-only
+  rule excludes it today; separately, a sub-$1 micro-cap this volatile
+  with no confirmed catalyst would struggle to size safely within the
+  20%-per-position cap or clear a sane 2:1 R:R stop.
