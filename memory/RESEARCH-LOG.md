@@ -11173,3 +11173,78 @@ compounding catalysts (AI-slowdown selloff, Hormuz-pipeline oil shock,
 FOMC rate-hike odds this week) plus no confluence tooling this run argue
 strongly for staying flat and re-assessing once the dust settles. Patience
 over activity.
+
+### Gappers (auto-scan 08:20 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $204.87 | -10.22% | 390,111 | Nebius fell premarket as AI-cloud growth risks build; peer CoreWeave also down on AI-safety-driven infra-spend fears. |
+| 2 | ORCL | $143.04 | -6.56% | 1,553,893 | Oracle extends post-earnings slide after Ellison files to sell $7.5B in shares, plus a broad AI-safety-driven selloff. |
+
+Only 2 of ~60 watchlist tickers cleared the 5% gap threshold this run —
+both gap-DOWN, both AI-infrastructure names, both tied to the same
+AI-safety-litigation headline cycle (OpenAI/Anthropic appeals) hitting the
+group broadly today. Deep-dive cap is 5; since only 2 hits cleared, both
+get the full deep-dive below (no quick-scan-only ranks 3-10 today).
+
+#### Deep dive: NBIS $204.87 -10.22%
+- Catalyst: Nebius (NBIS) is extending a slide Benzinga describes as
+  "stuck in a bear market" this morning — despite strong revenue growth,
+  investors are focused on risks to the growth story including heavy cash
+  burn (FCF TTM -$5.88B, capex TTM -$11.14B) funded by debt/equity raises
+  (D/E ~1.0x, $7.5B LT debt issued TTM). Premarket weakness is compounded
+  by a sector-wide AI-safety scare tying an OpenAI/Anthropic AI-safety
+  litigation appeal to a broad AI-trade selloff (NVDA, MU, SNDK, ORCL,
+  TSLA also named); peer CoreWeave (CRWV) is down ~8% premarket on the
+  same AI-infra-spend-fear narrative.
+- Why: No NBIS-specific event (no earnings, no guidance change) — a
+  sentiment/positioning-driven de-rating. AI-safety-litigation headlines
+  are pulling risk out of high-multiple AI-infrastructure names broadly,
+  and NBIS (21% short interest, ~46x forward P/S) is a high-beta target
+  for that unwind.
+- Impact: Alpaca premarket volume 390K vs 20.75M average daily — not yet
+  high-conviction distribution. Reads as macro/sector-fear driven rather
+  than NBIS-specific, so could fade if the AI-safety headline cools, but
+  the stock was already technically weak (confirmed bear market, RSI 45)
+  so further breakdown is also plausible. CoreWeave dropping in sympathy
+  confirms sector-wide AI-infra rotation, not an NBIS-only story.
+- Horizon: SHORT_TERM — no structural catalyst (M&A, contract win,
+  guidance reset); risk-off move tied to an active news cycle, should
+  mean-revert or extend with the broader tape rather than anchor a
+  multi-week thesis.
+- Opportunity cost: Zero open positions currently, so nothing displaced.
+  Moot regardless — strategy is long-bias only (gap-down names excluded
+  per standing rule) and NBIS gapped DOWN -10.2%, not an eligible long
+  candidate at any R:R — watchlist-only.
+
+#### Deep dive: ORCL $143.04 -6.56%
+- Catalyst: Oracle reported Q1 FY2027 earnings Thu Sep 10 after close;
+  stock has slid from $150.28 (Sep 10 close) to $143.04 premarket today.
+  Benzinga reports founder Larry Ellison has filed to sell shares worth
+  $7.5B, reviving downside risk after an earlier report he had canceled a
+  similar 50M-share sale following the strong print. Today's drop also
+  coincides with the same market-wide AI-safety scare hitting NBIS/CRWV —
+  Benzinga names ORCL among stocks in focus alongside NVDA, MU, SNDK,
+  TSLA. Not all coverage negative: one analyst (Jeff Kilburg) called
+  Oracle's AI-cloud position "essential" even as the stock dips.
+- Why: Two stacked pressures — (1) company-specific: Ellison's $7.5B
+  share-sale filing signals insider supply hitting the market right after
+  earnings; (2) sector-wide: the same AI-safety headline cycle pressuring
+  high-capex AI-infrastructure names broadly, and Oracle's own capex/FCF
+  profile (capex TTM -$55.66B, FCF TTM -$23.69B, D/E 2.3x) makes it a
+  natural target for that de-rating.
+- Impact: Premarket volume 1.55M vs 32.8M average daily — elevated for
+  premarket but not yet capitulation-level. Reads as continuation of the
+  post-earnings fade (3rd session now) rather than a one-day headline
+  spike, given stacked insider-selling and sector-fear catalysts;
+  sustainability hinges on whether Ellison's filing executes and whether
+  AI-safety headlines keep pressuring the group.
+- Horizon: SHORT_TERM — the immediate driver (insider-sale filing +
+  AI-safety fear) isn't a durable structural catalyst; worth re-checking
+  post-open since the underlying Q1 FY2027 print was reported strong — if
+  the tape stabilizes this could re-open as a LONG_TERM dip-buy candidate
+  on a later /trade check, not today.
+- Opportunity cost: Zero open positions currently, nothing displaced. Not
+  an eligible long candidate today regardless — strategy is long-bias
+  only (gap-down names excluded) and ORCL gapped DOWN -6.6% —
+  watchlist-only; would need to clear Entry Checklist confluence and 2:1
+  R:R on a subsequent bounce/stabilization before consideration.
