@@ -11393,3 +11393,88 @@ name-level expression of that macro backdrop, not three unrelated moves.
   Checklist (Confluence >=2 of VWAP/RSI/200-SMA/insider, documented
   catalyst, 2:1 R:R) before consideration; the Oct 28 analyst day is a
   reasonable forward checkpoint to revisit the thesis, not an entry today.
+
+### Gappers (auto-scan 10:14 ET, cloud, 3rd firing)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | STM | $48.27 | -6.30% | 79,339 | STM falls with chipmakers as AI CEOs (incl. Anthropic's Amodei) call for a slowdown in AI development pace, spooking semiconductor names market-wide. |
+| 2 | BE | $259.23 | -5.97% | 135,849 | Bloom Energy falls with the broader AI/semiconductor complex as major AI CEOs call for slowing AI development pace, hitting AI-power and chip names market-wide. |
+
+Only 2 of ~60 watchlist tickers cleared the 5% gap threshold this run
+(NBIS/CRWV/ORCL from the 08:20/09:13 ET runs have since dropped back
+under threshold) — both gap-DOWN, both new names to today's list. Vol
+column is each symbol's prior-completed-session full-day volume (Alpaca
+snapshot has no true premarket-volume field — see scripts/gappers-alpaca.sh
+comment), not today's premarket volume. Deep-dive cap is 5; both of
+today's 2 hits get the full deep-dive below.
+
+Both trace to the same dominant catalyst already logged in today's
+08:20/09:13 ET runs and this morning's Pre-Market Research: Anthropic CEO
+Dario Amodei's "pace the frontier" essay (publicly endorsed by Altman and
+Musk) triggered a global AI/semiconductor selloff today (Nasdaq -1.62%,
+chipmakers leading losses, European peer Soitec -12.8%). Today's move has
+broadened from the neocloud/AI-infra names (NBIS/CRWV/ORCL) into core
+semis (STM) and AI-power-demand names (BE) — same macro driver, different
+corner of the AI-capex trade.
+
+#### Deep dive: STM $48.27 -6.30%
+- Catalyst: STM is down alongside the broad semiconductor complex Monday
+  after Anthropic CEO Dario Amodei and other AI-industry leaders publicly
+  called for slowing the pace of AI model development, triggering a
+  risk-off move in AI-exposed and chip names. Nasdaq fell ~1.6% with
+  chipmakers leading losses; European peer Soitec dropped ~12.8% the same
+  session. STM itself has been on an exceptional run into this pullback —
+  up roughly 150% over the trailing 3 months per recent coverage, driven
+  by improving fundamentals and GaN/SiC product momentum.
+- Why: Index-level de-rating of AI/semiconductor capex exposure — the
+  "slowdown" headline reads as a signal AI infrastructure spend (and the
+  chip demand behind it) may decelerate, mechanically compressing
+  multiples on high-beta semis. STM's outsized 3-month run leaves it
+  exposed to profit-taking on any negative macro catalyst.
+- Impact: Sector-wide, not company-specific — same-session declines hit
+  chipmakers broadly (Nasdaq -1.62%, Soitec -12.8%) with no STM-specific
+  negative print (no earnings miss, no guidance cut found). Reads as a
+  one-day headline-driven de-risking rather than a fundamental break, but
+  a name up ~150% in 3 months has real room to keep correcting if AI-capex
+  fears persist.
+- Horizon: SHORT_TERM — headline-driven macro de-risking with no
+  company-specific catalyst; the "slowdown" call is rhetoric, not
+  confirmed policy or spend cuts, so expect the move to fade absent hard
+  data confirming an actual AI-capex pullback.
+- Opportunity cost: Zero open positions, nothing displaced (0/3 weekly
+  trades used); STM gapped DOWN on the identical AI-slowdown story that
+  already disqualified NBIS/CRWV/ORCL earlier today under the long-bias-
+  only rule — no long entry without price reclaiming the 200-SMA and a
+  documented catalyst distinct from "oversold." Would also compete with
+  BE (today's only other gapper) for capital under the max-3-new-trades/
+  week and 2:1 R:R minimum caps.
+
+#### Deep dive: BE $259.23 -5.97%
+- Catalyst: BE dropped alongside the broader AI-infrastructure and
+  semiconductor complex Monday after AI-industry leaders (Amodei et al.)
+  called for a slowdown in AI model-development pace, which spooked names
+  tied to AI capex including data-center power suppliers. BE's underlying
+  business remains strong: Q2 2026 revenue grew ~165.5% YoY with raised
+  full-year 2026 guidance, and its capital-light AI power-supply
+  partnership (announced Oct 2025) is intact. No BE-specific negative news
+  found.
+- Why: Bloom Energy trades as an AI-power-demand proxy (fuel cells for
+  data centers); when the market re-prices AI capex expectations down on
+  the "slowdown" headline, high-multiple AI-infrastructure names like BE
+  sell off in sympathy even without a company-specific catalyst.
+- Impact: Broad-based, not BE-specific — the same session hit chipmakers
+  and AI-linked names across the board with no BE earnings/guidance news
+  identified. Likely to at least partially mean-revert if the raised FY26
+  guidance and AI capital-light deal remain intact once the "slowdown"
+  headline cools, but could extend if AI-capex fears persist or broaden.
+- Horizon: SHORT_TERM — headline-driven macro de-risking with no
+  company-specific negative catalyst; strong fundamentals (Q2 revenue
+  +165.5% YoY, raised guidance) argue against a durable thesis break, so
+  treat as a session-level fade candidate rather than a swing entry today.
+- Opportunity cost: Zero open positions, nothing displaced (0/3 weekly
+  trades used); BE gapped DOWN on the identical AI-slowdown story that
+  already disqualified NBIS/CRWV/ORCL earlier today under the long-bias-
+  only rule — no long entry without price reclaiming trend and a
+  documented catalyst distinct from "oversold." Would compete with STM
+  (today's only other gapper) for capital under the max-3-new-trades/week
+  and 2:1 R:R minimum caps.
