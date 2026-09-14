@@ -11067,3 +11067,109 @@ grade_a_possible: false (setup_a_skipped_reason: outside 10:00-15:30 ET) — 60/
 | TRMD   | B     | Momentum confluence  | daily swing | ADX 22.28, EMA9 34.05 > EMA21 32.64 |
 
 No grade-A hits (Setup A not evaluated this run — 18:39 ET fire lands after the 15:30 ET cutoff). No Telegram alert sent (0 grade-A). Candidates persisted to `data/setup-scan_cloud_2026-09-11_1839ET.json` for `market-open.md` to pick up next session.
+
+## 2026-09-14 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-11`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 61st straight session. 47th trading
+day since launch (Jul 9) with zero entries. New week (Sep 14) — trade count
+resets to 0/3.
+
+**Market context — risk-off Monday, three compounding catalysts:**
+- **Oil:** Brent $107.21-107.42/bbl (+2.49-2.81%), 4-month high, after
+  rallying >9% last week (TradingEconomics/Markets Insider, ~07:00 ET).
+  Driver: Saudi Arabia shut its East-West pipeline (a key route used to
+  bypass the Strait of Hormuz) as a precaution after drone attacks last
+  Thursday — no timeline yet for resumption. WTI not independently
+  re-quoted this run (Brent sourced from 2 independent non-Yahoo sites,
+  consistent). Direct continuation/escalation of the Iran/Hormuz overhang
+  flagged repeatedly since early Sep, now materially worse (pipeline
+  actually shut, not just fighting-risk).
+- **S&P 500 futures:** -0.8%; Nasdaq-100 futures -1.8%; Dow futures -135pts
+  (-0.3%) (CNBC, "Stock futures fall as investors weigh calls for AI
+  slowdown, oil gains"). Europe mostly lower (Stoxx 600 -0.3%, DAX -0.3%,
+  CAC 40 -0.4%); UK FTSE 100 +0.7% (oil-major-driven outlier: BP, Shell).
+  Last week: Dow -1.6% (worst week since March), S&P -0.8%, Nasdaq -0.7% —
+  oil rally already dragged all three lower before today's leg down.
+- **VIX:** 17.59-17.60, +11.05-11.11% (+1.75-1.76), 7:03 AM EDT (Cboe/CNBC).
+  Open 17.50, day range 17.48-18.17, prev close 15.84, 52wk range
+  13.38-35.30. Still below the 20 "elevated" threshold in absolute terms,
+  but the +11% single-day jump is the sharpest move logged this cycle —
+  first real fear-gauge spike after weeks of low/flat readings.
+- **Catalyst #1 (dominant, tech-specific):** Anthropic CEO Dario Amodei
+  publicly called for an industry-wide slowdown of frontier-AI capability
+  development over safety risk (essay Sat, CBS News interview Sun); OpenAI's
+  Sam Altman and Elon Musk backed the call. Global AI/semis selloff:
+  Nvidia -2-3%, Intel -5.7-6%, Marvell -6.2-7% premarket; Meta, Amazon,
+  Alphabet, Microsoft all lower. Overseas: SK Hynix -6%, Samsung
+  Electronics -4%, SoftBank -10% (Japan), ASML -4%+, Nokia -5%, Infineon
+  -6%+ (Europe). This is a same-day, dated, structural catalyst — not
+  macro beta — and it is squarely against every current/former mega-cap
+  tech name on the watchlist.
+- **Catalyst #2:** Oil/Hormuz supply shock (above) — energy-sector bid,
+  broad-market and consumer-discretionary headwind (input-cost pressure).
+- **Catalyst #3:** FOMC holds its September policy meeting this week (per
+  CNBC). CME FedWatch prices ~86% odds of a **rate hike** — a hawkish
+  surprise context (oil-driven inflation risk pushing the Fed toward
+  tightening, not cutting) that cuts against risk assets broadly. Gold
+  -~1% to $4,306.19/oz and silver -3%+ to $62.54/oz this morning — a
+  higher-for-longer/hike-odds read, not a flight-to-safety one.
+- **Earnings today:** Nasdaq earnings calendar returned no scheduled
+  reports for today's date (page showed "no reports on this date" — could
+  be a slow-loading widget rather than confirmed-empty; treat as
+  best-effort, not exhaustive).
+- **Economic calendar:** No US-specific CPI/PPI/jobs print identified for
+  today in the scraped calendar (mostly international prints — India,
+  Canada CPI). FOMC decision lands later this week, not today — don't
+  conflate. CPI (Aug) already printed and was logged Sep 11.
+- **Sector momentum:** Not independently re-pulled this run (query
+  returned no usable sector-breakdown content) — Sep 10's Schwab sector
+  view (Energy best trailing 12mo +41.7% but only Neutral forward;
+  Financials/Health Care/Industrials/Materials "More Favored") is the most
+  recent read on file and is now stale given today's Hormuz escalation —
+  needs a fresh sector-rotation check once Apify/sentiment tooling
+  confirms.
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`). `tradingview-data` MCP not loaded this cloud run
+  — no independent confluence/technical check possible (same gap as every
+  session since Sep 8).
+- Zero finance.yahoo.com citations used or found across all queries run
+  this session.
+
+**Risk factors:** Three compounding, same-day catalysts (AI-slowdown-driven
+tech selloff, an actual Hormuz-bypass pipeline shutdown, and ~86% FOMC
+rate-hike odds this week) is the most volatile setup logged this cycle —
+VIX's +11% jump is the tell. Any one of these reversing (Amodei-call walked
+back, pipeline restored, FOMC holds/cuts instead) would sharply reverse
+today's moves; escalation on any of the three (a confirmed Hormuz transit
+disruption, a broader AI-capex pullback, an actual hike) would deepen the
+selloff. No `tradingview-data` MCP this run — no confluence/technical check
+possible, so no name-level idea can clear the strategy's 2-indicator
+confluence bar today regardless of catalyst quality or direction. 47
+straight zero-trade trading days / the $100k-vs-$10k baseline mismatch
+remain unresolved — still pending operator review.
+
+**Trade ideas:** None cleared the documented-catalyst-plus-confluence bar —
+watch-only, no entry/stop/target committed, strategy is long-bias only so
+none of today's dominant catalysts (AI selloff, oil-driven risk-off) point
+to a long setup: (1) Energy-sector momentum (XLE) — the Hormuz-pipeline
+shutdown is a fresh, dated, escalating catalyst for the sector (best
+trailing 12mo return per Sep 10's Schwab read, now compounded), but no
+confluence tooling available this run to validate an entry, and Schwab's
+own forward rating was only Neutral even before today's escalation — needs
+a same-day re-rate. (2) AI/semis names (NVDA, INTC, MRVL) — today's move is
+entirely catalyst-negative for new longs (chase-rule and confluence would
+both fail on a gap-down open); only relevant as names to avoid initiating
+and, if held, to watch for stop discipline — not applicable, 0 positions.
+(3) No third idea — today's catalyst mix argues for research, not new
+risk, given zero confluence tooling and three live event risks stacked in
+one session.
+
+**Decision: HOLD.** No open positions, no planned trades. Three
+compounding catalysts (AI-slowdown selloff, Hormuz-pipeline oil shock,
+FOMC rate-hike odds this week) plus no confluence tooling this run argue
+strongly for staying flat and re-assessing once the dust settles. Patience
+over activity.
