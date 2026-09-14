@@ -11500,3 +11500,26 @@ hit, so no Telegram/ClickUp notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+### Setup Scan (18:38 ET, cloud)
+
+Full-universe scan (60 tickers checked from `config/rules.json`
+watchlist_tiers.immediate, via `scripts/setup-scan-cloud.mjs` against Alpaca
+bars/quotes — MCP unavailable in cloud). **0 grade-A hits, 3 grade-B hits**:
+same three tickers as the 16:38 ET run (HAFN, BMNR, BLSH), with identical
+indicator values — expected, since both runs read the same daily bar
+(market closed at 16:00 ET, no new daily close between runs). Setup A (TJL
+breakout) not checkable for any ticker this run — `setup_a_checkable:
+false` across the board, consistent with `grade_a_possible: false`
+(`setup_a_skipped_reason: "outside 10:00-15:30 ET"`) — this run landed at
+18:38 ET, after the 15:30 ET intraday-breakout cutoff. No grade-A hit, so
+no Telegram/ClickUp notify sent per routine rule.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | ADX 26.7, EMA9 $9.00 > EMA21 $8.55, RSI 73.1, px $9.34 vs SMA200 $7.26 |
+| BMNR | B | Momentum confluence | daily swing | ADX 44.6, EMA9 $24.44 > EMA21 $23.06, RSI 61.0, px $24.95 vs SMA200 $22.24 |
+| BLSH | B | Momentum confluence | daily swing | ADX 41.3, EMA9 $34.19 > EMA21 $31.88, RSI 65.3, px $37.39 vs SMA200 $34.00 |
+
+Candidates only — no execution here. Feed to `/trade` for the full
+safety-check gate if pursued next session.
