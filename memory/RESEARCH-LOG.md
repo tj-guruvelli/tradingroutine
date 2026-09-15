@@ -11523,3 +11523,130 @@ no Telegram/ClickUp notify sent per routine rule.
 
 Candidates only — no execution here. Feed to `/trade` for the full
 safety-check gate if pursued next session.
+
+## 2026-09-15 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-14`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 64th straight session. 48th trading
+day since launch (Jul 9) with zero entries. Week of Sep 14 — trade count
+still 0/3.
+
+**Market context — risk-off tape continues into FOMC week:**
+- **Oil:** Brent $106.22-107.50/bbl (TradingEconomics: $106.22, +0.51%
+  d/d, +16.9% monthly, +55.2% YoY; Saxo: hovering near $107.50, briefly
+  spiked toward $110 Monday — now resisted there 3 sessions running).
+  Driver unchanged from Sep 14: Saudi Arabia's East-West pipeline (the key
+  Hormuz-bypass route) remains offline after drone/missile attacks, no
+  restart timeline; Saxo additionally flags a large-scale Houthi
+  ballistic-missile/drone attack on Saudi's King Khalid Air Base — an
+  escalation, not a resolution, of the Middle East supply risk. WTI not
+  independently re-quoted this run (Brent sourced from 2 non-Yahoo sites,
+  consistent).
+- **VIX:** 17.09-17.10 spot as of ~11:03 AM ET (Cboe), flat vs prior close
+  (17.10, 0.00% chg), open 17.57, day range 17.09-18.03, 52wk range
+  13.38-35.30. This is a stabilization off Monday's +11% spike (logged
+  Sep 14 at 17.59-17.60) — VIX9D/VIX1D are diverging around the Fed event
+  window per Saxo (VIX9D elevated, VIX1D lower), i.e. term-structure is
+  pricing tomorrow's FOMC decision specifically, not broad panic.
+- **S&P 500 futures:** Not independently re-pulled this run — query
+  returned unusable search content (off-topic results, no futures data).
+  Best available reference is yesterday's (Mon Sep 14) cash close: S&P
+  500 -0.5%, Dow -0.3%, Nasdaq 100 -0.8% (Saxo). VIX's flatness this
+  morning is a soft signal today's open isn't repeating Monday's steep
+  drop, but this is not a confirmed premarket futures read — flag as a
+  data gap.
+- **Catalyst #1 (still dominant, AI-slowdown selloff, day 2):** Same
+  Amodei/Altman/Musk "pace the frontier" call from Sep 14 continues to
+  weigh on AI/semis. Monday's cash session: Philadelphia Semiconductor
+  Index -5.9%, Nvidia -3.4%, Corning -13.7% (AI fears compounding a $2B
+  share-sale dilution concern). Sympathy moves overseas: SoftBank -10.7%
+  Monday then +8.0% Tuesday rebound (Nikkei -0.1%), Soitec -12.6%,
+  Infineon -7.7% (Europe), Kospi -1.2% (SK Hynix roughly flat). Rotation
+  beneficiary: cybersecurity — CrowdStrike +13.8% Monday as capital
+  rotated out of chips. Bank of America -5.1% on an IB/trading-revenue
+  warning (idiosyncratic, not part of the AI story).
+- **Catalyst #2:** FOMC 2-day meeting starts today, decision tomorrow
+  (Wed Sep 16). Saxo: markets pricing ~92% odds of a 25bp hike (vs. ~86%
+  logged Sep 14) — Goldman Sachs and HSBC both revised to include a
+  September hike after last week's hotter-than-expected Aug core CPI
+  (+0.3% m/m). Would be the first hike since 2023 (Kiplinger) and lifts
+  the fed funds target range to 3.75%-4.00% — a hawkish setup, not a cut,
+  which is a headwind for richly-valued growth/tech names specifically.
+- **Catalyst #3:** US 10-year Treasury yield cleared 5.02% in early
+  Tuesday trading — highest since 2007, a post-GFC high — as oil-driven
+  inflation risk stacks on large deficit/borrowing concerns; 2-year yield
+  ~4.68%, a new cycle high since 2024 (Saxo). Higher long-end yields
+  mechanically pressure equity valuations, especially high-multiple names.
+- **Earnings today:** No large-cap US names identified reporting before
+  today's open. Nasdaq's earnings calendar again showed "no reports on
+  this date" (same best-effort caveat as Sep 14 — could be a
+  slow-loading widget). Investing.com's calendar listed only small/micro
+  caps for 9/15 (Trip.com, Forgent Power, Rezolute, Evolution Petroleum,
+  Vera Bradley, etc.) — nothing on the watchlist.
+- **Economic calendar:** FOMC meeting begins today, decision Wed (see
+  Catalyst #2 — don't conflate the two days). Germany Sept ZEW Survey
+  (09:00 GMT). G20 energy ministers meet in Houston through Wednesday. No
+  US CPI/PPI/jobs print scheduled today; Aug CPI already printed and was
+  the catalyst behind this week's hike-odds jump.
+- **Sector momentum:** Not independently re-pulled this run — dedicated
+  query returned unusable content (same gap as Sep 14). Qualitative read
+  from the Saxo macro brief: semis/AI-infra still the weak spot,
+  cybersecurity/software and select healthcare (GSK +4.7% on trial data)
+  rotating positive, financials soft (BAC -5.1%), UK FTSE +0.4% Monday on
+  defensive/oil-major support (BP, Shell) — a fresh XLK/XLF/XLE/XLU
+  sector-ETF pull is still owed once Apify/sentiment tooling gives a
+  clean result.
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`). `tradingview-data` MCP not loaded this cloud
+  run — no independent confluence/technical check possible (same gap as
+  every session since Sep 8).
+- Zero finance.yahoo.com citations used or found across all queries run
+  this session (TradingEconomics, Saxo Bank, Cboe, CNBC, Kiplinger,
+  Investing.com, Nasdaq only).
+
+**Trade ideas:** No confluence tooling this run again, so nothing can
+clear the Entry Checklist's ≥2-indicator bar regardless of catalyst
+quality — documenting candidates only, no entry/stop/target committed:
+(1) **Defense** (LMT/NOC/RTX, all on watchlist under the NATO/defense
+theme) — catalyst is dated and escalating: the Houthi ballistic-
+missile/drone strike on Saudi's King Khalid Air Base plus the ongoing
+pipeline-driven Hormuz-bypass risk. Reference levels from yesterday's
+close (wide premarket spreads, treat as indicative only): LMT
+~$499-553, NOC ~$493-552, RTX ~$186 bid. No RSI/VWAP/200-SMA data this
+run to confirm confluence — flag for a same-day re-check once
+`tradingview-data` is back. (2) **Tankers/shipping** (HAFN/TRMD/BWLP,
+watchlist) — catalyst is the Brent spike to 4-month-plus highs (oil at
++55% YoY), typically a tailwind for freight day-rates; but these three
+were already disqualified on confluence in the Sep 9/10/14 sessions
+(HAFN/BWLP: only 1-of-4 indicators, RSI neutral not oversold; TRMD: RSI
+overbought >70) and no new confluence data exists this run to revisit
+that — standing skip. (3) No third idea — FOMC decision tomorrow, a
+still-live AI-slowdown narrative, and record 10-year yields argue for
+patience over fresh long risk, especially with zero confluence tooling
+available again.
+
+**Risk factors:** FOMC decision Wednesday carries real two-way risk — a
+hawkish 25bp hike (currently ~92% priced) is a headwind for growth/tech
+valuations, while any dovish surprise (hold) could spark a relief rally;
+either way, this is the week's dominant event risk and argues against
+adding new exposure into it blind. Middle East supply shock is
+escalating, not resolving (pipeline expected offline "several weeks" per
+Saxo, plus a fresh Houthi attack) — keeps oil elevated and complicates
+the Fed's inflation calculus. AI-slowdown narrative is showing some
+1-day-mean-reversion signs (SoftBank +8% Tuesday after -10.7% Monday) but
+Monday's semis damage (Philly Semi -5.9%) was severe enough that it's too
+early to call it resolved. VIX's flatness at 17.1 this morning reads as
+stabilization ahead of the Fed print, not an all-clear. No
+`tradingview-data` MCP this run, so no confluence-based entries are
+possible regardless of catalyst direction. 48 straight trading days since
+launch with zero entries / the $100k-vs-$10k baseline mismatch remain
+unresolved — still pending operator review.
+
+**Decision: HOLD.** No open positions, no planned trades. FOMC decision
+tomorrow, an unresolved AI-slowdown narrative, record 10-year yields, and
+an escalating Middle East oil-supply shock — plus no confluence tooling
+this run — argue strongly for staying flat through the Fed print rather
+than adding risk into it. Patience over activity.
