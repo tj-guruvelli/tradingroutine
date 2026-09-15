@@ -11650,3 +11650,54 @@ tomorrow, an unresolved AI-slowdown narrative, record 10-year yields, and
 an escalating Middle East oil-supply shock — plus no confluence tooling
 this run — argue strongly for staying flat through the Fed print rather
 than adding risk into it. Patience over activity.
+
+### Gappers (auto-scan 08:13 ET, cloud)
+
+Watchlist scan (`scripts/gappers-alpaca.sh watchlist`, ~60 tickers, 5%
+threshold): **1 hit** — TRMD -7.49%. No `premarket_volume` field in this
+script's output (field is named `volume`), so the ≥50k volume filter did
+not apply; TRMD's raw volume (42,665) is noted in the table below for
+reference. Deep-dive cap is 5 but only 1 candidate cleared the gap
+threshold, so all research below covers TRMD only.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | 32.50 | -7.49% | 42,665 | TORM plc announces 9M-share secondary offering by 20%-holder OCM Njord Holdings (Oaktree affiliate) |
+
+#### Deep dive: TRMD $32.50 -7.49%
+- Catalyst: TORM plc (Nasdaq: TRMD) announced Sept 14 after the close a
+  secondary public offering of 9,000,000 Class A shares (plus a 30-day,
+  1,350,000-share overallotment option) by OCM Njord Holdings S.à r.l.,
+  an Oaktree Capital Management affiliate holding ~20% of TORM's Class A
+  shares. J.P. Morgan is sole underwriter; TORM itself is selling no
+  shares and receives no proceeds. The same Oaktree/Njord vehicle
+  attempted (then abruptly pulled) a similar 5.75M-share sale in March
+  2023.
+- Why: A large secondary block sale by a major holder creates near-term
+  share-supply overhang — the market prices in dilution risk and an
+  expected below-market clearing price for the block, independent of
+  company fundamentals — a standard mechanical driver of an overnight
+  gap-down.
+- Impact: Premarket volume (42,665 sh) is thin for a name this size, so
+  this reads as an early print rather than confirmed trend; the catalyst
+  itself is confirmed (SEC-registered offering, not rumor), but the
+  ultimate price impact hinges on where JPMorgan prices the block later
+  today — risk of a further air-pocket at pricing. No sector-wide
+  read-through: peer tankers HAFN/BWLP did not gap on today's scan, so
+  this looks idiosyncratic to TORM's ownership structure, not a
+  tanker-sector move (Brent remains elevated per today's pre-market
+  section, a fundamental tailwind).
+- Horizon: SHORT_TERM, secondary offerings typically pressure a stock
+  through pricing/settlement over a few days then stabilize once the
+  block clears; no change to TORM's underlying freight-rate fundamentals,
+  so any post-settlement rebound would be a separate decision, not a
+  continuation of today's move.
+- Opportunity cost: 0 open positions and 0/3 weekly trades used, so this
+  displaces nothing. Strategy is long-bias only, and this is a gap DOWN
+  on a dilution/overhang catalyst, not a long setup — TRMD already failed
+  today's separate pre-market Entry Checklist confluence gate (RSI
+  overbought). Not a 2:1 R:R candidate on the long side; worth only a
+  post-settlement re-check once the block clears.
+
+Research only — no trade placed. Zero finance.yahoo.com citations (PR
+Newswire/Cision, TORM investor-relations page, gCaptain used instead).
