@@ -11650,3 +11650,110 @@ tomorrow, an unresolved AI-slowdown narrative, record 10-year yields, and
 an escalating Middle East oil-supply shock — plus no confluence tooling
 this run — argue strongly for staying flat through the Fed print rather
 than adding risk into it. Patience over activity.
+
+
+## 2026-09-15 — Gappers (auto-scan 09:10 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+**3 hits**, all above the price/gap filters (no `premarket_volume` field
+populated by Alpaca's snapshot endpoint — that filter was skipped per
+routine rule; `volume` shown is the prior completed session's full-day
+volume). All 3 fit under the 5-name deep-dive cap — no quick-scan-only
+ranks today. All three are gap-DOWNs. 0 errors.
+
+### Gappers (auto-scan 09:10 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GFS | 42.79 | -8.86% | 130,975 | Broad semi-sector pressure, CSO insider sale, mixed analyst sentiment |
+| 2 | TRMD | 32.50 | -7.49% | 42,665 | OCM Njord Holdings (Oaktree-linked) sold down its TORM stake |
+| 3 | CRWV | 83.35 | -6.31% | 1,013,693 | Deteriorating macro backdrop, lingering AI-valuation concerns |
+
+#### Deep dive: GFS $42.79 -8.86%
+
+- Catalyst: GlobalFoundries is trading lower amid broad semi-sector
+  weakness. Chief Strategy Officer Michael Hogan sold roughly 78% of his
+  personal equity stake (reported via Motley Fool), adding to overhang.
+  Analyst sentiment on the name has been mixed and the stock has been under
+  multi-week pressure; no single confirmed today-specific 8-K or press
+  release was found in this pull.
+- Why: A large insider sale combined with sector-wide de-risking in semis
+  (the same AI-slowdown/semis selloff theme flagged in the Sep 14
+  RESEARCH-LOG) pressures the stock as momentum/insider-signal readers
+  treat the sale as a confidence tell, even though per TRADING-STRATEGY.md's
+  Insider signal canon, plain executive selling is neutral, not bearish,
+  unless unusually large.
+- Impact: Volume (130,975 sh) is unremarkable for GFS and shows no spike
+  consistent with a fresh news-driven move — reads as continued sector-wide
+  bleed rather than a single-day headline spike. No confirmed same-day
+  company-specific release found. Sector read-through to CRWV and the
+  broader AI/semis complex (also gapping down today) reinforces a common
+  macro driver rather than an idiosyncratic GFS story.
+- Horizon: SHORT_TERM, no durable structural catalyst identified — this
+  looks like continued participation in a sector-wide slide, not a
+  name-specific repricing event.
+- Opportunity cost: Zero open positions today (100% cash, 0/3 weekly trades
+  used), so this wouldn't displace an existing holding. But GFS is a
+  gap-DOWN — a short-side setup only — and the strategy is long-bias-only
+  (per the Sep 14 TRADE-LOG precedent excluding gap-down names outright),
+  so it can't even reach the Entry Checklist regardless of R:R math.
+
+#### Deep dive: TRMD $32.50 -7.49%
+
+- Catalyst: TORM plc (product tanker shipping) fell in pre-market after OCM
+  Njord Holdings S.a r.l. — a vehicle indirectly controlled by
+  Oaktree-affiliated funds and a large existing TORM shareholder — sold
+  down part of its stake, per Investing.com. This follows TORM stock
+  gaining over 50% over the trailing 12 months, so the move reads as a
+  large holder taking profit into strength rather than a deterioration in
+  the underlying tanker business.
+- Why: A known large holder distributing shares (a secondary block sale)
+  creates temporary supply overhang that pressures price independent of
+  TORM's operating fundamentals — an ownership-structure/technical
+  catalyst, not an earnings or guidance event.
+- Impact: Reads more like a one-day supply-driven dip than a fundamentals
+  repricing — recent estimate revisions found in this pull trend positive
+  (2026 revenue and EPS estimates revised UP, not down). Nothing in this
+  pull suggests a sector-wide shipping selloff, so this reads TRMD-specific
+  rather than a broad tanker/freight move.
+- Horizon: SHORT_TERM for now (technical block-sale pressure should fade
+  once the overhang clears); could become a LONG_TERM dip-buy thesis later
+  if estimates keep revising up, but not today — TRMD has already failed
+  the strategy's Confluence rule twice this month (Sep 9 and Sep 14
+  TRADE-LOG entries, RSI neutral/overbought both times, no fresh
+  catalyst-plus-confluence combination yet).
+- Opportunity cost: Zero open positions to displace (100% cash). TRMD is a
+  repeat name that failed the Entry Checklist Confluence rule on both Sep 9
+  and Sep 14 (only 1 of 4 indicators aligned, RSI not oversold). Today's
+  move is also a gap-down, disqualified under the long-bias-only rule; even
+  setting that aside, at ~42,665 sh of (stale) daily volume this is a thin
+  name where a stop tight enough to clear 2:1 R:R is questionable.
+
+#### Deep dive: CRWV $83.35 -6.31%
+
+- Catalyst: CoreWeave (AI cloud/GPU infrastructure) fell amid what coverage
+  describes as a deteriorating macro backdrop and lingering AI-valuation
+  concerns. This comes despite CoreWeave reporting strong Q1 2026 results in
+  May (record revenue, backlog near $100B, over 1GW active power) — the
+  stock has been volatile in 2026, including a prior ~$33B value drawdown
+  in late 2025 on AI-bubble concerns, a failed merger, and short-seller
+  criticism.
+- Why: This is a sentiment/macro-driven de-rating, not a company-specific
+  miss — CRWV is a high-beta proxy for "is AI infrastructure capex
+  sustainable" sentiment, moving alongside the same AI-slowdown narrative
+  that hit NBIS/CRWV/ORCL on Sep 14 (per that day's RESEARCH-LOG and
+  TRADE-LOG entries).
+- Impact: Volume here (1,013,693 sh) is the heaviest of today's three
+  gappers, consistent with a real, broad-based move rather than thin-name
+  noise. Sector read-through is strong and explicit — CoreWeave is
+  repeating the exact AI-infra selloff pattern from Sep 14, so this is not
+  an isolated single-stock event.
+- Horizon: SHORT_TERM — no new structural negative found (no revised
+  guidance, no confirmed contract loss); reads as continued participation
+  in a macro AI-valuation unwind that already disqualified CRWV once this
+  week.
+- Opportunity cost: Zero open positions to displace. CRWV is again a
+  gap-DOWN on the same macro story that excluded it on Sep 14 — not
+  eligible under the long-bias-only rule regardless of R:R math; capital
+  stays in cash pending a name that gaps UP with a distinct, durable
+  catalyst.
