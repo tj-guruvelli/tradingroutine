@@ -11800,3 +11800,71 @@ run. Gap-DOWN. 0 errors.
   skip — failed the Entry Checklist confluence rule at this morning's
   market-open run (only 1 of 4 indicators aligned, RSI neutral) — so it
   already carries a disqualifying signal history from earlier today.
+
+## 2026-09-15 — Gappers (auto-scan 11:14 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+**2 hits** after price/gap filters (`premarket_volume` field not populated
+by Alpaca's snapshot endpoint — `volume` shown is the prior completed
+session's full-day volume per the script's own code comment, not today's
+premarket volume; filtered on gap/price only). Both fit under the 5-name
+deep-dive cap — no quick-scan-only ranks this run. Both gap-DOWN. 0 errors.
+
+### Gappers (auto-scan 11:14 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | 24.08 | -6.50% | 607,357 | Slips alongside ETH's overnight pullback; ~5.96M ETH treasury per Sept 13 update |
+| 2 | DPRO | 5.18 | -5.99% | 16,932 | No fresh negative headline; pullback after Sept 11 Canadian Armed Forces ISR drone contract pop |
+
+#### Deep dive: BMNR $24.08 -6.50%
+
+- Catalyst: BitMine Immersion Technologies (NYSE:BMNR) is an Ethereum
+  treasury company. Sept 13 mid-cycle update: $15.8B assets including
+  5,956,378 ETH (~4.9% of ETH supply), 5.07M ETH staked at 2.62% 7-day
+  yield, 212 BTC, $549M cash. Crypto rallied Monday on Senate CLARITY Act
+  optimism, then gave it back as the vote approached; BMNR fell in
+  sympathy with ETH. Company is still actively accumulating (bought 27,180
+  ETH this week per Benzinga) — no company-specific negative news found.
+- Why: BMNR carries no independent operating P&L of scale; it trades as a
+  levered proxy for spot ETH (like MSTR for BTC), so ETH's price move
+  drives the stock with amplified beta rather than any BMNR-specific event.
+- Impact: Volume 14.49M vs 38.96M average (below-average turnover per
+  Benzinga) — reads as ordinary crypto-beta pullback, not a distinct
+  shock. Watch other ETH-treasury proxies (e.g. SBET) for the same move to
+  confirm this is sector/crypto-wide rather than BMNR-specific.
+- Horizon: SHORT_TERM — the move is ETH-correlated beta, not a
+  fundamental re-rating; expect it to reverse with ETH, not with BMNR news.
+- Opportunity cost: This is a gap DOWN, not a breakout entry — doesn't
+  fit the Entry Checklist's bullish-momentum requirement, and a stock this
+  tightly correlated to a volatile crypto asset makes ATR-based stop
+  sizing unreliable. Research only, no order recommended. This is also a
+  repeat name — BMNR gapped down and was correctly skipped at both the
+  09:10 and 10:10 ET runs today for the same ETH-beta reason.
+
+#### Deep dive: DPRO $5.18 -5.99%
+
+- Catalyst: Draganfly Inc. (NASDAQ:DPRO), a Saskatoon-based drone/robotics
+  maker, won a 5-year contract to supply tactical ISR drones to the
+  Canadian Armed Forces (announced Sept 11, 2026) and drew bullish analyst
+  commentary this week (Zacks/TipRanks citing ~124% upside to consensus
+  targets). A direct "why DPRO is down today" headline was found but
+  blocked by an anti-bot wall (Incapsula) and could not be read; no
+  substitute negative catalyst surfaced.
+- Why: Likely mechanical profit-taking/mean-reversion in a ~$283M
+  microcap after a multi-day news-driven spike (contract win + analyst
+  hype) — common for illiquid small caps once early buyers take profit,
+  absent any new negative development.
+- Impact: Script's volume field reflects prior full-session volume, not
+  live premarket volume (known limitation), so today's turnover can't be
+  confirmed from this data. No fresh bearish catalyst found, so treat the
+  drop as unconfirmed mean-reversion rather than a new bearish signal
+  until intraday volume/price action confirms it.
+- Horizon: SHORT_TERM — no structural catalyst broke today; if the ISR
+  contract thesis holds this is a pullback within an intact short-term
+  momentum story, not grounds to flip long-term bearish or bullish.
+- Opportunity cost: Entering into a >5% intraday decline is catching a
+  falling knife and conflicts with the rule against chasing within 3% of
+  current price without confirmation. At $5.18 in a volatile microcap, a
+  sane 2:1 R:R stop would likely be wide enough to strain the 20%-per-
+  position cap. Research only, no order recommended.

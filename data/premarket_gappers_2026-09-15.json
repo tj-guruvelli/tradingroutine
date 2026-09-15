@@ -1,20 +1,41 @@
 {
-  "scanned_at": "2026-09-15T14:10:00Z",
+  "scanned_at": "2026-09-15T15:14:14Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
       "symbol": "BMNR",
-      "price": 24.4,
-      "gap_pct": -5.24,
-      "premarket_volume": 327441,
-      "catalyst": "No fresh company-specific news found; BMNR (BitMine Immersion Technologies) is an ETH-treasury holding company and trades as a leveraged proxy for ETH spot price.",
-      "headlines": [],
-      "catalyst_detail": "No same-day 8-K, press release, or news item was found tying today's move to company-specific news. BitMine Immersion Technologies (BMNR) held roughly 5.8M ETH (~4.8% of total ETH supply) plus cash, worth ~$11.3B combined, per its most recent public holdings update (Aug 3, 2026). It operates as a public ETH-accumulation vehicle rather than an operating business with near-term earnings catalysts.",
-      "why": "BMNR functions as a leveraged proxy for ETH spot price. With no company-specific news found, a ~5% intraday decline most likely tracks a pullback in ETH rather than an idiosyncratic event — treasury-model stocks like this amplify the underlying asset's moves in both directions.",
-      "impact": "Volume (327,441 sh) is moderate for BMNR and not obviously spiked, consistent with a broad crypto-market pullback rather than a single headline-driven event. No confirmed peer read-through found in this pull, though other ETH/BTC-treasury proxies would be expected to move together if this is a crypto-wide dip rather than BMNR-specific.",
-      "horizon": "SHORT_TERM, no structural catalyst identified (no new fundraising, dilution, or holdings-update news) — move looks like it is tracking crypto-market beta, not a durable company-specific repricing.",
-      "opportunity_cost": "0/3 weekly trades used, 100% cash per today's market-open TRADE-LOG entry, so this would not displace an existing holding. But BMNR is a gap-DOWN, disqualified outright under the long-bias-only rule regardless of R:R math; it is also a standing repeat skip — failed the Entry Checklist confluence rule at this morning's market-open run (only 1 of 4 indicators aligned, RSI neutral) — so it already carries a disqualifying signal history from earlier today."
+      "price": 24.075,
+      "gap_pct": -6.5,
+      "premarket_volume": null,
+      "catalyst": "Bitmine Immersion (BMNR) stock slips alongside Ethereum's overnight pullback; Benzinga's Tuesday piece ties the move directly to its 5.96M ETH treasury and ETF exposure.",
+      "headlines": [
+        "What's Going On With Bitmine Immersion Stock Tuesday? - Benzinga",
+        "Bitmine Buys 27,180 ETH, Tom Lee Predicts Large Move Ahead - Benzinga",
+        "Bitcoin, Ethereum, XRP, Dogecoin Dip as Senate Prepares to Vote on CLARITY - Benzinga"
+      ],
+      "catalyst_detail": "BitMine Immersion Technologies (NYSE:BMNR) is an Ethereum treasury company: Sept 13 mid-cycle update showed $15.8B in assets including 5,956,378 ETH (~4.9% of ETH supply), 5.07M ETH staked at a 2.62% 7-day yield, 212 BTC, and $549M cash. Crypto rallied Monday on Senate CLARITY Act optimism, then gave back gains as the vote approached; BMNR fell in sympathy with ETH's pullback. Company is still actively accumulating (bought 27,180 ETH this week per Benzinga) — no company-specific negative news found.",
+      "why": "BMNR carries no independent operating P&L of scale; it trades as a levered proxy for spot ETH (like MSTR for BTC), so ETH's price move drives the stock with amplified beta rather than any BMNR-specific event.",
+      "impact": "Volume 14.49M vs 38.96M average (below-average turnover) — reads as ordinary crypto-beta pullback, not a distinct shock. Watch other ETH-treasury proxies (e.g. SBET) for the same move to confirm it's sector/crypto-wide rather than BMNR-specific.",
+      "horizon": "SHORT_TERM, the move is ETH-correlated beta, not a fundamental re-rating; will reverse with ETH, not with BMNR news.",
+      "opportunity_cost": "This is a gap DOWN, not a breakout entry — doesn't fit the Entry Checklist's bullish-momentum requirement. A stock this tightly correlated to a volatile crypto asset makes ATR-based stop sizing unreliable. Research only; no order recommended; would need to displace an existing holding or another week's trade slot if considered later on a confirmed reversal."
+    },
+    {
+      "rank": 2,
+      "symbol": "DPRO",
+      "price": 5.18,
+      "gap_pct": -5.99,
+      "premarket_volume": null,
+      "catalyst": "No fresh negative headline found for today; reads as a pullback after last week's Canadian Armed Forces drone contract pop and bullish analyst coverage.",
+      "headlines": [
+        "Draganfly Wins Five-Year Contract to Supply Tactical ISR Drones to Canadian Armed Forces (Sept 11, 2026)",
+        "Wall Street Analysts See a 124.41% Upside in Draganfly (DPRO)"
+      ],
+      "catalyst_detail": "Draganfly Inc. (NASDAQ:DPRO), a Saskatoon-based drone/robotics maker, won a 5-year contract to supply tactical ISR drones to the Canadian Armed Forces (announced Sept 11, 2026) and drew bullish analyst commentary this week (Zacks/TipRanks citing ~124% upside to consensus targets). A direct 'why DPRO is down today' headline was found but blocked by an anti-bot wall (Incapsula) and could not be read; no substitute negative catalyst surfaced.",
+      "why": "Likely mechanical profit-taking/mean-reversion in a ~$283M microcap after a multi-day news-driven spike (contract win + analyst hype) — common for illiquid small caps once early buyers take profit, absent any new negative development.",
+      "impact": "Script's volume field reflects prior full session volume, not live premarket volume (known limitation), so today's turnover can't be confirmed from this data. No fresh bearish catalyst found, so treat the drop as unconfirmed mean-reversion rather than a new bearish signal until intraday volume/price action confirms.",
+      "horizon": "SHORT_TERM, no structural catalyst broke today; if the ISR contract thesis holds this is a pullback within an intact short-term momentum story, not grounds to flip long-term bearish or bullish.",
+      "opportunity_cost": "Entering into a >5% intraday decline is catching a falling knife and conflicts with the rule against chasing within 3% of current price without confirmation. At $5.18 in a volatile microcap, a sane 2:1 R:R stop would likely be wide enough to strain the 20%-per-position cap. Research only; no order recommended."
     }
   ]
 }
