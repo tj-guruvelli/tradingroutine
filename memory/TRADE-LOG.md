@@ -700,3 +700,57 @@ pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-11`, equity/cash unchanged at $100,000). Market-Open screened T and TRMD — both failed confluence (only 1 of 4 indicators each, RSI neutral not oversold), consistent with a broad risk-off tape (AI-slowdown selloff, Brent spike on Hormuz-bypass risk, ~86% FOMC hike odds). Weekly trade count: 0/3 (week of Sep 14). 47 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 63rd straight session, operator review pending.
+
+### Sep 15, Market-Open (Day 48, Tuesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-14`). STEP 1: today's
+RESEARCH-LOG (2026-09-15 Pre-Market) = explicit **Decision: HOLD** — no
+`tradingview-data` confluence tooling this run again, FOMC decision
+tomorrow (~92% hike odds), 10-year yield at a post-GFC high (5.02%), and an
+escalating Middle East oil-supply shock (fresh Houthi strike on Saudi's
+King Khalid Air Base); pre-market only floated non-committed ideas
+(LMT/NOC/RTX on the defense theme, HAFN/TRMD/BWLP on the tanker theme), no
+entry/stop/target set. STEP 2: most recent setup-scan file is
+`data/setup-scan_cloud_2026-09-14_1838ET.json` (no 2026-09-15 file yet) —
+0 grade-A, 3 grade-B hits (HAFN, BMNR, BLSH).
+
+Merged candidate list: LMT, NOC, RTX, HAFN, TRMD, BWLP, BMNR, BLSH. All
+re-validated live (`alpaca.sh quote`, ~09:37 ET).
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- LMT $530.06 (ask) — fails confluence: no RSI/VWAP/200-SMA data pulled
+  this run (pre-market flagged this gap explicitly); catalyst (Houthi
+  strike on Saudi air base, defense theme) documented but can't clear the
+  ≥2-indicator bar with zero data — skip.
+- NOC $553.78 (ask) — same gap as LMT, no confluence data available —
+  skip.
+- RTX $200.90 (ask) — same gap as LMT, no confluence data available —
+  skip.
+- HAFN $9.37 (ask), grade B (setup-scan 18:38ET) — fails hard: RSI14
+  73.09 is overbought (>70 = "sell/no new long" per Indicator Canon),
+  disqualified regardless of the 200-SMA bullish read (price $9.34 >
+  SMA200 $7.26); catalyst (Brent spike, tanker day-rate tailwind)
+  documented but moot — skip.
+- TRMD $33.25 (ask) — standing skip, repeat name failed confluence in
+  Sep 9/10/14 sessions (RSI overbought/neutral, only 1 of 4 aligned); no
+  fresh confluence data this run to revisit — skip.
+- BWLP $28.77 (ask) — same tanker-theme standing skip as HAFN/TRMD (Sep
+  9/10/14: only 1-of-4 indicators) — skip.
+- BMNR $24.27 (ask), grade B (setup-scan 18:38ET) — fails confluence: only
+  1 of 4 indicators (price $25.00 > SMA200 $22.24) confirms bullish; RSI14
+  61.03 is neutral (canon's buy trigger is oversold <30, not merely "not
+  overbought"), no VWAP/insider data; already disqualified on a hard rule,
+  so an Apify catalyst fetch was skipped as moot (same precedent as T on
+  Sep 14) — skip.
+- BLSH $38.16 (ask), grade B (setup-scan 18:38ET) — fails confluence: only
+  1 of 4 indicators (price $37.39 > SMA200 $34.00) confirms bullish; RSI14
+  65.34 is neutral, no VWAP/insider data; catalyst fetch skipped as moot
+  for the same reason as BMNR — skip.
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 14). 48 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 64th straight session, operator review
+pending.
