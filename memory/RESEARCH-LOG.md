@@ -11757,3 +11757,46 @@ ranks today. All three are gap-DOWNs. 0 errors.
   eligible under the long-bias-only rule regardless of R:R math; capital
   stays in cash pending a name that gaps UP with a distinct, durable
   catalyst.
+
+## 2026-09-15 — Gappers (auto-scan 10:10 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+**1 hit**, above the price/gap filters (`premarket_volume` field not
+populated by Alpaca's snapshot endpoint at this hour — `volume` shown is
+the prior completed session's full-day volume, used per routine fallback
+rule). Fits under the 5-name deep-dive cap — no quick-scan-only ranks this
+run. Gap-DOWN. 0 errors.
+
+### Gappers (auto-scan 10:10 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | 24.40 | -5.24% | 327,441 | No same-day company news found; ETH-treasury proxy, likely tracking a pullback in ETH spot |
+
+#### Deep dive: BMNR $24.40 -5.24%
+
+- Catalyst: No same-day 8-K, press release, or news item was found tying
+  today's move to company-specific news. BitMine Immersion Technologies
+  (BMNR) held roughly 5.8M ETH (~4.8% of total ETH supply) plus cash, worth
+  ~$11.3B combined, per its most recent public holdings update (Aug 3,
+  2026). It operates as a public ETH-accumulation vehicle rather than an
+  operating business with near-term earnings catalysts.
+- Why: BMNR functions as a leveraged proxy for ETH spot price. With no
+  company-specific news found, a ~5% intraday decline most likely tracks a
+  pullback in ETH rather than an idiosyncratic event — treasury-model
+  stocks like this amplify the underlying asset's moves in both directions.
+- Impact: Volume (327,441 sh) is moderate for BMNR and not obviously
+  spiked, consistent with a broad crypto-market pullback rather than a
+  single headline-driven event. No confirmed peer read-through found in
+  this pull, though other ETH/BTC-treasury proxies would be expected to
+  move together if this is a crypto-wide dip rather than BMNR-specific.
+- Horizon: SHORT_TERM, no structural catalyst identified (no new
+  fundraising, dilution, or holdings-update news) — move looks like it is
+  tracking crypto-market beta, not a durable company-specific repricing.
+- Opportunity cost: 0/3 weekly trades used, 100% cash per today's
+  market-open TRADE-LOG entry, so this would not displace an existing
+  holding. But BMNR is a gap-DOWN, disqualified outright under the
+  long-bias-only rule regardless of R:R math; it is also a standing repeat
+  skip — failed the Entry Checklist confluence rule at this morning's
+  market-open run (only 1 of 4 indicators aligned, RSI neutral) — so it
+  already carries a disqualifying signal history from earlier today.
