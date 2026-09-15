@@ -11800,3 +11800,17 @@ run. Gap-DOWN. 0 errors.
   skip — failed the Entry Checklist confluence rule at this morning's
   market-open run (only 1 of 4 indicators aligned, RSI neutral) — so it
   already carries a disqualifying signal history from earlier today.
+
+## 2026-09-15 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan via `node scripts/setup-scan-cloud.mjs` (60 candidates,
+`config/rules.json` watchlist_tiers.immediate). `grade_a_possible: false` —
+16:38 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A
+was not evaluated for any symbol this run (grade A unreachable). 1 hit
+(grade B), 0 errors.
+
+### Setup Scan (16:38 ET, cloud)
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BLSH | B | Momentum confluence | daily swing | ADX14 42.6, EMA9 34.87 > EMA21 32.40, RSI14 70.5, px $32.96 |
