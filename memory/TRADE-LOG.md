@@ -761,3 +761,51 @@ pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-14`, equity/cash unchanged at $100,000). Market-Open screened the merged LMT/NOC/RTX/HAFN/TRMD/BWLP/BMNR/BLSH list — defense names failed on missing confluence data, HAFN failed hard on overbought RSI, remaining tanker/setup-scan names failed the ≥2-indicator confluence bar (mostly 1-of-4, RSI neutral not oversold) — consistent with a risk-off tape (FOMC decision tomorrow ~92% hike odds, 10-year yield at a post-GFC high 5.02%, Houthi strike on Saudi's King Khalid Air Base). Weekly trade count: 0/3 (week of Sep 14). 48 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 65th straight session, operator review pending.
+
+### Sep 16, Market-Open (Day 49, Wednesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-15`). STEP 1: today's
+RESEARCH-LOG (2026-09-16 Pre-Market) = explicit **Decision: HOLD** — FOMC
+rate decision at 2:00pm ET (25bps hike near-consensus per Standard
+Chartered desk note) with Fed Chair Warsh press conference to follow,
+10-year yield >5.0% (highest since 2007), Mideast oil-supply spike (Saudi
+pipeline outage / Houthi escalation / Libya halt) partially giving back,
+Empire State Manufacturing miss (7.6 vs 20.6 prior); two data gaps
+(S&P futures, sector momentum — both Apify queries returned unusable
+junk); explicit no-new-position guidance into the FOMC print. Two
+catalyst-only floats logged, both explicitly flagged unvalidated/not
+setups: XOM/CVX (oil-spike catalyst, no confluence data, stale wide-spread
+quotes) and LEN (earnings today pre-open, but same-day Fed hike is a
+same-day headwind for a rate-sensitive homebuilder — watch-for-reaction
+only). STEP 2: most recent setup-scan file is
+`data/setup-scan_cloud_2026-09-15_1838ET.json` (today's own file doesn't
+exist yet) — 1 grade-B hit, BLSH, 0 grade-A. Merged candidate list:
+XOM, CVX, LEN, BLSH. All re-validated live (`alpaca.sh quote`, ~09:36 ET).
+
+`tradingview-data` MCP not loaded this run (confirmed via tool search) —
+no independent confluence check possible, matching every session since
+Sep 8.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- XOM $166.59 (ask) — fails confluence: no RSI/VWAP/200-SMA data pulled
+  this run; catalyst (Mideast oil-supply spike) documented but pre-market
+  itself flagged this as an unvalidated float needing live confluence
+  data first — skip.
+- CVX $226.28 (ask) — same gap as XOM, no confluence data — skip.
+- LEN $83.63 (ask) — pre-market explicitly flagged this as a
+  watch-for-reaction item, not a long idea (same-day Fed hike is a
+  headwind for a rate-sensitive homebuilder); no confluence data pulled —
+  skip.
+- BLSH $36.21 (ask), grade B (setup-scan 18:38ET) — fails hard: RSI14
+  70.54 is overbought (>70 = "sell/no new long" per Indicator Canon) and
+  price $32.96 < SMA200 $33.98 at scan time (fails the 200-SMA long-bias
+  filter too) — 0 of 4 indicators support a long, disqualified regardless
+  of the documented catalyst (crypto-exchange listing momentum) — skip.
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 14). 49 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 67th straight session, operator review
+pending.
