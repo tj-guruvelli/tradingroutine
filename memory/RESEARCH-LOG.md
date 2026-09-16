@@ -12093,3 +12093,19 @@ was not evaluated for any symbol this run (grade A unreachable). 3 hits
 | BCI | B | Momentum confluence | daily swing | ADX14 37.72, EMA9 26.33 > EMA21 25.80, RSI14 72.63, px $26.68 |
 | QCOM | B | Momentum confluence | daily swing | ADX14 20.36, EMA9 177.38 > EMA21 172.01, RSI14 69.43, px $185.37 |
 | TRMD | B | Momentum confluence | daily swing | ADX14 21.73, EMA9 34.57 > EMA21 33.26, RSI14 65.45, px $31.62 |
+
+## 2026-09-16 — Setup Scan (18:38 ET, cloud)
+
+Full-universe scan via `node scripts/setup-scan-cloud.mjs` (60 candidates,
+`config/rules.json` watchlist_tiers.immediate). `grade_a_possible: false` —
+18:38 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A
+was not evaluated for any symbol this run (grade A unreachable). 3 hits
+(grade B), 0 errors.
+
+### Setup Scan (18:38 ET, cloud)
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BCI | B | Momentum confluence | daily swing | ADX14 37.72, EMA9 26.33 > EMA21 25.80, RSI14 72.63, px $26.68 |
+| QCOM | B | Momentum confluence | daily swing | ADX14 20.36, EMA9 177.38 > EMA21 172.01, RSI14 69.43, px $185.37 |
+| TRMD | B | Momentum confluence | daily swing | ADX14 21.73, EMA9 34.57 > EMA21 33.26, RSI14 65.45, px $31.62 |
