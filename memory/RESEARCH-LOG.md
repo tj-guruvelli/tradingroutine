@@ -11918,3 +11918,16 @@ directional inputs (futures, sector momentum). Weekly trade count: 0/3
 Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
 mismatch flagged Jul 27, unresolved 66th straight session, operator
 review pending.
+
+## 2026-09-16 — Gappers (auto-scan 08:14 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+69 symbols parsed off `memory/WATCHLIST.md`. Sanity check at THRESH=0 showed
+only 6 of 69 names carry a fresh, trustworthy today-dated trade this early
+(pre-market illiquidity at 08:14 ET) — largest move was OPEN at -3.6%, well
+under the 5% gap floor. **0 qualifying gappers.** No deep-dive run (nothing
+to dive on). `data/premarket_gappers_2026-09-16.json` written with empty
+`gappers: []` array for the record. 0 errors.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
