@@ -1,5 +1,22 @@
 {
-  "scanned_at": "2026-09-16T13:10:00Z",
+  "scanned_at": "2026-09-16T14:09:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 272.95,
+      "gap_pct": 5.3,
+      "premarket_volume": 162327,
+      "catalyst": "Bloom Energy continues to trade as a top AI-power-infrastructure name, riding raised FY guidance, 165% Q2 revenue growth and a $25B Brookfield funding backstop; no single fresh same-day headline found beyond this ongoing thesis.",
+      "headlines": [
+        "Why Bloom Energy May Be the Most Important AI Infrastructure Stock (MarketBeat via TradingView)"
+      ],
+      "catalyst_detail": "No new same-day (2026-09-16) headline was found. The move extends an existing thesis: Bloom Energy's Q2 2026 results (reported ~2026-07-28) showed revenue up >165% YoY, product sales of $935M (+200%), gross margin 34.3%, operating margin ~24%, and positive $175M free cash flow, with management raising full-year revenue/earnings guidance off a growing backlog (not tied to one contract). Oracle was the first major hyperscaler customer; Brookfield backs the buildout with a $25B (up from $5B) funding facility and is also deploying Bloom fuel cells at its own data centers.",
+      "why": "AI data-center power scarcity is pulling in momentum buyers: Bloom's on-site fuel cells let hyperscalers/neoclouds bypass grid interconnection queues and get power faster than new nuclear, so each guidance raise and new backer (Oracle, Brookfield) reinforces the 'picks-and-shovels for AI power' narrative and re-rates the stock higher.",
+      "impact": "Volume (162k) is well above the 50k floor, consistent with a real, not thin, move. Analyst consensus is still only 'Hold' with ~45% Buy-side bias and resistance flagged near $200-220 (already cleared), so there is real re-rating room but also chase risk this far above the late-July lows. Read-through: watch other AI-power/data-center-power names (fuel cell, nuclear, grid-equipment peers) for a similar bid.",
+      "horizon": "LONG_TERM - the catalyst (AI power buildout, hyperscaler backlog, Brookfield-derisked capital) is structural, not headline-driven, and aligns with an ongoing AI-infrastructure sector-rotation theme; still needs a Confluence-rule check (RSI/200-SMA/volume) on a later /trade pass before sizing.",
+      "opportunity_cost": "No open positions currently (0/6 max), so this wouldn't displace an existing holding. It would use 1 of the max-3-new-trades-per-week budget. At $272.95, a 20%-of-equity cap on ~$10k equity is ~$2,000 (~7 shares) - stop distance needs an ATR(14) check via scripts/size.mjs BE before any 2:1 R:R claim can be verified; this is a research flag only, not a sized recommendation."
+    }
+  ]
 }

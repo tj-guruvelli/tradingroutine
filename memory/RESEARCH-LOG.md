@@ -11944,3 +11944,49 @@ to dive on). `data/premarket_gappers_2026-09-16.json` overwritten with fresh
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+## 2026-09-16 — Gappers (auto-scan 10:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+69-symbol watchlist. Script ran clean (exit 0). **1 qualifying gapper** after
+filters (|gap| >=5.0%, price >=$3, volume >=50k): BE. Two other raw hits
+(BLSH -5.66%, TRMD +5.5%) were dropped on the volume floor (2,300 and 26,654
+shares respectively, both well under 50k) — thin, not-yet-tradable moves at
+this point in the session. Deep-dive cap is 5; only 1 name qualifies so only
+1 deep dive below (ranks 2-10 don't exist this run).
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 272.95 | +5.3% | 162,327 | Continuing AI-power-infrastructure re-rate (raised guidance, Brookfield $25B backstop) — no new same-day headline found |
+
+#### Deep dive: BE $272.95 +5.3%
+- Catalyst: No new same-day (2026-09-16) headline found. Move extends the
+  existing AI-power-infrastructure thesis: Q2 2026 results (~2026-07-28)
+  showed revenue +165% YoY, product sales $935M (+200%), gross margin
+  34.3%, operating margin ~24%, FCF +$175M, and raised FY guidance off a
+  growing backlog. Oracle is the anchor hyperscaler customer; Brookfield
+  backs the buildout with a $25B (up from $5B) funding facility and is also
+  deploying Bloom fuel cells at its own data centers.
+- Why: AI data-center power scarcity pulls in momentum buyers — Bloom's
+  on-site fuel cells let hyperscalers/neoclouds skip grid interconnection
+  queues and beat new nuclear to power, so each guidance raise/new backer
+  reinforces the "picks-and-shovels for AI power" re-rate.
+- Impact: Volume (162k) clears the 50k floor by 3x — a real move, not a
+  thin print. Consensus is still only "Hold" (~45% Buy-side bias), with a
+  prior resistance band near $200-220 already cleared, so there's re-rate
+  room but real chase risk this far above the late-July lows. Read-through:
+  watch other AI-power/fuel-cell/grid-equipment names for a similar bid.
+- Horizon: LONG_TERM — catalyst is structural (AI power buildout,
+  hyperscaler backlog, Brookfield-derisked capital), not headline-driven;
+  still needs a Confluence-rule check (RSI/200-SMA/volume) before sizing.
+- Opportunity cost: No open positions (0/6 max) so nothing displaced; would
+  use 1 of the max-3-new-trades/week budget. 20%-of-equity cap on ~$10k
+  equity is ~$2,000 (~7 shares) at $272.95 — ATR(14) stop distance not yet
+  checked (`scripts/size.mjs BE`), so 2:1 R:R is unverified. Research flag
+  only, not a sized recommendation.
+
+Also moving (quick scan only): none — only 1 name cleared all three filters
+this run.
+
+Notification: Telegram (primary) sent per STEP 6 gate (hits > 0).
