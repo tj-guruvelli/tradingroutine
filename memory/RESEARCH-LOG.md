@@ -11828,3 +11828,93 @@ was not evaluated for any symbol this run (grade A unreachable). 1 hit
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | BLSH | B | Momentum confluence | daily swing | ADX14 42.6, EMA9 34.87 > EMA21 32.40, RSI14 70.5, px $32.96 |
+
+## 2026-09-16 — Pre-market Research
+
+### Account
+- Equity: $100,000.00
+- Cash: $100,000.00 (100%)
+- Buying power: $400,000 (4x margin, unused)
+- Daytrade count: 0
+- Positions: 0. Open orders: 0. `balance_asof: 2026-09-15` (confirmed via `alpaca.sh account`/`positions`/`orders`).
+
+### Market Context
+- **WTI / Brent:** WTI $103.73 (-1.98%), Brent $107.50 (-1.15%) as of ~06:56 ET —
+  pulling back after a 2-session rally on Middle East supply risk (Saudi
+  East-West pipeline offline after drone/Houthi attacks, Libya oilfield +
+  pumping-station halt, Houthis advancing on Bab el-Mandeb Strait). API
+  reported a surprise +7.1M bbl US crude stockpile build overnight, capping
+  the bounce. Standard Chartered's Sep-16 note has WTI +4.4% on the week
+  into today driven by the same supply shock — net picture: sharp
+  Mideast-driven spike, partial give-back this morning.
+- **S&P 500 futures:** Apify query returned junk results (Wikipedia/Spotify,
+  0 usable pages) — logged as a data gap, no fallback WebSearch run (native
+  Google search tool unavailable in this session). Best available proxy:
+  Alpaca SPY/QQQ last quotes at Sep 15 20:00 UTC close — SPY $757.77, QQQ
+  $705.43 (session-close prints, not premarket).
+- **VIX:** 16.86 (-1.98%, -0.34) as of 07:02 ET; prev close 17.20; 52-week
+  range 13.38–35.30. Muted given the FOMC/oil backdrop — CNBC/Cboe both
+  show the same level.
+- **Today's catalysts (top):** **FOMC rate decision at 2:00pm ET** — a
+  25bps hike (3.75%→4.00%) is being priced as near-certain per Standard
+  Chartered's Sep-16 desk note, followed by Fed Chair Kevin Warsh's press
+  conference. 10-year Treasury yield >5.0%, highest since 2007, is the
+  dominant cross-asset driver (USD/DXY up, pressuring risk assets).
+  Empire State Manufacturing Index fell hard to 7.6 in September from
+  20.6 (vs. 15.0 consensus) — a soft print, adds stagflation-ish
+  cross-current alongside the oil spike.
+- **Earnings before open:** Lennar (LEN / LENb) — homebuilder, EPS
+  consensus ~$1.28-1.29 on ~$8.3B revenue. Notable given today's hike —
+  rate-sensitive housing name reporting directly into a Fed decision day.
+  No other S&P-relevant pre-market prints found.
+- **Economic calendar:** US Retail Sales MoM (Aug) at 8:30am ET, then the
+  FOMC decision at 2:00pm ET (see above). No other high-importance US
+  prints today per TradingEconomics calendar.
+- **Sector momentum:** Apify query also returned junk (same failure mode
+  as S&P futures query) — logged as a data gap, no YTD sector read this
+  session.
+- No open positions, so no held-ticker news pull was needed this run.
+
+### Trade Ideas
+No confluence-validated ideas this run — no `tradingview-data` RSI/VWAP/
+200-SMA pull was done in this pre-market session (Apify-only per routine
+scope), so nothing here clears the Entry Checklist's ≥2-indicator bar.
+Catalyst-only floats, unvalidated, not to be treated as setups:
+1. XOM / CVX (energy majors) — catalyst: Middle East supply-disruption
+   spike in crude (Saudi pipeline outage, Houthi escalation, Libya halt).
+   No confluence data pulled; last quotes are stale wide-spread closing
+   prints (XOM ask $177.53/bid $160.26, CVX ask $228.67/bid $205.73) — not
+   usable for a real entry/stop/target. Needs a live intraday quote +
+   RSI/200-SMA check before this goes anywhere.
+2. LEN (Lennar) — catalyst: earnings today pre-open, but a same-day Fed
+   hike is a same-day headwind for a rate-sensitive homebuilder; this is a
+   watch-for-reaction item, not a long idea, until the print + Fed reaction
+   are both in.
+Both are floats only — today is an FOMC day, patience > activity applies
+doubly.
+
+### Risk Factors
+- FOMC decision 2pm ET — 25bps hike near-consensus, but any surprise in
+  the dot-plot, Warsh's tone, or a "hawkish hold" surprise could whip the
+  tape hard in either direction. No new-position risk should be taken into
+  this event.
+- 10-year yield >5.0% (highest since 2007) — a standing headwind for
+  duration-sensitive equities (housing, high-multiple growth).
+- Oil supply shock (Saudi pipeline, Houthi advance on Bab el-Mandeb,
+  Libya halt) is a live geopolitical risk that could re-accelerate crude
+  and feed back into inflation expectations regardless of today's FOMC
+  outcome.
+- Empire State miss (7.6 vs 20.6 prior, 15.0 consensus) — first soft
+  manufacturing data point this week, worth tracking for a broader
+  growth-scare narrative if ISM/Philly Fed confirm.
+- Two data gaps this run (S&P futures query, sector-momentum query both
+  returned unusable Apify results) — no fallback WebSearch was available
+  in this session; treat today's futures/sector read as unconfirmed.
+
+### Decision
+**HOLD.** FOMC day, no confluence-validated setups, two data gaps on
+directional inputs (futures, sector momentum). Weekly trade count: 0/3
+(week of Sep 14). 49 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 66th straight session, operator
+review pending.
