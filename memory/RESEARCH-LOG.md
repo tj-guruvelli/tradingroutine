@@ -11931,3 +11931,16 @@ to dive on). `data/premarket_gappers_2026-09-16.json` written with empty
 
 No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
 "only send if hits > 0 OR errored" gate).
+
+## 2026-09-16 — Gappers (auto-scan 09:10 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Same 69-symbol watchlist, script ran clean (exit 0, no stderr). Sanity check
+at THRESH=0.5 shows the tape still quiet post-open: largest move OPEN at
+-3.6%, ORCL -2.26%, MSFT -1.94%, NIO -1.77% — nothing near the 5% gap floor.
+**0 qualifying gappers**, same as the 08:14 ET run. No deep-dive run (nothing
+to dive on). `data/premarket_gappers_2026-09-16.json` overwritten with fresh
+`scanned_at` timestamp and empty `gappers: []`. 0 errors.
+
+No Telegram/ClickUp notification sent (0 hits, no scan error — matches the
+"only send if hits > 0 OR errored" gate).
