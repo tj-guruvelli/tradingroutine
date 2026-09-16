@@ -1,22 +1,51 @@
 {
-  "scanned_at": "2026-09-16T14:09:00Z",
+  "scanned_at": "2026-09-16T15:12:52Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "BE",
-      "price": 272.95,
-      "gap_pct": 5.3,
-      "premarket_volume": 162327,
-      "catalyst": "Bloom Energy continues to trade as a top AI-power-infrastructure name, riding raised FY guidance, 165% Q2 revenue growth and a $25B Brookfield funding backstop; no single fresh same-day headline found beyond this ongoing thesis.",
+      "symbol": "RCAT",
+      "price": 7.41,
+      "gap_pct": -7.03,
+      "premarket_volume": 238708,
+      "catalyst": "No fresh dated headline found; stock giving back part of its Aug analyst-driven rally (Evercore Outperform, $15 PT) amid heavy 23% short interest.",
+      "headlines": ["https://www.benzinga.com/quote/RCAT"],
+      "catalyst_detail": "No single dated news item for Sept 16 surfaced via Apify RAG search or Benzinga's news list. Benzinga's live quote shows RCAT at $7.33, -7.91% on the day (Alpaca snapshot: $7.41, -7.03%), RSI 36, after a run built on the Aug 6 Q2 earnings beat (revenue +527% Y/Y) and a wave of bullish analyst coverage (Evercore ISI initiated Outperform, $15 PT on 8/28; consensus PT now $16.71) that had pushed shares up sharply over the trailing month.",
+      "why": "No fresh catalyst mechanism identified for today; the move reads as mean-reversion/profit-taking after a sharp multi-week analyst-driven run, amplified by heavy short interest (23.07%, 4.75 days to cover) that can whipsaw price in both directions without new news.",
+      "impact": "Volume 4.84M vs 8.87M average (Benzinga) is below-average turnover for a >7% move, arguing against a durable trend change and more for a technical pullback inside the 52-wk range ($5.77-$18.78). No sector-wide drone/defense peer read-through found.",
+      "horizon": "SHORT_TERM - no structural catalyst behind the drop; treat as noise inside an existing multi-week uptrend unless it breaks decisively below recent support.",
+      "opportunity_cost": "0 open positions currently (confirmed via alpaca.sh positions), so nothing to displace, but this is a down-gap with no identified catalyst - not a long entry candidate per the Confluence rule (needs a documented catalyst plus 2 of {VWAP, RSI, 200-SMA, insider}), and it would consume 1 of the 3 trades/week budget for a setup with unclear R:R at a sane stop. Skip; TRMD is the stronger use of this week's budget if either is pursued at /trade."
+    },
+    {
+      "rank": 2,
+      "symbol": "TRMD",
+      "price": 36.89,
+      "gap_pct": 5.58,
+      "premarket_volume": 59570,
+      "catalyst": "Hafnia Limited disclosed acquisition of an additional 4.5M TORM shares today while an Oaktree affiliate priced a secondary offering (424B7) of its stake.",
       "headlines": [
-        "Why Bloom Energy May Be the Most Important AI Infrastructure Stock (MarketBeat via TradingView)"
+        "https://www.stocktitan.net/news/HAFN/hafnia-limited-acquisition-of-an-additional-4-5-million-torm-qnfbhm9yxq50.html",
+        "https://www.stocktitan.net/sec-filings/TRMD/424b7-torm-plc-prospectus-filed-pursuant-to-rule-424-b-7-22fb53a5f105.html"
       ],
-      "catalyst_detail": "No new same-day (2026-09-16) headline was found. The move extends an existing thesis: Bloom Energy's Q2 2026 results (reported ~2026-07-28) showed revenue up >165% YoY, product sales of $935M (+200%), gross margin 34.3%, operating margin ~24%, and positive $175M free cash flow, with management raising full-year revenue/earnings guidance off a growing backlog (not tied to one contract). Oracle was the first major hyperscaler customer; Brookfield backs the buildout with a $25B (up from $5B) funding facility and is also deploying Bloom fuel cells at its own data centers.",
-      "why": "AI data-center power scarcity is pulling in momentum buyers: Bloom's on-site fuel cells let hyperscalers/neoclouds bypass grid interconnection queues and get power faster than new nuclear, so each guidance raise and new backer (Oracle, Brookfield) reinforces the 'picks-and-shovels for AI power' narrative and re-rates the stock higher.",
-      "impact": "Volume (162k) is well above the 50k floor, consistent with a real, not thin, move. Analyst consensus is still only 'Hold' with ~45% Buy-side bias and resistance flagged near $200-220 (already cleared), so there is real re-rating room but also chase risk this far above the late-July lows. Read-through: watch other AI-power/data-center-power names (fuel cell, nuclear, grid-equipment peers) for a similar bid.",
-      "horizon": "LONG_TERM - the catalyst (AI power buildout, hyperscaler backlog, Brookfield-derisked capital) is structural, not headline-driven, and aligns with an ongoing AI-infrastructure sector-rotation theme; still needs a Confluence-rule check (RSI/200-SMA/volume) on a later /trade pass before sizing.",
-      "opportunity_cost": "No open positions currently (0/6 max), so this wouldn't displace an existing holding. It would use 1 of the max-3-new-trades-per-week budget. At $272.95, a 20%-of-equity cap on ~$10k equity is ~$2,000 (~7 shares) - stop distance needs an ATR(14) check via scripts/size.mjs BE before any 2:1 R:R claim can be verified; this is a research flag only, not a sized recommendation."
+      "catalyst_detail": "Two same-day filings: (1) Hafnia Limited, a product-tanker peer, disclosed acquiring an additional 4.5M TORM A-shares today (Sept 16); (2) an Oaktree Capital Management affiliate filed a 424B7 prospectus pricing a secondary sale of TORM shares, while reportedly retaining the bulk of its ~$290M position. TRMD trades at $36.99 on StockTitan (+5.91%), matching our Alpaca snapshot ($36.89, +5.58%).",
+      "why": "A strategic industry buyer (Hafnia) adding to its stake on the same day a large existing holder (Oaktree) registers stock for sale reads as a net-bullish signal - the market is pricing the incremental demand from Hafnia's purchase as outweighing the supply overhang from Oaktree's registered secondary, especially since Oaktree is keeping the bulk of its position rather than fully exiting.",
+      "impact": "TORM has 10 recent news articles with 3 coinciding with positive price movement vs 5 negative - a mixed recent tape, but today's move is backed by a concrete ownership-change catalyst rather than a headline spike, and shipping/tanker peers (product tanker names) would be the sector to watch for read-through. Company fundamentals are solid (FY2025 revenue $1.3B, net income $286M, 21.3% net margin), reducing one-day-spike risk.",
+      "horizon": "LONG_TERM - the catalyst is a structural ownership shift (a peer/strategic building a stake) rather than a headline trade, and TORM pays a large dividend (27.16% yield rank #6) with an interim dividend payment scheduled Sept 24, 2026, giving a near-term event to anchor a multi-day/week swing thesis if it also clears the Confluence rule on a later /trade check.",
+      "opportunity_cost": "0 open positions currently, so this would not displace an existing holding, only consume 1 of the 3 trades/week budget. At a 10% trailing-stop distance (~$3.69 off $36.89), the position would need roughly a $7.40+ favorable move to clear the 2:1 R:R minimum - plausible given a positive dividend event nine days out, but this is research only; final sizing and R:R validation belongs to /trade with live VWAP/RSI/200-SMA confluence data."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 218.105,
+      "gap_pct": 5.19,
+      "premarket_volume": 79727,
+      "catalyst": "No dated-today headline found via search; likely riding continued AI-infrastructure/compute-deal momentum alongside broader AI-stock strength in today's tape (AMD, SOUN, ARWR all green).",
+      "headlines": ["https://stocktwits.com/news-articles/markets/equity/we-asked-retail-what-is-their-view-on-nbis-stock-post-the-deal-with-microsoft"],
+      "catalyst_detail": "Search results returned mostly stale coverage (a March 2026 retail-sentiment piece on Nebius's multi-year GPU/AI-compute supply deal with Microsoft, worth up to ~$19.4B through 2031) rather than anything dated Sept 16. No company-specific news for today surfaced after two search attempts; the move likely reflects continued momentum in the AI/compute-infrastructure trade rather than a discrete new catalyst.",
+      "why": "Without a same-day headline, the mechanism is inferred as sector-wide AI/semis strength (other AI-adjacent tickers also trending green today) plus lingering re-rating from the Microsoft capacity deal, rather than a specific new announcement - flag this as a research gap, not a confirmed catalyst.",
+      "impact": "Cannot assess sustainability without a dated catalyst or volume-vs-average comparison (data not retrieved for NBIS). Treat with more caution than TRMD/RCAT given the missing same-day source; verify with a fresh Apify/Perplexity pass or TradingView combined_analysis before acting.",
+      "horizon": "SHORT_TERM - default to short-term given no confirmed structural catalyst for today; do not assume the Microsoft-deal thesis is the active driver without re-verification.",
+      "opportunity_cost": "0 open positions currently. Given the un-sourced catalyst, this ranks below TRMD for the week's trade budget - would need a fresh, dated catalyst check and full confluence validation before consuming any of the 3 trades/week or 20%-per-position capital."
     }
   ]
 }

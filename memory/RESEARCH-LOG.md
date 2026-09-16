@@ -11990,3 +11990,90 @@ Also moving (quick scan only): none — only 1 name cleared all three filters
 this run.
 
 Notification: Telegram (primary) sent per STEP 6 gate (hits > 0).
+
+## 2026-09-16 — Gappers (auto-scan 11:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Script ran clean (exit 0). **3 qualifying gappers** after filters (|gap|
+>=5.0%, price >=$3, volume >=50k): RCAT, TRMD, NBIS. TRMD (+5.58%, 59,570
+vol) now clears the volume floor it missed at 10:09 ET (was 26,654). Deep-dive
+cap is 5; all 3 qualify so all 3 get the full deep dive below (no
+quick-scan-only ranks this run).
+
+### Gappers (auto-scan 11:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RCAT | 7.41 | -7.03% | 238,708 | No fresh dated headline; giving back part of Aug analyst-driven rally (Evercore Outperform, $15 PT) amid 23% short interest |
+| 2 | TRMD | 36.89 | +5.58% | 59,570 | Hafnia Limited bought an additional 4.5M TORM shares today while an Oaktree affiliate priced a secondary (424B7) of its stake |
+| 3 | NBIS | 218.105 | +5.19% | 79,727 | No dated-today headline found; reads as continued AI-infrastructure momentum alongside broader AI-stock strength today |
+
+#### Deep dive: RCAT $7.41 -7.03%
+- Catalyst: No single dated news item for Sept 16 surfaced via Apify RAG
+  search or Benzinga's news list. Benzinga's live quote shows RCAT at $7.33,
+  -7.91% on the day, RSI 36, after a run built on the Aug 6 Q2 earnings beat
+  (revenue +527% Y/Y) and bullish analyst coverage (Evercore ISI Outperform,
+  $15 PT on 8/28; consensus PT now $16.71).
+- Why: No fresh catalyst mechanism identified; reads as mean-reversion/
+  profit-taking after a sharp multi-week analyst-driven run, amplified by
+  heavy short interest (23.07%, 4.75 days to cover).
+- Impact: Volume 4.84M vs 8.87M average (Benzinga) is below-average turnover
+  for a >7% move — argues for a technical pullback, not a trend change, inside
+  the 52-wk range ($5.77-$18.78). No sector-wide drone/defense read-through
+  found.
+- Horizon: SHORT_TERM — no structural catalyst behind the drop; treat as
+  noise inside an existing uptrend unless it breaks decisively below support.
+- Opportunity cost: 0 open positions (confirmed via `alpaca.sh positions`),
+  so nothing displaced, but this is a down-gap with no catalyst — fails the
+  Confluence rule's documented-catalyst requirement outright. Skip; TRMD is
+  the stronger use of this week's 3-trade budget.
+
+#### Deep dive: TRMD $36.89 +5.58%
+- Catalyst: Two same-day filings: Hafnia Limited (a product-tanker peer)
+  disclosed buying an additional 4.5M TORM A-shares today; an Oaktree
+  Capital affiliate filed a 424B7 pricing a secondary sale of TORM shares
+  while reportedly keeping the bulk of its ~$290M position. StockTitan shows
+  TRMD at $36.99 (+5.91%), matching our Alpaca snapshot.
+- Why: A strategic buyer (Hafnia) adding to its stake the same day a large
+  holder (Oaktree) registers stock for sale reads net-bullish — incremental
+  demand is outweighing the supply overhang, especially with Oaktree
+  retaining most of its position.
+- Impact: TRMD has 10 recent news articles (3 positive-coinciding, 5
+  negative) — a mixed recent tape, but today's move is backed by a concrete
+  ownership-change catalyst, not a headline spike. Fundamentals are solid
+  (FY2025 revenue $1.3B, net income $286M, 21.3% net margin), reducing
+  one-day-spike risk. Watch other product-tanker peers for read-through.
+- Horizon: LONG_TERM — the catalyst is a structural ownership shift, and an
+  interim dividend payment is scheduled Sept 24, 2026 (27.16% yield, rank
+  #6), giving a near-term event to anchor a multi-day/week swing thesis if it
+  also clears the Confluence rule at /trade.
+- Opportunity cost: 0 open positions, so nothing displaced — would use 1 of
+  the 3-trades/week budget. A 10% trailing stop (~$3.69 off $36.89) needs
+  roughly a $7.40+ favorable move to clear 2:1 R:R — plausible given the
+  dividend event 9 days out, but unverified; final sizing/R:R belongs to
+  /trade with live VWAP/RSI/200-SMA confluence data.
+
+#### Deep dive: NBIS $218.105 +5.19%
+- Catalyst: Search returned mostly stale coverage (a March 2026
+  retail-sentiment piece on Nebius's multi-year AI-compute supply deal with
+  Microsoft, up to ~$19.4B through 2031) — nothing dated Sept 16 surfaced
+  after two search attempts.
+- Why: No same-day headline, so the mechanism is inferred as sector-wide
+  AI/semis strength (other AI-adjacent tickers also green today) plus
+  lingering re-rate from the Microsoft deal — flagged as a research gap, not
+  a confirmed catalyst.
+- Impact: Cannot assess sustainability without a dated catalyst or volume-
+  vs-average comparison (not retrieved for NBIS). Treat with more caution
+  than TRMD/RCAT; re-verify with a fresh Apify/Perplexity pass or
+  `combined_analysis` before acting.
+- Horizon: SHORT_TERM — default given no confirmed structural catalyst for
+  today; don't assume the Microsoft-deal thesis is the active driver without
+  re-verification.
+- Opportunity cost: 0 open positions. Un-sourced catalyst ranks this below
+  TRMD for the week's trade budget — needs a fresh, dated catalyst check and
+  full confluence validation before consuming any of the 3 trades/week or
+  20%-per-position capital.
+
+Also moving (quick scan only): none — all 3 qualifying names got the full
+deep dive this run.
+
+Notification: Telegram (primary) sent per STEP 6 gate (hits > 0).
