@@ -12280,3 +12280,54 @@ applies to NBIS alone.
   avoid a same-day whipsaw — whether that stop distance still clears the
   2:1 reward:risk minimum needs a live ATR(14) run (`scripts/size.mjs
   NBIS`) before any /trade check, not assumed here.
+
+### Gappers (auto-scan 09:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $228.64 | +10.27% | 397,359 | Nebius shares jumped premarket after a leaked customer communication showed price hikes on several on-demand GPU compute services (Nvidia H100/H200/B200, AMD EPYC). |
+
+Only 1 of ~60 watchlist tickers cleared the 5% gap / $3 price filter this
+run. Deep dive cap is 5 per the routine spec; with only 1 hit, all
+research below applies to NBIS alone. Gap/price essentially unchanged
+from the 08:09 ET run an hour ago — same catalyst, confirmed via a dated
+(today, 4:58am ET) Seeking Alpha piece this run, plus new context on
+active insider selling.
+
+#### Deep dive: NBIS $228.64 +10.27%
+- Catalyst: Confirmed via Seeking Alpha (Sep 17, 2026, 4:58 AM ET) —
+  Nebius shares rose ~9% premarket after reportedly raising prices on
+  several on-demand computing services (Nvidia H100/H200/B200, AMD EPYC),
+  per a customer communication circulated online. Comes days after being
+  named Palantir's preferred sovereign AI infrastructure partner (Sept 9)
+  and favorable debt pricing this week (SOFR+2.5% vs CoreWeave's
+  SOFR+5.5%), on a stock down ~21% over the trailing month on
+  AI-infrastructure derating fears. New this run: heavy insider selling —
+  CRO sold $1,463,560 in stock within the last few hours, following a
+  separate 7,000-share CRO sale yesterday (both via marketbeat.com
+  instant alerts / insidertrades.com).
+- Why: Repeated price hikes on GPU compute signal genuine pricing power /
+  sold-out capacity, read by the market as forward margin/revenue upside
+  — a supply-side confirmation of the bull case, not a new contract or
+  guidance change.
+- Impact: Premarket volume (397K) still thin vs NBIS's typical
+  regular-session turnover — not yet volume-confirmed. Durability is
+  questionable: source is a leaked customer communication, not a press
+  release/filing, and it's landing alongside active CRO insider selling
+  (a fade signal) on a stock still down ~21% over the trailing month —
+  reads more like a relief bounce inside a downtrend than a fresh
+  breakout. Sector read-through: CoreWeave (CRWV) and Taiwan Semi (TSM)
+  also moved today on related AI-compute-pricing/chip-price headlines —
+  sector-wide theme, not NBIS-idiosyncratic.
+- Horizon: SHORT_TERM, unconfirmed/leaked pricing report with no
+  accompanying earnings or guidance update, stacked against a month-long
+  downtrend and concurrent insider selling — needs regular-session volume
+  confirmation before carrying past the session/week. (Downgraded from
+  the 08:09 ET run's LONG_TERM read now that same-day insider selling is
+  visible — the pricing-power thesis is intact, but the fade risk near
+  entry outweighs it until confirmed.)
+- Opportunity cost: Account still flat: 0/6 open positions, 0/3 weekly
+  trades used. Nothing else on today's list to displace. Taking NBIS here
+  would spend one of this week's 3 trade slots and up to 20% equity on an
+  unconfirmed, leaked-news bounce with insiders selling into it; stop
+  distance vs. 2:1 R:R still needs a live `scripts/size.mjs NBIS` check
+  before any /trade — not assumed here.

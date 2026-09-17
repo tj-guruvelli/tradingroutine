@@ -1,22 +1,20 @@
 {
-  "scanned_at": "2026-09-17T12:09:00Z",
+  "scanned_at": "2026-09-17T13:09:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
       "symbol": "NBIS",
-      "price": 228.19,
-      "gap_pct": 10.06,
+      "price": 228.64,
+      "gap_pct": 10.27,
       "premarket_volume": 397359,
-      "catalyst": "Nebius reportedly hikes GPU cloud prices another 20%, signaling tight AI compute capacity and booming demand.",
-      "headlines": [
-        "Nebius Reportedly Hikes GPU Prices Another 20%, Stock Jumps (Benzinga)"
-      ],
-      "catalyst_detail": "Reports surfaced that Nebius raised GPU cloud pricing by another ~20%, the latest in a series of hikes, as AI compute capacity remains sold out amid booming demand. The move comes days after last week's disclosed strategic partnership with Palantir and on a tape otherwise pressured by Wednesday's 25bps Fed rate hike (first since 2023) and a hawkish Warsh press conference that hit chips/asset managers broadly.",
-      "why": "Repeated price hikes on a sold-out product signal genuine pricing power, not just hype -- investors read this as forward revenue/margin upside for a capacity-constrained AI infrastructure provider, pulling in momentum buyers even as the broader tape (post-Fed-hike, high 10Y yield) is otherwise risk-off.",
-      "impact": "Premarket volume (397K) is thin against NBIS's ~20.6M average daily volume -- the print is real but not yet volume-confirmed this early (7:56am ET quote). Sector read-through is bullish for other capacity-constrained AI/GPU-cloud names (e.g. CoreWeave/CRWV) since the pricing-power story is structural to the segment, not NBIS-specific. NBIS is already +48.8% over the trailing 3 months per recent fundamentals coverage, so this reads as continuation of an existing structural re-rating rather than a one-day headline spike, though confirmation needs regular-session volume.",
-      "horizon": "LONG_TERM, the catalyst (GPU price hikes reflecting real capacity scarcity, $4B+ pipeline creation in early 2026, reiterated $7-9B 2026 ARR guidance) is structural and aligns with the ongoing AI-infrastructure sector-rotation phase, worth a multi-day/week swing hold if it also clears the Confluence rule on a later /trade check -- though the stock is already extended after its 3-month run, raising fade risk near-term.",
-      "opportunity_cost": "Account is flat: 0/6 open positions, 0/3 weekly trades used (week of Sep 14), 100% cash. Taking this would displace nothing else on the books, but at $228.19/share a 20% max-position cap (~$20K on $100K equity) buys under 90 shares, and a stop needs to sit outside NBIS's normal volatility (52wk range $73.52-$299.86, RSI 53) to avoid a same-day whipsaw -- whether that stop distance still clears the 2:1 reward:risk minimum needs a live ATR(14) run (`scripts/size.mjs NBIS`) before any /trade check, not assumed here."
+      "catalyst": "Nebius shares jumped premarket after a leaked customer communication showed the AI cloud provider hiking prices on several on-demand GPU compute services (Nvidia H100/H200/B200, AMD EPYC).",
+      "headlines": [],
+      "catalyst_detail": "Reported by Seeking Alpha at 4:58 AM ET today: Nebius shares rose ~9% premarket after reportedly raising prices for several on-demand computing services, per a customer communication circulated online, covering Nvidia H100/H200/B200 GPU instances and AMD EPYC compute. This follows Nebius being named Palantir's preferred sovereign AI infrastructure partner (Sept 9) and reporting favorable debt terms this week (SOFR+2.5% vs CoreWeave's SOFR+5.5%). It comes after a rough month for the stock (-21% trailing month per 247wallst) on broader AI-infrastructure derating fears, and against heavy recent insider selling: the CRO sold $1,463,560 in stock within the last few hours (per insidertrades.com), following a separate 7,000-share CRO sale yesterday.",
+      "why": "Repeated price hikes on GPU compute signal genuine pricing power / sold-out capacity in the neocloud space, which the market reads as forward margin/revenue upside — a supply-side confirmation of the bull case after a month of AI-bubble-jitters derating, not a new contract or guidance change.",
+      "impact": "Premarket volume (397K) is thin next to NBIS's much larger regular-session turnover, so the move isn't yet volume-confirmed. Durability is questionable: the pricing news is sourced from a leaked customer communication, not a press release or filing, and it's landing alongside active CRO insider selling (a fade signal) on a stock still down ~21% over the trailing month — reads more like a relief bounce within a downtrend than a fresh breakout. Sector read-through: CoreWeave (CRWV) and Taiwan Semi (TSM) also moved today on related AI-compute-pricing/chip-price headlines, so this is a sector-wide 'AI infra pricing power' theme, not NBIS-idiosyncratic.",
+      "horizon": "SHORT_TERM: catalyst is an unconfirmed/leaked pricing report with no accompanying earnings or guidance update, stacked against a month-long downtrend and concurrent insider selling — treat as a premarket pop that needs regular-session volume confirmation, don't carry past the session/week without it.",
+      "opportunity_cost": "Only 1 of ~60 watchlist tickers cleared the 5% gap threshold, so nothing else on today's list to displace. Against the max-3-new-trades/week and max-6-position caps, taking NBIS here would spend one of this week's trade slots and up to 20% equity on an unconfirmed, leaked-news bounce inside a downtrend; a stop wide enough to clear this morning's premarket range would need checking against the 2:1 reward:risk minimum via scripts/size.mjs NBIS before any /trade — not assumed here. Better to let the open confirm (or fade) before committing a slot."
     }
   ]
 }
