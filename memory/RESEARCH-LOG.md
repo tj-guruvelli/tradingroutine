@@ -12109,3 +12109,126 @@ was not evaluated for any symbol this run (grade A unreachable). 3 hits
 | BCI | B | Momentum confluence | daily swing | ADX14 37.72, EMA9 26.33 > EMA21 25.80, RSI14 72.63, px $26.68 |
 | QCOM | B | Momentum confluence | daily swing | ADX14 20.36, EMA9 177.38 > EMA21 172.01, RSI14 69.43, px $185.37 |
 | TRMD | B | Momentum confluence | daily swing | ADX14 21.73, EMA9 34.57 > EMA21 33.26, RSI14 65.45, px $31.62 |
+
+## 2026-09-17 — Pre-market Research
+
+### Account
+- Equity: $100,000.00
+- Cash: $100,000.00 (100%)
+- Buying power: $400,000 (4x margin, unused)
+- Daytrade count: 0
+- Positions: 0. Open orders: 0. `balance_asof: 2026-09-16` (confirmed via `alpaca.sh account`/`positions`/`orders`).
+
+### Market Context
+- **WTI / Brent:** WTI $100.8 (-1.57%), Brent $103.7 (-1.99%) as of ~07:02 ET
+  — third straight pullback off the recent Mideast-driven spike, but still
+  well above pre-crisis levels. Saudi Arabia's East-West pipeline (drone
+  strike ~Sep 11) remains offline — US Energy Secretary says repairs
+  "could take weeks"; Saudi Aramco has cancelled European crude cargoes
+  and is rerouting via Oman. Houthi advances toward Bab al-Mandeb keep Red
+  Sea shipping risk elevated; tanker rates topped $1M/day for the first
+  time per OilPrice.com. Structural supply risk, not resolved by today's
+  pullback.
+- **S&P 500 futures:** Clean read this run (reworded query around the
+  "S&P" ampersand-parsing failure that broke this query the last two
+  sessions) — S&P 500 futures +62.50 (+0.83%) to 7,619 as of 06:52 ET;
+  Nasdaq 100 futures +312.50 (+1.08%); Dow futures +370.00 (+0.72%).
+  Broad risk-on premarket tape.
+- **VIX:** $15.94, **-9.99%** (-1.77) vs. prior close $17.71, as of 11:05
+  ET data / ~09:00 ET premarket per Cboe; 52-week range 13.38-35.30. Vol
+  cratered post-FOMC now that the hike itself is priced and past.
+- **Gold/Silver:** Gold $4,327.88 (+1.51%), Silver $64.15 (+1.87%) — both
+  bid alongside the equity-futures rally, an unusual combo (safe-haven +
+  risk-on together) worth flagging as a hedge against residual
+  Mideast-escalation/inflation risk rather than a pure risk-off signal.
+- **Today's catalysts (top):** The FOMC delivered its **25bps hike
+  (first since 2023)** yesterday (Sep 16) with Fed Chair Kevin Warsh's
+  press conference following — per CNN, markets are still digesting "what
+  it means for borrowers and savers" and whether the Fed "was bullied into
+  hiking." 10-year Treasury yield remains at its highest since 2007
+  (~5%). Today's premarket rally reads as relief now that the decision
+  itself is behind the tape. Note: one Apify source (catacal.com) mislabeled
+  the FOMC decision as occurring *today* (Sep 17, 8:00am) rather than
+  yesterday — treated as stale/mismatched calendar data and superseded by
+  the dated CNN coverage; flagged so it isn't miscited later.
+- **Earnings before open:** No watchlist-relevant names found — today's
+  calendar (Investing.com) is dominated by small/micro-caps (Rezolute,
+  US Gold Corp, Espey Mfg, Innate Pharma, etc.); nothing S&P-500-relevant
+  reporting before today's open.
+- **Economic calendar:** Housing starts (Aug) due today — forecast 1.320M
+  vs. a prior miss of 1.239M (a 6-year-low-adjacent print last month). No
+  CPI/PPI/jobs prints scheduled today per TradingEconomics/Catacal.
+- **Sector momentum:** Still unusable — the reworded query returned only
+  a JS-rendered State Street sector-tracker page with no live numbers in
+  the scraped markdown (same failure mode as the raw "S&P" query, now
+  confirmed as a *rendering* gap on this specific source rather than the
+  ampersand-parsing issue). No YTD sector read this session; third
+  consecutive session with this data gap.
+- **Investor-day catalysts today (non-actionable, none on watchlist):**
+  INTU, ASH, AS, YETI, EAT, ALNY, HUBS — Investor/Analyst Days per
+  Catacal; no thesis relevance to current tiers.
+- No open positions, so no held-ticker news pull was needed this run.
+
+### Trade Ideas
+No confluence-validated ideas this run — `tradingview-data` MCP not loaded
+this session (confirmed via tool search), so no independent RSI/VWAP/
+200-SMA pull was possible; nothing here clears the Entry Checklist's
+≥2-indicator bar. Catalyst-only floats, unvalidated, not to be treated as
+setups:
+1. XOM / CVX (energy majors) — catalyst: the Saudi pipeline outage/Houthi
+   Red Sea escalation is unresolved and arguably intensifying (tanker
+   rates >$1M/day, repairs "could take weeks" per US Energy Secretary),
+   even as spot crude pulls back today. Carried forward from Sep 16 —
+   still no confluence data pulled; needs a live intraday quote +
+   RSI/200-SMA check before this goes anywhere.
+2. TRMD — carried forward from the Sep 16 18:38 ET setup-scan (grade B,
+   "Momentum confluence," RSI14 65.45, EMA9>EMA21, ADX14 21.73 at $31.62)
+   plus its own standing catalyst (Hafnia/Oaktree ownership shift, Sep 24
+   dividend). Needs a fresh live confluence pull at open before
+   consideration — RSI was in the gray zone (not oversold, not yet
+   overbought) at scan time.
+3. Gold/gold-adjacent exposure (e.g., a miner) — new float: spot gold at
+   $4,327.88 (+1.51%) making fresh highs alongside silver, an unusual
+   safe-haven bid running concurrently with a risk-on equity-futures tape.
+   Not on the current watchlist/tier system — would need Tier-3 research
+   promotion (financials, catalyst durability) before this is anything
+   more than an observation.
+All three are floats only — no confluence data, no sizing, no entry.
+
+### Risk Factors
+- Mideast oil-supply shock is unresolved: Saudi pipeline still offline,
+  Houthi advance toward Bab al-Mandeb, record tanker rates. A fresh
+  escalation headline could reverse today's crude pullback and the
+  equity-futures rally alike.
+- Post-FOMC digestion risk: yesterday's 25bps hike is priced, but Warsh's
+  press-conference tone is still being parsed by the market (CNN: "hopes
+  it didn't royally screw up") — today's relief rally could give back
+  gains on any hawkish read.
+- 10-year yield ~5% (highest since 2007) remains a standing headwind for
+  duration-sensitive equities (housing, high-multiple growth) — today's
+  housing-starts print is a direct read on that channel.
+- One data source (catacal.com) mislabeled the FOMC decision date —
+  a reminder to cross-check dated news (CNN) against calendar-aggregator
+  sites before citing either in a trade thesis.
+- Sector-momentum data gap persists for a third consecutive session — no
+  clean read on sector rotation; `tradingview-data` MCP still not loaded,
+  so no independent confluence check is possible again today.
+
+### Decision
+**HOLD.** No confluence-validated setups (`tradingview-data` MCP
+unavailable again), Mideast oil-supply risk unresolved, and the tape is
+still digesting yesterday's Fed hike. Weekly trade count: 0/3 (week of
+Sep 14). 50 trading days since launch (Jul 9) with zero entries. Equity
+flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch
+flagged Jul 27, unresolved 69th straight session, operator review
+pending.
+
+### Notification note
+`scripts/clickup.sh` failed (HTTP 500) — root cause confirmed via verbose
+curl: `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` env vars are set to
+literal placeholder strings (`your_clickup_workspace_id_here` /
+`your_clickup_channel_id_here`), not real ClickUp IDs, so the API request
+resolves to ClickUp's internal cluster DNS and 500s. This is a
+configuration gap, not a transient outage — flagging for operator to
+populate real IDs. Not a "KEY not set" case (vars are non-empty), so this
+did not trigger the routine's STOP condition; proceeding to commit/push.
