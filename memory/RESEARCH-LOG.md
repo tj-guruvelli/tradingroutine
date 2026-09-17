@@ -12232,3 +12232,51 @@ resolves to ClickUp's internal cluster DNS and 500s. This is a
 configuration gap, not a transient outage — flagging for operator to
 populate real IDs. Not a "KEY not set" case (vars are non-empty), so this
 did not trigger the routine's STOP condition; proceeding to commit/push.
+
+### Gappers (auto-scan 08:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $228.19 | +10.06% | 397,359 | Nebius reportedly hikes GPU cloud prices another 20%, signaling tight AI compute capacity and booming demand. |
+
+Only 1 of ~60 watchlist tickers cleared the 5% gap / $3 price filter this
+run (`GAP_THRESHOLD=5.0 bash scripts/gappers-alpaca.sh watchlist`). Deep
+dive cap is 5 per the routine spec; with only 1 hit, all research below
+applies to NBIS alone.
+
+#### Deep dive: NBIS $228.19 +10.06%
+- Catalyst: Reports surfaced that Nebius raised GPU cloud pricing by
+  another ~20%, the latest in a series of hikes, as AI compute capacity
+  remains sold out amid booming demand. The move comes days after last
+  week's disclosed strategic partnership with Palantir and on a tape
+  otherwise pressured by Wednesday's 25bps Fed rate hike (first since
+  2023) and a hawkish Warsh press conference that hit chips/asset
+  managers broadly.
+- Why: Repeated price hikes on a sold-out product signal genuine pricing
+  power, not just hype — investors read this as forward revenue/margin
+  upside for a capacity-constrained AI infrastructure provider, pulling
+  in momentum buyers even as the broader tape (post-Fed-hike, high 10Y
+  yield) is otherwise risk-off.
+- Impact: Premarket volume (397K) is thin against NBIS's ~20.6M average
+  daily volume — the print is real but not yet volume-confirmed this
+  early (7:56am ET quote). Sector read-through is bullish for other
+  capacity-constrained AI/GPU-cloud names (e.g. CoreWeave/CRWV) since the
+  pricing-power story is structural to the segment, not NBIS-specific.
+  NBIS is already +48.8% over the trailing 3 months per recent
+  fundamentals coverage, so this reads as continuation of an existing
+  structural re-rating rather than a one-day headline spike, though
+  confirmation needs regular-session volume.
+- Horizon: LONG_TERM, the catalyst (GPU price hikes reflecting real
+  capacity scarcity, $4B+ pipeline creation in early 2026, reiterated
+  $7-9B 2026 ARR guidance) is structural and aligns with the ongoing
+  AI-infrastructure sector-rotation phase, worth a multi-day/week swing
+  hold if it also clears the Confluence rule on a later /trade check —
+  though the stock is already extended after its 3-month run, raising
+  fade risk near-term.
+- Opportunity cost: Account is flat: 0/6 open positions, 0/3 weekly
+  trades used (week of Sep 14), 100% cash. Taking this would displace
+  nothing else on the books, but at $228.19/share a 20% max-position cap
+  (~$20K on $100K equity) buys under 90 shares, and a stop needs to sit
+  outside NBIS's normal volatility (52wk range $73.52-$299.86, RSI 53) to
+  avoid a same-day whipsaw — whether that stop distance still clears the
+  2:1 reward:risk minimum needs a live ATR(14) run (`scripts/size.mjs
+  NBIS`) before any /trade check, not assumed here.
