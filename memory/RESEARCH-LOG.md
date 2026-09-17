@@ -12511,3 +12511,148 @@ since the field isn't genuinely populated. Deep-dive capped at top 5 by
   sector-rotation/2-failed-trade discipline, and RDW's lack of a
   same-day catalyst makes it the weaker of the three on entry-timing
   grounds today specifically.
+
+## 2026-09-17 — Gappers (auto-scan 11:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+19 tickers cleared the raw threshold; 18 after the price >= $3 floor (AGMH
+excluded, $0.67 < $3). "Vol" column is Alpaca's current-session volume, not
+true premarket turnover (no distinct premarket-volume field in the
+snapshot) — premarket_volume filter skipped since the field isn't genuinely
+populated, per routine caveat. Top 10 by |gap%| kept; deep-dive capped at
+top 5, ranks 6-10 got quick-scan only. SATL's first Apify query ("SATL
+stock news today catalyst") returned off-topic results (ticker collision
+with the word "today") — redone with a company-name-qualified query.
+
+### Gappers (auto-scan 11:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | 5.46 | +9.76% | 161,581 | No fresh dated catalyst this run; reads as sector momentum alongside other space names |
+| 2 | OKLO | 38.72 | +8.64% | 111,968 | Rebound tied to $200M federal nuclear initiative w/ Microsoft/Nvidia + US-Canada uranium trade friction |
+| 3 | LUNR | 14.99 | +8.07% | 168,660 | Bounce off June-July governance selloff on expanding ~$1.1B NASA CLPS/national-security backlog |
+| 4 | QBTS | 17.53 | +7.61% | 326,227 | Quantum-sector momentum (w/ RGTI) atop record Q1 bookings; one source flags valuation as stretched |
+| 5 | UMAC | 23.655 | +7.43% | 17,405 | Aug 8 Q2 revenue beat (~$16.7M, +35.1% same-day); drone-sector strength continuing |
+| 6 | BKSY | 23.05 | +7.16% | 4,764 | Mixed: "tracking satellites" catalyst headline vs. recent Jefferies downgrade to Hold |
+| 7 | RGTI | 15.88 | +7.15% | 255,454 | Quantum-sector rally; DARPA QBI program cited, rebound from leadership-reshuffle slide |
+| 8 | BW | 7.24 | +6.78% | 41,277 | Needham initiated Buy, $20 PT, extending Q1-beat/AI-datacenter-bookings rally |
+| 9 | DPRO | 5.79 | +6.63% | 22,383 | No single fresh catalyst; reads as drone-sector momentum alongside UMAC |
+| 10 | BLSH | 34.13 | +6.44% | 11,151 | Volatile on competing analyst actions (Rosenblatt/JPMorgan cuts vs. $49.30 consensus target) |
+
+#### Deep dive: SATL $5.46 +9.76%
+- Catalyst: No dated, company-specific catalyst surfaced this run. Recent
+  sessions show shares in a $4.09-$4.85 range with a $10.08 average
+  analyst price target (5 analysts, cut 8.2% from $10.98). (Note: the
+  10:09 ET run today logged a richer SATL catalyst — ex-NGA director hire
+  + Slingshot III maritime program expansion — not independently
+  reconfirmed by this run's searches; flagging for consistency, not
+  re-verified here.)
+- Why: Absent a company-specific headline this run, the move reads as
+  momentum/short-covering in a low-priced small-cap satellite name,
+  amplified by sector-wide interest in space/defense stocks (OKLO, LUNR,
+  BKSY all gapping the same morning).
+- Impact: Volume 161,581. The simultaneous move across OKLO/LUNR/BKSY
+  points to sector rotation rather than an SATL-specific event; without a
+  confirmed same-day catalyst this reads as susceptible to mean reversion.
+- Horizon: SHORT_TERM — no durable catalyst confirmed this run; treat as
+  momentum pending a verified company-specific driver.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used,
+  week of Sep 14). With no verified catalyst, SATL doesn't clear the
+  Entry Checklist's confluence bar today; it would compete directly with
+  OKLO/LUNR/RGTI from this same list, all of which have clearer, sourced
+  catalysts this run — a pass/watch, not a sizing decision.
+
+#### Deep dive: OKLO $38.72 +8.64%
+- Catalyst: Oklo (advanced-fission/SMR developer) is rebounding after a
+  volatile year (down roughly 50% YTD per one source) tied to a $200M
+  federal nuclear initiative alongside Microsoft and Nvidia reported in
+  late July, plus ongoing swings around US-Canada trade friction over
+  uranium supply.
+- Why: Nuclear/SMR names are being repriced on federal-policy tailwinds
+  (AI-datacenter power demand plus government backing for advanced
+  reactors); today's gap looks like continuation of that federal-catalyst
+  re-rating after a deep prior selloff.
+- Impact: Sector-wide — RGTI/QBTS (quantum) and OKLO (nuclear) both up
+  this morning suggests a broad growth/momentum bid rather than one
+  company-specific event; OKLO has shown large swings in both directions
+  recently, so this stays a volatile, headline-sensitive name.
+- Horizon: LONG_TERM — the federal SMR/AI-power-demand thesis is
+  structural, not a single headline, and fits the current growth-sector
+  rotation; still needs a Confluence-rule check before sizing given
+  OKLO's realized volatility.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  OKLO's volatility argues against a full 20%-of-equity position; taking
+  it would likely displace RGTI/QBTS from today's list for the same
+  growth-sector slot — a stop near recent support (~$35, ~10% away) could
+  clear 2:1 R:R only if targeting the upper end of its recent range; a
+  sizing call for /trade, not decided here.
+
+#### Deep dive: LUNR $14.99 +8.07%
+- Catalyst: Intuitive Machines (lunar-lander/space-infrastructure) is
+  bouncing after shares collapsed 51.2% in June 2026 on director-level
+  issues, continuing into July; more recent coverage highlights an
+  expanding ~$1.1B contract backlog from NASA CLPS and national-security
+  work supporting a $900M+ forward revenue case.
+- Why: Backlog/contract-visibility news is pulling in dip-buyers after
+  the June-July selloff; today's gap reads as a relief bounce off a
+  depressed base rather than one fresh headline.
+- Impact: Volume 168,660, one of the higher-volume names on today's list;
+  the space-sector read-through (OKLO, SATL, BKSY all gapping) suggests
+  sector rotation is doing at least part of the lifting alongside LUNR's
+  own backlog story.
+- Horizon: LONG_TERM if the NASA/national-security backlog thesis holds,
+  but the stock is coming off a governance-related crash, so near-term
+  price action stays headline-sensitive — treat as SHORT_TERM momentum
+  until the recovery holds above prior resistance across multiple
+  sessions.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  LUNR competes with OKLO/RGTI for a sector-rotation slot; given the June
+  governance overhang, a tight stop (7-8%) is needed to clear 2:1 R:R,
+  and it carries a recent credibility hit versus OKLO/RGTI on this list.
+
+#### Deep dive: QBTS $17.53 +7.61%
+- Catalyst: D-Wave Quantum reported record Q1 2026 bookings of $33.4M
+  (+~2,000% YoY) and a quarter-end cash position of $588M (+93% YoY) back
+  in May; coverage from within the last week frames the stock as "fully
+  priced," combining a large three-year gain with stretched valuation
+  checks.
+- Why: Today's gap looks like continued momentum in the quantum-computing
+  trade (RGTI also up 7.15% same morning) rather than a new
+  company-specific item — the Q1 bookings/cash strength continues to
+  support sentiment even as recent commentary flags valuation risk.
+- Impact: Volume 326,227, the highest of today's top 10, suggesting real
+  participation rather than a thin-float spike; but the "fully priced"
+  analyst framing plus the twin quantum-name move (QBTS+RGTI) reads as
+  sector momentum vulnerable to a valuation-driven pullback.
+- Horizon: SHORT_TERM — no fresh contract/earnings catalyst dated today;
+  this is sector momentum stacked on already-priced-in Q1 strength, with
+  valuation already flagged as stretched by at least one source.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  QBTS and RGTI are effectively the same trade (quantum-computing
+  momentum) — taking both would violate concentration/correlation
+  discipline; run scripts/corr-gate.mjs before sizing either, and a stop
+  tight enough to clear 2:1 R:R is hard to justify given the "fully
+  priced" framing already in the research.
+
+#### Deep dive: UMAC $23.655 +7.43%
+- Catalyst: Unusual Machines (drone components/parts) reported Q2 2026
+  results on Aug 8 showing revenue jumping to roughly $16.7M alongside a
+  continued net loss (~$7.8M, -$0.16/share); shares rose 35.1% same-day
+  on that beat, following FY2025 sales growth from $5.57M to $11.2M
+  reported in March.
+- Why: A real, large revenue-growth beat is the direct mechanism —
+  drone-parts demand tied to the broader US domestic-drone/defense-
+  onshoring theme is outrunning expectations and pulling in momentum
+  buyers despite continued net losses.
+- Impact: Volume only 17,405 — thin relative to most peers on this list,
+  so the move should be read cautiously: low liquidity can produce
+  outsized, less-durable swings; DPRO (also a drone name, #9 on today's
+  list) gapping the same morning supports a genuine drone-sector
+  read-through.
+- Horizon: SHORT_TERM — a beat-driven pop in a still-unprofitable,
+  thinly traded micro-cap; durability depends on follow-through revenue
+  growth over the next 1-2 quarters.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  UMAC's low volume (17,405 shares) makes a full-size position hard to
+  fill/exit cleanly and it competes with DPRO for a drone-theme slot; a
+  2:1 R:R at a sane stop is plausible given the size of the beat, but
+  thin liquidity argues for below-normal size if taken at all.
