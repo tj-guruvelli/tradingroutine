@@ -12331,3 +12331,183 @@ active insider selling.
   unconfirmed, leaked-news bounce with insiders selling into it; stop
   distance vs. 2:1 R:R still needs a live `scripts/size.mjs NBIS` check
   before any /trade — not assumed here.
+
+## 2026-09-17 — Gappers (auto-scan 10:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+10 of ~60 tickers cleared |gap| >= 5% and price >= $3 (AGMH excluded, price
+$0.56 < $3 floor). "Vol" column is Alpaca's most recent completed-session
+volume, not true premarket turnover (no distinct premarket-volume field in
+the snapshot) — noted per routine caveat, premarket_volume filter skipped
+since the field isn't genuinely populated. Deep-dive capped at top 5 by
+|gap%|; ranks 6-10 got quick-scan only.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | 5.57 | +11.97% | 87,423 | Named ex-NGA director as president; expanded Slingshot III maritime-intel program + SynMax partnership |
+| 2 | LUNR | 14.90 | +7.43% | 65,873 | Q1 backlog +~400% to $1.1B; new NASA CLPS + Space Force Andromeda IDIQ awards; offset by $500M ATM dilution |
+| 3 | GFS | 46.18 | +7.28% | 38,417 | No confirmed same-day catalyst — research returned stale/conflicting data, logged as a gap |
+| 4 | UMAC | 23.52 | +6.81% | 7,745 | Piper Sandler reportedly named UMAC a preferred drone-sector play (unconfirmed source) |
+| 5 | RDW | 11.54 | +6.81% | 81,456 | No same-day catalyst; Roth MKM reiterated Buy (Sep 16), Guggenheim initiated Neutral (Sep 15) |
+| 6 | BW | 7.23 | +6.64% | 19,716 | Q1 revenue $214.4M beat est. $149.72M; bookings +~1,971% YoY on AI data-center demand |
+| 7 | BKSY | 22.91 | +6.51% | 1,619 | Gen-3 satellite "first light" milestone; offset by heavy insider selling (CEO/CFO/CAO) |
+| 8 | OKLO | 37.88 | +6.29% | 42,182 | Down ~50% YTD; SMR peer NuScale CFO expects binding PPA by year-end, sector-wide sentiment lift |
+| 9 | ASTS | 62.77 | +5.87% | 61,207 | Japan's ~$912M LEO subsidy keeps Rakuten direct-to-device tie-up in focus (stale article, ~Jul 2026) |
+| 10 | RGTI | 15.67 | +5.70% | 103,662 | Government-funding-confirmation catalyst cited but source stale (Oct 2025), unconfirmed |
+
+#### Deep dive: SATL $5.57 +11.97%
+- Catalyst: Satellogic's own newsroom (Sep 8-14, 2026) confirms: Frank D.
+  "Trey" Whitworth (former NGA Director) named company President;
+  expanded "Slingshot III" maritime-intelligence program with IDT and the
+  U.S. Office of Naval Research; new exclusive maritime-imagery
+  partnership with SynMax; support for HEO's RPO mission operations; two
+  ISL-equipped satellites plus a "Sovereign Mark V" satellite slated for
+  an October 2026 launch.
+- Why: A high-profile ex-NGA leadership hire stacked with expanding
+  Navy/ONR-adjacent maritime-surveillance contracts signals Satellogic
+  converting its EO constellation into recurring government/defense
+  revenue — market reads personnel + contract news together as de-risking
+  the government pipeline, pulling in momentum buyers on a sub-$6
+  small-cap.
+- Impact: Vol field (87K) is prior-session volume, not true premarket
+  turnover — no clean volume confirmation yet. Sector read-through: LUNR
+  (#2) and RDW (#5) also gapping today on government-space themes —
+  sector-wide bid, watch for correlated give-back if the theme fades.
+- Horizon: SHORT_TERM watch / LONG_TERM candidate — hire + contract
+  expansion are structural, not a one-day headline, but needs Confluence
+  rule confirmation and volume confirmation before a multi-day hold.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used —
+  per Sep 17 Market-Open). Would spend 1 of 3 weekly slots; needs
+  `scripts/size.mjs SATL` for a 2:1 R:R check at a sane stop on a
+  sub-$6 volatile name. Competes directly with LUNR (#2) and RDW (#5) for
+  one "government space" sector slot under the 2-failed-trade
+  sector-rotation rule — can't take all three.
+
+#### Deep dive: LUNR $14.90 +7.43%
+- Catalyst: Thin sourcing (full-page scrape failed) — a snippet
+  references an upgrade to Buy around a >$1B backlog, record revenue, and
+  new NASA/defense contract wins, consistent with an earlier-cited Q1
+  2026 backlog surge to ~$1.1B (Lanteris integration), a new NASA CLPS
+  task order, and a US Space Force Andromeda IDIQ award (ceiling $6.24B)
+  — offset by a new $500M ATM dilution program. No single dated same-day
+  catalyst confirmed; dollar figures directionally right but not
+  freshly re-verified today.
+- Why: A near-$6B IDIQ ceiling award plus a quadrupled backlog signals
+  durable multi-year government revenue growth, repricing LUNR as a
+  broader space-infrastructure/defense contractor rather than a
+  one-mission lunar-lander story. The offsetting $500M ATM program is a
+  real dilution headwind the market appears to be discounting against
+  the contract wins.
+- Impact: Vol field (65.9K, prior-session) gives no same-day
+  confirmation. Sector read-through: same government-space theme lifting
+  SATL (#1) and RDW (#5) today.
+- Horizon: LONG_TERM candidate — IDIQ ceiling awards + backlog growth are
+  structural, multi-year revenue visibility, aligns with a
+  government-space sector-rotation phase if Confluence rule also
+  confirms on a later /trade check. ATM dilution is a real offsetting
+  long-term drag worth re-checking before sizing.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  Would spend 1 of 3 weekly slots; needs `scripts/size.mjs LUNR` + 2:1
+  R:R check. Competes with SATL (#1) and RDW (#5) for one sector slot —
+  of the three, LUNR has the most structurally durable catalyst (IDIQ
+  ceiling award) but also the most offsetting dilution risk.
+
+#### Deep dive: GFS $46.18 +7.28%
+- Catalyst: No confirmed same-day catalyst. Both fundamentals searches
+  came back unusable — one was GlobalFoundries' bare IR landing page
+  with no scraped content, the other a broken-link snippet citing GFS
+  "closed at $66.63, falling 3.39%" — a different price level and a down
+  move, inconsistent with today's scan ($46.18, +7.28%). Reads as
+  stale/mismatched search data rather than a real contradiction in GFS's
+  own price action, but no clean, dated, same-day catalyst was found.
+- Why: Unknown — no verified mechanism found connecting a catalyst to
+  today's move. An earlier low-confidence snippet suggested broad
+  semiconductor-sector strength/weakness but could not be confirmed
+  against a clean source.
+- Impact: Cannot assess sustainability without a confirmed catalyst.
+  Logging as a research gap per the no-Yahoo-fallback convention (log
+  the gap rather than force a source) — recommend a follow-up
+  `scripts/perplexity.sh` or direct semiconductor-press query before
+  treating this gap as tradeable.
+- Horizon: UNKNOWN — insufficient data to classify. Do not treat as a
+  confirmed setup until a same-day catalyst is verified.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  Given the unresolved catalyst, GFS should not be prioritized for a
+  weekly slot ahead of SATL/LUNR/RDW (#1/#2/#5), which all have
+  documented, dated catalysts — GFS needs a clean-source re-check before
+  it can even be compared on 2:1 R:R grounds.
+
+#### Deep dive: UMAC $23.52 +6.81%
+- Catalyst: Piper Sandler reportedly named Unusual Machines a preferred
+  play in the U.S. drone sector (search-snippet only, source URL
+  unresolved — Google redirect, page fetch failed).
+- Catalyst detail: Fundamentals confirm the setup independent of the
+  analyst-note snippet: Q2 2026 revenue ~$16.7M vs. $2.1M a year earlier
+  (~7x growth), ~95% of revenue from Enterprise/defense-linked
+  customers. Net loss widened to ~$7.8M (-$0.16 EPS) from ~$7.0M a year
+  earlier, but gross margin held at 34.7% (within management's low-30s
+  target, long-term goal ~40%) and adjusted EBITDA loss narrowed to
+  ~$0.4M. Management flagged Q3 2026 as a deliberate "capacity build"
+  quarter with intentionally lower revenue targets, prioritizing
+  scale-up over near-term sales.
+- Why: Explosive top-line growth (7x YoY) in a domestic-drone-supply-chain
+  name plays directly into the US onshoring/defense-drone-sourcing theme
+  (fits the reported Piper Sandler framing), even though the company is
+  still unprofitable — market appears to be pricing revenue-growth/margin
+  trajectory over near-term profitability.
+- Impact: Vol field shows only 7.7K (prior-session), thinnest of today's
+  top 10 — low liquidity raises one-day-headline-spike risk despite
+  genuinely improving fundamentals underneath. Same-day analyst-note
+  source unconfirmed (Google-redirect link, page fetch failed) — treat
+  the specific Piper Sandler claim as unverified.
+- Horizon: SHORT_TERM lean — fundamentals improving structurally
+  (revenue growth, narrowing EBITDA loss) argues LONG_TERM, but the
+  unverified analyst-note catalyst plus thin liquidity means today's pop
+  shouldn't be chased without volume confirmation and a cleaner source
+  check.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  UMAC's thin premarket liquidity (7.7K, lowest of the deep-dive names)
+  makes it the weakest of today's top 5 on execution-risk grounds even
+  before R:R comparison — needs `scripts/size.mjs UMAC` + source re-check
+  before trade-ready; would compete for a weekly slot against
+  SATL/LUNR/RDW's better-sourced setups.
+
+#### Deep dive: RDW $11.54 +6.81%
+- Catalyst: No same-day catalyst found; Roth MKM reiterated Buy (Sep 16)
+  and Guggenheim initiated Neutral (Sep 15), against a backdrop of
+  recent contract/expansion news (phased-array antenna investment,
+  Huntsville campus expansion, Kanematsu teaming agreement).
+- Catalyst detail: Redwire shows strong contract-driven growth tied to
+  NASA/DoD programs but remains unprofitable: TTM revenue $426.3M
+  (+63.1% YoY), TTM net income -$258.7M, market cap ~$2.58B. Cites a
+  ~$10B identified opportunity pipeline with ~$3B in proposals submitted
+  YTD and a 1.25x book-to-bill ratio. Stock has pulled back ~21% over
+  the past month / ~30% over the past quarter after an earlier surge,
+  though YTD return is still +17.6%; balance sheet is healthy (current
+  ratio 3.92, debt/equity 0.03) but profitability/valuation scores are
+  weak (P/S ~6.2x vs. sector ~4.2x).
+- Why: No single dated catalyst explains today's specific move — reads
+  as a bounce within a name with genuine structural growth (63% revenue
+  growth, large pipeline, 1.25x book-to-bill) that's been de-rated hard
+  over the past month/quarter on valuation and continued net losses.
+  Recent sell-side attention (Roth MKM Buy, Guggenheim Neutral) keeps
+  the name in focus without being a fresh trigger.
+- Impact: Vol field (81.5K, prior-session) is the second-highest of
+  today's top 10 — a modest positive liquidity signal, but with no fresh
+  catalyst the move could just as easily be mean-reversion after the
+  recent 21-30% pullback as the start of a new leg. Sector read-through:
+  same government-space theme lifting SATL (#1) and LUNR (#2) today.
+- Horizon: SHORT_TERM lean pending confirmation — fundamentals (revenue
+  growth, pipeline, book-to-bill) support a LONG_TERM structural thesis,
+  but without a dated catalyst for today's move, treat the current pop
+  as unconfirmed until re-tested against the Confluence rule on a later
+  /trade check.
+- Opportunity cost: Account flat (0 positions, 0/3 weekly trades used).
+  RDW's healthy balance sheet and largest revenue base of today's
+  deep-dive names make it a credible LONG_TERM candidate, but it
+  competes directly with SATL (#1) and LUNR (#2) for the same
+  "government space" sector slot — can't take all three under the
+  sector-rotation/2-failed-trade discipline, and RDW's lack of a
+  same-day catalyst makes it the weaker of the three on entry-timing
+  grounds today specifically.
