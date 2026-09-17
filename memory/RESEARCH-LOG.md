@@ -12656,3 +12656,17 @@ with the word "today") — redone with a company-name-qualified query.
   fill/exit cleanly and it competes with DPRO for a drone-theme slot; a
   2:1 R:R at a sane stop is plausible given the size of the beat, but
   thin liquidity argues for below-normal size if taken at all.
+
+## 2026-09-17 — Setup Scan (16:39 ET, cloud)
+
+Full-universe scan via `node scripts/setup-scan-cloud.mjs` (60 candidates,
+`config/rules.json` watchlist_tiers.immediate). `grade_a_possible: false` —
+16:39 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A
+was not evaluated for any symbol this run (grade A unreachable). 1 hit
+(grade B), 0 errors.
+
+### Setup Scan (16:39 ET, cloud)
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| TRMD | B | Momentum confluence | daily swing | ADX14 21.58, EMA9 34.97 > EMA21 33.56, RSI14 72.02, px $31.43 |
