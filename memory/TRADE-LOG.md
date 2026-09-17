@@ -816,3 +816,62 @@ pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-15`, equity/cash unchanged at $100,000). Market-Open screened XOM/CVX/LEN/BLSH — all skipped on missing confluence data or hard-rule fails (BLSH overbought + below 200-SMA) ahead of today's FOMC decision (25bps hike near-consensus, 10-year yield >5.0%). Weekly trade count: 0/3 (week of Sep 14). 49 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 68th straight session, operator review pending.
+
+### Sep 17, Market-Open (Day 50, Thursday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-16`). STEP 1: today's
+RESEARCH-LOG (2026-09-17 Pre-Market) = explicit **Decision: HOLD** —
+post-FOMC digestion (25bps hike delivered Sep 16, Fed Chair Warsh press
+conference tone still being parsed), Mideast oil-supply shock unresolved
+(Saudi pipeline still offline, Houthi advance on Bab al-Mandeb, tanker
+rates >$1M/day) even as crude pulled back today, 10-year yield ~5%
+(highest since 2007). `tradingview-data` MCP not loaded this run
+(confirmed via tool search) — no independent RSI/VWAP/200-SMA pull
+possible, 4th consecutive session with this gap. STEP 2: most recent
+setup-scan file is `data/setup-scan_cloud_2026-09-16_1838ET.json`
+(today's own file doesn't exist yet) — 0 grade-A, 3 grade-B hits: TRMD,
+BCI, QCOM. Merged candidate list: XOM, CVX, TRMD, NBIS (pre-market
+floats) + BCI, QCOM (scanner-only). All re-validated live (`alpaca.sh
+quote`, ~09:37 ET).
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- XOM $170.30 (ask) — fails confluence: no RSI/VWAP/200-SMA data (MCP
+  unavailable); catalyst (Mideast oil-supply shock) documented but
+  pre-market itself carried this forward as an unvalidated float. Quote
+  also shows an abnormally wide bid/ask ($153.44/$170.30, ~10% spread)
+  for a mega-cap — same stale/wide-spread pattern flagged Sep 16, a data
+  quality red flag independent of the confluence fail — skip.
+- CVX $210.57 (ask) — same gaps as XOM: no confluence data, and an
+  abnormally wide bid/ask ($198.55/$210.57) — skip.
+- TRMD $36.80 (ask), grade B (setup-scan 18:38ET, curr_px $31.62 at scan
+  time — price has since run +16% overnight, scan indicators now stale).
+  At scan time: RSI14 65.45 (neutral, not a bullish signal), price above
+  SMA200 ($27.73) — only 1 of 4 confluence indicators (200-SMA) confirms,
+  no VWAP/insider data — fails confluence — skip.
+- NBIS $217.08 (ask) — pre-market flagged this as unconfirmed/leaked
+  pricing report (not a press release/filing) stacked against a
+  month-long downtrend, with fresh same-day CRO insider *selling*
+  ($1.46M) as an active fade signal — the opposite of a bullish insider
+  signal. No RSI/VWAP/200-SMA data either (MCP unavailable) — skip.
+- BCI $26.54 (ask), grade B (setup-scan 18:38ET) — fails hard: RSI14
+  72.63 is overbought (>70 = "sell/no new long" per Indicator Canon); no
+  catalyst documented in RESEARCH-LOG for BCI at all — skip without
+  spending an Apify catalyst lookup (technical hard-fail is independently
+  disqualifying).
+- QCOM $193.00 (ask), grade B (setup-scan 18:38ET) — RSI14 69.43
+  (borderline, not clearly bullish), price above SMA200 ($168.30) — only
+  1 of 4 confluence indicators confirms, no VWAP/insider data — fails
+  confluence regardless of catalyst status; no catalyst documented in
+  RESEARCH-LOG either — skip.
+
+No planned tickers executed — Steps 5-6 skipped. Weekly trade count: 0/3
+(week of Sep 14). 50 trading days since launch (Jul 9) with zero entries.
+Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27, unresolved 70th straight session, operator
+review pending. ClickUp notification channel remains broken
+(`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are literal placeholder
+strings, not real IDs, per today's RESEARCH-LOG note) — not a "KEY not
+set" case so it does not trigger the routine's STOP condition, but no
+trade fired this run regardless so STEP 8 does not apply.
