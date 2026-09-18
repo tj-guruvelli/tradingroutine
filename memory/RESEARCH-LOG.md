@@ -12684,3 +12684,129 @@ was not evaluated for any symbol this run (grade A unreachable). 1 hit
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | TRMD | B | Momentum confluence | daily swing | ADX14 21.58, EMA9 34.97 > EMA21 33.56, RSI14 72.02, px $31.43 |
+
+## 2026-09-18 — Pre-market Research
+
+### Account
+- Equity: $100,000.00
+- Cash: $100,000.00 (100%)
+- Buying power: $400,000 (4x margin, unused)
+- Daytrade count: 0
+- Positions: 0. Open orders: 0. `balance_asof: 2026-09-17` (confirmed via `alpaca.sh account`/`positions`/`orders`).
+
+### Market Context
+- **WTI / Brent:** WTI $101.01 (-0.88%), Brent $103.83 (-0.94%) per CNBC as
+  of ~06:17 ET — pulling back as Saudi Arabia reportedly makes more crude
+  available to Asian refiners via ship-to-ship transfers near Oman's Sohar
+  port, easing supply-disruption fears even after fresh Saudi-Houthi border
+  strikes Thursday. Cross-check via TradingEconomics: crude $100.41
+  (-1.47%), easing toward $100 from Tuesday's four-month high of $106;
+  Trump flagged possible re-escalation against Iran, and Saudi's East-West
+  pipeline (offline since the Sep 11 strike) could reportedly come back
+  online "in the next days." Mideast supply risk elevated but easing, not
+  resolved.
+- **S&P 500 futures:** Dow futures +55pts (+0.1%), S&P 500 futures +0.2%,
+  Nasdaq-100 futures +0.4% as of ~06:17 ET (CNBC) — a continuation of
+  Thursday's post-Fed bounce (Dow +316/+0.6%, S&P +1.1%, Nasdaq +1.7%)
+  after Wednesday's hike-driven selloff (Dow -600). Week-to-date through
+  Thursday: Dow -1.5%, S&P -0.3%, Nasdaq +0.3% (on track to be the only
+  major average positive this week).
+- **VIX:** $15.25, **-1.23%** (-0.19) vs. prior close $15.44, per Cboe
+  as of 11:05 ET data pull (~7:05 AM EDT quote: Open $15.07, Day range
+  $14.99-$15.37, 52-week range $13.38-$35.30). Calm/low — vol continues
+  cooling now that the Fed decision is priced and past.
+- **Today's catalysts (top):** Fed delivered a **25bps hike Wed Sep 16
+  (first hike in 3 years)** under new Chair Kevin Warsh, unanimous vote,
+  with guidance toward at least one more hike this year — drove Wednesday's
+  selloff, then Thursday's AI-led rally as investors looked past the
+  higher-for-longer rate path. BOJ hiked 25bps to 1.25% overnight (31-year
+  high), split 7-2, flagging upside inflation risk — Japan's fastest
+  hike-cycle pace since normalization began. Asia broadly higher (Nikkei
+  +1.38%, Kospi +2.66%, CSI 300 +1.06%, ASX flat); Europe softer (Stoxx 600
+  -0.2/-0.4%, CAC 40 -0.5%). Treasury yields mixed: 10-year flat at 4.951%,
+  2-year +2bp to 4.707%, 30-year -1bp to 5.286%. Warren Buffett announced
+  he is stepping down as Berkshire Hathaway chairman (becomes chairman
+  emeritus, son Howard succeeds) — notable market-structure headline, not
+  directly actionable for this account/watchlist.
+- **Earnings before open:** Only one name on today's calendar (Investing.com
+  / Liquid Earnings Calendar) — Trio-Tech International (TRT), an
+  immaterial nano-cap with no watchlist relevance. Nothing S&P-500-relevant
+  reporting before today's open.
+- **Economic calendar:** BoJ rate decision (above, already out). UK Retail
+  Sales MoM due (forecast -0.5%, prior -0.5%). Fed speakers today: Governor
+  Michelle Bowman and Kansas City Fed President Jeffrey Schmid — markets
+  watching for color on Wednesday's unanimous hike vote. No CPI/PPI/jobs
+  prints scheduled today.
+- **Sector momentum:** Schwab Sector Views (dated Sep 4 — ~2 weeks stale;
+  the live State Street sector-tracker page again returned no live numbers
+  in scraped markdown, same rendering gap as recent sessions) — **More
+  Favored:** Financials, Health Care, Industrials, Materials. **Neutral:**
+  Communication Services, Consumer Staples, Energy, Information Technology.
+  **Less Favored:** Utilities. **Least Favored:** Consumer Discretionary,
+  Real Estate. Trailing-12-month leaders: Energy +41.7%, Information
+  Technology +27.2%, Health Care +21.3%, Industrials +19.5%. Financials
+  favored on steeper yield curve / higher NII from the rate-hike path;
+  Energy capped by dependence on US-Iran conflict trajectory.
+- No open positions, so no held-ticker news pull was needed this run.
+
+### Trade Ideas
+No confluence-validated ideas this run — `tradingview-data` MCP not loaded
+this session (confirmed via tool search), so no independent RSI/VWAP/
+200-SMA pull was possible; 5th+ consecutive session with this data gap.
+Catalyst/sector-level floats only, unvalidated, not to be treated as setups:
+1. Financials sector (e.g., XLF or a large-cap bank) — catalyst: Wed's Fed
+   hike plus a steeper yield curve (2s ticking up, 10s flat near 4.95%)
+   supports bank net-interest-income; Schwab rates the sector "More
+   Favored." No single-name catalyst identified, no confluence data pulled
+   — needs a live RSI/200-SMA check and a specific name before this is
+   anything more than a sector observation.
+2. TRMD — carried forward from the Sep 17 18:38 ET setup-scan (grade B,
+   RSI14 72.02 at $31.43). Live quote this morning ($31.43 bid, pre-market,
+   effectively last close) confirms no material move since the scan — but
+   RSI14 72.02 is **overbought** (>70 = "sell/no new long" per Indicator
+   Canon), a hard disqualifier independent of any confluence pull. Skip
+   without spending further research.
+3. Energy sector — 12-month momentum leader (+41.7%) on higher oil prices,
+   but today's crude pullback (Saudi supply relief) and the sector's
+   Schwab-flagged dependence on "the trajectory of U.S.-Iran hostilities"
+   argue against chasing here; also carries the same wide-bid/ask data-
+   quality flag on XOM/CVX noted in prior sessions (unconfirmed this run —
+   no quote pulled given the sector-level nature of this float).
+All three are floats only — no confluence data, no sizing, no entry.
+
+### Risk Factors
+- Mideast oil-supply risk elevated but easing today (Saudi ship-to-ship
+  relief flow to Asia) — a fresh escalation headline (Saudi-Houthi border
+  fighting is ongoing) could reverse both the oil pullback and the
+  equity-futures bounce.
+- Post-FOMC digestion continuing into day 3: Wednesday's hike (first in 3
+  years) plus Chair Warsh's guidance toward at least one more 2026 hike is
+  still being priced; Thursday's AI-led rally could prove fragile if
+  today's Fed speakers (Bowman, Schmid) strike a more hawkish tone.
+- BOJ's 31-year-high rate (1.25%, split 7-2 vote) plus a historically weak
+  yen raises global-rates cross-currents — a factor in the mixed Treasury-
+  yield picture and worth monitoring for spillover to US duration-sensitive
+  names.
+- Sector-momentum data gap persists (5th+ consecutive session) —
+  `tradingview-data` MCP still not loaded, so no independent RSI/VWAP/
+  200-SMA confluence check is possible; today's Schwab sector read is
+  ~2 weeks stale.
+- Equity remains flat at $100,000 vs. the ~$10k baseline in
+  `TRADING-STRATEGY.md`/mission framing — confirmed-live mismatch flagged
+  Jul 27, unresolved 72nd+ straight session, operator review still pending.
+
+### Decision
+**HOLD.** No confluence-validated setups (`tradingview-data` MCP
+unavailable again), TRMD hard-disqualified on overbought RSI, Mideast
+supply risk elevated (even if easing today), and the tape is still
+digesting this week's Fed hike. Weekly trade count: 0/3 (week of Sep 14).
+51 trading days since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — baseline mismatch flagged Jul 27, unresolved, operator review
+pending.
+
+### Notification note
+`scripts/clickup.sh` failed again (HTTP 500) — same root cause as prior
+sessions: `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still set to
+literal placeholder strings, not real ClickUp IDs. Not a "KEY not set"
+case (vars are non-empty), so this did not trigger the routine's STOP
+condition; proceeding to commit/push.
