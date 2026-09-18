@@ -1,5 +1,34 @@
 {
-  "scanned_at": "2026-09-18T12:11:00Z",
+  "scanned_at": "2026-09-18T13:09:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BMNR",
+      "price": 24.68,
+      "gap_pct": 8.2,
+      "premarket_volume": 1424967,
+      "catalyst": "BitMine Immersion (Ethereum treasury company) tracking a broader crypto/ETH rally; latest ETH-holdings update Sept 14, 2026 showed 5.93M ETH tokens held.",
+      "headlines": [],
+      "catalyst_detail": "BitMine Immersion Technologies (BMNR), a Nasdaq-listed corporate Ethereum treasury vehicle chaired by Tom Lee, has been publishing weekly ETH-accumulation press releases. The most recent (Sept 14, 2026) confirmed ETH holdings reached 5.93 million tokens with total crypto+cash continuing to grow, and a portion is staked on the MAVAN platform for yield. No fresh company-specific press release surfaced for today's session in this scan; the gap tracks a broader crypto/ETH rally rather than one new headline.",
+      "why": "BMNR trades as a leveraged proxy for ETH price/sentiment; when ETH strengthens, the market re-rates BMNR's treasury NAV and staking-yield narrative, pulling in momentum buyers.",
+      "impact": "Move reads as ETH-beta driven rather than an idiosyncratic one-day spike -- sustainability depends on ETH holding its gains, not new company news, so it can fade quickly if crypto pulls back. Read-through: other crypto-treasury/miner names likely moving in sympathy (sector-wide, not stock-specific).",
+      "horizon": "SHORT_TERM -- no new company-specific catalyst since the Sept 14 filing; move tracks crypto beta and fades fast without ETH follow-through.",
+      "opportunity_cost": "A single-name, high-beta crypto proxy like BMNR needs a stop wide enough to respect ETH's volatility, which likely blows past the 2:1 R:R minimum at a sane distance. Taking it would use one of the max-3-new-trades-this-week slots and one of 6 position slots, displacing either a higher-conviction structural setup or RGTI (today's #2, also thin on fresh catalyst)."
+    },
+    {
+      "rank": 2,
+      "symbol": "RGTI",
+      "price": 15.98,
+      "gap_pct": 7.83,
+      "premarket_volume": 897336,
+      "catalyst": "Rigetti Computing continues to be framed as a quantum-computing 'catalyst' name in recurring coverage citing a $100M UK investment and prior AFRL government quantum contract lineage.",
+      "headlines": [],
+      "catalyst_detail": "Recent coverage (recycled from a UK $100M investment commitment and a long-standing AFRL/DARPA-linked government quantum contract) continues to circulate RGTI as a quantum-computing momentum name. No single fresh same-day (Sept 18) press release was found in this scan; the sourced articles are dated weeks to months prior.",
+      "why": "Quantum-computing names re-rate sharply on any government-funding or contract headline given RGTI's small float and pre-revenue, speculative profile; momentum flow and short-covering amplify the move.",
+      "impact": "Volume (~897K) is elevated but the underlying news is thin/recycled rather than a fresh same-day catalyst -- reads more like a sector momentum/short-squeeze spike than a fundamentally supported re-rate. Peer quantum names (e.g. IONQ, QBTS) are a likely sympathy read-through.",
+      "horizon": "SHORT_TERM -- no new structural catalyst confirmed today; classic quantum-hype spike with high mean-reversion risk within days.",
+      "opportunity_cost": "RGTI's setup is speculative/momentum-only; at a stop wide enough for this volatility, clearing the 2:1 R:R minimum is questionable. Taking it competes directly with BMNR (today's #1, higher gap%) for the same new-trade-this-week slot and the same 'hype spike, no fresh catalyst' bucket -- neither offers a clean, sector-rotation-aligned structural setup per TRADING-STRATEGY.md."
+    }
+  ]
 }

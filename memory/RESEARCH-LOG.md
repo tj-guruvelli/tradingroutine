@@ -12825,3 +12825,32 @@ error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-09-18 — Gappers (auto-scan 09:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+3 raw hits; 2 of ~60 tickers cleared all filters (gap>=5%, price>=$3,
+premarket_volume>=50k where populated) — RR (+5.88%, $1.71) excluded on the
+$3.00 price floor. Both qualifying rows got deep-dive (cap=5, only 2
+available). Deep-dive cap stated: top 5 of 10 get full writeup — N/A here,
+both rows made the cut.
+
+### Gappers (auto-scan 09:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | $24.68 | +8.2% | 1,424,967 | ETH treasury holdings update (5.93M ETH, Sept 14 press release); gap tracks broader crypto/ETH rally |
+| 2 | RGTI | $15.98 | +7.83% | 897,336 | Recycled quantum-computing catalyst coverage ($100M UK investment, AFRL contract lineage); no fresh same-day news found |
+
+#### Deep dive: BMNR $24.68 +8.2%
+- Catalyst: BitMine Immersion Technologies (BMNR), a Nasdaq-listed corporate Ethereum treasury vehicle chaired by Tom Lee, has been publishing weekly ETH-accumulation press releases. The most recent (Sept 14, 2026) confirmed ETH holdings reached 5.93 million tokens with total crypto+cash continuing to grow, and a portion is staked on the MAVAN platform for yield. No fresh company-specific press release surfaced for today's session in this scan; the gap tracks a broader crypto/ETH rally rather than one new headline.
+- Why: BMNR trades as a leveraged proxy for ETH price/sentiment; when ETH strengthens, the market re-rates BMNR's treasury NAV and staking-yield narrative, pulling in momentum buyers.
+- Impact: Move reads as ETH-beta driven rather than an idiosyncratic one-day spike — sustainability depends on ETH holding its gains, not new company news, so it can fade quickly if crypto pulls back. Read-through: other crypto-treasury/miner names likely moving in sympathy (sector-wide, not stock-specific).
+- Horizon: SHORT_TERM, no new company-specific catalyst since the Sept 14 filing; move tracks crypto beta and fades fast without ETH follow-through.
+- Opportunity cost: A single-name, high-beta crypto proxy like BMNR needs a stop wide enough to respect ETH's volatility, which likely blows past the 2:1 R:R minimum at a sane distance. Taking it would use one of the max-3-new-trades-this-week slots and one of 6 position slots, displacing either a higher-conviction structural setup or RGTI (today's #2, also thin on fresh catalyst).
+
+#### Deep dive: RGTI $15.98 +7.83%
+- Catalyst: Recent coverage (recycled from a UK $100M investment commitment and a long-standing AFRL/DARPA-linked government quantum contract) continues to circulate RGTI as a quantum-computing momentum name. No single fresh same-day (Sept 18) press release was found in this scan; the sourced articles are dated weeks to months prior.
+- Why: Quantum-computing names re-rate sharply on any government-funding or contract headline given RGTI's small float and pre-revenue, speculative profile; momentum flow and short-covering amplify the move.
+- Impact: Volume (~897K) is elevated but the underlying news is thin/recycled rather than a fresh same-day catalyst — reads more like a sector momentum/short-squeeze spike than a fundamentally supported re-rate. Peer quantum names (e.g. IONQ, QBTS) are a likely sympathy read-through.
+- Horizon: SHORT_TERM, no new structural catalyst confirmed today; classic quantum-hype spike with high mean-reversion risk within days.
+- Opportunity cost: RGTI's setup is speculative/momentum-only; at a stop wide enough for this volatility, clearing the 2:1 R:R minimum is questionable. Taking it competes directly with BMNR (today's #1, higher gap%) for the same new-trade-this-week slot and the same "hype spike, no fresh catalyst" bucket — neither offers a clean, sector-rotation-aligned structural setup per TRADING-STRATEGY.md.
