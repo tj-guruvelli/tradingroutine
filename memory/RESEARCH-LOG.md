@@ -12992,3 +12992,13 @@ was not evaluated for any symbol this run (grade A unreachable). 0 hits,
 ### Setup Scan (16:38 ET, cloud)
 
 No setups triggered this run (0 grade-A, 0 grade-B/C hits).
+
+### Setup Scan (18:38 ET, cloud)
+
+Full-universe scan via `node scripts/setup-scan-cloud.mjs` (60 candidates,
+`config/rules.json` watchlist_tiers.immediate). `grade_a_possible: false` —
+18:38 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A
+was not evaluated for any symbol this run (grade A unreachable). 0 hits,
+0 errors.
+
+No setups triggered this run (0 grade-A, 0 grade-B/C hits).
