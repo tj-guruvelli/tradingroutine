@@ -321,3 +321,47 @@ Template for each entry:
 - Default the S&P-500 weekly-performance lookup straight to WebSearch rather than a 3rd reworded Apify RAG attempt, given two consecutive weeks of differently-shaped Apify failures on this exact fact
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's outperformance vs. S&P (+0.80%) is a single down-week data point, not evidence the zero-entry stance is working — the Aug 7 -3.6% missed week still dominates the phase-to-date opportunity-cost picture
 ### Overall Grade: C
+
+## Week ending 2026-09-18
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -0.33% (SPY proxy: $764.14 → $761.62, Alpaca daily bars) |
+| Bot vs S&P | +0.33% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a stacked macro week (25bps FOMC hike delivered Sep 16, 10-year yield ~5% — highest since 2007, Mideast oil-supply shock: Saudi East-West pipeline still offline, Houthi advance on Bab al-Mandeb, tanker rates >$1M/day) — zero forced trades
+- Hard-rule enforcement kept working independent of the down `tradingview-data` MCP: HAFN (RSI14 73.09 overbought, Sep 15), BLSH (RSI14 70.54 overbought + below 200-SMA, Sep 16), BCI (RSI14 72.63 overbought, Sep 17) all correctly disqualified on the Indicator Canon alone
+- Correctly declined XOM/CVX oil-spike floats twice (Sep 16, Sep 17) on an abnormally wide ~10% bid/ask spread — a data-quality red flag caught and acted on independent of the confluence fail
+- Correctly discounted NBIS's Sep 17 catalyst (unconfirmed/leaked pricing report, not a press release) stacked against fresh same-day CRO insider selling ($1.46M) — read as a bearish signal, not bullish
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- 12th consecutive zero-entry week (51 trading days since launch, Jul 9) — sat in 100% cash through a modestly negative (-0.33%) S&P week, though the bot still edged the index this particular week
+- `tradingview-data` MCP still down the entire week (7th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a 7th straight week this exact fix has been proposed and not shipped
+- **New confirmed finding**: `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are literal placeholder strings (`your_clickup_workspace_id_here` / `your_clickup_channel_id_here`), not real IDs — first flagged in Sep 17/18 RESEARCH-LOG and TRADE-LOG entries, re-confirmed directly by this review. The ClickUp fallback notification channel — and this review's own STEP 6 send — cannot deliver until real IDs are set
+- No Sep 18 Market-Open TRADE-LOG entry found (Pre-Market Research ran; Market-Open did not log) — same intermittent logging gap flagged in each of the last 6+ weekly reviews, still unresolved
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (72 straight sessions / 12th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- A genuinely event-dense week (FOMC hike, post-GFC-high yields, an active Mideast oil-supply shock) with zero entries again shows the confluence + hard-rule combination is doing real filtering work, not defaulting to HOLD only because the MCP is down — RSI-overbought and wide-spread catches this week didn't need `tradingview-data` at all
+- The ClickUp placeholder-ID finding means the "fallback notification channel" the strategy docs describe has likely never actually delivered a message — worth escalating as an operator action item alongside the baseline mismatch, since both are now overdue infrastructure fixes rather than one-off flags
+- Proposed fixes that get re-flagged 7+ weeks running without shipping (Alpaca-bars confluence wiring) are the dominant operational risk at this point — the trading discipline itself continues to hold up correctly under real catalysts
+### Adjustments for Next Week
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 7th straight week, the single most overdue open item
+- Fix or reconfigure `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — newly confirmed broken this week, blocks the fallback notification channel entirely
+- Investigate the Sep 18 missing Market-Open TRADE-LOG entry — 7th week running with at least one missing dated entry
+- Escalate the $10k vs $100k baseline mismatch again (12th week flagged, 72 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
+### Overall Grade: C
