@@ -12854,3 +12854,63 @@ both rows made the cut.
 - Impact: Volume (~897K) is elevated but the underlying news is thin/recycled rather than a fresh same-day catalyst — reads more like a sector momentum/short-squeeze spike than a fundamentally supported re-rate. Peer quantum names (e.g. IONQ, QBTS) are a likely sympathy read-through.
 - Horizon: SHORT_TERM, no new structural catalyst confirmed today; classic quantum-hype spike with high mean-reversion risk within days.
 - Opportunity cost: RGTI's setup is speculative/momentum-only; at a stop wide enough for this volatility, clearing the 2:1 R:R minimum is questionable. Taking it competes directly with BMNR (today's #1, higher gap%) for the same new-trade-this-week slot and the same "hype spike, no fresh catalyst" bucket — neither offers a clean, sector-rotation-aligned structural setup per TRADING-STRATEGY.md.
+
+## 2026-09-18 — Gappers (auto-scan 10:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+8 raw hits; 6 of ~60 tickers cleared all filters (gap>=5%, price>=$3,
+premarket_volume>=50k where populated) — ASTS (-6.48%, 33.7K vol) and BKSY
+(-5.63%, 2.4K vol) excluded on the volume floor. Deep-dive cap: top 5 of 10,
+stated explicitly — rank 6 (RKLB) got quick-scan only.
+
+**Pattern note:** 5 of 6 qualifying gappers are small-cap space-sector names
+(SATL, LUNR, RDW, RKLB down 5-7%; QBTS a quantum name also down) with no
+confirmed company-specific bad news on any of them — reads as a broad
+space/momentum-sector pullback/profit-taking day, not idiosyncratic stories.
+BMNR is the lone gainer, tracking ETH/crypto beta (third straight scan
+appearance today: flat at 08:11, +8.2% at 09:09, +6.18% now).
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | $5.08 | -7.47% | 73,010 | No fresh catalyst; stale Freedom Broker "Buy" upgrade describes a prior rally, not today's decline |
+| 2 | BMNR | $25.35 | +6.18% | 375,813 | ETH treasury update (~5.96M tokens, Sept 14); tracks crypto/ETH beta |
+| 3 | LUNR | $13.95 | -5.62% | 70,707 | Sept 15 press release: completed SXM-11 in-orbit commissioning/delivery; no fresh negative news |
+| 4 | QBTS | $16.72 | -5.40% | 93,648 | No fresh catalyst; D-Wave skills-course launch (minor); profit-taking after ~2000% 1yr run |
+| 5 | RDW | $10.93 | -5.24% | 90,573 | No fresh negative catalyst; recent coverage is a positive phased-array antenna investment (2 days ago) |
+| 6 | RKLB | $64.35 | -5.10% | 125,225 | Recent $397M contract-win coverage (positive); today's move reads as sector-wide pullback |
+
+#### Deep dive: SATL $5.08 -7.47%
+- Catalyst: No same-day, company-specific news found. Available coverage is dated (a Freedom Broker "Buy" upgrade tied to a prior +22% rally on a different day) and does not explain today's move. An Aug 26 fundamentals snapshot shows $17.7M revenue, -$103.9M net loss, and ~27x EV/Sales — a high-risk profile versus Planet Labs peers.
+- Why: With no fresh headline, today's -7.47% reads as a reversal/profit-taking after the earlier Freedom Broker-driven rally, compounded by SATL's small float and loss-making, high-beta profile that amplifies moves in either direction.
+- Impact: Volume (73,010) is modest for a stock this volatile; the move looks like idiosyncratic mean-reversion rather than a durable repricing — no confirmed sector-peer read-through for this specific move.
+- Horizon: SHORT_TERM, no structural catalyst identified — a high-beta reversal move, not aligned with any TRADING-STRATEGY.md sector-rotation thesis.
+- Opportunity cost: Price clears the $3 floor, but a loss-making, ~27x EV/Sales name with no confirmed catalyst is hard to justify at a stop distance that clears 2:1 R:R. Would compete with BMNR/LUNR (today's names with more concrete news) for one of the 3 new-trades-this-week slots.
+
+#### Deep dive: BMNR $25.35 +6.18%
+- Catalyst: BitMine Immersion Technologies (BMNR), the Tom Lee-chaired Nasdaq ETH treasury vehicle, confirmed via its Sept 14 press release that ETH holdings reached ~5.96 million tokens with total crypto+cash continuing to grow; Lee flagged "multiple positive catalysts" into year-end including the pending CLARITY Act. No new same-day filing found — the move tracks the broader crypto/ETH rally.
+- Why: BMNR trades as a leveraged proxy for ETH; strength in ETH price re-rates the treasury NAV/staking-yield story and pulls in momentum buyers, the same dynamic flagged in this morning's 09:09 ET scan when BMNR gapped +8.2%.
+- Impact: Elevated volume (375,813) but the move is crypto-beta driven, not a fresh idiosyncratic catalyst — sustainability depends on ETH holding its gains. This is BMNR's third consecutive appearance in today's scans (08:11 flat, 09:09 +8.2%, now +6.18%), suggesting a persistent crypto-tape-driven move rather than a one-off spike.
+- Horizon: SHORT_TERM, no new company-specific catalyst since Sept 14 — continues to track ETH beta and would fade on any crypto pullback.
+- Opportunity cost: Already flagged twice today as thin on fresh news despite repeated appearance. A stop wide enough for crypto-proxy volatility likely breaches the 2:1 R:R minimum at a sane distance; taking it now would spend a new-trade slot on a name without an updated thesis.
+
+#### Deep dive: LUNR $13.95 -5.62%
+- Catalyst: A Sept 15, 2026 press release confirmed Intuitive Machines completed in-orbit commissioning and delivered SXM-11 (a SiriusXM satellite) to the customer — a real operational milestone, but three days old, not same-day. No fresh negative company-specific news was found for today's session.
+- Why: The SXM-11 delivery was a positive milestone already digested by the market since Sept 15; today's -5.62% has no identified company-specific driver, so it likely reflects sell-the-news follow-through and/or the same broad small-cap space-sector pullback hitting SATL/RDW/RKLB/ASTS/BKSY simultaneously today.
+- Impact: Volume (70,707) is unremarkable. The peer read-through is strong: nearly the entire small-cap space complex (SATL, ASTS, BKSY, RDW, RKLB) is down 5-7% today, arguing for a sector-wide rotation/profit-taking day rather than an LUNR-specific problem.
+- Horizon: SHORT_TERM in the near-term price action (no fresh negative catalyst to hold against); the underlying SXM-11 delivery is a structural positive that argues against chasing today's dip as a short.
+- Opportunity cost: A sector-wide pullback with no company-specific bad news doesn't clear the bar for a fresh short or a dip-buy today. Competes with BMNR for a new-trade slot, and a stop wide enough to respect sector-wide volatility likely doesn't clear 2:1 R:R.
+
+#### Deep dive: QBTS $16.72 -5.40%
+- Catalyst: No fresh same-day catalyst found. Most recent items are D-Wave's new quantum-computing skills course (minor, not price-moving) and a Sept 16 Qubits Asia 2026 conference announcement (Seoul). Background context: QBTS is up roughly 2000% over the trailing year, a well-documented momentum/valuation extreme on limited revenue.
+- Why: With no negative headline, today's decline reads as profit-taking/valuation digestion after an extreme 12-month run, compounded by same-day weakness across the broader quantum-computing complex (RGTI also flagged again this morning) and the space-sector pullback affecting the rest of today's list.
+- Impact: Volume (93,648) is moderate; the move looks like multi-name sector cooling rather than an idiosyncratic QBTS event — no company-specific bad news identified.
+- Horizon: SHORT_TERM, a valuation/momentum pullback in an extended name — not a structural change, no thesis to carry past this week.
+- Opportunity cost: A momentum-extreme name giving back gains with no fresh bad news is a weak setup either as a dip-buy (no reversal confirmation) or a short (crowded, prone to violent squeezes); a new-trade slot is better spent on a name with an actual catalyst.
+
+#### Deep dive: RDW $10.93 -5.24%
+- Catalyst: The most recent Redwire coverage (2 days ago) describes a strategic investment in next-generation phased-array antenna technology — a positive, forward-looking item, not a reason for today's decline. Older items (SpaceMD/Starfall mission, MANUS milestone, a stale +235% 6-month stock piece) are unrelated to today's move.
+- Why: No negative company-specific catalyst identified; today's -5.24% is best explained by the same broad small-cap space-sector pullback hitting SATL/LUNR/RKLB/ASTS/BKSY together, possibly compounded by profit-taking after RDW's large multi-month run.
+- Impact: Volume (90,573) is unremarkable; sector-wide read-through is the dominant signal today — 5 of today's 6 qualifying gappers are space-sector names, all down together.
+- Horizon: SHORT_TERM, no structural negative catalyst — a sector-rotation pullback, not a thesis change.
+- Opportunity cost: Same sector-wide-pullback logic as LUNR/QBTS — no confirmed bad news makes both shorting and dip-buying low-conviction. Competes with BMNR for one of the week's 3 new-trade slots, and a sector-wide move makes a tight, R:R-clearing stop hard to justify.
