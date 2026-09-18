@@ -12810,3 +12810,18 @@ sessions: `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still set to
 literal placeholder strings, not real ClickUp IDs. Not a "KEY not set"
 case (vars are non-empty), so this did not trigger the routine's STOP
 condition; proceeding to commit/push.
+
+## 2026-09-18 — Gappers (auto-scan 08:11 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Only 1 of ~60 tickers cleared the |gap| >= 5% bar: RR at +5.57%
+($1.615 -> $1.705), but it fails the $3.00 price floor. **0 qualifying
+gappers after filters** (gap>=5%, price>=$3, premarket_volume>=50k where
+populated). No catalyst research or deep-dive run (nothing cleared the
+bar). No Telegram/ClickUp notify sent per routine rule (0 hits, no scan
+error).
+
+### Gappers (auto-scan 08:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | none — 0 rows passed filters |
