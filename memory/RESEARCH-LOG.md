@@ -12980,3 +12980,15 @@ catalyst — BMNR's fourth straight appearance today (flat 08:11, +8.2%
 - Impact: Volume ~70,727 is a real move, not a liquidity air-pocket, and is consistent with genuine repositioning; strong sector read-through given essentially the whole space-stock complex (RDW/LUNR/RKLB/QBTS/OKLO/SATL/BKSY) is moving together today.
 - Horizon: SHORT_TERM — reads as valuation-driven profit-taking/analyst-consensus caution rather than a new structural negative; the cash cushion and constellation build-out remain a LONG_TERM thesis if the group stabilizes and a confirmed Japan contract materializes, but that is not yet confirmed.
 - Opportunity cost: Real fundamentals ($3.9B cash, actual constellation progress) and real volume make ASTS more credible than SATL/BKSY if it stabilizes, but at a Reduce consensus PT implying only ~4% upside, reward:risk at a sane stop is questionable for a same-day long; better as a watch-item for a bounce setup, and would compete with RKLB (a clearer, non-analyst-caution catalyst) for the single space-sector slot this week.
+
+## 2026-09-18 — Setup Scan (16:38 ET, cloud)
+
+Full-universe scan via `node scripts/setup-scan-cloud.mjs` (60 candidates,
+`config/rules.json` watchlist_tiers.immediate). `grade_a_possible: false` —
+16:38 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A
+was not evaluated for any symbol this run (grade A unreachable). 0 hits,
+0 errors.
+
+### Setup Scan (16:38 ET, cloud)
+
+No setups triggered this run (0 grade-A, 0 grade-B/C hits).
