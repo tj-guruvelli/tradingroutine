@@ -12914,3 +12914,69 @@ appearance today: flat at 08:11, +8.2% at 09:09, +6.18% now).
 - Impact: Volume (90,573) is unremarkable; sector-wide read-through is the dominant signal today — 5 of today's 6 qualifying gappers are space-sector names, all down together.
 - Horizon: SHORT_TERM, no structural negative catalyst — a sector-rotation pullback, not a thesis change.
 - Opportunity cost: Same sector-wide-pullback logic as LUNR/QBTS — no confirmed bad news makes both shorting and dip-buying low-conviction. Competes with BMNR for one of the week's 3 new-trade slots, and a sector-wide move makes a tight, R:R-clearing stop hard to justify.
+
+## 2026-09-18 — Gappers (auto-scan 11:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+11 raw hits, top 10 kept (all clear price>=$3; premarket_volume field not
+populated for this scan so volume floor not applied). Deep-dive cap: top 5
+of 10, stated explicitly — ranks 6-10 (RDW, LUNR, QBTS, RKLB, OKLO) got
+quick-scan only.
+
+**Pattern note:** 8 of today's 10 gappers are small-cap space/quantum names
+(SATL, BKSY, ASTS, RDW, LUNR, QBTS, RKLB, OKLO) down 5-7.9% together with no
+confirmed company-specific bad news on any of them — same broad
+space-sector pullback flagged in the 08:11/09:09/10:09 ET scans today,
+still running at midday. The only two gainers are crypto-proxy names
+(BMNR, BLSH), both tracking the same CLARITY Act regulatory-optimism
+catalyst — BMNR's fourth straight appearance today (flat 08:11, +8.2%
+09:09, +6.18% 10:09, +7.62% now).
+
+### Gappers (auto-scan 11:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | $5.06 | -7.92% | 114,065 | No fresh company-specific catalyst; weak fundamentals (FY2025 rev $17.7M vs $103.9M net loss) in today's broad space-sector pullback |
+| 2 | BMNR | $25.69 | +7.62% | 798,986 | ETH treasury near 5.96M tokens (~$15.8B crypto+cash); CLARITY Act cited as Q4 catalyst; tracks crypto/ETH beta |
+| 3 | BLSH | $37.20 | +6.59% | 18,121 | Crypto market-structure optimism (CLARITY Act) plus new tokenized-equity trading launch on its own exchange |
+| 4 | BKSY | $21.25 | -6.59% | 6,901 | No fresh catalyst; thin volume; recent insider selling flagged as overhang after a large prior run |
+| 5 | ASTS | $58.63 | -6.48% | 70,727 | Japan rollout headlines, but analyst consensus is Reduce with 12-mo PT implying only ~4% upside |
+| 6 | RDW | $10.81 | -6.29% | 139,633 | No fresh negative catalyst; prior coverage (57% rev surge, $15.9M contract) is positive/dated; sector-wide pullback |
+| 7 | LUNR | $13.86 | -6.26% | 120,109 | No fresh company-specific catalyst; consistent with broad space-sector pullback |
+| 8 | QBTS | $16.61 | -6.03% | 232,344 | No fresh catalyst; quantum complex (QBTS/RGTI/IONQ) selling off together in risk-off pullback |
+| 9 | RKLB | $64.24 | -5.25% | 246,095 | Pressured alongside SpaceX's IPO drawing investor capital/attention away from Rocket Lab |
+| 10 | OKLO | $37.62 | -5.07% | 129,814 | Extending ~50% 2026 slide while awaiting unconfirmed SMR financial-commitment catalyst |
+
+#### Deep dive: SATL $5.06 -7.92%
+- Catalyst: No single SATL-specific news item explains today's move. Satellogic is fundamentally weak: FY2025 revenue of just $17.7M against a $103.9M net loss (Aug 26 analysis), despite Q3 2025 revenue up 29% YoY to $3.6M on lower opex. Today's -7.9% gap moves alongside BKSY/ASTS/RDW/LUNR/QBTS/RKLB/OKLO, all small-cap space/quantum names down 5-6.6% the same session.
+- Why: With no distinct headline, the mechanism is a risk-off rotation out of unprofitable small-cap space names; SATL's thin fundamentals and high cash burn make it the most vulnerable to a sell-the-weakest-first dynamic within that rotation.
+- Impact: Volume 114,065 is moderate for this name; the move looks like a sector-wide flush rather than an isolated event, so it likely continues with the group rather than mean-reverting on its own. Strong sector-wide read-through.
+- Horizon: SHORT_TERM, no structural catalyst identified — a sector-sentiment move on an already-weak balance sheet, not a new thesis.
+- Opportunity cost: Chasing a -7.9% gap-down on weak fundamentals with no confirmed catalyst does not look like it clears 2:1 R:R at a sane stop; better to preserve this week's 3 new-trade slots for a name with an actual identified catalyst (BMNR/BLSH).
+
+#### Deep dive: BMNR $25.69 +7.62%
+- Catalyst: Bitmine Immersion Technologies, the Tom Lee-chaired Nasdaq ETH treasury vehicle, holds ETH near 5.96 million tokens with total crypto+cash holdings around $15.8B. Management has flagged "multiple positive catalysts" heading into Q4 2026, chief among them the pending CLARITY Act (US crypto market-structure legislation).
+- Why: BMNR trades largely as a leveraged proxy on ETH price and crypto-regulatory sentiment; a growing treasury plus optimism on the CLARITY Act progressing pulls in momentum/crypto-proxy buyers, the same dynamic that drives MSTR-style treasury stocks.
+- Impact: Volume ~799K is elevated; paired with BLSH also up ~6.6% same session, this reads as a genuine risk-on rotation into crypto-adjacent equities today, not an isolated one-off. Clear sector read-through to other ETH/crypto-treasury names.
+- Horizon: LONG_TERM lean — the CLARITY Act is a structural/regulatory catalyst, not just a headline spike, and aligns with a crypto-adjacency rotation; still needs the Confluence rule checked before any multi-day swing hold.
+- Opportunity cost: High-beta but could plausibly clear 2:1 R:R at a sane stop given today's momentum; would use one of the 3 weekly trade slots and compete directly with BLSH for the same crypto-policy thesis — the correlation gate would likely flag BMNR+BLSH together, so at most one crypto-proxy name should be sized this week, not both.
+
+#### Deep dive: BLSH $37.20 +6.59%
+- Catalyst: Bullish (crypto exchange operator) is riding the same crypto market-structure optimism as BMNR — analyst commentary cites prospective US regulatory clarity (CLARITY Act) as a catalyst for a next leg higher (one note cites a $60 price target), and the company recently launched tokenized-equity trading of its own shares on its own exchange, a genuine product first. Q2 2026 results were reported Aug 13.
+- Why: Regulatory optimism plus an actual product launch (tokenizing its own listed equity) pulls in both crypto-sector momentum buyers and product-news traders at the same time.
+- Impact: Move is paired with BMNR's rally the same session, reading as a sector-wide crypto-equity rotation rather than an isolated spike; one source notes the CLARITY Act vote has stalled, a caution flag that the catalyst could reverse quickly on a negative legislative headline.
+- Horizon: SHORT_TERM lean — the tokenized-equity launch is a structural product development, but the immediate pop is driven mainly by CLARITY Act vote sentiment that has already been reported as stalled elsewhere, so it risks fading on any negative legislative news; needs the Confluence rule check before treating as a swing hold.
+- Opportunity cost: Same crypto-sector concentration issue as BMNR: running both would likely breach the correlation gate (>0.75 correlation, 2+ open positions); would use a slot from the 3/week cap competing directly with BMNR for the same catalyst thesis, so size at most one of the two this week.
+
+#### Deep dive: BKSY $21.25 -6.59%
+- Catalyst: No distinct BKSY-specific headline explains today's move. BlackSky has an improving government-contract backlog and revenue visibility (noted mid-August), but continues to post negative profitability at a ~$948M market cap, and recent insider selling has been flagged as a sentiment overhang.
+- Why: With no fresh catalyst, today's -6.6% reads as profit-taking/de-risking after a large prior run, compounded by the same small-cap space-sector pullback hitting ASTS/RDW/LUNR/RKLB/QBTS/OKLO/SATL simultaneously.
+- Impact: Volume only ~6,901 shares is thin, so this looks like a low-liquidity air-pocket move rather than high-conviction institutional selling; more likely to be noisy/mean-reverting than the start of a sustained leg down, but thin volume also means low confidence in any read.
+- Horizon: SHORT_TERM — no structural catalyst, thin-volume move; treat as noise until a real headline or contract announcement appears.
+- Opportunity cost: A -6.6% move on ~6.9K shares of volume is not a tradeable setup at any sane stop distance given poor liquidity/wide spreads; better to preserve this week's 3 new-trade slots for BMNR/BLSH's clearer catalyst-driven setups.
+
+#### Deep dive: ASTS $58.63 -6.48%
+- Catalyst: AST SpaceMobile's Japan rollout is generating headlines, but the consensus of 10 covering analysts sits at Reduce with a 12-month price target implying only ~4% upside from here. The balance sheet remains strong ($3.9B cash and short-term investments per its most recent presentation) and market cap is ~$23.35B as of Sept 15, 2026.
+- Why: A Reduce-leaning analyst base on a stock already priced for a lot of future direct-to-device success creates a sell-the-news dynamic on incremental rollout updates; any pause or lack of new contract news triggers profit-taking, especially amid today's broader space-sector pullback.
+- Impact: Volume ~70,727 is a real move, not a liquidity air-pocket, and is consistent with genuine repositioning; strong sector read-through given essentially the whole space-stock complex (RDW/LUNR/RKLB/QBTS/OKLO/SATL/BKSY) is moving together today.
+- Horizon: SHORT_TERM — reads as valuation-driven profit-taking/analyst-consensus caution rather than a new structural negative; the cash cushion and constellation build-out remain a LONG_TERM thesis if the group stabilizes and a confirmed Japan contract materializes, but that is not yet confirmed.
+- Opportunity cost: Real fundamentals ($3.9B cash, actual constellation progress) and real volume make ASTS more credible than SATL/BKSY if it stabilizes, but at a Reduce consensus PT implying only ~4% upside, reward:risk at a sane stop is questionable for a same-day long; better as a watch-item for a bounce setup, and would compete with RKLB (a clearer, non-analyst-caution catalyst) for the single space-sector slot this week.
