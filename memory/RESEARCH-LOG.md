@@ -13282,3 +13282,17 @@ stated: top 5 of 10 — ranks 6-10 quick-scan only.
 - Impact: Volume only ~20.8k — thin relative to the other names in this basket, meaning today's move is on light participation and more prone to reverse. The valuation (P/S ~37x, still unprofitable) means any pullback in sector enthusiasm hits this name hardest.
 - Horizon: SHORT_TERM — no durable catalyst identified, thin volume, stretched valuation — high ATR means this is a fade risk, not a swing hold.
 - Opportunity cost: Weakest risk/reward of the five — rich valuation, unprofitable, thin volume on today's move, and no confirmed catalyst. Capital would be far better used on RKLB (real earnings improvement) than UMAC. Would also compete with the other momentum names already on this list for the week's 3-new-trade cap and risk the correlation gate if paired with another sector name.
+
+### Setup Scan (16:38 ET, cloud)
+60/60 scanned, 0 errors. `grade_a_possible: false` — 16:38 ET is outside the
+10:00-15:30 ET intraday-breakout window, so Setup A was not evaluated this
+run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`); 0 grade-A is
+expected, not a null result. 4 grade-B (momentum confluence: ADX14>20 AND
+EMA9>EMA21) hits, ranked by ADX14.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 61, ADX 41, px $28.13 > SMA200 $22.08 |
+| HAFN | B | Momentum confluence | daily swing | RSI 80, ADX 33, px $8.17 > SMA200 $7.35 |
+| QCOM | B | Momentum confluence | daily swing | RSI 54, ADX 21, px $193.41 > SMA200 $168.55 |
+| TRMD | B | Momentum confluence | daily swing | RSI 77, ADX 22, px $32.18 > SMA200 $27.97 |
