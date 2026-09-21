@@ -13124,3 +13124,24 @@ oil has reversed. Patience over activity.
 strings (not real IDs) — confirmed again this run (`clickup.sh` call
 returned HTTP 500). STEP 5 notification did not deliver to a real
 channel.
+
+## 2026-09-21 — Gappers (auto-scan 08:14 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+1 raw hit; 1 of ~60 tickers cleared all filters (gap>=5%, price>=$3;
+premarket_volume field not populated by this script version, so that
+filter is a no-op — BMNR's volume of 2.6M clears any reasonable bar
+anyway). Deep-dive cap stated: top 5 of 10 — N/A here, the single row
+made the cut.
+
+### Gappers (auto-scan 08:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | $27.36 | +14.62% | 2,621,175 | ETH treasury proxy gapping with a broad crypto rally (BTC/ETH/SOL all +5-8% premarket); no fresh same-day company press release found |
+
+#### Deep dive: BMNR $27.36 +14.62%
+- Catalyst: BitMine Immersion Technologies (NYSE: BMNR), the Tom Lee-chaired corporate Ethereum treasury vehicle, has no new same-day filing. Its most recent weekly updates confirmed ETH holdings near 5.93-5.96 million tokens (~4.9% of ETH supply), total crypto+cash holdings around $15.7-15.8B, Russell 1000 inclusion, and an institutional staking platform (MAVAN) generating yield. Today's premarket move tracks a broad crypto rally rather than a new headline: BTC, ETH and SOL are all up 5-8% premarket per market trackers.
+- Why: BMNR trades as a leveraged proxy for ETH price/sentiment — when ETH and the broader crypto complex rally, the market re-rates BMNR's treasury NAV and staking-yield narrative, pulling in momentum buyers on top of the underlying crypto move.
+- Impact: Volume (2.6M premarket) is elevated and the move is crypto-beta driven, not an idiosyncratic one-day spike — sustainability depends entirely on ETH/crypto holding today's gains, not new company news. Strong sector-wide read-through: this is the same pattern flagged repeatedly in the 2026-09-18 gappers scans (BMNR appeared 3x that day tracking ETH beta), so it is likely other crypto-treasury/miner names are moving in sympathy today too.
+- Horizon: SHORT_TERM, no new company-specific catalyst since the last treasury update; move tracks crypto beta and has historically faded fast without continued ETH follow-through (per BMNR's prior scan appearances).
+- Opportunity cost: Zero open positions currently, so this wouldn't displace an existing holding, but it would spend one of the max-3-new-trades-this-week slots and one of 6 position slots on a high-beta crypto proxy with no fresh idiosyncratic thesis. A stop wide enough to respect ETH's volatility likely struggles to clear the 2:1 R:R minimum at a sane distance — same conclusion reached on BMNR's prior appearances. Research only; no order recommended here.

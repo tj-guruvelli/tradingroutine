@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-09-21T08:14:00-04:00",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BMNR",
+      "price": 27.36,
+      "gap_pct": 14.62,
+      "premarket_volume": 2621175,
+      "catalyst": "ETH treasury proxy gapping with a broad crypto rally (BTC +5.7%, ETH +5.7%, SOL +7.4% premarket); no fresh same-day company press release found",
+      "headlines": [],
+      "catalyst_detail": "BitMine Immersion Technologies (NYSE: BMNR), the Tom Lee-chaired corporate Ethereum treasury vehicle, has no new same-day filing. Its most recent weekly update (Sept 8 press release, subsequent updates through ~5.96M ETH) confirmed ETH holdings near 5.93-5.96 million tokens (~4.9% of ETH supply), total crypto+cash holdings around $15.7-15.8B, Russell 1000 inclusion, and an institutional staking platform (MAVAN) generating yield. Today's premarket move tracks a broad crypto rally rather than a new headline: BTC, ETH and SOL are all up 5-8% premarket per market trackers.",
+      "why": "BMNR trades as a leveraged proxy for ETH price/sentiment - when ETH and the broader crypto complex rally, the market re-rates BMNR's treasury NAV and staking-yield narrative, pulling in momentum buyers on top of the underlying crypto move.",
+      "impact": "Volume (2.6M premarket) is elevated and the move is crypto-beta driven, not an idiosyncratic one-day spike - sustainability depends entirely on ETH/crypto holding today's gains, not new company news. Strong sector-wide read-through: this is the same pattern flagged in the 2026-09-18 gappers scans (BMNR appeared 3x that day tracking ETH beta), so it is likely other crypto-treasury/miner names are moving in sympathy today too.",
+      "horizon": "SHORT_TERM - no new company-specific catalyst since the last treasury update; move tracks crypto beta and historically fades fast without continued ETH follow-through (as seen across BMNR's repeat appearances in prior scans).",
+      "opportunity_cost": "Zero open positions currently, so this wouldn't displace an existing holding, but it would spend one of the max-3-new-trades-this-week slots and one of 6 position slots on a high-beta crypto proxy with no fresh idiosyncratic thesis. A stop wide enough to respect ETH's volatility likely struggles to clear the 2:1 R:R minimum at a sane distance - same conclusion reached on BMNR's three prior appearances this scan window. Research only; no order recommended here."
+    }
+  ]
+}
