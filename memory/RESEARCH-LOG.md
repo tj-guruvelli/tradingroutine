@@ -13002,3 +13002,125 @@ was not evaluated for any symbol this run (grade A unreachable). 0 hits,
 0 errors.
 
 No setups triggered this run (0 grade-A, 0 grade-B/C hits).
+
+## 2026-09-21 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-18`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 72nd+ straight session. 52nd trading
+day since launch (Jul 9) with zero entries. New week (Sep 21) — trade count
+0/3.
+
+**Market context — risk-on tape, oil sliding on de-escalation/summit optimism:**
+- **Oil:** Mixed-sourcing this run, both directionally down. Oilprice.com
+  live widget: WTI $97.21 (-3.08% d/d), Brent $100.50 (-3.24% d/d). Saxo
+  Bank macro note (via WebSearch fallback, Apify query for this topic
+  returned only navigation chrome, no price data): Brent ~$102 (-1.8%),
+  front-month Nov WTI ~$94.00 (-2.2%) — 4th consecutive down session, the
+  longest slide in 3 months. Driver: anticipation of a Trump-Xi summit
+  plus markets reading Trump's public warning to Iran as posturing rather
+  than escalation (de-escalation trade), reversing the Mideast
+  supply-shock narrative that dominated Sep 14-18 entries. Quote
+  discrepancy between sources (contract/delay differences) — treat both as
+  indicative, not tradeable levels.
+- **VIX:** ~14.8-14.95 (Investing.com/CBOE via WebSearch; Apify query for
+  this topic returned garbled/irrelevant results — non-English stub pages,
+  fallback used per routine rule). Subdued — lowest level logged since at
+  least early Sep (was 17.1-17.6 during the Sep 14-16 FOMC week). Reads as
+  a genuine de-risking of the AI-slowdown/Mideast-supply narratives that
+  drove the last two weeks, not just quiet drift.
+- **S&P 500 futures:** +0.41% to +0.95% premarket (ES1! opened 7,730.25 vs
+  Friday's 7,657.35 close); Nasdaq 100 +0.8%, tech leading. Polymarket
+  contract for "SPX up on Sep 21" ~81% implied. (Apify query for this
+  topic also returned garbled results — WebSearch fallback used.)
+- **Catalyst #1:** Trump-Xi summit anticipation — broad risk-on tone,
+  cited across multiple sources (Bloomberg, Saxo) as the dominant driver
+  alongside falling oil.
+- **Catalyst #2:** Oil's 4th straight down session on the same
+  summit/de-escalation read — a direct reversal of the supply-shock thesis
+  that justified watching XOM/CVX/energy names in the Sep 14-18 entries;
+  energy-sector setups screened those days should be treated as stale.
+  President Trump's public warning to Iran is a headline risk that could
+  reverse this quickly — not a resolved situation, just a market
+  currently pricing it as posturing.
+- **Catalyst #3:** INTC +5.8% premarket on reports of potential investment
+  interest and strategic restructuring updates — single-name,
+  idiosyncratic, not part of a broader semis move today. Flagging for a
+  confluence check (RSI/VWAP/200-SMA/insider) at market-open; no
+  entry/stop/target committed here since `tradingview-data` was not run
+  this session (pre-market routine doesn't pull it).
+- **Catalyst #4:** Crypto/BTC-ETH proxies up (IBIT +4.11%, ETHA +3.01%) —
+  note only, both are ETFs/trusts, out of scope for a stocks-only mandate;
+  not actionable regardless of move size.
+- **Earnings today:** None noteworthy before today's open (Kiplinger:
+  "no noteworthy earnings reports scheduled for Monday, September 21").
+  Nasdaq's own calendar widget again showed no data (same recurring gap
+  logged in prior sessions). Rest of the week: AutoZone/KB
+  Home/Thor/MillerKnoll (Tue), Cintas/Paychex/General Mills/Cracker Barrel
+  (Wed), Costco/Darden/BlackBerry (Thu) — none currently on the watchlist.
+- **Economic calendar:** Thin/ambiguous this run — search results
+  disagreed on specifics. Best-corroborated items: Fed's Goolsbee speech
+  10:30 AM ET today, Chicago Fed National Activity Index 12:30 PM ET
+  today. No confirmed CPI/PPI/jobs print or FOMC decision this week (last
+  FOMC hike was Sep 16, per the Sep 17-18 entries) — flagging this as a
+  genuine data gap rather than a confirmed "nothing scheduled," since
+  sources were inconsistent.
+- **Sector momentum YTD:** Apify query garbled again (non-English stub
+  pages) — WebSearch fallback used, but sources disagreed on exact
+  magnitudes: Energy leads YTD (+47.7% one source, +32.1% another),
+  Technology strong (+30.7%), Consumer Discretionary weakest (-5.0%/
+  -4.3%). Directionally consistent (Energy/Tech lead, Consumer
+  Discretionary lags) even though point figures don't reconcile — use for
+  qualitative sector-rotation read only, not sizing.
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`).
+- Zero finance.yahoo.com citations used or found across all queries this
+  session (Oilprice.com, Investing.com, CBOE, Bloomberg, Saxo, Kiplinger,
+  Nasdaq, Investing.com econ calendar only). Three Apify queries this run
+  (VIX, S&P futures, sector momentum) returned unusable/garbled content
+  (irrelevant non-English stub pages, not Yahoo hits) — WebSearch fallback
+  used and noted per routine, non-Yahoo domains only.
+
+**Trade ideas:** No confluence tooling run this session (pre-market
+doesn't pull `tradingview-data`), so nothing here clears the Entry
+Checklist's ≥2-indicator bar — documenting candidates only, no
+entry/stop/target committed: (1) **INTC** ($5.8% premarket pop on
+investment-interest/restructuring reports) — single clean idiosyncratic
+catalyst, the best candidate for a market-open confluence check today.
+(2) **Energy names (XOM/CVX, watchlist)** — YTD sector leader, but today's
+4th-straight-day oil decline directly undercuts the Mideast supply-shock
+thesis that justified watching them all last week; standing skip until
+oil stabilizes or a fresh catalyst appears. (3) No third idea — broad
+risk-on/tech-led tape is not itself a single-name catalyst, and the
+economic-calendar data gap plus persistent VIX-quiet/sector-momentum data
+issues argue for confirming today's setups at market-open (with
+`tradingview-data`) rather than committing here.
+
+**Risk factors:** Oil's sharp 4-day decline is a direct reversal of the
+supply-shock narrative this bot was pricing as recently as Sep 18 —
+either the Mideast risk is genuinely de-escalating (Trump-Xi summit,
+softer read on the Iran warning) or the market is under-pricing headline
+risk that could snap back fast; either way, energy-sector setups from
+last week are stale and should be re-screened, not assumed. Persistent
+Apify data-quality issues (3 of today's 7 queries returned garbled
+non-English content) continued for VIX/futures/sector-momentum — WebSearch
+fallback covered the gap this run, but if this recurs it should be
+flagged to the operator as a tool-health issue, not just logged and
+retried each session. Economic-calendar sourcing was inconsistent — no
+confirmed major print this week from any source, but confidence is lower
+than usual. 52 straight trading days since launch with zero entries / the
+$100k-vs-$10k baseline mismatch remain unresolved — still pending operator
+review.
+
+**Decision: HOLD.** No open positions, no planned trades. Risk-on tape and
+a clean INTC catalyst are worth a market-open confluence check, but
+nothing here clears the Entry Checklist without RSI/VWAP/200-SMA/insider
+data, and the energy thesis from last week needs re-validation now that
+oil has reversed. Patience over activity.
+
+`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` remain literal placeholder
+strings (not real IDs) — confirmed again this run (`clickup.sh` call
+returned HTTP 500). STEP 5 notification did not deliver to a real
+channel.
