@@ -13145,3 +13145,23 @@ made the cut.
 - Impact: Volume (2.6M premarket) is elevated and the move is crypto-beta driven, not an idiosyncratic one-day spike — sustainability depends entirely on ETH/crypto holding today's gains, not new company news. Strong sector-wide read-through: this is the same pattern flagged repeatedly in the 2026-09-18 gappers scans (BMNR appeared 3x that day tracking ETH beta), so it is likely other crypto-treasury/miner names are moving in sympathy today too.
 - Horizon: SHORT_TERM, no new company-specific catalyst since the last treasury update; move tracks crypto beta and has historically faded fast without continued ETH follow-through (per BMNR's prior scan appearances).
 - Opportunity cost: Zero open positions currently, so this wouldn't displace an existing holding, but it would spend one of the max-3-new-trades-this-week slots and one of 6 position slots on a high-beta crypto proxy with no fresh idiosyncratic thesis. A stop wide enough to respect ETH's volatility likely struggles to clear the 2:1 R:R minimum at a sane distance — same conclusion reached on BMNR's prior appearances. Research only; no order recommended here.
+
+## 2026-09-21 — Gappers (auto-scan 09:11 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+1 raw hit; same single ticker as the 08:14 ET run (BMNR), gap widened
+slightly (+14.62% -> +15.42%). premarket_volume field still not populated
+by this script version, so that filter remains a no-op. Deep-dive cap
+stated: top 5 of 10 — N/A here, the single row made the cut.
+
+### Gappers (auto-scan 09:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | $27.55 | +15.42% | 2,621,175 | ETH treasury proxy continuing to gap with the broader crypto rally; TradingView community notes tie the move directly to ETH's rebound, no new company-specific press release found today |
+
+#### Deep dive: BMNR $27.55 +15.42%
+- Catalyst: BitMine Immersion Technologies (NYSE: BMNR), the Ethereum-treasury holding company, has no new same-day filing. Its most recent disclosure (within the past week) put ETH holdings at ~5.9 million tokens and total crypto+cash holdings near $15.6B. Today's premarket extension (gap widened from +14.62% at 08:14 ET to +15.42% now) continues to track ETH's price rebound rather than fresh company news — TradingView's community feed for the symbol attributes the move directly to "the ETH rebound."
+- Why: BMNR is a leveraged proxy for ETH — as ETH pushes higher, the market re-rates BMNR's treasury NAV, pulling in momentum buyers on top of the underlying crypto move. No new company-specific mechanism since the 08:14 ET scan.
+- Impact: Move looks like continued crypto-beta tracking, not a fresh idiosyncratic spike — volume unchanged from the prior scan (2.6M), consistent with the same premarket print still being reflected. A separate outside note (InvestingPro, dated well before today) previously flagged BMNR as overvalued near $42 with ~50% downside risk, and another analysis found "no material company-specific news, price movements reflect sentiment rather than fundamentals" — both reinforce elevated mean-reversion risk if ETH cools. Sector read-through: expect other ETH-treasury/crypto-proxy names to be moving in sympathy.
+- Horizon: SHORT_TERM, unchanged from the 08:14 ET call — no new idiosyncratic catalyst, pure crypto beta, historically fades without continued ETH follow-through.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used — wouldn't displace an existing holding, but this is BMNR's 4th consecutive scan appearance today-equivalent pattern (also repeated 3x on 2026-09-18) tracking the same ETH-beta thesis without a fresh catalyst. Chasing an already-extended +15% gap makes a sane stop distance hard to reconcile with the 2:1 R:R minimum. Research only; no order recommended here.
