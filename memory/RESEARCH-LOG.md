@@ -13222,3 +13222,63 @@ closest at 50,749). Deep-dive cap stated: top 5 of 10 — 9 available, all
 - Impact: Volume (~630K) is the highest of today's gappers — strong participation. Because the move is fundamentally a crypto-beta trade, it will likely track ETH price action rather than move independently; a crypto reversal could quickly unwind the gap.
 - Horizon: SHORT_TERM — tied to a recurring weekly disclosure and crypto-market beta, not a one-time structural catalyst.
 - Opportunity cost: Highest volume + cleanest verified catalyst of today's top 5, but closely tied to crypto/ETH beta so it doesn't diversify existing crypto-adjacent exposure. Would displace a weaker holding or lower-ranked gapper if only one of the 3 weekly trade slots remains; needs a tight, ETH-aware stop to clear 2:1 R:R.
+
+## 2026-09-21 — Gappers (auto-scan 11:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+12 raw hits; AGMH filtered out (price $0.73 < $3 minimum despite a -13.09%
+gap). 11 of ~60 tickers cleared price/gap filters; capped at top 10 by
+|gap%| (ASTS, +6.21%, was rank 11 and dropped by the cap). premarket_volume
+field wasn't populated in this scan's output (field name differs from the
+routine spec — script returns `volume`), so the volume filter wasn't
+separately enforced; all 10 kept clear 5k+ shares regardless. Deep-dive cap
+stated: top 5 of 10 — ranks 6-10 quick-scan only.
+
+### Gappers (auto-scan 11:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | $15.43 | +10.69% | 168,155 | Stifel upgrade cited as trigger; thin sell-side coverage amplifying the move |
+| 2 | RDW | $11.665 | +8.61% | 153,701 | No confirmed same-day catalyst; likely riding broader space-sector strength |
+| 3 | SATL | $5.565 | +8.37% | 166,628 | No confirmed same-day catalyst; moving with the broader space-sector rally |
+| 4 | RKLB | $69.49 | +7.61% | 287,578 | Recovering from a $1.94B ATM offering overhang amid "a flurry of positive catalysts" |
+| 5 | UMAC | $24.72 | +6.74% | 20,761 | No confirmed same-day catalyst; drone/defense-sector momentum likely |
+| 6 | OKLO | $40.55 | +6.68% | 135,721 | Nuclear-AI power theme; recent $200M federal SMR initiative alongside Microsoft and Nvidia |
+| 7 | META | $709.40 | +6.61% | 580,685 | Goldman Sachs flagged the Muse AI assistant launch as a major AI catalyst |
+| 8 | BKSY | $23.075 | +6.51% | 5,589 | No company-specific catalyst identified; investors refocusing on broader space-sector strength |
+| 9 | QCOM | $189.23 | +6.30% | 123,988 | AI PC chip demand forecasts fueling rally amid tariff jitters |
+| 10 | BMNR | $27.57 | +6.24% | 820,439 | Ethereum-treasury proxy moving with ETH strength; no deeper catalyst text retrieved |
+
+#### Deep dive: LUNR $15.43 +10.69%
+- Catalyst: Stifel analyst upgrade cited as the trigger for today's surge; Intuitive Machines is a lunar/space-infrastructure play with thin sell-side coverage, so positive analyst actions move the stock sharply. Roth Capital had already lifted its price target 50% (to $75) in late May citing lunar program momentum.
+- Why: Analyst upgrade plus prior price-target raises draw momentum buyers into a stock with a small float and few covering analysts — each new bullish call has outsized price impact.
+- Impact: Volume 168k shares. Thin sell-side coverage means moves can be violent both ways (the stock fell ~6% in a separate recent session). Today's move looks catalyst-driven (single analyst action) rather than purely sector-wide, though LUNR is moving alongside RDW/SATL/BKSY — some sector tailwind likely also present.
+- Horizon: SHORT_TERM — single-analyst-upgrade pops in low-coverage small caps tend to fade absent a follow-through catalyst (contract win, launch milestone).
+- Opportunity cost: Of the top 5, LUNR's move looks best correlated to an actual fundamental catalyst (analyst upgrade) rather than pure sector beta. Taking it uses one of the max-3-new-trades-per-week slots and competes for capital with RKLB, which shows stronger balance-sheet momentum (Q1 2026 guidance beat, narrowing losses). A 10% trailing stop from $15.43 (~$13.89) against a 2:1 target near $17.7 is tight but plausible given the name's volatility.
+
+#### Deep dive: RDW $11.665 +8.61%
+- Catalyst: No single-name press release or filing found dated today. The company has a string of positive developments this year (Edge Autonomy acquisition expanding into autonomous systems, new SpaceX mission awards) keeping it in a bullish narrative, but nothing specifically dated to today's session. Today's pop looks consistent with the broader space-sector rally also lifting LUNR, SATL, and BKSY.
+- Why: Sector-wide re-rating in small-cap space/defense-infrastructure names — possibly sympathy from LUNR's Stifel upgrade or a general risk-on day for high-beta space stocks — is pulling RDW along; no distinct single-stock driver confirmed.
+- Impact: Volume ~153.7k, elevated. Because no distinct catalyst was confirmed, this reads more like a sector-beta trade — durability depends on whether the broader space-stock rally holds; higher mean-reversion risk if the move is purely correlation-driven.
+- Horizon: SHORT_TERM — absent a confirmed name-specific catalyst, treat as a sector-momentum trade with fade risk once the group's daily move settles.
+- Opportunity cost: RDW would compete directly with LUNR and SATL for the same space-sector-momentum thesis. The strategy's sector-rotation rule favors riding the strongest name in a hot sector, and LUNR has the clearer catalyst; RDW/SATL would be a weaker, correlated duplicate of that bet, and stacking more than one space name risks tripping the correlation gate (>0.75 correlation, 2+ open positions).
+
+#### Deep dive: SATL $5.565 +8.37%
+- Catalyst: No today-specific catalyst found. Most recent hard data point is stale (Q3 2025 results) showing revenue +29% to $3.6M with lower operating costs, but a broader FY2025 read shows $17.7M revenue against a -$103.9M net loss, funded partly by a $113.7M equity raise. The move looks driven by the same space-sector momentum lifting LUNR/RDW/BKSY rather than fresh company news.
+- Why: Beta to today's space-stock rally — SATL is a small, thinly-traded, loss-making satellite-imagery company, so it swings hard on sector sentiment and low float rather than idiosyncratic news.
+- Impact: Volume ~166.6k on a sub-$6 stock is high dollar turnover relative to market cap. A low-priced, cash-burning name moving with the group is a textbook one-day, high-beta spike prone to mean-revert once sector enthusiasm cools, especially with no fundamental trigger and ongoing net losses.
+- Horizon: SHORT_TERM — no durable catalyst; heavy net losses argue against carrying this past the session.
+- Opportunity cost: Weakest of the five deep-dive names on fundamentals (heaviest cash burn, no confirmed catalyst). Would not clear a disciplined 2:1 R:R screen without a tight, name-specific reason to hold — capital is better allocated to LUNR (has a catalyst) or RKLB (improving fundamentals) if a space-sector position is wanted at all; adding SATL alongside LUNR/RDW also risks the correlation gate blocking further sector adds.
+
+#### Deep dive: RKLB $69.49 +7.61%
+- Catalyst: RKLB just finished absorbing a large $1.94B at-the-market equity offering (dilution overhang), and shares are now recovering with "a flurry of positive catalysts" per trade press. Fundamentally, the company beat all Q1 2026 guidance metrics (revenue, margin, adjusted EBITDA) and posted a near-breakeven quarter (-$0.03 EPS) with record revenue and a strengthening backlog, aided by the Geost acquisition.
+- Why: The dilution overhang from the equity raise is clearing just as the fundamental story (improving margins, near-breakeven EPS, strong backlog) reasserts itself — buyers are stepping back in now that dilution is priced in and the underlying business trend is genuinely improving (consensus sees losses shrinking 54%/year through 2027, profitability by 2028).
+- Impact: Highest volume of the top 5 (287.6k shares) — the largest, most liquid name in this basket, with an actual improving-fundamentals story rather than pure sentiment. The move looks more sustainable than the smaller, catalyst-less names (RDW/SATL) because it's underpinned by real EPS/margin trajectory, not just sector beta.
+- Horizon: LONG_TERM — structural improvement in unit economics (narrowing losses, record backlog, Geost integration) aligns with the ongoing space/defense sector-rotation phase; worth treating as a multi-week swing candidate if it later clears the Confluence rule on a /trade check.
+- Opportunity cost: RKLB is the strongest fundamental case of the five and the most liquid — if only one space-sector name gets one of this week's max-3 new-trade slots, RKLB is the logical pick over LUNR/RDW/SATL/UMAC. A 10% trailing stop from $69.49 (~$62.54) against a plausible 2:1 target near $76 is feasible given RKLB's daily range — the one name in this group that could genuinely clear the 2:1 R:R + fundamentals bar rather than being purely sentiment-driven.
+
+#### Deep dive: UMAC $24.72 +6.74%
+- Catalyst: No today-specific catalyst found. Most relevant recent fundamentals are the Aug 8 2026 earnings print showing revenue scaling sharply (~$16.7M) but still a net loss (~$7.8M, -$0.16/share), alongside governance updates (switched to Ernst & Young as auditor, lowered bylaws approval threshold). None of these directly explain today's pop — this looks like drone/defense-sector momentum riding the same tape as the space-sector names.
+- Why: Small-float, high-multiple (P/S ~37x) drone/defense name trading on sector momentum and volatility rather than a fresh identifiable catalyst; UMAC's ATR is unusually high (~11%), so single-digit-percent moves without news aren't unusual for this name.
+- Impact: Volume only ~20.8k — thin relative to the other names in this basket, meaning today's move is on light participation and more prone to reverse. The valuation (P/S ~37x, still unprofitable) means any pullback in sector enthusiasm hits this name hardest.
+- Horizon: SHORT_TERM — no durable catalyst identified, thin volume, stretched valuation — high ATR means this is a fade risk, not a swing hold.
+- Opportunity cost: Weakest risk/reward of the five — rich valuation, unprofitable, thin volume on today's move, and no confirmed catalyst. Capital would be far better used on RKLB (real earnings improvement) than UMAC. Would also compete with the other momentum names already on this list for the week's 3-new-trade cap and risk the correlation gate if paired with another sector name.
