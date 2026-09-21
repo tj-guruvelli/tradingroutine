@@ -13296,3 +13296,19 @@ EMA9>EMA21) hits, ranked by ADX14.
 | HAFN | B | Momentum confluence | daily swing | RSI 80, ADX 33, px $8.17 > SMA200 $7.35 |
 | QCOM | B | Momentum confluence | daily swing | RSI 54, ADX 21, px $193.41 > SMA200 $168.55 |
 | TRMD | B | Momentum confluence | daily swing | RSI 77, ADX 22, px $32.18 > SMA200 $27.97 |
+
+### Setup Scan (18:33 ET, cloud)
+60/60 scanned, 0 errors. `grade_a_possible: false` — 18:33 ET is outside the
+10:00-15:30 ET intraday-breakout window, so Setup A was not evaluated this
+run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`); 0 grade-A is
+expected, not a null result. 4 grade-B (momentum confluence: ADX14>20 AND
+EMA9>EMA21) hits, ranked by ADX14 descending. Same 4 tickers as the 16:38 ET
+run this session — daily bars are unchanged post-close, so the result is
+identical, not a new signal.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BMNR | B | Momentum confluence | daily swing | RSI 61, ADX 41, px $28.13 > SMA200 $22.08 |
+| HAFN | B | Momentum confluence | daily swing | RSI 80, ADX 33, px $8.17 > SMA200 $7.35 |
+| TRMD | B | Momentum confluence | daily swing | RSI 77, ADX 22, px $32.18 > SMA200 $27.97 |
+| QCOM | B | Momentum confluence | daily swing | RSI 54, ADX 21, px $193.41 > SMA200 $168.55 |
