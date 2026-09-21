@@ -13165,3 +13165,60 @@ stated: top 5 of 10 — N/A here, the single row made the cut.
 - Impact: Move looks like continued crypto-beta tracking, not a fresh idiosyncratic spike — volume unchanged from the prior scan (2.6M), consistent with the same premarket print still being reflected. A separate outside note (InvestingPro, dated well before today) previously flagged BMNR as overvalued near $42 with ~50% downside risk, and another analysis found "no material company-specific news, price movements reflect sentiment rather than fundamentals" — both reinforce elevated mean-reversion risk if ETH cools. Sector read-through: expect other ETH-treasury/crypto-proxy names to be moving in sympathy.
 - Horizon: SHORT_TERM, unchanged from the 08:14 ET call — no new idiosyncratic catalyst, pure crypto beta, historically fades without continued ETH follow-through.
 - Opportunity cost: Zero open positions, 0/3 weekly trades used — wouldn't displace an existing holding, but this is BMNR's 4th consecutive scan appearance today-equivalent pattern (also repeated 3x on 2026-09-18) tracking the same ETH-beta thesis without a fresh catalyst. Chasing an already-extended +15% gap makes a sane stop distance hard to reconcile with the 2:1 R:R minimum. Research only; no order recommended here.
+
+## 2026-09-21 — Gappers (auto-scan 10:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+10 raw hits; AGMH filtered out (price $0.67 < $3 minimum despite a -20.33%
+gap). 9 of ~60 tickers cleared all filters (gap>=5%, price>=$3,
+premarket_volume>=50000 — all 9 cleared the volume bar too, with ASTS the
+closest at 50,749). Deep-dive cap stated: top 5 of 10 — 9 available, all
+9 ranked, top 5 got the full deep dive, ranks 6-9 quick-scan only.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | META | $715.41 | +7.52% | 382,194 | Broad bullish analyst coverage (91% Buy/66 ratings); no single new headline catalyst confirmed |
+| 2 | LUNR | $14.97 | +7.39% | 84,916 | Rebounding from a 2026-highs pullback; consensus Buy/Strong Buy, ~$30 12-mo price targets |
+| 3 | RDW | $11.41 | +6.24% | 67,803 | Redwire announced Huntsville, AL production expansion for UAS/space infrastructure |
+| 4 | RKLB | $68.37 | +5.88% | 189,294 | Completed 96th Electron launch; separately absorbing a recent $1.94B ATM offering |
+| 5 | BMNR | $27.37 | +5.45% | 629,854 | Weekly ETH treasury update shows continued crypto/cash holdings growth |
+| 6 | OKLO | $40.04 | +5.33% | 69,861 | Nuclear SMR momentum continues after last week's >11% surge (AI power demand); no fresh news today |
+| 7 | ASTS | $61.56 | +5.23% | 50,749 | US Mobile targeting a Q4 AST SpaceMobile direct-to-cell launch |
+| 8 | RR | $1.76 | +5.09% | 75,321 | Richtech Robotics — continued retail/analyst attention; no fresh today-specific news confirmed |
+| 9 | SATL | $5.40 | +5.06% | 86,858 | No new catalyst detected; broader tech-sector pullback cited as prior-session context |
+
+#### Deep dive: META $715.41 +7.52%
+- Catalyst: No specific company press release or 8-K identified for today's move. Search results show strong analyst sentiment (91% Buy ratings, 66 analysts) and the stock trading near recent highs in the $665-715 range. Broad AI/mega-cap tech strength is a likely contributing factor, but no discrete META-specific catalyst was confirmed.
+- Why: Absent a discrete headline, the move reads as momentum/positioning-driven — heavy analyst buy-side consensus plus broad AI-theme tech strength pulling in trend/momentum buyers ahead of any scheduled catalyst.
+- Impact: Typical daily volume is far higher than the ~382K seen in this snapshot, likely early/partial session data. A 7.5% gap without a confirmed catalyst warrants caution — could reflect broad tech-sector strength rather than a stock-specific event.
+- Horizon: SHORT_TERM, no confirmed structural catalyst found — treat as unconfirmed until a same-day press release or macro driver is verified.
+- Opportunity cost: Large-cap/liquid — a full-size position ties up significant buying power on an unverified catalyst. Ranks behind RDW and BMNR (verified, specific catalysts) for capital priority; reduce size or skip pending confirmation.
+
+#### Deep dive: LUNR $14.97 +7.39%
+- Catalyst: Intuitive Machines pulled back nearly 4% amid a broader space-sector drawdown in recent sessions. Today's bounce comes with analyst commentary framing $20 as reachable near-term; consensus Buy/Strong Buy, average 12-month PT near $30.
+- Why: An oversold bounce in a high-beta space name, reinforced by reiterated bullish price targets, pulls in dip-buyers and momentum traders looking for a re-test of 2026 highs.
+- Impact: Volume (~85K) looks thin vs. LUNR's typical multi-million-share turnover. Sector read-through: gapping alongside RDW and ASTS today — consistent with a broader space-sector rotation rather than an isolated story.
+- Horizon: SHORT_TERM to start (pullback bounce), LONG_TERM potential if the LUNR/RDW/ASTS sector rotation holds and confirms on volume — reassess via Confluence rule.
+- Opportunity cost: Space-sector cluster (LUNR/RDW/ASTS) gapping together concentrates risk — run scripts/corr-gate.mjs before adding beyond one. Ranks behind RDW (more specific, dated catalyst) for capital priority.
+
+#### Deep dive: RDW $11.41 +6.24%
+- Catalyst: Redwire announced a major expansion in Huntsville, AL, scaling production of "combat-proven" UAS (drone) systems and mission-critical space infrastructure, citing rising demand — a specific, dated capacity-expansion announcement.
+- Why: A capacity-expansion announcement tied to rising defense/UAS demand signals forward revenue growth, drawing investors positioning for higher production volumes and government/defense contract flow — fundamentals-linked, not pure headline noise.
+- Impact: Volume (~68K) is on the lower side for a 6%+ mover; watch for confirmation on higher volume. Sector read-through: moving alongside LUNR and ASTS — a broader space/defense-tech sector bid.
+- Horizon: LONG_TERM lean — capacity expansion + defense demand is structural, aligns with the visible sector rotation; still needs a Confluence-rule check before a multi-day swing hold.
+- Opportunity cost: Most concrete, dated catalyst of the LUNR/RDW/ASTS cluster — prioritize over LUNR/ASTS under the max-6-position/correlation-gate constraints. Would displace a same-sector holding or a lower-ranked gapper given the 3-new-trades/week cap.
+
+#### Deep dive: RKLB $68.37 +5.88%
+- Catalyst: Rocket Lab completed its 96th Electron launch per company/social posts. Separately, coverage from a few days earlier centered on completion of a $1.94B at-the-market equity offering, cited as a near-term dilution overhang during a prior pullback.
+- Why: A successful launch is a routine operational proof-point reinforcing execution credibility/cadence, supporting the bull case even though the dilutive ATM offering is a separate, offsetting factor already being priced in.
+- Impact: Volume (~189K) is meaningful, among the highest of today's gappers — real participation. Offering overhang appears to be fading as the launch-cadence narrative reasserts. Sector read-through: moves with the LUNR/RDW/ASTS cluster.
+- Horizon: SHORT_TERM lean — today's pop looks launch-news-driven on a stock still absorbing recent dilution; needs a clean break/hold above recent highs to argue LONG_TERM.
+- Opportunity cost: Correlates with the LUNR/RDW/ASTS space cluster — run scripts/corr-gate.mjs before entry. Ranks below RDW (more distinct catalyst) if the correlation gate flags overlap; weigh against the 3-new-trades/week cap.
+
+#### Deep dive: BMNR $27.37 +5.45%
+- Catalyst: BitMine Immersion Technologies disclosed its latest weekly Ethereum treasury update, reporting continued growth in total crypto/cash holdings (prior disclosures cited ETH holdings near 4.8-5.9M tokens depending on the week). Shares have closed higher on similar prior weekly updates.
+- Why: BMNR trades as a leveraged proxy for ETH price and BitMine's growing ETH treasury — each weekly update showing continued accumulation reinforces the "ETH treasury compounding" thesis, pulling in crypto-correlated momentum buyers.
+- Impact: Volume (~630K) is the highest of today's gappers — strong participation. Because the move is fundamentally a crypto-beta trade, it will likely track ETH price action rather than move independently; a crypto reversal could quickly unwind the gap.
+- Horizon: SHORT_TERM — tied to a recurring weekly disclosure and crypto-market beta, not a one-time structural catalyst.
+- Opportunity cost: Highest volume + cleanest verified catalyst of today's top 5, but closely tied to crypto/ETH beta so it doesn't diversify existing crypto-adjacent exposure. Would displace a weaker holding or lower-ranked gapper if only one of the 3 weekly trade slots remains; needs a tight, ETH-aware stop to clear 2:1 R:R.
