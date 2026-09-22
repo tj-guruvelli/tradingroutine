@@ -934,6 +934,68 @@ operator review pending. STEP 7 (notification) does not apply — no trade
 fired this run. STEP 8 (commit/push) skipped per routine instructions —
 no trades executed.
 
+### Sep 22, Market-Open (Day 53, Tuesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-21`). STEP 1: today's
+RESEARCH-LOG (2026-09-22 Pre-Market) flags XOM/CVX (Bessent Iranian-airline
+threat reopening the oil supply-shock thesis) and INTC (Meta Muse AI-agent
+CPU-demand narrative) as market-open candidates needing a live confluence
+check — no committed entries pre-market. STEP 2: read
+`data/setup-scan_cloud_2026-09-21_1833ET.json` (today's file doesn't exist
+yet — market-open runs before setup-scan-cloud's first same-day fire, per
+routine). 4 grade-B hits, no grade-A: HAFN, TRMD, BMNR, QCOM. Merged
+candidate list: XOM, CVX, INTC, HAFN, TRMD, BMNR, QCOM (7 total).
+`tradingview-data` MCP not loaded this run (confirmed via tool search) —
+computed RSI14/SMA200 for XOM/CVX/INTC directly from Alpaca IEX daily bars
+(same sma()/rsi() math as setup-scan-cloud.mjs) since the canonical source
+is unavailable; HAFN/TRMD/BMNR/QCOM reused the setup-scan file's RSI14/SMA200
+(prior-day 18:33ET close, live-requoted for price only).
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- XOM $164.75 (ask) — catalyst documented (today's RESEARCH-LOG, Iran/oil
+  supply-shock). RSI14 42.42 — neutral, not <30/>70, no align. Price >
+  200-SMA ($147.31) — 1 align. No VWAP/insider data. 1 of 4 — fails
+  confluence — skip.
+- CVX $212.09 (ask) — same catalyst as XOM. RSI14 42.85 — neutral, no
+  align. Price > 200-SMA ($184.41) — 1 align. No VWAP/insider data. 1 of
+  4 — fails confluence — skip.
+- INTC $122.76 (ask) — catalyst documented (today's RESEARCH-LOG, Muse
+  AI-agent CPU-demand narrative). RSI14 71.03 — overbought (>70), a
+  sell/no-new-long signal, not a bullish align (worse than Sep 21's
+  neutral 57.3 read). Price > 200-SMA ($77.93) — 1 align. No VWAP/insider
+  data. 1 of 4 — fails confluence — skip.
+- HAFN $9.30 (ask, setup-scan grade B) — no catalyst documented; skipped
+  the Apify catalyst fetch since confluence fails outright regardless:
+  RSI14 80.21 (setup-scan, prior-day close) — overbought, no align. Price
+  > 200-SMA ($7.35) — 1 align. 1 of 4 — fails confluence — skip.
+- TRMD $35.15 (ask, setup-scan grade B) — no catalyst documented, same
+  skip-the-fetch logic: RSI14 77.09 — overbought, no align. Price >
+  200-SMA ($27.97) — 1 align. 1 of 4 — fails confluence — skip.
+- BMNR $28.16 (ask, setup-scan grade B) — catalyst documented (today's
+  09:04ET gappers deep-dive: ETH treasury buy + broad crypto "extreme
+  greed" rally) but flagged there as crypto-beta pass-through, not an
+  independent thesis — same conclusion reached on every prior appearance
+  (Sep 18 x3, Sep 21). RSI14 60.56 — neutral, no align. Price > 200-SMA
+  ($22.08) — 1 align. 1 of 4 — fails confluence — skip.
+- QCOM $200.00 (ask, setup-scan grade B; note wide bid/ask $182.40-$200.00,
+  possibly a stale/thin quote) — no catalyst documented, skip-the-fetch
+  logic applies: RSI14 54.27 — neutral, no align. Price > 200-SMA
+  ($168.55) — 1 align. 1 of 4 — fails confluence — skip.
+
+All 7 candidates capped at 1 of 4 confluence indicators (200-SMA only) —
+same structural pattern as every recent session: RSI is neutral-to-overbought
+across the board (no oversold mean-revert setups) and VWAP/insider data
+remain unavailable without the tradingview-data MCP. No planned tickers
+executed — STEPs 5-6 skipped. Weekly trade count: 0/3 (week of Sep 21).
+53rd trading day since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 76th+ straight session, operator review pending. STEP 8
+(notification) does not apply — no trade fired this run. STEP 9
+(commit/push): proceeding — STEP 7 logged full candidate pass/fail detail
+this run.
+
 ### Sep 21, EOD Snapshot (Day 52, Monday)
 **Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
 | Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
