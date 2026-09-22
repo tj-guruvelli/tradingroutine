@@ -1,0 +1,34 @@
+{
+  "scanned_at": "2026-09-22T20:33:42.683Z",
+  "ny_time": "16:33",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "META",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 746.25,
+      "prev_daily_high": 752.96,
+      "prev_daily_close": 741.29,
+      "sma200": 624.62,
+      "sma200_window_days": 200,
+      "pmh": 737.84,
+      "today_hod": 757.14,
+      "rsi14": 77.74,
+      "adx14": 29.64,
+      "ema9": 672.29,
+      "ema21": 638.54,
+      "premarket_volume": 240,
+      "daily_volume": 1771591,
+      "avg_daily_volume_30": 635255,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
