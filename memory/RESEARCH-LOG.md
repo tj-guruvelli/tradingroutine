@@ -13393,3 +13393,33 @@ quote page (news feed, key stats, financials) instead.
 - Impact: Sector-wide read-through is clear — BTC, ETH, XRP, DOGE and other crypto-linked equities are moving together per the same sentiment wave, which is more sustainable than a single-stock headline spike as long as crypto strength holds, but it fully reverses if crypto rolls over. No BMNR-specific structural catalyst beyond routine treasury accumulation.
 - Horizon: SHORT_TERM (conditional on crypto tape) — this is a pass-through of "extreme greed" crypto sentiment, not a company-specific structural catalyst, so it should trade with BTC/ETH rather than be held as an independent multi-week thesis.
 - Opportunity cost: BMNR is crypto-correlated — run scripts/corr-gate.mjs before any entry given existing exposure; 2+ correlated positions would block it outright. At $28.07 a 7-10% stop (~$25.30-26.10) implies ~$2-2.75/share risk; clearing 2:1 R:R needs a $4-5.50 target, achievable only if the crypto rally extends. Taking both META and BMNR together would concentrate the book in "AI mega-cap" + "crypto proxy" with no diversification, and would use 2 of the max-3 new-trades-this-week slots.
+
+## 2026-09-22 — Gappers (auto-scan 10:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+2 of ~60 tickers cleared |gap| >= 5%: AGMH +8.26%, TRMD -5.07%. AGMH fails
+the $3.00 price floor ($0.79) and is dropped. **1 qualifying gapper after
+filters.** Falls within the top-5 deep-dive cap (only 1 total, no
+quick-scan-only rows this run). Apify RAG web browser's first catalyst query
+("TRMD stock news today catalyst") returned only off-topic junk (culinary
+site, recipe blog, unrelated YouTube video — ticker collided with the common
+word "stock"); treated as nothing usable and fell back to Apify web-fetch on
+the Benzinga quote page per routine rule (plain WebFetch to Benzinga was
+blocked with HTTP 403). A follow-up targeted Apify query
+("TORM TRMD stock drop today tanker") returned one usable snippet
+confirming an earlier post-earnings volatility pattern. Deep dive below
+built from the Benzinga quote page (news feed, key stats, financials) plus
+that snippet and the earlier fundamentals-query result (Q2 2026 print,
+52-week range).
+
+### Gappers (auto-scan 10:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | 35.23 | -5.07% | 14,796 | TORM pulling back from 52-week highs; no single-name catalyst found today |
+
+#### Deep dive: TRMD $35.23 -5.07%
+- Catalyst: TORM plc (NASDAQ: TRMD), a product tanker shipping company, traded in a $34.88-$35.83 range Sept 22, extending a pullback from its 52-week high of $38.73 (Sept 20 close was $37.36-38.23). No fresh company-specific headline broke this morning. TORM's Q2 2026 results (revenue $662.8M, net income $338.3M) drove the rally to those highs; a recent snippet shows the stock previously swung -4.42% post-earnings then rebounded +5.72% the next session, indicating ongoing earnings-driven volatility still working through the name. Rival Hafnia has also been building a stake in TORM (reported at 18.22%), adding cross-holder flow.
+- Why: Mean reversion after an earnings-driven rally to 52-week highs — momentum buyers who chased the Q2 beat are giving back gains on below-average volume, with no new negative headline to explain today's drop specifically. Continued post-earnings volatility (large swings both directions in recent sessions) reads as profit-taking rather than a new bearish thesis.
+- Impact: Volume (~421K per Benzinga) is well below the ~980K average, arguing against a high-conviction breakdown and more consistent with a low-volume fade. No sector-wide read-through — TRMD was the only tanker/shipping name on the watchlist to clear the gap filter today; AGMH (unrelated micro-cap) was the only other hit and was dropped on the price floor.
+- Horizon: SHORT_TERM, no structural catalyst (no M&A/guidance reset/new contract) identified — reads as a technical pullback off an earnings-driven high on light volume, likely to stabilize or mean-revert within a few sessions absent new news.
+- Opportunity cost: This is a down-gap, not a long setup, so it doesn't compete for a new long slot today. As a dip-buy candidate it would need a stop above the recent swing high (~$38.73, ~10% above $35.23) to respect the strategy's never-move-stop-down/never-within-3% rules, which likely fails the 2:1 min reward:risk for a standard entry — check TRADE-LOG for any existing tanker/shipping/energy exposure before considering further.
