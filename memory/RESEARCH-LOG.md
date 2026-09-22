@@ -13345,3 +13345,18 @@ No entry/stop/target levels are set — all three need `combined_analysis`/live-
 **Decision: HOLD.** No confluence-confirmed setups pre-market; XOM/CVX and INTC go on the market-open watch list pending a live confluence check. Patience > activity — default per strategy.
 
 STEP 5 ClickUp notification failed — HTTP 500 (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still literal placeholder strings, not real IDs — confirmed again this run).
+
+## 2026-09-22 — Gappers (auto-scan 08:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Only 1 of ~60 tickers cleared the |gap| >= 5% bar: OPEN at +6.86%
+($2.55 -> $2.725), but it fails the $3.00 price floor. **0 qualifying
+gappers after filters** (gap>=5%, price>=$3, premarket_volume>=50k where
+populated). No catalyst research or deep-dive run (nothing cleared the
+bar). No Telegram/ClickUp notify sent per routine rule (0 hits, no scan
+error).
+
+### Gappers (auto-scan 08:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | none — 0 rows passed filters |
