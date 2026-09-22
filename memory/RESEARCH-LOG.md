@@ -13360,3 +13360,36 @@ error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-09-22 — Gappers (auto-scan 09:04 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+3 of ~60 tickers cleared |gap| >= 5%: META +10.6%, BMNR +8.17%, OPEN +7.06%.
+OPEN fails the $3.00 price floor ($2.73) and is dropped. **2 qualifying
+gappers after filters.** Both fall within the top-5 deep-dive cap (only 2
+total, so no quick-scan-only rows this run). Apify RAG web browser returned
+0 pages for both catalyst queries (Google-search-then-scrape came back
+empty); fell back to Benzinga quote-page fetch per routine rule for both
+catalyst and deep-dive research. No further Apify fundamentals query run
+given the first-stage failure — deep dive below built from the Benzinga
+quote page (news feed, key stats, financials) instead.
+
+### Gappers (auto-scan 09:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | META | 735.90 | +10.6% | 1,771,591 | Zuckerberg net worth +$27B Monday as META rallies |
+| 2 | BMNR | 28.07 | +8.17% | 1,797,893 | ETH treasury nears 6M tokens amid broad crypto rally |
+
+#### Deep dive: META $735.90 +10.6%
+- Catalyst: Meta shares are on a multi-day rally that pushed the stock up double digits, with Monday's session move alone adding ~$27B to Mark Zuckerberg's net worth (more than the rest of the Top 10 richest people combined, per Benzinga). Compounding catalysts: a new Shopify partnership enabling AI-powered checkout through Meta's Muse assistant, and bond investors demanding higher yields on Meta/Alphabet/Nvidia AI-capex debt.
+- Why: A cluster of bullish AI-monetization headlines (Shopify commerce tie-up, Muse assistant traction) combined with momentum/short-covering flow to push a mega-cap that rarely gaps >5% into a double-digit premarket move; RSI already at 75 (overbought) suggests some of this is chase-driven.
+- Impact: RSI 75 and price near the 52-week high ($790.80) make the move look stretched rather than freshly re-rated off a fundamental print (no earnings/guidance behind it). Peer read-through is mixed: AMD is cooling the same day after its own 52-week high, a caution flag for crowded AI-mega-cap longs.
+- Horizon: SHORT_TERM, headline/sentiment-driven (net-worth story, partnership news) with an overbought RSI reading — no fresh earnings or guidance reset behind it, so treat as a momentum pop rather than a new multi-week thesis.
+- Opportunity cost: At 20% max position sizing this would take the single largest slot on the book at a stretched RSI. With BMNR also gapping today and crypto-correlated to any existing holdings, taking META here uses one of the max-3-new-trades-this-week slots; a stop 5-7% below $735.90 (~$684-699) implies ~$40-50/share risk, which needs an $80-100+ target to clear 2:1 R:R — plausible only if the AI-momentum trend continues, not guaranteed given RSI 75.
+
+#### Deep dive: BMNR $28.07 +8.17%
+- Catalyst: BitMine Immersion (an Ethereum-treasury company chaired by Tom Lee) is rallying with a broad crypto rally — Bitcoin topped $87,000 and ETH/XRP/DOGE also gained amid "extreme greed" sentiment. BitMine itself bought another 27,562 ETH, pushing its treasury toward 6M tokens (~$17.1B in assets), with Lee declaring the crypto bull market "underway."
+- Why: BMNR trades as a leveraged proxy for its Ethereum holdings — its share price tracks ETH price times treasury size, so a crypto-wide risk-on move plus BitMine's own incremental ETH accumulation (raising per-share crypto exposure) mechanically pulls the stock up with the broader rally.
+- Impact: Sector-wide read-through is clear — BTC, ETH, XRP, DOGE and other crypto-linked equities are moving together per the same sentiment wave, which is more sustainable than a single-stock headline spike as long as crypto strength holds, but it fully reverses if crypto rolls over. No BMNR-specific structural catalyst beyond routine treasury accumulation.
+- Horizon: SHORT_TERM (conditional on crypto tape) — this is a pass-through of "extreme greed" crypto sentiment, not a company-specific structural catalyst, so it should trade with BTC/ETH rather than be held as an independent multi-week thesis.
+- Opportunity cost: BMNR is crypto-correlated — run scripts/corr-gate.mjs before any entry given existing exposure; 2+ correlated positions would block it outright. At $28.07 a 7-10% stop (~$25.30-26.10) implies ~$2-2.75/share risk; clearing 2:1 R:R needs a $4-5.50 target, achievable only if the crypto rally extends. Taking both META and BMNR together would concentrate the book in "AI mega-cap" + "crypto proxy" with no diversification, and would use 2 of the max-3 new-trades-this-week slots.
