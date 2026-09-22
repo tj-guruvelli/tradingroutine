@@ -13312,3 +13312,36 @@ identical, not a new signal.
 | HAFN | B | Momentum confluence | daily swing | RSI 80, ADX 33, px $8.17 > SMA200 $7.35 |
 | TRMD | B | Momentum confluence | daily swing | RSI 77, ADX 22, px $32.18 > SMA200 $27.97 |
 | QCOM | B | Momentum confluence | daily swing | RSI 54, ADX 21, px $193.41 > SMA200 $168.55 |
+
+### Sep 22, Pre-Market (Day 53, Tuesday)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 | 0 open positions | 0 open orders (`balance_asof: 2026-09-21`). Still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 75th+ straight session, operator review pending.
+
+**Apify reliability note:** 4 of 7 scheduled Apify RAG-web-browser queries (oil, S&P futures, VIX, sector-momentum — all short "S&P"/ticker-style queries) returned irrelevant garbage this run (Powerball, ServiceNow ticker page, a Bill Gates essay, Wikipedia "S" letter pages in multiple languages) — not Yahoo hits, just broken search matches. Fell back to native WebSearch for those 4 (Yahoo-blocked via `blocked_domains`); catalysts, earnings, and econ-calendar queries returned usable/partial data via Apify.
+
+**Market context:**
+- Oil: WTI ~$93.18, Brent ~$101.39-101.51 (+1.05% intraday) — Treasury Sec. Bessent said Iranian airlines will be "shut down" worldwide by Wednesday (fuel/landing-service providers threatened with dollar-system exclusion); this reverses the prior 4-session oil downtrend noted Sep 21.
+- VIX: ~14.87, holding below 15 — contained near-term vol pricing despite the Iran headline.
+- S&P 500 futures: mixed Tue premarket — Dow/S&P higher, Nasdaq 100 slightly lower after Monday's higher close (S&P 500 cash closed 7,764.70, +1.49%, Sep 21 per TTB Daily Market Insight).
+- Catalysts: Meta's new "Muse" AI agent launch is fueling a CPU-demand-broadening narrative (agents need inference/orchestration compute beyond GPUs) — lifting semis/CPU names (INTC/AMD/ARM cited). Fed officials (Goolsbee, Collins, Musalem) maintained a hawkish bias, flagging persistent inflation and openness to another 2026 hike; Collins tied a recent hike partly to Iran tension. US-China trade optimism building ahead of a Trump-Xi summit (AI hotline, tariff-exemption talk) but USTR Greer downplayed a broad deal.
+- Earnings: no notable reports before today's open found (Nasdaq/Investing.com earnings calendars returned empty for today's date).
+- Econ calendar: no CPI/PPI/FOMC/jobs prints scheduled today; only regional Fed surveys (Philly Fed non-mfg 8:30am, Richmond Fed mfg 10:00am) — low-tier data day.
+- Sector YTD: Energy is the clear 2026 leader (+30-48% depending on source/window); Consumer Discretionary is the laggard (-4% to -5%). Aligns with the late-cycle sector-rotation phase in TRADING-STRATEGY.md.
+- No held positions — the "news on current holdings" check does not apply.
+
+**Trade ideas (watch-list only, none executed pre-market):**
+1. **XOM/CVX (energy)** — catalyst: fresh Iran/oil-supply-shock headline (Bessent Iranian-airline shutdown threat) re-opens the energy thesis standing-skipped Sep 21 on a reversed downtrend; today's move reverses that reversal. Reference (last close, stale premarket quote): XOM ask $166.03, CVX ask $214.20. Needs a live re-quote + confluence check (VWAP/RSI/200-SMA/insider) at market open before any entry — not confirmed yet.
+2. **INTC (semis/AI-agent CPU-demand)** — catalyst: Meta Muse AI-agent launch broadening CPU demand narrative, Goldman/sell-side framing CPU makers as under-appreciated AI-agent beneficiaries. Reference (stale premarket quote): ask $121.70. INTC failed confluence on Sep 21 (1 of 4 indicators); today's catalyst is different (CPU-demand narrative vs. Sep 21's investment/restructuring reports) — needs a fresh confluence check, not a carry-forward of Sep 21's fail.
+3. Energy-sector momentum (broad) — XLE/sector ETFs reflect the strongest YTD trend; a sector-momentum add would need to clear the correlation gate against any planned XOM/CVX single-name entry (`scripts/corr-gate.mjs`) before sizing two energy names together.
+
+No entry/stop/target levels are set — all three need `combined_analysis`/live-quote confluence confirmation at or after market open per the Entry Checklist before any order is placed.
+
+**Risk factors:**
+- Iran/Mideast headline risk is live and binary (Bessent's Wednesday deadline) — could spike oil and risk-off sentiment intraday with little warning.
+- VIX near cycle lows (14.87) despite that live geopolitical risk — a air-pocket repricing is plausible if the Iran situation escalates further.
+- Fed hawkish bias (three officials Tuesday) keeps a rate-hike-later-in-2026 risk on the table for duration-sensitive/growth names.
+- Low-tier econ-data day (no CPI/PPI/jobs/FOMC) reduces the odds of a scheduled macro catalyst but raises the relative weight of headline risk (Iran, Trump-Xi summit chatter).
+
+**Decision: HOLD.** No confluence-confirmed setups pre-market; XOM/CVX and INTC go on the market-open watch list pending a live confluence check. Patience > activity — default per strategy.
+
+STEP 5 ClickUp notification failed — HTTP 500 (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still literal placeholder strings, not real IDs — confirmed again this run).
