@@ -13423,3 +13423,40 @@ that snippet and the earlier fundamentals-query result (Q2 2026 print,
 - Impact: Volume (~421K per Benzinga) is well below the ~980K average, arguing against a high-conviction breakdown and more consistent with a low-volume fade. No sector-wide read-through — TRMD was the only tanker/shipping name on the watchlist to clear the gap filter today; AGMH (unrelated micro-cap) was the only other hit and was dropped on the price floor.
 - Horizon: SHORT_TERM, no structural catalyst (no M&A/guidance reset/new contract) identified — reads as a technical pullback off an earnings-driven high on light volume, likely to stabilize or mean-revert within a few sessions absent new news.
 - Opportunity cost: This is a down-gap, not a long setup, so it doesn't compete for a new long slot today. As a dip-buy candidate it would need a stop above the recent swing high (~$38.73, ~10% above $35.23) to respect the strategy's never-move-stop-down/never-within-3% rules, which likely fails the 2:1 min reward:risk for a standard entry — check TRADE-LOG for any existing tanker/shipping/energy exposure before considering further.
+
+## 2026-09-22 — Gappers (auto-scan 11:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+2 of ~60 tickers cleared |gap| >= 5%: NYT -7.06%, KTOS -5.05%. Both clear
+the $3.00 price floor. **2 qualifying gappers after filters, both within
+the top-5 deep-dive cap** (no quick-scan-only rows this run). For NYT,
+three Apify RAG query variants (headline query, fundamentals query, a
+targeted "why is NYT dropping" query) plus a Benzinga apify-web-fetch pull
+all failed to surface a same-day catalyst — only stale analyst-forecast and
+company-profile pages came back; logged as catalyst-unconfirmed. For KTOS,
+Benzinga (via apify-web-fetch, plain WebFetch again blocked 403) showed only
+Aug-dated news; a follow-up Apify search found a StockStory "why obliterated"
+piece citing ARK-fund selling + defense-sector rotation, but that article's
+own price reference ($118.20) doesn't match today's ~$46 level, so it is
+flagged as NOT a confirmed same-day source — sector-rotation theme noted
+as plausible but unconfirmed.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NYT | 65.56 | -7.06% | 122,150 | No confirmed same-day catalyst found; searches returned only stale analyst pages |
+| 2 | KTOS | 46.115 | -5.05% | 45,430 | Possible defense-sector rotation / ARK selling theme (unconfirmed for today) |
+
+#### Deep dive: NYT $65.56 -7.06%
+- Catalyst: No dated news catalyst was found for today via Apify RAG search (3 query variants) or Benzinga's NYT quote page. NYT's day range ($66.14-$70.67) confirms a genuine intraday move down from Friday's $70.54 close, and RSI sits at 40, but every search pass surfaced only stale analyst-rating pages, forecast summaries, and general company profiles — no earnings, guidance, legal, or M&A item tied to today.
+- Why: Unclear — no confirmed fundamental trigger. Candidates not yet verified: broad Communication Services/media-sector pullback, index/ETF rebalancing flow, or a thin-liquidity air pocket. Treat as unconfirmed until a same-day source surfaces.
+- Impact: Volume (122K) is well below what a genuine 7% headline move would typically pull on an $11B market-cap NYSE name — reads more like a low-liquidity gap than a fundamentally-driven selloff. Needs a same-day volume/news recheck before treating as tradeable.
+- Horizon: SHORT_TERM, default-caution reasoning only — with no confirmed catalyst and light volume, do not carry past today without independent confirmation.
+- Opportunity cost: No catalyst confirmation means this fails the Entry Checklist's catalyst requirement outright; not a candidate to displace an existing holding or this week's trade allowance. Flagged for a manual news recheck, not a trade.
+
+#### Deep dive: KTOS $46.115 -5.05%
+- Catalyst: The only substantive sourced coverage found (StockStory "why up/down" piece via Apify) attributes a prior KTOS selloff to Cathie Wood's ARK funds (ARKK/ARKQ/ARKX) trimming their KTOS stake alongside a broader defense-sector downturn from easing geopolitical tensions and profit-taking after a strong run. CAVEAT: that article's own price reference ($118.20) does not match today's ~$46 level, so it is NOT confirmed as today's catalyst — likely describes an earlier decline event. Treating the ARK-selling/sector-rotation theme as plausible but unconfirmed.
+- Why: If the theme holds: institutional de-risking/profit-taking in a high-multiple defense name (KTOS near 286x TTM P/E per Benzinga) amid a sector-wide Aerospace & Defense pullback, not a company-specific negative surprise.
+- Impact: Volume (45K) is far below KTOS's ~4.3M average daily volume, indicating this early read is thin and low-conviction. RSI at 36 shows building weakness. Check peer defense names (LMT, RTX, GD, NOC, GE) for same-direction moves as a sector-wide confirmation signal before acting.
+- Horizon: SHORT_TERM — no same-day catalyst confirmed and volume too thin to call this a trend change; the company's separate long-term thesis (Valkyrie drone contract pipeline, defense-budget tailwind) is unconfirmed for today and not a basis for a LONG_TERM call right now.
+- Opportunity cost: Given no confirmed same-day catalyst and thin supporting volume, this would not clear the Confluence rule without further confirmation. Passing for now rather than displacing an existing holding or using a slot from this week's 3-trade allowance.

@@ -1,22 +1,36 @@
 {
-  "scanned_at": "2026-09-22T14:03:00Z",
+  "scanned_at": "2026-09-22T15:08:31Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "TRMD",
-      "price": 35.23,
-      "gap_pct": -5.07,
-      "premarket_volume": 14796,
-      "catalyst": "TORM (TRMD) down ~4-5% intraday, pulling back from 52-week highs; no single-name catalyst found in today's headlines.",
+      "symbol": "NYT",
+      "price": 65.56,
+      "gap_pct": -7.06,
+      "premarket_volume": 122150,
+      "catalyst": "No confirmed same-day news catalyst found; searches returned only stale analyst-forecast/company-profile pages.",
+      "headlines": [],
+      "catalyst_detail": "No dated news catalyst was found for today via Apify RAG search (3 query variants) or Benzinga's NYT quote page. NYT's day range ($66.14-$70.67) confirms a genuine intraday move down from Friday's $70.54 close, and RSI sits at 40, but every search pass (headline query, fundamentals query, a targeted 'why is NYT dropping' query) surfaced only stale analyst-rating pages, forecast summaries, and general company profiles — no earnings, guidance, legal, or M&A item tied to today.",
+      "why": "Unclear — no confirmed fundamental trigger. Candidates not yet verified: broad Communication Services/media-sector pullback, index/ETF rebalancing flow, or a thin-liquidity air pocket. Treat as unconfirmed until a same-day source surfaces.",
+      "impact": "Volume (122K) is well below what a genuine 7% headline move would typically pull on an $11B market-cap NYSE name — reads more like a low-liquidity gap than a fundamentally-driven selloff. Needs a same-day volume/news recheck (e.g. via /sentiment or a fresh /research pull) before treating as tradeable.",
+      "horizon": "SHORT_TERM, no reasoning available beyond default caution — with no confirmed catalyst and light volume, do not carry past today without independent confirmation.",
+      "opportunity_cost": "No catalyst confirmation means this fails the Entry Checklist's catalyst requirement outright; not a candidate to displace an existing holding or this week's trade allowance. Flagged for a manual news recheck, not a trade."
+    },
+    {
+      "rank": 2,
+      "symbol": "KTOS",
+      "price": 46.115,
+      "gap_pct": -5.05,
+      "premarket_volume": 45430,
+      "catalyst": "Likely continuation of a broader Aerospace & Defense sector pullback / institutional de-risking in high-multiple defense names; no same-day headline confirmed.",
       "headlines": [
-        "TORM (TRMD) Stock Price, Quote, News & History - Benzinga"
+        "Why Kratos (KTOS) Shares Are Getting Obliterated Today - StockStory"
       ],
-      "catalyst_detail": "TORM plc (NASDAQ: TRMD), a product tanker shipping company, traded in a $34.88-$35.83 range Sept 22, extending a pullback from its 52-week high of $38.73 (Sept 20 close was $37.36-38.23). No fresh company-specific headline broke this morning. TORM's Q2 2026 results (revenue $662.8M, net income $338.3M) drove the rally to those highs; a recent snippet shows the stock previously swung -4.42% post-earnings then rebounded +5.72% the next session, indicating ongoing earnings-driven volatility still working through the name. Separately, rival Hafnia has been building a stake in TORM (reported at 18.22%), adding cross-holder flow to the stock.",
-      "why": "Mean reversion after an earnings-driven rally to 52-week highs: momentum buyers who chased the Q2 beat are giving back gains on below-average volume, with no new negative headline to explain today's drop specifically. Continued post-earnings volatility (large swings both directions in recent sessions) is consistent with profit-taking rather than a new bearish thesis.",
-      "impact": "Volume (~421K per Benzinga) is well below the ~980K average, arguing against a high-conviction breakdown and more consistent with a low-volume fade. No sector-wide read-through identified — TRMD was the only tanker/shipping name on the watchlist to clear the gap filter today, and the other hit (AGMH, +8.26%) was excluded on the $3 price floor.",
-      "horizon": "SHORT_TERM, no structural catalyst (no M&A/guidance reset/new contract) identified — reads as a technical pullback off an earnings-driven high on light volume, likely to stabilize or mean-revert within a few sessions absent new news.",
-      "opportunity_cost": "This is a down-gap, not a long setup, so it doesn't compete for a new long slot today. As a dip-buy candidate it would need a stop above the recent swing high (~$38.73, ~10% above $35.23) to respect strategy's never-move-stop-down/never-within-3% rules, which likely fails the 2:1 min reward:risk for a standard entry — check existing TRADE-LOG for any current tanker/shipping/energy sector exposure before considering further."
+      "catalyst_detail": "The only substantive sourced coverage found (StockStory 'why up/down' piece via Apify) attributes a prior KTOS selloff to Cathie Wood's ARK funds (ARKK/ARKQ/ARKX) trimming their KTOS stake alongside a broader defense-sector downturn from easing geopolitical tensions and profit-taking after a strong run. IMPORTANT CAVEAT: that article's own price reference ($118.20) does not match today's ~$46 level, so it is NOT confirmed as today's catalyst — it likely describes an earlier decline event. Treating the ARK-selling/sector-rotation theme as a plausible but unconfirmed recurring driver only.",
+      "why": "If the theme holds: institutional de-risking/profit-taking in a high-multiple defense name (KTOS trades near 286x TTM P/E per Benzinga) amid a sector-wide Aerospace & Defense pullback, not a company-specific negative surprise.",
+      "impact": "Volume (45K) is far below KTOS's ~4.3M average daily volume, indicating this early read is thin and low-conviction, not a confirmed institutional repricing. RSI at 36 shows building weakness. Check peer defense names (LMT, RTX, GD, NOC, GE) for the same-direction move as a sector-wide confirmation signal before acting.",
+      "horizon": "SHORT_TERM — no same-day catalyst confirmed and volume too thin to call this a trend change; the company's separate long-term thesis (Valkyrie drone contract pipeline, defense-budget tailwind) is unconfirmed for today and not a basis for a LONG_TERM call right now.",
+      "opportunity_cost": "Given no confirmed same-day catalyst and thin supporting volume, this would not clear the Confluence rule without further same-day confirmation (sector read-through, volume pickup). Passing for now rather than displacing an existing holding or using a slot from this week's 3-trade allowance."
     }
   ]
 }
