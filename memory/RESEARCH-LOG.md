@@ -13483,3 +13483,14 @@ TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
 META    B      Momentum confluence   daily swing   ADX14 29.6, EMA9 672.29 > EMA21 638.54, RSI 77.7
 
 0 grade-A hits -> no Telegram notification per rule.
+
+### Setup Scan (18:33 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60 candidates checked. `grade_a_possible: false`
+(ny_time 18:33, outside 10:00-15:30 ET window) — Setup A not evaluated this run,
+grade B/C only. 1 hit, 0 errors (same single hit as the 16:33 ET run this
+session — no change in setup state over the two hours).
+
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+META    B      Momentum confluence   daily swing   ADX14 29.6, EMA9 672.29 > EMA21 638.54, RSI 77.7
+
+0 grade-A hits -> no Telegram notification per rule.
