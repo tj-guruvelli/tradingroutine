@@ -13494,3 +13494,116 @@ TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
 META    B      Momentum confluence   daily swing   ADX14 29.6, EMA9 672.29 > EMA21 638.54, RSI 77.7
 
 0 grade-A hits -> no Telegram notification per rule.
+
+## 2026-09-23 — Pre-Market Research (cloud)
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power
+$400,000 | 0 open positions | 0 open orders. Confirmed live via
+`alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-22`). Still
+the confirmed-live-vs-$10k-baseline mismatch flagged 2026-07-27 —
+unresolved, operator review pending, 78th+ straight session. 54th trading
+day since launch (Jul 9) with zero entries. Week of Sep 21 — trade count
+0/3.
+
+**Market context — quiet/mixed tape, Fed speeches the day's main catalyst:**
+- **Oil:** WTI $89.46 (day range $88.72-$90.50, open $89.89), Brent $98.93
+  (Valor/oilprice.com aggregator via WebSearch fallback — Apify's oil query
+  scraped 0 pages, "Finished! Scraped 0 pages, 0 failed"). Down materially
+  from the $97-102 WTI/Brent levels logged Sep 21, continuing the
+  de-escalation-trade slide rather than reversing back toward supply-shock
+  levels.
+- **VIX:** ~14.25, described as "lower" — subdued, in the same low-14s band
+  as Sep 21 (14.8-14.95). No fresh vol-spike signal (Investing.com/Barchart
+  via WebSearch fallback; Apify's VIX query returned only blocked/empty
+  Google-redirect stubs, no price text).
+- **S&P 500 futures:** ~7,831.50, -0.03% (essentially flat); Nasdaq futures
+  +0.76%, Dow futures -0.37%, Russell futures +0.59% — a mixed/rotational
+  setup (small-caps and tech green, large-cap Dow/S&P red) rather than a
+  clean risk-on or risk-off tape (WebSearch fallback; Apify's futures query
+  also scraped 0 usable pages).
+- **Catalyst #1 (today's dominant driver):** Fed speeches at 10:05 and
+  10:20 AM ET — flagged by one source as the session's central catalyst,
+  with stated bullish-confirmation trigger levels SPY > $773.70 / QQQ >
+  $745.60. Treat those levels as one source's framing, not a committed
+  trade trigger, but worth watching live given VIX is already low (limited
+  room for a dovish surprise to compress vol further, real room for a
+  hawkish surprise to snap it back up).
+- **Catalyst #2:** Oil/geopolitics — "little changed" premarket futures
+  amid "fresh uncertainty around the war between the U.S. and Iran" per one
+  source, even as the WTI/Brent print itself is down vs. Sep 21. Read as
+  ongoing two-sided headline risk on the same Iran thread flagged Sep
+  14-21, not a fresh escalation or a resolved de-escalation — do not
+  re-open the XOM/CVX supply-shock thesis on this alone.
+- **Catalyst #3:** Chip/semis watch — INTC trading down slightly on
+  continued attention to domestic chip-manufacturing subsidy news; MU also
+  among the most active names, small down-move. Both idiosyncratic/thin
+  moves, not a broad semis catalyst today; consistent with INTC's
+  persistent overbought/no-confluence skip pattern logged Sep 18-22.
+- **Earnings before open today:** Cintas (CTAS), Paychex (PAYX), General
+  Mills (GIS) — none on the current watchlist, noted for awareness only.
+- **Economic calendar:** Light on scheduled data releases; heavy on Fed
+  speakers (~10 appearances this week per one source) as markets parse
+  post-September-hike rate-path signals. No CPI/PPI/jobs print confirmed
+  for today specifically — Michigan Consumer Sentiment is Friday (Sep 25),
+  outside today's window.
+- **Sector momentum YTD:** Energy and Technology remain the clear YTD
+  leaders (Energy ~+32-48% and Technology ~+31% depending on source),
+  Consumer Discretionary the laggard (~-4 to -5%) — same qualitative
+  ranking as Sep 21, sources still disagree on exact magnitudes so treat
+  directionally only, not for sizing.
+- **Held-ticker check:** No open positions — N/A this run (0/0 per
+  `alpaca.sh positions`).
+- **Setup-scan cross-check:** Latest `setup-scan_cloud` file (Sep 22 18:33
+  ET) still shows a single grade-B hit, META (RSI14 77.7, overbought,
+  ADX14 29.6, EMA9>EMA21) — no grade-A, no change from the last two scans.
+- Zero finance.yahoo.com citations used or found this session. Apify RAG
+  web browser degraded again this run: the oil, S&P-futures, VIX, and
+  sector-momentum queries all scraped 0-2 pages of usable content (mostly
+  blocked Google-redirect stubs or off-topic pages — one query's results
+  matched the bare letter "S" instead of "S&P 500 sector momentum",
+  pulling Wikipedia/Treccani dictionary entries). Only the catalysts and
+  economic-calendar queries returned real scraped article text (JPMorgan
+  outlook page, CNBC live-updates page), and even those were mostly
+  navigation chrome with no fresh numeric content. WebSearch fallback used
+  for oil, futures, VIX, catalysts, econ calendar, and sector momentum —
+  6 of 7 topics, per routine rule. This is a repeat of the same
+  garbled/blocked pattern logged Sep 21; flagging again as a recurring
+  tool-health issue worth escalating to the operator rather than re-logging
+  each session.
+
+**Trade ideas:** No `tradingview-data` confluence tooling run this session
+(pre-market doesn't pull it) — documenting candidates only, no
+entry/stop/target committed: (1) **XOM/CVX (Energy)** — still the YTD
+sector leader and today's Iran-war headline risk keeps the supply-shock
+thesis alive, but WTI/Brent are actually down vs. Sep 21, so this is a
+watch, not a re-entry signal; needs a live RSI/200-SMA/VWAP check at
+market-open same as every prior session this thesis has failed confluence
+on. (2) **META** — setup-scan grade B momentum hit persists but RSI14 77.7
+is overbought with no fresh catalyst today; not a new-long candidate,
+possible pullback-to-EMA21 (~$638) watch only. (3) No third idea — today's
+tape is dominated by Fed-speech event risk (10:05/10:20 ET) rather than a
+single-name catalyst; better to let the speeches pass and re-screen at
+market-open than force a third candidate.
+
+**Risk factors:** Fed speeches at 10:05/10:20 ET are the day's main event
+risk with VIX already low (~14.25) — a hawkish surprise has more room to
+snap volatility up than a dovish one has to compress it further. Iran-war
+headline risk remains a live two-sided catalyst for energy/oil even though
+today's WTI/Brent print is down, not up — don't treat today's lower oil
+print as thesis-resolution either direction. Apify RAG web browser
+continues to degrade (6 of 7 queries needed WebSearch fallback this
+session, worse than Sep 21's 3 of 7) — recurring tool-health issue, flag to
+operator if it persists past this week. 54 straight trading days since
+launch with zero entries / the $100k-vs-$10k baseline mismatch remain
+unresolved — still pending operator review.
+
+**Decision: HOLD.** No open positions, no planned trades. Fed-speech event
+risk plus a still-unresolved Iran/oil headline make today a watch-and-wait
+day; neither the energy thesis nor META clears the Entry Checklist without
+a live RSI/VWAP/200-SMA/insider confluence check at market-open. Patience
+over activity.
+
+`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` remain literal placeholder
+strings (not real IDs) — confirmed again this run (`clickup.sh` call
+returned HTTP 500, exit 22). STEP 5 notification did not deliver to a real
+channel.
