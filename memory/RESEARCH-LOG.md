@@ -13607,3 +13607,25 @@ over activity.
 strings (not real IDs) — confirmed again this run (`clickup.sh` call
 returned HTTP 500, exit 22). STEP 5 notification did not deliver to a real
 channel.
+
+## 2026-09-23 — Gappers (auto-scan 08:04 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+64 of ~60 tickers resolved from `memory/WATCHLIST.md`. **0 tickers cleared
+the |gap| >= 5% bar — 0 qualifying gappers.** Verified this is a genuine
+thin-premarket read, not a data-feed gap: as of 08:04 ET only 2 of 64
+watchlist symbols had posted any today-dated premarket trade at all (OPEN
++2.62%, ONDS +3.45%, both well under threshold); the other 62 still carried
+yesterday's 4:00pm ET close as their latest print. Spot-checked non-watchlist
+mega-caps (AAPL, NVDA, TSLA) for the same reason — same pattern, no fresh
+premarket trade posted yet. Alpaca `/v2/clock` confirms a normal trading day
+(`is_open: false`, `next_open: 2026-09-23T09:30:00-04:00`), so this reads as
+genuinely quiet early premarket liquidity, matching the Sep 22 08:09 ET run
+(also 0 qualifying gappers). No catalyst research or deep-dive run (nothing
+cleared the bar). No Telegram/ClickUp notify sent per routine rule (0 hits,
+no scan error).
+
+### Gappers (auto-scan 08:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | none — 0 rows passed filters |
