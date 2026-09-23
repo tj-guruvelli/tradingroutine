@@ -13647,3 +13647,35 @@ per routine rule (0 hits, no scan error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-09-23 — Gappers (auto-scan 10:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+market now open (10:03 ET). **1 ticker cleared the |gap| >= 5% and price >=
+$3 bar: BW (-5.58%, $6.94).** OPEN also moved (-5.98%) but was excluded —
+price $2.595 fails the $3.00 floor. Deep-dive cap is 5; only 1 ticker
+qualified so it got the full deep dive, ranks 6-10 N/A.
+
+Catalyst research (Apify RAG web browser, Yahoo-blocked; fundamentals query
+returned 0 pages so fell back to WebFetch/Apify web-fetch on
+benzinga.com/quote/BW per routine rule): no fresh same-day (Sep 23) headline
+found for BW. Most recent dated news is a ~Sep 18 $130M air-quality/utility
+contract win — Benzinga's own coverage on that story noted the stock's
+technical trend "remains weak" despite the win. Elevated short interest
+(18.2% of float, 4.6 days to cover), RSI 40. Reads as continuation of
+existing technical weakness, not a new catalyst. Zero open positions, 0/3
+weekly trades used (week of Sep 21) — this would not displace anything, but
+as a gap-DOWN with no fresh catalyst it is not a long-entry candidate under
+this long-only strategy regardless.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $6.94 | -5.58% | 21,901 | No fresh same-day catalyst; ~Sep 18 $130M air-quality contract win, trend still weak per Benzinga |
+
+#### Deep dive: BW $6.94 -5.58%
+- Catalyst: BW is an energy-technologies provider (coal/emissions-control systems for utilities) expanding into AI-data-center power via a Siemens Energy steam-turbine supply deal (20 units, ~1GW, Aug 2026). Most recent dated headline (~Sep 18) was a $130M air-quality/utility contract win; Benzinga's own coverage flagged the stock's technical trend as remaining weak even after that win. No company-specific headline dated to today (Sep 23) as of this scan.
+- Why: With no fresh news trigger identified for today, the ~5-6% intraday decline reads as continuation of pre-existing technical weakness (RSI 40, neutral-to-soft) compounded by elevated short interest (18.2% of float, 4.6 days to cover) rather than a discrete catalyst-driven move.
+- Impact: Day volume at check time (~442K) sits well below BW's ~4.67M average — not an unusually heavy-volume breakdown, more consistent with low-conviction drift than a news-driven flush. No confirmed sector-peer read-through found.
+- Horizon: SHORT_TERM — no structural catalyst identified for today's move; the real structural story (AI-data-center turbine demand) is an older, already-priced item, not today's driver, so this doesn't clear the bar for a swing thesis.
+- Opportunity cost: Zero open positions and 0/3 weekly trades used this week, so nothing existing would be displaced. But this is a gap DOWN with no fresh catalyst on a long-only strategy — it isn't a long entry candidate at all, so it clears no R:R math and shouldn't consume any of the weekly trade allowance.

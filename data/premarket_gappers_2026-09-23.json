@@ -1,5 +1,23 @@
 {
-  "scanned_at": "2026-09-23T13:03:00Z",
+  "scanned_at": "2026-09-23T14:03:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BW",
+      "price": 6.94,
+      "gap_pct": -5.58,
+      "premarket_volume": null,
+      "catalyst": "No fresh same-day catalyst found; most recent dated news is a ~Sep 18 $130M air-quality/utility contract win that Benzinga itself noted did not reverse BW's weak technical trend.",
+      "headlines": [
+        "Babcock & Wilcox Wins $130 Million Air-Quality Deal, But Stock Trend Remains Weak",
+        "Babcock & Wilcox Stock Surges Friday: What's Happening? (investors digest $130M utility contract + AI data center power footprint)"
+      ],
+      "catalyst_detail": "BW is an energy-technologies provider (coal/emissions-control systems for utilities) expanding into AI-data-center power via a steam-turbine supply deal with Siemens Energy (20 units, ~1GW, announced Aug 2026). Its most recent dated headline (~Sep 18) was winning a $130M air-quality/utility contract; Benzinga's own coverage flagged the stock's technical trend as remaining weak even after that win. No new company-specific headline is dated to today (Sep 23) as of this scan.",
+      "why": "With no fresh news trigger identified for today, the ~5-6% intraday decline reads as a continuation of pre-existing technical weakness (RSI 40, neutral-to-soft) compounded by elevated short interest (18.2% of float, 4.6 days to cover) rather than a discrete catalyst-driven move.",
+      "impact": "Day volume at time of check (~442K) sits well below BW's ~4.67M average, i.e. this is not an unusually heavy-volume breakdown — more consistent with a low-conviction drift/rotation than a news-driven flush. No confirmed sector-peer read-through found.",
+      "horizon": "SHORT_TERM — no structural catalyst identified for today's move; the real structural story (AI-data-center turbine demand) is an older, already-priced item, not today's driver, so this doesn't clear the bar for a swing thesis.",
+      "opportunity_cost": "Zero open positions and 0/3 weekly trades used this week, so nothing existing would be displaced. But this is a gap DOWN with no fresh catalyst on a long-only strategy — it isn't a long entry candidate at all, so it clears no R:R math and shouldn't consume any of the weekly trade allowance."
+    }
+  ]
 }
