@@ -13679,3 +13679,42 @@ this long-only strategy regardless.
 - Impact: Day volume at check time (~442K) sits well below BW's ~4.67M average — not an unusually heavy-volume breakdown, more consistent with low-conviction drift than a news-driven flush. No confirmed sector-peer read-through found.
 - Horizon: SHORT_TERM — no structural catalyst identified for today's move; the real structural story (AI-data-center turbine demand) is an older, already-priced item, not today's driver, so this doesn't clear the bar for a swing thesis.
 - Opportunity cost: Zero open positions and 0/3 weekly trades used this week, so nothing existing would be displaced. But this is a gap DOWN with no fresh catalyst on a long-only strategy — it isn't a long entry candidate at all, so it clears no R:R math and shouldn't consume any of the weekly trade allowance.
+
+## 2026-09-23 — Gappers (auto-scan 11:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+market open (11:03 ET). **1 ticker cleared the |gap| >= 5% and price >= $3
+bar: BW (-6.39%, $6.88).** PEPG (-6.71%, $2.78) and OPEN (-5.07%, $2.62)
+both moved but were excluded — price fails the $3.00 floor for both. Deep-
+dive cap is 5; only 1 ticker qualified so it got the full deep dive, ranks
+6-10 N/A. Gap has widened slightly since the 10:03 ET run (-5.58% -> -6.39%,
+$6.94 -> $6.88) — same name, still no fresh catalyst.
+
+Catalyst research (Apify RAG web browser, Yahoo-blocked): the STEP 2 query
+("BW stock news today catalyst") returned 0 pages scraped — confirmed via
+get-dataset-items (0 items), not just a lagged count. Fell back to
+Benzinga's BW quote page per routine rule; direct WebFetch hit a 403, so
+used the Apify web-fetch tool as an equivalent fallback fetch (same target
+URL, same purpose) — succeeded. Top-of-page headline is still the ~Sep 18/19
+"$130M utility contract, AI data center footprint" story — no headline
+dated to today. STEP 3 fundamentals query surfaced an Aug 13 Simply Wall St
+piece: analysts raised 2026 revenue estimates 27% on contract momentum but
+cut the consensus price target 8.1% to $22.67 and flagged major dilution
+risk from new share issuance. Stock is down >65% from its 52-wk high
+($22.03) despite the repeated bullish contract-win headlines. RSI 40, short
+interest 18.2% of float (4.6 days to cover). Zero open positions, 0/3
+weekly trades used (week of Sep 21) — this would not displace anything, but
+as a gap-DOWN with no fresh catalyst it is not a long-entry candidate under
+this long-only strategy regardless.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $6.88 | -6.39% | 90,886 | No fresh same-day catalyst; ~Sep 18 $130M contract win still top headline, trend remains weak despite it |
+
+#### Deep dive: BW $6.88 -6.39%
+- Catalyst: BW is an energy-technologies provider (coal/emissions-control systems for utilities) expanding into AI-data-center power via a Siemens Energy steam-turbine supply deal (20 units, ~1GW, Aug 2026) and a ~Sep 18 $130M air-quality/utility contract win. Simply Wall St (Aug 13) noted analysts raised 2026 revenue estimates 27% on this momentum, but cut the consensus price target 8.1% to $22.67 and flagged major dilution risk from new share issuance. No headline dated to today (Sep 23).
+- Why: No fresh news trigger identified for today; the move reads as continuation of an existing multi-month downtrend (52-wk high $22.03 -> $6.88, a >65% drawdown) that a series of bullish contract-win headlines has repeatedly failed to reverse, consistent with the dilution overhang and elevated short interest (18.2% of float, 4.6 days to cover).
+- Impact: Day volume (~1.8M per Benzinga) is running well below BW's ~4.67M average — continued low-conviction distribution/de-rating, not a heavy-volume capitulation flush. No confirmed sector-peer read-through found this run.
+- Horizon: SHORT_TERM — the structural story (AI-data-center turbine demand, contract wins) is priced-in/older news with no demonstrated ability to arrest the downtrend, so it doesn't clear the bar for a new swing thesis.
+- Opportunity cost: Zero open positions and 0/3 weekly trades used this week, so nothing existing would be displaced. But this is a gap DOWN with no fresh catalyst on a long-only strategy — not a long-entry candidate, clears no R:R math, and shouldn't consume any of the weekly trade allowance.
