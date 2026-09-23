@@ -13733,3 +13733,21 @@ with zero entries. Weekly trade count: 0/3 (week of Sep 21). Equity flat
 at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27
 remains unresolved, 79th+ straight session, operator review still
 pending.
+
+### Setup Scan (16:33 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60 candidates checked (watchlist
+`immediate` tier), 0 errors. `grade_a_possible: false` — 16:33 ET is
+outside the 10:00-15:30 ET intraday-breakout window, so Setup A (and
+therefore grade A) was never evaluated this run (`setup_a_skipped_reason:
+"outside 10:00-15:30 ET"`). 3 grade-B hits (ADX14>20 AND EMA9>EMA21),
+0 grade-A, 0 grade-C.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| META | B | Momentum confluence | daily swing | ADX 32.2, EMA9 685.15>EMA21 647.45, RSI 76.0 |
+| HAFN | B | Momentum confluence | daily swing | ADX 34.0, EMA9 9.48>EMA21 9.07, RSI 56.2 |
+| TRMD | B | Momentum confluence | daily swing | ADX 20.9, EMA9 35.83>EMA21 34.51, RSI 53.2 |
+
+No grade-A hit -> no Telegram/ClickUp notification per routine rule (STEP 4).
+Candidates are for `market-open.md`/`/trade` to re-validate next session —
+never auto-traded.
