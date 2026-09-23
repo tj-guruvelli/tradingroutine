@@ -13718,3 +13718,18 @@ this long-only strategy regardless.
 - Impact: Day volume (~1.8M per Benzinga) is running well below BW's ~4.67M average — continued low-conviction distribution/de-rating, not a heavy-volume capitulation flush. No confirmed sector-peer read-through found this run.
 - Horizon: SHORT_TERM — the structural story (AI-data-center turbine demand, contract wins) is priced-in/older news with no demonstrated ability to arrest the downtrend, so it doesn't clear the bar for a new swing thesis.
 - Opportunity cost: Zero open positions and 0/3 weekly trades used this week, so nothing existing would be displaced. But this is a gap DOWN with no fresh catalyst on a long-only strategy — not a long-entry candidate, clears no R:R math, and shouldn't consume any of the weekly trade allowance.
+
+## 2026-09-23 — Midday Scan (cloud)
+
+### Midday scan (cloud) — NO-OP (verified, not assumed)
+`bash scripts/alpaca.sh positions` and `orders` both returned `[]`.
+`alpaca.sh account`: equity $100,000.00, cash $100,000.00 (100%), buying
+power $400,000, `balance_asof: 2026-09-22`. Nothing to cut at -7%, no
+trailing stops to cancel or tighten, no thesis to invalidate — Steps 3-5
+had an empty input set. No sharp unexplained move to research (Step 6
+n/a — no positions). No action taken -> no ClickUp notification (Step 7
+skip per "only if action was taken"). 54 trading days since launch (Jul 9)
+with zero entries. Weekly trade count: 0/3 (week of Sep 21). Equity flat
+at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27
+remains unresolved, 79th+ straight session, operator review still
+pending.
