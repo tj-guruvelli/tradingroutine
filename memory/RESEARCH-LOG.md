@@ -13629,3 +13629,21 @@ no scan error).
 | Rank | Sym | $Price | Gap% | Vol | Catalyst |
 | ---- | --- | ------ | ---- | --- | -------- |
 | — | — | — | — | — | none — 0 rows passed filters |
+
+## 2026-09-23 — Gappers (auto-scan 09:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0),
+64 of ~60 tickers resolved from `memory/WATCHLIST.md`. **0 tickers cleared
+the |gap| >= 5% bar — 0 qualifying gappers.** Premarket liquidity has picked
+up vs the 08:04 ET run (12 of 64 symbols now carry a fresh today-dated
+trade, up from 2), but the largest move is still well under threshold:
+RGTI +3.87% ($16.54 -> $17.18), RR -3.71%, RKLB +3.68%, QBTS +3.56%, ONDS
++3.32%, OPEN +3.00%. The other 52 symbols still carry yesterday's close as
+their latest print (market opens 09:30 ET). No catalyst research or
+deep-dive run (nothing cleared the bar). No Telegram/ClickUp notify sent
+per routine rule (0 hits, no scan error).
+
+### Gappers (auto-scan 09:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | none — 0 rows passed filters |
