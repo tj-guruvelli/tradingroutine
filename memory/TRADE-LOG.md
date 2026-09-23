@@ -1009,3 +1009,49 @@ this run.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-21`, equity/cash unchanged at $100,000). Market-Open call was HOLD — all 7 merged candidates (XOM, CVX, INTC, HAFN, TRMD, BMNR, QCOM) capped at 1 of 4 confluence indicators (200-SMA only), no VWAP/insider data without `tradingview-data` MCP. Weekly trade count: 0/3 (week of Sep 21). 53 trading days since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 77th+ straight session, operator review pending. `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` re-confirmed as literal placeholder strings (`your_clickup_workspace_id_here` / `your_clickup_channel_id_here`), not real IDs — STEP 5 notification attempt below expected to fail the same way as Sep 21 (HTTP 500) until the operator sets real values.
+
+### Sep 23, Market-Open (Day 54, Wednesday)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-22`). STEP 1: today's
+RESEARCH-LOG (2026-09-23 Pre-Market) flags XOM/CVX (Iran/oil headline risk,
+watch-only — WTI $89.46/Brent $98.93 are actually down vs Sep 21, so the
+supply-shock thesis is weakened, not reopened) and META (setup-scan
+momentum, RSI overbought, pullback-to-EMA21 watch only) as market-open
+candidates needing a live confluence check — no committed entries
+pre-market, decision was HOLD. STEP 2: read
+`data/setup-scan_cloud_2026-09-22_1833ET.json` (today's file doesn't exist
+yet — market-open runs before setup-scan-cloud's first same-day fire, per
+routine). 1 grade-B hit, no grade-A: META. Merged candidate list: XOM, CVX,
+META (3 total). `tradingview-data` MCP not loaded this run (confirmed via
+tool search) — computed RSI14/SMA200 for all 3 directly from Alpaca IEX
+daily bars (same sma()/rsi() math as setup-scan-cloud.mjs), same approach
+as Sep 22 since the canonical source remains unavailable.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, on top of routine STEP 4 hard
+checks):
+- XOM $168.74 (ask) — catalyst documented (today's RESEARCH-LOG, Iran/oil
+  headline risk, though weakened not reopened per above). RSI14 48.20 —
+  neutral, no align. Price > 200-SMA ($147.53) — 1 align. No VWAP/insider
+  data. 1 of 4 — fails confluence — skip.
+- CVX $214.69 (ask) — same catalyst as XOM. RSI14 48.20 — neutral, no
+  align. Price > 200-SMA ($184.68) — 1 align. No VWAP/insider data. 1 of
+  4 — fails confluence — skip.
+- META $750.00 (ask, setup-scan grade B) — no fresh independent catalyst
+  documented today (RESEARCH-LOG: momentum-only, pullback watch, not a
+  new-long candidate); skipped the Apify catalyst fetch since confluence
+  fails outright regardless: RSI14 77.48 (live Alpaca-computed, matches
+  setup-scan's 77.74) — overbought, no align (sell/no-new-long signal).
+  Price > 200-SMA ($625.55) — 1 align. 1 of 4 — fails confluence — skip.
+
+All 3 candidates capped at 1 of 4 confluence indicators (200-SMA only) —
+same structural pattern as every recent session: RSI is neutral (XOM/CVX)
+or overbought (META), no oversold mean-revert setups, VWAP/insider data
+remain unavailable without the tradingview-data MCP. No planned tickers
+executed — STEPs 5-6 skipped. Weekly trade count: 0/3 (week of Sep 21).
+54th trading day since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 78th+ straight session, operator review pending. STEP 8
+(notification) does not apply — no trade fired this run. STEP 9
+(commit/push): proceeding — STEP 7 logged full candidate pass/fail detail
+this run.
