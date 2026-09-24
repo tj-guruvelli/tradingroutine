@@ -14004,3 +14004,47 @@ scans. NBIS and BE fundamentals queries returned usable, dated results.
 - Impact: 98.6k volume on a 5.11% gap is a meaningful, real move. Sustainable-leaning since it's a continuation of a multi-day uptrend tied to a demand/pricing fundamental rather than an isolated headline spike. Bullish read-through for other AI-cloud/GPU-capacity peers.
 - Horizon: LONG_TERM — a pricing-power signal in a capacity-constrained AI-infra buildout aligns with the current AI/datacenter sector-rotation phase; worth tracking as a multi-day/week swing candidate if it clears the Confluence rule on a later /trade check.
 - Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — a new entry would still count against the max-3-new-trades/week and max-6-open-positions caps once trading resumes. Of today's 4 gappers, NBIS looks like the strongest candidate to clear a 2:1 R:R at a sane stop given its trend context (vs. ORCL breaking down, BW's thin/uncatalyzed move, and BE's post-inclusion give-back) — the one to flag for a follow-up /trade check, not an order placed here.
+
+## 2026-09-24 — Gappers (auto-scan 11:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Only 3 tickers cleared |gap| >= 5% and the $3.00 price floor this run: BW,
+BE, NBIS (ORCL dropped off the list vs. 10:03 ET). Deep-dive cap is 5 — all
+3 got the full deep dive; ranks 4-10 N/A this run (fewer than 10 qualifiers).
+
+Catalyst research: Apify RAG web browser (Yahoo-blocked suffix appended,
+multiple query variants tried per ticker) plus a Benzinga WebFetch fallback
+attempt (403 Forbidden on all 3 quote pages — Benzinga is blocking this
+fetch method this run, logged as a gap). BW again returned no usable
+same-day headline despite three separate query passes. BE and NBIS results
+corroborate and extend the Project-Jupiter-financing and GPU-pricing-hike
+threads already on file from the 08:03/09:03/10:03 ET scans today — all
+three names are continuing, not reversing, their moves from the prior scan.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BW | $6.08 | -8.36% | 110,742 | No fresh headline found — continuing the uncatalyzed slide (Wolfpack short-report overhang, Needham-bounce unwind) flagged at 10:03 ET |
+| 2 | BE | $256.275 | -6.85% | 229,010 | Continuing to give back its run (Q1 beat, raised guidance, Sept S&P 500 inclusion) as Project Jupiter AI-infra-financing jitters persist |
+| 3 | NBIS | $240.695 | +6.22% | 170,927 | Extending the AI-cloud rally — GPU cloud pricing hike (up to 20%) corroborated by fresh coverage citing rapid growth and a ~$37.5B contract backlog |
+
+#### Deep dive: BW $6.08 -8.36%
+- Catalyst: No verifiable same-day headline surfaced despite three Apify RAG passes (catalyst query, fundamentals query, direct-name query) plus a Benzinga WebFetch attempt (403 blocked). Babcock & Wilcox Enterprises (NYSE: BW) is a small/micro-cap industrial power-equipment maker. Price has slid every scan today: $6.635 prior close → $6.205 at 10:03 ET → $6.08 now. Background on file from the 10:03 scan: an August Wolfpack Research short-seller report and a more recent Needham coverage initiation are the only known name-specific events, neither dated to today.
+- Why: No sourced mechanism for today's leg down specifically. Most likely continued unwinding of the Needham-bounce plus general low-liquidity drift in a thinly-traded micro-cap, not a fresh trigger.
+- Impact: 110.7k premarket volume, up from 29.1k at 10:03 ET but still thin for a stock this cheap. Move looks like continued low-conviction, low-liquidity selling rather than a fresh fundamentals repricing — prone to a sharp mean-revert bounce or an equally sharp further air-pocket either way. No peer read-through identified.
+- Horizon: SHORT_TERM, one-line reasoning: no structural catalyst identified across three research passes — without a confirmed trigger this cannot support anything beyond a fade/no-trade stance.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — no existing holding displaced. Irrelevant either way: an unconfirmed catalyst fails the Entry Checklist's "specific catalyst" requirement outright, so this cannot clear the strategy gate regardless of R:R math.
+
+#### Deep dive: BE $256.275 -6.85%
+- Catalyst: Bloom Energy fell another leg today: $275.115 prior close → $257.73 at 10:03 ET → $256.275 now. No fresh single headline located this pass; research corroborates the established narrative on file from the 10:03 ET scan — record Q1 2026 revenue of $751.1M (+130.4% YoY), raised FY26 guidance (~80% growth), and a September S&P 500 inclusion driven by AI-datacenter power demand for its fuel cells, now unwinding alongside the same "Project Jupiter" AI-infra debt-financing overhang that has been hitting ORCL across today's earlier scans.
+- Why: A name that ran hard into an index-inclusion event is a classic "sell the news" once forced index-fund buying flow is exhausted; layering in sector-wide AI-capex-financing jitters (echoing ORCL) gives sellers a second reason to keep taking profits.
+- Impact: 229k volume, up from 139k at 10:03 ET — a real, liquid move, not thin. Third consecutive scan today (08:03/09:03/10:03/11:03) flagging BE lower alongside AI-infra-financing-linked names — reads as sector rotation/index-flow unwind continuing, not a fresh one-day spike. Sustainability leans toward further chop while the S&P-inclusion flow trade and Project Jupiter overhang both unwind.
+- Horizon: SHORT_TERM tactically (index-inclusion flow reversal + sector-financing jitters are both fading catalysts), though the underlying AI-datacenter power-demand thesis remains LONG_TERM structural per the 10:03 ET writeup.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. Direction is down, and this is a long-only strategy — not an entry candidate regardless of R:R math. If eventually considered as a dip-buy once the slide stabilizes, it would compete with NBIS for the same AI-infra sector-allocation bucket — correlation gate (`scripts/corr-gate.mjs`) should be checked before sizing either, since AI-datacenter-demand names plausibly correlate >0.75.
+
+#### Deep dive: NBIS $240.695 +6.22%
+- Catalyst: Nebius Group continued higher: $226.60 prior close → $238.19 at 10:03 ET → $240.695 now. Fresh research this pass corroborates and extends the pricing-hike story already on file: coverage describes the stock "staying in focus after multiple reports highlighted rapid AI cloud growth, higher GPU pricing, and a large contract backlog" (one source cites a roughly $37.5B backlog and >200% 1-year stock gain; another notes comparisons to CoreWeave on growth/performance).
+- Why: A price hike on a capacity-constrained GPU-cloud product signals strong demand and pricing power — margin-accretive and demand-durable, a fundamentally stronger mechanism than a one-off headline pop.
+- Impact: 170.9k volume on a 6.22% gap is a real, meaningful move, consistent with (slightly higher than) the 98.6k printed at 10:03 ET on a smaller 5.11% gap — momentum building, not fading. Reads as continuation of a multi-week uptrend tied to a demand/pricing fundamental. Bullish read-through for other AI-cloud/GPU-capacity peers, but note the divergence from BE/ORCL's AI-infra-financing-driven weakness today — no unified sector signal, NBIS strength looks name-specific to its own pricing/backlog story.
+- Horizon: LONG_TERM — a pricing-power signal in a capacity-constrained AI-infra buildout aligns with the current AI/datacenter sector-rotation phase per TRADING-STRATEGY.md; worth a multi-day/week swing hold if it also clears the Confluence rule on a later /trade check.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — a new entry would still count against the max-3-new-trades/week and max-6-open-positions caps once trading resumes. Of today's 3 gappers, NBIS is again the only viable long candidate (BW uncatalyzed, BE moving the wrong direction) — the one to flag for a follow-up /trade check; no order sized here.
