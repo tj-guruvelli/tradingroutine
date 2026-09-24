@@ -13889,3 +13889,67 @@ long-entry candidate today regardless of R:R math.
 - Impact: Alpaca-scan premarket volume (2.31M shares) is well above the routine's 50K floor, so this is a real, liquid move, not noise. Stock is down sharply from its 52-wk high ($15.28) to ~$7.30 (still well above the 52-wk low of $4.95) — consistent with digestion after a fast re-rate rather than a fresh breakdown. Short interest is extremely elevated (39.14% of float, 3.68 days to cover), raising two-way volatility risk. No confirmed same-day peer read-through beyond the unrelated Red Cat Pentagon-contract story (different program, same drone/defense sector).
 - Horizon: SHORT_TERM, one-line reasoning: no single fresh negative catalyst broke today; this reads as digestion/profit-taking after two M&A announcements in quick succession following a big prior run (52-wk high $15.28), not a new structural trigger to hold through — the underlying defense-portfolio expansion thesis is real but already priced in over recent weeks.
 - Opportunity cost: Zero open positions and 0/3 weekly trades used (week of Sep 21), so entry wouldn't displace an existing holding. But this is a gap DOWN with no confirmed fresh bearish trigger (dilution/digestion, not a broken thesis) on a long-only strategy — not a long-entry candidate today regardless of R:R math. 39% short interest plus a >50% pullback from 52-wk highs argue for a wide stop distance that would need `scripts/size.mjs` (ATR) and `scripts/corr-gate.mjs` checks before any sizing decision, which this research-only scan does not run.
+
+## 2026-09-24 — Gappers (auto-scan 09:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+6 tickers cleared |gap| >= 5%, but OPEN (-7.97%, $2.54) fails the $3.00
+price floor and was excluded. **5 tickers qualified: ORCL, LUNR, BMNR,
+ONDS, BE.** Deep-dive cap is 5 — since exactly 5 qualified, all 5 got the
+full deep dive; ranks 6-10 N/A this run.
+
+Catalyst research: Apify RAG web browser (Yahoo-blocked suffix appended)
+returned mostly generic/off-target results (SERP noise, unrelated tickers,
+YouTube videos) for OPEN/ORCL/BMNR/ONDS/BE; the LUNR run returned a
+premarket-VWAP data page and a MarketBeat news-index page, no clear
+company-specific catalyst. Fell back to Benzinga quote pages
+(`benzinga.com/quote/<TICKER>`) via the Apify web-fetch tool for all 6
+tickers per routine rule — succeeded for all, including a "Why Is It
+Moving?" banner line on OPEN/BMNR/ONDS/BE that named the live driver.
+
+### Gappers (auto-scan 09:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ORCL | $138.18 | -7.34% | 1,085,473 | Multi-day slide on "Project Jupiter" AI datacenter debt-financing woes — banks struggling to offload the debt |
+| 2 | LUNR | $15.12 | -7.01% | 346,073 | No company-specific news found — reads as broad speculative small-cap pullback (27% short interest) |
+| 3 | BMNR | $26.97 | -6.19% | 1,365,627 | Crypto-linked name falling with a broad BTC/ETH/XRP/DOGE selloff on hot macro data lifting rate-hike odds |
+| 4 | ONDS | $7.29 | -5.69% | 2,312,315 | M&A digestion — 2 cash+stock defense-tech acquisitions in ~2 weeks ($56M + $205M) |
+| 5 | BE | $260.88 | -5.63% | 191,449 | Falling with ORCL on the same "Project Jupiter" AI-datacenter financing jitters, reversing a 2-day run on oil/yields + S&P 500-inclusion optimism |
+
+(OPEN -7.97%, $2.54, real-estate sector move on hawkish Fed + rising oil,
+excluded from ranking — fails the $3.00 price floor.)
+
+#### Deep dive: ORCL $138.18 -7.34%
+- Catalyst: Oracle shares fell sharply, extending a multi-session decline (Monday's close showed a -3.11% regular-session move) tied to "Project Jupiter," its large AI data-center buildout. Benzinga coverage (surfaced via a Bloom Energy quote-page news feed) headlines "Oracle Stock Pressured as Project Jupiter Woes Mount," noting banks are struggling to offload/syndicate the debt backing the financing.
+- Why: Debt-placement friction for Oracle's AI data-center buildout signals weak investor appetite for AI-infrastructure debt paper, raising doubts about the pace/cost of Oracle's AI capex commitments and spooking investors already sensitive to AI-capex payback timelines.
+- Impact: This reads as a continuation of a multi-day slide (down again after Monday's -3.11%), not a one-day spike, so the pressure looks sustained rather than noise. Clear sector read-through: BE (also on today's list) gaps down the same session on the identical Project Jupiter narrative — an AI-infra-financing-jitters theme spreading across data-center-adjacent names.
+- Horizon: LONG_TERM, one-line reasoning: this is a structural financing/credit-market concern tied to a named ongoing capex program (Project Jupiter), not a single headline — worth tracking as a multi-week AI-capex-financing theme, though the immediate signal is downside pressure, not a long setup.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — doesn't displace an existing holding. A gap DOWN on financing/credit concerns is not a long-entry candidate today; would need confluence (2 of 4 indicators) plus 2:1 R:R at a later stabilization point to even qualify for consideration.
+
+#### Deep dive: LUNR $15.12 -7.01%
+- Catalyst: No LUNR-specific news event surfaced for today via Apify search or Benzinga's own news feed — the most recent dated stories (a contract-win pop, a $600M satellite program win) are from mid-September, not today. The drop tracks a broader speculative-small-cap pullback rather than a fresh company headline.
+- Why: With 27.08% short interest and 4.43 days to cover, LUNR is a high-beta, heavily-shorted small cap; a broad risk-off tape (OPEN/real-estate and BMNR/crypto names also selling off the same morning) tends to hit these names hardest even without ticker-specific news, consistent with momentum unwind/stop-outs.
+- Impact: Premarket volume (346,073 shares) is real but the lowest share count on today's list. No peer-specific read-through beyond the shared "risk-off in speculative small caps" pattern with OPEN/BMNR/ONDS today. Reads as a short-lived fade rather than a structural repricing given no confirmed negative catalyst.
+- Horizon: SHORT_TERM, one-line reasoning: no company-specific catalyst identified — absent a fresh negative trigger this looks like a liquidity/momentum-driven pullback likely to stabilize once the broader risk-off tape settles.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. A gap DOWN with no confirmed catalyst is not a long-entry candidate; would need a same-day reversal plus confluence to reconsider, and given 27% short interest, a wide stop and a correlation-gate check against ONDS/BMNR (same small-cap-momentum bucket today) before any sizing.
+
+#### Deep dive: BMNR $26.97 -6.19%
+- Catalyst: BitMine Immersion, a Bitcoin/Ethereum accumulation vehicle, fell alongside a broad crypto selloff. Benzinga's own "Why Is It Moving" tag on the quote page: "Shares of crypto-linked companies are trading amid a drop in Bitcoin," with coverage noting BTC/ETH/XRP/DOGE all sliding as hot macro data boosted rate-hike odds.
+- Why: BMNR's balance sheet is a levered proxy for BTC/ETH spot prices, so a rate-hike-odds jump (stronger dollar, higher yields) that pressures crypto broadly mechanically drags BMNR's NAV-linked valuation down with it.
+- Impact: Premarket volume (1.37M shares) is the highest on today's list — a real, liquid move. Clear sector read-through: this is a crypto-market-wide move (BTC/ETH/XRP/DOGE all down together), not BMNR-specific, so it should track crypto spot-price action rather than any BMNR-only news.
+- Horizon: SHORT_TERM, one-line reasoning: driven by a macro rate-odds shift and crypto-market beta, not a structural change to BitMine's business — likely to track crypto spot-price recovery or continuation over the next few sessions rather than stand as its own multi-week thesis.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. A crypto-beta gap-down is not a long setup on a stocks-only strategy that avoids chasing macro-driven risk-off moves; would need Bitcoin to stabilize plus BMNR to clear confluence, and a correlation-gate check since the move is macro/crypto-driven, not company-specific.
+
+#### Deep dive: ONDS $7.29 -5.69%
+- Catalyst: Ondas Inc announced the acquisition of three unnamed defense-technology businesses on Wed Sep 23, 2026 for $56M paid in cash and stock. This follows an earlier-September $205M cash-and-stock acquisition of GATE Technologies and Bron, both expanding Ondas Autonomous Systems' precision-strike/autonomous-defense line. A separate, unrelated same-day Benzinga story on the Pentagon's "Drone Dominance" contract round notes Ondas did not compete in that program (Red Cat/XTEND/Teal did) — not today's driver.
+- Why: Two cash-and-stock acquisitions inside roughly two weeks raise near-term share-dilution and integration-execution concerns, pulling in sellers/profit-takers even as the long-term defense-portfolio buildout continues — reads as "sell the M&A news" after a large prior run-up.
+- Impact: Premarket volume (2.31M shares) is the highest share count on today's list — a real, liquid move. Stock is down sharply from its 52-wk high ($15.28) to ~$7.29 (still above the 52-wk low of $4.95), consistent with digestion after a fast re-rate rather than a fresh breakdown. Short interest is extremely elevated (39.14% of float, 3.68 days to cover), raising two-way volatility risk. No confirmed same-day peer read-through beyond the unrelated Red Cat Pentagon-contract story.
+- Horizon: SHORT_TERM, one-line reasoning: no single fresh negative catalyst broke today — reads as digestion/profit-taking after two M&A announcements in quick succession following a big prior run, not a new structural trigger; the underlying defense-portfolio-expansion thesis is real but already priced in over recent weeks.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. A gap DOWN with no confirmed fresh bearish trigger (dilution/digestion, not a broken thesis) is not a long-entry candidate today on a long-only strategy regardless of R:R math. 39% short interest plus a >50% pullback from 52-wk highs would need `scripts/size.mjs` (ATR) and `scripts/corr-gate.mjs` checks before any sizing decision if reconsidered later.
+
+#### Deep dive: BE $260.88 -5.63%
+- Catalyst: Bloom Energy fell alongside Oracle amid AI-datacenter-financing jitters — the same "Project Jupiter" debt-placement story pressuring Oracle appears directly in Bloom Energy's own Benzinga news feed ("Oracle Stock Pressured as Project Jupiter Woes Mount"), alongside a SpaceX/data-center-moratorium story. Bloom had been climbing the prior two sessions on falling oil/bond yields and S&P 500-inclusion chatter.
+- Why: Bloom Energy trades as a proxy for AI-datacenter power demand; a bellwether AI-infra name (Oracle) showing financing stress for its buildout reads across to other data-center-power-adjacent names as a signal AI capex could slow or get costlier to fund, prompting profit-taking after Bloom's recent run.
+- Impact: Premarket volume (191,449 shares) is modest versus Bloom's own ~16.06M average daily volume — a real but comparatively light print. Clear read-through to ORCL's move the same session on the identical AI-infra-financing narrative, suggesting a sector rotation out of AI-capex-linked names rather than a Bloom-specific breakdown; the stock's own recent strength (up on oil/yields Tuesday, up on S&P 500-inclusion optimism Wednesday) makes this look like a reversal of that strength rather than a new structural negative.
+- Horizon: SHORT_TERM, one-line reasoning: tied to the same-day AI-infra-financing headline risk (Project Jupiter) rather than a Bloom-specific fundamental change — recent two-way headline-driven price action is consistent with a fade-prone move, not a durable trend change.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. A gap DOWN tied to sector-wide AI-infra financing concerns (echoing ORCL, rank 1 today) is not a long-entry candidate; if considered as a later dip-buy, would need confluence plus a correlation-gate check against ORCL given the shared catalyst driver (plausibly correlated on AI-infra-financing headline days).
