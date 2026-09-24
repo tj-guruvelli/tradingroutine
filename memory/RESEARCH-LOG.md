@@ -14048,3 +14048,18 @@ three names are continuing, not reversing, their moves from the prior scan.
 - Impact: 170.9k volume on a 6.22% gap is a real, meaningful move, consistent with (slightly higher than) the 98.6k printed at 10:03 ET on a smaller 5.11% gap — momentum building, not fading. Reads as continuation of a multi-week uptrend tied to a demand/pricing fundamental. Bullish read-through for other AI-cloud/GPU-capacity peers, but note the divergence from BE/ORCL's AI-infra-financing-driven weakness today — no unified sector signal, NBIS strength looks name-specific to its own pricing/backlog story.
 - Horizon: LONG_TERM — a pricing-power signal in a capacity-constrained AI-infra buildout aligns with the current AI/datacenter sector-rotation phase per TRADING-STRATEGY.md; worth a multi-day/week swing hold if it also clears the Confluence rule on a later /trade check.
 - Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — a new entry would still count against the max-3-new-trades/week and max-6-open-positions caps once trading resumes. Of today's 3 gappers, NBIS is again the only viable long candidate (BW uncatalyzed, BE moving the wrong direction) — the one to flag for a follow-up /trade check; no order sized here.
+
+## 2026-09-24 — Midday Scan (cloud)
+
+### Midday scan (cloud) — NO-OP (verified, not assumed)
+`bash scripts/alpaca.sh positions` and `orders` both returned `[]`.
+`alpaca.sh account`: equity $100,000.00, cash $100,000.00 (100%), buying
+power $400,000, `balance_asof: 2026-09-23`. Nothing to cut at -7%, no
+trailing stops to cancel or tighten, no thesis to invalidate — Steps 3-5
+had an empty input set. No sharp unexplained move to research (Step 6
+n/a — no positions). No action taken -> no ClickUp notification (Step 7
+skip per "only if action was taken"). 55 trading days since launch (Jul 9)
+with zero entries. Weekly trade count: 0/3 (week of Sep 21). Equity flat
+at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27
+remains unresolved, 80th+ straight session, operator review still
+pending.
