@@ -13769,3 +13769,82 @@ therefore grade A) was never evaluated this run (`setup_a_skipped_reason:
 No grade-A hit -> no Telegram/ClickUp notification per routine rule (STEP 4).
 Candidates are for `market-open.md`/`/trade` to re-validate next session —
 never auto-traded.
+
+## 2026-09-24 — Pre-Market Research (Day 55, Thursday)
+
+**Account snapshot** (`alpaca.sh account`, `balance_asof: 2026-09-23`): equity
+$100,000.00, cash $100,000.00 (100%), buying power $400,000. 0 open
+positions, 0 open orders. 55th trading day since launch (Jul 9) with zero
+entries. Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
+flagged Jul 27 remains unresolved, 80th+ straight session, operator review
+still pending.
+
+**Apify RAG web browser degraded this run**: 5 of 7 queries (S&P futures,
+VIX, catalysts, earnings, sector-momentum) returned either 0 scraped pages
+or irrelevant garbage results (e.g. an "Astrid S" Spotify/YouTube page for
+the sector-momentum query) — not a Yahoo-block issue, the search layer
+itself misfired. Fell back to native WebSearch for those 5 per routine
+rule; only the oil-price and economic-calendar queries returned usable
+Apify content.
+
+**Market context:**
+- Oil (Apify, Markets Insider): Brent $104.40 (+1.28%), WTI $93.22 (+1.15%)
+  — both back above/near $100 and climbing, reversing the "sliding below
+  $100" move from ~3 days ago. Business Insider (3d): drop was on
+  stronger-than-expected flows + Iran diplomacy hopes; today's WebSearch
+  catalyst read says Iran's president is speaking today and Trump meets Xi
+  tomorrow, oil climbing again on that geopolitical uncertainty.
+- S&P 500 futures (WebSearch, no live Apify data): no confirmed today print;
+  most recent confirmed data is Sep 23 — Dow futures -15pts/-0.03%,
+  S&P/Nasdaq-100 futures marginally lower. WebSearch catalyst summary:
+  "stocks fell and yields rose early as oil climbed" — reads as continuing
+  into today's open.
+- VIX (WebSearch, no live Apify data): last firmly-dated close Sep 18 =
+  14.81; one source showed ~15.17 (+0.63%) but timestamp reliability
+  unconfirmed — treat as approximate, not a clean print.
+- Today's catalysts (WebSearch): Sept S&P Global US Manufacturing PMI due
+  shortly after the open (consensus 53.6 vs prior 53.9), August new home
+  sales, Darden (DRI) earnings before open (EPS est. $2.05, +4.1% YoY;
+  revenue est. $3.2B, +6.7% YoY), Costco (COST) reports after Thursday's
+  close (not pre-market). Fed Governor Barr speaks today on the economic
+  outlook.
+- Econ calendar (WebSearch): Initial Claims 08:30 ET, New Residential Sales
+  10:00 ET, Weekly Economic Index 11:30 ET. No CPI/PPI/FOMC scheduled today.
+- Sector momentum YTD (WebSearch): Energy best +47.7% YTD, Consumer
+  Discretionary worst -5.0% YTD. S&P 500 total return +11.17% YTD (through
+  Sep 16). Energy strength supports the standing XOM/CVX watch-only thesis
+  on a sector-momentum basis, though the oil-price catalyst itself remains
+  headline-risk-driven, not a clean supply-shock thesis.
+- No held tickers — Step 3 news-on-holdings query skipped (0 positions).
+
+**Trade ideas (watch-only, none clear the confluence bar without a live
+check at market-open):**
+1. **XOM / CVX** — catalyst: Energy is the #1 YTD sector (+47.7%) and oil
+   is climbing again on Iran-diplomacy/geopolitical headline risk (Brent
+   $104.40, WTI $93.22, both +1.1-1.3% today). Needs a live RSI/200-SMA/VWAP
+   recheck at market-open before any entry; prior sessions (Sep 22-23) both
+   failed confluence at 1-of-4 (200-SMA only, RSI neutral). Illustrative
+   plan if confluence clears: entry near market, stop -7-10% below entry,
+   target 2:1 R:R, sized via `scripts/size.mjs`.
+2. **META** — catalyst: still the top setup-scan grade-B momentum hit
+   (ADX 32.2, EMA9>EMA21, RSI 76.0 as of Sep 23 18:33 ET scan) but RSI has
+   been overbought (>70) for multiple sessions running — sell/no-new-long
+   signal, not a fresh entry trigger. Watch only for a pullback-to-EMA21
+   mean-revert setup, not a breakout chase.
+3. **DRI (Darden)** — catalyst: reports earnings before today's open (EPS
+   est. $2.05, +4.1% YoY). Pure earnings-reaction watch, no pre-earnings
+   position — reassess post-print at market-open if a clean gap + volume +
+   confluence setup appears; earnings-day entries carry elevated gap risk
+   and are not a standing candidate until the print is in.
+
+**Risk factors today:** oil-driven volatility on Iran-diplomacy headlines
+(two-sided — could reverse either direction intraday); Fed Governor Barr
+commentary could move rate-sensitive sectors; DRI earnings gap risk; PMI
+print (consensus 53.6) could move broad tape if it misses; Apify search
+degradation this run means less independent confirmation than usual — lean
+more conservative until the tool is confirmed healthy again.
+
+**Decision: HOLD.** No confluence-cleared setups pre-market (XOM/CVX and
+META both need live rechecks that have failed on the last several
+sessions); DRI is earnings-reaction-only. Weekly trade count: 0/3 (week of
+Sep 21). Patience > activity — default HOLD stands per strategy rule.
