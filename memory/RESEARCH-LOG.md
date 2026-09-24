@@ -13953,3 +13953,54 @@ excluded from ranking — fails the $3.00 price floor.)
 - Impact: Premarket volume (191,449 shares) is modest versus Bloom's own ~16.06M average daily volume — a real but comparatively light print. Clear read-through to ORCL's move the same session on the identical AI-infra-financing narrative, suggesting a sector rotation out of AI-capex-linked names rather than a Bloom-specific breakdown; the stock's own recent strength (up on oil/yields Tuesday, up on S&P 500-inclusion optimism Wednesday) makes this look like a reversal of that strength rather than a new structural negative.
 - Horizon: SHORT_TERM, one-line reasoning: tied to the same-day AI-infra-financing headline risk (Project Jupiter) rather than a Bloom-specific fundamental change — recent two-way headline-driven price action is consistent with a fade-prone move, not a durable trend change.
 - Opportunity cost: Zero open positions, 0/3 weekly trades used. A gap DOWN tied to sector-wide AI-infra financing concerns (echoing ORCL, rank 1 today) is not a long-entry candidate; if considered as a later dip-buy, would need confluence plus a correlation-gate check against ORCL given the shared catalyst driver (plausibly correlated on AI-infra-financing headline days).
+
+## 2026-09-24 — Gappers (auto-scan 10:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+Only 4 tickers cleared |gap| >= 5% and the $3.00 price floor this run:
+ORCL, BW, BE, NBIS. Deep-dive cap is 5 — all 4 got the full deep dive;
+ranks 5-10 N/A this run (fewer than 10 qualifiers).
+
+Catalyst research: Apify RAG web browser (Yahoo-blocked suffix appended)
+returned mostly generic/off-target SERP noise for BW specifically (two
+passes, including a fundamentals-focused query, surfaced only unrelated
+"FUNdamentals" org pages) — logged as a gap rather than fabricated. ORCL
+and BE catalyst threads corroborate and extend the "Project Jupiter"
+AI-datacenter-financing story already logged in this morning's 08:03/09:03
+scans. NBIS and BE fundamentals queries returned usable, dated results.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ORCL | $134.01 | -7.26% | 594,069 | Extending the Project Jupiter AI-datacenter debt-financing slide; also weekend AI-capex-sustainability warnings from Anthropic/OpenAI/xAI leaders + Oracle's own above-consensus FY27 capex guide and a fresh debt raise |
+| 2 | BW | $6.205 | -6.48% | 29,114 | No fresh headline found — likely unwinding part of the recent Needham-initiation bounce; Wolfpack short-report overhang still on file |
+| 3 | BE | $257.73 | -6.32% | 138,968 | Giving back part of its run (record Q1 revenue beat, raised FY26 guidance, Sept S&P 500 inclusion) as the same Project Jupiter AI-infra-financing jitters hitting ORCL spread to adjacent AI-power names |
+| 4 | NBIS | $238.19 | +5.11% | 98,614 | Extending a multi-day AI-cloud rally on reports it will hike GPU cloud pricing up to 20% — capacity-sold-out / pricing-power signal |
+
+#### Deep dive: ORCL $134.01 -7.26%
+- Catalyst: Oracle fell another 7.26%, extending the Project Jupiter AI-datacenter debt-financing story already logged in this morning's scans (banks struggling to syndicate the debt backing Oracle's AI buildout). Fresh research adds: a broader AI-linked tech selloff sparked by weekend warnings from Anthropic, OpenAI, and xAI leadership about AI infrastructure spending sustainability, plus Oracle itself disclosing FY2027 capital spending plans above Wall Street estimates and saying it will raise more debt to fund datacenter buildout.
+- Why: Investors are repricing AI-capex-heavy names as the market questions whether hyperscaler/cloud infra spend converts into durable returns; Oracle's own debt-funded capex guide reinforces rather than allays that concern, layered on the pre-existing Project Jupiter financing-friction overhang.
+- Impact: 594k volume is a real, liquid print. A -7.26% move stacked on an already multi-day losing streak (5-7 sessions per prior scans) reads as a genuine repricing, not a one-day spike. Clear sector read-through to BE (rank 3 today) falling the same session on an adjacent AI-datacenter theme.
+- Horizon: LONG_TERM as a sector theme (AI-capex/financing jitters look like a multi-week overhang), but SHORT_TERM/no-catch-the-knife tactically for ORCL itself given the ongoing losing streak.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — wouldn't displace an existing holding. But this is a gap DOWN on a structural financing/capex concern, not a bullish trigger — not a long-entry candidate on this long-only strategy regardless of R:R math; a contrarian bounce would need the financing overhang to resolve first plus confluence.
+
+#### Deep dive: BW $6.205 -6.48%
+- Catalyst: No fresh, verifiable headline found for today's move despite two Apify passes (a catalyst-focused query and a fundamentals-focused follow-up, the latter returning only unrelated "FUNdamentals" org pages). Background on file: Babcock & Wilcox rebounded ~8% in late August after a Wolfpack Research short-seller report triggered a ~19% intraday plunge, and separately popped ~4% on a Needham coverage initiation around the same time. Today's move looks like it's unwinding part of that Needham-driven bounce, but this is inference, not sourced fact — logged as a research gap.
+- Why: Unconfirmed — no sourced mechanism for today specifically.
+- Impact: 29k premarket volume is thin for BW (small/micro-cap) — a move this size on light volume reads more like a low-liquidity air-pocket than a fundamentals-driven repricing, i.e. lower conviction and more prone to mean-revert.
+- Horizon: SHORT_TERM, one-line reasoning: no durable catalyst identified; thin-volume name, treat any bounce as a fade candidate rather than a swing hold.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. With no confirmed catalyst and thin volume, this doesn't clear the bar for a fresh entry regardless of R:R math — would not displace anything.
+
+#### Deep dive: BE $257.73 -6.32%
+- Catalyst: Bloom Energy fell 6.32%. Fundamentals context: record Q1 2026 revenue of $751.1M (+130.4% YoY), FY26 revenue growth guidance raised to ~80%, and a September S&P 500 inclusion driven by surging AI-datacenter power demand for its fuel cells. This morning's 09:03 scan already tied BE's prior-day move to the same Project Jupiter AI-datacenter debt-financing story pressuring ORCL — today's continued decline is consistent with that same sector-wide AI-infra-financing overhang plus post-inclusion profit-taking.
+- Why: A stock that ran hard into an index-inclusion event (itself a source of forced index-fund buying) is a classic "sell the news" setup once that flow is done; layering in sector-wide AI-capex-financing jitters (the same theme hitting ORCL) gives sellers a second reason to take profits here.
+- Impact: 139k volume is moderate. Given the stock's recent run and the binary nature of index-inclusion flow, this reads as a sustainable-trend pullback/give-back rather than a broken thesis, but worth watching for follow-through. Clear peer read-through to ORCL on the shared AI-infra-financing narrative.
+- Horizon: LONG_TERM structurally (AI-datacenter power-demand thesis and the fundamentals beat are durable), but SHORT_TERM tactically — expect further chop as the S&P-inclusion flow trade and the Project Jupiter overhang both unwind.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used. A dip-buy here would compete with NBIS (rank 4 today) for the same AI-infra/datacenter sector allocation bucket — correlation gate (`scripts/corr-gate.mjs`) should be checked before adding both, since AI-datacenter-demand names likely correlate >0.75. Between the two, NBIS's pricing-power catalyst is fresher/cleaner than BE's post-inclusion pullback, so BE is the one to pass on if only one AI-infra slot is available.
+
+#### Deep dive: NBIS $238.19 +5.11%
+- Catalyst: Nebius (AI-cloud/GPU infrastructure) rose 5.11%, continuing gains from Thursday sparked by reports the company plans to raise AI-cloud pricing by up to 20%. This follows an earlier-September pop tied to a broader AI-software rally after strong Nvidia results, plus prior deal chatter (e.g. a Palantir tie-up headline).
+- Why: A price hike on a capacity-constrained product signals strong demand and pricing power for GPU cloud capacity — the market reads this as margin-accretive and demand-durable, a distinct bullish mechanism from a one-off news pop.
+- Impact: 98.6k volume on a 5.11% gap is a meaningful, real move. Sustainable-leaning since it's a continuation of a multi-day uptrend tied to a demand/pricing fundamental rather than an isolated headline spike. Bullish read-through for other AI-cloud/GPU-capacity peers.
+- Horizon: LONG_TERM — a pricing-power signal in a capacity-constrained AI-infra buildout aligns with the current AI/datacenter sector-rotation phase; worth tracking as a multi-day/week swing candidate if it clears the Confluence rule on a later /trade check.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used (week of Sep 21) — a new entry would still count against the max-3-new-trades/week and max-6-open-positions caps once trading resumes. Of today's 4 gappers, NBIS looks like the strongest candidate to clear a 2:1 R:R at a sane stop given its trend context (vs. ORCL breaking down, BW's thin/uncatalyzed move, and BE's post-inclusion give-back) — the one to flag for a follow-up /trade check, not an order placed here.
