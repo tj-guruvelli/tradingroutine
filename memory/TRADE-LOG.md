@@ -1062,3 +1062,54 @@ this run.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-22`, equity/cash unchanged at $100,000). Market-open decision was HOLD — XOM/CVX/META all capped at 1 of 4 confluence indicators (200-SMA only), no VWAP/insider data without `tradingview-data` MCP. Midday scan (17:04 UTC) touched only RESEARCH-LOG, no theses reopened, no trades. Weekly trade count: 0/3 (week of Sep 21). 54th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 79th+ straight session, operator review pending. STEP 5 ClickUp notification failed again — HTTP 500 (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` still literal placeholder strings, not real IDs, so the script skips its local-fallback path and always attempts the live API call — same unresolved issue as Sep 21/22).
+
+### Sep 24, Market-Open (Day 55, Thursday, local run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-23`). STEP 1: today's
+RESEARCH-LOG (2026-09-24 Pre-Market) flagged XOM/CVX (energy-sector
+momentum + oil climbing on Iran-diplomacy headline risk), META (momentum
+grade-B, but RSI overbought for multiple sessions), and DRI (earnings
+before today's open, post-print reassessment only) as watch-only
+candidates — decision was HOLD pre-market. `tradingview-data` MCP not
+loaded this run (confirmed via tool search) — computed RSI14/SMA200 for
+all 4 directly from Alpaca IEX daily bars (same sma()/rsi() math as
+setup-scan-cloud.mjs), same fallback used Sep 22-23.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align):
+- XOM $163.62 (last close, ask $163.92) — catalyst documented (oil
+  climbing on Iran-diplomacy risk). RSI14 54.05 — neutral, no align.
+  Price > 200-SMA ($147.77) — 1 align. No VWAP/insider data. 1 of 4 —
+  fails confluence — skip.
+- CVX $206.98 (last close) — same catalyst as XOM. RSI14 51.48 —
+  neutral, no align. Price > 200-SMA ($184.97) — 1 align. No
+  VWAP/insider data. 1 of 4 — fails confluence — skip. Live quote also
+  shows an abnormally wide bid/ask ($205.01/$217.79, ~6% spread) for a
+  mega-cap — same stale/wide-spread data-quality flag as prior sessions,
+  independently disqualifying.
+- META $763.20 (last close, ask $763.92) — no fresh independent catalyst
+  (RESEARCH-LOG: momentum-only, pullback watch). RSI14 79.04 —
+  overbought (>70, sell/no-new-long signal), no align. Price > 200-SMA
+  ($625.97) — 1 align. 1 of 4 — fails confluence — skip.
+- DRI $209.94 (last close, ask $212.00) — earnings reported before
+  today's open; RESEARCH-LOG flagged post-print reassessment only, no
+  pre-earnings position. RSI14 46.61 — neutral, no align. Price >
+  200-SMA ($203.59) — 1 align (thin margin). No VWAP/insider data. 1 of
+  4 — fails confluence — skip without a deeper earnings-reaction dig
+  (technical fail is independently disqualifying).
+
+Gappers auto-scans (08:03/09:03 ET) surfaced ONDS, ORCL, LUNR, BMNR, BE —
+all gap DOWN moves (M&A digestion, AI-datacenter-financing jitters,
+crypto-beta selloff) with no confirmed fresh bullish trigger — not
+long-entry candidates on this long-only strategy regardless of R:R math.
+
+All 4 pre-market candidates capped at 1 of 4 confluence indicators
+(200-SMA only) — same structural pattern as every session since launch:
+RSI neutral-to-overbought, no oversold mean-revert setups, VWAP/insider
+data unavailable without the tradingview-data MCP. No planned tickers
+executed — STEPs 4-5 skipped. Weekly trade count: 0/3 (week of Sep 21).
+55th trading day since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 80th+ straight session, operator review pending. STEP 7
+(notification) does not apply — no trade fired this run. Local run: no
+git commit/push (STEP 8 mandatory only when trades fire; N/A here).
