@@ -1,0 +1,22 @@
+{
+  "scanned_at": "2026-09-24T12:06:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ONDS",
+      "price": 7.30,
+      "gap_pct": -5.56,
+      "premarket_volume": 2312315,
+      "catalyst": "M&A digestion: Ondas acquired three defense-tech businesses Sep 23 for $56M cash+stock, layering onto its $205M GATE Technologies/Bron acquisition earlier this month.",
+      "headlines": [
+        "Ondas (ONDS) acquired Three Defense Technology Businesses on Wednesday, Sep 23, 2026 for $56M paid in cash & stock (Benzinga quote-page banner)"
+      ],
+      "catalyst_detail": "Ondas Inc (ONDS) announced the acquisition of three unnamed defense-technology businesses on Wed Sep 23, 2026 for $56M paid in cash and stock. This follows an earlier-September $205M cash-and-stock acquisition of GATE Technologies and Bron, both aimed at expanding Ondas Autonomous Systems' precision-strike and autonomous-defense product line. Separately, a same-day Benzinga piece on the Pentagon's 'Drone Dominance' contract round notes Ondas did not compete in that specific program (Red Cat/XTEND/Teal did) — so today's move is not tied to a lost-contract headline.",
+      "why": "Two cash-and-stock acquisitions inside roughly two weeks ($205M GATE Technologies/Bron deal, then the $56M three-business deal) raise near-term share-dilution and integration-execution concerns, pulling in sellers/profit-takers even as the long-term defense-portfolio buildout continues — reads as 'sell the M&A news' after a large prior run-up.",
+      "impact": "Alpaca-scan premarket volume (2.31M shares) is well above the routine's 50K floor, so this is a real, liquid move, not noise. Stock is down sharply from its 52-wk high ($15.28) to ~$7.30 (still well above the 52-wk low of $4.95) — consistent with digestion after a fast re-rate rather than a fresh breakdown. Short interest is extremely elevated (39.14% of float, 3.68 days to cover), raising two-way volatility risk. No confirmed same-day peer read-through beyond the unrelated Red Cat Pentagon-contract story (different program, same drone/defense sector).",
+      "horizon": "SHORT_TERM — no single fresh negative catalyst broke today; this reads as digestion/profit-taking after two M&A announcements in quick succession following a big prior run (52-wk high $15.28), not a new structural trigger to hold through. The underlying defense-portfolio expansion thesis is real but already priced in over recent weeks.",
+      "opportunity_cost": "Zero open positions and 0/3 weekly trades used (week of Sep 21, per memory/TRADE-LOG.md), so entry wouldn't displace an existing holding. But this is a gap DOWN with no confirmed fresh bearish trigger (dilution/digestion, not a broken thesis) on a long-only strategy — not a long-entry candidate today regardless of R:R math. 39% short interest plus a >50% pullback from 52-wk highs argue for a wide stop distance that would need scripts/size.mjs (ATR) and scripts/corr-gate.mjs checks before any sizing decision, which this research-only scan does not run."
+    }
+  ]
+}
