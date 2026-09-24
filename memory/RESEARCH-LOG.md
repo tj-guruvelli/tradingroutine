@@ -14063,3 +14063,13 @@ with zero entries. Weekly trade count: 0/3 (week of Sep 21). Equity flat
 at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27
 remains unresolved, 80th+ straight session, operator review still
 pending.
+
+### Setup Scan (16:33 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60 candidates checked. `grade_a_possible: false`
+(ny_time 16:33, outside 10:00-15:30 ET window) — Setup A not evaluated this run,
+grade B/C only. 1 hit, 0 errors.
+
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+KLIC    B      Momentum confluence   daily swing   ADX14 23.1, EMA9 85.11 > EMA21 84.82, RSI 58.4
+
+0 grade-A hits -> no Telegram notification per rule.
