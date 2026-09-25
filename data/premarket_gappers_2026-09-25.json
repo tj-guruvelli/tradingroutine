@@ -1,5 +1,20 @@
 {
-  "scanned_at": "2026-09-25T12:12:01Z",
+  "scanned_at": "2026-09-25T13:07:00Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 247.04,
+      "gap_pct": 9.02,
+      "premarket_volume": 418329,
+      "catalyst": "Continued AI-infra rally tied to Nvidia's disclosed 9.3% stake in the neocloud provider",
+      "headlines": [],
+      "catalyst_detail": "Nebius Group (Amsterdam-based 'neocloud' AI-infrastructure/GPU-cloud provider) is extending a sharp rally that began after Nvidia disclosed a 9.3% equity stake in the company (per CNBC). No same-day, NBIS-specific press release, 8-K, or earnings print was found as of this scan distinct from the ongoing Nvidia-stake storyline.",
+      "why": "Nvidia's stake disclosure signals a strategic AI-infrastructure alliance, pulling in momentum buyers positioning Nebius as a key GPU-cloud capacity partner in Nvidia's ecosystem -- a structural narrative, not a single earnings-beat headline.",
+      "impact": "Partly sustainable given the size/nature of the Nvidia relationship, but the ~9% premarket gap rode only ~418K shares of premarket volume -- thin, so watch for real-session volume confirmation at the open. Bullish read-across for other neocloud/GPU-cloud capacity names.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "Only 1 gapper cleared the 5% bar today, so no other gapper is displaced. Still needs correlation-gate and sizing checks against current holdings before consideration -- not run here, research-only."
+    }
+  ]
 }

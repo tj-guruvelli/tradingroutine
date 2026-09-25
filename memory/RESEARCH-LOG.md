@@ -14212,3 +14212,20 @@ premarket prints post.
 
 0 hits -> no Telegram/ClickUp notification per rule (only send if hits > 0
 or the scan errored; this run did not error).
+
+### Gappers (auto-scan 09:07 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **1 ticker cleared |gap| >= 5%** (up from 0 at 08:11 ET as more premarket prints posted). Deep-dive cap: 5 (only 1 hit, so no ranks 6-10 to note).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | $247.04 | +9.02% | 418,329 | Continued AI-infra rally tied to Nvidia's disclosed 9.3% stake in the neocloud provider |
+
+#### Deep dive: NBIS $247.04 +9.02%
+- Catalyst: Nebius Group (Amsterdam-based "neocloud" AI-infrastructure/GPU-cloud provider) is extending a sharp rally that began after Nvidia disclosed a 9.3% equity stake in the company (per CNBC). Apify search found no same-day, NBIS-specific press release, 8-K, or earnings print as of this scan — no fresh single-day headline was located distinct from the ongoing Nvidia-stake storyline; flagged as a research gap.
+- Why: Nvidia's stake disclosure signals a strategic AI-infrastructure alliance, pulling in momentum buyers positioning Nebius as a key GPU-cloud capacity partner in Nvidia's ecosystem — a structural narrative, not a single earnings-beat headline.
+- Impact: Partly sustainable given the size/nature of the Nvidia relationship (structural alignment, not a one-off beat/miss), but the ~9% premarket gap rode only ~418K shares of premarket volume — thin, so watch for real-session volume confirmation at the open before trusting the full move holds. Sector read-through: bullish read-across for other neocloud/GPU-cloud capacity names given the AI-infra buildout narrative.
+- Horizon: LONG_TERM — Nvidia's equity stake and the neocloud buildout thesis is structural infrastructure alignment, consistent with continued AI-infra sector-rotation strength noted in TRADING-STRATEGY.md; a multi-day/week swing candidate IF it also clears the Confluence rule and 2:1 R:R on a later /trade check, not a same-session headline-fade play.
+- Opportunity cost: Only 1 gapper cleared the 5% bar today, so no other gapper is displaced. Still needs correlation-gate (`scripts/corr-gate.mjs NBIS`) and sizing (`scripts/size.mjs NBIS`) checks against current holdings before consideration — not run here, this is research-only. Would count toward the max-3-new-trades/week and max-6-open-positions caps like any other entry.
+
+Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
