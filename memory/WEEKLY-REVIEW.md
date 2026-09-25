@@ -365,3 +365,45 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again (12th week flagged, 72 straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-09-25
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | +1.21% (7,650.50 → 7,743.41) |
+| Bot vs S&P | -1.21% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- All 5 sessions logged both Market-Open and EOD TRADE-LOG entries with no gaps — the intermittent missing-entry pattern flagged in each of the last 7 weekly reviews did not recur this week
+- Hard-rule/confluence discipline kept catching real disqualifiers independent of `tradingview-data` MCP uptime: NBIS (~20% bid/ask spread) and KLIC (~34% spread) correctly flagged as untradeable data-quality issues (Sep 25); INTC overbought RSI (Sep 22, 71.03) and repeated META overbought reads (RSI14 77-85 across the week) correctly blocked new longs
+- Correctly stood down the stale XOM/CVX energy thesis (Sep 21) after oil's 4th straight down session reversed the Mideast supply-shock catalyst, rather than chasing a thesis that no longer held
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- 13th consecutive zero-entry week (56 trading days since launch, Jul 9) — sat in 100% cash through a +1.21% S&P week, the largest single-week opportunity cost since Aug 7 (-3.6% missed)
+- `tradingview-data` MCP still down the entire week (8th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now an 8th straight week this exact fix has been proposed and not shipped
+- ClickUp notification (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` placeholder strings) failed HTTP 500 every session this week (Sep 21-25) — confirmed broken for 5 straight sessions, still no operator fix
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (82nd+ straight session / 13th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- Every candidate this week that cleared the 200-SMA leg still failed on RSI (neutral-to-overbought) or a wide-spread data-quality flag — the confluence + hard-rule combination is filtering correctly, not defaulting to HOLD only because the MCP is down
+- The missing-TRADE-LOG-entry gap resolving itself this week (first clean week in 7+) is encouraging but unconfirmed as fixed — needs another clean week before treating it as resolved rather than a one-off
+- The Alpaca-bars-into-confluence wiring is now 8 straight weeks unshipped, longer than the gappers stale-baseline bug ran before it was finally root-caused (5 recurrences) — the same forcing function (a concrete incident, not another re-flag) may be what it takes to unblock this too
+### Adjustments for Next Week
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for an 8th straight week, still the single most overdue open item
+- Fix `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — confirmed broken all 5 sessions this week, fallback notification channel has not delivered a single message since the bug was found
+- Escalate the $10k vs $100k baseline mismatch again (13th week flagged, 82+ straight sessions, still no operator action) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Confirm the Market-Open/EOD TRADE-LOG logging gap stays fixed next week before closing it out as resolved
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
+### Overall Grade: C
