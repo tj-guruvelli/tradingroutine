@@ -14256,3 +14256,28 @@ Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **
 Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
 
 Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **2 tickers cleared |gap| >= 5%** — same 2 names as the 10:03 ET scan (BE, SATL), gap % narrowing on both and rank order flipped (BE now #1, was #2). Deep-dive cap: 5 (only 2 hits, so both get the full deep dive; no ranks 6-10 to note).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $284.74 | +6.84% | 184,257 | Oracle reaffirmed a 2.4 GW fuel-cell deal, calming "Project Jupiter" AI-pipeline-delay jitters that sank BE ~8% the prior session |
+| 2 | SATL | $6.27 | +5.73% | 101,970 | No fresh same-day catalyst found; likely continuation of the Aug 5 Q2 print (revenue +259% YoY, first quarter of positive operating income) plus thin-float mechanics |
+
+#### Deep dive: BE $284.74 +6.84%
+- Catalyst: On Sep 24, BE sank roughly 8% alongside sector-wide fuel-cell weakness (rate-pressure on clean-energy financing) plus a Motley Fool report questioning whether a delayed pipeline jeopardizes Bloom's role in a $165B AI data-center project ("Project Jupiter"). Today (Sep 25), Oracle publicly reaffirmed its 2.4 GW fuel-cell offtake commitment, directly countering that overhang. This sits on top of a genuinely large structural backlog: Oracle's broader deal covers up to 2.8 GW (1.2 GW already contracted/installed), a Brookfield financing partnership expanded to $25B in June 2026, and BE's Sep 21 addition to the S&P 500.
+- Why: Oracle's reaffirmation directly rebuts yesterday's sell-the-news narrative on pipeline delays, pulling back in dip buyers and momentum traders who had just exited on the Jupiter-jitters headline.
+- Impact: Reads partly as a relief bounce off an oversold, sector-wide (rate-driven) fuel-cell selloff rather than a fresh structural catalyst — gap % has actually narrowed intraday (+7.47% at the 10:03 ET scan vs +6.84% now), suggesting the bounce is losing some steam. Premarket volume (~184K shares) is moderate for BE's market cap. Sector read-through: peers FuelCell and Plug Power also sold off Sep 24 on the same rate-pressure story, so a sector-wide bounce is plausible if Treasury yields ease.
+- Horizon: LONG_TERM — the underlying AI-datacenter power thesis (Oracle 2.8GW, Brookfield $25B, ~$20B total backlog, S&P 500 inclusion) is structural and aligns with continued AI-infrastructure sector-rotation strength, even though today's specific print is a reactive relief bounce off a rate-driven dip.
+- Opportunity cost: Only 2 gappers cleared 5% today (BE, SATL) — both would compete for the same max-3-new-trades/week slot. 0 open positions currently, so no existing holding is displaced. At ~$285/share BE needs `scripts/size.mjs BE` for ATR-based sizing within the 20%-of-equity cap; 2:1 R:R not evaluated here (research only).
+
+#### Deep dive: SATL $6.27 +5.73%
+- Catalyst: Satellogic's Aug 5, 2026 Q2 report showed revenue up 259% YoY to $15.9M and the company's first quarter of positive operating income — a real fundamental inflection versus the deeply unprofitable FY2025 picture (net loss $103.9M on $17.7M revenue) described in an Aug 26 KoalaGains deep-dive. The stock has been choppy since: it surged +15% on Sep 8 then gave back gains. No Sep 25-dated press release, contract win, or earnings print was located distinct from this ongoing narrative.
+- Why: Absent a fresh hard catalyst, the move reads as continued momentum off the positive-operating-income narrative plus thin-float/microcap mechanics, where modest buying produces an outsized percentage gap.
+- Impact: Premarket volume (~102K shares) is up from the 10:03 ET scan's ~35K, but gap % has narrowed (+8.09% at 10:03 ET vs +5.73% now), suggesting fade rather than acceleration. Independent fundamental research (KoalaGains, Aug 26) pegs fair value at roughly $1.00-$3.50 vs a $5.36 close that day on DCF/peer-multiple grounds (EV/Sales ~27x vs 6-12x peer norm) — even after the Q2 operating-income beat, this flags high mean-reversion risk absent a confirmed new catalyst. No sector-wide read-through found; SATL trades on its own idiosyncratic story.
+- Horizon: SHORT_TERM — no structural catalyst identified today, gap % is already narrowing intraday, and independent fair-value work flags the stock as well above fundamental value even post-Q2 beat — treat as headline/momentum-driven, not a durable thesis.
+- Opportunity cost: Competes with BE for the same max-3-new-trades/week slot; ranks #2 today by gap size (5.73% vs BE 6.84%), a reversal from the 10:03 ET scan where SATL led (8.09% vs 7.47%). 0 open positions currently, so no existing holding is displaced. No price target found to confirm 2:1 R:R at a sane stop distance — research flag only.
+
+Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
