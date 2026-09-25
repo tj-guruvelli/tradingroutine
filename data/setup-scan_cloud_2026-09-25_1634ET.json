@@ -1,0 +1,126 @@
+{
+  "scanned_at": "2026-09-25T20:35:02.304Z",
+  "ny_time": "16:34",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "META",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 752.96,
+      "prev_daily_high": 779.8,
+      "prev_daily_close": 777.73,
+      "sma200": 626.04,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 769.23,
+      "rsi14": 80.44,
+      "adx14": 37.28,
+      "ema9": 713.09,
+      "ema21": 667.28,
+      "premarket_volume": 0,
+      "daily_volume": 1261622,
+      "avg_daily_volume_30": 696728,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "HAFN",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 7.53,
+      "prev_daily_high": 8.91,
+      "prev_daily_close": 8.91,
+      "sma200": 7.42,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 8.94,
+      "rsi14": 49.96,
+      "adx14": 31.02,
+      "ema9": 9.31,
+      "ema21": 9.06,
+      "premarket_volume": 0,
+      "daily_volume": 697770,
+      "avg_daily_volume_30": 143235,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "CMBT",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 19.24,
+      "prev_daily_high": 19.33,
+      "prev_daily_close": 19.05,
+      "sma200": 14.27,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 19.18,
+      "rsi14": 54.1,
+      "adx14": 37.79,
+      "ema9": 19.42,
+      "ema21": 19.04,
+      "premarket_volume": 0,
+      "daily_volume": 218004,
+      "avg_daily_volume_30": 71000,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BCI",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 26.26,
+      "prev_daily_high": 26.77,
+      "prev_daily_close": 26.56,
+      "sma200": 23.52,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 26.39,
+      "rsi14": 64.83,
+      "adx14": 37.17,
+      "ema9": 26.42,
+      "ema21": 26.11,
+      "premarket_volume": 0,
+      "daily_volume": 142695,
+      "avg_daily_volume_30": 71848,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "SATL",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 6.21,
+      "prev_daily_high": 6.13,
+      "prev_daily_close": 5.93,
+      "sma200": 5,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 6.44,
+      "rsi14": 60.6,
+      "adx14": 24.09,
+      "ema9": 5.44,
+      "ema21": 5.24,
+      "premarket_volume": 0,
+      "daily_volume": 406401,
+      "avg_daily_volume_30": 260317,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
