@@ -14084,3 +14084,111 @@ TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
 KLIC    B      Momentum confluence   daily swing   ADX14 23.1, EMA9 85.11 > EMA21 84.82, RSI 58.4
 
 0 grade-A hits -> no Telegram notification per rule.
+
+## 2026-09-25 — Pre-Market Research (Day 56, Friday)
+
+**Account snapshot** (`alpaca.sh account`, `balance_asof: 2026-09-24`): equity
+$100,000.00, cash $100,000.00 (100%), buying power $400,000. 0 open
+positions, 0 open orders. 56th trading day since launch (Jul 9) with zero
+entries. Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch
+flagged Jul 27 remains unresolved, 81st+ straight session, operator review
+still pending.
+
+**Apify RAG web browser partially degraded this run**: oil-price and VIX
+queries returned clean, usable content (no Yahoo hits). The catalysts,
+earnings, econ-calendar, and sector-momentum queries returned
+off-target/irrelevant SERP matches (e.g. Wikipedia's "S" letter page and an
+unrelated Open Access publishing initiative for the sector-momentum query;
+a stock-tips blog post, not a broad catalyst summary, for the catalysts
+query) — same search-layer misfire pattern logged 2026-09-24, not a
+Yahoo-block issue. Fell back to native WebSearch for those 4 per routine
+rule (Yahoo domains blocklisted on the WebSearch calls too).
+
+**Market context:**
+- Oil (Apify, TradingEconomics/Markets Insider, clean): WTI $92.92 (-1.79%
+  day, +13.0% month, +41.4% year), Brent $105.42-105.61 (-1.10% day, +21.3%
+  month, +52.3% year). Brent easing off its recent >$106 spike on reports
+  the US and Iran are discussing a phased deal (Qatar mediating at UNGA)
+  that could reopen the Strait of Hormuz and lift the US blockade on
+  Iranian ports — Iran insists on retaining Hormuz control, no breakthrough
+  confirmed yet. Houthi missile strikes on Saudi cities (Yanbu, Taif) are a
+  fresh escalation risk on the other side. Brent still on track for a >2%
+  weekly gain despite today's pullback.
+- S&P 500 futures / broad tape (WebSearch, no live Apify data): mixed/flat
+  close pattern continuing — 10-year yields near 19-year highs into the
+  Trump-Xi meeting, tech/semis showing relative strength (MU, AMD, INTC all
+  up on AI-infra optimism + cooling inflation expectations) offsetting the
+  yield/geopolitical drag.
+- VIX (Apify, Cboe, clean, live as of 11:08 AM ET today): **$15.21 spot,
+  -2.94% (-0.46) day.** Prev close $15.67, open $15.61. 52-week range
+  13.38-35.30 — sitting near the low end, low/complacent-vol regime, no
+  fear-gauge spike despite the Iran/oil headline risk.
+- Today's catalysts (WebSearch): August durable goods orders + final
+  September University of Michigan Consumer Sentiment due today; multiple
+  Fed speakers scheduled. Flagging a specific risk factor: the WebSearch
+  summary notes the *preliminary* September UMich reading had already
+  plunged 7.5% MoM to 47.8 (second-lowest on record) — today's final print
+  is a real tail-risk catalyst for broad-tape volatility, not a formality.
+- Earnings before today's open (WebSearch): no specific names confirmed for
+  Sep 25 pre-market — search results only surfaced yesterday's (Sep 24)
+  BlackBerry/Costco reports. Logged as a research gap; no earnings-gap
+  candidate identified for today.
+- Econ calendar (WebSearch): only the UMich Consumer Sentiment final read
+  confirmed for today. No CPI/PPI/FOMC/jobs data scheduled.
+- Sector momentum YTD (WebSearch): Energy still #1 at +47.7% YTD, Tech
+  ~+30.7%, Transportation +26.3%, Industrials/Materials strong (AI-infra
+  capex, defense, electricity-capacity buildout), Real Estate double-digit
+  gains despite rate pressure, Utilities cooling after an earlier-year run,
+  Consumer Discretionary worst at -5.0% YTD. Same energy-leadership picture
+  as every recent session.
+- No held tickers — Step 3 news-on-holdings query skipped (0 positions).
+
+**Confluence check** (TRADING-STRATEGY.md Entry Checklist: ≥2 of {VWAP,
+RSI, 200-SMA, insider} must align). `tradingview-data` MCP not loaded this
+run (confirmed via tool search) — computed RSI14/SMA200 directly from
+Alpaca IEX daily bars (same method as every session since Sep 22):
+- **XOM** $162.12 (last close) — RSI14 49.80 (neutral, no align), price >
+  200-SMA $147.77 (1 align). No VWAP/insider data. **1 of 4 — fails.**
+- **CVX** $205.62 (last close) — RSI14 42.20 (neutral, no align), price >
+  200-SMA $184.96 (1 align). No VWAP/insider data. **1 of 4 — fails.**
+- **META** $777.73 (last close) — RSI14 85.49 (deeply overbought, sell/no-
+  new-long signal, no align), price > 200-SMA $626.04 (1 align). No
+  VWAP/insider data. **1 of 4 — fails.**
+
+**Trade ideas (watch-only, none clear the confluence bar):**
+1. **XOM / CVX** — catalyst: Energy remains the #1 YTD sector (+47.7%) and
+   oil is still elevated (Brent +21% MoM) despite today's pullback on Iran
+   phased-deal diplomacy talk. Confluence fails at 1-of-4 (200-SMA only,
+   RSI neutral on both) — same result as every session since Sep 22.
+   Illustrative plan if confluence ever clears: entry near market, stop
+   7-10% below entry (never within 3% of price, never moved down), target
+   min 2:1 R:R, sized via `scripts/size.mjs`, correlation-gated via
+   `scripts/corr-gate.mjs` (XOM/CVX are both energy — would count as one
+   sector slot, not two).
+2. **META** — catalyst: none fresh today; still the standing setup-scan
+   momentum name but RSI14 85.49 is deeply overbought — a sell/no-new-long
+   signal, not an entry trigger. Watch only for a pullback to the 20/50-EMA
+   zone, not a breakout chase at these levels.
+3. No earnings-driven idea today — no confirmed pre-market earnings names
+   found (logged as a research gap, not fabricated).
+
+**Risk factors today:** UMich Consumer Sentiment final print is a genuine
+downside catalyst risk (preliminary read was the second-lowest on record);
+10-year yields near 19-year highs ahead of the Trump-Xi meeting; Iran/Hormuz
+diplomacy is two-sided headline risk (a breakthrough could send oil sharply
+lower, a Houthi-strike escalation could spike it higher) — VIX at 15.21
+suggests the market isn't pricing much of either outcome, which raises the
+cost of being wrong; Apify catalyst/earnings/econ-calendar/sector queries
+degraded again today (2nd session running) — worth flagging to the operator
+if this persists into next week, since it forces a WebSearch fallback with
+less-precise sourcing on 4 of 7 queries.
+
+**Decision: HOLD.** No confluence-cleared setups pre-market — XOM/CVX/META
+all fail at 1-of-4 (200-SMA only), same structural pattern as every session
+since Sep 22. Weekly trade count: 0/3 (week of Sep 21, but note this is the
+last trading day of that week — resets Monday Sep 28). Patience > activity
+— default HOLD stands per strategy rule.
+
+STEP 5 ClickUp notification failed — HTTP 500, same unresolved
+`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` placeholder issue logged
+2026-09-21 through 2026-09-24.
