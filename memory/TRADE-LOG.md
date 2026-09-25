@@ -1120,3 +1120,42 @@ git commit/push (STEP 8 mandatory only when trades fire; N/A here).
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-23`, equity/cash unchanged at $100,000). Market-open decision was HOLD — XOM/CVX/META/DRI all capped at 1 of 4 confluence indicators (200-SMA only, RSI neutral-to-overbought), no VWAP/insider data without the tradingview-data MCP. Midday scan (17:04 UTC) touched only RESEARCH-LOG, no theses reopened, no trades. Weekly trade count: 0/3 (week of Sep 21). 55th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 80th+ straight session, operator review pending. Tomorrow: re-scan pre-market for a candidate that clears ≥2 of 4 confluence indicators; keep watching XOM/CVX energy momentum and META for a pullback entry. STEP 5 ClickUp notification failed again — HTTP 500 (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` still literal placeholder strings, not real IDs, so the script skips its local-fallback path and always attempts the live API call — same unresolved issue as Sep 21-23).
+
+### Sep 25, Market-Open (Day 56, Friday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-24`).
+
+STEP 2 setup-scan source: no same-day file yet at run time; used prior
+day's latest, `data/setup-scan_cloud_2026-09-24_1833ET.json` (1 hit: KLIC
+grade B).
+
+Candidates (STEP 1 pre-market + STEP 2 scanner), pass/fail vs confluence
+rule (≥2 of {VWAP, RSI, 200-SMA, insider}) and hard checks:
+- **XOM** $160.79 (ask) — catalyst logged (energy/oil momentum). RSI14
+  49.80, neutral, no align. Price > 200-SMA $147.77 — 1 align. 1 of 4 —
+  fails, skip. Same result as today's pre-market entry.
+- **CVX** $204.44 (ask) — same catalyst. RSI14 42.20, neutral, no align.
+  Price > 200-SMA $184.96 — 1 align. 1 of 4 — fails, skip.
+- **META** $755.41 (ask) — no fresh catalyst, momentum-only. RSI14 85.49,
+  overbought (sell/no-new-long), no align. Price > 200-SMA $626.04 — 1
+  align. 1 of 4 — fails, skip.
+- **NBIS** (gappers 09:07 ET, +9.02%, catalyst: Nvidia 9.3% stake
+  disclosure) — live quote ap $266.00/bp $211.21, ~20% spread, same
+  stale/wide-spread data-quality flag as prior sessions (independently
+  disqualifying). RSI14 57.08, neutral, no align. Price > 200-SMA $164.13
+  — 1 align (computed from Alpaca daily bars, last close $242.08 vs
+  today's ask — the wide spread itself confirms the quote isn't
+  tradeable). 1 of 4 — fails, skip.
+- **KLIC** (setup-scan grade B, 18:33 ET prior day) — no catalyst
+  documented; live quote ap $103.52/bp $76.97, ~34% spread vs bid — same
+  data-quality flag, independently disqualifying. RSI14 63.16, neutral, no
+  align. Price > 200-SMA $81.88 (last close $89.10) — 1 align. 1 of 4 —
+  fails confluence regardless of catalyst/spread issues; catalyst fetch
+  skipped since disqualified independently.
+
+All 5 candidates capped at 1 of 4 confluence indicators (200-SMA only) —
+56th straight trading day since launch (Jul 9) with zero entries. Weekly
+trade count: 0/3 (week of Sep 21, resets Monday Sep 28). Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 81st+ straight session, operator review pending. STEP 8
+(notification) N/A — no trade fired this run.
