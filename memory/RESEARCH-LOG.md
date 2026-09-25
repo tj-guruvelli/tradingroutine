@@ -14229,3 +14229,30 @@ Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **
 - Opportunity cost: Only 1 gapper cleared the 5% bar today, so no other gapper is displaced. Still needs correlation-gate (`scripts/corr-gate.mjs NBIS`) and sizing (`scripts/size.mjs NBIS`) checks against current holdings before consideration — not run here, this is research-only. Would count toward the max-3-new-trades/week and max-6-open-positions caps like any other entry.
 
 Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **2 tickers cleared |gap| >= 5%** (up from 1 at 09:07 ET). Deep-dive cap: 5 (only 2 hits, so both get the full deep dive; no ranks 6-10 to note).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | $6.41 | +8.09% | 34,832 | Analysts hold a fresh "Moderate Buy" consensus on Satellogic; no single new headline found distinct from the ongoing satellite-imagery coverage narrative |
+| 2 | BE | $286.44 | +7.47% | 96,448 | Bloom Energy extending gains tied to its Sept 21 S&P 500 index inclusion, which triggers mandatory passive ETF buying |
+
+#### Deep dive: SATL $6.41 +8.09%
+- Catalyst: Satellogic Inc. (satellite-imagery / Earth-observation company) shares are extending a move higher; the most substantive item found is analyst commentary citing a firming "Moderate Buy" consensus among covering analysts. Apify found no fresh SATL-specific press release, contract win, or earnings print dated to this scan — the most recent hard catalyst on file is the Q3 (Nov 2025) revenue print (29% YoY revenue growth, 18% opex reduction). No same-day, ticker-specific headline was located distinct from the general analyst-coverage narrative; flagged as a research gap.
+- Why: Absent a same-day hard catalyst, the move reads as analyst-sentiment/consensus-driven (a firming "Moderate Buy" read) combined with thin-float mechanics — SATL is a low-priced, comparatively illiquid small-cap where modest buying pressure can produce an outsized percentage gap.
+- Impact: Premarket volume (~34.8K shares) is thin relative to a name that has traded 4.5-4.7M shares in recent full sessions per search results — this reads as a low-volume premarket print, not broad-based accumulation, so the gap looks fragile and prone to mean-reversion once real session volume arrives. No sector-wide read-through found — SATL trades on its own idiosyncratic satellite-imagery story, not a sector basket.
+- Horizon: SHORT_TERM — no structural catalyst (M&A, guidance reset, contract) was located, just consensus/sentiment chatter on thin premarket volume; treat a gap-fill/fade as the base case, do not carry past this session without a confirmed news catalyst.
+- Opportunity cost: Ranks #1 today by gap size (8.09% vs BE's 7.47%), competing directly with BE for one of the max-3-new-trades/week slots (0/3 used this week). 0 open positions today, so no existing holding is displaced. No catalyst-driven price target was found in research, so this cannot confirm a 2:1 R:R at a sane stop distance — research flag, not a trade recommendation.
+
+#### Deep dive: BE $286.44 +7.47%
+- Catalyst: Bloom Energy (fuel-cell / stationary power generation) is extending a rally tied to its addition to the S&P 500, effective Monday, Sept 21, 2026 — index inclusion triggers mandatory buying from passive S&P 500-tracking funds/ETFs. A separate item (Bloomberg, via search snippet) references Oracle invoking a force-majeure clause in dealings with Bloom Energy, reportedly pressuring the stock on a different session — that headline conflicts with today's up-gap and could not be dated precisely against today's move; noted as a risk factor, not confirmed as today's driver.
+- Why: S&P 500 inclusion mechanically pulls in passive index-fund buying as funds rebalance to match the index — a well-documented multi-day flow event around an effective-inclusion date, not a single-day headline spike.
+- Impact: Premarket volume (~96.4K shares) on a $266→$286 gap is a real, if not enormous, print for BE's market cap. Inclusion-driven buying flow is typically front-loaded around the effective date (Sept 21) and would normally be expected to fade by four sessions later (today) — continuation this far out is a mild yellow flag that the move may be running on residual momentum rather than fresh mechanical flow. The unresolved Oracle force-majeure headline is a real overhang worth confirming before treating this as clean. No clear sector-wide read-through found beyond BE's own S&P-inclusion story.
+- Horizon: SHORT_TERM — the core driver (index-inclusion flow) is mechanically front-loaded and largely already priced in four sessions past the effective date; absent a fresh operating catalyst, expect the tailwind to fade rather than sustain into a multi-week trend.
+- Opportunity cost: Larger, more liquid name than SATL by premarket dollar volume. 0 open positions today, so no existing holding is displaced, but BE would use 1 of the max-3-new-trades/week slots (competing with SATL for the same weekly cap) and, at ~$286/share, needs `scripts/size.mjs BE` to fit within the 20%-of-equity cap. The unresolved Oracle-related headline needs to be resolved before this clears the Entry Checklist's "specific catalyst" test cleanly — flag for /trade to re-verify before any order.
+
+Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
+
+Research-only — no order placed. Execution (if any) happens in market-open or /trade with the full safety-check gate.
