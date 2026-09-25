@@ -14192,3 +14192,23 @@ last trading day of that week — resets Monday Sep 28). Patience > activity
 STEP 5 ClickUp notification failed — HTTP 500, same unresolved
 `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` placeholder issue logged
 2026-09-21 through 2026-09-24.
+
+### Gappers (auto-scan 08:11 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0,
+69 tickers parsed from WATCHLIST.md). **0 tickers cleared |gap| >= 5%.**
+Spot-checked AAPL/TSLA/SPY snapshots directly: SPY already has a fresh
+08:00 ET trade print, but AAPL/TSLA's `latestTrade` still carries
+yesterday's 16:00 ET close with nothing fresher — the free IEX feed's
+premarket trade coverage is thin this early, so most of the watchlist has
+no today-dated, spread-trustworthy price yet and gets correctly skipped by
+the script's freshness/spread guard (not a bug — verified against raw
+snapshot JSON). Re-check on the 09:00/10:00/11:00 ET cloud runs as more
+premarket prints post.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| (none — 0 hits) | | | | | |
+
+0 hits -> no Telegram/ClickUp notification per rule (only send if hits > 0
+or the scan errored; this run did not error).
