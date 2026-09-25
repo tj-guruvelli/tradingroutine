@@ -14064,6 +14064,22 @@ at $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27
 remains unresolved, 80th+ straight session, operator review still
 pending.
 
+## 2026-09-25 — Midday Scan (cloud)
+
+### Midday scan (cloud) — NO-OP (verified, not assumed)
+`bash scripts/alpaca.sh positions` and `orders` both returned `[]`.
+`alpaca.sh account`: equity $100,000.00, cash $100,000.00 (100%), buying
+power $400,000, `balance_asof: 2026-09-24`. Nothing to cut at -7%, no
+trailing stops to cancel or tighten, no thesis to invalidate — Steps 3-5
+had an empty input set (matches this morning's market-open HOLD — no
+positions were opened). No sharp unexplained move to research (Step 6
+n/a — no positions). No action taken -> no ClickUp notification (Step 7
+skip per "only if action was taken"). 56 trading days since launch (Jul 9)
+with zero entries. Weekly trade count: 0/3 (week of Sep 21, resets Monday
+Sep 28). Equity flat at $100,000 — confirmed-live-vs-$10k-baseline
+mismatch flagged Jul 27 remains unresolved, 81st+ straight session,
+operator review still pending.
+
 ### Setup Scan (16:33 ET, cloud)
 `node scripts/setup-scan-cloud.mjs` — 60 candidates checked. `grade_a_possible: false`
 (ny_time 16:33, outside 10:00-15:30 ET window) — Setup A not evaluated this run,
