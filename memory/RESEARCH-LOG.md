@@ -14311,3 +14311,17 @@ BCI     B      Momentum confluence   daily swing   ADX14 37.2, EMA9 26.42 > EMA2
 SATL    B      Momentum confluence   daily swing   ADX14 24.1, EMA9 5.44 > EMA21 5.24, RSI 60.6
 
 0 grade-A hits -> no Telegram notification per rule.
+
+### Setup Scan (18:33 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60 candidates checked. `grade_a_possible: false`
+(ny_time 18:33, outside 10:00-15:30 ET window) — Setup A not evaluated this run,
+grade B/C only. 5 hits, 0 errors.
+
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+META    B      Momentum confluence   daily swing   ADX14 37.3, EMA9 713.09 > EMA21 667.28, RSI 80.4
+HAFN    B      Momentum confluence   daily swing   ADX14 31.0, EMA9 9.31 > EMA21 9.06, RSI 50.0
+CMBT    B      Momentum confluence   daily swing   ADX14 37.8, EMA9 19.42 > EMA21 19.04, RSI 54.1
+BCI     B      Momentum confluence   daily swing   ADX14 37.2, EMA9 26.42 > EMA21 26.11, RSI 64.8
+SATL    B      Momentum confluence   daily swing   ADX14 24.1, EMA9 5.44 > EMA21 5.24, RSI 60.6
+
+0 grade-A hits -> no Telegram notification per rule.
