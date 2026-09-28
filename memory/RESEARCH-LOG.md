@@ -14497,3 +14497,33 @@ AMPX (auto-scan 08:20/09:03 ET) has dropped below the 5% gap threshold this run 
 - Impact: Elevated short interest (20.5%) and weak RSI suggest continued distribution rather than a one-day spike. Sector read-through is notable: peer Bloom Energy (also on today's list) is down too, suggesting a shared AI-power-theme de-rating today rather than a BW-specific event.
 - Horizon: SHORT_TERM — no structural catalyst found for today's specific move; existing order wins are real but haven't translated into sustained price support, so this reads as continuation of an existing weak-trend/distribution pattern.
 - Opportunity cost: 0 open positions, 0/3 weekly trades used. BW's persistent downtrend (RSI 34, high short interest, negative FCF) argues against chasing this dip long; with BE also red today, both power-infra names on this list fit TRADING-STRATEGY.md's "exit a sector after 2 failed trades" caution. Weakest opportunity-cost case of the four; would not be prioritized for one of the 3 weekly slots.
+
+### Gappers (auto-scan 11:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $262.99 | -8.88% | 155,085 | No fresh catalyst; AI-power-name selloff deepening from -6.81% at 10:14 ET |
+| 2 | BW | $5.87 | -6.45% | 105,685 | No new catalyst; continuation of weak-RSI/high-short-interest distribution pattern |
+| 3 | QCOM | $189.485 | -6.21% | 219,815 | Continuation of Broadcom-driven semis selloff; eased slightly off session lows |
+
+DPRO (+7.95%, $5.77) dropped out this run — premarket_volume 48,862 fell below the 50,000 filter threshold. Only 3 of ~60 watchlist tickers cleared the 5% gap / $3 price / 50k volume filters this run (`GAP_THRESHOLD=5.0`). Deep-dive cap: 5 (only 3 hit, so full deep-dive below covers all).
+
+#### Deep dive: BE $262.99 -8.88%
+- Catalyst: Continuing today's AI-power-name selloff established at 10:14 ET (profit-taking/de-risking in a high-beta AI-data-center-power momentum name; Q1 revenue +130.4% YoY to $751.1M, Q2 +165.5% YoY, recent 52-wk highs in the $280-290s). Move has deepened from -6.81% ($268.98, 10:14 ET) to -8.88% ($262.99) this run. Fresh Apify search this pass (catalyst + fundamentals queries) found no new dated event — only archive pieces on a prior -9.97% Aug 18 selloff (rate/macro-driven) and a recent "stock rebounds" Benzinga piece, confirming a pattern of repeated outsized swings rather than a new catalyst.
+- Why: Profit-taking/de-risking in an extended, richly-valued AI-power name; deepening intraday loss suggests the risk-off tone in AI-power/semis-adjacent names (QCOM also red) is persisting through the session rather than reversing.
+- Impact: Volume snapshot 155,085 vs. 74,324 logged at 10:14 ET — meaningfully higher, consistent with continued distribution, not stabilization. Sector read-through: BE and QCOM both red again this run, a third consecutive hourly scan showing weakness in the theme.
+- Horizon: SHORT_TERM, unchanged from 10:14 ET call — no structural catalyst; deepening drawdown argues against treating this as a dip-buy.
+- Opportunity cost: 0/6 positions open, 0/3 weekly trades used. Per TRADING-STRATEGY.md's "exit a sector after 2 failed trades" guidance, AI-power names (BE, BW) have now shown weakness across multiple scans today — argues against initiating new exposure to the theme this week, not just against this one ticker.
+
+#### Deep dive: BW $5.87 -6.45%
+- Catalyst: Fresh Apify searches this run for "Babcock & Wilcox Enterprises" NYSE:BW repeatedly resolved to the unrelated UK-listed Babcock International Group (ticker BCKIY) instead — a name-collision risk flagged before. Falling back to this morning's confirmed 10:14 ET research: a Siemens Energy agreement for 20 steam-turbine generator sets (~1GW) tied to AI-data-center power demand, a $130M utility air-quality/emissions contract, a separate $130M coal-plant project notice, weak technical trend (RSI 34), and elevated short interest (~20.5%, 5.4 days to cover). No new dated catalyst confirmed for today's further slide.
+- Why: Same distribution pattern flagged at 10:14 ET — genuine contract wins not translating into sustained price support, consistent with market skepticism on execution/balance sheet (total debt $277M, negative TTM free cash flow).
+- Impact: Move has deepened from -5.90% ($5.905, 10:14 ET) to -6.45% ($5.87) on higher volume (105,685 vs. 48,356) — continued distribution, not stabilizing. BE also red again this run, reinforcing the shared power-infra sector correlation flagged earlier today.
+- Horizon: SHORT_TERM, unchanged — no structural catalyst for the specific move; high short interest and weak RSI argue against chasing the dip.
+- Opportunity cost: 0/6 positions, 0/3 weekly trades used. Per TRADING-STRATEGY.md's 2-failed-trades-exit-sector rule, BW+BE both red across multiple scans today reinforces standing down on the AI-power-infra theme this week rather than treating either as a dip-buy.
+
+#### Deep dive: QCOM $189.485 -6.21%
+- Catalyst: 10:14 ET run attributed the drop to a broad semiconductor selloff triggered by Broadcom's disappointing AI-chip revenue forecast (sector-wide, not QCOM-specific). This run's fresh search adds context: QCOM rallied earlier in September after signing AWS/Amazon as a data-center chip customer and raising its FY2026 outlook, but even that news day saw a ~5% intraday reversal despite the good news (~Sep 8 coverage) — a name prone to sharp round-trips around its own headlines, not just sector sympathy.
+- Why: Sector-wide AI-chip growth-expectations reset (Broadcom) compounding on a stock that already shows a pattern of round-tripping good news; no new QCOM-specific negative headline found this run.
+- Impact: Move has eased slightly from -6.69% ($188.52, 10:14 ET) to -6.21% ($189.485), off the worst levels of the session, on volume of 219,815. This morning's 09:42 ET market-open screen already logged QCOM at RSI14 67.79, 1-of-4 confluence, grade B — extended, not oversold, consistent with giving back a stretched rally rather than breaking down on new bad news.
+- Horizon: SHORT_TERM, unchanged from 10:14 ET — sector-sentiment-driven moves off a single peer's guidance often partially reverse without corroboration from other chipmakers; today's slight bounce off session lows is consistent with that.
+- Opportunity cost: 0/6 positions, 0/3 weekly trades used. QCOM already failed today's 09:42 ET confluence screen (1-of-4) — this run's gap doesn't change that verdict; would need to reach oversold and clear ≥2 of 4 confluence factors, which it hasn't. Not competitive against BE/BW for a scarce weekly slot given no ticker has cleared entry criteria today.

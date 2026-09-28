@@ -1,73 +1,48 @@
 {
-  "scanned_at": "2026-09-28T14:14:41Z",
+  "scanned_at": "2026-09-28T15:04:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
       "symbol": "BE",
-      "price": 268.98,
-      "gap_pct": -6.81,
-      "premarket_volume": null,
-      "catalyst": "Pullback after 2026 AI-power-demand rally; strong Q1/Q2 revenue growth (+130%/+165% YoY) drove shares to 52-wk highs near $290s; no fresh negative headline found for today's drop.",
-      "headlines": [
-        "Bloom Energy Reports Record First Quarter 2026 Results (Apr 28)",
-        "Bloom Energy (NYSE:BE) Stock Analysis — Q2 2026 revenue +165.5% YoY, guidance raised"
-      ],
-      "catalyst_detail": "Bloom Energy has ridden an AI/data-center power-demand theme through 2026 — Q1 revenue rose 130.4% YoY to $751.1M (reported Apr 28) and Q2 revenue grew 165.5% YoY with raised full-year guidance, pushing shares to 52-week highs in the $280-290s in recent weeks. No confirmed news item dated today (earnings, guidance cut, downgrade, insider selling) was found explaining the drop.",
-      "why": "Absent a specific negative headline, this reads as profit-taking/de-risking in a richly-valued, high-beta AI-power name after an extended run, likely compounded by broader chip-sector risk-off tone today (QCOM also gapping down sharply the same session).",
-      "impact": "Cannot confirm today's volume is abnormally elevated from this data source (Alpaca snapshot volume reflects prior full session, not a live intraday print). Without a dated catalyst this reads more like a give-back of recent gains than a new down-thesis — logged as a research gap, needs a fresh look at the open.",
-      "horizon": "SHORT_TERM, no structural catalyst identified for today's drop — treat as noise/profit-taking until a dated news item surfaces.",
-      "opportunity_cost": "0 open positions, 0/3 weekly trades used — an entry here would use 1 of 3 weekly slots and up to 20% of equity. No confirmed catalyst for the drop (no edge either long-the-dip or short) despite the strong underlying growth story; watch-only until direction/catalyst clarifies."
+      "price": 262.99,
+      "gap_pct": -8.88,
+      "premarket_volume": 155085,
+      "catalyst": "No fresh catalyst found; continuation of today's AI-power-name selloff, deepening from -6.81% at 10:14 ET",
+      "headlines": [],
+      "catalyst_detail": "Continuing today's AI-power-name selloff established at 10:14 ET (profit-taking/de-risking in a high-beta AI-data-center-power momentum name; Q1 revenue +130.4% YoY to $751.1M, Q2 +165.5% YoY, recent 52-wk highs in the $280-290s). Move has deepened from -6.81% ($268.98, 10:14 ET) to -8.88% ($262.99) this run. Fresh Apify search this pass (catalyst + fundamentals queries) found no new dated event — only archive pieces on a prior -9.97% Aug 18 selloff (rate/macro-driven) and a recent 'stock rebounds' Benzinga piece, confirming a pattern of repeated outsized swings rather than a new catalyst.",
+      "why": "Profit-taking/de-risking in an extended, richly-valued AI-power name; deepening intraday loss suggests the risk-off tone in AI-power/semis-adjacent names (QCOM also red) is persisting through the session rather than reversing.",
+      "impact": "Volume snapshot 155,085 vs. 74,324 logged at 10:14 ET — meaningfully higher, consistent with continued distribution, not stabilization. Sector read-through: BE and QCOM both red again this run, a third consecutive hourly scan showing weakness in the theme.",
+      "horizon": "SHORT_TERM, unchanged from 10:14 ET call — no structural catalyst; deepening drawdown argues against treating this as a dip-buy.",
+      "opportunity_cost": "0/6 positions open, 0/3 weekly trades used. Per TRADING-STRATEGY.md's 'exit a sector after 2 failed trades' guidance, AI-power names (BE, BW) have now shown weakness across multiple scans today — argues against initiating new exposure to the theme this week, not just against this one ticker."
     },
     {
       "rank": 2,
-      "symbol": "QCOM",
-      "price": 188.515,
-      "gap_pct": -6.69,
-      "premarket_volume": null,
-      "catalyst": "Falls with a broad semiconductor selloff after Broadcom's disappointing AI-chip revenue forecast dragged chip stocks down sector-wide.",
-      "headlines": [
-        "QUALCOMM Incorporated Stock Price — fell nearly 3% as sector-wide selloff sparked by Broadcom's AI chip forecast"
-      ],
-      "catalyst_detail": "Qualcomm shares fell in a broad semiconductor selloff triggered by Broadcom's disappointing AI-chip revenue forecast, dragging down chip stocks across the sector. QCOM was already trading well below its 52-week high of $251.02 before today's drop.",
-      "why": "A single large-cap peer's (Broadcom) weak AI-chip revenue guidance reset sector-wide growth expectations, triggering a sympathy selloff across semiconductor names including QCOM without company-specific bad news.",
-      "impact": "Sector-wide, not company-specific — a peer-driven de-rating can be more durable than a single-stock headline spike if AI-capex growth is genuinely cooling, but can also partially reverse on reassuring commentary from other chipmakers this week. QCOM already failed today's 10:00 ET setup-scan/confluence check (RSI14 67.79, 1-of-4 confluence, grade B) logged separately in today's market-open research — consistent with a name that was extended, not oversold, before this drop.",
-      "horizon": "SHORT_TERM leaning — sector sentiment moves on a single peer's guidance often partially reverse within days absent corroboration from other chipmakers; no QCOM-specific structural change found.",
-      "opportunity_cost": "0 open positions, 0/3 weekly trades used. QCOM already screened today (setup-scan grade B, 1-of-4 confluence, fails the long-bias entry per the market-open log) — today's gap-down doesn't change that verdict; would need RSI to reach oversold and clear ≥2 of 4 confluence factors, which it doesn't yet. Not competitive against the other three gappers for a scarce weekly-trade slot until oversold confirmation."
+      "symbol": "BW",
+      "price": 5.87,
+      "gap_pct": -6.45,
+      "premarket_volume": 105685,
+      "catalyst": "No new dated catalyst; continuation of the weak-RSI/high-short-interest distribution pattern logged at 10:14 ET",
+      "headlines": [],
+      "catalyst_detail": "Fresh Apify searches this run for 'Babcock & Wilcox Enterprises' NYSE:BW repeatedly resolved to the unrelated UK-listed Babcock International Group (ticker BCKIY) instead - a name-collision risk flagged before. Falling back to this morning's confirmed 10:14 ET research: a Siemens Energy agreement for 20 steam-turbine generator sets (~1GW) tied to AI-data-center power demand, a $130M utility air-quality/emissions contract, a separate $130M coal-plant project notice, weak technical trend (RSI 34), and elevated short interest (~20.5%, 5.4 days to cover). No new dated catalyst confirmed for today's further slide.",
+      "why": "Same distribution pattern flagged at 10:14 ET - genuine contract wins not translating into sustained price support, consistent with market skepticism on execution/balance sheet (total debt $277M, negative TTM free cash flow).",
+      "impact": "Move has deepened from -5.90% ($5.905, 10:14 ET) to -6.45% ($5.87) on higher volume (105,685 vs. 48,356) - continued distribution, not stabilizing. BE also red again this run, reinforcing the shared power-infra sector correlation flagged earlier today.",
+      "horizon": "SHORT_TERM, unchanged - no structural catalyst for the specific move; high short interest and weak RSI argue against chasing the dip.",
+      "opportunity_cost": "0/6 positions, 0/3 weekly trades used. Per TRADING-STRATEGY.md's 2-failed-trades-exit-sector rule, BW+BE both red across multiple scans today reinforces standing down on the AI-power-infra theme this week rather than treating either as a dip-buy."
     },
     {
       "rank": 3,
-      "symbol": "DPRO",
-      "price": 5.685,
-      "gap_pct": 6.36,
-      "premarket_volume": null,
-      "catalyst": "Drone-sector strength: Draganfly secured $10M in strategic capital to scale domestic drone manufacturing, and the group broadly caught a lift from new US tariffs on foreign-made drones.",
-      "headlines": [
-        "EXCLUSIVE: Draganfly Secures $10 Million Strategic Capital to Scale Drone Manufacturing",
-        "QUICK SPARK: Drone Stocks Rally on Trump's Latest Tariff Move"
-      ],
-      "catalyst_detail": "Draganfly announced Sep 28 it secured $10M in strategic capital from Unusual Machines and a US fund to expand domestic drone production/defense capabilities. The broader drone group (Ondas, Draganfly, Red Cat) is also catching a lift from new US tariffs on foreign-made drones favoring domestic manufacturers. Draganfly also has a proposed public stock offering on file (dilutive).",
-      "why": "A fresh capital raise/strategic investment plus a policy tailwind (tariffs favoring domestic drone makers) is pulling in momentum buyers on a small-cap, high-short-interest (~10.8%) name; short covering may be amplifying the move.",
-      "impact": "Today's volume (571K) vs. 1.16M average is not yet an outsized volume day despite the ~6% move; short interest/days-to-cover (10.83%/1.89) suggest part of the pop could be a short squeeze rather than pure fundamental re-rating. The pending public offering is a dilutive overhang once pricing details emerge. Peer read-through: Ondas/Red Cat/Unusual Machines also moving on the same tariff news.",
-      "horizon": "SHORT_TERM — policy-headline and capital-raise driven, small-cap with a pending dilutive offering; no durable earnings/guidance catalyst confirmed, real risk of round-trip once headline flow cools.",
-      "opportunity_cost": "0 open positions, 0/3 weekly trades used. At $5.685 a 10% trailing stop (~$5.12) needs roughly a 2:1 R:R target near $6.83+ (~20% upside) to clear the rule — plausible given momentum, but the pending share offering is a real overhang the checklist doesn't otherwise capture. Smallest market cap and highest binary-news risk of the four gappers today."
-    },
-    {
-      "rank": 4,
-      "symbol": "BW",
-      "price": 5.905,
-      "gap_pct": -5.9,
-      "premarket_volume": null,
-      "catalyst": "Despite recent $130M utility contract wins and an AI-data-center power buildout narrative (Siemens 20-turbine deal), stock trend remains weak (RSI 34); no single fresh negative headline found for today.",
-      "headlines": [
-        "Babcock & Wilcox Wins $130 Million Air-Quality Deal, But Stock Trend Remains Weak",
-        "Babcock & Wilcox Lands 20-Turbine Deal Amid AI Power Demand"
-      ],
-      "catalyst_detail": "Babcock & Wilcox has had mixed recent headlines: a Siemens Energy agreement for 20 steam-turbine generator sets (1 GW) tied to AI-data-center power demand, a $130M utility air-quality/emissions contract, and a separate $130M coal-plant project notice — but the stock's technical trend has stayed weak (RSI 34) with elevated short interest (~20.5%, 5.4 days to cover). No single fresh negative headline dated today was found.",
-      "why": "Despite genuine order-book wins tied to the AI-power buildout theme, the stock keeps failing to hold gains — consistent with market skepticism about execution/balance-sheet strength (total debt $277M, negative TTM free cash flow) outweighing the contract-win headlines; today's drop likely continues that pattern rather than reflecting a single new catalyst.",
-      "impact": "Elevated short interest (20.5%) and weak RSI suggest continued distribution rather than a one-day spike. Sector read-through is notable: peer Bloom Energy (also on today's list) is down too, suggesting a shared AI-power-theme de-rating today rather than a BW-specific event.",
-      "horizon": "SHORT_TERM — no structural catalyst found for today's specific move; existing order wins are real but haven't translated into sustained price support, so this reads as continuation of an existing weak-trend/distribution pattern.",
-      "opportunity_cost": "0 open positions, 0/3 weekly trades used. BW's persistent downtrend (RSI 34, high short interest, negative FCF) argues against chasing this dip long; with BE also red today, both power-infra names on this list fit TRADING-STRATEGY.md's 'exit a sector after 2 failed trades' caution. Weakest opportunity-cost case of the four; would not be prioritized for one of the 3 weekly slots."
+      "symbol": "QCOM",
+      "price": 189.485,
+      "gap_pct": -6.21,
+      "premarket_volume": 219815,
+      "catalyst": "Continuation of the sector-wide semis selloff (Broadcom AI-chip guidance) logged at 10:14 ET; move has actually eased slightly off session lows",
+      "headlines": [],
+      "catalyst_detail": "10:14 ET run attributed the drop to a broad semiconductor selloff triggered by Broadcom's disappointing AI-chip revenue forecast (sector-wide, not QCOM-specific). This run's fresh search adds context: QCOM rallied earlier in September after signing AWS/Amazon as a data-center chip customer and raising its FY2026 outlook, but even that news day saw a ~5% intraday reversal despite the good news (~Sep 8 coverage) - a name prone to sharp round-trips around its own headlines, not just sector sympathy.",
+      "why": "Sector-wide AI-chip growth-expectations reset (Broadcom) compounding on a stock that already shows a pattern of round-tripping good news; no new QCOM-specific negative headline found this run.",
+      "impact": "Move has eased slightly from -6.69% ($188.52, 10:14 ET) to -6.21% ($189.485), off the worst levels of the session, on volume of 219,815. This morning's 09:42 ET market-open screen already logged QCOM at RSI14 67.79, 1-of-4 confluence, grade B - extended, not oversold, consistent with giving back a stretched rally rather than breaking down on new bad news.",
+      "horizon": "SHORT_TERM, unchanged from 10:14 ET - sector-sentiment-driven moves off a single peer's guidance often partially reverse without corroboration from other chipmakers; today's slight bounce off session lows is consistent with that.",
+      "opportunity_cost": "0/6 positions, 0/3 weekly trades used. QCOM already failed today's 09:42 ET confluence screen (1-of-4) - this run's gap doesn't change that verdict; would need to reach oversold and clear >=2 of 4 confluence factors, which it hasn't. Not competitive against BE/BW for a scarce weekly slot given no ticker has cleared entry criteria today."
     }
   ]
 }
