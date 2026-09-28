@@ -1,0 +1,103 @@
+{
+  "scanned_at": "2026-09-28T20:33:32.114Z",
+  "ny_time": "16:33",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "MSFT",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 505.32,
+      "prev_daily_high": 519.39,
+      "prev_daily_close": 516.16,
+      "sma200": 432.04,
+      "sma200_window_days": 200,
+      "pmh": 513.42,
+      "today_hod": 513.29,
+      "rsi14": 62.99,
+      "adx14": 31.58,
+      "ema9": 501.55,
+      "ema21": 496.72,
+      "premarket_volume": 2023,
+      "daily_volume": 1481325,
+      "avg_daily_volume_30": 620007,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "HAFN",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 9.22,
+      "prev_daily_high": 8.94,
+      "prev_daily_close": 8.92,
+      "sma200": 7.43,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 9.28,
+      "rsi14": 50.15,
+      "adx14": 29.34,
+      "ema9": 9.23,
+      "ema21": 9.05,
+      "premarket_volume": 0,
+      "daily_volume": 347795,
+      "avg_daily_volume_30": 152452,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BCI",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 26,
+      "prev_daily_high": 26.39,
+      "prev_daily_close": 26.32,
+      "sma200": 23.54,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 26.15,
+      "rsi14": 58.35,
+      "adx14": 36.28,
+      "ema9": 26.4,
+      "ema21": 26.13,
+      "premarket_volume": 0,
+      "daily_volume": 114717,
+      "avg_daily_volume_30": 74553,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "QCOM",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 187.87,
+      "prev_daily_high": 205.81,
+      "prev_daily_close": 202.03,
+      "sma200": 169.13,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 199.03,
+      "rsi14": 67.79,
+      "adx14": 20.93,
+      "ema9": 192.04,
+      "ema21": 183.45,
+      "premarket_volume": 0,
+      "daily_volume": 670021,
+      "avg_daily_volume_30": 368010,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}

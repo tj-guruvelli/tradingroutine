@@ -14527,3 +14527,16 @@ DPRO (+7.95%, $5.77) dropped out this run — premarket_volume 48,862 fell below
 - Impact: Move has eased slightly from -6.69% ($188.52, 10:14 ET) to -6.21% ($189.485), off the worst levels of the session, on volume of 219,815. This morning's 09:42 ET market-open screen already logged QCOM at RSI14 67.79, 1-of-4 confluence, grade B — extended, not oversold, consistent with giving back a stretched rally rather than breaking down on new bad news.
 - Horizon: SHORT_TERM, unchanged from 10:14 ET — sector-sentiment-driven moves off a single peer's guidance often partially reverse without corroboration from other chipmakers; today's slight bounce off session lows is consistent with that.
 - Opportunity cost: 0/6 positions, 0/3 weekly trades used. QCOM already failed today's 09:42 ET confluence screen (1-of-4) — this run's gap doesn't change that verdict; would need to reach oversold and clear ≥2 of 4 confluence factors, which it hasn't. Not competitive against BE/BW for a scarce weekly slot given no ticker has cleared entry criteria today.
+
+### Setup Scan (16:33 ET, cloud)
+Grade A: none — `grade_a_possible=false` (16:33 ET fire lands after the 15:30 ET intraday-breakout cutoff; Setup A not evaluated for any of 60 symbols, `setup_a_skipped_reason: "outside 10:00-15:30 ET"`).
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+MSFT    B      Momentum confluence   daily swing   ADX14 31.6, EMA9 501.55 > EMA21 496.72, RSI 63.0
+QCOM    B      Momentum confluence   daily swing   ADX14 20.9, EMA9 192.04 > EMA21 183.45, RSI 67.8
+BCI     B      Momentum confluence   daily swing   ADX14 36.3, EMA9 26.40 > EMA21 26.13, RSI 58.4
+HAFN    B      Momentum confluence   daily swing   ADX14 29.3, EMA9 9.23 > EMA21 9.05, RSI 50.2
+```
+
+0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
