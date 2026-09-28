@@ -14431,3 +14431,17 @@ pending.
 STEP 5 ClickUp notification failed — HTTP 500, same unresolved
 `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` placeholder issue logged
 2026-09-21 through 2026-09-25.
+
+### Gappers (auto-scan 08:20 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AMPX | $10.855 | +12.02% | 315,301 | Amprius secures $75M DoW grant to scale US drone battery production |
+
+Only 1 of ~60 watchlist tickers cleared the 5% gap / $3 price threshold this run (`GAP_THRESHOLD=5.0`). Deep-dive cap: 5 (only 1 hit, so full deep-dive below covers all).
+
+#### Deep dive: AMPX $10.855 +12.02%
+- Catalyst: Amprius announced Sep 28, 5:00 AM ET that it secured a $75M grant from the Department of War to scale domestic production of its high-energy-density lithium-ion battery cells for drones/unmanned aviation, converting an existing EV battery line to ~12M cells/year of drone-cell capacity. Lands two days ahead of the DroneX Trade Show (Sep 29-30) where Amprius is presenting, and follows its Sep 2 SiCore 500 cell launch for unmanned aviation.
+- Why: Federal defense funding validates and de-risks the drone-battery growth thesis for a small-cap ($1.4B mkt cap, 97 employees) — momentum buyers pile into a government-backed catalyst, reinforced by unanimous sell-side coverage (9/9 analysts Buy-rated, avg PT $23.71, +143% upside from the $9.75 prior close).
+- Impact: Reads as more than a one-day spike — premarket volume already ~315K by 08:20 ET vs a 4.65M average daily volume, and the move stacks on a string of recent bullish catalysts (SiCore 500 launch, upcoming DroneX show). Still, AMPX is well off its 52-wk high ($24.22) and had been range-bound near 52-wk lows ($7.71) beforehand, so part of the pop could fade intraday without a fresh follow-through catalyst. No clear sector-wide read-through — peers ENVX/RKLB/ASTS roughly flat premarket.
+- Horizon: LONG_TERM — federal grant + reshoring/defense-tech narrative is structural, not a one-day headline, and stacks with existing unanimous analyst Buy coverage; worth a multi-day/week swing if it also clears the Confluence rule on a later /trade check.
+- Opportunity cost: Zero open positions and 0/3 weekly trades used (week resets today) — this displaces nothing on the book; sizing is bound only by the 20%-of-equity/1.0%-ATR-risk rules via scripts/size.mjs. At $10.855 a stop below the ~$9.65 premarket low (~11% away) needs a ~$13+ target to clear 2:1 R:R — a stop nearer 2-3% away would clear 2:1 more easily but violates the "never within 3% of current price" stop rule, so this needs a real /trade check before sizing, not a same-session premarket entry.
