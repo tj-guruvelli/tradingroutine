@@ -1,23 +1,15 @@
 {
-  "scanned_at": "2026-09-28T12:20:00Z",
+  "scanned_at": "2026-09-28T13:03:00Z",
   "deep_dive_cap": 5,
   "gappers": [
-    {
-      "rank": 1,
-      "symbol": "AMPX",
-      "price": 10.855,
-      "gap_pct": 12.02,
-      "premarket_volume": 315301,
-      "catalyst": "Amprius Technologies (AMPX) secured a $75M Dept. of War grant to scale U.S. drone battery production.",
-      "headlines": [
-        "Amprius Lands $75 Million Defense Grant to Supercharge US Drone Battery Production (Benzinga)",
-        "Amprius Technologies Stock Gains on $75 Million Defense Dept Grant to Produce Batteries for Drones (MarketScreener)"
-      ],
-      "catalyst_detail": "Amprius announced Sep 28, 5:00 AM ET that it secured a $75M grant from the Department of War to scale domestic production of its high-energy-density lithium-ion battery cells for drones/unmanned aviation, converting an existing EV battery line to roughly 12M cells/year of drone-cell capacity. Lands two days ahead of the DroneX Trade Show (Sep 29-30) where Amprius is presenting, and follows its Sep 2 SiCore 500 cell launch for unmanned aviation.",
-      "why": "Federal defense funding validates and de-risks the drone-battery growth thesis for a small-cap ($1.4B mkt cap, 97 employees) -- momentum buyers pile into a government-backed catalyst, reinforced by unanimous sell-side coverage (9/9 analysts Buy-rated, avg PT $23.71, +143% upside from the $9.75 prior close).",
-      "impact": "Reads as more than a one-day spike: premarket volume already ~315K by 08:20 ET vs a 4.65M average daily volume, and the move stacks on a string of recent bullish catalysts (SiCore 500 launch, upcoming DroneX show). Still, AMPX is well off its 52-wk high ($24.22) and had been range-bound near 52-wk lows ($7.71) beforehand, so part of the pop could fade intraday without a fresh follow-through catalyst. No clear sector-wide read-through -- peers ENVX/RKLB/ASTS roughly flat premarket.",
-      "horizon": "LONG_TERM",
-      "opportunity_cost": "Zero open positions and 0/3 weekly trades used (week resets today) -- this displaces nothing on the book; sizing is bound only by the 20%-of-equity/1.0%-ATR-risk rules via scripts/size.mjs. At $10.855 a stop below the ~$9.65 premarket low (~11% away) needs a ~$13+ target to clear 2:1 R:R -- a stop nearer 2-3% away would clear 2:1 more easily but violates the 'never within 3% of current price' stop rule, so this needs a real /trade check before sizing, not a same-session premarket entry."
-    }
+    {"rank": 1, "symbol": "AMPX", "price": 10.655, "gap_pct": 9.96,
+     "premarket_volume": 315301,
+     "catalyst": "Amprius Technologies secured up to $75M DoW grant to retrofit a US EV battery line for military drone-cell production.",
+     "headlines": [],
+     "catalyst_detail": "Amprius (NYSE: AMPX) announced 5:00am EDT today it was awarded a grant of up to $75M from the U.S. Department of War's Industrial Base Analysis and Sustainment (IBAS) program to retrofit an existing domestic EV battery line (run with a South Korean manufacturing partner) into high-energy-density cells for Group 1-3 unmanned aerial systems (drones). Line conversion targets 12M NDAA-compliant cells/year by early 2028; total project cost ~$100M including in-kind partner investment.",
+     "why": "A federal defense grant validates Amprius' domestic manufacturing thesis and de-risks a major capacity buildout at near-zero incremental capital cost to the company, pulling in momentum/thematic buyers (US defense-manufacturing reshoring, drone/UAS demand) on a small-float name.",
+     "impact": "Move looks driven by a real, dated catalyst rather than a pure headline spike, but a large chunk of the $75M is unfunded pending future appropriations and milestone acceptance per the company's own risk language, so durability depends on follow-through funding, not just the announcement. Premarket volume (~315K) is not exceptionally elevated for a small-cap catalyst print - watch for volume confirmation at the open before trusting the gap holds. No confirmed peer/sector read-through move seen in this scan.",
+     "horizon": "LONG_TERM - catalyst is structural (multi-year DoW manufacturing contract, NDAA-compliance driver) rather than a one-day headline, and aligns with a defense-reshoring/industrials theme; worth a multi-day/week swing hold if it later clears the Confluence rule.",
+     "opportunity_cost": "Zero open positions and 0/3 weekly trades used, so this displaces nothing today. At $10.655 with a 7-10% stop (~$9.61-$9.90), a 2:1 R:R target needs ~14-20% upside (~$12.15-$12.80) - plausible given the 9.96% gap already but unconfirmed without a session of price action; still needs to clear the Confluence rule (>=2 of VWAP/RSI/200-SMA/insider) before being trade-eligible."}
   ]
 }
