@@ -14645,3 +14645,16 @@ DPRO    B      Momentum confluence   daily swing   ADX14 20.8, EMA9 5.53 > EMA21
 
 0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
 
+### Setup Scan (18:33 ET, cloud)
+Grade A: none — `grade_a_possible=false` (18:33 ET fire lands after the 15:30 ET intraday-breakout cutoff; Setup A not evaluated for any of 60 symbols, `setup_a_skipped_reason: "outside 10:00-15:30 ET"`).
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+META    B      Momentum confluence   daily swing   ADX14 39.6, EMA9 719.69 > EMA21 678.61, RSI 60.9
+HAFN    B      Momentum confluence   daily swing   ADX14 27.6, EMA9 9.21 > EMA21 9.05, RSI 54.1
+ZIM     B      Momentum confluence   daily swing   ADX14 26.1, EMA9 29.45 > EMA21 29.10, RSI 46.8
+DPRO    B      Momentum confluence   daily swing   ADX14 20.8, EMA9 5.53 > EMA21 5.42, RSI 55.0
+```
+
+Same 4 grade-B hits as the 16:33 ET run — no change in underlying setups intra-session. 0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
+
