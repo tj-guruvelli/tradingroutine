@@ -1236,3 +1236,66 @@ $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-25`, equity/cash unchanged at $100,000). Market-open decision was HOLD — XOM/CVX/AMPX/MSFT/HAFN/BCI/QCOM (7 candidates) all capped at 1 of 4 confluence indicators or worse (AMPX also failed the 200-SMA long-bias filter outright). Weekly trade count: 0/3 (week of Sep 28, fresh reset). 57th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 85th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing ≥2 of 4 confluence indicators; keep watching XOM/CVX energy momentum. STEP 5 ClickUp notification failed again — HTTP 500 (`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` still literal placeholder strings), same unresolved issue as Sep 21-25.
+
+### Sep 29, Market-Open (Day 58, Tuesday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-09-28`).
+
+STEP 1 candidates: today's RESEARCH-LOG (2026-09-29 Pre-market Research,
+decision HOLD) — XOM/CVX (oil spike on Iran/Hormuz tension + renewed
+US-Iran strikes; futures red) and MSFT (grade B, RSI 63, above 200-SMA, no
+dated catalyst — watchlist only per that entry).
+
+STEP 2: no same-day setup-scan file existed at run time (market-open ran
+before setup-scan-cloud's first same-day fire); used the prior trading
+day's most recent file per spec → `data/setup-scan_cloud_2026-09-28_1833ET.json`,
+60 candidates checked, grade A unreachable (18:33 ET, outside 10:00-15:30
+ET window), 4 grade-B hits: MSFT, HAFN, BCI, QCOM (identical set/values to
+the 16:33 ET run same day).
+
+Merged candidate list: XOM, CVX, AMPX, MSFT, HAFN, BCI, QCOM (7 total) —
+AMPX carried over from STEP 1 pre-market research as a standing candidate.
+All re-validated live (`alpaca.sh quote`, ~09:42 ET) with RSI14/SMA200
+recomputed fresh from Alpaca daily bars (Sep 2025-Sep 2026 window,
+`scripts/alpaca.sh bars ... 1Day`) rather than reused from yesterday's
+log, since Monday Sep 28's close rolled a new bar into the 14-day/200-day
+windows — `tradingview-data` MCP still not loaded this session (confirmed
+via tool search), same fallback used every session since Sep 22.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align):
+- **XOM** $168.35 (ask) — catalyst documented (Iran/Hormuz oil-spike
+  tension, futures red). RSI14 53.23 — neutral, no align. Last close
+  $162.56 > 200-SMA $148.21 — 1 align. No VWAP/insider data. 1 of 4 —
+  fails, skip.
+- **CVX** $206.58 (ask) — same catalyst. RSI14 44.89 — neutral, no align.
+  Last close $206.38 > 200-SMA $185.53 — 1 align. 1 of 4 — fails, skip.
+- **AMPX** $9.46 (ask) — catalyst documented ($75M DoW grant, drone-cell
+  manufacturing, per Sep 28 research). RSI14 35.35 — neutral (approaching
+  oversold, still >30), no align. Last close $9.60 < 200-SMA $13.47 —
+  **fails the long-bias filter outright** (gap to SMA widened vs Sep 28's
+  $10.24/$13.47). 0 of 4 — fails, skip regardless of catalyst strength.
+- **MSFT** (setup-scan grade B) — no dated catalyst documented today.
+  RSI14 58.91 — neutral, no align. Last close $509.36 > 200-SMA $432.12 —
+  1 align. 1 of 4 — fails, skip; catalyst fetch skipped since disqualified
+  independently.
+- **HAFN** (setup-scan grade B) — no catalyst documented. RSI14 53.16 —
+  neutral, no align. Last close $9.13 > 200-SMA $7.45 — 1 align. 1 of 4 —
+  fails, skip.
+- **BCI** (setup-scan grade B) — no catalyst documented. RSI14 45.96 —
+  neutral, no align. Last close $25.98 > 200-SMA $23.55 — 1 align. 1 of 4
+  — fails, skip.
+- **QCOM** (setup-scan grade B) — no catalyst documented. RSI14 58.25 —
+  neutral, no align. Last close $187.46 > 200-SMA $169.19 — 1 align. 1 of
+  4 — fails, skip.
+
+All 7 candidates capped at 1 of 4 confluence indicators (200-SMA only) or
+worse (AMPX independently fails the 200-SMA long-bias filter, gap
+widening vs yesterday) — same structural pattern as every session since
+launch: RSI neutral, no oversold mean-revert setups, VWAP/insider data
+unavailable without the `tradingview-data` MCP. No planned tickers
+executed — STEPs 5-6 skipped. Weekly trade count: 0/3 (week of Sep 28).
+58th trading day since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 86th+ straight session, operator review pending. STEP 8
+(notification) N/A — no trade fired this run.
