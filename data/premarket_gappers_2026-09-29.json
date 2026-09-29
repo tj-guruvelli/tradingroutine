@@ -1,1 +1,22 @@
-{"scanned_at":"2026-09-29T12:03:33Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-09-29T13:05:45Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 270.62,
+      "gap_pct": -6.24,
+      "premarket_volume": 417480,
+      "catalyst": "Bloom Energy slips on Oracle force-majeure notice to Project Jupiter (NM data center) developer; gas pipeline delayed to Feb 2027.",
+      "headlines": [
+        "How to Play Bloom Energy Stock Amid Oracle Data Center Force Majeure Rumors (Barchart, Sep 28)"
+      ],
+      "catalyst_detail": "Oracle reportedly sent a force majeure notice to the developer of Project Jupiter, a New Mexico data center designed around Bloom's gas-fired fuel cells; the key gas pipeline slipped to Feb 2027 on permitting. Oracle says the project is on schedule and Blue Owl says its commitments are unchanged. Overhangs: securities class action over scandium supply chain (Sep 28 lead-plaintiff deadline) and Hunterbrook short report (July). Q2 was strong (rev $1.065B +166%, FY26 guide $3.9-4.2B).",
+      "why": "Deployment-timing risk on a marquee AI-power project hits a stock at ~102x forward EPS, so high-beta momentum holders de-risk; legal overhang adds to selling.",
+      "impact": "Premarket volume 417k on a -6.2% gap; reads as sentiment/headline-driven, not a change in Q2 fundamentals, but the stock is ~24% below its June $351 peak and news flow is unresolved. Read-through: ORCL/OWL/NBIS AI-infrastructure names. Note: gap is vs prior close $288.64.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Headline-driven, unresolved project/legal risk; not a clean multi-day thesis. Would use 1 of 3 weekly slots and, at ~$270 with a 10% trail (~$243) and $282.77 mean PT (~+4.5%), cannot clear 2:1 R:R. Second Apify query returned irrelevant results, so fundamentals rest on the single Barchart article."
+    }
+  ]
+}

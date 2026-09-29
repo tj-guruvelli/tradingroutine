@@ -14580,3 +14580,17 @@ Identical 4-ticker/grade-B result set to the 16:33 ET run today — no change in
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 - 0 hits at >=5% gap threshold (watchlist scan returned []). No deep dive.
+
+### Gappers (auto-scan 09:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 270.62 | -6.24 | 417,480 | Oracle force-majeure notice on Project Jupiter; gas pipeline delayed to Feb 2027 |
+
+Only 1 hit. OPEN ($2.44, -5.06%) excluded: price < $3. Deep-dive cap 5 (1 qualified).
+
+#### Deep dive: BE $270.62 -6.24%
+- Catalyst: Oracle reportedly sent a force majeure notice to Project Jupiter's developer (NM data center built around Bloom fuel cells); gas pipeline pushed to Feb 2027. Oracle says on schedule; Blue Owl says commitments unchanged. Overhangs: scandium class action (Sep 28 deadline), July Hunterbrook short report. Q2 strong (rev $1.065B +166%, FY26 guide $3.9-4.2B).
+- Why: Deployment-timing risk on a marquee AI-power project at ~102x fwd EPS; high-beta holders de-risk.
+- Impact: 417k premarket vol; headline-driven, fundamentals unchanged, but ~24% below June $351 peak and unresolved. Read-through ORCL/OWL/NBIS.
+- Horizon: SHORT_TERM, unresolved project/legal news, no clean durable thesis.
+- Opportunity cost: Uses 1 of 3 weekly slots; ~$270 w/ 10% trail (~$243) vs $282.77 mean PT (~+4.5%) cannot clear 2:1 R:R. Fundamentals query returned junk; single-source.
