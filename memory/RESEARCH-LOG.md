@@ -14553,3 +14553,25 @@ HAFN    B      Momentum confluence   daily swing   ADX14 29.3, EMA9 9.23 > EMA21
 ```
 
 Identical 4-ticker/grade-B result set to the 16:33 ET run today — no change in underlying technicals over the 2-hour gap. 0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
+
+### 2026-09-29 — Pre-market Research (cloud)
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 (4x margin) | 0 positions | 0 open orders | daytrade count n/a (0 trades). Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.
+**Sourcing:** Apify RAG returned irrelevant/unusable pages (5 of 6 queries; Google redirect links, no market content). Fell back to native WebSearch for all market context. No Yahoo data used (one Yahoo URL surfaced in search results — discarded).
+
+**Market context**
+- Futures: pointing lower; extending losses from prior two sessions. Drivers: oil up, 10Y yield at highest since Jan 2025, renewed US-Iran strikes.
+- Oil: WTI ~+2.5% after ~+3% Monday; Brent ~$105-108 area, WTI ~$92 (CNBC/TheStreet snippets; intraday, treat as approximate). Saudi East-West pipeline ramping = partial pullback from highs.
+- VIX ~16.3 (+9.5%) — elevated-ish, not panic.
+- Data today: Case-Shiller 9:00 ET; JOLTS + Conference Board consumer confidence 10:00 ET; Dallas Fed services 10:30 ET; multiple Fed speakers. Rate-hike chatter (inflation from oil).
+- Earnings pre-open: CCL, KMX, CAG (cruise/auto retail — oil-cost sensitive).
+- Sector momentum: energy leading on oil; semis/AI-power weak (Broadcom guide, BE/BW/QCOM selloff Sep 28).
+- Held tickers: none.
+
+**Trade ideas (none actionable — all pending confluence)**
+1. XOM — catalyst: oil $90s+/Iran. Entry on pullback/hold ~current; stop 8% below; target +16% (2:1). Prior scan: 1/4 confluence (200-SMA only). Needs RSI/VWAP align.
+2. CVX — same catalyst; same 1/4. Would pick only one of XOM/CVX (correlation gate).
+3. MSFT (grade B, RSI 63, above 200-SMA) — no dated catalyst; watchlist only.
+
+**Risks:** oil/yield spike into a hawkish-Fed narrative; futures red; semis contagion; energy is crowded/headline-driven (Iran de-escalation headline = sharp reversal); data at 10:00 ET can whipsaw the open.
+
+**Decision: HOLD.** 0/3 weekly trades used. No candidate clears ≥2/4 confluence. Patience > activity.
