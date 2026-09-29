@@ -1,22 +1,67 @@
 {
-  "scanned_at": "2026-09-29T13:05:45Z",
-  "deep_dive_cap": 5,
-  "gappers": [
-    {
-      "rank": 1,
-      "symbol": "BE",
-      "price": 270.62,
-      "gap_pct": -6.24,
-      "premarket_volume": 417480,
-      "catalyst": "Bloom Energy slips on Oracle force-majeure notice to Project Jupiter (NM data center) developer; gas pipeline delayed to Feb 2027.",
-      "headlines": [
-        "How to Play Bloom Energy Stock Amid Oracle Data Center Force Majeure Rumors (Barchart, Sep 28)"
-      ],
-      "catalyst_detail": "Oracle reportedly sent a force majeure notice to the developer of Project Jupiter, a New Mexico data center designed around Bloom's gas-fired fuel cells; the key gas pipeline slipped to Feb 2027 on permitting. Oracle says the project is on schedule and Blue Owl says its commitments are unchanged. Overhangs: securities class action over scandium supply chain (Sep 28 lead-plaintiff deadline) and Hunterbrook short report (July). Q2 was strong (rev $1.065B +166%, FY26 guide $3.9-4.2B).",
-      "why": "Deployment-timing risk on a marquee AI-power project hits a stock at ~102x forward EPS, so high-beta momentum holders de-risk; legal overhang adds to selling.",
-      "impact": "Premarket volume 417k on a -6.2% gap; reads as sentiment/headline-driven, not a change in Q2 fundamentals, but the stock is ~24% below its June $351 peak and news flow is unresolved. Read-through: ORCL/OWL/NBIS AI-infrastructure names. Note: gap is vs prior close $288.64.",
-      "horizon": "SHORT_TERM",
-      "opportunity_cost": "Headline-driven, unresolved project/legal risk; not a clean multi-day thesis. Would use 1 of 3 weekly slots and, at ~$270 with a 10% trail (~$243) and $282.77 mean PT (~+4.5%), cannot clear 2:1 R:R. Second Apify query returned irrelevant results, so fundamentals rest on the single Barchart article."
-    }
-  ]
+ "scanned_at": "2026-09-29T15:25:00Z",
+ "deep_dive_cap": 5,
+ "note": "Only 4 rows passed filters; ran at 11:20 ET (market open, 'volume' is session volume). Deep-dive limited to catalyst-search snippets.",
+ "gappers": [
+  {
+   "rank": 1,
+   "symbol": "BE",
+   "price": 297.0,
+   "gap_pct": 12.98,
+   "premarket_volume": 275927,
+   "catalyst": null,
+   "headlines": [],
+   "catalyst_detail": "No dated catalyst found; search returned only quote pages (prior close $262.87, recent pullback from 52-week highs, sharp rebound days earlier). Cause of +13% move unverified.",
+   "why": "Unknown; likely momentum/AI-power-theme buying, unconfirmed.",
+   "impact": "Volume 276k early in session; a 13% unexplained gap after a run to 52-wk highs reads as fade risk. No peer read-through verified.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "No verified durable catalyst.",
+   "opportunity_cost": "Buying a +13% gap chases; 10% trail would sit inside a normal daily range so 2:1 R:R is unlikely at a sane stop. Would use one of 3 weekly slots (0/3 used)."
+  },
+  {
+   "rank": 2,
+   "symbol": "SATL",
+   "price": 5.635,
+   "gap_pct": -6.86,
+   "premarket_volume": 96916,
+   "catalyst": null,
+   "headlines": [],
+   "catalyst_detail": "Catalyst fetch returned no usable results.",
+   "why": "Unknown.",
+   "impact": "Low price/volume small-cap drop; unverified.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "No thesis; gap-down, long-only strategy.",
+   "opportunity_cost": "Gap-down small cap with no catalyst; fails long bias, no R:R case."
+  },
+  {
+   "rank": 3,
+   "symbol": "DPRO",
+   "price": 5.92,
+   "gap_pct": 5.62,
+   "premarket_volume": 23512,
+   "catalyst": "H.C. Wainwright initiated coverage; forecast revenue growth 58.8%/yr (snippet, undated).",
+   "headlines": [],
+   "catalyst_detail": "Search snippet cites H.C. Wainwright initiating coverage of Draganfly and 58.8%/yr revenue growth forecast; date not verified. Drone-sector small cap.",
+   "why": "Analyst initiation can pull in momentum buyers.",
+   "impact": "Only 23.5k shares traded; thin liquidity, likely one-day headline spike.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Analyst-initiation pop on thin volume.",
+   "opportunity_cost": "Illiquid sub-$6 name; 10% trail wider than typical noise; unlikely to clear 2:1 R:R. Displaces nothing better."
+  },
+  {
+   "rank": 4,
+   "symbol": "ORCL",
+   "price": 139.53,
+   "gap_pct": 5.21,
+   "premarket_volume": 804856,
+   "catalyst": "Software-sector rally on falling Treasury yields after Fed; rebound from multi-day slide.",
+   "headlines": [],
+   "catalyst_detail": "Snippets: Oracle rallied ~6%, rebounding from a multi-day slide as a broader software rally (falling Treasury yields after Fed) lifted the group; other coverage cites financing/execution/cash-flow risk around aggressive AI buildout.",
+   "why": "Macro/rate-driven sector bounce plus mean-reversion buying after a slide.",
+   "impact": "Best volume on the list (805k); sector-wide read-through, but financing concerns keep it fade-prone.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Rate-driven bounce; unresolved financing overhang.",
+   "opportunity_cost": "Most liquid candidate, but bounce inside a downtrend; reward to prior highs vs 10% trail unlikely 2:1. Would use a weekly slot (0/3 used)."
+  }
+ ]
 }

@@ -14594,3 +14594,41 @@ Only 1 hit. OPEN ($2.44, -5.06%) excluded: price < $3. Deep-dive cap 5 (1 qualif
 - Impact: 417k premarket vol; headline-driven, fundamentals unchanged, but ~24% below June $351 peak and unresolved. Read-through ORCL/OWL/NBIS.
 - Horizon: SHORT_TERM, unresolved project/legal news, no clean durable thesis.
 - Opportunity cost: Uses 1 of 3 weekly slots; ~$270 w/ 10% trail (~$243) vs $282.77 mean PT (~+4.5%) cannot clear 2:1 R:R. Fundamentals query returned junk; single-source.
+
+### Gappers (auto-scan 11:20 ET, cloud)
+Only 4 passed filters (11:20 ET run, session volume). Deep-dive top 5 cap: all 4 got deep dive, catalyst snippets only (fundamentals queries not run — search yield poor).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $297.00 | +12.98 | 276k | None found (unverified) |
+| 2 | SATL | $5.64 | -6.86 | 97k | None found |
+| 3 | DPRO | $5.92 | +5.62 | 24k | H.C. Wainwright initiation (undated snippet) |
+| 4 | ORCL | $139.53 | +5.21 | 805k | Software rally on falling yields / rebound |
+
+#### Deep dive: BE $297.0 +12.98%
+- Catalyst: No dated catalyst found; search returned only quote pages (prior close $262.87, recent pullback from 52-week highs, sharp rebound days earlier). Cause of +13% move unverified.
+- Why: Unknown; likely momentum/AI-power-theme buying, unconfirmed.
+- Impact: Volume 276k early in session; a 13% unexplained gap after a run to 52-wk highs reads as fade risk. No peer read-through verified.
+- Horizon: SHORT_TERM, No verified durable catalyst.
+- Opportunity cost: Buying a +13% gap chases; 10% trail would sit inside a normal daily range so 2:1 R:R is unlikely at a sane stop. Would use one of 3 weekly slots (0/3 used).
+
+#### Deep dive: SATL $5.635 -6.86%
+- Catalyst: Catalyst fetch returned no usable results.
+- Why: Unknown.
+- Impact: Low price/volume small-cap drop; unverified.
+- Horizon: SHORT_TERM, No thesis; gap-down, long-only strategy.
+- Opportunity cost: Gap-down small cap with no catalyst; fails long bias, no R:R case.
+
+#### Deep dive: DPRO $5.92 +5.62%
+- Catalyst: Search snippet cites H.C. Wainwright initiating coverage of Draganfly and 58.8%/yr revenue growth forecast; date not verified. Drone-sector small cap.
+- Why: Analyst initiation can pull in momentum buyers.
+- Impact: Only 23.5k shares traded; thin liquidity, likely one-day headline spike.
+- Horizon: SHORT_TERM, Analyst-initiation pop on thin volume.
+- Opportunity cost: Illiquid sub-$6 name; 10% trail wider than typical noise; unlikely to clear 2:1 R:R. Displaces nothing better.
+
+#### Deep dive: ORCL $139.53 +5.21%
+- Catalyst: Snippets: Oracle rallied ~6%, rebounding from a multi-day slide as a broader software rally (falling Treasury yields after Fed) lifted the group; other coverage cites financing/execution/cash-flow risk around aggressive AI buildout.
+- Why: Macro/rate-driven sector bounce plus mean-reversion buying after a slide.
+- Impact: Best volume on the list (805k); sector-wide read-through, but financing concerns keep it fade-prone.
+- Horizon: SHORT_TERM, Rate-driven bounce; unresolved financing overhang.
+- Opportunity cost: Most liquid candidate, but bounce inside a downtrend; reward to prior highs vs 10% trail unlikely 2:1. Would use a weekly slot (0/3 used).
+
