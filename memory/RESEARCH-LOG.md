@@ -14699,3 +14699,48 @@ Only 1 of ~60 symbols cleared |gap|>=5% and price>=3. Deep dive: 1 (cap 5).
 ## 2026-09-30 — Gappers (cloud)
 ### Gappers (auto-scan 09:03 ET, cloud)
 0 hits at gap>=5%, price>=$3. No catalyst/deep-dive fetch. No notification.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+Deep-dive cap: 5 (all 5 hits deep-dived from search snippets; fundamentals query skipped, Apify latency). Ran in-session, gaps vs prev close. Vol = day volume.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | 6.04 | +7.38 | 39,842 | Q2 rev +259% to $15.9M, analyst Moderate Buy; continuation bounce |
+| 2 | TRMD | 38.81 | +7.37 | 20,866 | Oil surge / Iran-deal risk lifts tankers |
+| 3 | RKLB | 73.91 | +6.02 | 138,286 | Rebound post-offering slide; Cantor Overweight |
+| 4 | ASTS | 62.75 | +5.62 | 51,129 | BlueBird launch/Q2 ramp; space-sector bid |
+| 5 | LUNR | 15.29 | +5.09 | 52,164 | Month-long rally near 52w high; sector sympathy |
+
+#### Deep dive: SATL $6.04 +7.38%
+- Catalyst: Q2 2026 revenue +259% y/y to $15.9M; stock ran then pulled back to ~$5.80. No fresh named catalyst today.
+- Why: Growth re-rating + analyst upgrades pull momentum buyers.
+- Impact: ~40K volume, thin small-cap; fragile. Space peers also up.
+- Horizon: SHORT_TERM, no new structural catalyst, illiquid.
+- Opportunity cost: Displaces higher-quality RKLB in same sector; 2:1 R:R hard to verify at sane stop.
+
+#### Deep dive: TRMD $38.81 +7.37%
+- Catalyst: Tanker up with oil on Iran-deal/Middle East risk headlines.
+- Why: Geopolitical risk lifts freight-rate expectations.
+- Impact: ~21K volume; headline-driven, reversible.
+- Horizon: SHORT_TERM, geopolitical spike, expect fade.
+- Opportunity cost: Different sector, but burns 1 of 3 weekly slots on a headline trade.
+
+#### Deep dive: RKLB $73.91 +6.02%
+- Catalyst: Bounce after post-earnings/offering slide; Cantor reiterated Overweight; aerospace tape sympathy.
+- Why: Dip buyers on analyst support + space momentum.
+- Impact: Best liquidity (138K); partly sector beta; offering overhang caps upside.
+- Horizon: SHORT_TERM, dip rebound, no new structural catalyst.
+- Opportunity cost: Top candidate but competes with ASTS/LUNR; correlation gate (>0.75) likely blocks stacking. Needs stop <~10% for 2:1.
+
+#### Deep dive: ASTS $62.75 +5.62%
+- Catalyst: BlueBird launches + Q2 ramp drive sentiment (+12% on Sep 4); nothing new identified today.
+- Why: Launch cadence/commercial ramp; sector bid today.
+- Impact: Moderate volume, high beta, heavy buildout losses.
+- Horizon: SHORT_TERM, sector sympathy today.
+- Opportunity cost: Overlaps RKLB; 10% trail wide vs 2:1 target.
+
+#### Deep dive: LUNR $15.29 +5.09%
+- Catalyst: ~50% month gain, near 52w high; no company news found. Earnings Nov 10.
+- Why: Momentum + space bid.
+- Impact: Extended, mean-reversion risk.
+- Horizon: SHORT_TERM, no catalyst.
+- Opportunity cost: 4th space name; low priority vs RKLB; sector 2-fail rule/correlation gate.
