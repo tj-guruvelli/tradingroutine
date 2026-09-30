@@ -14681,3 +14681,18 @@ Same 4 grade-B hits as the 16:33 ET run — no change in underlying setups intra
 - Quarter-end rebalancing volatility; oil elevated (+48% y/y) = inflation/rates risk; no verified futures read.
 
 ### Decision: HOLD (0/3 weekly trades used). Zero entries 59th trading day.
+
+
+### Gappers (auto-scan 08:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NIO | 3.39 | -5.17 | 2,550,209 | none verified (Apify: titles only, no text; Benzinga 403) |
+
+Only 1 of ~60 symbols cleared |gap|>=5% and price>=3. Deep dive: 1 (cap 5).
+
+#### Deep dive: NIO $3.39 -5.17%
+- Catalyst: unverified — Apify RAG returned only search titles (no page text), Benzinga fetch 403.
+- Why: unknown; no mechanism can be stated without a source.
+- Impact: gap-down on 2.55M shares; cannot judge sustainability. Sub-$4 name, high volatility.
+- Horizon: SHORT_TERM, no verified durable thesis.
+- Opportunity cost: gap-down = not a long candidate; 0 positions, 0/3 weekly trades used; unlikely to clear 2:1 R:R at a sane stop. Research only.
