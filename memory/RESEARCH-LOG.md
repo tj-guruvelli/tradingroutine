@@ -14696,3 +14696,6 @@ Only 1 of ~60 symbols cleared |gap|>=5% and price>=3. Deep dive: 1 (cap 5).
 - Impact: gap-down on 2.55M shares; cannot judge sustainability. Sub-$4 name, high volatility.
 - Horizon: SHORT_TERM, no verified durable thesis.
 - Opportunity cost: gap-down = not a long candidate; 0 positions, 0/3 weekly trades used; unlikely to clear 2:1 R:R at a sane stop. Research only.
+## 2026-09-30 — Gappers (cloud)
+### Gappers (auto-scan 09:03 ET, cloud)
+0 hits at gap>=5%, price>=$3. No catalyst/deep-dive fetch. No notification.
