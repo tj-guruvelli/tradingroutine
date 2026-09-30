@@ -14658,3 +14658,26 @@ DPRO    B      Momentum confluence   daily swing   ADX14 20.8, EMA9 5.53 > EMA21
 
 Same 4 grade-B hits as the 16:33 ET run — no change in underlying setups intra-session. 0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
 
+
+## 2026-09-30 — Pre-Market Research (cloud, Apify RAG; Yahoo suffix applied)
+
+### Account
+- Equity $100,000.00 | Cash $100,000.00 | BP $400,000 (4x margin) | Daytrades 0 | 0 positions | 0 open orders
+- `balance_asof` 2026-09-29. Still the $100k-live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.
+
+### Market context
+- Brent $96.55 (+0.40% d/d, +6.69% 1mo, +47.7% y/y) — TradingEconomics. WTI: no clean number (oilprice.com snippet showed -3.61% on some blend, unverified).
+- VIX ~15.9 (open 15.93, prev close 16.04; 52wk high 35.30 on 03/09/26) — CNBC. Calm.
+- Futures: GAP — queries returned stale (Sep 4 CNBC) or Yahoo-styled (^DJI) snippet; the latter DISCARDED. No verified premarket futures read.
+- Calendar: Sep 30 items per Thomson calendar snippet incl. GDP price index (final) 07:30 CT; full list/consensus not retrieved. Quarter-end / month-end flows today.
+- Earnings/catalysts/sector-momentum queries skipped (Apify throughput slow, results low-signal); no held tickers to research.
+
+### Trade ideas (none clear the ≥2-of-4 confluence gate; carry-forward from Sep 29)
+1. XOM/CVX — energy momentum, Brent $96.5 tailwind. Entry only on pullback to ~EMA21; stop 10% trail; target +15%. Currently 1 of 4 — wait.
+2. AMPX — DoW grant catalyst; below 200-SMA ($9.60 vs $13.47) → fails long-bias. Watch only.
+3. META — setup-scan grade B (ADX 39.6, EMA9>EMA21, RSI 60.9). Needs catalyst + confirmation; not actionable pre-market.
+
+### Risks
+- Quarter-end rebalancing volatility; oil elevated (+48% y/y) = inflation/rates risk; no verified futures read.
+
+### Decision: HOLD (0/3 weekly trades used). Zero entries 59th trading day.
