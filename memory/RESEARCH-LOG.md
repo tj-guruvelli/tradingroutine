@@ -14757,3 +14757,16 @@ Scan: 2 raw hits (>=5%); PEPG ($2.47, +5.56%) dropped for price <$3. 1 qualifyin
 - Impact: Volume light (53k at 11:03 ET); headline-driven, extended. Peers HAFN/BCI read-through.
 - Horizon: SHORT_TERM, headline-driven, no durable company catalyst.
 - Opportunity cost: Competes with XOM/CVX energy candidates (all 1 of 4 confluence); chasing after ~11% run, 2:1 R:R unlikely at sane stop. No positions to displace; fails confluence.
+
+### Setup Scan (16:34 ET, cloud)
+Grade A: none — `grade_a_possible=false` (16:34 ET fire lands after the 15:30 ET intraday-breakout cutoff; Setup A not evaluated for any of 60 symbols, `setup_a_skipped_reason: "outside 10:00-15:30 ET"`).
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+HAFN    B      Momentum confluence   daily swing   ADX14 26.9, EMA9 9.30 > EMA21 9.11, RSI 62.3
+ZIM     B      Momentum confluence   daily swing   ADX14 25.3, EMA9 29.32 > EMA21 29.07, RSI 49.7
+CMBT    B      Momentum confluence   daily swing   ADX14 32.1, EMA9 19.21 > EMA21 19.03, RSI 52.2
+DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21 5.49, RSI 63.4
+```
+
+0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
