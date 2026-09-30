@@ -14744,3 +14744,16 @@ Deep-dive cap: 5 (all 5 hits deep-dived from search snippets; fundamentals query
 - Impact: Extended, mean-reversion risk.
 - Horizon: SHORT_TERM, no catalyst.
 - Opportunity cost: 4th space name; low priority vs RKLB; sector 2-fail rule/correlation gate.
+
+### Gappers (auto-scan 11:05 ET, cloud)
+Scan: 2 raw hits (>=5%); PEPG ($2.47, +5.56%) dropped for price <$3. 1 qualifying. Deep-dive cap 5 (only 1 qualifies).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | TRMD | 38.32 | +6.03 | 53,010 | Tanker bid on oil surge / Middle East risk (snippet, no company news) |
+
+#### Deep dive: TRMD $38.32 +6.03%
+- Catalyst: No TORM-specific news found. Snippet cites oil surge + Middle East risk; date unverified. ~+11% vs $34.42 on Sep 25.
+- Why: Geopolitical risk lifts tanker rates/sentiment; momentum chase.
+- Impact: Volume light (53k at 11:03 ET); headline-driven, extended. Peers HAFN/BCI read-through.
+- Horizon: SHORT_TERM, headline-driven, no durable company catalyst.
+- Opportunity cost: Competes with XOM/CVX energy candidates (all 1 of 4 confluence); chasing after ~11% run, 2:1 R:R unlikely at sane stop. No positions to displace; fails confluence.
