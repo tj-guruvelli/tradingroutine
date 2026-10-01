@@ -14810,3 +14810,6 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Decision
 **HOLD.** No candidate meets ≥2 confluence + documented catalyst. Patience > activity.
+
+### Gappers (auto-scan 08:05 ET, cloud)
+- No watchlist names met gap >=5%, price >=$3 (scan returned 0 rows). No deep dive.
