@@ -14840,3 +14840,12 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 - Impact: ~19k shares, likely fade not thesis break. Sector read-through with UMAC.
 - Horizon: SHORT_TERM, small-cap headline-driven; defense thesis maybe longer but today is noise.
 - Opportunity cost: Down-gap, no entry; a pullback long uses a weekly slot, needs ~$6.9+ target for 2:1.
+
+### Setup Scan (16:34 ET, cloud)
+- 60 symbols scanned, 0 errors. grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 2 grade-B hits (Momentum confluence: ADX14>20 AND EMA9>EMA21):
+
+| Ticker | Grade | Setup(s) | Timeframe | Trigger |
+| --- | --- | --- | --- | --- |
+| CMBT | B | Momentum confluence | daily swing | px $15.51, ADX 30.6, EMA9 $19.16 > EMA21 $19.02, RSI 52 |
+| DPRO | B | Momentum confluence | daily swing | px $5.56, ADX 22.7, EMA9 $5.75 > EMA21 $5.54, RSI 61 |
