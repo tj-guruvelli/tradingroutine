@@ -14819,3 +14819,24 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Gappers (auto-scan 10:03 ET, cloud)
 - Scan returned 1 row (RR $1.675, +6.35%, vol 107k) — fails price >=$3 filter. 0 qualifying gappers. No deep dive.
+
+### Gappers (auto-scan 11:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | 22.95 | -6.52 | 31,892 | No same-day catalyst found (stale: Jun insider sale, May drone-ban policy rally) |
+| 2 | DPRO | 5.765 | -5.34 | 19,189 | No same-day catalyst found (recent: defense-driven +30% run, $10M strategic investment) |
+- Filtered out: RR +6.67% ($1.68 < $3 min). Only 2 qualifiers; deep dive on both (cap 5). Script gives session volume, not premarket volume.
+
+#### Deep dive: UMAC $22.95 -6.52%
+- Catalyst: Policy-driven drone name (federal Chinese-drone ban); prior heavy insider selling cut it 17% in June. No dated catalyst for today's gap found; cause unconfirmed.
+- Why: Likely give-back of policy momentum premium on thin volume; unconfirmed.
+- Impact: ~32k shares, no news: reads as drift/mean-reversion. DPRO also down, sector read-through.
+- Horizon: SHORT_TERM, no durable thesis identified; insider-selling overhang.
+- Opportunity cost: Down-gap, long-only so no entry; a reclaim long would eat a 3/week slot and 2:1 R:R isn't evident.
+
+#### Deep dive: DPRO $5.765 -5.34%
+- Catalyst: Drones; +30% in 30 days ($4.47 to ~$5.80) on defense contracts and $10M strategic investment; HCW initiated. No news for today's gap.
+- Why: Profit-taking after a ~30% run; unconfirmed.
+- Impact: ~19k shares, likely fade not thesis break. Sector read-through with UMAC.
+- Horizon: SHORT_TERM, small-cap headline-driven; defense thesis maybe longer but today is noise.
+- Opportunity cost: Down-gap, no entry; a pullback long uses a weekly slot, needs ~$6.9+ target for 2:1.

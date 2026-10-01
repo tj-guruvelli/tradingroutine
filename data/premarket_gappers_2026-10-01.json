@@ -1,1 +1,43 @@
-{"scanned_at":"2026-10-01T14:03:41Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-10-01T15:05:25.587447Z",
+  "deep_dive_cap": 5,
+  "note": "RR excluded (price $1.68 < $3). premarket_volume not provided by script (only session volume); both rows have <50k shares.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "UMAC",
+      "price": 22.95,
+      "gap_pct": -6.52,
+      "premarket_volume": null,
+      "catalyst": "No same-day catalyst found; latest hits are stale (Jun 2026 insider-sale selloff, May 2026 drone-ban policy rally).",
+      "headlines": [
+        "UMAC Drops 17.34% After Massive Insider Stock Sale (Jun 5, 2026)",
+        "Unusual Machines' Windfall: Policy, Not Fundamentals, Drives... (May 29, 2026)"
+      ],
+      "catalyst_detail": "Unusual Machines (drone components) has run on policy tailwinds (federal Chinese-drone ban) rather than fundamentals; prior heavy insider selling (Form 4) triggered a 17% drop in June. No dated catalyst for today's -6.5% gap was found; the cause is unconfirmed.",
+      "why": "Likely give-back of a policy-driven momentum premium on thin volume (~32k shares) with no fresh news; unconfirmed.",
+      "impact": "Low volume and no identified catalyst: reads as drift/mean-reversion, not a sustained repricing. Drone/defense peers (DPRO) also gapping down suggests a sector-wide read-through.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No durable thesis identified; policy-headline stock with insider-selling overhang.",
+      "opportunity_cost": "Down-gap; system is long-only so no entry. Any long would need a base/reclaim first; would compete with higher-conviction setups for the 3-trades/week cap and a 2:1 R:R at a ~7% stop is not evident."
+    },
+    {
+      "rank": 2,
+      "symbol": "DPRO",
+      "price": 5.765,
+      "gap_pct": -5.34,
+      "premarket_volume": null,
+      "catalyst": "No same-day catalyst found; recent news is positive (defense-driven +30% 30-day run, $10M strategic investment).",
+      "headlines": [
+        "Draganfly (DPRO) Shares Rise +30% Fueled by Defense... (~2 days ago)",
+        "Why Is Draganfly (DPRO) Stock Up +5.36% Today? ($10M strategic investment)"
+      ],
+      "catalyst_detail": "Draganfly (drones) climbed ~30% in 30 days from ~$4.47 to ~$5.80 on defense contracts and a $10M strategic investment; H.C. Wainwright initiated coverage. Today's -5.3% gap has no identified news and looks like profit-taking after the run.",
+      "why": "Profit-taking after a ~30% month-long rally in a low-priced momentum name; unconfirmed.",
+      "impact": "Very thin volume (~19k shares); likely a fade/pullback rather than a thesis break. Sector read-through with UMAC (drones both down).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Small-cap, headline-driven; fundamentals/defense thesis could be LONG_TERM but today's move is noise-level.",
+      "opportunity_cost": "Down-gap, long-only, so no entry now. A pullback entry would use a slot from the 3/week cap; sub-$6 price with ~10% trail needs wide stop, 2:1 R:R requires ~$6.9+ target, uncertain."
+    }
+  ]
+}
