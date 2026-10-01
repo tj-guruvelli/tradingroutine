@@ -14783,3 +14783,30 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 ```
 
 0 grade-A hits -> no Telegram notification per rule. 0 errors, 60/60 symbols scanned.
+
+## 2026-10-01 — Pre-market Research
+
+**Note:** Apify RAG browser returned only search snippets / empty runs (2 of 5 queries returned 0 items; 1 off-topic) — fell back to native WebSearch (Yahoo domains blocked). Sector-momentum and held-ticker news queries skipped (no positions).
+
+### Account Snapshot
+- Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 | Daytrade count: n/a (no trades)
+- 0 positions, 0 open orders. Still the live-vs-$10k-baseline mismatch flagged Jul 27 (operator review pending).
+
+### Market Context
+- S&P 500 futures ~+0.5% (US500 ~7,696); NQ futures ~+0.9%, Dow ~+0.3%, RTY ~+0.4%. Q4 open; US-Iran diplomatic backchannels, Fed hawkish posture.
+- Oil sliding: Brent ~$96.86 (-1.2%), WTI ~$89.15 (-1.4%) — headwind for XOM/CVX/tanker energy candidates.
+- VIX ~16.3 (Google Finance snippet, date unverified; prev close 16.34).
+- Today: Jobless claims (fcst 201K, prior 197K), ISM Mfg PMI 9:00 ET (fcst 54.8, prior 54.6), construction spending 10:00 ET. Earnings: ACN, NKE, MKC.
+
+### Trade Ideas (none cleared confluence; watch only)
+1. **XOM/CVX** — energy momentum, but oil falling; wait for stabilization. Entry n/a; stop 10% trail; target 2:1 min.
+2. **QCOM / MSFT** — tech bid on NQ strength; each only 1 of 4 confluence (200-SMA). Need RSI/VWAP/insider align.
+3. **NKE (post-earnings)** — reaction play only if gap + volume confirm; no pre-defined edge, skip unless ≥2 confluence.
+
+### Risks
+- ISM print vs hot expectations (54.8) → yields/Fed-hawk reaction; global bond rout/yields elevated.
+- Oil/geopolitical headline reversal (Iran talks).
+- Quarter-start flows; weekly trade count 0/3.
+
+### Decision
+**HOLD.** No candidate meets ≥2 confluence + documented catalyst. Patience > activity.
