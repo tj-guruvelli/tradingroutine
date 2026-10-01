@@ -14813,3 +14813,6 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Gappers (auto-scan 08:05 ET, cloud)
 - No watchlist names met gap >=5%, price >=$3 (scan returned 0 rows). No deep dive.
+
+### Gappers (auto-scan 09:03 ET, cloud)
+- No watchlist names met gap >=5%, price >=$3 (scan returned 0 rows). No deep dive.
