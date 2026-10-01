@@ -1,0 +1,57 @@
+{
+  "scanned_at": "2026-10-01T22:33:53.347Z",
+  "ny_time": "18:33",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "CMBT",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 15.51,
+      "prev_daily_high": 19.3,
+      "prev_daily_close": 18.93,
+      "sma200": 14.44,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 19.66,
+      "rsi14": 51.96,
+      "adx14": 30.55,
+      "ema9": 19.16,
+      "ema21": 19.02,
+      "premarket_volume": 0,
+      "daily_volume": 247748,
+      "avg_daily_volume_30": 84150,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "DPRO",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 5.56,
+      "prev_daily_high": 6.28,
+      "prev_daily_close": 6.09,
+      "sma200": 6.08,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 5.99,
+      "rsi14": 61.1,
+      "adx14": 22.68,
+      "ema9": 5.75,
+      "ema21": 5.54,
+      "premarket_volume": 0,
+      "daily_volume": 98665,
+      "avg_daily_volume_30": 61921,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}

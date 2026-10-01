@@ -14849,3 +14849,12 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 | --- | --- | --- | --- | --- |
 | CMBT | B | Momentum confluence | daily swing | px $15.51, ADX 30.6, EMA9 $19.16 > EMA21 $19.02, RSI 52 |
 | DPRO | B | Momentum confluence | daily swing | px $5.56, ADX 22.7, EMA9 $5.75 > EMA21 $5.54, RSI 61 |
+
+### Setup Scan (18:33 ET, cloud)
+- 60 symbols scanned, 0 errors. grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 2 grade-B hits (Momentum confluence: ADX14>20 AND EMA9>EMA21) — same two names as the 16:34 ET run, confluence held into the close:
+
+| Ticker | Grade | Setup(s) | Timeframe | Trigger |
+| --- | --- | --- | --- | --- |
+| CMBT | B | Momentum confluence | daily swing | px $15.51, ADX 30.6, EMA9 $19.16 > EMA21 $19.02, RSI 52.0 |
+| DPRO | B | Momentum confluence | daily swing | px $5.56, ADX 22.7, EMA9 $5.75 > EMA21 $5.54, RSI 61.1 |
