@@ -14941,3 +14941,54 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 - Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
 - Horizon: SHORT_TERM, no confirmed durable thesis.
 - Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SYNA | 120.97 | +14.0% | 65010 | No same-day catalyst found; last snippets: -8.3% on 9/16 after onsemi analyst day, $102.72 on 9/25. |
+| 2 | SATL | 5.865 | +8.41% | 93574 | No same-day catalyst found; Cantor reiterated Overweight/$9 PT on 9/21; Freedom Broker notes turn to profit, sovereign contracts as next catalyst. |
+| 3 | PL | 17.45 | +8.18% | 225340 | No same-day catalyst found; stock had sold off ~8% on insider selling (CFO) late Sep despite 58% rev growth to $116.1M in FQ2. |
+| 4 | LUNR | 15.03 | +7.05% | 200768 | No same-day catalyst found; snippet cites satellite handover milestone, space-sector volatility; earnings Nov 10. |
+| 5 | RKLB | 74.84 | +6.22% | 290897 | No same-day catalyst found; space-sector bid; $122 PT cited, dilution/financing concerns over pending ~$8B deal. |
+| 6 | STM | 56.59 | +5.8% | 471266 | No same-day catalyst found; semis rebound after risk-off dip; down 12% in month to mid-Aug on margin worries. |
+| 7 | NBIS | 245.45 | +5.74% | 98640 | RTTNews: Nebius signed binding agreement with AIB Data Centers for 50 (MW) capacity; date of release unverified. |
+| 8 | BKSY | 22.345 | +5.68% | 22603 | No same-day catalyst found; fell ~8% 9/23 on macro; space-cluster move. |
+| 9 | RDW | 11.17 | +5.63% | 264715 | No same-day catalyst found; snippet cites $542.1M backlog, space-sector move. |
+| 10 | BE | 292.99 | +5.47% | 113229 | No same-day catalyst found; AI data-center fuel-cell narrative, rebounding near 52-wk highs. |
+
+Note: run at 11:03 ET (market open); Vol = snapshot volume, not premarket. Deep dive limited to top 5; ranks 6-10 quick-scan only. Apify returned search snippets only (page scrapes mostly failed).
+
+#### Deep dive: SYNA $120.97 +14.0%
+- Catalyst: SYNA +14% to $121 with no news located. Prior snippets show a -8.3% drop 9/16 (onsemi analyst day) and $102.72 on 9/25, so this is a sharp reversal. Detail fetch limited to search snippets.
+- Why: Unconfirmed; possible analyst upgrade, M&A chatter, or edge-AI/semis rebound. Do not assume.
+- Impact: Volume 65k at 11:03 ET is thin for a 14% gap; cannot judge sustainability without a catalyst. Gap fade risk is high.
+- Horizon: SHORT_TERM, No confirmed durable thesis; unexplained gap, treat as fade-prone.
+- Opportunity cost: Would compete for 1 of 3 weekly slots and a 6-position cap; ranks #1 by gap but lowest on information. A stop beyond 10% trail on a +14% gap-up gives poor 2:1 R:R.
+
+#### Deep dive: SATL $5.865 +8.41%
+- Catalyst: SATL +8.4% to $5.87. Cantor reiterated Overweight/$9 PT on 9/21. Freedom Broker (Aug) says it turned profitable; nearest catalysts are sovereign contracts and Aleph Observer. Q3 2025 revenue $3.6M (+29%).
+- Why: Unconfirmed same-day driver; likely space/earth-observation sector bid plus analyst support.
+- Impact: Small-cap, $5.87, volume 94k; peers PL/LUNR/RKLB/RDW/BKSY also up 5-8%, so sector read-through, not name-specific news.
+- Horizon: SHORT_TERM, Sector-beta move; revenue base tiny, no new structural catalyst found.
+- Opportunity cost: Correlated with 4 other space gappers; the corr gate (>0.75 with 2+ positions) would block stacking. Low-priced, volatile; 2:1 R:R at a 10% trail is hard to verify.
+
+#### Deep dive: PL $17.45 +8.18%
+- Catalyst: PL +8.2% to $17.45 after ~8% selloff late Sep on insider (CFO) sales. FQ2 revenue +58% to $116.1M, narrower GAAP loss, record adj. EBITDA. Stock was down ~48% from highs as of July.
+- Why: Likely rebound/bounce in oversold space names with strong fundamentals; no new news found.
+- Impact: Volume 225k; peers moving together, so sector read-through. Insider selling overhang remains.
+- Horizon: SHORT_TERM, Oversold bounce within a sector move; insider-sale overhang, no new catalyst.
+- Opportunity cost: Competes with RKLB/LUNR for the same space-theme slot; first-failed-trade risk counts toward the 2-failed-trades sector exit rule.
+
+#### Deep dive: LUNR $15.03 +7.05%
+- Catalyst: LUNR +7.1% to $15.03. Snippet cites a satellite handover milestone amid space-sector volatility; next earnings Nov 10. No same-day news found.
+- Why: Unconfirmed; sector momentum in space names.
+- Impact: Volume 201k; part of 5+ name space cluster, so likely sector beta that can reverse together.
+- Horizon: SHORT_TERM, Cluster move with no durable catalyst identified.
+- Opportunity cost: Fourth-ranked of a correlated space cluster; would likely fail the corr gate if any space name is held. Needs a tight stop to reach 2:1.
+
+#### Deep dive: RKLB $74.84 +6.22%
+- Catalyst: RKLB +6.2% to $74.84. Q1 2026 results beat all guidance (May 7). Analysts cite $122 PT; dilution/financing concerns around a pending ~$8B transaction weighed recently.
+- Why: Space-sector bid plus rebound from financing-concern dip; no same-day news found.
+- Impact: Highest volume of top 5 (291k) and largest cap, so the most liquid expression of the cluster; overhang from financing persists.
+- Horizon: LONG_TERM, Strongest fundamentals in the cluster (guidance beats, backlog) but needs confirmation that the sector bid holds; pending deal adds uncertainty.
+- Opportunity cost: If any space name is taken, RKLB is the best of the cluster on liquidity; still subject to corr gate and 3-trades/week cap; 2:1 R:R at 10% trail needs a pullback entry.
