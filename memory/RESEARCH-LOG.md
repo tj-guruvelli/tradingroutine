@@ -14858,3 +14858,32 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 | --- | --- | --- | --- | --- |
 | CMBT | B | Momentum confluence | daily swing | px $15.51, ADX 30.6, EMA9 $19.16 > EMA21 $19.02, RSI 52.0 |
 | DPRO | B | Momentum confluence | daily swing | px $5.56, ADX 22.7, EMA9 $5.75 > EMA21 $5.54, RSI 61.1 |
+
+## 2026-10-02 — Pre-market Research (cloud, Apify RAG; Yahoo suffix applied)
+
+**Note:** Apify RAG used (oilprice.com, Markets Insider, Cboe, CNBC, Schwab). No Yahoo URLs surfaced. S&P futures query returned stale/off-topic (dictionary page) / timed out — SPX levels taken from Schwab Oct 1 open table; futures level = gap. Held-ticker news skipped (no positions).
+
+### Account Snapshot
+- Equity $100,000.00 | Cash $100,000.00 (100%) | Buying power $400,000 | Daytrade count: n/a (no trades)
+- 0 positions, 0 open orders. Still the live-vs-$10k-baseline mismatch flagged Jul 27 (operator review pending).
+
+### Market Context
+- Oil: WTI ~$89.40 (-3.7%), Brent ~$99.93 (-2.3%) pre-mkt (oilprice.com, 11-min delay). Reversal after Brent topped $100 Thu on China fuel-export halt; EU weighing emergency stockpile release. Iran conflict still the driver.
+- Indices (Oct 1 open, Schwab): S&P 7,651.54 (-0.25%), Nasdaq 26,861 (+0.24%), Dow 50,906 (-0.86%). 10-yr 5.29% (near 24-yr high), DXY 101.79 (2026 highs).
+- VIX 15.95 (-2.68%, Cboe/CNBC); prev close 16.39; 52-wk 13.38-35.30.
+- Breadth poor: <50% of S&P above 200-DMA (75% mid-Aug); RUT and equal-weight bearish, cap-weighted bullish.
+- Today: **Sept nonfarm payrolls 8:30 ET** (cons 84K, UE 4.1%, wages +0.3% m/m), factory orders. Fed hike odds: ~37% Oct, ~90% at least one by year-end. Fed speakers. Next wk: ISM Services Mon, 10-yr auction Wed, FOMC minutes Wed.
+- Earnings/movers (Oct 1): ACN +19%, NKE reported after close Thu (near 12-yr lows), MU -1% post-beat, CEG +3.5% (AMZN nuclear deal), VICR +12%, IBM +5%.
+
+### Trade Ideas (none cleared confluence; watch only)
+1. **XOM/CVX** — oil -3-4% pre-mkt; wait for stabilization post-NFP. Entry n/a; stop 10% trail; target 2:1 min.
+2. **NKE (post-earnings)** — reaction play only if gap + volume confirm; at 12-yr lows, no edge pre-defined. Skip unless >=2 confluence.
+3. **CEG** — AMZN $3B nuclear deal catalyst, but already +3.5% on Thu; chase risk. Needs pullback + RSI/200-SMA confluence check before any entry.
+
+### Risks
+- NFP print vs 84K consensus: hot wages -> hike odds up, yields/DXY up, tech pressure.
+- 10-yr at 5.29%, 24-yr highs; poor breadth; oil headline reversals (Iran, China export halt, EU stockpile).
+- Weekly trade count 0/3.
+
+### Decision
+**HOLD.** No candidate meets >=2 confluence + documented catalyst; NFP binary event pre-open. Patience > activity.
