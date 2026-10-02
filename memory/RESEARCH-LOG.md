@@ -14890,3 +14890,6 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 - No hits: 0 watchlist names with |gap| >= 5% (price >= $3). Largest: OPEN +2.75%, ONDS -1.98%, NIO -1.02%. No deep dive; no notification.
+
+### Gappers (auto-scan 09:04 ET, cloud)
+- 0 qualifying. Raw >=5%: RR $1.77 +12.38%, OPEN $2.50 +5.71% — both below $3 price floor, excluded.
