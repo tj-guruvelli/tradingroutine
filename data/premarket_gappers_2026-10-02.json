@@ -1,1 +1,103 @@
-{"scanned_at":"2026-10-02T13:04:26Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-10-02T14:06:17.631907Z",
+  "deep_dive_cap": 5,
+  "excluded": [
+    {
+      "symbol": "SYNA",
+      "gap_pct": 13.92,
+      "price": 120.88,
+      "volume": 37034,
+      "reason": "volume<50000"
+    }
+  ],
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "SATL",
+      "price": 5.86,
+      "gap_pct": 8.32,
+      "premarket_volume": 52477,
+      "catalyst": "Satellogic: no fresh catalyst found; snippets show stale 'Moderate Buy' consensus, ~$5.80 level.",
+      "headlines": [],
+      "catalyst_detail": "Satellogic: no fresh catalyst found; snippets show stale 'Moderate Buy' consensus, ~$5.80 level. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.",
+      "why": "Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).",
+      "impact": "Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings."
+    },
+    {
+      "rank": 2,
+      "symbol": "LUNR",
+      "price": 15.0,
+      "gap_pct": 6.84,
+      "premarket_volume": 56481,
+      "catalyst": "Intuitive Machines: no same-day catalyst found; space-sector bid (Lanteris deal is Nov-2025 news, stale).",
+      "headlines": [],
+      "catalyst_detail": "Intuitive Machines: no same-day catalyst found; space-sector bid (Lanteris deal is Nov-2025 news, stale). Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.",
+      "why": "Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).",
+      "impact": "Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings."
+    },
+    {
+      "rank": 3,
+      "symbol": "PL",
+      "price": 17.145,
+      "gap_pct": 6.29,
+      "premarket_volume": 90970,
+      "catalyst": "Planet Labs: no same-day catalyst found; prior snippets cite insider selling and defense-budget thesis.",
+      "headlines": [],
+      "catalyst_detail": "Planet Labs: no same-day catalyst found; prior snippets cite insider selling and defense-budget thesis. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.",
+      "why": "Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).",
+      "impact": "Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings."
+    },
+    {
+      "rank": 4,
+      "symbol": "RKLB",
+      "price": 74.68,
+      "gap_pct": 5.99,
+      "premarket_volume": 143431,
+      "catalyst": "Rocket Lab: no same-day catalyst found; space-sector momentum, analyst PT $122 cited.",
+      "headlines": [],
+      "catalyst_detail": "Rocket Lab: no same-day catalyst found; space-sector momentum, analyst PT $122 cited. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.",
+      "why": "Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).",
+      "impact": "Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings."
+    },
+    {
+      "rank": 5,
+      "symbol": "STM",
+      "price": 56.465,
+      "gap_pct": 5.56,
+      "premarket_volume": 194401,
+      "catalyst": "STMicro: no same-day catalyst found; semis rebound after risk-off dip, closed $52.74 on 9/28.",
+      "headlines": [],
+      "catalyst_detail": "STMicro: no same-day catalyst found; semis rebound after risk-off dip, closed $52.74 on 9/28. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.",
+      "why": "Unconfirmed; likely semis rebound.",
+      "impact": "Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings."
+    },
+    {
+      "rank": 6,
+      "symbol": "NBIS",
+      "price": 244.53,
+      "gap_pct": 5.35,
+      "premarket_volume": 52267,
+      "catalyst": "Nebius: no same-day catalyst found; AI-cloud demand/backlog narrative, up big in 2026.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "RDW",
+      "price": 11.125,
+      "gap_pct": 5.2,
+      "premarket_volume": 106643,
+      "catalyst": "Redwire: no same-day catalyst found; space/defense names catching a bid.",
+      "headlines": []
+    }
+  ]
+}

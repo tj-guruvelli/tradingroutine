@@ -14893,3 +14893,51 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Gappers (auto-scan 09:04 ET, cloud)
 - 0 qualifying. Raw >=5%: RR $1.77 +12.38%, OPEN $2.50 +5.71% — both below $3 price floor, excluded.
+
+### Gappers (auto-scan 10:06 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATL | 5.86 | +8.32% | 52477 | Satellogic: no fresh catalyst found; snippets show stale 'Moderate Buy' consensus, ~$5.80 level. |
+| 2 | LUNR | 15.0 | +6.84% | 56481 | Intuitive Machines: no same-day catalyst found; space-sector bid (Lanteris deal is Nov-2025 news, stale). |
+| 3 | PL | 17.145 | +6.29% | 90970 | Planet Labs: no same-day catalyst found; prior snippets cite insider selling and defense-budget thesis. |
+| 4 | RKLB | 74.68 | +5.99% | 143431 | Rocket Lab: no same-day catalyst found; space-sector momentum, analyst PT $122 cited. |
+| 5 | STM | 56.465 | +5.56% | 194401 | STMicro: no same-day catalyst found; semis rebound after risk-off dip, closed $52.74 on 9/28. |
+| 6 | NBIS | 244.53 | +5.35% | 52267 | Nebius: no same-day catalyst found; AI-cloud demand/backlog narrative, up big in 2026. |
+| 7 | RDW | 11.125 | +5.2% | 106643 | Redwire: no same-day catalyst found; space/defense names catching a bid. |
+- Excluded: SYNA $120.88 +13.92% (vol 37,034 < 50k floor).
+- Deep dive on top 5 (cap 5); ranks 6-7 quick-scan only. Catalyst research thin: Apify snippets only, several scrapes failed.
+
+#### Deep dive: SATL $5.86 +8.32%
+- Catalyst: Satellogic: no fresh catalyst found; snippets show stale 'Moderate Buy' consensus, ~$5.80 level. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.
+- Why: Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).
+- Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
+- Horizon: SHORT_TERM, no confirmed durable thesis.
+- Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
+
+#### Deep dive: LUNR $15.0 +6.84%
+- Catalyst: Intuitive Machines: no same-day catalyst found; space-sector bid (Lanteris deal is Nov-2025 news, stale). Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.
+- Why: Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).
+- Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
+- Horizon: SHORT_TERM, no confirmed durable thesis.
+- Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
+
+#### Deep dive: PL $17.145 +6.29%
+- Catalyst: Planet Labs: no same-day catalyst found; prior snippets cite insider selling and defense-budget thesis. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.
+- Why: Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).
+- Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
+- Horizon: SHORT_TERM, no confirmed durable thesis.
+- Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
+
+#### Deep dive: RKLB $74.68 +5.99%
+- Catalyst: Rocket Lab: no same-day catalyst found; space-sector momentum, analyst PT $122 cited. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.
+- Why: Unconfirmed; likely sector-momentum read-through (space cluster LUNR/PL/RKLB/RDW/SATL all gapping together).
+- Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
+- Horizon: SHORT_TERM, no confirmed durable thesis.
+- Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
+
+#### Deep dive: STM $56.465 +5.56%
+- Catalyst: STMicro: no same-day catalyst found; semis rebound after risk-off dip, closed $52.74 on 9/28. Detail fetch limited: Apify returned only search snippets (some pages failed to scrape); no primary-source confirmation.
+- Why: Unconfirmed; likely semis rebound.
+- Impact: Thin premarket volume (<200k); cannot judge sustainability. Cluster move suggests sector beta, not name-specific news.
+- Horizon: SHORT_TERM, no confirmed durable thesis.
+- Opportunity cost: Research only. Would compete for 1 of max 3 weekly new trades / 6 slots; 2:1 R:R at 10% trail unverified after a gap-up open; a correlated space cluster would likely trip the corr gate with 2+ holdings.
