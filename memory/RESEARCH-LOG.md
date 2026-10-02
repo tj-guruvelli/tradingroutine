@@ -14887,3 +14887,6 @@ DPRO    B      Momentum confluence   daily swing   ADX14 21.8, EMA9 5.66 > EMA21
 
 ### Decision
 **HOLD.** No candidate meets >=2 confluence + documented catalyst; NFP binary event pre-open. Patience > activity.
+
+### Gappers (auto-scan 08:03 ET, cloud)
+- No hits: 0 watchlist names with |gap| >= 5% (price >= $3). Largest: OPEN +2.75%, ONDS -1.98%, NIO -1.02%. No deep dive; no notification.
