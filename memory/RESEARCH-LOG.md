@@ -15007,3 +15007,7 @@ Note: run at 11:03 ET (market open); Vol = snapshot volume, not premarket. Deep 
 ### Setup Scan (16:33 ET, cloud)
 - 60 symbols scanned, 0 errors. grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
 - 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit).
+
+### Setup Scan (18:33 ET, cloud)
+- 60 symbols scanned, 0 errors. grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit).
