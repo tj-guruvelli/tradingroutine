@@ -407,3 +407,46 @@ Template for each entry:
 - Confirm the Market-Open/EOD TRADE-LOG logging gap stays fixed next week before closing it out as resolved
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-10-02
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -0.22% (SPY proxy: $771.35 → $769.65, Alpaca daily bars, Fri Sep 25 close → Fri Oct 2 close) |
+| Bot vs S&P | +0.22% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a genuinely catalyst-dense week (Iran/Hormuz oil whiplash — spike then a -3 to -4% pre-mkt reversal Fri on a China fuel-export-halt and EU-stockpile headline, Friday NFP, Wed ISM Mfg PMI, NKE/ACN/CEG earnings reactions) — zero forced trades
+- Correctly disqualified NKE on the hard 200-SMA long-bias gate (Oct 2) — RSI14 25.02 oversold would normally align, but price sat ~32% below its 200-SMA, so the hard gate blocked a textbook mean-revert read rather than treating it as a dip-in-uptrend; CEG disqualified the same way (AMZN $3B nuclear-deal catalyst, but chase risk + below 200-SMA)
+- Correctly read the Oct 1-2 space-sector gap cluster (SATL/LUNR/PL/RKLB/RDW/BKSY, several +5-8%) as a single correlated sector-beta move that would trip the >0.75 correlation gate rather than treating each gapper as an independent signal
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- All 5 sessions logged clean Market-Open + EOD TRADE-LOG entries — 2nd consecutive clean week; the intermittent missing-entry pattern flagged in 7+ prior reviews did not recur
+### What Didn't Work
+- 14th consecutive zero-entry week (61 trading days since launch, Jul 9) — sat in 100% cash through a roughly flat (-0.22%) S&P week; the streak itself is now the dominant fact about this account, independent of this week's near-zero variance
+- `tradingview-data` MCP still down the entire week (9th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a 9th straight week this exact fix has been proposed and not shipped
+- **Directly re-confirmed this review** (not just HTTP 500 logs): `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still the literal placeholder strings `your_clickup_workspace_id_here` / `your_clickup_channel_id_here` in the live environment — the fallback notification channel has not delivered a single message since the bug was first found (Sep 18), now a 3rd straight week confirmed broken
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (91st+ straight session / 14th consecutive weekly review), still unresolved — no operator response yet
+- Apify RAG web browser catalyst research degraded again (Oct 1-2): most gapper deep-dives returned "no same-day catalyst found" off stale snippets only, with several page scrapes failing outright — catalyst confirmation is increasingly snippet-guesswork rather than primary-source
+### Key Lessons
+- A second straight catalyst-dense week (Iran/Hormuz whiplash, NFP, ISM, a 3-name earnings cluster) with zero entries again shows the confluence + hard 200-SMA gate is doing real filtering, not defaulting to HOLD only because the MCP is down — NKE's oversold-RSI-but-below-200-SMA rejection is the clearest example yet of the hard gate overriding a tempting single-indicator read
+- The ClickUp channel being directly confirmed as still-placeholder (not just inferred from repeated 500s) means this review's own STEP 6 send is expected to fail again — this needs an actual operator credential fix, not another log entry
+- 14 weeks / 91+ sessions of an unreconciled $10k-vs-$100k baseline has now outlasted every other open item in this review's history — it is the single most overdue unresolved item across the whole challenge to date
+### Adjustments for Next Week
+- Escalate the $10k vs $100k baseline mismatch as the top-priority operator item (14th week flagged, 91+ straight sessions, zero response) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Fix `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — directly confirmed still placeholder strings this review, 3rd straight week broken
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 9th straight week, still the top open infra item after the baseline/ClickUp fixes
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves; discipline held under two straight weeks of real catalysts
+### Overall Grade: C
