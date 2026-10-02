@@ -1320,3 +1320,58 @@ $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-09-30`, equity/cash unchanged at $100,000). Weekly trade count: 0/3 (week of Sep 28). 60th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 89th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing ≥2 of 4 confluence indicators; keep watching XOM/CVX energy momentum and AMPX for a bounce off 200-SMA. STEP 5 ClickUp notification failed again — HTTP 500 (same unresolved issue as Sep 21-30); sent via Telegram (primary channel) instead — delivered successfully.
+
+### Oct 02, Market-Open (Day 61, Friday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-01`).
+
+STEP 1 candidates: today's RESEARCH-LOG (2026-10-02 Pre-Market, decision
+HOLD) — XOM/CVX (oil pulling back -3 to -4% pre-mkt on Iran/China-export-halt
+reversal, catalyst weakening not strengthening vs yesterday), NKE
+(post-earnings reaction watch, 12-yr lows, no pre-defined edge), CEG (AMZN
+$3B nuclear-deal catalyst, but already +3.5% the prior session — chase
+risk, needs pullback + confluence check). Two gappers auto-scans today
+(08:03, 09:04 ET) both returned 0 qualifying watchlist names.
+
+STEP 2: ran `scripts/setup-scan-cloud.mjs` fresh inline (no same-day file
+existed at run time) → `data/setup-scan_cloud_2026-10-02_0942ET.json`, 60
+candidates checked, grade A unreachable (09:42 ET, outside 10:00-15:30 ET
+window), 0 grade-B hits — no scanner candidates to merge today.
+
+Merged candidate list: XOM, CVX, NKE, CEG (4 total, all from STEP 1). All
+re-validated live (`alpaca.sh account`/`positions` + quotes, ~09:43 ET)
+with RSI14/SMA200 computed directly from Alpaca daily bars —
+`tradingview-data` MCP not loaded this session (confirmed via tool
+search), same fallback used every session since Sep 22.
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, AND price > 200-SMA is a hard
+long-bias gate independent of the count):
+- **XOM** $169.53 (ask) — catalyst documented but weakening (oil now
+  falling, not spiking). RSI14 53.55 — neutral, no align. Last close
+  $163.34 > 200-SMA $149.09 — 1 align. No VWAP/insider data. 1 of 4 —
+  fails, skip.
+- **CVX** $206.61 (ask) — same catalyst, same weakening read. RSI14 51.29
+  — neutral, no align. Last close $206.50 > 200-SMA $186.63 — 1 align. 1
+  of 4 — fails, skip.
+- **NKE** $33.09 (ask) — catalyst documented (post-earnings reaction,
+  12-yr lows). RSI14 25.02 — oversold, would normally align, but last
+  close $32.95 < 200-SMA $48.71 — **fails the long-bias filter outright**
+  (TRADING-STRATEGY.md: "only long when price > 200-SMA on daily"), a
+  harder disqualifier than the confluence count. 0 of 4 — fails, skip
+  regardless of RSI oversold signal.
+- **CEG** $256.30 (ask) — catalyst documented (AMZN $3B nuclear deal), but
+  already +3.5% prior session, chase risk flagged. RSI14 41.33 — neutral,
+  no align. Last close $256.40 < 200-SMA $287.78 — **fails the long-bias
+  filter outright**, same hard gate as NKE. 0 of 4 — fails, skip.
+
+All 4 candidates fail: XOM/CVX capped at 1 of 4 confluence indicators
+(200-SMA only, RSI neutral); NKE and CEG both independently fail the
+200-SMA long-bias filter (NKE despite an oversold RSI14 25.02 — a
+textbook mean-revert read that the hard gate still blocks, since price is
+32% below its 200-SMA, not a dip within an uptrend). No planned tickers
+executed — STEPs 5-6 skipped. Weekly trade count: 0/3 (week of Sep 28).
+61st trading day since launch (Jul 9) with zero entries. Equity flat at
+$100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
+27, unresolved 90th+ straight session, operator review pending. STEP 8
+(notification) N/A — no trade fired this run.
