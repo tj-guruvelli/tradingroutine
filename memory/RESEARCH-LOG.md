@@ -15081,3 +15081,40 @@ Note: only 2 hits >=5%/>=$3. Vol field is `volume` (no premarket_volume); both <
 - Impact: below-average volume; long-only strategy, gap-down not an entry
 - Horizon: SHORT_TERM, no confirmed thesis
 - Opportunity cost: cannot clear 2:1 R:R at 10% trail; no action
+
+### Gappers (auto-scan 11:03 ET, cloud)
+Note: ran at 11:03 ET, so Vol = session volume. AGMH +56.4% ($1.095) excluded (<$3). Only 4 rows passed; deep-dive cap 5 not reached (all 4 got deep dive). Catalyst sourcing thin.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | 5.755 | +11.10 | 5,081 | None verified; ticker ambiguous (Alpha Pro Tech?) |
+| 2 | SATL | 5.305 | -7.34 | 119,935 | None same-day; Q3-25 rev +29% background |
+| 3 | DPRO | 5.00 | -5.48 | 40,292 | None same-day; fading earlier $10M investment pop |
+| 4 | LAKE | 10.84 | +5.04 | 722 | None found |
+
+#### Deep dive: APT $5.755 +11.1%
+- Catalyst: No same-day news found; searches returned crypto APT/USD and unrelated results. Unverified.
+- Why: Unknown; looks like thin-liquidity drift.
+- Impact: 5,081 shares is negligible; likely mean-reverts.
+- Horizon: SHORT_TERM, no thesis.
+- Opportunity cost: Illiquid, unresolved ticker, fails Entry Checklist; no 2:1 R:R. No action.
+
+#### Deep dive: SATL $5.305 -7.34%
+- Catalyst: No fresh news. Background: 3Q25 revenue +29% to $3.6M, opex -18%; ~$5.80 Friday on Moderate Buy consensus.
+- Why: Likely profit-taking/sympathy weakness in high-beta space names.
+- Impact: ~120k shares, modest; gap-down on no news is likely noise.
+- Horizon: SHORT_TERM, no confirmed thesis.
+- Opportunity cost: Long-only, gap-down not an entry; cannot clear 2:1 R:R at 10% trail. No action.
+
+#### Deep dive: DPRO $5.00 -5.48%
+- Catalyst: No fresh news. Earlier $10M strategic investment lifted shares ~5% about a week ago. Fundamentals query returned only a landing page.
+- Why: Fade of the headline-driven pop in a high-beta drone small-cap.
+- Impact: ~40k shares, thin; reads as headline fade, not thesis break.
+- Horizon: SHORT_TERM, headline-driven.
+- Opportunity cost: Gap-down, thin, no thesis; AVAV/KTOS are better drone exposure. No action.
+
+#### Deep dive: LAKE $10.84 +5.04%
+- Catalyst: None found. Quotes: $12.03 (Aug 7), ~$10.29 (Sep 19), ~$10.84 today.
+- Why: Unknown; rebound in a micro-cap on 722 shares.
+- Impact: Volume effectively zero; ignore.
+- Horizon: SHORT_TERM, no catalyst.
+- Opportunity cost: Too thin to trade; no 2:1 R:R assessment possible. No action.
