@@ -1,37 +1,20 @@
 {
-  "scanned_at": "2026-10-05T13:05:23Z",
+  "scanned_at": "2026-10-05T14:04:20Z",
   "deep_dive_cap": 5,
-  "note": "Apify returned stale/empty results and Benzinga returned 403; catalysts not verified.",
   "gappers": [
-    {
-      "rank": 1,
-      "symbol": "ONDS",
-      "price": 7.54,
-      "gap_pct": 5.9,
-      "premarket_volume": 1692624,
-      "catalyst": null,
-      "headlines": [],
-      "catalyst_detail": null,
-      "why": null,
-      "impact": "Volume 1.69M is substantial for a ~$7 name, but without a verified catalyst sustainability is unknown.",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "Catalyst unverified; treat as headline-driven until confirmed.",
-      "opportunity_cost": "No open positions, 0/3 weekly trades, so nothing displaced; cannot assess 2:1 R:R or entry checklist without a verified catalyst. Research only."
-    },
-    {
-      "rank": 2,
-      "symbol": "NBIS",
-      "price": 243.91,
-      "gap_pct": 5.08,
-      "premarket_volume": 224199,
-      "catalyst": null,
-      "headlines": [],
-      "catalyst_detail": null,
-      "why": null,
-      "impact": "Thin premarket volume (224k). Likely AI-infrastructure sector momentum (peer read-through unverified).",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "Catalyst unverified; treat as momentum/headline-driven until confirmed.",
-      "opportunity_cost": "No open positions, 0/3 weekly trades, so nothing displaced; cannot assess 2:1 R:R or entry checklist without a verified catalyst. Research only."
-    }
+    {"rank": 1, "symbol": "APT", "price": 5.565, "gap_pct": 7.43, "premarket_volume": 2787,
+     "catalyst": "No catalyst found; latest headline search shows none (page: 'no headlines available').", "headlines": [],
+     "catalyst_detail": "No news catalyst identified. Alpha Pro Tech (protective apparel/building supply) operating income rose 11.3% to $3.84M in 2025 per a search snippet; last close ~$5.07-5.18. Search scrapes mostly failed (HTTP 500), so detail is thin.",
+     "why": "Unknown; with only 2,787 shares traded the move looks like thin-liquidity drift, not information-driven buying.",
+     "impact": "Not sustainable-looking: sub-3k volume on a ~$5 microcap. Likely to mean-revert or be noise. No sector read-through found.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Fails liquidity sanity check; no catalyst to support a 2:1 R:R. Would displace nothing worth displacing; not worth a weekly trade slot (3/week cap)."},
+    {"rank": 2, "symbol": "SATL", "price": 5.345, "gap_pct": -6.64, "premarket_volume": 38696,
+     "catalyst": "No fresh catalyst found; Cantor Fitzgerald reiterated Overweight, $9 PT on 2026-09-21.", "headlines": ["Cantor Fitzgerald reiterates Satellogic Overweight, $9 PT (Sep 21, 2026)"],
+     "catalyst_detail": "No same-day news found. Satellogic (geospatial/Earth-observation satellites) had a volatile stretch, closing $5.53 (-1.25%) after a -5.7% day per a recent snippet; 3Q25 revenue was $3.6M (+29%). Search page scrapes failed (HTTP 500), so only snippets used.",
+     "why": "Likely continuation of recent volatility/profit-taking in high-beta space names; no confirmed mechanism.",
+     "impact": "Below-average premarket volume (38.7k); gap down on thin tape, no confirmed read-through. Long-only strategy: a downside gap is not an entry.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Stocks-only/long bias: a gap-down with no catalyst is not actionable. Speculative small-cap space name vs. the 10% trail rule would risk frequent stop-outs; cannot clear 2:1 R:R."}
   ]
 }

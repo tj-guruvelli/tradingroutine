@@ -15059,3 +15059,25 @@ Only 2 hits; deep dive on both (cap 5). Catalyst research failed, so fields belo
 - Impact: thin premarket volume (224k)
 - Horizon: SHORT_TERM, catalyst unverified
 - Opportunity cost: no positions, 0/3 weekly trades; R:R not assessable without catalyst
+
+### Gappers (auto-scan 10:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | APT | 5.57 | +7.43 | 2,787 | none found (no headlines) |
+| 2 | SATL | 5.35 | -6.64 | 38,696 | none fresh; Cantor Overweight $9 PT reiterated 9/21 |
+
+Note: only 2 hits >=5%/>=$3. Vol field is `volume` (no premarket_volume); both <50k, kept. Apify page scrapes returned HTTP 500; used search snippets only. Deep-dive for 2 (fewer than cap 5).
+
+#### Deep dive: APT $5.57 +7.43%
+- Catalyst: none identified; 2025 operating income +11.3% to $3.84M per snippet
+- Why: unknown; 2,787-share volume suggests thin-liquidity noise
+- Impact: not sustainable-looking; likely mean-revert
+- Horizon: SHORT_TERM, no catalyst, illiquid
+- Opportunity cost: fails liquidity/2:1 R:R check; not worth a weekly trade slot
+
+#### Deep dive: SATL $5.35 -6.64%
+- Catalyst: no same-day news; recent volatility, Cantor Overweight $9 PT (9/21)
+- Why: likely profit-taking/continuation in high-beta space names
+- Impact: below-average volume; long-only strategy, gap-down not an entry
+- Horizon: SHORT_TERM, no confirmed thesis
+- Opportunity cost: cannot clear 2:1 R:R at 10% trail; no action
