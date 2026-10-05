@@ -15037,3 +15037,25 @@ Note: run at 11:03 ET (market open); Vol = snapshot volume, not premarket. Deep 
 
 ### Gappers (auto-scan 08:16 ET, cloud)
 No watchlist tickers with |gap| >= 5% (scan returned []). No deep dive.
+
+### Gappers (auto-scan 09:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ONDS | 7.54 | +5.90 | 1,692,624 | n/a (Apify unusable, Benzinga 403) |
+| 2 | NBIS | 243.91 | +5.08 | 224,199 | n/a (Apify results stale/undated, Benzinga 403) |
+
+Only 2 hits; deep dive on both (cap 5). Catalyst research failed, so fields below are unverified.
+
+#### Deep dive: ONDS $7.54 +5.9%
+- Catalyst: unverified (fetch failed)
+- Why: unknown
+- Impact: 1.69M volume is heavy for a ~$7 name; sustainability unknown
+- Horizon: SHORT_TERM, catalyst unverified, treat as headline-driven
+- Opportunity cost: no positions, 0/3 weekly trades; R:R not assessable without catalyst
+
+#### Deep dive: NBIS $243.91 +5.08%
+- Catalyst: unverified (fetch failed)
+- Why: unknown; likely AI-infra sector momentum
+- Impact: thin premarket volume (224k)
+- Horizon: SHORT_TERM, catalyst unverified
+- Opportunity cost: no positions, 0/3 weekly trades; R:R not assessable without catalyst

@@ -1,1 +1,37 @@
-{"scanned_at":"2026-10-05T12:16:47Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-10-05T13:05:23Z",
+  "deep_dive_cap": 5,
+  "note": "Apify returned stale/empty results and Benzinga returned 403; catalysts not verified.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ONDS",
+      "price": 7.54,
+      "gap_pct": 5.9,
+      "premarket_volume": 1692624,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": "Volume 1.69M is substantial for a ~$7 name, but without a verified catalyst sustainability is unknown.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Catalyst unverified; treat as headline-driven until confirmed.",
+      "opportunity_cost": "No open positions, 0/3 weekly trades, so nothing displaced; cannot assess 2:1 R:R or entry checklist without a verified catalyst. Research only."
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 243.91,
+      "gap_pct": 5.08,
+      "premarket_volume": 224199,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": "Thin premarket volume (224k). Likely AI-infrastructure sector momentum (peer read-through unverified).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Catalyst unverified; treat as momentum/headline-driven until confirmed.",
+      "opportunity_cost": "No open positions, 0/3 weekly trades, so nothing displaced; cannot assess 2:1 R:R or entry checklist without a verified catalyst. Research only."
+    }
+  ]
+}
