@@ -1382,3 +1382,47 @@ $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-10-01`, equity/cash unchanged at $100,000). Market-open decision was HOLD — XOM/CVX/NKE/CEG all failed (XOM/CVX capped at 1 of 4 confluence indicators; NKE and CEG both independently failed the 200-SMA long-bias filter). Midday scan touched only RESEARCH-LOG, no theses reopened, no trades. Weekly trade count: 0/3 (week of Sep 28, week closes out at zero). 61st trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 91st+ straight session, operator review pending. Tomorrow: weekend, no session; Monday pre-market re-scan for a candidate clearing ≥2 of 4 confluence indicators, keep watching XOM/CVX energy momentum.
+
+### Oct 05, Market-Open (Day 62, Monday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-02`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-05 Pre-Market, decision HOLD) —
+trade ideas XOM, CVX, RKLB, all flagged as not yet clearing confluence.
+
+STEP 2: most recent setup-scan file is `data/setup-scan_cloud_2026-10-02_1833ET.json`
+(today's file does not exist yet) — `hits: []`, zero scanner candidates to merge.
+
+Merged candidate list: XOM, CVX, RKLB (3 total, all from STEP 1). Re-validated
+live (`alpaca.sh account`/`positions` + quotes, ~09:42 ET) with RSI14/SMA200
+computed fresh from Alpaca daily bars (`tradingview-data` MCP not loaded this
+session, same fallback as every session since Sep 22).
+
+Pass/fail (TRADING-STRATEGY.md Entry Checklist confluence rule: ≥2 of
+{VWAP, RSI, 200-SMA, insider} must align, AND price > 200-SMA is a hard
+long-bias gate independent of the count):
+- **XOM** $162.07 (ask) — catalyst documented but weakening (oil fading,
+  Saudi OSP cut). RSI14 46.38 — neutral, no align. Last close $162.03 >
+  SMA200 $149.33 — 1 align. No VWAP/insider data. 1 of 4 — fails, skip.
+- **CVX** $203.05 (ask) — same catalyst, same weakening read. RSI14 32.31
+  — close to oversold but not <30, no align. Last close $202.92 > SMA200
+  $186.92 — 1 align. 1 of 4 — fails, skip.
+- **RKLB** $72.37 (ask) — catalyst undocumented beyond general "space
+  bid" (no quantified event), correlation-gate risk vs other space names
+  unresolved. Last close $72.71 < SMA200 $81.50 — **fails the long-bias
+  filter outright** (TRADING-STRATEGY.md: "only long when price >
+  200-SMA on daily"). 0 of 4 — fails, skip regardless of catalyst framing.
+
+All 3 candidates fail: XOM/CVX capped at 1 of 4 confluence indicators
+(200-SMA only, RSI neutral/near-but-not-oversold); RKLB independently
+fails the 200-SMA long-bias filter (down ~3% from premarket $74.84 to
+$72.37, widening the gap below its 200-SMA). No planned tickers
+executed — STEPs 5-6 skipped. Gappers auto-scans (08:16, 09:05 ET) flagged
+ONDS (+5.9%) and NBIS (+5.1%) but both carry unverified catalysts (Apify
+fetch failed, Benzinga 403) per today's RESEARCH-LOG — out of scope for
+this run (not setup-scan hits, no documented catalyst to clear STEP 4).
+Weekly trade count: 0/3 (week of Oct 5). 62nd trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 92nd+
+straight session, operator review pending. STEP 8 (notification) N/A —
+no trade fired this run.
