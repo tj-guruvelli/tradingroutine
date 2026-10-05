@@ -15032,3 +15032,8 @@ Note: run at 11:03 ET (market open); Vol = snapshot volume, not premarket. Deep 
 **Risks:** ISM Services print at 10:00; softer-labor/rate-path repricing; oil downtrend hurts energy ideas; early futures gains fading.
 
 **Decision: HOLD** — no candidate meets confluence; weekly trades 0/3. No notification (nothing urgent).
+
+## 2026-10-05
+
+### Gappers (auto-scan 08:16 ET, cloud)
+No watchlist tickers with |gap| >= 5% (scan returned []). No deep dive.
