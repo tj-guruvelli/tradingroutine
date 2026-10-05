@@ -15011,3 +15011,24 @@ Note: run at 11:03 ET (market open); Vol = snapshot volume, not premarket. Deep 
 ### Setup Scan (18:33 ET, cloud)
 - 60 symbols scanned, 0 errors. grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
 - 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit).
+
+### 2026-10-05 — Pre-Market Research (cloud)
+**Fallback:** Apify RAG returned empty/garbage (Google redirect stubs, 3 failed scrapes) — used native WebSearch for market context; no Yahoo sources.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | 0 positions | 0 open orders | (daytrade count not returned; no trades). Still the live-vs-$10k baseline mismatch, unresolved.
+
+**Market context:**
+- Brent ~$101.25-101.75 (-0.5/-0.9%) — Saudi cut Asia OSP, supply flows up. WTI not retrieved (gap).
+- S&P fut ~7,783 (+0.77% early, later ~-0.1% fade); Nasdaq fut +1.07% early → flat; Dow fut +0.5%.
+- VIX 15.33 (-6.5%) — calm.
+- Tone: softer US labor data eased Fed-hike pressure; Asia +1%, Nikkei +2%, Treasuries bid.
+- Releases: ISM Services PMI 10:00 ET. No major earnings found. Sector YTD momentum: not retrieved (gap).
+
+**Trade ideas (none cleared yet; need ≥2 of 4 confluence + price > 200-SMA):**
+1. XOM — catalyst weakening (oil falling); entry ~pullback, stop 10% trail, target 2:1. Last check 1/4 confluence → watch only.
+2. CVX — same as XOM; 1/4 previously.
+3. RKLB $74.84 — space bid, strong fundamentals, financing overhang; needs pullback entry, would hit corr gate with other space names. Unverified vs 200-SMA.
+
+**Risks:** ISM Services print at 10:00; softer-labor/rate-path repricing; oil downtrend hurts energy ideas; early futures gains fading.
+
+**Decision: HOLD** — no candidate meets confluence; weekly trades 0/3. No notification (nothing urgent).
