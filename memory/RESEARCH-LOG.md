@@ -15127,3 +15127,19 @@ move to investigate; today's gappers auto-scans (08:16/09:05/10:04/11:03 ET)
 already covered the day's movers (ONDS, NBIS, APT, SATL, DPRO, LAKE), none
 with a verified catalyst or 2:1 R:R setup per their deep-dives above. No
 action taken this run.
+
+### Setup Scan (16:33 ET, cloud)
+grade_a_possible: false (16:33 ET outside 10:00-15:30 ET intraday-breakout
+window) — Setup A not evaluated, grade A unreachable this run. 60/60
+watchlist tickers checked, 0 errors. 2 grade-B hits (Setup B only: ADX14>20
+AND EMA9>EMA21), 0 grade-C hits.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SYNA | B | Momentum confluence | daily swing | px $120.85, ADX 21.3, EMA9 $104.59 > EMA21 $100.99, RSI 71.9 |
+| BCI | B | Momentum confluence | daily swing | px $25.95, ADX 27.1, EMA9 $26.06 > EMA21 $26.04, RSI 48.6 |
+
+0 grade-A hits this run — no Telegram/ClickUp alert sent (rule: notify only
+on >=1 grade-A hit). Candidates saved to
+`data/setup-scan_cloud_2026-10-05_1633ET.json` for `market-open.md` to pick
+up next session. No orders placed.
