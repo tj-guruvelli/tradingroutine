@@ -15183,3 +15183,52 @@ up next session. No orders placed.
 
 ### Gappers (auto-scan 09:04 ET, cloud)
 - No gappers: 0 rows with |gap| >= 5% (largest ONDS +3.66%, OPEN -3.7%, ASTS +3.15%). No deep dive.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+Deep-dive cap: top 5; ranks 6-9 quick-scan only. Only 9 rows qualified (AGMH -20.96% excluded, price<$3). Catalysts mostly unverified (Apify returned stale or irrelevant pages); deep dives skip the second fundamentals query for that reason.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 64.685 | +10.63 | 133067 | No verified company-specific catalyst (Apify returned irrelevant pages); space-sector sympathy bid. |
+| 2 | PL | 18.74 | +7.89 | 60091 | No verified same-day catalyst; Apify snippets stale (Feb/Jul 2026). Space-sector sympathy. |
+| 3 | OKLO | 38.37 | +6.64 | 57478 | No verified same-day catalyst; snippets undated (Aurora fuel/reactor-test news, Barclays PT cut). Unconfirmed. |
+| 4 | RDW | 11.12 | +6.62 | 115515 | No verified same-day catalyst; last dated item Sep 30 Sophia Space MOU on orbital data centers. Space-sector sympathy. |
+| 5 | NBIS | 247.38 | +6.41 | 98307 | No verified same-day catalyst; snippets stale (Aug PT cut, prior-session AI rally). AI-infra beta. |
+| 6 | RKLB | 77.725 | +6.36 | 154664 | No company-specific catalyst; snippet notes a sector-wide rally in pure-play space names (PL +6%, ASTS +4%). |
+| 7 | BKSY | 22.72 | +6.12 | 20054 | No verified catalyst; only stale price pages. Space-sector sympathy. |
+| 8 | SATL | 5.675 | +6.07 | 47241 | No verified catalyst (a snippet cites a +22% day, date unclear). Sector sympathy. |
+| 9 | LUNR | 15.115 | +5.70 | 50764 | Catalyst fetch returned nothing usable (Apify run timed out); not retried. |
+
+#### Deep dive: ASTS $64.685 +10.63%
+- Catalyst: Unverified: no company news found. Move coincides with 5 other space names gapping 6-11% the same morning.
+- Why: Likely sector-wide space/satellite momentum bid rather than a name-specific event.
+- Impact: Pre-open volume 133k is thin against a $64 stock; sector-wide gap with no named catalyst reads as fadeable. Peers PL/RDW/RKLB/BKSY/SATL/LUNR all gapping.
+- Horizon: SHORT_TERM, Sympathy move, no documented catalyst; do not carry on this evidence.
+- Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
+
+#### Deep dive: PL $18.74 +7.89%
+- Catalyst: Unverified: Apify returned only stale items (Feb 2026 defense-budget thesis, July price page). No same-day news found.
+- Why: Space-sector sympathy; backlog/defense-budget narrative is background, not today's trigger.
+- Impact: Volume 60k thin; part of a 7-name sector gap, so correlated and likely to fade together.
+- Horizon: SHORT_TERM, No same-day catalyst verified.
+- Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
+
+#### Deep dive: OKLO $38.37 +6.64%
+- Catalyst: Unverified: snippets mention Aurora fuel/plutonium reactor-test developments and a Barclays PT cut, none dated today.
+- Why: Nuclear-power momentum may be a different theme from the space cluster; cause of today's gap unknown.
+- Impact: Volume 57k modest. Nuclear is a separate theme from the other gappers, so less sector read-through.
+- Horizon: SHORT_TERM, Catalyst unconfirmed; thesis not established.
+- Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
+
+#### Deep dive: RDW $11.12 +6.62%
+- Catalyst: Latest dated item is a Sep 30 MOU with Sophia Space on orbital data centers for US agencies. Nothing found for today.
+- Why: Orbital-compute narrative plus sector sympathy; MOU is non-binding.
+- Impact: Volume 115k relatively healthy for a $11 stock; still part of the sector-wide gap.
+- Horizon: SHORT_TERM, MOU is non-binding and not today's news; wait for a hard contract.
+- Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
+
+#### Deep dive: NBIS $247.38 +6.41%
+- Catalyst: Unverified: no same-day news. Snippets are stale (Aug PT cut to $175; a prior-session +7.5% AI rally).
+- Why: AI-infra beta riding broader AI strength; no named trigger.
+- Impact: Volume 98k; $247 is far above the Aug $175 target cited, so extended and prone to mean-revert.
+- Horizon: SHORT_TERM, No documented catalyst.
+- Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
