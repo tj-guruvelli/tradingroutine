@@ -15278,3 +15278,15 @@ Only 4 hits (AGMH <$3, LAKE vol 2.8k <50k excluded). Deep dive on all 4 (cap 5);
 - Impact: 158k volume; modest 6% gap, same sector basket as ASTS.
 - Horizon: SHORT_TERM, No documented catalyst.
 - Opportunity cost: Research only. Needs a verified catalyst to pass the Entry Checklist; four correlated gappers (AI-power/space) would breach the correlation gate if more than one were taken; 2:1 R:R at a 10% trail is doubtful on an extended gap.
+
+### Setup Scan (16:33 ET, cloud)
+`grade_a_possible`: false (16:33 ET outside 10:00-15:30 ET window) — Setup A not evaluated, 0 errors, 60 candidates checked.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SYNA | B | Momentum confluence | daily swing | ADX 23.8, EMA9 107.62 > EMA21 102.69, RSI 69.9, px $103.02 |
+| HAFN | B | Momentum confluence | daily swing | ADX 25.6, EMA9 9.81 > EMA21 9.44, RSI 69.6, px $10.19 |
+| CMBT | B | Momentum confluence | daily swing | ADX 29.6, EMA9 19.49 > EMA21 19.22, RSI 66.4, px $19.77 |
+| SATL | B | Momentum confluence | daily swing | ADX 26.5, EMA9 5.57 > EMA21 5.44, RSI 49.5, px $5.51 |
+
+No grade-A hits this run (expected — fired outside the Setup-A window). No Telegram alert sent per rule (0 grade-A hits).
