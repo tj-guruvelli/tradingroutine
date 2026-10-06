@@ -15175,3 +15175,8 @@ up next session. No orders placed.
 - BCI (grade B, RSI 48.6) — needs documented catalyst before any entry; stop -8%, target 2:1.
 **Risks:** missing oil/futures data, extended S&P streak (pullback risk), CPI next week, account-size mismatch.
 **Decision: HOLD.** No documented catalyst + confluence; patience > activity. Weekly trades 0/3.
+
+## 2026-10-06
+
+### Gappers (auto-scan 08:05 ET, cloud)
+- No gappers: 0 rows with |gap| >= 5% (largest ONDS +3.66%, OPEN -3.5%).
