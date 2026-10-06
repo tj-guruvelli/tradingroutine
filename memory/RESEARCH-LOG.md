@@ -15180,3 +15180,6 @@ up next session. No orders placed.
 
 ### Gappers (auto-scan 08:05 ET, cloud)
 - No gappers: 0 rows with |gap| >= 5% (largest ONDS +3.66%, OPEN -3.5%).
+
+### Gappers (auto-scan 09:04 ET, cloud)
+- No gappers: 0 rows with |gap| >= 5% (largest ONDS +3.66%, OPEN -3.7%, ASTS +3.15%). No deep dive.
