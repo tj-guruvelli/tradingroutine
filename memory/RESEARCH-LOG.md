@@ -15159,3 +15159,19 @@ AND EMA9>EMA21), 0 grade-C hits.
 on >=1 grade-A hit). Candidates saved to
 `data/setup-scan_cloud_2026-10-05_1834ET.json` for `market-open.md` to pick
 up next session. No orders placed.
+
+### 2026-10-06 — Pre-market Research (cloud)
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | daytrade count 0 | positions 0 | open orders 0 (balance_asof 2026-10-05). Still the $100k-vs-$10k baseline mismatch flagged Jul 27 — operator review pending.
+**Source note:** Apify RAG returned off-topic/empty pages for oil, futures, catalysts (Yahoo suffix applied; no Yahoo URLs used). VIX query succeeded; rest fell back to WebSearch. Data below is partial and low-confidence.
+**Market context:**
+- VIX ~17.7 (Capital.com CFD quote, indicative; -0.8%) — calm.
+- Oil: GAP — no same-day WTI/Brent print found. Last datapoints are early Sept (WTI ~$89-91, Brent ~$94-95) — stale, not usable.
+- Futures: GAP — search results mixed dates; no reliable Oct 6 premarket read. Unverified chatter: S&P on a 7-day win streak, rate-cut/M&A optimism.
+- Releases today: none found. Ahead: CPI Oct 14, PPI Oct 15, big banks (JPM/GS/C) earnings Oct 13.
+- Sector momentum YTD: not researched this run (gap).
+**Trade ideas (none actionable, all unverified catalysts):**
+- XOM/CVX energy — watch only; 1 of 4 confluence last session, oil print missing today. Entry only on RSI<30 + catalyst; stop -8%, target 2:1.
+- SYNA (setup-scan grade B, RSI 71.9 overbought) — no new long >70 RSI; wait for pullback to EMA9 ~$104.6, stop -8%, target 2:1.
+- BCI (grade B, RSI 48.6) — needs documented catalyst before any entry; stop -8%, target 2:1.
+**Risks:** missing oil/futures data, extended S&P streak (pullback risk), CPI next week, account-size mismatch.
+**Decision: HOLD.** No documented catalyst + confluence; patience > activity. Weekly trades 0/3.
