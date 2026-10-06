@@ -15232,3 +15232,41 @@ Deep-dive cap: top 5; ranks 6-9 quick-scan only. Only 9 rows qualified (AGMH -20
 - Impact: Volume 98k; $247 is far above the Aug $175 target cited, so extended and prone to mean-revert.
 - Horizon: SHORT_TERM, No documented catalyst.
 - Opportunity cost: Flat account (0 positions, 0/3 weekly trades), so nothing displaced. Sector gap with no verified catalyst fails the Entry Checklist catalyst test; correlated with the 5 other space names (corr-gate would block). 2:1 R:R at a 7-10% stop needs a 14-20% target, unproven on an unexplained gap. Research only.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | OKLO | 39.06 | +8.56% | 141k | No same-day catalyst found; snippets stale (Jul $200M federal nuclear initiative with Microsoft/Nvidia; AI-power demand narrative). |
+| 2 | NBIS | 251.8 | +8.31% | 188k | No same-day catalyst found; snippets stale (prior +7.5% AI rally to $226.39 after Nvidia results; one -4.2% day). |
+| 3 | ASTS | 63.31 | +8.28% | 217k | No same-day catalyst found; snippets stale (Aug satellite launch news; space stocks mixed). |
+| 4 | PL | 18.42 | +6.04% | 157k | No same-day catalyst found; snippets stale (Feb defense-budget thesis; recent ~$21 closes, so this level is lower). |
+
+Only 4 hits (AGMH <$3, LAKE vol 2.8k <50k excluded). Deep dive on all 4 (cap 5); no ranks 6-10. Catalysts unverified: Apify returned stale snippets only.
+
+#### Deep dive: OKLO $39.06 +8.56%
+- Catalyst: Unverified: only stale July/Aug items surfaced; no news explaining today's move.
+- Why: Likely sympathy with the AI-power/nuclear and speculative-momentum group; no named trigger.
+- Impact: 141k premarket volume is meaningful, but without a catalyst it reads as sector beta that may fade.
+- Horizon: SHORT_TERM, No documented catalyst.
+- Opportunity cost: Research only. Needs a verified catalyst to pass the Entry Checklist; four correlated gappers (AI-power/space) would breach the correlation gate if more than one were taken; 2:1 R:R at a 10% trail is doubtful on an extended gap.
+
+#### Deep dive: NBIS $251.8 +8.31%
+- Catalyst: Unverified: no same-day headline; snippets cite an earlier AI rally and a later -4.2% drop.
+- Why: AI-infrastructure beta riding broader AI strength.
+- Impact: 188k volume; a $20 gap on a ~$250 stock with no catalyst is extended and prone to mean-revert; peers OKLO/ASTS also gapping.
+- Horizon: SHORT_TERM, No documented catalyst.
+- Opportunity cost: Research only. Needs a verified catalyst to pass the Entry Checklist; four correlated gappers (AI-power/space) would breach the correlation gate if more than one were taken; 2:1 R:R at a 10% trail is doubtful on an extended gap.
+
+#### Deep dive: ASTS $63.31 +8.28%
+- Catalyst: Unverified: no same-day headline found; search returned stale Aug launch news.
+- Why: Speculative space-sector momentum; no named trigger.
+- Impact: 218k volume, highest of the group; correlated with PL and OKLO gaps, so a basket move rather than idiosyncratic news.
+- Horizon: SHORT_TERM, No documented catalyst.
+- Opportunity cost: Research only. Needs a verified catalyst to pass the Entry Checklist; four correlated gappers (AI-power/space) would breach the correlation gate if more than one were taken; 2:1 R:R at a 10% trail is doubtful on an extended gap.
+
+#### Deep dive: PL $18.42 +6.04%
+- Catalyst: Unverified: no same-day headline; only older defense-budget thesis and prior-close articles.
+- Why: Space/defense sector read-through from ASTS-type moves.
+- Impact: 158k volume; modest 6% gap, same sector basket as ASTS.
+- Horizon: SHORT_TERM, No documented catalyst.
+- Opportunity cost: Research only. Needs a verified catalyst to pass the Entry Checklist; four correlated gappers (AI-power/space) would breach the correlation gate if more than one were taken; 2:1 R:R at a 10% trail is doubtful on an extended gap.
