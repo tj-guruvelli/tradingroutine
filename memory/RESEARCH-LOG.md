@@ -15339,3 +15339,17 @@ Only 1 of ~60 watchlist names cleared the 5% / $3 filter. Deep-dive cap 5 (1 nam
 - Impact: Crypto-beta move, likely tracks ETH; not a durable thesis. Read-through to other crypto-treasury names.
 - Horizon: SHORT_TERM, headline/crypto-beta driven, no structural catalyst.
 - Opportunity cost: Crypto-proxy with no documented catalyst fails Entry Checklist; flat account so nothing displaced, but a gap-down long can't clear 2:1 R:R at a 10% trail. Research only.
+
+### Gappers (auto-scan 09:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | 24.81 | -7.46 | 1,032,351 | None found same-day (Apify results stale; ETH-treasury name) |
+
+Only 1 of watchlist cleared 5% gap / $3 filters. Deep dive cap 5 (1 eligible).
+
+#### Deep dive: BMNR $24.81 -7.46%
+- Catalyst: No sourced overnight news. Results were stale (Jul-Aug 2026 ETH holdings/resistance pieces; one source says moves reflect sentiment, not company news).
+- Why: Likely ETH/crypto beta and sentiment selling on an ETH-proxy name; unconfirmed.
+- Impact: Volume is a snapshot figure, not checked vs normal. Reads as sentiment fade; no verified peer read-through.
+- Horizon: SHORT_TERM, no durable thesis.
+- Opportunity cost: Gap is down and strategy is long-only. Crypto-proxy is not a confirmed rotation sector; 2:1 R:R at a 7% stop on a falling name is doubtful. Account is 100% cash, nothing displaced.

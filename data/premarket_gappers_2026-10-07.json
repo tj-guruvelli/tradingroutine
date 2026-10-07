@@ -1,14 +1,21 @@
 {
-  "scanned_at": "2026-10-07T12:12:52Z",
+  "scanned_at": "2026-10-07T13:04:30Z",
   "deep_dive_cap": 5,
   "gappers": [
-    {"rank": 1, "symbol": "BMNR", "price": 24.96, "gap_pct": -6.9,
-     "premarket_volume": null, "catalyst": "Headlines frame Bitmine (ETH treasury company) dipping with Ethereum while it keeps buying ETH; no company-specific event found.",
-     "headlines": ["Bitmine Returns To Aggressive Ethereum Buys As Price Dips", "Can BitMine's Ethereum Bet Trigger a Rally to $24?", "BitMine Immersion Technologies (BMNR) Eyes Breakout ..."],
-     "catalyst_detail": "BMNR is an Ethereum-treasury holding company. Scraped page bodies came back empty; only headlines were usable. They point to ongoing ETH accumulation while the share price dips, i.e. a move tracking ETH/crypto beta rather than a discrete filing or earnings event.",
-     "why": "Share price is a levered proxy on ETH holdings; a crypto-wide dip (or premium-to-NAV compression) drives the gap down. Cause not confirmed.",
-     "impact": "Volume 1.03M at scan time (pre-market volume field not populated). Reads as crypto-beta move likely to follow ETH, not a durable thesis. Read-through to other crypto-treasury names likely.",
-     "horizon": "SHORT_TERM",
-     "opportunity_cost": "Crypto-proxy: TRADING-STRATEGY says crypto trading is refused and sector momentum/catalyst is undocumented, so it fails Entry Checklist. A short is not in scope (long-only swing). Account is flat (0/6 positions, 0/3 weekly trades), so nothing displaced, but a -6.9% gap-down with no catalyst cannot support a 2:1 R:R long at a sane 10% trail."}
+    {
+      "rank": 1,
+      "symbol": "BMNR",
+      "price": 24.81,
+      "gap_pct": -7.46,
+      "premarket_volume": 1032351,
+      "catalyst": "No same-day catalyst found; Apify results stale (Jul-Aug 2026 ETH-treasury items, after-hours quote 25.40).",
+      "headlines": [],
+      "catalyst_detail": "BMNR (Bitmine Immersion) is an ETH-treasury company. Searches returned only stale items (Jul 7 resistance piece, Aug 3 ETH holdings update, a note that moves reflect sentiment not company news). No confirmed overnight company news; gap from 26.81 prev close to 24.81 is unexplained by sourced facts.",
+      "why": "Likely crypto/ETH beta and sentiment-driven selling on a leveraged-ETH-proxy name; not confirmed by a sourced catalyst.",
+      "impact": "Volume 1.03M is a snapshot figure, not confirmed vs normal. Reads as sentiment fade with no catalyst; no peer read-through verified.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No durable thesis; headline-free move expected to be noise.",
+      "opportunity_cost": "Gap is down; long-only strategy, no short. Crypto-proxy exposure is unproven sector in the rotation table; a long would displace a stronger-catalyst setup and 2:1 R:R off a falling knife at a 7% stop is doubtful. Portfolio is 100% cash, so no holding displaced."
+    }
   ]
 }
