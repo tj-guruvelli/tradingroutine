@@ -15325,3 +15325,17 @@ Note: Apify RAG returned mostly off-target/slow results (oil run never finished;
 **Risks:** Trump-Putin call / Iran headlines -> oil gap risk; market data gaps above; stale-data caution.
 
 **Decision: HOLD** — no documented catalyst + >=2 confluence on any name. Patience > activity. Weekly trades 0/3.
+
+### Gappers (auto-scan 08:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | 24.96 | -6.9 | 1.03M | ETH-treasury co. dipping with Ethereum while still buying ETH; no company-specific event found |
+
+Only 1 of ~60 watchlist names cleared the 5% / $3 filter. Deep-dive cap 5 (1 name, all got deep dive). Apify page bodies came back empty (headlines only); no Yahoo sources.
+
+#### Deep dive: BMNR $24.96 -6.9%
+- Catalyst: Ethereum-treasury holding company; usable sources were headlines only ("Returns To Aggressive Ethereum Buys As Price Dips"). No filing/earnings event found.
+- Why: Levered proxy on ETH holdings; crypto dip / premium-to-NAV compression drives gap down. Cause unconfirmed.
+- Impact: Crypto-beta move, likely tracks ETH; not a durable thesis. Read-through to other crypto-treasury names.
+- Horizon: SHORT_TERM, headline/crypto-beta driven, no structural catalyst.
+- Opportunity cost: Crypto-proxy with no documented catalyst fails Entry Checklist; flat account so nothing displaced, but a gap-down long can't clear 2:1 R:R at a 10% trail. Research only.

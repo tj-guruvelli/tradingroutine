@@ -1,0 +1,14 @@
+{
+  "scanned_at": "2026-10-07T12:12:52Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {"rank": 1, "symbol": "BMNR", "price": 24.96, "gap_pct": -6.9,
+     "premarket_volume": null, "catalyst": "Headlines frame Bitmine (ETH treasury company) dipping with Ethereum while it keeps buying ETH; no company-specific event found.",
+     "headlines": ["Bitmine Returns To Aggressive Ethereum Buys As Price Dips", "Can BitMine's Ethereum Bet Trigger a Rally to $24?", "BitMine Immersion Technologies (BMNR) Eyes Breakout ..."],
+     "catalyst_detail": "BMNR is an Ethereum-treasury holding company. Scraped page bodies came back empty; only headlines were usable. They point to ongoing ETH accumulation while the share price dips, i.e. a move tracking ETH/crypto beta rather than a discrete filing or earnings event.",
+     "why": "Share price is a levered proxy on ETH holdings; a crypto-wide dip (or premium-to-NAV compression) drives the gap down. Cause not confirmed.",
+     "impact": "Volume 1.03M at scan time (pre-market volume field not populated). Reads as crypto-beta move likely to follow ETH, not a durable thesis. Read-through to other crypto-treasury names likely.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Crypto-proxy: TRADING-STRATEGY says crypto trading is refused and sector momentum/catalyst is undocumented, so it fails Entry Checklist. A short is not in scope (long-only swing). Account is flat (0/6 positions, 0/3 weekly trades), so nothing displaced, but a -6.9% gap-down with no catalyst cannot support a 2:1 R:R long at a sane 10% trail."}
+  ]
+}
