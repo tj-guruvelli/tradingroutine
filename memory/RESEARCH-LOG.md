@@ -15302,3 +15302,26 @@ No grade-A hits this run (expected — fired outside the Setup-A window). No Tel
 | SATL | B | Momentum confluence | daily swing | ADX 26.5, EMA9 5.57 > EMA21 5.44, RSI 49.5, px $5.51 |
 
 No grade-A hits this run (expected — fired outside the Setup-A window; identical hit set to the 16:33 ET run since the market closed at 16:00 ET and bars are unchanged). No Telegram alert sent per rule (0 grade-A hits).
+
+### 2026-10-07 Pre-Market (cloud)
+Note: Apify RAG returned mostly off-target/slow results (oil run never finished; VIX/catalyst/calendar queries gave only irrelevant snippets) -> fell back to native WebSearch. No Yahoo sources used.
+
+**Account:** Equity $100,000 | Cash $100,000 | BP $400,000 | 0 positions | 0 open orders | daytrades 0 (`balance_asof 2026-10-06`). Live-vs-$10k baseline mismatch still unresolved.
+
+**Market context**
+- Indices (Oct 6 close, search-sourced, unverified): S&P 6,740.28 (+0.36%), Nasdaq 22,941.67 (+0.71%), Dow 46,694.97 (-0.14%).
+- Oil: Brent Nov ~$101.09 (-0.12%, ~7h old report); WTI not found. Elevated vs Aug (~$93 Brent).
+- VIX: GAP — no clean non-Yahoo print found.
+- Futures / today's earnings / econ calendar: GAP — nothing dated today surfaced.
+- Headline: Trump says he plans a call with Putin soon (Oct 6) — oil/geopolitics swing risk.
+- Sector momentum YTD: GAP.
+- Held-ticker news: none (flat).
+
+**Trade ideas (carry-over, none verified actionable)**
+1. XOM/CVX — energy w/ Brent ~$100; catalyst = oil level, but Putin-call/de-escalation headline can gap oil down. Entry only on pullback; stop 10% trail; target +20% (2:1). Prior runs: 1 of 4 confluence.
+2. SYNA — scan grade B (ADX 23.8, EMA9>EMA21) but RSI ~70 overbought; no documented catalyst. Wait.
+3. CMBT/HAFN — scan grade B (shipping, RSI 66-70); no catalyst documented. Watch only.
+
+**Risks:** Trump-Putin call / Iran headlines -> oil gap risk; market data gaps above; stale-data caution.
+
+**Decision: HOLD** — no documented catalyst + >=2 confluence on any name. Patience > activity. Weekly trades 0/3.
