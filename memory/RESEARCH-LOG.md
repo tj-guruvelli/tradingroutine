@@ -15353,3 +15353,55 @@ Only 1 of watchlist cleared 5% gap / $3 filters. Deep dive cap 5 (1 eligible).
 - Impact: Volume is a snapshot figure, not checked vs normal. Reads as sentiment fade; no verified peer read-through.
 - Horizon: SHORT_TERM, no durable thesis.
 - Opportunity cost: Gap is down and strategy is long-only. Crypto-proxy is not a confirmed rotation sector; 2:1 R:R at a 7% stop on a falling name is doubtful. Account is 100% cash, nothing displaced.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+Note: all gaps negative (long-only: no entries). premarket_volume field absent; Vol = snapshot. AGMH excluded (<$3). Deep-dive limited to top 5; search results mostly stale, so no catalysts fabricated.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | $20.81 | -7.06% | 11676 | No sourced catalyst; results stale (Aug/Sep 2026 UMAC rallies). Drone-sector pullback. |
+| 2 | LUNR | $14.17 | -5.91% | 63899 | No sourced catalyst; results stale. Space-sector weakness. |
+| 3 | DPRO | $4.705 | -5.81% | 3654 | Apify returned nothing usable; catalyst unknown. |
+| 4 | BLSH | $31.51 | -5.63% | 3388 | Possible: Sept volume metrics fell to $48.6B from $52.2B (crypto exchange); date of article unconfirmed. |
+| 5 | SATL | $5.2 | -5.63% | 28679 | No sourced catalyst; results stale (earlier +22.5% upgrade pop). Space-sector weakness. |
+| 6 | PL | $17.525 | -5.6% | 33226 | No sourced catalyst; results stale. Space-sector weakness. |
+| 7 | ASTS | $59.62 | -5.57% | 48217 | Gave back Tuesday's +8% run (Japan $1B catalyst headline, ~$63); profit-taking likely. |
+| 8 | BMNR | $24.785 | -5.4% | 248736 | No sourced overnight news; ETH-proxy sentiment move, unconfirmed. |
+| 9 | RDW | $10.045 | -5.33% | 72681 | Apify returned nothing usable; catalyst unknown. |
+| 10 | RCAT | $6.025 | -5.04% | 42484 | No sourced catalyst; next earnings Nov 12, 2026. Drone/defense weakness. |
+
+#### Deep dive: UMAC $20.81 -7.06%
+- Catalyst: No news found for today's drop; Apify results were Aug-Sep 2026 rally pieces. Stock had run to ~$24-26 and prev close was $22.39.
+- Why: Likely sector/drone-name giveback; unconfirmed.
+- Impact: Volume is an early-session snapshot (11.7k), thin; reads as a drift, not a conviction break. Drone peers (RCAT) also lower.
+- Horizon: SHORT_TERM, No verified thesis; fade-type move.
+- Opportunity cost: Long-only strategy, gap is down; no entry. Would displace nothing (cash). 2:1 R:R at a 7% stop on a falling name is doubtful.
+
+#### Deep dive: LUNR $14.17 -5.91%
+- Catalyst: No same-day catalyst found; results stale/technical chatter only.
+- Why: Space-sector beta; peers PL, ASTS, RDW, SATL all down 5%+.
+- Impact: Volume 63.9k snapshot; broad sector move suggests rotation or macro, not company news.
+- Horizon: SHORT_TERM, Sector-wide move without a stock-specific driver.
+- Opportunity cost: Part of a 5-name space cluster; correlation gate would block adding more than one. Down gap, no entry; R:R unproven.
+
+#### Deep dive: DPRO $4.705 -5.81%
+- Catalyst: Catalyst fetch returned nothing usable.
+- Why: Unknown.
+- Impact: Volume 3.7k, very thin; no read.
+- Horizon: SHORT_TERM, No information to support a durable thesis.
+- Opportunity cost: Down gap on thin volume; nothing to displace. Cannot assess R:R without a catalyst.
+
+#### Deep dive: BLSH $31.51 -5.63%
+- Catalyst: Latest sourced item: September trading volumes slipped to $48.6B from $52.2B (BLSH under pressure). Earlier result cited a +11% surge on STX listing, not today.
+- Why: Lower crypto exchange volumes weigh on revenue expectations; crypto beta also in play (BMNR down too).
+- Impact: Volume 3.4k snapshot; crypto read-through from BMNR -5.4%.
+- Horizon: SHORT_TERM, Metrics-driven dip, no structural change.
+- Opportunity cost: Crypto not a confirmed rotation sector. Down gap; nothing to displace; R:R not demonstrable.
+
+#### Deep dive: SATL $5.2 -5.63%
+- Catalyst: No same-day catalyst; results stale (an earlier upgrade-driven pop).
+- Why: Space-sector drift lower with peers.
+- Impact: Volume 28.7k snapshot; part of a broad space cluster move.
+- Horizon: SHORT_TERM, No stock-specific thesis found.
+- Opportunity cost: Same space cluster as LUNR/PL/ASTS/RDW; down gap, no entry, nothing displaced.
+
+Sector read: space/drone cluster (UMAC, LUNR, SATL, PL, ASTS, RDW, RCAT) all -5% to -7%; crypto proxies (BMNR, BLSH) also lower.
