@@ -15415,4 +15415,15 @@ Sector read: space/drone cluster (UMAC, LUNR, SATL, PL, ASTS, RDW, RCAT) all -5%
 | TRMD | B | Momentum confluence | daily swing | ADX 20.8, EMA9 38.17 > EMA21 36.50, RSI 63.4, px $33.81 |
 | APT | B | Momentum confluence | daily swing | ADX 20.2, EMA9 5.40 > EMA21 5.30, RSI 71.3, px $5.92 |
 
+### Setup Scan (18:33 ET, cloud)
+`grade_a_possible`: false (18:33 ET outside 10:00-15:30 ET window) — Setup A not evaluated, 0 errors, 60 candidates checked.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| KLIC | B | Momentum confluence | daily swing | ADX 26.2, EMA9 94.99 > EMA21 91.02, RSI 63.6, px $79.20 |
+| TRMD | B | Momentum confluence | daily swing | ADX 20.8, EMA9 38.17 > EMA21 36.50, RSI 63.4, px $33.81 |
+| APT | B | Momentum confluence | daily swing | ADX 20.2, EMA9 5.40 > EMA21 5.30, RSI 71.3, px $5.92 |
+
+No grade-A hits this run (expected — fired outside the Setup-A window). No Telegram alert sent per rule (0 grade-A hits).
+
 No grade-A hits this run (expected — fired outside the Setup-A window). No Telegram alert sent per rule (0 grade-A hits).
