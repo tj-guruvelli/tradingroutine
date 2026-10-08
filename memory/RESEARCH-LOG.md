@@ -15452,3 +15452,49 @@ Note: Apify RAG runs returned data only via dataset (empty inline) -> fell back 
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 - No gappers: 0 rows with |gap| >= 5% (price >= $3) across watchlist.
+
+### Gappers (auto-scan 09:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BMNR | $24.02 | -8.32% | 1,151,702 | No gap-day catalyst found; only stale July ETH-treasury pieces. |
+| 2 | STM | $54.13 | -7.82% | 606,413 | No gap-day catalyst found; ST newsroom shows Q3 earnings-date notice only. |
+| 3 | NBIS | $232.44 | -6.97% | 471,828 | No gap-day catalyst found; prior-day coverage was bullish AI-infra commentary and insider selling. |
+| 4 | CRWV | $86.45 | -5.73% | 399,709 | No gap-day catalyst found; prior-day AI-led index rally, nothing company-specific. |
+| 5 | RGTI | $14.4 | -5.14% | 730,263 | No gap-day catalyst found; coverage is HPE/PSC hybrid quantum-HPC news, not new. |
+
+Only 5 gappers cleared the filter (all gap-downs); ranks 6-10 empty. Deep-dive cap 5 applied to all. Premarket_volume not populated; volume shown is session volume.
+
+#### Deep dive: BMNR $24.02 -8.32%
+- Catalyst: No gap-day catalyst found; only stale July ETH-treasury pieces. Deep-dive fundamentals query not run; searches returned only stale or generic pages.
+- Why: Unidentified. NBIS, CRWV and RGTI all gap down together, which suggests a high-beta AI/speculative-tech risk-off move (inference, unconfirmed).
+- Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in crypto/ETH treasury implies sector read-through.
+- Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
+- Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
+
+#### Deep dive: STM $54.13 -7.82%
+- Catalyst: No gap-day catalyst found; ST newsroom shows Q3 earnings-date notice only. Deep-dive fundamentals query not run; searches returned only stale or generic pages.
+- Why: Unidentified. NBIS, CRWV and RGTI all gap down together, which suggests a high-beta AI/speculative-tech risk-off move (inference, unconfirmed).
+- Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in semis implies sector read-through.
+- Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
+- Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
+
+#### Deep dive: NBIS $232.44 -6.97%
+- Catalyst: No gap-day catalyst found; prior-day coverage was bullish AI-infra commentary and insider selling. Deep-dive fundamentals query not run; searches returned only stale or generic pages.
+- Why: Unidentified. NBIS, CRWV and RGTI all gap down together, which suggests a high-beta AI/speculative-tech risk-off move (inference, unconfirmed).
+- Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in AI neocloud implies sector read-through.
+- Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
+- Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
+
+#### Deep dive: CRWV $86.45 -5.73%
+- Catalyst: No gap-day catalyst found; prior-day AI-led index rally, nothing company-specific. Deep-dive fundamentals query not run; searches returned only stale or generic pages.
+- Why: Unidentified. NBIS, CRWV and RGTI all gap down together, which suggests a high-beta AI/speculative-tech risk-off move (inference, unconfirmed).
+- Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in AI neocloud implies sector read-through.
+- Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
+- Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
+
+#### Deep dive: RGTI $14.4 -5.14%
+- Catalyst: No gap-day catalyst found; coverage is HPE/PSC hybrid quantum-HPC news, not new. Deep-dive fundamentals query not run; searches returned only stale or generic pages.
+- Why: Unidentified. NBIS, CRWV and RGTI all gap down together, which suggests a high-beta AI/speculative-tech risk-off move (inference, unconfirmed).
+- Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in quantum implies sector read-through.
+- Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
+- Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
