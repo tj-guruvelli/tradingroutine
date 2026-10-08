@@ -15449,3 +15449,6 @@ Note: Apify RAG runs returned data only via dataset (empty inline) -> fell back 
 **Risks:** hawkish Fed + 10y 5.28% = multiple pressure; Iran headlines (oil spike either way); futures red into claims print; thin-liquidity small caps (space/drone cluster weak).
 
 **Decision: HOLD** — no sourced catalyst + confluence clearing gate. Weekly trades 0/3.
+
+### Gappers (auto-scan 08:03 ET, cloud)
+- No gappers: 0 rows with |gap| >= 5% (price >= $3) across watchlist.
