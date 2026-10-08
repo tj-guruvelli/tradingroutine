@@ -15427,3 +15427,25 @@ Sector read: space/drone cluster (UMAC, LUNR, SATL, PL, ASTS, RDW, RCAT) all -5%
 No grade-A hits this run (expected — fired outside the Setup-A window). No Telegram alert sent per rule (0 grade-A hits).
 
 No grade-A hits this run (expected — fired outside the Setup-A window). No Telegram alert sent per rule (0 grade-A hits).
+
+## 2026-10-08 — Pre-Market (Thursday, cloud)
+Note: Apify RAG runs returned data only via dataset (empty inline) -> fell back to native WebSearch (Yahoo domains blocked). Numbers are intraday snapshots, sources disagree on some.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 (margin) | 0 positions | 0 open orders | daytrade count 0 (`balance_asof 2026-10-07`). Same $100k-vs-$10k baseline mismatch, still unresolved.
+
+**Market context**
+- Indices: S&P 500 ~7,802 (-0.22%) Wed, first red session of Oct after 4-day win streak/records; S&P futs ~7,849 (-0.3%), all US futs lower.
+- Oil: WTI ~$89.2-89.7, Brent ~$102; direction unclear across sources. Driver: Iran response after US strikes.
+- VIX ~15.1 (52w low 13.38; late-Jul 20.66) — calm.
+- Rates/USD: 10y ~5.28% (higher), DXY ~102.3. Hawkish Fed minutes — most policymakers see another hike by YE; inflation expectations highest since May 2023. Gold and stocks sliding.
+- Today: Initial jobless claims 8:30 ET (cons ~200K, prev 197K). PepsiCo earnings BMO. Fri: Delta earnings, UMich sentiment. Next week: CPI + earnings season kickoff.
+- Sector momentum: energy supported by oil; rate-sensitive/growth pressured by yields.
+
+**Trade ideas (none actionable)**
+1. XOM/CVX — catalyst: oil ~$89 + Iran risk. Entry only on confirmed 2/4 confluence; stop 8-10% below entry, target 2:1. Prior sessions capped at 1/4 indicators; catalyst aging. Watch only.
+2. KLIC (grade B, ADX 26.2, EMA9>EMA21, RSI 63.6, $79.20) — no documented catalyst; need one before entry. Stop ~$73, target ~$91 if catalyst found.
+3. TRMD (grade B, tanker, $33.81, RSI 63.4) — oil/Iran shipping tailwind plausible but unverified. Stop ~$31, target ~$38. Watch.
+
+**Risks:** hawkish Fed + 10y 5.28% = multiple pressure; Iran headlines (oil spike either way); futures red into claims print; thin-liquidity small caps (space/drone cluster weak).
+
+**Decision: HOLD** — no sourced catalyst + confluence clearing gate. Weekly trades 0/3.
