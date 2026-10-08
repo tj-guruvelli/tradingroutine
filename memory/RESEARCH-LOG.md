@@ -15526,3 +15526,10 @@ Only 1 gapper cleared the filter; ranks 2-10 empty. Volume shown is session volu
 - Impact: Thin volume (60k), no confirmed catalyst; fade/noise-prone. No peer check.
 - Horizon: SHORT_TERM, no durable thesis identified.
 - Opportunity cost: No thesis, would not clear 2:1 R:R at 10% trail; skip preserves 3-trade weekly cap. Research only.
+
+### Setup Scan (16:33 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| KLIC | B | Momentum confluence | daily swing | ADX 25.49, EMA9 $94.98 > EMA21 $91.37, RSI 57.33 |
+
+60 symbols scanned. Setup A not evaluated (16:33 ET, outside 10:00-15:30 ET window) — grade_a_possible=false. 0 errors.
