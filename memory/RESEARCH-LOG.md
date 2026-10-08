@@ -15498,3 +15498,17 @@ Only 5 gappers cleared the filter (all gap-downs); ranks 6-10 empty. Deep-dive c
 - Impact: Volume (field is regular-session volume so far, not true premarket) is modest; cannot judge sustainability. Cluster move in quantum implies sector read-through.
 - Horizon: SHORT_TERM, No durable catalyst identified; treat as a headline-free sector gap that can fade or extend.
 - Opportunity cost: Gap-down, no long thesis; would displace nothing better than existing holdings and 2:1 R:R is unproven without a catalyst. Weekly 3-trade cap preserved by skipping.
+
+### Gappers (auto-scan 10:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GFS | $50.63 | +5.34% | 92,547 | $2B 5-yr TSMC deal for US-made silicon interposers (AI packaging), Malta NY. |
+
+Only 1 gapper cleared the filter; ranks 2-10 empty. Premarket_volume not populated; volume shown is session volume.
+
+#### Deep dive: GFS $50.63 +5.34%
+- Catalyst: ~$2B, 5-year TSMC agreement to make silicon interposers for AI packaging at Malta NY, ramp 1H 2028. Follows Marvell optical and MPS partnerships.
+- Why: Multi-year contract with the leading AI foundry validates AI-packaging/US-onshoring thesis and de-risks long-dated revenue.
+- Impact: ~7.4x normal volume (Stocktitan), short interest 4.9% of float up 20.9%; but revenue is 2028+ and gap modest, partial fade possible.
+- Horizon: LONG_TERM, structural contract aligned with tech/early-cycle favored sector.
+- Opportunity cost: 100% cash, no positions, nothing displaced. 10% trail ~$45.6; 2:1 needs ~$60; gap-fill risk to $48.07. Research only.
