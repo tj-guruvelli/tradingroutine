@@ -15512,3 +15512,17 @@ Only 1 gapper cleared the filter; ranks 2-10 empty. Premarket_volume not populat
 - Impact: ~7.4x normal volume (Stocktitan), short interest 4.9% of float up 20.9%; but revenue is 2028+ and gap modest, partial fade possible.
 - Horizon: LONG_TERM, structural contract aligned with tech/early-cycle favored sector.
 - Opportunity cost: 100% cash, no positions, nothing displaced. 10% trail ~$45.6; 2:1 needs ~$60; gap-fill risk to $48.07. Research only.
+
+### Gappers (auto-scan 11:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | $57.53 | -5.15% | 60,492 | No confirmed catalyst for drop; only undated Japan J-LEO (~$1B)/Rakuten coverage found. |
+
+Only 1 gapper cleared the filter; ranks 2-10 empty. Volume shown is session volume.
+
+#### Deep dive: ASTS $57.53 -5.15%
+- Catalyst: Gap-down from 60.655. No dated bearish headline found; only undated Japan J-LEO/Rakuten backing coverage (bullish). Fundamentals fetch blocked. Cause unverified.
+- Why: Unknown; likely high-beta de-risking/profit-taking, unverified.
+- Impact: Thin volume (60k), no confirmed catalyst; fade/noise-prone. No peer check.
+- Horizon: SHORT_TERM, no durable thesis identified.
+- Opportunity cost: No thesis, would not clear 2:1 R:R at 10% trail; skip preserves 3-trade weekly cap. Research only.

@@ -1,14 +1,1 @@
-{
-  "scanned_at": "2026-10-08T14:05:31Z",
-  "deep_dive_cap": 5,
-  "gappers": [
-    {"rank": 1, "symbol": "GFS", "price": 50.63, "gap_pct": 5.34, "premarket_volume": null,
-     "catalyst": "GlobalFoundries signs $2B five-year deal with TSMC to make US-based silicon interposers for AI packaging at Malta, NY.",
-     "headlines": ["GlobalFoundries reaches agreement to establish U.S.-based supply of silicon interposers for advanced AI packaging"],
-     "catalyst_detail": "GFS announced a 5-year, ~$2B manufacturing agreement with TSMC to produce silicon interposers for advanced AI packaging in the U.S. It adds planned capacity at Malta, NY, with production ramp expected 1H 2028. Follows Marvell optical collaboration (Sep) and MPS partnership. Stock +37.7% over 1y, mkt cap ~$27.6B.",
-     "why": "Large multi-year contract with the dominant AI foundry validates GFS's AI-packaging/US-onshoring angle and de-risks long-dated revenue, pulling in momentum and thematic AI-infra buyers.",
-     "impact": "Stocktitan reports ~7.4x normal volume, supportive of follow-through, but gap is only +5.3% and revenue lands 2028+, so part may fade. Short interest 4.9% of float (up 20.9%) adds squeeze fuel. Peers (STM -7.8% yesterday log, semis weak) show sector tape is mixed.",
-     "horizon": "LONG_TERM",
-     "opportunity_cost": "Account is 100% cash, 0 positions, so nothing displaced and weekly 3-trade cap is unused. Needs Confluence rule pass and ATR stop; a 10% trail gives ~$45.6 vs ~$50.6 entry, 2:1 needs ~$60 target (prior gap-fill risk to ~$48.07 close). Research only."}
-  ]
-}
+{"scanned_at":"2026-10-08T15:04:47Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"ASTS","price":57.53,"gap_pct":-5.15,"premarket_volume":60492,"catalyst":"No confirmed catalyst for the gap-down; search surfaced only undated Japan J-LEO (~$1B)/Rakuten partnership coverage.","headlines":["AST SpaceMobile Stock Has a $1B Japan Catalyst, But ...","Why AST SpaceMobile (ASTS) Stock Is Up Today"],"catalyst_detail":"Gap-down of 5.15% from 60.655 prev close. Search returned only undated Japan J-LEO/Rakuten backing coverage (bullish) and no dated bearish headline; cause of the drop unverified. Fundamentals fetch failed (pages blocked).","why":"Unknown; likely sector/high-beta de-risking or profit-taking after run-up, unverified.","impact":"Volume 60,492 is thin (session volume, not premarket); no confirmed catalyst so reads as noise/fade-prone. No peer read-through checked.","horizon":"SHORT_TERM","opportunity_cost":"Gap-down with no thesis, high-beta space name; wouldn't clear 2:1 R:R at a sane 10% trail stop. Skipping preserves weekly 3-trade cap. Research only."}]}
