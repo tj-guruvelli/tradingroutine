@@ -15634,3 +15634,11 @@ Deep-dive cap 5; all 4 qualifiers got deep-dive attempts (BLSH fundamentals fetc
 - Opportunity cost: Best quality of the four, but 5% gap entry vs 10% trail has poor R:R; competes for a weekly slot. Research only.
 
 (BLSH $33.395 +6.25%: quick scan only, no deep-dive; fetch failed.)
+
+### Setup Scan (16:33 ET, cloud)
+Grade A unreachable this run (ny_time 16:33, outside 10:00-15:30 ET intraday-breakout window). 60 candidates checked, 3 grade-B hits, 0 errors.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HAFN | B | Momentum confluence | daily swing | RSI 74.0, ADX 26.6, EMA9 $10.14 > EMA21 $9.69, px $10.61 |
+| TRMD | B | Momentum confluence | daily swing | RSI 66.1, ADX 22.7, EMA9 $38.67 > EMA21 $37.02, px $34.39 |
+| BCI | B | Momentum confluence | daily swing | RSI 55.1, ADX 23.6, EMA9 $26.08 > EMA21 $26.05, px $26.30 |
