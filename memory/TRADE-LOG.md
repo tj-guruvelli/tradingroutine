@@ -1,5 +1,30 @@
 # Trade Log
 
+### Oct 09, Market-Open (Day 66, Friday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-08`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-09 Pre-Market, decision HOLD) — trade
+ideas XOM/CVX (oil ~$90s energy momentum, catalyst aging, capped at 1/4
+confluence), KLIC (Setup Scan B grade, ADX 25.5/EMA9>EMA21/RSI 57, no
+documented catalyst), GFS (TSMC $2B interposer deal, long-term thesis but
+gap already faded — chase rule applies, watch only) all flagged none
+actionable. Gappers auto-scan (08:03 ET) found 0 rows; 09:06 ET scan found
+1 (NBIS, -5.01%, no same-day catalyst — dilution/insider-selling overhang
+inference only, unconfirmed).
+
+STEP 3: no planned ticker has a catalyst documented in today's RESEARCH-LOG
+— hard-check fails at the catalyst gate for all candidates before confluence
+is even checked. STEPs 4-6 (orders/stops) skipped.
+
+Weekly trade count: 0/3 (week of Oct 5). 66th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 101st+
+straight session, operator review pending. STEP 7 (notification) N/A — no
+trade fired this run. STEP 8 (commit/push) skipped per prompt (no trades
+fired) — logged per established house convention for no-trade market-open
+runs (see Oct 02/05/06/07/08 commits).
+
 ### Oct 08, Market-Open (Day 65, Thursday, cloud run)
 **No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
 positions, 0 open orders (`balance_asof: 2026-10-07`).
