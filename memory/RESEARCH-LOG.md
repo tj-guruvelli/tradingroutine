@@ -15562,3 +15562,17 @@ Sources: Apify RAG (Yahoo suffix applied; VIX via CNBC) + WebSearch fallback (Ap
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 - 0 hits (|gap| >= 5%, price >= $3) across watchlist. No deep dive.
+
+### Gappers (auto-scan 09:06 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 225.24 | -5.01 | 708k | No same-day catalyst found (latest verified: Aug 19 $4.5B convert offering, stale) |
+
+1 hit only (deep-dive cap 5; only 1 qualified).
+
+#### Deep dive: NBIS $225.24 -5.01%
+- Catalyst: No same-day catalyst verified. Up >150% YTD; serial convert issuance ($2.75B Sep-25, $4.3B Mar-26, $4.5B proposed Aug-26) plus share exchanges = dilution overhang. Undated COO stake-cut headline.
+- Why: Unverified; likely dilution/insider-selling overhang and profit-taking in extended AI-infra name.
+- Impact: -5% on 708k vol reads as noise/de-risking, not regime break. Peer read-through unchecked.
+- Horizon: SHORT_TERM, no confirmed thesis.
+- Opportunity cost: Gap-down w/o catalyst, no 2:1 R:R at 10% trail without reversal confirm; skip preserves weekly cap (0/3). Research only.
