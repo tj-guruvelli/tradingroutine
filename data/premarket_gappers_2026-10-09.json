@@ -1,39 +1,71 @@
 {
-  "scanned_at": "2026-10-09T14:06:00Z",
+  "scanned_at": "2026-10-09T15:07:00Z",
   "deep_dive_cap": 5,
-  "note": "PEPG (+8.84%, $2.585) excluded: price<3",
   "gappers": [
     {
       "rank": 1,
       "symbol": "ASTS",
-      "price": 52.05,
-      "gap_pct": -8.59,
-      "premarket_volume": 243957,
-      "catalyst": "No fresh company-specific catalyst found; shares reportedly sliding as investors weigh pace of satellite deployment.",
+      "price": 51.42,
+      "gap_pct": -9.69,
+      "premarket_volume": 351235,
+      "catalyst": "No same-day catalyst found; stock fell 6.1% on Oct 8 to $56.93 after a $62.71 rebound earlier in the week.",
       "headlines": [
-        "AST SpaceMobile shares declined despite a lack of a fresh company-specific catalyst (search snippet)"
+        "AST SpaceMobile: The Bull Case Just Got Stronger (guidance $150-200M 2026 rev maintained, >$3.7B pro forma liquidity)"
       ],
-      "catalyst_detail": "Search results show no new filing or announcement; snippets cite investor concern over satellite deployment pace. A US Mobile Q4 launch item is a prospective positive, not today's driver. Company had ~$3.9B cash per an April 2026 presentation.",
-      "why": "Sentiment-driven de-rating of a high-beta, pre-revenue space name with no specific news; likely momentum/risk-off flows.",
-      "impact": "Gap on only ~244K pre-mkt shares with no hard catalyst reads as fade/volatility, not a durable thesis. Peers' read-through not verified.",
+      "catalyst_detail": "Gap-down follows a -6.1% Oct 8 session (close $56.93, after-hours $54.72). No single news item explains it in the search results. Background: company maintains $150-200M 2026 revenue guidance, needs $104-154M H2 revenue, liquidity above $3.7B, and a Q4 launch is pending. Same-day trigger unverified.",
+      "why": "Unverified. Likely high-beta space/speculative-growth de-risking continuing from the prior session rather than new company news.",
+      "impact": "351K shares traded so far, a sizeable volume print for the name, but a second straight heavy down day with no catalyst reads as momentum selling that can extend or snap back. Sector read-through not confirmed.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "headline-free sentiment move, no structural catalyst confirmed",
-      "opportunity_cost": "Long-side dip-buy would displace a stronger holding and a falling-knife entry has no clear sane stop for 2:1 R:R; research only, no action."
+      "horizon_reason": "No verified structural catalyst for the drop; downtrend with no stabilization yet.",
+      "opportunity_cost": "Long-only strategy: a falling knife with no confirmed catalyst fails the Entry Checklist. Would displace any higher-quality setup for a 5-day count; stop under a 10% trail on a -10% gap day is wide for 2:1 R:R. Research only."
     },
     {
       "rank": 2,
       "symbol": "NIO",
-      "price": 3.6,
-      "gap_pct": 5.88,
-      "premarket_volume": 673220,
-      "catalyst": "No clear catalyst found; snippets only generic (NIO Capital robotics investments, prior close $3.42).",
-      "headlines": [],
-      "catalyst_detail": "Quick-scan only returned generic quote pages; deep-dive fetch not completed this run. Note price sits just above the $3 floor.",
-      "why": "Unverified; likely sector/China-EV sympathy or monthly delivery sentiment.",
-      "impact": "Low-priced name with thin catalyst evidence; treat as likely mean-reverting until confirmed.",
+      "price": 3.62,
+      "gap_pct": 6.47,
+      "premarket_volume": 863410,
+      "catalyst": "No same-day catalyst found; Q3 deliveries (Sep 37,408; 9M 300,301, +49.2%) reported Oct 1.",
+      "headlines": [
+        "NIO Posts Strong September and Q3 2026 Deliveries",
+        "Why Does NIO Need 52,046 Deliveries a Month (to hit 326,028 goal)"
+      ],
+      "catalyst_detail": "Latest verifiable news is the Oct 1 delivery print: 37,408 vehicles in September and 300,301 for nine months, up 49.2%, against a 40-50% growth goal. Reaching the 326,028 target needs a big Q4. Today's gap has no specific same-day headline found.",
+      "why": "Probable delivery-momentum/China-EV sympathy bid; same-day trigger unconfirmed.",
+      "impact": "863K shares is the heaviest tape on today's list, but at a $3.62 price the dollar volume is small. Looks like a sentiment move that can fade; no peer confirmation checked.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "no verified structural catalyst",
-      "opportunity_cost": "Sub-$4 EV name with wide % stops struggles to clear 2:1 R:R under the 10% trail; would displace a higher-quality setup. Research only."
+      "horizon_reason": "Sub-$4 stock, sentiment-driven, delivery thesis is already public for a week.",
+      "opportunity_cost": "A $3.62 price makes a 7% cut (~$0.25) and 10% trail very tight versus normal range; 2:1 R:R is hard. Would displace a cleaner setup. Research only."
+    },
+    {
+      "rank": 3,
+      "symbol": "BLSH",
+      "price": 33.395,
+      "gap_pct": 6.25,
+      "premarket_volume": 11270,
+      "catalyst": "No same-day catalyst found; stock was volatile in late Sept (-9.5% to $32.08 on Sep 25 after an analyst-upgrade run).",
+      "headlines": [
+        "Bullish Stock Price: Quote, Forecast, Splits & News (BLSH)",
+        "Clear Street Raises Bullish, Coinbase Targets"
+      ]
+    },
+    {
+      "rank": 4,
+      "symbol": "ORCL",
+      "price": 142.44,
+      "gap_pct": 5.08,
+      "premarket_volume": 312165,
+      "catalyst": "No same-day catalyst found; Citizens reiterated Market Outperform Oct 2; Citi 90-day catalyst watch (Aug).",
+      "headlines": [
+        "ORCL Reiterated by Citizens -- Price Target Maintained",
+        "Oracle's Fundamentals Remain Strong"
+      ],
+      "catalyst_detail": "Search surfaced no Oct 9 headline. Recent items: Citizens reiterated Market Outperform on Oct 2, Citi's 90-day catalyst watch from late August, and commentary that AI/cloud growth is largely priced in. The +5.08% gap against a $135.56 close is not explained by the retrieved sources.",
+      "why": "Unverified. Likely AI-infrastructure/cloud sentiment bid or analyst flow; no confirmed trigger.",
+      "impact": "312K pre-market shares on a mega-cap is meaningful. A 5% move in a large cap is more likely to hold than a small-cap spike if it is sector-led, but no peer move was confirmed.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Cause unverified; treat as a headline-less spike until a catalyst is confirmed. Revisit LONG_TERM if AI-cloud rotation is confirmed.",
+      "opportunity_cost": "Highest quality name of the four and liquid, but a 5% gap-up entry has poor R:R against a 10% trail; would compete for one of 3 weekly slots. Research only."
     }
   ]
 }

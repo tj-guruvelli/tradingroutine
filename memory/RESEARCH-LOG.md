@@ -15600,3 +15600,37 @@ Only 2 qualifiers (PEPG +8.84% excluded, $2.585 < $3). Deep dive on both (cap 5)
 - Impact: Low-priced, thin evidence; likely mean-reverts.
 - Horizon: SHORT_TERM, no verified structural catalyst.
 - Opportunity cost: Sub-$4 with 10% trail struggles at 2:1 R:R; displaces better setup. Research only.
+
+### Gappers (auto-scan 11:03 ET, cloud)
+4 of 5 raw hits passed filters (PEPG $2.57 dropped: price < $3). Only 4 qualified, so ranks 5-10 are empty. Catalyst sourcing was thin: Apify returned no same-day headlines; "catalyst" lines below are the most recent verifiable items.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 51.42 | -9.69 | 351,235 | No same-day catalyst found; -6.1% Oct 8 to $56.93 |
+| 2 | NIO | 3.62 | +6.47 | 863,410 | No same-day catalyst; Q3 deliveries (9M 300,301, +49.2%) out Oct 1 |
+| 3 | BLSH | 33.395 | +6.25 | 11,270 | No same-day catalyst found; volatile since late Sept |
+| 4 | ORCL | 142.44 | +5.08 | 312,165 | No same-day catalyst; Citizens reiterated Outperform Oct 2 |
+
+Deep-dive cap 5; all 4 qualifiers got deep-dive attempts (BLSH fundamentals fetch failed with a 502, quick-scan only).
+
+#### Deep dive: ASTS $51.42 -9.69%
+- Catalyst: Gap-down after -6.1% Oct 8 (close $56.93). No news explains it. Background: $150-200M 2026 rev guidance maintained, >$3.7B pro forma liquidity, Q4 launch pending.
+- Why: Unverified; likely high-beta space/speculative de-risking continuing.
+- Impact: 351K shares premarket; second heavy down day with no catalyst, can extend or snap back.
+- Horizon: SHORT_TERM, no verified catalyst, downtrend unstabilized.
+- Opportunity cost: Falling knife fails Entry Checklist; wide stop vs 2:1 R:R. Research only.
+
+#### Deep dive: NIO $3.62 +6.47%
+- Catalyst: Latest verifiable news is Oct 1 delivery print: Sep 37,408; 9M 300,301 (+49.2%) vs 326,028 goal. No same-day headline found.
+- Why: Probable delivery-momentum/China-EV sympathy; unconfirmed.
+- Impact: 863K shares, heaviest tape, but tiny dollar volume at $3.62; likely fades.
+- Horizon: SHORT_TERM, sub-$4 sentiment move, thesis already public.
+- Opportunity cost: 7% cut is ~$0.25; 2:1 R:R hard; displaces cleaner setup. Research only.
+
+#### Deep dive: ORCL $142.44 +5.08%
+- Catalyst: No Oct 9 headline found. Citizens reiterated Market Outperform Oct 2; Citi 90-day catalyst watch (Aug); AI/cloud growth possibly priced in.
+- Why: Unverified; likely AI-cloud sentiment or analyst flow.
+- Impact: 312K premarket shares on a mega-cap is meaningful; more durable if sector-led, no peer confirmation.
+- Horizon: SHORT_TERM, cause unverified; revisit if AI-cloud rotation confirmed.
+- Opportunity cost: Best quality of the four, but 5% gap entry vs 10% trail has poor R:R; competes for a weekly slot. Research only.
+
+(BLSH $33.395 +6.25%: quick scan only, no deep-dive; fetch failed.)
