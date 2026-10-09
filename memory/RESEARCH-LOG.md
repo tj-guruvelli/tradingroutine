@@ -15576,3 +15576,27 @@ Sources: Apify RAG (Yahoo suffix applied; VIX via CNBC) + WebSearch fallback (Ap
 - Impact: -5% on 708k vol reads as noise/de-risking, not regime break. Peer read-through unchecked.
 - Horizon: SHORT_TERM, no confirmed thesis.
 - Opportunity cost: Gap-down w/o catalyst, no 2:1 R:R at 10% trail without reversal confirm; skip preserves weekly cap (0/3). Research only.
+
+## 2026-10-09
+
+### Gappers (auto-scan 10:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 52.05 | -8.59 | 243,957 | No fresh co.-specific catalyst; selling on satellite deployment pace concerns |
+| 2 | NIO | 3.60 | +5.88 | 673,220 | No clear catalyst found (generic quote pages only) |
+
+Only 2 qualifiers (PEPG +8.84% excluded, $2.585 < $3). Deep dive on both (cap 5).
+
+#### Deep dive: ASTS $52.05 -8.59%
+- Catalyst: No new filing/news found; snippets cite deployment-pace worries. US Mobile Q4 launch is a prospective positive. ~$3.9B cash (Apr 2026).
+- Why: Sentiment de-rating of high-beta pre-revenue name.
+- Impact: Thin volume, no hard catalyst; likely volatile/fade.
+- Horizon: SHORT_TERM, headline-free sentiment move.
+- Opportunity cost: Dip-buy displaces stronger holding; no sane stop for 2:1 R:R. Research only.
+
+#### Deep dive: NIO $3.60 +5.88%
+- Catalyst: Unverified; only generic pages. Deep-dive fetch incomplete.
+- Why: Likely China-EV sympathy/delivery sentiment (unconfirmed).
+- Impact: Low-priced, thin evidence; likely mean-reverts.
+- Horizon: SHORT_TERM, no verified structural catalyst.
+- Opportunity cost: Sub-$4 with 10% trail struggles at 2:1 R:R; displaces better setup. Research only.

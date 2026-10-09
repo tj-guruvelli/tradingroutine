@@ -1,0 +1,39 @@
+{
+  "scanned_at": "2026-10-09T14:06:00Z",
+  "deep_dive_cap": 5,
+  "note": "PEPG (+8.84%, $2.585) excluded: price<3",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ASTS",
+      "price": 52.05,
+      "gap_pct": -8.59,
+      "premarket_volume": 243957,
+      "catalyst": "No fresh company-specific catalyst found; shares reportedly sliding as investors weigh pace of satellite deployment.",
+      "headlines": [
+        "AST SpaceMobile shares declined despite a lack of a fresh company-specific catalyst (search snippet)"
+      ],
+      "catalyst_detail": "Search results show no new filing or announcement; snippets cite investor concern over satellite deployment pace. A US Mobile Q4 launch item is a prospective positive, not today's driver. Company had ~$3.9B cash per an April 2026 presentation.",
+      "why": "Sentiment-driven de-rating of a high-beta, pre-revenue space name with no specific news; likely momentum/risk-off flows.",
+      "impact": "Gap on only ~244K pre-mkt shares with no hard catalyst reads as fade/volatility, not a durable thesis. Peers' read-through not verified.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "headline-free sentiment move, no structural catalyst confirmed",
+      "opportunity_cost": "Long-side dip-buy would displace a stronger holding and a falling-knife entry has no clear sane stop for 2:1 R:R; research only, no action."
+    },
+    {
+      "rank": 2,
+      "symbol": "NIO",
+      "price": 3.6,
+      "gap_pct": 5.88,
+      "premarket_volume": 673220,
+      "catalyst": "No clear catalyst found; snippets only generic (NIO Capital robotics investments, prior close $3.42).",
+      "headlines": [],
+      "catalyst_detail": "Quick-scan only returned generic quote pages; deep-dive fetch not completed this run. Note price sits just above the $3 floor.",
+      "why": "Unverified; likely sector/China-EV sympathy or monthly delivery sentiment.",
+      "impact": "Low-priced name with thin catalyst evidence; treat as likely mean-reverting until confirmed.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "no verified structural catalyst",
+      "opportunity_cost": "Sub-$4 EV name with wide % stops struggles to clear 2:1 R:R under the 10% trail; would displace a higher-quality setup. Research only."
+    }
+  ]
+}
