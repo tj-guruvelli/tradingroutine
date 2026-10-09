@@ -15540,3 +15540,22 @@ Only 1 gapper cleared the filter; ranks 2-10 empty. Volume shown is session volu
 | KLIC | B | Momentum confluence | daily swing | ADX 25.49, EMA9 $94.98 > EMA21 $91.37, RSI 57.33 |
 
 60 symbols scanned. Setup A not evaluated (18:33 ET, outside 10:00-15:30 ET window) — grade_a_possible=false. 0 errors.
+
+## 2026-10-09 — Pre-Market (Friday, cloud)
+Sources: Apify RAG (Yahoo suffix applied; VIX via CNBC) + WebSearch fallback (Apify oil/futures/catalyst queries returned junk/empty — YouTube, no data). No Yahoo data used.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | daytrade count 0 | 0 positions | 0 open orders. (Still the $100k-vs-$10k baseline mismatch flagged Jul 27 — operator review pending.)
+
+**Market context**
+- VIX 15.26 (-0.97%, 7:08 AM EDT, CNBC); 52w range 13.38–35.30. Low-vol regime.
+- Last verified close (Oct 1, tapeboard, single blog — unverified): SPX 7,666; WTI ~$93.16; 10Y 5.24%. Oct 6 outlook: indexes testing highs, poor breadth.
+- GAP: WTI/Brent live, S&P futures, today's earnings and econ calendar — no clean source retrieved.
+
+**Ideas (none actionable w/o fresh catalyst check)**
+- XOM/CVX — energy momentum, WTI ~$90s. Catalyst aging; 1/4 confluence. Entry only on fresh catalyst; stop 10% trail; target 2:1.
+- KLIC — Setup Scan B (ADX 25.5, EMA9>EMA21, RSI 57). No documented catalyst -> fails gate.
+- GFS — TSMC $2B interposer deal (long-term). Gap already faded risk; chase rule applies. Watch only.
+
+**Risks:** poor breadth near highs, 10Y >5%, midterm/geopolitical hedging (CNBC, Sep 10), data gaps above.
+
+**Decision: HOLD** (patience > activity). Weekly trades 0/3.
