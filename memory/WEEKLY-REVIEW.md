@@ -450,3 +450,48 @@ Template for each entry:
 - Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 9th straight week, still the top open infra item after the baseline/ClickUp fixes
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves; discipline held under two straight weeks of real catalysts
 ### Overall Grade: C
+
+## Week ending 2026-10-09
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | +1.15% (SPY proxy: $769.65 → $778.51, Alpaca daily bars, Fri Oct 2 close → Fri Oct 9 close) |
+| Bot vs S&P | -1.15% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through genuinely catalyst-dense gapper activity (Oct 6 space-sector cluster — ASTS/PL/OKLO/RDW/NBIS/RKLB/BKSY/SATL/LUNR all +6-11% with no company-specific news; Oct 8 AI-beta gap-down cluster — BMNR/STM/NBIS/CRWV/RGTI all -5 to -8%; ASTS falling-knife -8.59% then -9.69% Oct 8-9) — zero forced trades
+- Correctly disqualified RKLB (Oct 5) on the hard 200-SMA long-bias gate despite a "space sector bid" catalyst framing — price was below 200-SMA and widening the gap intraday
+- Correctly read the recurring multi-name space/AI-infra gap clusters (Oct 6, Oct 8) as single correlated sector-beta moves that would trip the >0.75 correlation gate, not independent signals — consistent with the Oct 2 review's same catch
+- Correctly declined GFS's genuine TSMC $2B interposer-deal catalyst (Oct 8-9) once the gap had already run — chase rule applied over a tempting long-term thesis
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- All 5 sessions logged clean Market-Open + EOD TRADE-LOG entries — 3rd consecutive clean week; the intermittent missing-entry pattern flagged in 7+ reviews prior to Sep 25 has not recurred in three straight weeks
+### What Didn't Work
+- 15th consecutive zero-entry week (66 trading days since launch, Jul 9) — sat in 100% cash through a +1.15% S&P week, the largest single-week opportunity cost since Aug 7 (-3.6% missed)
+- `tradingview-data` MCP still down the entire week (10th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a 10th straight week this exact fix has been proposed and not shipped
+- **Directly re-confirmed this review**: `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` are still the literal placeholder strings `your_clickup_workspace_id_here` / `your_clickup_channel_id_here` in the live environment — 4th straight week confirmed broken, fallback notification channel has not delivered a single message since first found (Sep 18)
+- Apify RAG web browser catalyst research degraded further and consistently this week (Oct 5-9) — nearly every gapper deep-dive across all 5 sessions came back with "no same-day catalyst found" off stale/empty/junk scrapes (YouTube results, 500/502 errors, undated snippets); WebSearch fully carried catalyst sourcing for the 3rd+ straight week running
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (100+ straight sessions / 15th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- Recurring multi-name sector-beta gap clusters (space, AI-infra, crypto-proxy) with no company-specific catalyst are now the dominant gapper pattern, not an occasional anomaly — the correlation-gate + catalyst-gate combination is catching these correctly without needing `tradingview-data`, a second straight week of evidence the discipline logic itself doesn't depend on the down MCP
+- Apify catalyst-research failure is chronic at this point (3+ weeks of near-total unusability), not intermittent drift — worth treating WebSearch as the primary catalyst-sourcing path rather than continuing to attempt-then-fallback on every gapper deep-dive
+- The Alpaca-bars-into-confluence wiring is now 10 straight weeks unshipped — longer-running than every prior infra item except the baseline mismatch itself; both remain pure process failures sitting on top of trading discipline that continues to hold up correctly
+### Adjustments for Next Week
+- Escalate the $10k vs $100k baseline mismatch again as the top-priority operator item (15th week flagged, 100+ straight sessions, zero response) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Fix `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — directly confirmed still placeholder strings this review, 4th straight week broken
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 10th straight week, still the top open infra item after the baseline/ClickUp fixes
+- Default gapper catalyst research straight to WebSearch rather than attempting Apify RAG first, given 3+ consecutive weeks of near-total Apify catalyst-fetch failure
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves; discipline held under two straight weeks of correlated sector-beta gap clusters
+### Overall Grade: C
