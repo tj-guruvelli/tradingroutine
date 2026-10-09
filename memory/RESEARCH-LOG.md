@@ -15559,3 +15559,6 @@ Sources: Apify RAG (Yahoo suffix applied; VIX via CNBC) + WebSearch fallback (Ap
 **Risks:** poor breadth near highs, 10Y >5%, midterm/geopolitical hedging (CNBC, Sep 10), data gaps above.
 
 **Decision: HOLD** (patience > activity). Weekly trades 0/3.
+
+### Gappers (auto-scan 08:03 ET, cloud)
+- 0 hits (|gap| >= 5%, price >= $3) across watchlist. No deep dive.
