@@ -15671,3 +15671,8 @@ Sourcing: Apify RAG returned dataset refs only/slow (2 of 4 queries still RUNNIN
 **Risks:** CPI Wed + hot-inflation/rates risk; bank earnings gap risk; oil headline whipsaw; macro-event week favors waiting.
 
 **Decision: HOLD** — no catalyst-qualified setup with ≥2 confluence; patience > activity.
+
+## 2026-10-12
+
+### Gappers (auto-scan 08:20 ET, cloud)
+No gappers >=5% across watchlist. Largest: MSFT +2.79%, NIO +2.35%, BMNR +2.04%. No catalyst/deep-dive run. No notification sent.
