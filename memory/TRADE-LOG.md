@@ -1,5 +1,12 @@
 # Trade Log
 
+### Oct 12, EOD Snapshot (Day 67, Monday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-10-09`, equity/cash unchanged at $100,000). Market-open decision was HOLD — XOM/CVX (catalyst aging, 1/4 confluence), TSM/banks (pre-event waits ahead of 10/13-10/15 earnings), ASTS (catalyst present but failed 2:1 R:R check) all failed. Midday scan found nothing to cut or tighten; gappers flagged ASTS/OKLO/BE/SATL/BW/NBIS, all research-only (AI-infra/nuclear/power names moved together as sector rotation, not idiosyncratic news) — no open position to react to. Weekly trade count: 0/3 (week of Oct 12). 67th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator review pending. Tomorrow: pre-market re-scan XOM/CVX, watch TSM/bank earnings window (10/13-10/15) for a post-print catalyst, re-check ASTS R:R.
+
 ### Oct 12, Midday Scan (Day 67, Monday, local run)
 **No action.** `alpaca.sh positions`/`orders` confirm 0 positions, 0 open
 orders — nothing to cut at -7%, nothing to tighten, no thesis to re-check.
