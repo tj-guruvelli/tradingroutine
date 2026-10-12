@@ -15731,3 +15731,17 @@ Only 1 of ~60 watchlist names cleared the 5% / $3 / 50k filter. Deep-dive cap 5;
 - Impact: Volume thin (56k), continuation of downtrend, no verified peer read-through.
 - Horizon: SHORT_TERM, no confirmed durable thesis; do not catch the knife.
 - Opportunity cost: Book is 100% cash so nothing displaced, but fails catalyst gate and R:R unclear. Research only.
+
+## 2026-10-12
+### Gappers (auto-scan 11:06 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 260.76 | -6.94 | n/a | none found |
+| 2 | SATL | 4.83 | -6.40 | n/a | none found |
+| 3 | OKLO | 32.73 | -5.60 | n/a | unconfirmed UBS PT cut (undated) |
+| 4 | BW | 5.17 | -5.40 | n/a | none found |
+| 5 | NBIS | 210.05 | -5.01 | n/a | none found |
+- All gaps are DOWN; no upside gappers. OPEN (-6.29%, $2.09) dropped: price < $3.
+- Scan ran at 11:06 ET (regular session), so "gap" is vs prior close. Volume field is session volume, not premarket.
+- Deep dives skipped: Apify RAG returned empty text; WebSearch found no dated Oct-12 catalysts. Not fabricated. Rank 6-10: none qualified.
+- Common theme: AI-infra/nuclear/power names (BE, OKLO, NBIS, BW) all down together = sector rotation, not idiosyncratic news.

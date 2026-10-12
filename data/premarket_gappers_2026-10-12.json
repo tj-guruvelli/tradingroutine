@@ -1,1 +1,12 @@
-{"scanned_at":"2026-10-12T14:06:33Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"OKLO","price":32.935,"gap_pct":-5.0,"premarket_volume":56380,"catalyst":"No same-day headline found; search titles show a deep selloff after a 52-week low on Oct 8 and a pending federal/regulatory catalyst.","headlines":["Oklo Stock Hit a 52-Week Low on October 8","Oklo investment analysis: federal catalyst meets deep selloff","Don't Buy Oklo Stock Until This Catalyst Hits"],"catalyst_detail":"Page bodies came back empty from Apify, so only headlines are available. OKLO set a 52-week low on Oct 8 and is gapping down a further 5% from a 34.67 close. Coverage frames a federal catalyst (not yet confirmed) against a deep selloff, and analysts do not see first commercial revenue soon.","why":"Pre-revenue nuclear name in a continuing drawdown. Momentum sellers extend the move while the catalyst is still pending.","impact":"Pre-market volume is 56k, barely above the 50k floor, so conviction is low. The gap continues an existing downtrend rather than starting a new one. No peer read-through was verified.","horizon":"SHORT_TERM","opportunity_cost":"Buying a falling knife with no confirmed catalyst would displace nothing today because the book is 100% cash. It fails the catalyst gate and 2:1 R:R is unclear below the 52-week low. 0/3 weekly trades used, but no entry is warranted."}]}
+{
+  "scanned_at": "2026-10-12T15:06:14Z",
+  "deep_dive_cap": 5,
+  "deep_dive_note": "Apify RAG returned no usable text (empty/timeouts); WebSearch found no dated Oct-12 catalysts. Deep dives not fabricated.",
+  "gappers": [
+    {"rank":1,"symbol":"BE","price":260.76,"gap_pct":-6.94,"premarket_volume":null,"catalyst":null,"headlines":[]},
+    {"rank":2,"symbol":"SATL","price":4.83,"gap_pct":-6.4,"premarket_volume":null,"catalyst":null,"headlines":[]},
+    {"rank":3,"symbol":"OKLO","price":32.73,"gap_pct":-5.6,"premarket_volume":null,"catalyst":"Unconfirmed: UBS price-target cut headline seen in search, undated","headlines":[]},
+    {"rank":4,"symbol":"BW","price":5.17,"gap_pct":-5.4,"premarket_volume":null,"catalyst":null,"headlines":[]},
+    {"rank":5,"symbol":"NBIS","price":210.05,"gap_pct":-5.01,"premarket_volume":null,"catalyst":null,"headlines":[]}
+  ]
+}
