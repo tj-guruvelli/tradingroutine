@@ -15650,3 +15650,24 @@ Grade A unreachable this run (ny_time 18:33, outside 10:00-15:30 ET intraday-bre
 | HAFN | B | Momentum confluence | daily swing | RSI 74.0, ADX 26.6, EMA9 $10.14 > EMA21 $9.69, px $10.61 |
 | TRMD | B | Momentum confluence | daily swing | RSI 66.1, ADX 22.7, EMA9 $38.67 > EMA21 $37.02, px $34.39 |
 | BCI | B | Momentum confluence | daily swing | RSI 55.1, ADX 23.6, EMA9 $26.08 > EMA21 $26.05, px $26.30 |
+
+### 2026-10-12 — Pre-market Research (cloud)
+Sourcing: Apify RAG returned dataset refs only/slow (2 of 4 queries still RUNNING) → fell back to native WebSearch (non-Yahoo). Held-ticker news N/A (no positions).
+
+**Account:** Equity $100,000.00 | Cash $100,000.00 | Buying power $400,000 | Positions 0 | Open orders 0 | Daytrade count: not reported by `account` (0 trades). Still the $100k-vs-$10k-baseline mismatch flagged Jul 27 (operator review pending). Weekly trade count 0/3.
+
+**Market context:**
+- Oil: WTI ~$90-92, Brent ~$103-105; fell ~1.5-2% early, intraday reversal. Middle East risk + Russian diesel headlines; Goldman Dec Brent target $90 (~$20 risk premium).
+- Futures: S&P ~flat/+0.1% (~7,816); Nasdaq 100 flat; Dow +0.1%. After a winning week.
+- VIX ~15.5 (+4%) — calm.
+- Releases: none major today. Tue 10/13 JPM/GS/C/WFC earnings; Wed 10/14 CPI (8:30 ET, ~3.6-3.7% y/y est.) + BAC/MS/BLK; Thu 10/15 PPI, retail sales, claims, SCHW, TSMC. Next FOMC Oct 27-28.
+- Sector momentum: not freshly sourced; energy remains oil-driven.
+
+**Trade ideas (research only):**
+1. XOM/CVX — catalyst: oil $90+ risk premium. Entry on pullback; stop 7-10% below; target 2:1. Status: catalyst aging, 1/4 confluence previously → no.
+2. TSMC sympathy (AI semis) — catalyst: TSM earnings 10/15. Wait for print; no entry pre-event.
+3. Banks (JPM/GS) — catalyst: earnings 10/13. Event risk; revisit post-print if sector confirms.
+
+**Risks:** CPI Wed + hot-inflation/rates risk; bank earnings gap risk; oil headline whipsaw; macro-event week favors waiting.
+
+**Decision: HOLD** — no catalyst-qualified setup with ≥2 confluence; patience > activity.
