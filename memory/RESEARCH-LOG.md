@@ -15717,3 +15717,17 @@ launch (Jul 9) with zero entries. Equity flat at $100,000 — still the
 confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved,
 operator review pending. STEP 7 (notification) N/A — no trade fired this
 run. STEP 8 (commit/push) skipped — no trades fired.
+
+### Gappers (auto-scan 10:06 ET, cloud) — 2026-10-12
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | OKLO | 32.94 | -5.0 | 56,380 | No same-day headline; 52-wk low Oct 8, federal catalyst pending |
+
+Only 1 of ~60 watchlist names cleared the 5% / $3 / 50k filter. Deep-dive cap 5; 1 qualified.
+
+#### Deep dive: OKLO $32.94 -5.0%
+- Catalyst: Apify page bodies empty (headlines only). 52-wk low Oct 8, further gap-down; federal catalyst unconfirmed; analysts see no near-term commercial revenue.
+- Why: Pre-revenue nuclear name in drawdown; momentum selling while catalyst pending.
+- Impact: Volume thin (56k), continuation of downtrend, no verified peer read-through.
+- Horizon: SHORT_TERM, no confirmed durable thesis; do not catch the knife.
+- Opportunity cost: Book is 100% cash so nothing displaced, but fails catalyst gate and R:R unclear. Research only.
