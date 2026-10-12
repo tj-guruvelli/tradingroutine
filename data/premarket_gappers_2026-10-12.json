@@ -1,5 +1,22 @@
 {
-  "scanned_at": "2026-10-12T12:20:28Z",
+  "scanned_at": "2026-10-12T13:21:41Z",
   "deep_dive_cap": 5,
-  "gappers": []
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ASTS",
+      "price": 53.03,
+      "gap_pct": -6.87,
+      "premarket_volume": 1053576,
+      "catalyst": "SpaceX reportedly snagged Grain spectrum (TradingView/Stocktwits); analyst says Ligado is next",
+      "headlines": [
+        "ASTS Stock Slides After-Hours As SpaceX Snags Grain Spectrum, Analyst Who Called The Deal Says Ligado Is Next"
+      ],
+      "catalyst_detail": "Stocktwits/TradingView headline: ASTS slid after-hours as SpaceX won Grain Spectrum assets; the analyst who called it says Ligado spectrum is next. Competing D2D spectrum acquisitions threaten ASTS's positioning. Background: stock +~68% over prior 30 days, ~$3.9B cash (Apr 2026). Article date not verified.",
+      "why": "Rival (SpaceX) locking up spectrum raises competitive/valuation risk for a stock that ran +68% in 30d; profit-taking on a momentum name.",
+      "impact": "Volume 1.05M, gap -6.9% off a big run; reads as headline-driven pullback with further downside if Ligado also goes to SpaceX. No peer read-through verified.",
+      "horizon": "SHORT_TERM, headline-driven spectrum-competition fear; no durable thesis change confirmed.",
+      "opportunity_cost": "Gap is down; long-only strategy, no short. A dip-buy would need a stop within 7-10% and 2:1 R:R toward the pre-gap $56.94 (~+7%) fails 2:1 at a 10% trail; would displace any weaker holding and use 1 of 3 weekly trades. Research only."
+    }
+  ]
 }

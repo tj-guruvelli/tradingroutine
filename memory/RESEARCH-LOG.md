@@ -15676,3 +15676,19 @@ Sourcing: Apify RAG returned dataset refs only/slow (2 of 4 queries still RUNNIN
 
 ### Gappers (auto-scan 08:20 ET, cloud)
 No gappers >=5% across watchlist. Largest: MSFT +2.79%, NIO +2.35%, BMNR +2.04%. No catalyst/deep-dive run. No notification sent.
+
+## 2026-10-12
+
+### Gappers (auto-scan 09:21 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 53.03 | -6.87 | 1,053,576 | SpaceX reportedly snagged Grain spectrum; analyst says Ligado next |
+
+Only 1 hit >=5% / >=$3. Ranks 2-10: none. Deep-dive cap 5 (1 qualified).
+
+#### Deep dive: ASTS $53.03 -6.87%
+- Catalyst: SpaceX won Grain Spectrum assets (Stocktwits/TradingView); analyst says Ligado is next. Stock +~68% over prior 30d. Article date unverified.
+- Why: Rival spectrum lock-up raises competitive/valuation risk; profit-taking after big run.
+- Impact: Vol 1.05M; headline-driven pullback, more downside if Ligado also goes to SpaceX. No peer read-through verified.
+- Horizon: SHORT_TERM, headline-driven, no confirmed thesis change.
+- Opportunity cost: Long-only; dip-buy to reclaim $56.94 (~+7%) fails 2:1 R:R at a 10% trail; would use 1 of 3 weekly trades. Research only.
