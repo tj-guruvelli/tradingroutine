@@ -15754,3 +15754,12 @@ Setup A NOT evaluated (outside 10:00-15:30 ET window) — grade A unreachable th
 | SYNA | B | Momentum confluence | daily swing | px $102.51, RSI 69.3, ADX 31.2, EMA9 $114.63 > EMA21 $108.01 |
 
 Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram notification sent (rule: only on >=1 grade-A hit).
+
+### Setup Scan (18:33 ET, cloud)
+Setup A NOT evaluated (outside 10:00-15:30 ET window) — grade A unreachable this run. 60/60 symbols checked, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SYNA | B | Momentum confluence | daily swing | px $102.51, RSI 69.3, ADX 31.2, EMA9 $114.63 > EMA21 $108.01 |
+
+Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram notification sent (rule: only on >=1 grade-A hit).
