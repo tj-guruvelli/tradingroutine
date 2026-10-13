@@ -15874,4 +15874,9 @@ Only 3 hits (<10); all 3 deep-dived (cap 5). All space sector, all gap-down.
 ### Setup Scan (16:33 ET, cloud)
 grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: "outside 10:00-15:30 ET")
 candidates_checked: 60, errors: 0
+
+### Setup Scan (18:33 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: "outside 10:00-15:30 ET")
+candidates_checked: 60, errors: 0
+No grade-A or grade-B/C hits this run.
 No grade-A or grade-B/C hits this run.
