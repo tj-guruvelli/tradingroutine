@@ -15775,3 +15775,17 @@ Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram
 - Banks post-earnings: only if a clear beat + sector momentum; wait for CPI Wed.
 **Risks:** Hot CPI Wed (3.6% y/y) into record highs; oil spike; bank-earnings reaction; AI/nuclear names in rotation selloff.
 **Decision: HOLD** (patience > activity; 0/3 trades this week).
+
+## 2026-10-13
+### Gappers (auto-scan 08:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RGTI | 13.05 | -7.02 | 565,914 | No single catalyst found; valuation-risk commentary |
+- Only 1 of 2 raw hits qualified (OPEN -6.29% excluded, price $2.09 < $3). Ranks 2-10: none.
+
+#### Deep dive: RGTI $13.05 -7.02%
+- Catalyst: No company-specific news found. Coverage cites valuation (P/S ~347, negative op margin) vs $541M cash, no debt. Down from $15.25 on Oct 2.
+- Why: Speculative quantum de-rating / momentum unwind, not a fundamental event.
+- Impact: Modest volume; reads as drift lower, not capitulation. Peers unverified.
+- Horizon: SHORT_TERM, no durable catalyst, downtrend.
+- Opportunity cost: Bearish gap, no long setup; can't clear 2:1 R:R at a sane stop. Research only.
