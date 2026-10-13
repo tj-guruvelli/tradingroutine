@@ -15870,3 +15870,8 @@ Only 3 hits (<10); all 3 deep-dived (cap 5). All space sector, all gap-down.
 - Impact: Low price, thin volume (56k) and borderline gap size; likely noise. Sector read-through from ASTS/LUNR.
 - Horizon: SHORT_TERM, No identified durable catalyst.
 - Opportunity cost: Lowest-quality of the three; sub-$5 thin name, same correlated sector. Cannot justify displacing a position or one of the 3 weekly trades.
+
+### Setup Scan (16:33 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: "outside 10:00-15:30 ET")
+candidates_checked: 60, errors: 0
+No grade-A or grade-B/C hits this run.
