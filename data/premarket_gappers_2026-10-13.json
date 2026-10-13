@@ -1,22 +1,59 @@
 {
-  "scanned_at": "2026-10-13T14:03:00Z",
-  "deep_dive_cap": 5,
-  "gappers": [
-    {"rank": 1, "symbol": "ASTS", "price": 46.76, "gap_pct": -9.17, "premarket_volume": 81131,
-     "catalyst": "No verified catalyst today; Apify returned only stale/undated results (2025 articles, catalyst tracker)",
-     "headlines": [],
-     "catalyst_detail": "No same-day news found. Background: AST SpaceMobile is a direct-to-device satellite name with ~$3.9B cash (Apr 2026) and heavy execution risk (BlueBird launch cadence, commercial ramp) per analyst pieces; a catalyst tracker lists pending BlueBird deliveries/launches.",
-     "why": "Unverified. Likely high-beta space/D2D de-rating or launch-timing sentiment; no sourced mechanism.",
-     "impact": "Only 81k premarket volume on a -9% gap, thin; high-beta name, move may extend or mean-revert intraday. No peer read-through confirmed.",
-     "horizon": "SHORT_TERM",
-     "opportunity_cost": "Bearish gap, no long setup and no catalyst to underwrite a thesis; cannot clear 2:1 R:R at a sane stop. Taking it would displace nothing better than cash. Research only."},
-    {"rank": 2, "symbol": "NBIS", "price": 198.76, "gap_pct": -5.42, "premarket_volume": 204466,
-     "catalyst": "No verified catalyst today; Apify returned only undated/stale results",
-     "headlines": [],
-     "catalyst_detail": "No same-day news found. Background: Nebius is an AI-infrastructure/neocloud name; recent logs cite Nvidia stake news and analyst bullishness, with prior sharp single-day drops (e.g. -13% Aug 6).",
-     "why": "Unverified. Likely AI-infrastructure group pullback; no sourced mechanism.",
-     "impact": "204k premarket volume, moderate. Prior close 210.14, far below Sep levels near 237 (stale snippet), so downtrend persists. Peer read-through (CRWV etc.) not confirmed today.",
-     "horizon": "SHORT_TERM",
-     "opportunity_cost": "Bearish gap in a downtrend; no long setup. Cannot clear 2:1 R:R at a sane stop; would add correlated AI-infra risk. Research only."}
-  ]
+ "scanned_at": "2026-10-13T15:05:09.611096Z",
+ "deep_dive_cap": 5,
+ "gappers": [
+  {
+   "rank": 1,
+   "symbol": "ASTS",
+   "price": 46.61,
+   "gap_pct": -9.46,
+   "premarket_volume": 198192,
+   "catalyst": "Space-sector selloff: SpaceX competition fears, launch delays, FCC Oct 29 agenda read as mixed (Clear Street keeps Buy).",
+   "headlines": [
+    "ASTS, SPCX And NN Stocks Slide: Clear Street Calls FCC Meeting Agenda Mixed For AST SpaceMobile (TradingView)",
+    "ASTS plunged to fresh 52-week low Oct 9 on SpaceX competition, launch delays (Baryabol)"
+   ],
+   "catalyst_detail": "ASTS closed 51.46 on Oct 12 and gaps to 46.61. Prior sessions already hit a 52-week low (Oct 9) on SpaceX competition and launch delays. Clear Street called the FCC Oct 29 meeting agenda mixed for the company but kept Buy. Fundamentals query not run this pass (Apify results thin); detail limited to headline research.",
+   "why": "Competitive/regulatory overhang plus sector de-risking: SpaceX-related sentiment hits satellite-to-phone peers; mixed FCC read removes a near-term catalyst.",
+   "impact": "Continuation of a multi-day downtrend (new lows), not a one-day spike; volume still thin pre-open (198k). Peers LUNR and SATL also gapping down, so sector-wide read-through, mean-reversion bounce unproven.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Headline/sentiment-driven sector slide, no durable thesis change; next real catalyst is FCC Oct 29.",
+   "opportunity_cost": "Catching a falling knife in a sector with 3/3 gappers red; would displace nothing today (long-only, no short thesis). A bounce trade needs a stop <7% and 2:1 R:R to reclaim ~51, marginal at best; fails sector-momentum rule."
+  },
+  {
+   "rank": 2,
+   "symbol": "LUNR",
+   "price": 12.12,
+   "gap_pct": -5.75,
+   "premarket_volume": 105572,
+   "catalyst": "Space stocks slide on SpaceX-sentiment weakness; NASA postponed CLPS 2 (Oct 7).",
+   "headlines": [
+    "Intuitive Machines Shares Drop After NASA Lunar Contract (Oct 7: CLPS 2 postponed)",
+    "Intuitive Machines Stock Drops: space stocks slide, SpaceX plans $40B debt raise (TradingView)"
+   ],
+   "catalyst_detail": "LUNR fell from 12.86 to 12.12. Earlier this month NASA announced a postponement of CLPS 2, and space names have since slid on SpaceX-related sentiment (reported $40B debt raise). Fundamentals query not run this pass.",
+   "why": "Government-contract timing delay removes a near-term revenue catalyst; sector beta to SpaceX sentiment amplifies the move.",
+   "impact": "Looks like sector beta rather than company-specific shock; moderate gap (-5.75%) on 105k volume. Read-through shared with ASTS/SATL.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Sentiment-driven; contract delay is timing, not loss, but no confirmed reversal catalyst.",
+   "opportunity_cost": "Same sector as ASTS and SATL, so sector exposure would be correlated (corr gate risk) and sector rotation says wait. Weak setup versus any non-space name; R:R of 2:1 unlikely at a 7% stop in a falling tape."
+  },
+  {
+   "rank": 3,
+   "symbol": "SATL",
+   "price": 4.465,
+   "gap_pct": -5.0,
+   "premarket_volume": 55906,
+   "catalyst": "No fresh company-specific catalyst found; moving with space-sector weakness (stock fell 6.3% in recent sessions).",
+   "headlines": [
+    "Satellogic (NASDAQ:SATL) Stock Falls 6.3% (MarketBeat)"
+   ],
+   "catalyst_detail": "SATL gaps from 4.70 to 4.465 (exactly -5.0%). Searches returned no dated Oct 13 company news; one result noted a 6.3% drop. Treat as sector-driven; no catalyst confirmed.",
+   "why": "Likely sympathy move with the space/satellite group; no company-specific mechanism identified.",
+   "impact": "Low price, thin volume (56k) and borderline gap size; likely noise. Sector read-through from ASTS/LUNR.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "No identified durable catalyst.",
+   "opportunity_cost": "Lowest-quality of the three; sub-$5 thin name, same correlated sector. Cannot justify displacing a position or one of the 3 weekly trades."
+  }
+ ]
 }

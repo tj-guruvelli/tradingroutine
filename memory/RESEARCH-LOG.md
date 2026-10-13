@@ -15840,3 +15840,33 @@ Only 2 hits >=5% / >=$3 / vol>=50k; deep dive on both (cap 5, not reached).
 - Impact: 204k premarket volume, moderate; downtrend vs Sep levels, peer read-through unconfirmed.
 - Horizon: SHORT_TERM, no verified thesis
 - Opportunity cost: Bearish gap in downtrend; no long setup, would add correlated AI-infra risk. Research only.
+
+### Gappers (auto-scan 11:05 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 46.61 | -9.46% | 198192 | Space-sector selloff: SpaceX competition fears, launch delays, FCC Oct 29 agenda read as mixed (Clear Street keeps Buy). |
+| 2 | LUNR | 12.12 | -5.75% | 105572 | Space stocks slide on SpaceX-sentiment weakness; NASA postponed CLPS 2 (Oct 7). |
+| 3 | SATL | 4.465 | -5.0% | 55906 | No fresh company-specific catalyst found; moving with space-sector weakness (stock fell 6.3% in recent sessions). |
+
+Only 3 hits (<10); all 3 deep-dived (cap 5). All space sector, all gap-down.
+
+#### Deep dive: ASTS $46.61 -9.46%
+- Catalyst: ASTS closed 51.46 on Oct 12 and gaps to 46.61. Prior sessions already hit a 52-week low (Oct 9) on SpaceX competition and launch delays. Clear Street called the FCC Oct 29 meeting agenda mixed for the company but kept Buy. Fundamentals query not run this pass (Apify results thin); detail limited to headline research.
+- Why: Competitive/regulatory overhang plus sector de-risking: SpaceX-related sentiment hits satellite-to-phone peers; mixed FCC read removes a near-term catalyst.
+- Impact: Continuation of a multi-day downtrend (new lows), not a one-day spike; volume still thin pre-open (198k). Peers LUNR and SATL also gapping down, so sector-wide read-through, mean-reversion bounce unproven.
+- Horizon: SHORT_TERM, Headline/sentiment-driven sector slide, no durable thesis change; next real catalyst is FCC Oct 29.
+- Opportunity cost: Catching a falling knife in a sector with 3/3 gappers red; would displace nothing today (long-only, no short thesis). A bounce trade needs a stop <7% and 2:1 R:R to reclaim ~51, marginal at best; fails sector-momentum rule.
+
+#### Deep dive: LUNR $12.12 -5.75%
+- Catalyst: LUNR fell from 12.86 to 12.12. Earlier this month NASA announced a postponement of CLPS 2, and space names have since slid on SpaceX-related sentiment (reported $40B debt raise). Fundamentals query not run this pass.
+- Why: Government-contract timing delay removes a near-term revenue catalyst; sector beta to SpaceX sentiment amplifies the move.
+- Impact: Looks like sector beta rather than company-specific shock; moderate gap (-5.75%) on 105k volume. Read-through shared with ASTS/SATL.
+- Horizon: SHORT_TERM, Sentiment-driven; contract delay is timing, not loss, but no confirmed reversal catalyst.
+- Opportunity cost: Same sector as ASTS and SATL, so sector exposure would be correlated (corr gate risk) and sector rotation says wait. Weak setup versus any non-space name; R:R of 2:1 unlikely at a 7% stop in a falling tape.
+
+#### Deep dive: SATL $4.465 -5.0%
+- Catalyst: SATL gaps from 4.70 to 4.465 (exactly -5.0%). Searches returned no dated Oct 13 company news; one result noted a 6.3% drop. Treat as sector-driven; no catalyst confirmed.
+- Why: Likely sympathy move with the space/satellite group; no company-specific mechanism identified.
+- Impact: Low price, thin volume (56k) and borderline gap size; likely noise. Sector read-through from ASTS/LUNR.
+- Horizon: SHORT_TERM, No identified durable catalyst.
+- Opportunity cost: Lowest-quality of the three; sub-$5 thin name, same correlated sector. Cannot justify displacing a position or one of the 3 weekly trades.
