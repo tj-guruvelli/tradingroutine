@@ -15818,3 +15818,25 @@ Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram
 - Impact: Highest volume of the three (824k) and moving with RGTI: sector read-through, likely sustained pressure near term.
 - Horizon: SHORT_TERM, no new thesis, downtrend, sector unwind
 - Opportunity cost: Bearish gap, no long setup. Cannot clear 2:1 R:R at a sane stop; any quantum exposure would add correlated risk. Research only.
+
+### Gappers (auto-scan 10:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 46.76 | -9.17 | 81,131 | None verified (Apify stale results) |
+| 2 | NBIS | 198.76 | -5.42 | 204,466 | None verified (Apify stale results) |
+
+Only 2 hits >=5% / >=$3 / vol>=50k; deep dive on both (cap 5, not reached).
+
+#### Deep dive: ASTS $46.76 -9.17%
+- Catalyst: No same-day news found. Background: D2D satellite name, ~$3.9B cash (Apr 2026), heavy execution risk; catalyst tracker lists pending BlueBird launches.
+- Why: Unverified; likely high-beta space de-rating, no sourced mechanism.
+- Impact: Thin 81k premarket volume on -9% gap; could extend or mean-revert intraday.
+- Horizon: SHORT_TERM, no verified thesis
+- Opportunity cost: Bearish gap, no long setup; cannot clear 2:1 R:R at a sane stop. Research only.
+
+#### Deep dive: NBIS $198.76 -5.42%
+- Catalyst: No same-day news found. Background: AI-infra neocloud, prior Nvidia-stake enthusiasm, prior sharp drops.
+- Why: Unverified; likely AI-infra group pullback.
+- Impact: 204k premarket volume, moderate; downtrend vs Sep levels, peer read-through unconfirmed.
+- Horizon: SHORT_TERM, no verified thesis
+- Opportunity cost: Bearish gap in downtrend; no long setup, would add correlated AI-infra risk. Research only.

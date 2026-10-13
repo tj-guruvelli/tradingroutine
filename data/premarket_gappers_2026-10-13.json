@@ -1,49 +1,22 @@
 {
-  "scanned_at": "2026-10-13T13:07:00Z",
+  "scanned_at": "2026-10-13T14:03:00Z",
   "deep_dive_cap": 5,
-  "note": "OPEN (-6.97%, $2.07) excluded: price<$3. premarket_volume field holds Alpaca session volume. Deep-dive fundamentals query skipped; based on catalyst queries only.",
   "gappers": [
-    {
-      "rank": 1,
-      "symbol": "RCAT",
-      "price": 5.26,
-      "gap_pct": -8.92,
-      "premarket_volume": 354366,
-      "catalyst": "No fresh catalyst found; shares near 52-wk low ($5.77) after slide from ~$6.15.",
-      "headlines": [],
-      "catalyst_detail": "No company-specific news surfaced. Search results only show price pages: stock near its 52-week low of $5.77, down ~3.9% prior week. Gap now breaks that low.",
-      "why": "Breakdown through 52-wk low; no news, so likely momentum/stop-run selling in speculative drone small caps.",
-      "impact": "Volume 354k is moderate. Reads as technical break, not capitulation. Peer read-through unverified.",
-      "horizon": "SHORT_TERM",
-      "opportunity_cost": "Bearish gap, no long setup; stock-only and no shorts. Cannot clear 2:1 R:R at a sane stop. Research only."
-    },
-    {
-      "rank": 2,
-      "symbol": "RGTI",
-      "price": 12.94,
-      "gap_pct": -7.8,
-      "premarket_volume": 565914,
-      "catalyst": "No same-day catalyst found; quantum names selling off together.",
-      "headlines": [],
-      "catalyst_detail": "No company-specific news today (search only returned older funding-hope articles and past selloff pages). Moves in line with QBTS (-7.6%) in the quantum group.",
-      "why": "Sector-wide quantum de-rating / risk-off in speculative high-beta tech, not a Rigetti-specific event.",
-      "impact": "Volume 566k; sector-wide move with QBTS suggests group unwind rather than a one-name headline. Could extend or bounce with group.",
-      "horizon": "SHORT_TERM",
-      "opportunity_cost": "Bearish gap, no long setup; would displace nothing since no entry is valid. Cannot clear 2:1 R:R at a sane stop. Research only."
-    },
-    {
-      "rank": 3,
-      "symbol": "QBTS",
-      "price": 13.45,
-      "gap_pct": -7.56,
-      "premarket_volume": 823859,
-      "catalyst": "No same-day catalyst; $100M US gov funding news is old (Jul/Sep) and priced in; valuation/burn concerns.",
-      "headlines": [],
-      "catalyst_detail": "No new news today. Background: $100M US government funding (cited Jul and Sep 2026), ~$37M/qtr cash burn, stock ~60% off peak per Motley Fool (Sep 23).",
-      "why": "Group de-rating in quantum; valuation and cash-burn concerns reassert once funding enthusiasm fades.",
-      "impact": "Highest volume of the three (824k) and moving with RGTI: sector read-through, likely sustained pressure near term.",
-      "horizon": "SHORT_TERM",
-      "opportunity_cost": "Bearish gap, no long setup. Cannot clear 2:1 R:R at a sane stop; any quantum exposure would add correlated risk. Research only."
-    }
+    {"rank": 1, "symbol": "ASTS", "price": 46.76, "gap_pct": -9.17, "premarket_volume": 81131,
+     "catalyst": "No verified catalyst today; Apify returned only stale/undated results (2025 articles, catalyst tracker)",
+     "headlines": [],
+     "catalyst_detail": "No same-day news found. Background: AST SpaceMobile is a direct-to-device satellite name with ~$3.9B cash (Apr 2026) and heavy execution risk (BlueBird launch cadence, commercial ramp) per analyst pieces; a catalyst tracker lists pending BlueBird deliveries/launches.",
+     "why": "Unverified. Likely high-beta space/D2D de-rating or launch-timing sentiment; no sourced mechanism.",
+     "impact": "Only 81k premarket volume on a -9% gap, thin; high-beta name, move may extend or mean-revert intraday. No peer read-through confirmed.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Bearish gap, no long setup and no catalyst to underwrite a thesis; cannot clear 2:1 R:R at a sane stop. Taking it would displace nothing better than cash. Research only."},
+    {"rank": 2, "symbol": "NBIS", "price": 198.76, "gap_pct": -5.42, "premarket_volume": 204466,
+     "catalyst": "No verified catalyst today; Apify returned only undated/stale results",
+     "headlines": [],
+     "catalyst_detail": "No same-day news found. Background: Nebius is an AI-infrastructure/neocloud name; recent logs cite Nvidia stake news and analyst bullishness, with prior sharp single-day drops (e.g. -13% Aug 6).",
+     "why": "Unverified. Likely AI-infrastructure group pullback; no sourced mechanism.",
+     "impact": "204k premarket volume, moderate. Prior close 210.14, far below Sep levels near 237 (stale snippet), so downtrend persists. Peer read-through (CRWV etc.) not confirmed today.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Bearish gap in a downtrend; no long setup. Cannot clear 2:1 R:R at a sane stop; would add correlated AI-infra risk. Research only."}
   ]
 }
