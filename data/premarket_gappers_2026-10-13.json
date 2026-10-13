@@ -1,1 +1,49 @@
-{"scanned_at":"2026-10-13T12:05:02Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"RGTI","price":13.05,"gap_pct":-7.02,"premarket_volume":565914,"catalyst":"No single catalyst found; coverage is valuation-risk/sell-off commentary (stock -3.7% days earlier, -56.9% over 12mo)","headlines":["Rigetti Computing (RGTI) Stock Dropped, So What Is ...","Rigetti's Quantum Ambitions Face Valuation Risks"],"catalyst_detail":"No company-specific news located. Recent coverage points to valuation concerns (P/S ~347, negative operating margins) offset by $541M cash and no debt. Prior close $14.04 vs $15.25 on Oct 2, so the slide is continuing.","why":"Likely speculative quantum-sector momentum unwind / high-multiple de-rating rather than a fundamental event.","impact":"Volume 566k is modest; reads as drift lower, not capitulation. Quantum peers not verified.","horizon":"SHORT_TERM","opportunity_cost":"Bearish gap on a stocks-only long book: no long setup. Cannot clear 2:1 R:R at a sane stop in a downtrend; would displace nothing and add speculative-sector risk."}]}
+{
+  "scanned_at": "2026-10-13T13:07:00Z",
+  "deep_dive_cap": 5,
+  "note": "OPEN (-6.97%, $2.07) excluded: price<$3. premarket_volume field holds Alpaca session volume. Deep-dive fundamentals query skipped; based on catalyst queries only.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "RCAT",
+      "price": 5.26,
+      "gap_pct": -8.92,
+      "premarket_volume": 354366,
+      "catalyst": "No fresh catalyst found; shares near 52-wk low ($5.77) after slide from ~$6.15.",
+      "headlines": [],
+      "catalyst_detail": "No company-specific news surfaced. Search results only show price pages: stock near its 52-week low of $5.77, down ~3.9% prior week. Gap now breaks that low.",
+      "why": "Breakdown through 52-wk low; no news, so likely momentum/stop-run selling in speculative drone small caps.",
+      "impact": "Volume 354k is moderate. Reads as technical break, not capitulation. Peer read-through unverified.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Bearish gap, no long setup; stock-only and no shorts. Cannot clear 2:1 R:R at a sane stop. Research only."
+    },
+    {
+      "rank": 2,
+      "symbol": "RGTI",
+      "price": 12.94,
+      "gap_pct": -7.8,
+      "premarket_volume": 565914,
+      "catalyst": "No same-day catalyst found; quantum names selling off together.",
+      "headlines": [],
+      "catalyst_detail": "No company-specific news today (search only returned older funding-hope articles and past selloff pages). Moves in line with QBTS (-7.6%) in the quantum group.",
+      "why": "Sector-wide quantum de-rating / risk-off in speculative high-beta tech, not a Rigetti-specific event.",
+      "impact": "Volume 566k; sector-wide move with QBTS suggests group unwind rather than a one-name headline. Could extend or bounce with group.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Bearish gap, no long setup; would displace nothing since no entry is valid. Cannot clear 2:1 R:R at a sane stop. Research only."
+    },
+    {
+      "rank": 3,
+      "symbol": "QBTS",
+      "price": 13.45,
+      "gap_pct": -7.56,
+      "premarket_volume": 823859,
+      "catalyst": "No same-day catalyst; $100M US gov funding news is old (Jul/Sep) and priced in; valuation/burn concerns.",
+      "headlines": [],
+      "catalyst_detail": "No new news today. Background: $100M US government funding (cited Jul and Sep 2026), ~$37M/qtr cash burn, stock ~60% off peak per Motley Fool (Sep 23).",
+      "why": "Group de-rating in quantum; valuation and cash-burn concerns reassert once funding enthusiasm fades.",
+      "impact": "Highest volume of the three (824k) and moving with RGTI: sector read-through, likely sustained pressure near term.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Bearish gap, no long setup. Cannot clear 2:1 R:R at a sane stop; any quantum exposure would add correlated risk. Research only."
+    }
+  ]
+}

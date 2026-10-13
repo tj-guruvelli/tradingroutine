@@ -15789,3 +15789,32 @@ Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram
 - Impact: Modest volume; reads as drift lower, not capitulation. Peers unverified.
 - Horizon: SHORT_TERM, no durable catalyst, downtrend.
 - Opportunity cost: Bearish gap, no long setup; can't clear 2:1 R:R at a sane stop. Research only.
+
+### Gappers (auto-scan 09:07 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RCAT | 5.26 | -8.92% | 354366 | No fresh catalyst found; shares near 52-wk low ($5.77) after slide from ~$6.15. |
+| 2 | RGTI | 12.94 | -7.8% | 565914 | No same-day catalyst found; quantum names selling off together. |
+| 3 | QBTS | 13.45 | -7.56% | 823859 | No same-day catalyst; $100M US gov funding news is old (Jul/Sep) and priced in; valuation/burn concerns. |
+- OPEN -6.97% $2.07 excluded (<$3). Only 3 of top-10 slots filled; deep-dive based on catalyst queries only (no second fundamentals query).
+
+#### Deep dive: RCAT $5.26 -8.92%
+- Catalyst: No company-specific news surfaced. Search results only show price pages: stock near its 52-week low of $5.77, down ~3.9% prior week. Gap now breaks that low.
+- Why: Breakdown through 52-wk low; no news, so likely momentum/stop-run selling in speculative drone small caps.
+- Impact: Volume 354k is moderate. Reads as technical break, not capitulation. Peer read-through unverified.
+- Horizon: SHORT_TERM, no durable catalyst, downtrend, fresh 52-wk low
+- Opportunity cost: Bearish gap, no long setup; stock-only and no shorts. Cannot clear 2:1 R:R at a sane stop. Research only.
+
+#### Deep dive: RGTI $12.94 -7.8%
+- Catalyst: No company-specific news today (search only returned older funding-hope articles and past selloff pages). Moves in line with QBTS (-7.6%) in the quantum group.
+- Why: Sector-wide quantum de-rating / risk-off in speculative high-beta tech, not a Rigetti-specific event.
+- Impact: Volume 566k; sector-wide move with QBTS suggests group unwind rather than a one-name headline. Could extend or bounce with group.
+- Horizon: SHORT_TERM, sector momentum unwind, no durable thesis
+- Opportunity cost: Bearish gap, no long setup; would displace nothing since no entry is valid. Cannot clear 2:1 R:R at a sane stop. Research only.
+
+#### Deep dive: QBTS $13.45 -7.56%
+- Catalyst: No new news today. Background: $100M US government funding (cited Jul and Sep 2026), ~$37M/qtr cash burn, stock ~60% off peak per Motley Fool (Sep 23).
+- Why: Group de-rating in quantum; valuation and cash-burn concerns reassert once funding enthusiasm fades.
+- Impact: Highest volume of the three (824k) and moving with RGTI: sector read-through, likely sustained pressure near term.
+- Horizon: SHORT_TERM, no new thesis, downtrend, sector unwind
+- Opportunity cost: Bearish gap, no long setup. Cannot clear 2:1 R:R at a sane stop; any quantum exposure would add correlated risk. Research only.
