@@ -15763,3 +15763,15 @@ Setup A NOT evaluated (outside 10:00-15:30 ET window) — grade A unreachable th
 | SYNA | B | Momentum confluence | daily swing | px $102.51, RSI 69.3, ADX 31.2, EMA9 $114.63 > EMA21 $108.01 |
 
 Only grade-B hit; no grade-A possible this run (post-15:30 ET fire). No Telegram notification sent (rule: only on >=1 grade-A hit).
+
+## 2026-10-13 — Pre-market
+(Apify RAG runs stayed RUNNING/empty; fell back to native WebSearch, Yahoo blocked.)
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | daytrade count 0 | 0 positions, 0 orders (still the $100k-vs-$10k mismatch flagged Jul 27).
+**Market:** S&P fut ~7,817 (+0.1%), near record highs. WTI ~$93.74 (+2.1%), Brent ~$106.65 (+1.8%) — Iran war supply disruption. VIX ~15 (CNN 15.21). Sources conflict; unverified live.
+**Today:** Bank earnings open — JPM (~7:00 ET), GS (~7:30), WFC, C, UNH, JNJ, DPZ; existing home sales. Wed: CPI (hdl 0.6% m/m, 3.6% y/y exp), BAC/MS, Beige Book. Thu: PPI, retail sales, TSM.
+**Ideas (none actionable w/o verified catalyst + 2/4 confluence):**
+- Energy (XOM/CVX): oil bid on Iran war; catalyst aging, previously 1/4 confluence. Watch entry on pullback; stop 8%, target 2:1.
+- SYNA: grade-B momentum (RSI 69, ADX 31) but near overbought; no documented catalyst. Skip unless pullback.
+- Banks post-earnings: only if a clear beat + sector momentum; wait for CPI Wed.
+**Risks:** Hot CPI Wed (3.6% y/y) into record highs; oil spike; bank-earnings reaction; AI/nuclear names in rotation selloff.
+**Decision: HOLD** (patience > activity; 0/3 trades this week).
