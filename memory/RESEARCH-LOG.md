@@ -15907,3 +15907,49 @@ Sources: Apify RAG (Yahoo-block suffix applied, no Yahoo URLs used) + WebSearch 
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 - No gappers >=5% / >=$3 on watchlist. Largest: RGTI -4.0%, NIO +2.3%, GOOG +1.4%. No catalyst/deep-dive run.
+
+### Gappers (auto-scan 09:03 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 45.92 | -10.8 | 488513 | No confirmed same-day catalyst; a buy upgrade/sentiment piece ran ~16h earlier, so the gap down is unexplained. |
+| 2 | CRWV | 71.76 | -10.62 | 986934 | No confirmed same-day catalyst; broad neocloud/AI-infra pullback, stock retesting support near $75-77 per retail commentary. |
+| 3 | NBIS | 195.1 | -7.16 | 526769 | No confirmed same-day catalyst; neocloud peers (CRWV) also gapping down, sector-wide AI-infra weakness. Prev close ~$210 vs $237 a week+ ago. |
+| 4 | RGTI | 12.34 | -6.87 | 688507 | No confirmed same-day catalyst; quantum group (QBTS) also down, sector sympathy move. |
+| 5 | QBTS | 12.845 | -6.55 | 681304 | No confirmed same-day catalyst; searches returned only stale items (Sep/Jul), sympathy with RGTI quantum weakness. |
+
+Only 5 names cleared the 5% gap filter (all gap-downs); all five got deep dive. Second Apify fundamentals query skipped; catalyst searches returned no same-day news.
+
+#### Deep dive: ASTS $45.92 -10.8%
+- Catalyst: Gap down ~11% on 489k pre-mkt shares; no news found explaining it. Last seen coverage was a buy upgrade/53% fair-value-upside note.
+- Why: Unexplained fade of a high-beta space name, likely risk-off/momentum unwind rather than company news.
+- Impact: Volume modest; no read-through peer found. Reads as likely headline-free momentum flush; could mean-revert or extend.
+- Horizon: SHORT_TERM, No identified catalyst, no durable thesis to carry.
+- Opportunity cost: Would displace any open higher-conviction holding; catching a falling knife can't clear 2:1 R:R at a stop inside the 7% cut rule.
+
+#### Deep dive: CRWV $71.76 -10.62%
+- Catalyst: Gap down ~10.6% on ~987k shares. Context: $104B backlog vs small cap per bull notes, but nothing new today found.
+- Why: Group de-risking in AI-infra/neocloud names (NBIS gapping too) hits levered, high-beta CRWV hardest.
+- Impact: Highest volume of the five; sector-wide read-through (NBIS -7%). Not a one-name story.
+- Horizon: SHORT_TERM, Sector-driven drop with no confirmed structural change; wait for stabilization.
+- Opportunity cost: Would compete with NBIS for the same AI-infra theme (correlation gate risk); 2:1 R:R only viable near $75-77 support re-test, unconfirmed.
+
+#### Deep dive: NBIS $195.1 -7.16%
+- Catalyst: Gap down ~7.2% from $210 close. Peers CRWV down ~10.6% too; no company-specific news found for today.
+- Why: AI-infra sector selloff pulling neocloud peers lower together.
+- Impact: Volume ~527k; moves in lockstep with CRWV so reads as sector, likely to track AI tape.
+- Horizon: SHORT_TERM, Sector beta move, no company catalyst identified.
+- Opportunity cost: Would displace/overlap CRWV (>0.75 correlation likely); ranks below CRWV/ASTS by gap size. R:R unproven without a base.
+
+#### Deep dive: RGTI $12.34 -6.87%
+- Catalyst: Gap down ~6.9% on ~689k shares. Recent coverage tied RGTI to IonQ/NVIDIA sympathy rallies; today's drop is the reverse.
+- Why: Quantum group trades as one basket on sympathy; QBTS also down ~6.6%.
+- Impact: Sector-wide quantum weakness, volume decent; fade-or-bounce depends on group, not RGTI itself.
+- Horizon: SHORT_TERM, Sympathy-driven basket move, no durable thesis.
+- Opportunity cost: Would overlap QBTS (same basket); 2 failed-trade sector rule and R:R at ~7% stop make 2:1 hard on a basket drop.
+
+#### Deep dive: QBTS $12.845 -6.55%
+- Catalyst: Gap down ~6.6% on ~681k shares. Only stale items surfaced (Jul funding headline, Sep 'no catalysts' note); nothing today.
+- Why: Quantum basket weakness alongside RGTI.
+- Impact: Same basket move as RGTI; no independent signal.
+- Horizon: SHORT_TERM, No company catalyst; trades with RGTI.
+- Opportunity cost: Redundant with RGTI; lowest rank of the five, can't beat ASTS/CRWV on size of dislocation.

@@ -1,1 +1,81 @@
-{"scanned_at":"2026-10-14T12:03:15Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-10-14T13:10:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "ASTS",
+      "price": 45.92,
+      "gap_pct": -10.8,
+      "premarket_volume": 488513,
+      "catalyst": "No confirmed same-day catalyst; a buy upgrade/sentiment piece ran ~16h earlier, so the gap down is unexplained.",
+      "headlines": [],
+      "catalyst_detail": "Gap down ~11% on 489k pre-mkt shares; no news found explaining it. Last seen coverage was a buy upgrade/53% fair-value-upside note.",
+      "why": "Unexplained fade of a high-beta space name, likely risk-off/momentum unwind rather than company news.",
+      "impact": "Volume modest; no read-through peer found. Reads as likely headline-free momentum flush; could mean-revert or extend.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No identified catalyst, no durable thesis to carry.",
+      "opportunity_cost": "Would displace any open higher-conviction holding; catching a falling knife can't clear 2:1 R:R at a stop inside the 7% cut rule."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 71.76,
+      "gap_pct": -10.62,
+      "premarket_volume": 986934,
+      "catalyst": "No confirmed same-day catalyst; broad neocloud/AI-infra pullback, stock retesting support near $75-77 per retail commentary.",
+      "headlines": [],
+      "catalyst_detail": "Gap down ~10.6% on ~987k shares. Context: $104B backlog vs small cap per bull notes, but nothing new today found.",
+      "why": "Group de-risking in AI-infra/neocloud names (NBIS gapping too) hits levered, high-beta CRWV hardest.",
+      "impact": "Highest volume of the five; sector-wide read-through (NBIS -7%). Not a one-name story.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sector-driven drop with no confirmed structural change; wait for stabilization.",
+      "opportunity_cost": "Would compete with NBIS for the same AI-infra theme (correlation gate risk); 2:1 R:R only viable near $75-77 support re-test, unconfirmed."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 195.1,
+      "gap_pct": -7.16,
+      "premarket_volume": 526769,
+      "catalyst": "No confirmed same-day catalyst; neocloud peers (CRWV) also gapping down, sector-wide AI-infra weakness. Prev close ~$210 vs $237 a week+ ago.",
+      "headlines": [],
+      "catalyst_detail": "Gap down ~7.2% from $210 close. Peers CRWV down ~10.6% too; no company-specific news found for today.",
+      "why": "AI-infra sector selloff pulling neocloud peers lower together.",
+      "impact": "Volume ~527k; moves in lockstep with CRWV so reads as sector, likely to track AI tape.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sector beta move, no company catalyst identified.",
+      "opportunity_cost": "Would displace/overlap CRWV (>0.75 correlation likely); ranks below CRWV/ASTS by gap size. R:R unproven without a base."
+    },
+    {
+      "rank": 4,
+      "symbol": "RGTI",
+      "price": 12.34,
+      "gap_pct": -6.87,
+      "premarket_volume": 688507,
+      "catalyst": "No confirmed same-day catalyst; quantum group (QBTS) also down, sector sympathy move.",
+      "headlines": [],
+      "catalyst_detail": "Gap down ~6.9% on ~689k shares. Recent coverage tied RGTI to IonQ/NVIDIA sympathy rallies; today's drop is the reverse.",
+      "why": "Quantum group trades as one basket on sympathy; QBTS also down ~6.6%.",
+      "impact": "Sector-wide quantum weakness, volume decent; fade-or-bounce depends on group, not RGTI itself.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sympathy-driven basket move, no durable thesis.",
+      "opportunity_cost": "Would overlap QBTS (same basket); 2 failed-trade sector rule and R:R at ~7% stop make 2:1 hard on a basket drop."
+    },
+    {
+      "rank": 5,
+      "symbol": "QBTS",
+      "price": 12.845,
+      "gap_pct": -6.55,
+      "premarket_volume": 681304,
+      "catalyst": "No confirmed same-day catalyst; searches returned only stale items (Sep/Jul), sympathy with RGTI quantum weakness.",
+      "headlines": [],
+      "catalyst_detail": "Gap down ~6.6% on ~681k shares. Only stale items surfaced (Jul funding headline, Sep 'no catalysts' note); nothing today.",
+      "why": "Quantum basket weakness alongside RGTI.",
+      "impact": "Same basket move as RGTI; no independent signal.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No company catalyst; trades with RGTI.",
+      "opportunity_cost": "Redundant with RGTI; lowest rank of the five, can't beat ASTS/CRWV on size of dislocation."
+    }
+  ]
+}
