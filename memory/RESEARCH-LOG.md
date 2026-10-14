@@ -16003,3 +16003,54 @@ Note: deep-dive 'fundamentals' query skipped; catalyst searches returned stale/o
 - Impact: Modest gap, group confirms; likely fade/bounce chop.
 - Horizon: SHORT_TERM, no catalyst.
 - Opportunity cost: Small-cap volatile; fails catalyst gate. Wide stops make 2:1 R:R hard.
+
+### Gappers (auto-scan 11:02 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 66.99 | -13.89 | 1067326 | No fresh catalyst found; snippets only show stale support-retest posts. Likely AI-infra/neocloud selloff alongside NBIS/ORCL (inferred). |
+| 2 | NBIS | 189.01 | -8.64 | 383939 | No verified catalyst; stale coverage only (bullish AI-infra commentary, earnings was Aug 12). Neocloud sympathy with CRWV (inferred). |
+| 3 | ASTS | 43.43 | -7.74 | 131381 | Selloff tied to early look at FCC Oct 29 agenda (Clear Street note on ASTS/SPCX/NN); no company-specific catalyst otherwise. |
+| 4 | CMBT | 19.165 | -7.73 | 144466 | No catalyst found; shipping/tanker stocks in focus on a freight-rate boom, gap-down cause unverified. |
+| 5 | ORCL | 133.94 | -6.51 | 692203 | Pullback after prior-session ~6.8% surge; coverage cites renewed scrutiny of data-center financing vs AI catalysts. |
+| 6 | SATL | 4.26 | -6.48 | 48094 | No catalyst found; volatile geospatial/space small-cap, next earnings Nov 12. |
+| 7 | BKSY | 18.545 | -6.22 | 7276 | No catalyst found; recent coverage cites overvaluation concerns and consecutive declines. |
+| 8 | RGTI | 12.0 | -6.18 | 348372 | No company-specific news found; quantum-group weakness (QBTS also down). |
+| 9 | LUNR | 11.43 | -6.16 | 131688 | No catalyst found; stock-offering chatter and mixed 2026 catalysts in snippets. |
+| 10 | DPRO | 3.945 | -5.96 | 24538 | Follows $10M strategic investment news (drone-related); gap-down cause not confirmed. |
+
+Note: deep dive capped at top 5; ranks 6-10 quick-scan only. Vol is session volume (no premarket field). Catalysts are search-snippet level, low confidence.
+
+#### Deep dive: CRWV $66.99 -13.89%
+- Catalyst: Gapped -13.9% to ~$67 (prev close $77.80) on 1.07M shares, largest drop on the list. Search found no dated catalyst; only an older note about a pullback to ~$77 support. Cause not verified.
+- Why: Likely AI-infra de-risking: NBIS (-8.6%) and ORCL (-6.5%) fall together (inferred, not sourced).
+- Impact: Heavy volume and peer confirmation read as a sector move, not idiosyncratic. Mean-revert bounce possible but unconfirmed.
+- Horizon: SHORT_TERM, No structural catalyst identified; sector momentum break.
+- Opportunity cost: Long-only gap-down fails momentum/confluence. Would displace nothing new but ~14% gap volatility makes a sane stop with 2:1 R:R unlikely. Same-sector peers NBIS/ORCL compete; AI-infra rotation read-through is negative.
+
+#### Deep dive: NBIS $189.01 -8.64%
+- Catalyst: Gapped -8.6% to ~$189 on 384k shares. Latest coverage found is stale (bullish AI-infra commentary around $237, earnings Aug 12). No fresh catalyst verified.
+- Why: Neocloud sympathy with CRWV/ORCL (inferred).
+- Impact: Healthy volume; peer confirmation implies sector move.
+- Horizon: SHORT_TERM, No verified structural catalyst.
+- Opportunity cost: Same sector as CRWV; two failed trades in a sector triggers exit rule. Gap-down fails entry checklist; R:R unclear.
+
+#### Deep dive: ASTS $43.43 -7.74%
+- Catalyst: Gapped -7.7% to ~$43.4 on 131k shares. Coverage cites a Clear Street note on the FCC's Oct 29 agenda driving a selloff in ASTS, SPCX and NN. Another snippet says no fresh company catalyst; investors weighing satellite deployment pace.
+- Why: Regulatory-agenda uncertainty hits high-beta space names that depend on spectrum decisions.
+- Impact: Moderate volume; regulatory headline spike likely to chop until Oct 29 clarity. Space peers (SATL, BKSY, LUNR) also down.
+- Horizon: SHORT_TERM, Event-driven regulatory risk, no durable thesis; avoid carrying through Oct 29.
+- Opportunity cost: Gap-down with regulatory overhang fails entry checklist. Competes with higher-volume names; 2:1 R:R unlikely before FCC date.
+
+#### Deep dive: CMBT $19.165 -7.73%
+- Catalyst: Gapped -7.7% to ~$19.17 on 144k shares. Snippets show tanker/shipping stocks in focus on a freight-rate boom; no explanation found for today's drop.
+- Why: Unknown; possibly profit-taking in shipping after run (inferred).
+- Impact: Modest volume; no sector peer confirmation on this list.
+- Horizon: SHORT_TERM, No verified catalyst.
+- Opportunity cost: Outside current momentum sectors; fails catalyst gate. Wide stop makes 2:1 R:R hard; would displace nothing but adds no edge.
+
+#### Deep dive: ORCL $133.94 -6.51%
+- Catalyst: Gapped -6.5% to ~$133.9 on 692k shares after a ~6.8% surge the prior session. Coverage cites a mix of positive AI-driven catalysts against renewed scrutiny of its data-center financing.
+- Why: Profit-taking after the spike plus AI-capex financing concern, consistent with CRWV/NBIS weakness.
+- Impact: Solid volume; read-through to neocloud peers is clear. Large-cap, so less volatile than peers.
+- Horizon: SHORT_TERM, Pullback after spike; no structural change verified.
+- Opportunity cost: Gap-down long-only needs a reversal base first. Lower volatility than CRWV makes a sane stop plausible, but 2:1 R:R not assessable at midday without a setup.
