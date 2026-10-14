@@ -15953,3 +15953,53 @@ Only 5 names cleared the 5% gap filter (all gap-downs); all five got deep dive. 
 - Impact: Same basket move as RGTI; no independent signal.
 - Horizon: SHORT_TERM, No company catalyst; trades with RGTI.
 - Opportunity cost: Redundant with RGTI; lowest rank of the five, can't beat ASTS/CRWV on size of dislocation.
+
+### Gappers (auto-scan 10:04 ET, cloud)
+Note: deep-dive 'fundamentals' query skipped; catalyst searches returned stale/off-target snippets, so fields marked (inferred) are not sourced. Deep dive capped at top 5; ranks 6-10 quick-scan only. Volume filter applied to Alpaca `volume`.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 66.135 | -14.99% | 670082 | AI-infra/neocloud group selloff (peers NBIS, ORCL also down); company-specific news not verified |
+| 2 | NBIS | 186.6 | -9.81% | 216701 | Moves with CRWV/ORCL AI-infra selloff; company-specific news not verified |
+| 3 | ASTS | 43.31 | -8.0% | 69669 | Prior-day buy upgrade noted; gap-down cause not verified, space/high-beta weakness |
+| 4 | ORCL | 132.935 | -7.21% | 382593 | Pulled back after prior-session ~6.8% surge amid scrutiny of data-center/AI financing (snippet, unverified) |
+| 5 | QBTS | 12.615 | -5.72% | 171248 | Quantum group weak (RGTI also down); no catalyst found |
+| 6 | OKLO | 30.055 | -5.37% | 60111 | No catalyst found; nuclear/high-beta weakness |
+| 7 | GFS | 49.22 | 5.35% | 56923 | Only gap-up; rebound after 52-wk-low area, cause not verified |
+| 8 | BMNR | 22.27 | -5.19% | 321782 | No catalyst found; crypto-treasury beta |
+| 9 | RGTI | 12.135 | -5.12% | 174609 | Quantum group weak; no catalyst found |
+
+#### Deep dive: CRWV $66.135 -14.99%
+- Catalyst: Gapped -15% on 670k premarket shares, largest drop on the list. Cause not confirmed from sources; moves in lockstep with NBIS and ORCL, pointing to an AI-infrastructure/neocloud sector selloff.
+- Why: Likely sector de-risking of high-beta AI capex names (inferred, not sourced).
+- Impact: Heavy volume suggests real selling, not thin tape; peers confirm read-through. Mean-reversion bounce possible but falling-knife.
+- Horizon: SHORT_TERM, no durable thesis identified; sector-wide momentum break.
+- Opportunity cost: Long-only strategy, gap-down fails momentum/confluence. Would displace nothing (0 positions) but 2:1 R:R needs tight stop vs ~15% gap volatility; unlikely to clear.
+
+#### Deep dive: NBIS $186.6 -9.81%
+- Catalyst: Gapped -9.8% on 217k shares alongside CRWV/ORCL. Specific catalyst not verified.
+- Why: Likely AI-infra sector read-through (inferred).
+- Impact: Volume healthy; peer confirmation implies sector move, not idiosyncratic.
+- Horizon: SHORT_TERM, no verified structural catalyst.
+- Opportunity cost: Ranks below CRWV on gap but same sector; two failed trades in sector would trigger exit rule. R:R unclear at sane stop.
+
+#### Deep dive: ASTS $43.31 -8.0%
+- Catalyst: Gapped -8% on 70k premarket shares. Prior snippet showed a recent buy upgrade; gap-down cause not found.
+- Why: Unknown; possibly high-beta space/satellite de-risking (inferred).
+- Impact: Thin-ish volume vs the others; reads as headline-light drift.
+- Horizon: SHORT_TERM, no verified catalyst.
+- Opportunity cost: Gap-down, no catalyst: fails entry checklist. Would compete with every higher-volume name; R:R unlikely 2:1.
+
+#### Deep dive: ORCL $132.935 -7.21%
+- Catalyst: Gapped -7.2% on 383k shares after a ~6.8% surge the prior session; coverage cites renewed scrutiny of AI/data-center financing.
+- Why: Profit-taking after spike plus AI-capex concern, consistent with CRWV/NBIS weakness.
+- Impact: Volume solid; read-through to neocloud peers is clear.
+- Horizon: SHORT_TERM, pullback after spike; no structural change verified.
+- Opportunity cost: Large-cap, lower volatility than CRWV; only gap-down so long-only needs a reversal base first. R:R not assessable premarket.
+
+#### Deep dive: QBTS $12.615 -5.72%
+- Catalyst: Gapped -5.7% on 171k shares; RGTI also -5.1%. No company-specific news found.
+- Why: Quantum-group sympathy weakness (inferred).
+- Impact: Modest gap, group confirms; likely fade/bounce chop.
+- Horizon: SHORT_TERM, no catalyst.
+- Opportunity cost: Small-cap volatile; fails catalyst gate. Wide stops make 2:1 R:R hard.
