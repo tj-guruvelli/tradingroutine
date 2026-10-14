@@ -1,5 +1,43 @@
 # Trade Log
 
+### Oct 14, Market-Open (Day 69, Wednesday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-13`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-14 Pre-Market, decision HOLD) — CPI
+8:30 ET print is today's binary event; trade ideas XLE/XOM/CVX, MS, FAST
+all logged "none cleared gate; research only." Gappers auto-scans (08:03,
+09:03 ET) found ASTS/CRWV/NBIS/RGTI/QBTS — all gap-DOWNs (AI-infra/neocloud
+selloff + quantum-basket sympathy), research-only, no catalyst confirmed.
+
+STEP 2: latest setup-scan file is `data/setup-scan_cloud_2026-10-13_1833ET.json`
+(prior trading day's 18:33 ET run; today's hadn't fired yet at market-open,
+expected) — `hits: []`, 60 candidates checked, 0 errors. No scanner
+candidates to merge.
+
+STEP 3: live quotes re-pulled for every STEP 1 candidate (XOM $176.04,
+CVX $219.64, MS $182.98, FAST $49.52, ASTS $45.39, CRWV $68.11, NBIS $190.23,
+RGTI $12.30, QBTS $12.84) — no change to the research-log findings.
+
+STEP 4 — pass/fail per candidate:
+- XOM/CVX (energy, oil>$90 thesis): FAIL — catalyst stale, already logged
+  non-actionable in prior sessions.
+- MS (earnings BMO): FAIL — no pre-print entry allowed; post-reaction only.
+- FAST (earnings BMO, ±5.9% implied): FAIL — same pre-print rule.
+- ASTS/CRWV/NBIS/RGTI/QBTS (gap-downs): FAIL — no company-specific catalyst
+  documented, wrong direction for a long-only entry, and CRWV/NBIS + RGTI/QBTS
+  are correlated same-sector pairs (correlation-gate risk even if direction
+  were right).
+All candidates fail the catalyst gate — STEPs 5-6 (orders/stops) skipped.
+
+STEP 8 (notification): N/A — no trade fired this run.
+
+Weekly trade count: 0/3 (week of Oct 12). 69th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved, operator
+review pending. STEP 9 (commit/push): proceeding — STEP 7 logged
+candidate pass/fail reasons above.
+
 ### Oct 13, EOD Snapshot (Day 68, Tuesday)
 **Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
 | Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
