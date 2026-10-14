@@ -16054,3 +16054,14 @@ Note: deep dive capped at top 5; ranks 6-10 quick-scan only. Vol is session volu
 - Impact: Solid volume; read-through to neocloud peers is clear. Large-cap, so less volatile than peers.
 - Horizon: SHORT_TERM, Pullback after spike; no structural change verified.
 - Opportunity cost: Gap-down long-only needs a reversal base first. Lower volatility than CRWV makes a sane stop plausible, but 2:1 R:R not assessable at midday without a setup.
+
+### Setup Scan (16:34 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: "outside 10:00-15:30 ET")
+candidates_checked: 60, errors: 0
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| MA | B | Momentum confluence | daily swing | RSI 71.59, ADX 20.96, EMA9 $581.12 > EMA21 $573.76, px $605.67 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
+an order — feed to `/trade` if pursued (full safety-check gate applies).
