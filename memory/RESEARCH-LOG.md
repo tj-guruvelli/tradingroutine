@@ -16065,3 +16065,14 @@ candidates_checked: 60, errors: 0
 
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
 an order — feed to `/trade` if pursued (full safety-check gate applies).
+
+### Setup Scan (18:33 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: "outside 10:00-15:30 ET")
+candidates_checked: 60, errors: 0
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| MA | B | Momentum confluence | daily swing | RSI 71.59, ADX 20.96, EMA9 $581.12 > EMA21 $573.76, px $605.67 |
+
+No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
+an order — feed to `/trade` if pursued (full safety-check gate applies).
