@@ -15880,3 +15880,25 @@ grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason: 
 candidates_checked: 60, errors: 0
 No grade-A or grade-B/C hits this run.
 No grade-A or grade-B/C hits this run.
+
+### Pre-Market Research — 2026-10-14 (Wed, cloud)
+Sources: Apify RAG (Yahoo-block suffix applied, no Yahoo URLs used) + WebSearch fallback for futures/earnings (Apify returned only snippets/empty).
+
+**Account:** Equity $100,000 | Cash $100,000 (100%) | Buying power $400,000 | Daytrades 0 | Positions 0 | Open orders 0. (Still the $100k-vs-$10k baseline mismatch flagged Jul 27.)
+
+**Market context**
+- Oil (Oct 14 overnight): Brent ~$105.90, WTI ~$94.1-94.5. Elevated; Oct 8 spike on difficult Iran-US peace prospects.
+- 10Y yield near 5.35% (Oct 8 print, highest since 2002) — inflation-fear regime.
+- S&P futures: GAP — no clean Oct 14 non-Yahoo number found (latest found: Oct 8, futures lower ~0.6%).
+- VIX: GAP — Cboe/CNBC pages returned no value in snippets.
+- Releases today: **CPI 8:30 ET** (key). Earnings BMO: MS, BAC (dup listings), FAST; JPM/JNJ/UNH week.
+- Sector momentum YTD: not retrieved (gap). Energy favored by oil >$90; space names in downtrend (ASTS/LUNR/SATL).
+
+**Trade ideas (none cleared gate; research only)**
+1. XLE/XOM/CVX — catalyst: oil >$90 (stale per prior logs). Entry on pullback only; stop -7%; target 2:1. Fails fresh-catalyst gate.
+2. MS — catalyst: earnings BMO. Entry post-reaction only, not pre-print; stop 7%; target 2:1. No chase if >5% up.
+3. FAST — earnings BMO (±5.9% implied). Same post-reaction rule.
+
+**Risks:** CPI 8:30 hot print + 10Y ~5.35% → rate-shock selloff; oil/Iran headline risk; bank earnings reaction; no verified VIX.
+
+**Decision: HOLD** — CPI binary event, no documented fresh catalyst, no confluence check passed. Patience > activity. Weekly trades 0/3.
