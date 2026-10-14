@@ -15902,3 +15902,8 @@ Sources: Apify RAG (Yahoo-block suffix applied, no Yahoo URLs used) + WebSearch 
 **Risks:** CPI 8:30 hot print + 10Y ~5.35% → rate-shock selloff; oil/Iran headline risk; bank earnings reaction; no verified VIX.
 
 **Decision: HOLD** — CPI binary event, no documented fresh catalyst, no confluence check passed. Patience > activity. Weekly trades 0/3.
+
+## 2026-10-14
+
+### Gappers (auto-scan 08:03 ET, cloud)
+- No gappers >=5% / >=$3 on watchlist. Largest: RGTI -4.0%, NIO +2.3%, GOOG +1.4%. No catalyst/deep-dive run.
