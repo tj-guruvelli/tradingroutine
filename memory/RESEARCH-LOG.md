@@ -16095,3 +16095,24 @@ an order — feed to `/trade` if pursued (full safety-check gate applies).
 **Risks:** PPI hot print on top of hot CPI → rate-hike odds, tape fragile; Nasdaq -1.2% futures; Hormuz headline risk; AI-capex financing worries.
 
 **Decision: HOLD.** No catalyst-gated setup with ≥2/4 confluence; risk-off open. 0/3 trades this week (week of Oct 12). Notification: silent (nothing urgent).
+
+### Gappers (auto-scan 08:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QBTS | 11.64 | -13.0 | 1,129,198 | No fresh catalyst; prior session -10.1% below 50-day |
+| 2 | ONDS | 5.995 | -10.59 | 2,052,455 | No fresh catalyst; recent news bullish ($165M orders, Palantir JV) |
+(OPEN -6.9% excluded: price $1.96 < $3. Only 2 qualifying hits; deep dive covers both.)
+
+#### Deep dive: QBTS $11.64 -13.0%
+- Catalyst: No news dated today found. Latest: 10.1% drop to $12.03 prior session on below-avg volume, under 50-day; CGI partnership (Sep 23); Jan $550M Quantum Circuits deal.
+- Why: Likely sector/momentum de-risking in speculative quantum names (unconfirmed).
+- Impact: Downtrend continuation with no catalyst; no confirmed peer read-through.
+- Horizon: SHORT_TERM, no durable thesis; long would be a falling knife.
+- Opportunity cost: Burns 1 of 3 weekly trades; fails sector-momentum rule; 2:1 R:R unlikely.
+
+#### Deep dive: ONDS $5.995 -10.59%
+- Catalyst: Nothing today explains the gap. Recent news bullish: >$270M orders since Jun 30, Palantir Regna AI JV (~3 days ago). Possible give-back/dilution (unverified).
+- Why: Probable reversal of headline-driven rally.
+- Impact: Volume 2.05M elevated, real selling; backlog story structural but move reads as spike reversal.
+- Horizon: SHORT_TERM; revisit LONG_TERM only if price stabilizes.
+- Opportunity cost: Uses a weekly trade/slot on a volatile sub-$6 name; tight stop likely hit by daily range.

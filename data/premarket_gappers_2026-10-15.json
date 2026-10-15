@@ -1,0 +1,40 @@
+{
+  "scanned_at": "2026-10-15T12:04:10.080225Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "QBTS",
+      "price": 11.64,
+      "gap_pct": -13.0,
+      "premarket_volume": 1129198,
+      "catalyst": "No fresh catalyst found; prior session shares fell 10.1% to ~$12.03 below 50-day average, continuing slide.",
+      "headlines": [
+        "D-Wave Quantum (NASDAQ:QBTS) Stock Price Down 10.1%",
+        "CGI and D-Wave Quantum partner to advance enterprise quantum (Sep 23, 2026)"
+      ],
+      "catalyst_detail": "Search surfaced no news dated today. Latest items: a 10.1% drop to $12.03 on below-average volume (stock under its 50-day and longer averages), a CGI partnership (Sep 23), and the Jan 2026 $550M Quantum Circuits acquisition. Today's -13% gap is unexplained by sourced news.",
+      "why": "Likely momentum/sector de-risking in speculative quantum names after an extended slide, not a company-specific event (unconfirmed).",
+      "impact": "Gap-down continuation below key moving averages with no catalyst reads as trend-following selling; fade/bounce uncertain. No peer read-through confirmed (ONDS also down, different sector).",
+      "horizon": "SHORT_TERM, no durable thesis found; downtrend, long entry would be a falling knife.",
+      "opportunity_cost": "Would displace a stronger-trend holding and burns 1 of 3 weekly trades; a gap-down name below its 50-day fails sector-momentum rule; 2:1 R:R unlikely at a 7-10% stop given unresolved selling."
+    },
+    {
+      "rank": 2,
+      "symbol": "ONDS",
+      "price": 5.995,
+      "gap_pct": -10.59,
+      "premarket_volume": 2052455,
+      "catalyst": "No fresh catalyst found; recent news is positive ($165M new orders, Palantir Regna AI JV) yet stock gaps down.",
+      "headlines": [
+        "Ondas Adds $165M in New Orders, Boosts 2027 Revenue Visibility",
+        "Why is Ondas stock rallying today? (Ondas/Palantir Regna AI, ~3 days ago)"
+      ],
+      "catalyst_detail": "Latest sourced items are bullish: >$270M in orders since Jun 30 and an Ondas/Palantir Regna AI private company announced ~3 days ago (+4.5% pre-open then). Nothing explains today's -10.6% gap; possible profit-taking after the rally or offering/dilution (unverified). Fundamentals query returned nothing.",
+      "why": "Probable give-back of headline-driven rally gains; speculative small-cap with high volume churn (unconfirmed).",
+      "impact": "Volume 2.05M is elevated, suggesting real selling, not thin drift. Order-backlog story is structural but the move looks like a reversal of a headline spike.",
+      "horizon": "SHORT_TERM, gap-down cause unknown; revisit LONG_TERM only if orders thesis holds and price stabilizes.",
+      "opportunity_cost": "Burns one of 3 weekly trades and a slot of 6 for a sub-$6 volatile name; no confirmed catalyst; 2:1 R:R needs a tight stop that the daily range would likely hit."
+    }
+  ]
+}
