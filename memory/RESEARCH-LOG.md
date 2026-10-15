@@ -16219,3 +16219,26 @@ Deep-dive cap: top 5 of 8. Ranks 6-8 quick-scan only. Second per-ticker Apify qu
 - Horizon: SHORT_TERM, Sympathy move, no thesis of its own.
 - Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. Thin volume and a $10 price make slippage worse.
 
+
+## 2026-10-15
+
+### Gappers (auto-scan 11:05 ET, cloud)
+Deep dive cap: top 5 (only 2 qualified). PEPG +5.82% excluded (price $2.455 < $3).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RKLB | 53.49 | -9.65 | 517k | Neutron first launch delayed to 2027 |
+| 2 | NBIS | 174.79 | -6.05 | 699k | None verified (Apify empty) |
+
+#### Deep dive: RKLB $53.49 -9.65%
+- Catalyst: Neutron first launch delayed to 2027 (headlines only; bodies empty, no cause/guidance detail).
+- Why: Neutron is the core thesis; delay defers revenue, raises funding risk.
+- Impact: 517k vol, no baseline. Delay gaps tend to hold as estimates reset. Peer read-through unverified.
+- Horizon: SHORT_TERM, headline-driven gap-down, no long thesis.
+- Opportunity cost: Gap-down, no long entry; fails 2:1 R:R into broken momentum. Relevant only for -7% cut check if held.
+
+#### Deep dive: NBIS $174.79 -6.05%
+- Catalyst: None verified (promo-only headline, fundamentals query timed out).
+- Why: Unknown; likely AI-infra beta drawdown, unverified.
+- Impact: 699k vol, no baseline. No catalyst, so mean-reversion risk.
+- Horizon: SHORT_TERM, no identified thesis.
+- Opportunity cost: Gap-down, no long entry; 2:1 R:R not assessable.
