@@ -16252,3 +16252,13 @@ Deep dive cap: top 5 (only 2 qualified). PEPG +5.82% excluded (price $2.455 < $3
 | CMBT | B | Momentum confluence | daily swing | ADX 32.8, EMA9 $20.04 > EMA21 $19.71, px $15.21 |
 
 No grade-A hits — no Telegram alert sent per rule.
+
+### Setup Scan (18:33 ET, cloud)
+60 scanned, 0 errors. Setup A not evaluated (outside 10:00-15:30 ET) — grade A unreachable this run.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 22.0, EMA9 $382.06 > EMA21 $375.52, px $396.21 |
+| SYNA | B | Momentum confluence | daily swing | ADX 34.5, EMA9 $116.55 > EMA21 $110.66, px $100.87 |
+| CMBT | B | Momentum confluence | daily swing | ADX 32.8, EMA9 $20.04 > EMA21 $19.71, px $15.21 |
+
+No grade-A hits — no Telegram alert sent per rule.
