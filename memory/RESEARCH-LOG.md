@@ -16076,3 +16076,22 @@ candidates_checked: 60, errors: 0
 
 No grade-A hits -> no Telegram alert per STEP 4 rule. Candidate only, not
 an order — feed to `/trade` if pursued (full safety-check gate applies).
+
+### 2026-10-15 — Pre-market Research (Thursday)
+**Account:** Equity $100,000 | Cash $100,000 (100%) | BP $400,000 | Daytrade count 0 | 0 positions, 0 open orders. (Still the $100k-live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.)
+
+**Market context** (Apify RAG returned junk for oil/futures/catalysts — fell back to WebSearch; VIX via Apify/CNBC clean)
+- Oil: Brent Dec $104.31 (-1.7%), WTI Nov $94.05 (-1.1%). Hormuz ship attacks vs IEA cut to 2026 demand outlook.
+- Futures (Benzinga): Dow +0.3%, S&P -0.3%, Nasdaq 100 -1.2%. Chip/AI-financing sell-off (NVDA, AMD, MU lower) after Wed Nasdaq -1.9% on hot inflation / Fed-hike fears.
+- VIX 17.63 (+4.5%), prev close 16.87 (CNBC, 7:07 AM ET).
+- Today 8:30 ET: Sept PPI (cons +0.5% m/m, core +0.3%), retail sales (+0.3%), jobless claims (~195-200K). Earnings: TSM, PNC, USB, JBHT (+ BNY/Schwab wave).
+- Sector momentum YTD query not run (Apify unreliable this session) — gap.
+
+**Trade ideas** (none actionable pre-open)
+1. XOM/CVX — energy; oil elevated but falling on IEA demand cut; catalyst aging, fails gate. Watch only.
+2. MA (Setup Scan grade B, RSI 71.6 — overbought, no new long per canon). Pass.
+3. TSM post-earnings — if strong guide and holds above gap, re-check intraday; chip tape weak, wait for base.
+
+**Risks:** PPI hot print on top of hot CPI → rate-hike odds, tape fragile; Nasdaq -1.2% futures; Hormuz headline risk; AI-capex financing worries.
+
+**Decision: HOLD.** No catalyst-gated setup with ≥2/4 confluence; risk-off open. 0/3 trades this week (week of Oct 12). Notification: silent (nothing urgent).
