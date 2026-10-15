@@ -16116,3 +16116,54 @@ an order — feed to `/trade` if pursued (full safety-check gate applies).
 - Impact: Volume 2.05M elevated, real selling; backlog story structural but move reads as spike reversal.
 - Horizon: SHORT_TERM; revisit LONG_TERM only if price stabilizes.
 - Opportunity cost: Uses a weekly trade/slot on a volatile sub-$6 name; tight stop likely hit by daily range.
+
+### Gappers (auto-scan 09:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 63.34 | -18.59% | 2419300 | CoreWeave slides on AI-infrastructure leverage/spending fears (secondary sources, dated pre-session). |
+| 2 | NBIS | 177.72 | -14.1% | 968629 | Analyst PT cuts (DA Davidson $250->$175); stock already -13% on a prior session. |
+| 3 | ASTS | 41.0 | -12.9% | 480558 | No same-day catalyst found; last week's selloff tied to FCC Oct 29 agenda concerns. |
+| 4 | QBTS | 11.75 | -12.18% | 1129198 | No same-day news; sector-wide quantum de-risking, -10% prior session on below-avg volume. |
+| 5 | RCAT | 4.58 | -11.58% | 396323 | No catalyst found; near 52-wk lows, drifting lower. |
+| 6 | ONDS | 5.94 | -11.41% | 2052455 | No same-day catalyst found (fetch returned only generic pages). |
+| 7 | PL | 13.475 | -11.09% | 472517 | Goldman Hold with PT cut to $22 from $24; Barclays Equal Weight initiation. |
+| 8 | RGTI | 11.39 | -10.95% | 1281075 | n/a (fetch failed) |
+| 9 | ORCL | 127.89 | -10.73% | 1453232 | n/a (fetch failed) |
+| 10 | STM | 44.66 | -9.91% | 1012950 | n/a (fetch failed) |
+
+Note: all 10 are gap-DOWNs (AI-infra/speculative-growth selloff). Deep dive capped at top 5; ranks 6-10 quick-scan only. Second Apify deep-dive query skipped (time/quota); detail built from step-2 results + peer read-through, unverified where stated. RGTI/ORCL/STM catalyst fetch failed (502/empty). Account flat, 0 positions.
+
+#### Deep dive: CRWV $63.34 -18.59%
+- Catalyst: Shares of the AI cloud lessor are sliding on scrutiny of its debt-funded buildout and concern that AI infrastructure spending is tightening. Secondary-source headlines only; no primary filing found this run.
+- Why: Leverage plus capex-sensitivity means any hint of slower AI demand hits equity value disproportionately; forced de-risking of high-beta AI names.
+- Impact: Volume 2.4M, heavy. Read-through: NBIS -14%, ORCL -10.7% same morning, so sector-wide AI-infra repricing, not idiosyncratic. Likely to keep trading with sector tape.
+- Horizon: SHORT_TERM, Headline/sentiment-driven; no durable thesis change confirmed. Falling knife until the AI-infra tape stabilizes.
+- Opportunity cost: Fails sector-momentum rule (sector falling). Would burn 1 of 3 weekly trades; wide ATR makes a 7-10% stop with 2:1 R:R implausible. Open slots: 6 of 6 free (flat), so no displacement.
+
+#### Deep dive: NBIS $177.72 -14.1%
+- Catalyst: DA Davidson cut its PT from $250 to $175 and other analysts trimmed targets; shares fell about 13% on a prior session and are down another 14% pre-market. No company-specific news found.
+- Why: PT cuts after a big run trigger momentum unwinds; correlates with CRWV/ORCL AI-infra weakness.
+- Impact: Volume ~1M pre-market. Peers CRWV and ORCL also down double digits, so sector rotation out of AI infra.
+- Horizon: SHORT_TERM, Analyst-driven repricing inside a sector downdraft; no structural change.
+- Opportunity cost: Ranked below nothing actionable today; same sector as CRWV, so the correlation gate would block a second AI-infra entry. 2:1 R:R unlikely at ATR-sized stop.
+
+#### Deep dive: ASTS $41.0 -12.9%
+- Catalyst: No same-day catalyst found. A week-old report ties weakness to the FCC's Oct 29 agenda, which analysts (Clear Street) flagged as a risk for satellite-to-cell spectrum plans. Last known close was ~$62.7 per one source, versus $41 now, so the figures are inconsistent and unverified.
+- Why: Regulatory-overhang plus high-beta space/speculative de-risking.
+- Impact: Volume 480K is lighter than peers. Space/drone peers RCAT, PL also gapping down: sector-wide.
+- Horizon: SHORT_TERM, Regulatory event risk on Oct 29 dominates; no confirmed thesis change.
+- Opportunity cost: Fails sector rule while peers fall. Binary FCC event before any hold would be reached; R:R not assessable.
+
+#### Deep dive: QBTS $11.75 -12.18%
+- Catalyst: No news dated today. Prior session fell about 10% to ~$12 on below-average volume, trading under its 50-day. Sector-shock coverage (D-Wave and quantum peers) cited.
+- Why: Speculative quantum names de-risking together; RGTI also -11%.
+- Impact: Volume 1.1M. Peer RGTI -10.95% confirms a sector move, not a company one.
+- Horizon: SHORT_TERM, No durable catalyst; downtrend continuation.
+- Opportunity cost: Second failed-sector risk (quantum). Would use 1 of 3 weekly trades with a poor R:R.
+
+#### Deep dive: RCAT $4.58 -11.58%
+- Catalyst: No catalyst found. Shares were near the 52-week low (~$5.77) last week and are now $4.58 pre-market, well below it, price under the 52-wk low is a fresh breakdown.
+- Why: Drone/defense small-cap momentum unwind with ONDS also down.
+- Impact: Volume 396K, light for the gap. Peer ONDS -11.4%.
+- Horizon: SHORT_TERM, Technical breakdown, no thesis catalyst.
+- Opportunity cost: Sub-$5 name with a wide daily range; stop would sit inside normal noise. Does not clear 2:1 R:R.

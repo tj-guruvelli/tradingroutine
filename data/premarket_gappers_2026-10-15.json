@@ -1,40 +1,126 @@
 {
-  "scanned_at": "2026-10-15T12:04:10.080225Z",
+  "scanned_at": "2026-10-15T13:10:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "QBTS",
-      "price": 11.64,
-      "gap_pct": -13.0,
-      "premarket_volume": 1129198,
-      "catalyst": "No fresh catalyst found; prior session shares fell 10.1% to ~$12.03 below 50-day average, continuing slide.",
-      "headlines": [
-        "D-Wave Quantum (NASDAQ:QBTS) Stock Price Down 10.1%",
-        "CGI and D-Wave Quantum partner to advance enterprise quantum (Sep 23, 2026)"
-      ],
-      "catalyst_detail": "Search surfaced no news dated today. Latest items: a 10.1% drop to $12.03 on below-average volume (stock under its 50-day and longer averages), a CGI partnership (Sep 23), and the Jan 2026 $550M Quantum Circuits acquisition. Today's -13% gap is unexplained by sourced news.",
-      "why": "Likely momentum/sector de-risking in speculative quantum names after an extended slide, not a company-specific event (unconfirmed).",
-      "impact": "Gap-down continuation below key moving averages with no catalyst reads as trend-following selling; fade/bounce uncertain. No peer read-through confirmed (ONDS also down, different sector).",
-      "horizon": "SHORT_TERM, no durable thesis found; downtrend, long entry would be a falling knife.",
-      "opportunity_cost": "Would displace a stronger-trend holding and burns 1 of 3 weekly trades; a gap-down name below its 50-day fails sector-momentum rule; 2:1 R:R unlikely at a 7-10% stop given unresolved selling."
+      "symbol": "CRWV",
+      "price": 63.34,
+      "gap_pct": -18.59,
+      "premarket_volume": 2419300,
+      "catalyst": "CoreWeave slides on AI-infrastructure leverage/spending fears (secondary sources, dated pre-session).",
+      "headlines": [],
+      "catalyst_detail": "Shares of the AI cloud lessor are sliding on scrutiny of its debt-funded buildout and concern that AI infrastructure spending is tightening. Secondary-source headlines only; no primary filing found this run.",
+      "why": "Leverage plus capex-sensitivity means any hint of slower AI demand hits equity value disproportionately; forced de-risking of high-beta AI names.",
+      "impact": "Volume 2.4M, heavy. Read-through: NBIS -14%, ORCL -10.7% same morning, so sector-wide AI-infra repricing, not idiosyncratic. Likely to keep trading with sector tape.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Fails sector-momentum rule (sector falling). Would burn 1 of 3 weekly trades; wide ATR makes a 7-10% stop with 2:1 R:R implausible. Open slots: 6 of 6 free (flat), so no displacement.",
+      "horizon_reason": "Headline/sentiment-driven; no durable thesis change confirmed. Falling knife until the AI-infra tape stabilizes."
     },
     {
       "rank": 2,
+      "symbol": "NBIS",
+      "price": 177.72,
+      "gap_pct": -14.1,
+      "premarket_volume": 968629,
+      "catalyst": "Analyst PT cuts (DA Davidson $250->$175); stock already -13% on a prior session.",
+      "headlines": [],
+      "catalyst_detail": "DA Davidson cut its PT from $250 to $175 and other analysts trimmed targets; shares fell about 13% on a prior session and are down another 14% pre-market. No company-specific news found.",
+      "why": "PT cuts after a big run trigger momentum unwinds; correlates with CRWV/ORCL AI-infra weakness.",
+      "impact": "Volume ~1M pre-market. Peers CRWV and ORCL also down double digits, so sector rotation out of AI infra.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Ranked below nothing actionable today; same sector as CRWV, so the correlation gate would block a second AI-infra entry. 2:1 R:R unlikely at ATR-sized stop.",
+      "horizon_reason": "Analyst-driven repricing inside a sector downdraft; no structural change."
+    },
+    {
+      "rank": 3,
+      "symbol": "ASTS",
+      "price": 41.0,
+      "gap_pct": -12.9,
+      "premarket_volume": 480558,
+      "catalyst": "No same-day catalyst found; last week's selloff tied to FCC Oct 29 agenda concerns.",
+      "headlines": [],
+      "catalyst_detail": "No same-day catalyst found. A week-old report ties weakness to the FCC's Oct 29 agenda, which analysts (Clear Street) flagged as a risk for satellite-to-cell spectrum plans. Last known close was ~$62.7 per one source, versus $41 now, so the figures are inconsistent and unverified.",
+      "why": "Regulatory-overhang plus high-beta space/speculative de-risking.",
+      "impact": "Volume 480K is lighter than peers. Space/drone peers RCAT, PL also gapping down: sector-wide.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Fails sector rule while peers fall. Binary FCC event before any hold would be reached; R:R not assessable.",
+      "horizon_reason": "Regulatory event risk on Oct 29 dominates; no confirmed thesis change."
+    },
+    {
+      "rank": 4,
+      "symbol": "QBTS",
+      "price": 11.75,
+      "gap_pct": -12.18,
+      "premarket_volume": 1129198,
+      "catalyst": "No same-day news; sector-wide quantum de-risking, -10% prior session on below-avg volume.",
+      "headlines": [],
+      "catalyst_detail": "No news dated today. Prior session fell about 10% to ~$12 on below-average volume, trading under its 50-day. Sector-shock coverage (D-Wave and quantum peers) cited.",
+      "why": "Speculative quantum names de-risking together; RGTI also -11%.",
+      "impact": "Volume 1.1M. Peer RGTI -10.95% confirms a sector move, not a company one.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Second failed-sector risk (quantum). Would use 1 of 3 weekly trades with a poor R:R.",
+      "horizon_reason": "No durable catalyst; downtrend continuation."
+    },
+    {
+      "rank": 5,
+      "symbol": "RCAT",
+      "price": 4.58,
+      "gap_pct": -11.58,
+      "premarket_volume": 396323,
+      "catalyst": "No catalyst found; near 52-wk lows, drifting lower.",
+      "headlines": [],
+      "catalyst_detail": "No catalyst found. Shares were near the 52-week low (~$5.77) last week and are now $4.58 pre-market, well below it, price under the 52-wk low is a fresh breakdown.",
+      "why": "Drone/defense small-cap momentum unwind with ONDS also down.",
+      "impact": "Volume 396K, light for the gap. Peer ONDS -11.4%.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Sub-$5 name with a wide daily range; stop would sit inside normal noise. Does not clear 2:1 R:R.",
+      "horizon_reason": "Technical breakdown, no thesis catalyst."
+    },
+    {
+      "rank": 6,
       "symbol": "ONDS",
-      "price": 5.995,
-      "gap_pct": -10.59,
+      "price": 5.94,
+      "gap_pct": -11.41,
       "premarket_volume": 2052455,
-      "catalyst": "No fresh catalyst found; recent news is positive ($165M new orders, Palantir Regna AI JV) yet stock gaps down.",
-      "headlines": [
-        "Ondas Adds $165M in New Orders, Boosts 2027 Revenue Visibility",
-        "Why is Ondas stock rallying today? (Ondas/Palantir Regna AI, ~3 days ago)"
-      ],
-      "catalyst_detail": "Latest sourced items are bullish: >$270M in orders since Jun 30 and an Ondas/Palantir Regna AI private company announced ~3 days ago (+4.5% pre-open then). Nothing explains today's -10.6% gap; possible profit-taking after the rally or offering/dilution (unverified). Fundamentals query returned nothing.",
-      "why": "Probable give-back of headline-driven rally gains; speculative small-cap with high volume churn (unconfirmed).",
-      "impact": "Volume 2.05M is elevated, suggesting real selling, not thin drift. Order-backlog story is structural but the move looks like a reversal of a headline spike.",
-      "horizon": "SHORT_TERM, gap-down cause unknown; revisit LONG_TERM only if orders thesis holds and price stabilizes.",
-      "opportunity_cost": "Burns one of 3 weekly trades and a slot of 6 for a sub-$6 volatile name; no confirmed catalyst; 2:1 R:R needs a tight stop that the daily range would likely hit."
+      "catalyst": "No same-day catalyst found (fetch returned only generic pages).",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "PL",
+      "price": 13.475,
+      "gap_pct": -11.09,
+      "premarket_volume": 472517,
+      "catalyst": "Goldman Hold with PT cut to $22 from $24; Barclays Equal Weight initiation.",
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "RGTI",
+      "price": 11.39,
+      "gap_pct": -10.95,
+      "premarket_volume": 1281075,
+      "catalyst": null,
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "ORCL",
+      "price": 127.89,
+      "gap_pct": -10.73,
+      "premarket_volume": 1453232,
+      "catalyst": null,
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "STM",
+      "price": 44.66,
+      "gap_pct": -9.91,
+      "premarket_volume": 1012950,
+      "catalyst": null,
+      "headlines": []
     }
   ]
 }
