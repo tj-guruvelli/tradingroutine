@@ -16167,3 +16167,55 @@ Note: all 10 are gap-DOWNs (AI-infra/speculative-growth selloff). Deep dive capp
 - Impact: Volume 396K, light for the gap. Peer ONDS -11.4%.
 - Horizon: SHORT_TERM, Technical breakdown, no thesis catalyst.
 - Opportunity cost: Sub-$5 name with a wide daily range; stop would sit inside normal noise. Does not clear 2:1 R:R.
+
+### Gappers (auto-scan 10:03 ET, cloud)
+Filter: |gap|>=5%, price>=$3, vol>=50k. 8 hits, all gap-downs. Dropped on volume: AMPX (48k), UMAC (27k), AMKR (34k), KLIC (1.5k), GFS (24k), SATL, BW, DPRO; AGMH under $3.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RKLB | 51.215 | -13.48% | 305,281 | Rocket Lab -11% as Neutron's first flight slips to 2027 (24/7 Wall St). |
+| 2 | NBIS | 165.755 | -10.91% | 253,872 | Neocloud/AI-infrastructure sell-off on debt worries; AI sell-off continues as Anthropic revenue underwhelms (IBD). |
+| 3 | CRWV | 60.385 | -8.19% | 478,570 | Same neocloud/AI sell-off; CRWV-specific search returned no usable result. |
+| 4 | BE | 219.855 | -8.12% | 153,003 | Barron's: Bloom Energy is an AI power-supply bellwether, why the stock is tumbling; high oil and inflation worries. |
+| 5 | LUNR | 10.32 | -6.35% | 68,612 | No LUNR-specific catalyst found; moving with space peers after Rocket Lab's Neutron delay. |
+| 6 | BMNR | 20.93 | -6.02% | 427,569 | ETH weakness; Tom Lee flags Korea margin calls and possible crypto spillover; hot CPI. |
+| 7 | RCAT | 4.465 | -5.6% | 122,055 | n/a (fetch failed) |
+| 8 | RDW | 8.165 | -5.28% | 134,899 | n/a (fetch failed) |
+
+Deep-dive cap: top 5 of 8. Ranks 6-8 quick-scan only. Second per-ticker Apify query (fundamentals) skipped this run: results came back as blocked or empty pages, so deep dives rely on the STEP 2 catalyst pages and the Google Finance/Stocktwits snapshots. Apify queries carried the Yahoo -site suffix; a Yahoo headline listed inside a Google Finance page was discarded.
+
+#### Deep dive: RKLB $51.215 -13.48%
+- Catalyst: Neutron's maiden launch was pushed from 2026 to 2027. Space peers (SpaceX-linked SPCX, ASTS) are also down.
+- Why: Delay defers the medium-lift revenue ramp that the premium valuation priced in, so growth multiples compress.
+- Impact: Volume 305k premarket is heavy for a pre-market print. Sector-wide space selling plus a broad AI/tech risk-off (tech sector -2%) points to continued pressure, not a one-day spike.
+- Horizon: SHORT_TERM, Headline-driven gap-down in a falling sector; no durable long thesis until the tape stabilizes.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. Space is a crowded cluster today (RKLB, LUNR, RCAT, RDW all gapping down).
+
+#### Deep dive: NBIS $165.755 -10.91%
+- Catalyst: Neocloud names fell together. Retail chatter cites worry over debt owed. IBD's banner says the AI sell-off continues after Anthropic revenue underwhelmed. No NBIS-specific filing found.
+- Why: Heavily financed GPU-capacity builders reprice when AI demand growth looks softer, since debt service depends on that growth.
+- Impact: Sector-wide (CRWV -8.2%, BE -8.1%, MU -4%, SNDK -7%), not idiosyncratic. Moves of this size on a group usually extend until the AI-demand narrative stabilizes.
+- Horizon: SHORT_TERM, Narrative-driven group sell-off; not a structural thesis change, and no basis to carry.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. NBIS and CRWV are the same trade; taking both would breach the correlation gate.
+
+#### Deep dive: CRWV $60.385 -8.19%
+- Catalyst: Catalyst fetch failed (both scraped pages errored). Sector context from NBIS/BMNR sources: neocloud group down on debt worries; IBD cites AI sell-off after Anthropic revenue underwhelmed.
+- Why: Highly leveraged GPU-capacity provider; sector risk-off hits it hardest.
+- Impact: Highest premarket volume of the list (479k), consistent with forced selling. Read-through is group-wide.
+- Horizon: SHORT_TERM, Inferred from sector context only; no CRWV-specific source.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. Duplicates NBIS exposure.
+
+#### Deep dive: BE $219.855 -8.12%
+- Catalyst: BE fell despite good news: Oracle reaffirmed its Project Jupiter role, AEP announced a $4B fuel-cell investment tied to a Google deal, and Baird kept a $351 target. Hot CPI and high oil are weighing on high-beta AI-power names. Q3 earnings are Oct 22 after close.
+- Why: Good fundamental news is being overwhelmed by macro (hot CPI, hawkish-Fed fears) and AI-complex de-risking; beta is 3.77.
+- Impact: Volume 3.0M by 10:00 ET vs 16M avg. Stock is ~37% below its 52-week high of $351. Sector read-through from NBIS/CRWV. Earnings in 7 days adds event risk.
+- Horizon: LONG_TERM, Structural data-center power demand thesis is intact, but entry before Oct 22 earnings and while the AI complex sells off fails the Confluence rule.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. Earnings Oct 22 means a stop could gap through; would need to wait for a post-earnings setup.
+
+#### Deep dive: LUNR $10.32 -6.35%
+- Catalyst: Search returned only a Stocktwits page with no readable news. Inference only: space group sell-off following RKLB's Neutron slip to 2027.
+- Why: Sympathy move in the small-cap space cohort.
+- Impact: Volume 69k is thin. A sympathy gap with no own catalyst tends to fade or extend with RKLB.
+- Horizon: SHORT_TERM, Sympathy move, no thesis of its own.
+- Opportunity cost: Zero open positions, 0/3 weekly trades used, so no displacement; the cost is a slot. Long-side R:R at a 7-10% stop needs a bounce target of 14-20%, unlikely on a falling-knife gap-down. Thin volume and a $10 price make slippage worse.
+
