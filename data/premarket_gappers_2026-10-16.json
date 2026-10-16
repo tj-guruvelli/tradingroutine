@@ -1,24 +1,56 @@
 {
-  "scanned_at": "2026-10-16T14:04:47Z",
+  "scanned_at": "2026-10-16T15:03:59.650796Z",
   "deep_dive_cap": 5,
+  "note": "Only 3 symbols met filters (|gap|>=5, price>=3). AGMH +5.38% excluded (price $0.54 <$3). Deep-dive used STEP 2 research only; separate fundamentals query skipped.",
   "gappers": [
-    {"rank":1,"symbol":"CRWV","price":64.54,"gap_pct":-7.38,"premarket_volume":453029,
-     "catalyst":"CoreWeave slides for a 4th day as bond yields spike on debt concerns; analysts split on whether selloff is overdone.",
-     "headlines":["CRWV Stock On Track For 4-Day Slide Amid CoreWeave's Debt Test (TradingView/Stocktwits)","Why Is CoreWeave (CRWV) Stock Down -10.99% Today? (ATM up to 35M shares + $3.0B converts due 2033; article date unverified)"],
-     "catalyst_detail":"CRWV is on a multi-day slide as its bond yields spiked, putting its heavy debt load in focus; an earlier-reported ATM program (up to 35M shares) plus a $3.0B convertible notes offering adds dilution/financing-overhang. Analysts split: some call the selloff overdone.",
-     "why":"Rising cost of debt and dilution fears hit a highly levered AI-infrastructure builder; momentum sellers pile on.",
-     "impact":"Volume 453K premarket on a -7.4% gap after a 4-day slide reads as sustained repricing, not a one-day spike. Neocloud peer NBIS also gapping down (sector read-through).",
-     "horizon":"SHORT_TERM",
-     "horizon_reason":"Financing/debt-driven selloff, no durable long thesis until credit spreads stabilize.",
-     "opportunity_cost":"Gap-down falling knife, no long setup; fails 200-SMA/momentum bias. Caps are open but a 2:1 R:R at a sane stop is unlikely; NBIS is the only comparable sector name. Research only."},
-    {"rank":2,"symbol":"NBIS","price":177.37,"gap_pct":-5.86,"premarket_volume":89152,
-     "catalyst":"No NBIS-specific same-day catalyst found; likely sympathy with CoreWeave debt-driven neocloud selloff.",
-     "headlines":["Is Analyst Upgrade Altering The Investment Case For Nebius Stock (NBIS)? (Simply Wall St; older)","Nebius Gains 42% in 3 Months (Globe and Mail; older)"],
-     "catalyst_detail":"No fresh company news surfaced for today. Background: Nebius recently joined the FTSE All-World Index, reported strong AI cloud revenue with customer prepayments and a multi-year Meta contract, and is raising prices on some Nvidia GPU instances. Up ~42% over 3 months, so it is extended going into the CRWV-led sector pullback.",
-     "why":"Sector sympathy: CRWV's debt scare hits neocloud peers sharing capex-funding risk; profit-taking after a large run.",
-     "impact":"Volume only 89K, light vs CRWV, so the move reads as sympathy/profit-taking, likely to follow CRWV. Strong fundamentals (Meta contract, prepayments) argue against a thesis break.",
-     "horizon":"SHORT_TERM",
-     "horizon_reason":"Sympathy move with no company catalyst; wait for CRWV/credit stabilization before any swing view.",
-     "opportunity_cost":"Better-quality name than CRWV, but same sector as the falling peer; dip-buy would compete for 1 of 3 weekly slots and a 10% trail on a ~$177 stock is wide for 2:1 R:R while the sector is unsettled. Research only."}
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 64.1,
+      "gap_pct": -8.01,
+      "premarket_volume": 772767,
+      "catalyst": "Debt-financing fears: unsecured bond yields >16%, CDS >1,000bp, ~$50B debt+leases; hot inflation lifts yields; Gartner warns most neoclouds may not stay independent by 2030 (Tickeron, Oct 16).",
+      "headlines": [
+        "Why Is CoreWeave (CRWV) Stock Down -6.92% Today? (Tickeron)"
+      ],
+      "catalyst_detail": "CRWV fell ~7-8% giving back Thursday's ~6% bounce; shed >20% on the week, near 52-wk low $59.51. Unsecured notes yield >16% and CDS topped 1,000bp on ~$50B debt/lease load. Hot inflation prints lifted Treasury yields; Gartner warned >80% of neoclouds could lose independence by 2030 with $3.5T AI investment at impairment risk. Cantor/BofA/Deutsche call it overdone; Bernstein underperform.",
+      "why": "Rising cost of debt hits a debt-funded GPU buildout (stock and bond double selloff); sector-wide de-risking.",
+      "impact": "Heavy multi-day volume = sustained repricing, not a one-day spike. Peers NBIS and ORCL also hit. Credit market is the swing factor.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "financing-driven selloff, no durable long thesis until bond yields stabilize.",
+      "opportunity_cost": "Falling knife in a sector with no confirmed momentum; fails Confluence/entry checklist, 2:1 R:R at a sane stop unlikely. Would burn 1 of 3 weekly slots; NBIS is the only comparable sector name. Research only."
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 174.755,
+      "gap_pct": -7.25,
+      "premarket_volume": 331115,
+      "catalyst": "No same-day company news; sympathy with CRWV credit scare and Gartner neocloud warning (Nebius named as peer hit).",
+      "headlines": [
+        "Is Analyst Upgrade Altering The Investment Case For Nebius Stock (NBIS)? (Simply Wall St, Sep 27, stale)"
+      ],
+      "catalyst_detail": "No Nebius-specific news today. Background: FTSE All-World inclusion, multi-year Meta contract, customer prepayments, GPU price hikes; Burry short flagged. Today's drop tracks CRWV's credit scare and the Gartner neocloud report.",
+      "why": "Sympathy selling in levered AI-infra names plus profit-taking after a big run.",
+      "impact": "Volume lighter than CRWV; reads as sector read-through, fundamentals not impaired. Move likely follows CRWV/credit direction.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "no own catalyst; wait for credit stabilization.",
+      "opportunity_cost": "Higher quality than CRWV but same sector exposure; 10% trail on ~$175 hurts 2:1 R:R while sector unsettled. Would use 1 of 3 weekly slots. Research only."
+    },
+    {
+      "rank": 3,
+      "symbol": "PL",
+      "price": 13.8,
+      "gap_pct": -5.15,
+      "premarket_volume": 119712,
+      "catalyst": "No same-day catalyst found (only stale Feb-2026 coverage); likely sector/space-theme drift.",
+      "headlines": [],
+      "catalyst_detail": "No same-day news found; Apify returned only a Feb-2026 Seeking Alpha piece (RPO growth, defense budget catalyst, SpaceX IPO capital-rotation risk). Not sourced as today's cause.",
+      "why": "Unknown; plausibly risk-off drift in speculative growth/space names alongside the AI-infra selloff (inference, unverified).",
+      "impact": "Modest volume, no confirmed catalyst; reads as noise/sympathy likely to mean-revert or drift.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "no durable catalyst identified.",
+      "opportunity_cost": "Undocumented catalyst = skip under the confluence rule; ranks below nothing actionable today. Small price ($13.8) fine for sizing but 2:1 R:R unproven. Research only."
+    }
   ]
 }

@@ -16316,3 +16316,34 @@ Only 2 hits >=5% (of ~60 scanned); deep dive covers both (cap 5, ranks 6-10 empt
 - Impact: Only 89K vol, reads as sympathy; fundamentals intact.
 - Horizon: SHORT_TERM, no own catalyst; wait for CRWV/credit stabilization.
 - Opportunity cost: Higher quality than CRWV but same sector; uses 1 of 3 weekly slots, wide 10% trail on ~$177 hurts 2:1 R:R while sector unsettled. Research only.
+
+### Gappers (auto-scan 11:02 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 64.1 | -8.01% | 772,767 | Debt-financing fears: unsecured bond yields >16%, CDS >1,000bp, ~$50B debt+leases; hot inflation lifts yields; Gartner warns most neoclouds may not stay independent by 2030 (Tickeron, Oct 16). |
+| 2 | NBIS | 174.755 | -7.25% | 331,115 | No same-day company news; sympathy with CRWV credit scare and Gartner neocloud warning (Nebius named as peer hit). |
+| 3 | PL | 13.8 | -5.15% | 119,712 | No same-day catalyst found (only stale Feb-2026 coverage); likely sector/space-theme drift. |
+
+Only 3 hits (AGMH +5.38% excluded: $0.54 < $3). Deep-dive cap 5; all 3 hits deep-dived from STEP 2 research (separate fundamentals query skipped).
+
+#### Deep dive: CRWV $64.1 -8.01%
+- Catalyst: CRWV fell ~7-8% giving back Thursday's ~6% bounce; shed >20% on the week, near 52-wk low $59.51. Unsecured notes yield >16% and CDS topped 1,000bp on ~$50B debt/lease load. Hot inflation prints lifted Treasury yields; Gartner warned >80% of neoclouds could lose independence by 2030 with $3.5T AI investment at impairment risk. Cantor/BofA/Deutsche call it overdone; Bernstein underperform.
+- Why: Rising cost of debt hits a debt-funded GPU buildout (stock and bond double selloff); sector-wide de-risking.
+- Impact: Heavy multi-day volume = sustained repricing, not a one-day spike. Peers NBIS and ORCL also hit. Credit market is the swing factor.
+- Horizon: SHORT_TERM, financing-driven selloff, no durable long thesis until bond yields stabilize.
+- Opportunity cost: Falling knife in a sector with no confirmed momentum; fails Confluence/entry checklist, 2:1 R:R at a sane stop unlikely. Would burn 1 of 3 weekly slots; NBIS is the only comparable sector name. Research only.
+
+#### Deep dive: NBIS $174.755 -7.25%
+- Catalyst: No Nebius-specific news today. Background: FTSE All-World inclusion, multi-year Meta contract, customer prepayments, GPU price hikes; Burry short flagged. Today's drop tracks CRWV's credit scare and the Gartner neocloud report.
+- Why: Sympathy selling in levered AI-infra names plus profit-taking after a big run.
+- Impact: Volume lighter than CRWV; reads as sector read-through, fundamentals not impaired. Move likely follows CRWV/credit direction.
+- Horizon: SHORT_TERM, no own catalyst; wait for credit stabilization.
+- Opportunity cost: Higher quality than CRWV but same sector exposure; 10% trail on ~$175 hurts 2:1 R:R while sector unsettled. Would use 1 of 3 weekly slots. Research only.
+
+#### Deep dive: PL $13.8 -5.15%
+- Catalyst: No same-day news found; Apify returned only a Feb-2026 Seeking Alpha piece (RPO growth, defense budget catalyst, SpaceX IPO capital-rotation risk). Not sourced as today's cause.
+- Why: Unknown; plausibly risk-off drift in speculative growth/space names alongside the AI-infra selloff (inference, unverified).
+- Impact: Modest volume, no confirmed catalyst; reads as noise/sympathy likely to mean-revert or drift.
+- Horizon: SHORT_TERM, no durable catalyst identified.
+- Opportunity cost: Undocumented catalyst = skip under the confluence rule; ranks below nothing actionable today. Small price ($13.8) fine for sizing but 2:1 R:R unproven. Research only.
+
