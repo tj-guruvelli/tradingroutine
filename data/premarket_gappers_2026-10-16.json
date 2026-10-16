@@ -1,1 +1,15 @@
-{"scanned_at":"2026-10-16T12:04:34Z","deep_dive_cap":5,"gappers":[],"filtered_out":[{"symbol":"OPEN","price":2.305,"gap_pct":15.54,"reason":"price<3.0"}]}
+{
+  "scanned_at": "2026-10-16T13:04:28Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {"rank": 1, "symbol": "RKLB", "price": 54.56, "gap_pct": -7.83,
+     "premarket_volume": 1140210,
+     "catalyst": "Neutron maiden flight delayed to 2027 (component rebuild for safety).",
+     "headlines": ["Rocket Lab (RKLB) Delays Neutron Maiden Flight To 2027 - Simply Wall St, Oct 16 2026"],
+     "catalyst_detail": "Rocket Lab postponed Neutron's first launch to 2027 due to manufacturing issues; a critical component will be rebuilt for safety. The delay pushes out medium-lift contract deliveries and extends R&D cash burn into 2027. Electron, satellite manufacturing and planned M&A are unaffected.",
+     "why": "Slipped Neutron timeline defers larger launch and defense revenue and raises funding/dilution risk, so growth-multiple holders de-rate.",
+     "impact": "Second consecutive day of Neutron-delay selling (-9.65% Oct 15, now -7.83% more); volume 1.14M is elevated, so it reads as repricing rather than a one-day spike. No sector read-through verified.",
+     "horizon": "SHORT_TERM",
+     "opportunity_cost": "Gap-down, long-only bot: no long setup; a bounce entry would fail the Confluence rule. Max-6 positions and 3/wk caps are fully open (0 positions, 0/3 trades), so nothing is displaced, but a sane 7-10% stop on a falling knife makes 2:1 R:R unlikely. Research only."}
+  ]
+}

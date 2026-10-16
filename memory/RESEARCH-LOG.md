@@ -16280,3 +16280,17 @@ No grade-A hits — no Telegram alert sent per rule.
 
 ### Gappers (auto-scan 08:04 ET, cloud)
 No qualifying gappers (>=5% gap, price>=$3). Only raw hit: OPEN $2.31 +15.54% (filtered: price<$3). No deep dive.
+
+### Gappers (auto-scan 09:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RKLB | 54.56 | -7.83 | 1,140,210 | Neutron maiden flight delayed to 2027 (component rebuild) |
+
+Filtered: OPEN $2.31 +15.79% (price<$3). Only 1 qualifying gapper; deep-dive cap 5, 1 row.
+
+#### Deep dive: RKLB $54.56 -7.83%
+- Catalyst: Neutron first launch pushed to 2027 on manufacturing issues; critical component being rebuilt for safety. Delays medium-lift contract deliveries, extends R&D cash burn into 2027. Electron/satellite/M&A intact.
+- Why: Deferred larger launch + defense revenue and higher funding/dilution risk de-rate the growth multiple.
+- Impact: Second straight Neutron-delay down day (-9.65% Oct 15); elevated volume reads as repricing, not one-day spike. No sector read-through verified.
+- Horizon: SHORT_TERM, headline-driven repricing; no durable long thesis until rebuild milestones show.
+- Opportunity cost: Gap-down, no long setup; caps open (0 positions, 0/3 trades) so nothing displaced, but 2:1 R:R at a sane stop is unlikely on a falling knife. Research only.
