@@ -1719,4 +1719,46 @@ action taken this run. Local run — no commit/push.
 | Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
+
+### Oct 16, Market-Open (Day 71, Friday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-15`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-16 Pre-Market, decision HOLD) —
+energy (XOM/CVX) oil~$95-105 thesis flagged catalyst-aging/confluence
+unverified; V (setup-scan grade B) flagged needing a documented catalyst;
+SYNA (grade B) flagged no catalyst, px below EMA9. None cleared the
+catalyst gate.
+
+STEP 2: latest setup-scan file is `data/setup-scan_cloud_2026-10-15_1833ET.json`
+(prior trading day's 18:33 ET run; today's hadn't fired yet at market-open,
+expected) — 60 candidates checked, 0 errors, 3 grade-B hits: V, SYNA, CMBT.
+No grade-A. Merged with STEP 1 candidates (CMBT is new, no catalyst
+documented yet).
+
+STEP 3: live quotes re-pulled — XOM $176.89, CVX $222.63, V $402.12,
+SYNA $117.74, CMBT $17.76. No material change from research-log levels.
+
+STEP 4 — pass/fail per candidate:
+- XOM/CVX (energy, oil pullback thesis): FAIL — catalyst aging, confluence
+  unverified, already logged non-actionable in prior sessions.
+- V (grade B, ADX 22, EMA9>EMA21): FAIL — no documented catalyst in
+  RESEARCH-LOG; momentum-only is not enough under the confluence rule.
+- SYNA (grade B, ADX 34.5): FAIL — no catalyst; px $100.87 below EMA9
+  $116.55 (structure not confirmed) at research time, and RSI14 67+ on the
+  live setup-scan snapshot — no new long.
+- CMBT (grade B, ADX 32.8, new from setup-scan): FAIL — no catalyst
+  documented; fetched via Apify RAG web browser
+  ("CMBT CompoSecure stock news today catalyst", Yahoo-excluded) but the
+  only result returned was an unrelated CFD-broker ad, nothing usable.
+  Per rule, undocumented catalyst = skip, never trade on it.
+All candidates fail the catalyst gate — STEPs 5-6 (orders/stops) skipped.
+
+STEP 8 (notification): N/A — no trade fired this run.
+
+Weekly trade count: 0/3 (week of Oct 12). 71st trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved,
+operator review pending. STEP 9 (commit/push): proceeding — STEP 7 logged
+candidate pass/fail reasons above.
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-10-14`, equity/cash unchanged at $100,000). Market-open decision was HOLD on hot PPI/CPI risk-off tape — no candidate cleared the catalyst gate or ≥2/4 confluence. Midday scan found nothing to cut or tighten, no thesis to re-check; gappers auto-scan flagged RKLB (-9.65%, Neutron launch delay to 2027) and NBIS (-6.05%, no verified catalyst), both gap-downs with no open position to react to. Weekly trade count: 0/3 (week of Oct 12). 70th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 106th+ straight session, operator review pending. EOD notification sent via Telegram (primary) — ClickUp still broken (500 on every call, same unresolved issue flagged previously). Tomorrow: pre-market re-scan for a candidate clearing both the catalyst gate and ≥2 of 4 confluence indicators.
