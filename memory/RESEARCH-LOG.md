@@ -16262,3 +16262,18 @@ No grade-A hits — no Telegram alert sent per rule.
 | CMBT | B | Momentum confluence | daily swing | ADX 32.8, EMA9 $20.04 > EMA21 $19.71, px $15.21 |
 
 No grade-A hits — no Telegram alert sent per rule.
+
+## 2026-10-16 — Pre-market Research (Day 71, Friday, cloud)
+**Account:** Equity $100,000 | Cash $100,000 | BP $400,000 | 0 positions | 0 open orders | daytrade count 0 (`balance_asof: 2026-10-15`). Flat since launch; $100k-vs-$10k baseline mismatch still unresolved.
+**Market context** (Apify snippets only; bodies not pulled, Yahoo suffix applied, none surfaced):
+- Oil: WTI ~$95.59; Brent ~$104.86 (-1.13%, 1-day delay). Elevated.
+- VIX: 16.02 (-2.67%) at 4:51 AM EDT; prev close 16.46. Calm.
+- Headline (16 Oct): "Meltdown in AI stocks yields to late recovery" — producer prices surged on energy, retail sales flattered by costlier petrol. Consistent with hot PPI/CPI tape from Oct 15.
+- Futures / catalysts / earnings / sector YTD: GAP — S&P futures query returned junk (Snapchat/"S"), no clean data. Earnings calendar (Oct 11-17) and economic calendar pages found but contents not read.
+- Held-ticker news: N/A, no positions.
+**Trade ideas (watch only, none cleared catalyst gate + ≥2/4 confluence):**
+1. Energy (XOM/CVX): catalyst = oil ~$95-105. Entry on pullback; stop -8%; target +16%. Catalyst aging, confluence unverified.
+2. V (Setup scan grade B, ADX 22, EMA9>EMA21, px ~$396): needs documented catalyst; stop ~$365; target ~$430+.
+3. SYNA (grade B, ADX 34.5): no catalyst; px $100.87 below EMA9 $116.55 — skip until structure repairs.
+**Risks:** hot energy-driven inflation prints, AI-stock volatility, Friday/opex positioning, thin research data today.
+**Decision: HOLD.** Weekly trades 0/3. Patience > activity.
