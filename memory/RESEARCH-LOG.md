@@ -16277,3 +16277,6 @@ No grade-A hits — no Telegram alert sent per rule.
 3. SYNA (grade B, ADX 34.5): no catalyst; px $100.87 below EMA9 $116.55 — skip until structure repairs.
 **Risks:** hot energy-driven inflation prints, AI-stock volatility, Friday/opex positioning, thin research data today.
 **Decision: HOLD.** Weekly trades 0/3. Patience > activity.
+
+### Gappers (auto-scan 08:04 ET, cloud)
+No qualifying gappers (>=5% gap, price>=$3). Only raw hit: OPEN $2.31 +15.54% (filtered: price<$3). No deep dive.
