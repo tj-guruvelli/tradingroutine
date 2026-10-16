@@ -16359,3 +16359,15 @@ Only 3 hits (AGMH +5.38% excluded: $0.54 < $3). Deep-dive cap 5; all 3 hits deep
 
 No grade-A hits — no Telegram alert sent per rule.
 
+
+### Setup Scan (18:33 ET, cloud)
+60 scanned, 0 errors. Setup A not evaluated (outside 10:00-15:30 ET) — grade A unreachable this run.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 24.1, EMA9 $385.55 > EMA21 $377.70, px $402.53, RSI 72.0 |
+| MA | B | Momentum confluence | daily swing | ADX 24.7, EMA9 $591.70 > EMA21 $580.07, px $619.43, RSI 74.9 |
+| SYNA | B | Momentum confluence | daily swing | ADX 34.8, EMA9 $116.74 > EMA21 $111.28, px $117.26, RSI 64.2 |
+| CMBT | B | Momentum confluence | daily swing | ADX 31.9, EMA9 $19.62 > EMA21 $19.55, px $17.66, RSI 36.7 |
+| BCI | B | Momentum confluence | daily swing | ADX 22.4, EMA9 $26.26 > EMA21 $26.17, px $26.40, RSI 54.7 |
+
+No grade-A hits — no Telegram alert sent per rule.
