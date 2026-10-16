@@ -16294,3 +16294,25 @@ Filtered: OPEN $2.31 +15.79% (price<$3). Only 1 qualifying gapper; deep-dive cap
 - Impact: Second straight Neutron-delay down day (-9.65% Oct 15); elevated volume reads as repricing, not one-day spike. No sector read-through verified.
 - Horizon: SHORT_TERM, headline-driven repricing; no durable long thesis until rebuild milestones show.
 - Opportunity cost: Gap-down, no long setup; caps open (0 positions, 0/3 trades) so nothing displaced, but 2:1 R:R at a sane stop is unlikely on a falling knife. Research only.
+
+### Gappers (auto-scan 10:04 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 64.54 | -7.38 | 453K | 4th-day slide on bond-yield spike / debt concerns |
+| 2 | NBIS | 177.37 | -5.86 | 89K | No own catalyst found; neocloud sympathy with CRWV |
+
+Only 2 hits >=5% (of ~60 scanned); deep dive covers both (cap 5, ranks 6-10 empty).
+
+#### Deep dive: CRWV $64.54 -7.38%
+- Catalyst: 4th straight down day as bond yields spiked on debt concerns; earlier ATM (up to 35M sh) + $3.0B converts due 2033 (article date unverified). Analysts split, some call it overdone.
+- Why: Higher cost of debt + dilution fears on a levered AI-infra builder; momentum selling.
+- Impact: 453K vol on a multi-day slide = sustained repricing, not one-day spike. NBIS also down (sector read-through).
+- Horizon: SHORT_TERM, financing-driven selloff, no durable long thesis until credit stabilizes.
+- Opportunity cost: Falling knife, no long setup; 2:1 R:R at sane stop unlikely; NBIS only comparable sector name. Research only.
+
+#### Deep dive: NBIS $177.37 -5.86%
+- Catalyst: No same-day company news found. Background: FTSE All-World inclusion, Meta multi-year contract, customer prepayments, GPU price hikes; +42% in 3 months.
+- Why: Sympathy with CRWV debt scare + profit-taking after big run.
+- Impact: Only 89K vol, reads as sympathy; fundamentals intact.
+- Horizon: SHORT_TERM, no own catalyst; wait for CRWV/credit stabilization.
+- Opportunity cost: Higher quality than CRWV but same sector; uses 1 of 3 weekly slots, wide 10% trail on ~$177 hurts 2:1 R:R while sector unsettled. Research only.
