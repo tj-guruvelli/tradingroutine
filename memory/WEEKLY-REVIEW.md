@@ -495,3 +495,47 @@ Template for each entry:
 - Default gapper catalyst research straight to WebSearch rather than attempting Apify RAG first, given 3+ consecutive weeks of near-total Apify catalyst-fetch failure
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves; discipline held under two straight weeks of correlated sector-beta gap clusters
 ### Overall Grade: C
+
+## Week ending 2026-10-16
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -1.95% (SPY proxy: $778.51 → $763.34, Alpaca daily bars, Fri Oct 9 close → Fri Oct 16 close) |
+| Bot vs S&P | +1.95% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a hot PPI/CPI risk-off tape (Oct 14-15) and an AI-beta gap-down/recovery whipsaw (Oct 16 "meltdown yields to late recovery" tape) — zero forced trades
+- Correctly disqualified every gapper/momentum candidate on the catalyst gate: XOM/CVX (aging catalyst, confluence unverified all week), V/MA/SYNA/CMBT/BCI (grade-B momentum only, no documented catalyst), RKLB (-9.65% Neutron-delay down day, no long setup), NBIS (repeated gap-downs, no verified catalyst)
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- 5th consecutive clean week of Market-Open + EOD TRADE-LOG entries — the intermittent missing-entry pattern flagged in 7+ reviews before Sep 25 has not recurred in five straight weeks; treating that gap as resolved
+- Bot beat the S&P this week (flat vs. -1.95%) on genuine variance — a down-tape week rewarding the zero-entry stance, not evidence the stance is "working"
+### What Didn't Work
+- 16th consecutive zero-entry week (76 trading days since launch, Jul 9) — sat in 100% cash; cumulative opportunity cost still dominated by the Aug 7 -3.6% missed week, but the streak itself is now the single longest-running fact about this account
+- `tradingview-data` MCP still down the entire week (11th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself — now an 11th straight week this exact fix has been proposed and not shipped (confirmed via git log: no commits touching `scripts/gappers-alpaca.sh` or pre-market routines since the fix was last discussed)
+- `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` directly re-confirmed still the literal placeholder strings `your_clickup_workspace_id_here` / `your_clickup_channel_id_here` in the live environment — 5th+ straight week confirmed broken; this review's own STEP 6 ClickUp send is expected to fail for the same reason
+- Apify RAG web browser's S&P-500-performance query failed again in the exact documented way (matched an unrelated Spanish-Wikipedia "S" letter article, a YouTube "about" page, and Spotify's web player) despite the Yahoo-exclusion suffix and prior rewording attempts — per last week's own lesson, this review defaulted straight to the Alpaca SPY-bars proxy instead of a further Apify/WebSearch round-trip, which worked cleanly
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (16th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- Defaulting the S&P-500 weekly-performance lookup straight to the Alpaca SPY-bars proxy (as recommended in the Sep 11 review) rather than re-attempting Apify RAG is now validated twice running (Oct 9, Oct 16) — stop spending an Apify call on this specific query going forward
+- Three of the four standing infra items (TRADE-LOG logging gaps, now 5 clean weeks; S&P-lookup source, now resolved via SPY proxy) have converged; the two genuinely unresolved items — the Alpaca-bars confluence wiring (11 weeks) and the $10k/$100k baseline (16 weeks) — are now the only operational blockers left, and both have outlasted every other item in this review's history
+- A second straight week of catalyst-gate rejections across a wide candidate set (XOM/CVX, V/MA/SYNA/CMBT/BCI, RKLB, NBIS) with zero entries continues to show the gate is doing real filtering work independent of the down MCP, not just defaulting to HOLD
+### Adjustments for Next Week
+- Stop sending the S&P-500 weekly-performance query to Apify RAG web browser; use the Alpaca SPY-bars proxy directly (Fri-close to Fri-close) as the primary source for this specific fact
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for an 11th straight week, now the single most overdue open infra item
+- Fix `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — still placeholder strings, 5th+ straight week confirmed broken
+- Escalate the $10k vs $100k baseline mismatch again as the top-priority operator item (16th week flagged, zero response) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
+### Overall Grade: C
