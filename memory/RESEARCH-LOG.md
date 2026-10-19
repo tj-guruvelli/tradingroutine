@@ -16396,3 +16396,48 @@ No grade-A hits — no Telegram alert sent per rule.
 
 ### Gappers (auto-scan 08:03 ET, cloud)
 No gappers >=5% (price>=$3) across watchlist. Largest mover: ONDS -2.76%. Nothing to deep-dive.
+
+### Gappers (auto-scan 09:14 ET, cloud)
+All 5 hits are gap-DOWNS (AI-infra/speculative risk-off; CRWV tied to rate-hike worries). Deep-dive cap 5 (all 5 covered). Catalyst research thin (snippets only); vol = day volume (premarket vol not populated).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 65.17 | -6.47 | 1.96M | Rate-hike/borrowing-cost worries after inflation data; -67% from ATH on debt concerns |
+| 2 | NBIS | 176.69 | -6.22 | 1.02M | No specific news; AI neocloud sympathy with CRWV |
+| 3 | RKLB | 52.10 | -5.70 | 0.83M | Testing 200-day after sharp drop; VICTUS HAZE CDR cleared |
+| 4 | BMNR | 22.09 | -5.40 | 1.41M | ETH-treasury proxy; no hard catalyst |
+| 5 | QBTS | 12.15 | -5.19 | 1.10M | No fresh catalyst; quantum group beta |
+
+#### Deep dive: CRWV $65.17 -6.47%
+- Catalyst: Rate-repricing after hot inflation hit levered AI cloud; stock and bonds falling, ~67% below $187 high.
+- Why: Higher rates raise refinancing cost on GPU-backed debt.
+- Impact: Macro/credit-driven slide; NBIS also -6.2% (group move).
+- Horizon: SHORT_TERM, macro-driven, no durable long thesis.
+- Opportunity cost: Falling knife; no 2:1 R:R at 10% trail.
+
+#### Deep dive: NBIS $176.69 -6.22%
+- Catalyst: No company news found; analyst PTs ~$283-297 still far above price.
+- Why: Sympathy selling in AI neocloud on rate fears.
+- Impact: Sector read-through; mean-revert only if rates calm.
+- Horizon: SHORT_TERM, no thesis change.
+- Opportunity cost: Overlaps CRWV exposure; correlation gate applies; R:R unproven.
+
+#### Deep dive: RKLB $52.10 -5.70%
+- Catalyst: Testing 200-day avg after ~-11.5% drop; positive VICTUS HAZE CDR news ignored.
+- Why: Space-theme momentum unwind in risk-off tape.
+- Impact: Level-driven; 200-day hold = bounce setup, break = extension.
+- Horizon: SHORT_TERM, technical.
+- Opportunity cost: Only on confirmed reclaim, would displace weakest holding; needs tight stop for 2:1.
+
+#### Deep dive: BMNR $22.09 -5.40%
+- Catalyst: ETH-treasury name; no hard catalyst found (stale social snippets).
+- Why: ETH beta amplified by NAV discount.
+- Impact: No independent thesis.
+- Horizon: SHORT_TERM, crypto beta.
+- Opportunity cost: Single-factor beta, no confirmed sector momentum; poor fit.
+
+#### Deep dive: QBTS $12.15 -5.19%
+- Catalyst: Nothing dated today; only Jul/Aug quantum headlines.
+- Why: Speculative basket sells off with risk-off.
+- Impact: Sympathy move, unclear sustainability.
+- Horizon: SHORT_TERM, no catalyst.
+- Opportunity cost: Fails sector-momentum rule; not worth a weekly-trade slot.
