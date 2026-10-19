@@ -16441,3 +16441,17 @@ All 5 hits are gap-DOWNS (AI-infra/speculative risk-off; CRWV tied to rate-hike 
 - Impact: Sympathy move, unclear sustainability.
 - Horizon: SHORT_TERM, no catalyst.
 - Opportunity cost: Fails sector-momentum rule; not worth a weekly-trade slot.
+
+### Gappers (auto-scan 10:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 42.73 | +5.12 | 52,117 | None found (no same-day news surfaced) |
+
+Only 1 of ~60 tickers cleared the filters (gap>=5%, price>=3, premarket vol>=50k). Deep-dive cap 5; only 1 qualified.
+
+#### Deep dive: ASTS $42.73 +5.12%
+- Catalyst: No same-day catalyst found. Apify results irrelevant, Benzinga 403. Only dated item: $1.15B convertible notes (due 2034) offering completed 2026-07-21.
+- Why: Unknown; likely sector/momentum drift, unverified.
+- Impact: Thin volume (52k) just over the floor; low-conviction, may fade.
+- Horizon: SHORT_TERM, no verified catalyst or durable thesis.
+- Opportunity cost: Not worth a weekly trade slot or displacing a holding; 2:1 R:R unsupported without a catalyst.
