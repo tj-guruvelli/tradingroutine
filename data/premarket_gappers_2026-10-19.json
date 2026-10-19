@@ -1,13 +1,1 @@
-{
-  "scanned_at": "2026-10-19T14:15:11Z",
-  "deep_dive_cap": 5,
-  "gappers": [
-    {"rank": 1, "symbol": "ASTS", "price": 42.73, "gap_pct": 5.12,
-     "premarket_volume": 52117, "catalyst": null, "headlines": [],
-     "catalyst_detail": "No same-day catalyst found (Apify returned irrelevant results, Benzinga 403). Only dated item: AST SpaceMobile completed a $1.15B convertible senior notes (due 2034) offering on 2026-07-21.",
-     "why": "Unknown. Likely sector/momentum drift in space-comms names; unverified.",
-     "impact": "Thin: 52k premarket shares barely above the 50k floor and a 5.12% gap just over threshold. No confirmed catalyst, so reads as a low-conviction move that may fade.",
-     "horizon": "SHORT_TERM",
-     "opportunity_cost": "No verified catalyst, so it does not justify displacing an existing holding or one of the 3 weekly new-trade slots. 2:1 R:R at a 10% trail would need a ~20% target; not supported by evidence. Research only."}
-  ]
-}
+{"scanned_at":"2026-10-19T15:13:36Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"ASTS","price":42.91,"gap_pct":5.56,"premarket_volume":96619,"catalyst":"No verified same-day catalyst; search returned only stale items (Aug US Mobile Q4 launch article; undated TELUS integration test)","headlines":["US Mobile Sets Sights On Q4 AST SpaceMobile Launch (Aug, stale)","AST SpaceMobile Completes TELUS Integration test (undated)"],"catalyst_detail":"AST SpaceMobile builds a space-based cellular broadband network for direct-to-smartphone service. Results surfaced only older items: US Mobile targeting a Q4 direct-to-cell launch and a first TELUS integration test (voice, text, broadband). Nothing dated today confirms the cause of the gap.","why":"Unverified. Likely sentiment/momentum in space-connectivity names, with Q4 commercial-launch expectations as a backdrop.","impact":"Volume 96.6k is modestly above the 50k floor; stock is very volatile (a source cited -21% over a week and -51% YTD at some point). No peer read-through verified. Reads as a possible fade absent a catalyst.","horizon":"SHORT_TERM","opportunity_cost":"No confirmed catalyst fails the Entry Checklist; would use a weekly slot (0/3 used) for a high-beta name with a wide stop, 2:1 R:R unsupported. Research only."}]}

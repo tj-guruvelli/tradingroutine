@@ -16455,3 +16455,19 @@ Only 1 of ~60 tickers cleared the filters (gap>=5%, price>=3, premarket vol>=50k
 - Impact: Thin volume (52k) just over the floor; low-conviction, may fade.
 - Horizon: SHORT_TERM, no verified catalyst or durable thesis.
 - Opportunity cost: Not worth a weekly trade slot or displacing a holding; 2:1 R:R unsupported without a catalyst.
+
+## 2026-10-19
+
+### Gappers (auto-scan 11:13 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ASTS | 42.91 | +5.56 | 96,619 | None verified same-day (stale Aug/undated items only) |
+
+Filtered: AGMH -9.6% (price $0.47 < $3, vol 700). Deep dive cap 5; only 1 qualifier.
+
+#### Deep dive: ASTS $42.91 +5.56%
+- Catalyst: Only stale items found (US Mobile Q4 direct-to-cell launch target; undated TELUS integration test). No same-day cause confirmed.
+- Why: Unverified; likely space-connectivity momentum/sentiment.
+- Impact: Volume 96.6k just above floor, high-beta name; may fade.
+- Horizon: SHORT_TERM, no verified catalyst.
+- Opportunity cost: Fails catalyst gate; 2:1 R:R unsupported; not worth a weekly slot (0/3 used).
