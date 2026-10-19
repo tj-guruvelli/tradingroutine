@@ -16371,3 +16371,25 @@ No grade-A hits — no Telegram alert sent per rule.
 | BCI | B | Momentum confluence | daily swing | ADX 22.4, EMA9 $26.26 > EMA21 $26.17, px $26.40, RSI 54.7 |
 
 No grade-A hits — no Telegram alert sent per rule.
+## 2026-10-19 — Pre-Market Research (cloud)
+**Sourcing:** Apify RAG (Yahoo-excluded) returned junk for futures query (irrelevant S-letter pages), timed out on oil/calendar; VIX from TradingView page. Fell back to native WebSearch (Yahoo domains blocked) for futures/oil/earnings — noted fallback.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | daytrades 0 | 0 positions | 0 open orders. (Still the live-vs-$10k-baseline mismatch flagged Jul 27, unresolved.)
+
+**Market context**
+- Futures: S&P +~0.5% (range +0.2–0.8%), Nasdaq-100 ~+1% after a -5.5% week; Dow ~flat/+0.2% (CNBC, Bloomberg).
+- Last week: S&P ~-2% (worst since late June), Nasdaq -4.5% on AI selloff.
+- Oil: Brent ~$108-109 (touched $110 Fri), WTI ~$100.6; Persian Gulf tanker attacks + Ukrainian strikes on Russian energy; Iran de-escalation hopes.
+- VIX: 18.75, -8% (TradingView).
+- Releases today: China Q3 GDP, NAHB. Light macro week; Fed blackout, FOMC Oct 27-28 (~84% no change). Fri: UMich, flash PMIs.
+- Earnings: today FITB, STLD, WRB. Tue GE, NFLX, RTX, GM, MMM, NOC, SpaceX. Wed META, TSLA (AMC), AT&T, IBM, TXN, LRCX. Thu LMT, UNP, HON, VLO, PG. Fri AXP. Nvidia GTC Berlin Oct 20-22.
+- Sector: energy strong (oil >$100); AI/tech de-risking (neocloud credit scare CRWV/NBIS).
+
+**Trade ideas (none cleared gate; sector-momentum/confluence unverified)**
+1. XOM/CVX — oil $100+ catalyst, late-cycle energy. Entry on pullback; stop 8% below; target +16% (2:1). Needs ≥2 confluence confirmation (RSI/VWAP) at open.
+2. VLO — Thu earnings with high crude/refining margins. Do NOT hold into print; watch only.
+3. Dip-buy AI leaders (NVDA) — Nasdaq bounce + GTC catalyst, but pre-META/TSLA earnings binary risk; wait for confirmation, entry only above reclaimed EMA9; stop 7-8%.
+
+**Risks:** Meta/Tesla/SpaceX/Netflix earnings binary; oil spike/geopolitics; hot inflation/yield pressure (CRWV credit stress); AI selloff continuation; FOMC next week.
+
+**Decision: HOLD.** Weekly trades 0/3. Patience > activity; reassess at market-open against catalyst + ≥2/4 confluence.
