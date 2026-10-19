@@ -16393,3 +16393,6 @@ No grade-A hits — no Telegram alert sent per rule.
 **Risks:** Meta/Tesla/SpaceX/Netflix earnings binary; oil spike/geopolitics; hot inflation/yield pressure (CRWV credit stress); AI selloff continuation; FOMC next week.
 
 **Decision: HOLD.** Weekly trades 0/3. Patience > activity; reassess at market-open against catalyst + ≥2/4 confluence.
+
+### Gappers (auto-scan 08:03 ET, cloud)
+No gappers >=5% (price>=$3) across watchlist. Largest mover: ONDS -2.76%. Nothing to deep-dive.
