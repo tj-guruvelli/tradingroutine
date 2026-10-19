@@ -16471,3 +16471,12 @@ Filtered: AGMH -9.6% (price $0.47 < $3, vol 700). Deep dive cap 5; only 1 qualif
 - Impact: Volume 96.6k just above floor, high-beta name; may fade.
 - Horizon: SHORT_TERM, no verified catalyst.
 - Opportunity cost: Fails catalyst gate; 2:1 R:R unsupported; not worth a weekly slot (0/3 used).
+
+### Setup Scan (16:38 ET, cloud)
+60 candidates checked. `grade_a_possible`=false (outside 10:00-15:30 ET intraday window) — Setup A not evaluated this run. 2 grade-B hits, 0 grade-A.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LMT | B | Momentum confluence | daily swing | ADX14 36.99, EMA9 523.08 > EMA21 521.93, RSI 64.79, px $547.55 (SMA200 $564.63) |
+| SYNA | B | Momentum confluence | daily swing | ADX14 35.19, EMA9 116.84 > EMA21 111.82, RSI 63.65, px $101.01 (SMA200 $101.05) |
+
+0 errors. 0 grade-A hits -> no Telegram/ClickUp alert (per rule: stay quiet unless >=1 grade-A).
