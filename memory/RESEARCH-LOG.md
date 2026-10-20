@@ -16517,3 +16517,42 @@ No qualifying gappers (0 hits). Only raw hit: OPEN $1.96, -7.33%, vol 699,902 â€
 
 ### Gappers (auto-scan 09:09 ET, cloud)
 No qualifying gappers (0 hits). Only raw hit: OPEN $2.00, -5.44%, vol 699,902 â€” filtered (price < $3.00). No deep dives.
+
+### Gappers (auto-scan 10:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATS | $93.375 | -10.16% | 1,630 | No same-day catalyst found; search snippets only show EchoStar analyst fair-value raises and a JPMorgan target (ticker snippets cite ECHO, 85.37 close 10/16, which does not match SATS prev close 103.94 - unverified) |
+| 2 | NOC | $543.34 | +6.43% | 31,279 | Catalyst fetch returned nothing usable; likely earnings/defense-sector driven (unverified) |
+| 3 | BLSH | $29.14 | +6.23% | 2,785 | No same-day catalyst found; recent: Wells Fargo Hold/PT cut to $35 (Oct 13), Sept monthly metrics (Oct 6) |
+| 4 | BMNR | $22.885 | +6.15% | 302,158 | Bitmine announced ETH holdings reached 6.04M tokens (~day before) |
+
+Note: only 4 hits (>=5%, >=$3); script field is `volume` (not premarket_volume), so vol filter not applied. Deep dive covers all 4 (cap 5); Apify scrapes mostly failed, catalysts marked unverified.
+
+#### Deep dive: SATS $93.375 -10.16%
+- Catalyst: Unverified. No article explaining the -10.2% gap surfaced; only older analyst notes (fair value raised, JPMorgan ~69% upside target).
+- Why: Unknown - catalyst not identified. Possible spectrum/capital-structure news or sector move; not confirmed.
+- Impact: Volume only 1,630 shares, too thin to judge sustainability. Large gap-down on a stock that rallied hard over the past year; mean-revert vs. breakdown undetermined.
+- Horizon: SHORT_TERM, No durable thesis identified; unconfirmed.
+- Opportunity cost: Long-only/stocks-only rules: a -10% gap-down is not a long entry; nothing to displace. Does not clear 2:1 R:R without a known catalyst.
+
+#### Deep dive: NOC $543.34 +6.43%
+- Catalyst: Unverified. Apify returned no usable pages for NOC.
+- Why: Unknown; +6.4% gap on a ~$510 large-cap defense name suggests earnings/guidance or contract news, unconfirmed.
+- Impact: 31K shares early volume; large-cap gap of this size usually has institutional follow-through if earnings-driven. Check peer defense names (LMT, RTX, GD) for read-through.
+- Horizon: SHORT_TERM, Catalyst unconfirmed; treat as headline until verified.
+- Opportunity cost: ~$543/share vs 20% cap (~$2,000) = ~3 shares; would compete with existing defense/aero holdings and weekly 3-trade cap. 2:1 R:R needs a stop ~5% below with 10%+ upside; chasing after a 6% gap is poor.
+
+#### Deep dive: BLSH $29.14 +6.23%
+- Catalyst: Unverified. Latest items found are Oct 13 analyst PT cuts (Wells Fargo to $35, Citi maintained) and Sept metrics release; nothing dated today.
+- Why: Likely crypto-beta move; not confirmed by a Bullish-specific headline.
+- Impact: 2,785 shares - very thin. Read as crypto-sentiment spike with BMNR also up (same-direction peer move).
+- Horizon: SHORT_TERM, No company-specific catalyst; crypto-beta fade risk.
+- Opportunity cost: Overlaps BMNR (crypto beta, correlation gate likely trips). Hold-rated by Wells Fargo; R:R 2:1 not evident at a 7-10% stop.
+
+#### Deep dive: BMNR $22.885 +6.15%
+- Catalyst: Bitmine reported ETH treasury holdings of 6.04M tokens plus total crypto/cash/securities. Commentary notes bigger catalysts would be ETH price/yield moves, crossing the 5% ETH supply goal, or audited NAV vs market cap.
+- Why: ETH-treasury proxy: stock trades on ETH price and holdings growth; holdings update plus crypto bid pulls in momentum buyers.
+- Impact: 302K volume is the only name above 50K; best liquidity of the list. Highly correlated with ETH and BLSH (crypto read-through) - move is beta, not idiosyncratic.
+- Horizon: SHORT_TERM, Tracks ETH price; no structural catalyst today.
+- Opportunity cost: Crypto-beta, high-vol name: ATR sizing would be small. Would displace/duplicate any existing crypto-linked holding and fail corr-gate if 2+ correlated. 2:1 R:R doubtful with 10% trail.
+
