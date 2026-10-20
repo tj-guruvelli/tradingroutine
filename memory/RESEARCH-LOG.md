@@ -16489,3 +16489,25 @@ Filtered: AGMH -9.6% (price $0.47 < $3, vol 700). Deep dive cap 5; only 1 qualif
 | SYNA | B | Momentum confluence | daily swing | ADX14 35.19, EMA9 116.84 > EMA21 111.82, RSI 63.65, px $101.01 (SMA200 $101.05) |
 
 0 errors. 0 grade-A hits -> no Telegram/ClickUp alert (per rule: stay quiet unless >=1 grade-A).
+
+## 2026-10-20 — Pre-Market
+
+**Sources:** Apify RAG (Yahoo-blocked suffix) for earnings calendar (Earnings Whispers); oil/futures/VIX/oil queries returned empty/timeout/oversized -> fell back to native WebSearch (CNBC/Benzinga snippets, approximate, mixed timestamps). Econ calendar, sector YTD: gap (no clean source retrieved).
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | daytrade count 0 | 0 positions | 0 open orders. (Known $100k-vs-$10k baseline mismatch, unresolved.)
+
+**Market context (approx):**
+- Futures mixed/flat: ES ~flat to +0.1%, NQ -0.3% to +0.2%, YM +0.2%. S&P 7,659.44 close Fri 10/16 (-1.09%), +0.4% Mon.
+- Oil: WTI ~$103.9, Brent ~$109.7 (Houthi attacks on Saudi Arabia escalating).
+- VIX ~18.6-18.8 (was >22 Fri, first time in 4 months).
+- BMO earnings (22): GE, GM, RTX, MMM, NOC, HAL, HAS, ALLY, GPC, EFX, KEY, SYF, MSCI. AMC: 24 names (not listed).
+- Econ prints: not retrieved.
+
+**Ideas (all conditional; no confluence data verified pre-open):**
+1. XOM/CVX — oil >$100 + Houthi/Saudi escalation. Entry on pullback holding EMA9 w/ confirmed RSI/VWAP; stop 10% trail; target +15%. Energy late-cycle risk.
+2. HAL — reports BMO today; trade only post-print reaction, not into it. Entry after first-30m range break; stop -7%; target +12%.
+3. LMT (grade-B daily swing from 10/19 scan: ADX 37, EMA9>EMA21, RSI 64.8, px ~$547.55, below SMA200 $564.63) — entry on reclaim above 10/19 high w/ volume; stop ~$520 (-5%); target SMA200 $564.63 then $585. NOC/RTX earnings today = defense read-through; wait for prints.
+
+**Risks:** Oil/geopolitical spike; VIX regime shift after Fri sell-off; heavy BMO earnings (defense, banks, GM); META/TSLA earnings Wed; stale/conflicting quotes.
+
+**Decision: HOLD** — no grade-A, confluence unverified, 0/3 weekly trades used. Re-evaluate at market-open after earnings reactions.
