@@ -16511,3 +16511,6 @@ Filtered: AGMH -9.6% (price $0.47 < $3, vol 700). Deep dive cap 5; only 1 qualif
 **Risks:** Oil/geopolitical spike; VIX regime shift after Fri sell-off; heavy BMO earnings (defense, banks, GM); META/TSLA earnings Wed; stale/conflicting quotes.
 
 **Decision: HOLD** — no grade-A, confluence unverified, 0/3 weekly trades used. Re-evaluate at market-open after earnings reactions.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+No qualifying gappers (0 hits). Only raw hit: OPEN $1.96, -7.33%, vol 699,902 — filtered (price < $3.00). No deep dives.
