@@ -16594,3 +16594,11 @@ Filtered out (price<$3): AGMH $0.50 +7.08%, PEPG $2.89 +6.46%. Only 4 qualifying
 - Impact: 49K pre-market shares is decent for a $500+ stock. Earnings gaps in large-cap defense tend to hold better than headline spikes, but guidance details matter. Peers (LMT, GD, RTX) read-through not checked.
 - Horizon: LONG_TERM, Earnings/guidance reset is structural if guidance was raised; confirm on the call before any swing.
 - Opportunity cost: Best-quality setup of the four, but at ~$538 a 20% cap (~$20K on $100K equity) still fits. No open positions to displace; ranks ahead of the crypto names. 2:1 R:R needs a stop near the gap low, plausible but unchecked. Research only.
+
+### Setup Scan (16:38 ET, cloud)
+60 candidates checked. `grade_a_possible`=false (outside 10:00-15:30 ET intraday window, post-close) — Setup A not evaluated this run. 1 grade-B hit, 0 grade-A.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HXL | B | Momentum confluence | daily swing | ADX14 27.82, EMA9 88.29 > EMA21 87.86, RSI 62.63, px $92.07 (SMA200 $90.54) |
+
+0 errors. 0 grade-A hits -> no Telegram/ClickUp alert (per rule: stay quiet unless >=1 grade-A).
