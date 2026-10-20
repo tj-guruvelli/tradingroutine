@@ -1,68 +1,76 @@
 {
-  "scanned_at": "2026-10-20T14:17:11.389919Z",
+  "scanned_at": "2026-10-20T15:17:11.390420Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
       "symbol": "SATS",
-      "price": 93.375,
-      "gap_pct": -10.16,
-      "premarket_volume": 1630,
-      "catalyst": "No same-day catalyst found; search snippets only show EchoStar analyst fair-value raises and a JPMorgan target (ticker snippets cite ECHO, 85.37 close 10/16, which does not match SATS prev close 103.94 - unverified)",
-      "headlines": [],
-      "catalyst_detail": "Unverified. No article explaining the -10.2% gap surfaced; only older analyst notes (fair value raised, JPMorgan ~69% upside target).",
-      "why": "Unknown - catalyst not identified. Possible spectrum/capital-structure news or sector move; not confirmed.",
-      "impact": "Volume only 1,630 shares, too thin to judge sustainability. Large gap-down on a stock that rallied hard over the past year; mean-revert vs. breakdown undetermined.",
+      "price": 94.74,
+      "gap_pct": -8.85,
+      "premarket_volume": 3020,
+      "catalyst": "No same-day headline found; EchoStar has run ~627% in a year on SpaceX stake/spectrum-deployment hopes.",
+      "headlines": [
+        "EchoStar Stock Up 627% in a Year (Zacks, Jun 2026)",
+        "10-K risk factor: investor expectations on potential SpaceX investment may be influencing stock price"
+      ],
+      "catalyst_detail": "No specific catalyst for today's -8.9% gap surfaced. Context: stock is up ~627% in a year; filings say investor expectations about a potential SpaceX investment may be driving the price, and spectrum build-out requirements remain. Pre-market volume is only ~3K shares, so the gap is thin-tape.",
+      "why": "Extended momentum name giving back gains; any wobble in SpaceX-linked sentiment or spectrum news triggers outsized profit-taking. Cause unconfirmed.",
+      "impact": "Not sustainable evidence either way: 3K shares is too thin to trust. Likely volatile open; no peer read-through confirmed.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "No durable thesis identified; unconfirmed.",
-      "opportunity_cost": "Long-only/stocks-only rules: a -10% gap-down is not a long entry; nothing to displace. Does not clear 2:1 R:R without a known catalyst."
+      "horizon_reason": "No confirmed catalyst; headline-expectation driven name.",
+      "opportunity_cost": "Gap is down (stocks-only, long bias), so it would be a dip-buy on an unexplained drop. Fails the catalyst gate; 2:1 R:R at a 10% trail on a name moving 9% in a day is unrealistic."
     },
     {
       "rank": 2,
-      "symbol": "NOC",
-      "price": 543.34,
-      "gap_pct": 6.43,
-      "premarket_volume": 31279,
-      "catalyst": "Catalyst fetch returned nothing usable; likely earnings/defense-sector driven (unverified)",
-      "headlines": [],
-      "catalyst_detail": "Unverified. Apify returned no usable pages for NOC.",
-      "why": "Unknown; +6.4% gap on a ~$510 large-cap defense name suggests earnings/guidance or contract news, unconfirmed.",
-      "impact": "31K shares early volume; large-cap gap of this size usually has institutional follow-through if earnings-driven. Check peer defense names (LMT, RTX, GD) for read-through.",
+      "symbol": "BMNR",
+      "price": 22.9,
+      "gap_pct": 6.22,
+      "premarket_volume": 637462,
+      "catalyst": "Ethereum-treasury proxy; ETH holdings ~5.7M (~4.8% of supply) and crypto bid.",
+      "headlines": [
+        "BitMine expanded ETH treasury to 5.74M ETH, ~4.8% of supply, targeting 5% (Jul 2026 coverage)"
+      ],
+      "catalyst_detail": "No new company release found for today; latest sourced data shows BitMine holding ~5.74M ETH (~4.8% of supply), approaching its 5% goal, and staking ETH for yield. Gap likely tracks ETH price.",
+      "why": "Stock trades as a leveraged ETH/NAV proxy; crypto strength plus holdings growth pulls in momentum buyers.",
+      "impact": "637K volume is by far the best liquidity of the list. Move is crypto beta, not idiosyncratic; BLSH moving the same way confirms sector read-through.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Catalyst unconfirmed; treat as headline until verified.",
-      "opportunity_cost": "~$543/share vs 20% cap (~$2,000) = ~3 shares; would compete with existing defense/aero holdings and weekly 3-trade cap. 2:1 R:R needs a stop ~5% below with 10%+ upside; chasing after a 6% gap is poor."
+      "horizon_reason": "Tracks ETH; no structural catalyst today.",
+      "opportunity_cost": "High-vol crypto-beta; ATR sizing keeps it small and it would fail corr-gate against any other crypto-linked holding (BLSH). 2:1 R:R doubtful with a 10% trail. Account has no open positions, so nothing displaced."
     },
     {
       "rank": 3,
       "symbol": "BLSH",
-      "price": 29.14,
-      "gap_pct": 6.23,
-      "premarket_volume": 2785,
-      "catalyst": "No same-day catalyst found; recent: Wells Fargo Hold/PT cut to $35 (Oct 13), Sept monthly metrics (Oct 6)",
-      "headlines": [],
-      "catalyst_detail": "Unverified. Latest items found are Oct 13 analyst PT cuts (Wells Fargo to $35, Citi maintained) and Sept metrics release; nothing dated today.",
-      "why": "Likely crypto-beta move; not confirmed by a Bullish-specific headline.",
-      "impact": "2,785 shares - very thin. Read as crypto-sentiment spike with BMNR also up (same-direction peer move).",
+      "price": 29.02,
+      "gap_pct": 5.8,
+      "premarket_volume": 4921,
+      "catalyst": "Crypto-sector bid; analysts upgrading crypto names (Citi lifted Galaxy/Gemini).",
+      "headlines": [
+        "Citi lifts Galaxy and Gemini as crypto fundamentals improve",
+        "Bullish fell ~5.3% earlier on blockchain equity initiative timeline"
+      ],
+      "catalyst_detail": "No Bullish-specific release found today. Sector tape is positive: Citi raised Galaxy and Gemini on improving crypto fundamentals. Earlier this period shares dropped ~5.3% on the monetization timeline of a five-year blockchain equity initiative.",
+      "why": "Crypto exchange beta; sector upgrades and a firm crypto tape lift volume-linked names.",
+      "impact": "~5K pre-market shares is too thin to judge; same crypto beta as BMNR (not independent).",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "No company-specific catalyst; crypto-beta fade risk.",
-      "opportunity_cost": "Overlaps BMNR (crypto beta, correlation gate likely trips). Hold-rated by Wells Fargo; R:R 2:1 not evident at a 7-10% stop."
+      "horizon_reason": "Sector sympathy move, no company-specific catalyst.",
+      "opportunity_cost": "Duplicates BMNR's crypto exposure and ranks below it on liquidity; corr-gate risk. 2:1 R:R unproven at a sane stop on a ~6% daily mover."
     },
     {
       "rank": 4,
-      "symbol": "BMNR",
-      "price": 22.885,
-      "gap_pct": 6.15,
-      "premarket_volume": 302158,
-      "catalyst": "Bitmine announced ETH holdings reached 6.04M tokens (~day before)",
+      "symbol": "NOC",
+      "price": 537.65,
+      "gap_pct": 5.31,
+      "premarket_volume": 49251,
+      "catalyst": "Q3 earnings reported today (Oct 20); consensus was EPS ~$7.16-7.18 on ~$11.14B revenue.",
       "headlines": [
-        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.04 Million Tokens"
+        "Sentiment cautious ahead of Q3 results on Oct 20 (EPS ~$7.16-7.18, rev ~$11.14B)"
       ],
-      "catalyst_detail": "Bitmine reported ETH treasury holdings of 6.04M tokens plus total crypto/cash/securities. Commentary notes bigger catalysts would be ETH price/yield moves, crossing the 5% ETH supply goal, or audited NAV vs market cap.",
-      "why": "ETH-treasury proxy: stock trades on ETH price and holdings growth; holdings update plus crypto bid pulls in momentum buyers.",
-      "impact": "302K volume is the only name above 50K; best liquidity of the list. Highly correlated with ETH and BLSH (crypto read-through) - move is beta, not idiosyncratic.",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "Tracks ETH price; no structural catalyst today.",
-      "opportunity_cost": "Crypto-beta, high-vol name: ATR sizing would be small. Would displace/duplicate any existing crypto-linked holding and fail corr-gate if 2+ correlated. 2:1 R:R doubtful with 10% trail."
+      "catalyst_detail": "Northrop reports Q3 today; consensus EPS ~$7.16-7.18 on ~$11.14B revenue. Prior quarter revenue was $10.88B (+5.1% y/y), and in April the stock fell ~5% on guidance at the low end despite a beat. Results/guidance details were not retrievable pre-market, so the beat/raise is inferred from the gap.",
+      "why": "Earnings gap-up: likely a beat and/or better guidance after cautious positioning, pulling in momentum and short-covering buyers. Specifics unverified.",
+      "impact": "49K pre-market shares is decent for a $500+ stock. Earnings gaps in large-cap defense tend to hold better than headline spikes, but guidance details matter. Peers (LMT, GD, RTX) read-through not checked.",
+      "horizon": "LONG_TERM",
+      "horizon_reason": "Earnings/guidance reset is structural if guidance was raised; confirm on the call before any swing.",
+      "opportunity_cost": "Best-quality setup of the four, but at ~$538 a 20% cap (~$20K on $100K equity) still fits. No open positions to displace; ranks ahead of the crypto names. 2:1 R:R needs a stop near the gap low, plausible but unchecked. Research only."
     }
   ]
 }

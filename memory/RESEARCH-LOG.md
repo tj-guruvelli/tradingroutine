@@ -16556,3 +16556,41 @@ Note: only 4 hits (>=5%, >=$3); script field is `volume` (not premarket_volume),
 - Horizon: SHORT_TERM, Tracks ETH price; no structural catalyst today.
 - Opportunity cost: Crypto-beta, high-vol name: ATR sizing would be small. Would displace/duplicate any existing crypto-linked holding and fail corr-gate if 2+ correlated. 2:1 R:R doubtful with 10% trail.
 
+
+### Gappers (auto-scan 11:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | SATS | 94.74 | -8.85 | 3020 | No same-day headline found; EchoStar has run ~627% in a year on SpaceX stake/spectrum-deployment hopes. |
+| 2 | BMNR | 22.9 | +6.22 | 637462 | Ethereum-treasury proxy; ETH holdings ~5.7M (~4.8% of supply) and crypto bid. |
+| 3 | BLSH | 29.02 | +5.8 | 4921 | Crypto-sector bid; analysts upgrading crypto names (Citi lifted Galaxy/Gemini). |
+| 4 | NOC | 537.65 | +5.31 | 49251 | Q3 earnings reported today (Oct 20); consensus was EPS ~$7.16-7.18 on ~$11.14B revenue. |
+
+Filtered out (price<$3): AGMH $0.50 +7.08%, PEPG $2.89 +6.46%. Only 4 qualifying rows; deep dive covers all 4 (cap 5). Apify BLSH/NOC fundamentals partial; NOC Q3 results not retrievable pre-market.
+
+#### Deep dive: SATS $94.74 -8.85%
+- Catalyst: No specific catalyst for today's -8.9% gap surfaced. Context: stock is up ~627% in a year; filings say investor expectations about a potential SpaceX investment may be driving the price, and spectrum build-out requirements remain. Pre-market volume is only ~3K shares, so the gap is thin-tape.
+- Why: Extended momentum name giving back gains; any wobble in SpaceX-linked sentiment or spectrum news triggers outsized profit-taking. Cause unconfirmed.
+- Impact: Not sustainable evidence either way: 3K shares is too thin to trust. Likely volatile open; no peer read-through confirmed.
+- Horizon: SHORT_TERM, No confirmed catalyst; headline-expectation driven name.
+- Opportunity cost: Gap is down (stocks-only, long bias), so it would be a dip-buy on an unexplained drop. Fails the catalyst gate; 2:1 R:R at a 10% trail on a name moving 9% in a day is unrealistic.
+
+#### Deep dive: BMNR $22.9 +6.22%
+- Catalyst: No new company release found for today; latest sourced data shows BitMine holding ~5.74M ETH (~4.8% of supply), approaching its 5% goal, and staking ETH for yield. Gap likely tracks ETH price.
+- Why: Stock trades as a leveraged ETH/NAV proxy; crypto strength plus holdings growth pulls in momentum buyers.
+- Impact: 637K volume is by far the best liquidity of the list. Move is crypto beta, not idiosyncratic; BLSH moving the same way confirms sector read-through.
+- Horizon: SHORT_TERM, Tracks ETH; no structural catalyst today.
+- Opportunity cost: High-vol crypto-beta; ATR sizing keeps it small and it would fail corr-gate against any other crypto-linked holding (BLSH). 2:1 R:R doubtful with a 10% trail. Account has no open positions, so nothing displaced.
+
+#### Deep dive: BLSH $29.02 +5.8%
+- Catalyst: No Bullish-specific release found today. Sector tape is positive: Citi raised Galaxy and Gemini on improving crypto fundamentals. Earlier this period shares dropped ~5.3% on the monetization timeline of a five-year blockchain equity initiative.
+- Why: Crypto exchange beta; sector upgrades and a firm crypto tape lift volume-linked names.
+- Impact: ~5K pre-market shares is too thin to judge; same crypto beta as BMNR (not independent).
+- Horizon: SHORT_TERM, Sector sympathy move, no company-specific catalyst.
+- Opportunity cost: Duplicates BMNR's crypto exposure and ranks below it on liquidity; corr-gate risk. 2:1 R:R unproven at a sane stop on a ~6% daily mover.
+
+#### Deep dive: NOC $537.65 +5.31%
+- Catalyst: Northrop reports Q3 today; consensus EPS ~$7.16-7.18 on ~$11.14B revenue. Prior quarter revenue was $10.88B (+5.1% y/y), and in April the stock fell ~5% on guidance at the low end despite a beat. Results/guidance details were not retrievable pre-market, so the beat/raise is inferred from the gap.
+- Why: Earnings gap-up: likely a beat and/or better guidance after cautious positioning, pulling in momentum and short-covering buyers. Specifics unverified.
+- Impact: 49K pre-market shares is decent for a $500+ stock. Earnings gaps in large-cap defense tend to hold better than headline spikes, but guidance details matter. Peers (LMT, GD, RTX) read-through not checked.
+- Horizon: LONG_TERM, Earnings/guidance reset is structural if guidance was raised; confirm on the call before any swing.
+- Opportunity cost: Best-quality setup of the four, but at ~$538 a 20% cap (~$20K on $100K equity) still fits. No open positions to displace; ranks ahead of the crypto names. 2:1 R:R needs a stop near the gap low, plausible but unchecked. Research only.
