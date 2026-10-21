@@ -1,0 +1,21 @@
+{
+  "scanned_at": "2026-10-21T12:17:49.219809Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "AMKR",
+      "price": 45.41,
+      "gap_pct": 8.44,
+      "premarket_volume": 117927,
+      "catalyst": "No same-day catalyst found in search; background: AI packaging demand (NVIDIA multi-year agreement, 10-yr TSMC partnership, $12B Arizona campus)",
+      "headlines": [],
+      "catalyst_detail": "Same-day trigger NOT confirmed (Apify results were stale: Feb/Jul 2026 items). Background theme: advanced-packaging/AI exposure via NVIDIA and TSMC agreements and expanded $12B Arizona campus. Q3 earnings likely late Oct (unverified date), so gap may be pre-earnings semis/AI momentum.",
+      "why": "Probable sector/AI-semis sympathy bid or pre-earnings positioning; unverified.",
+      "impact": "Premarket vol only ~118k at 08:16 ET, thin; gap without confirmed catalyst reads fade-prone. Semis peers' moves not checked.",
+      "horizon": "SHORT_TERM",
+      "horizon_note": "No confirmed durable catalyst; do not carry unless earnings/news verified.",
+      "opportunity_cost": "Portfolio is 100% cash, 0/3 weekly trades, so nothing displaced; but fails catalyst gate and earnings binary risk likely within a week; 2:1 R:R at 7-10% stop needs ~$52+ target, i.e. beyond a fresh gap-extension. Research only."
+    }
+  ]
+}

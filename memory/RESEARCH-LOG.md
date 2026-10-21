@@ -16631,3 +16631,17 @@ HXL (grade-B setup-scan, daily swing) — secondary watch, not a catalyst trade.
 
 **Decision: HOLD** (default; patience > activity). No catalyst+confluence confirmation. Weekly trades 0/3.
 Notification: silent (nothing urgent).
+
+### Gappers (auto-scan 08:16 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AMKR | 45.41 | +8.44 | 117,927 | No same-day catalyst found (stale results); AI-packaging theme (NVIDIA/TSMC deals) |
+
+Only 1 hit of ~60 scanned. Deep-dive cap 5; only 1 gapper.
+
+#### Deep dive: AMKR $45.41 +8.44%
+- Catalyst: Same-day trigger NOT confirmed; search returned stale Feb/Jul 2026 items. Background: NVIDIA multi-year agreement, 10-yr TSMC partnership, $12B Arizona campus. Q3 earnings likely late Oct (date unverified).
+- Why: Probable AI-semis sympathy/pre-earnings positioning; unverified.
+- Impact: Thin premarket volume (~118k); unconfirmed gap is fade-prone.
+- Horizon: SHORT_TERM, no confirmed durable catalyst.
+- Opportunity cost: 100% cash, 0/3 weekly trades, nothing displaced; fails catalyst gate, earnings binary risk near; 2:1 R:R needs ~$52+ target at 7-10% stop. Research only.
