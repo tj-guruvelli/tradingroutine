@@ -16688,3 +16688,32 @@ Filter: |gap|>=5%, price>=$3, vol>=50k. Raw hits 4; dropped AGMH ($0.47), CMBT (
 - Impact: Low-priced, 54k vol barely above floor; likely mean-reverts.
 - Horizon: SHORT_TERM, no durable thesis.
 - Opportunity cost: Weaker than LUNR; unlikely to clear 2:1 R:R at a sane stop.
+
+### Gappers (auto-scan 11:11 ET, cloud)
+Filter: |gap|>=5%, price>=$3, vol>=50k. Raw hits 4; dropped AGMH ($0.47). Deep dive cap 5 (only 3 qualified; sources thin).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 237.29 | +6.53 | 140,258 | No same-day headline confirmed (aggregator pages only) |
+| 2 | BMNR | 24.15 | +5.83 | 495,194 | Weekly ETH-treasury update (6.04M ETH, $15.1B assets as of Oct 18); no new same-day news |
+| 3 | AMPX | 7.97 | +5.08 | 91,773 | No same-day headline; MarketBeat piece on Q3 trend shift after 68% correction |
+
+#### Deep dive: BE $237.29 +6.53%
+- Catalyst: No same-day headline confirmed (aggregator pages only) (second-pass fundamentals query skipped; thin results).
+- Why: Likely AI-power/fuel-cell sector momentum; unconfirmed.
+- Impact: Vol 140k healthy for premarket; no verified catalyst, fade risk.
+- Horizon: SHORT_TERM, no verified catalyst.
+- Opportunity cost: Fails catalyst gate; competes for 1 of 3 weekly slots; 2:1 needs wide target at 7-10% stop. Research only.
+
+#### Deep dive: BMNR $24.15 +5.83%
+- Catalyst: Weekly ETH-treasury update (6.04M ETH, $15.1B assets as of Oct 18); no new same-day news (second-pass fundamentals query skipped; thin results).
+- Why: Levered ETH proxy; move follows ETH/crypto beta.
+- Impact: Vol 495k decent but crypto-beta driven and reversible with ETH.
+- Horizon: SHORT_TERM, no company-specific catalyst.
+- Opportunity cost: High-vol crypto beta; fails catalyst gate; 2:1 needs ~$27+ at ~$22.5 stop. Research only.
+
+#### Deep dive: AMPX $7.97 +5.08%
+- Catalyst: No same-day headline; MarketBeat piece on Q3 trend shift after 68% correction (second-pass fundamentals query skipped; thin results).
+- Why: Likely battery/drone sector sympathy bounce; unconfirmed.
+- Impact: Thin 92k vol; low conviction, likely mean-reverts.
+- Horizon: SHORT_TERM, no durable thesis.
+- Opportunity cost: Weakest of three; unlikely to clear 2:1 R:R at sane stop. Research only.
