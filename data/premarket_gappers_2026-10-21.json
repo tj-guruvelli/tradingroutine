@@ -1,38 +1,38 @@
 {
- "scanned_at": "2026-10-21T13:16:00Z",
- "deep_dive_cap": 5,
- "gappers": [
-  {
-   "rank": 1,
-   "symbol": "AMKR",
-   "price": 45.41,
-   "gap_pct": 8.44,
-   "premarket_volume": 117927,
-   "catalyst": "No same-day catalyst found; background NVIDIA $1.3B multi-year packaging deal (Korea), AI-semis theme",
-   "headlines": [
-    "Amkor secures $1.3B multi-year agreement with Nvidia for advanced packaging capacity in South Korea (undated social post)"
-   ],
-   "catalyst_detail": "Same-day trigger not confirmed; searches returned undated/stale items. Background: NVIDIA $1.3B multi-year packaging agreement. Q3 earnings date unverified (likely late Oct).",
-   "why": "Probable AI-semis sympathy or pre-earnings positioning; unverified.",
-   "impact": "Thin premarket volume (~118k); unconfirmed gap is fade-prone. Same name gapped +8.4% in the 08:16 ET run.",
-   "horizon": "SHORT_TERM",
-   "opportunity_cost": "Account has open capacity and 0/3 weekly trades per last log, nothing displaced; fails documented-catalyst gate, earnings binary risk near; 2:1 R:R needs ~$52+ target at 7-10% stop. Research only."
-  },
-  {
-   "rank": 2,
-   "symbol": "BMNR",
-   "price": 23.29,
-   "gap_pct": 8.02,
-   "premarket_volume": 1340213,
-   "catalyst": "No same-day catalyst found; ETH-treasury name, ETH holdings 6.04M tokens (~$15.1B total crypto+cash) per release 2 days ago",
-   "headlines": [
-    "Bitmine announces ETH holdings reach 6.04M tokens, total crypto and cash holdings $15.1B (~Oct 19)"
-   ],
-   "catalyst_detail": "Weekly holdings update ~2 days ago: 6.04M ETH, $15.1B total crypto and cash. No same-day headline found; gap likely tracks crypto/ETH beta. Next earnings ~Nov 21.",
-   "why": "Levered ETH proxy; premarket move likely follows ETH price and treasury-accumulation flow; unverified.",
-   "impact": "Volume 1.34M premarket is healthy, but move is crypto-beta driven and can reverse with ETH. No sector read-through confirmed.",
-   "horizon": "SHORT_TERM",
-   "opportunity_cost": "Crypto-beta, high volatility; would compete with any energy/defense ideas from pre-market log; fails documented-catalyst gate; 2:1 R:R needs ~$27 target at ~$21.5 stop (-7.7%). Research only."
-  }
- ]
+  "scanned_at": "2026-10-21T14:14:36.273976Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "LUNR",
+      "price": 11.245,
+      "gap_pct": 6.74,
+      "premarket_volume": 93467,
+      "catalyst": "No same-day headline confirmed; recent coverage (Seeking Alpha) frames LUNR as a satellite powerhouse after Lanteris/KinetX acquisitions, Golden Dome exposure.",
+      "headlines": [
+        "Intuitive Machines Becoming A Satellite Powerhouse For ... (Seeking Alpha)"
+      ],
+      "catalyst_detail": "Apify search found no dated catalyst for today. Latest coverage is a Seeking Alpha upgrade-to-Strong-Buy piece on the Lanteris and KinetX acquisitions making LUNR a vertically integrated satellite provider with Golden Dome tailwind. Today's trigger unverified.",
+      "why": "Likely sector/sentiment momentum in space-defense names plus acquisition narrative; unconfirmed.",
+      "impact": "Premarket vol 93k is thin; SATL (also space) gapping +5% suggests sector read-through, but unsustainable-vs-sustainable cannot be judged without a confirmed catalyst. Treat as possible fade.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No verified structural catalyst today.",
+      "opportunity_cost": "Would use 1 of 3 weekly new-trade slots; space sector correlation with SATL means only one should be considered. 2:1 R:R needs a ~10% trail-based stop vs unproven upside; not clearly achievable at gap-up entry."
+    },
+    {
+      "rank": 2,
+      "symbol": "SATL",
+      "price": 3.875,
+      "gap_pct": 5.01,
+      "premarket_volume": 54363,
+      "catalyst": "No same-day headline confirmed (search returned only aggregator/insider pages).",
+      "headlines": [],
+      "catalyst_detail": "Searches returned only aggregator, insider-trade and an Investing.com analysis piece on Satellogic as a scale-dependent downstream space-economy bet. No dated news found for today.",
+      "why": "Probably sympathy move with LUNR / space names; unconfirmed.",
+      "impact": "Low-priced ($3.88, just above the $3 floor), 54k premarket volume barely over the 50k floor; reads like a one-day sympathy spike likely to mean-revert.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No durable thesis identified; speculative small-cap.",
+      "opportunity_cost": "Lower quality than LUNR; would displace any stronger holding and likely cannot give 2:1 R:R at a sane stop given volatility."
+    }
+  ]
 }

@@ -16667,3 +16667,24 @@ Only 1 hit of ~60 scanned. Deep-dive cap 5; only 1 gapper.
 - Impact: Volume 1.34M healthy but crypto-beta driven, reversible with ETH.
 - Horizon: SHORT_TERM, no documented company-specific catalyst.
 - Opportunity cost: High-vol crypto beta; competes with energy/defense ideas; fails catalyst gate; 2:1 needs ~$27 at ~$21.5 stop. Research only.
+
+### Gappers (auto-scan 10:14 ET, cloud)
+Filter: |gap|>=5%, price>=$3, vol>=50k. Raw hits 4; dropped AGMH ($0.47), CMBT (vol 27.5k). Deep dive cap 5 (only 2 qualified).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | 11.25 | +6.74 | 93,467 | No same-day headline confirmed; Lanteris/KinetX satellite narrative (SeekingAlpha) |
+| 2 | SATL | 3.88 | +5.01 | 54,363 | No same-day headline confirmed (gap: only aggregator pages) |
+
+#### Deep dive: LUNR $11.25 +6.74%
+- Catalyst: No dated catalyst found; latest coverage is upgrade to Strong Buy on Lanteris/KinetX acquisitions + Golden Dome. Trigger unverified.
+- Why: Likely space-defense sector momentum; unconfirmed.
+- Impact: Thin 93k premarket vol; SATL sympathy suggests sector move; possible fade.
+- Horizon: SHORT_TERM, no verified structural catalyst today.
+- Opportunity cost: Uses 1 of 3 weekly slots; correlated with SATL; 2:1 R:R unproven at gap-up entry.
+
+#### Deep dive: SATL $3.88 +5.01%
+- Catalyst: No dated news found; only aggregator/insider pages and an analysis piece on its downstream space bet.
+- Why: Probably LUNR/space sympathy; unconfirmed.
+- Impact: Low-priced, 54k vol barely above floor; likely mean-reverts.
+- Horizon: SHORT_TERM, no durable thesis.
+- Opportunity cost: Weaker than LUNR; unlikely to clear 2:1 R:R at a sane stop.
