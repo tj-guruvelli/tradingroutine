@@ -1844,3 +1844,50 @@ commit/push.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed live via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-10-19`, equity/cash unchanged at $100,000). Pre-market decision was HOLD (XOM/CVX, HAL, LMT ideas — none cleared catalyst/confluence gate). Midday scan found nothing to cut or tighten, no thesis to re-check, no positions held. Weekly trade count: 0/3 (week of Oct 19). 73rd trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 111th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing both the catalyst gate and ≥2 of 4 confluence indicators.
+
+### Oct 21, Market-Open (Day 74, Wednesday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-20`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-21 Pre-Market, decision HOLD) — XOM/CVX
+(oil >$99 catalyst, entry only on reclaim/hold above prior-day high with
+RSI<70) and NOC (post-earnings gap, entry only if holds gap low through
+first 30 min) all flagged "watch only — confluence unverifiable pre-open, no
+TV tool this session." HXL (setup-scan grade B) flagged secondary watch, not
+a catalyst trade.
+
+STEP 2: latest setup-scan file is `data/setup-scan_cloud_2026-10-20_1838ET.json`
+(prior trading day's run; today's hadn't fired yet at market-open) — 60
+candidates checked, 0 errors, 1 grade-B hit: HXL (RSI14 62.63, ADX14 27.82,
+EMA9 88.29 > EMA21 87.86, px $92.07 > SMA200 $90.54). No grade-A. Gappers
+auto-scan (09:16 ET) re-flagged AMKR and BMNR, both already deep-dived
+no-catalyst fails in today's RESEARCH-LOG.
+
+STEP 3: live quotes re-pulled — XOM ap $177.18/bp $168.08 (abnormally wide
+spread), CVX ap $225.02/bp $224.80 (normal), NOC ap $571.73/bp $540.61
+(abnormally wide spread). tradingview-data MCP (combined_analysis) not
+available this session — no RSI/VWAP/EMA9 re-verification possible beyond
+the setup-scan snapshot above.
+
+STEP 4 — pass/fail per candidate:
+- XOM/CVX (oil >$99 catalyst): FAIL — confluence unverifiable this session
+  (no TV tool); XOM's quote spread ($168-177) also looks stale/bad-tick,
+  reinforcing no-entry.
+- NOC (post-earnings gap-hold thesis): FAIL — "holds gap low through first
+  30 min" condition unverifiable without intraday chart data; quote spread
+  ($541-572) too wide to trust for a market order anyway.
+- HXL (grade B, momentum confluence): FAIL — no catalyst documented in
+  RESEARCH-LOG; momentum-only does not clear the confluence rule.
+- AMKR/BMNR (gappers): FAIL — already deep-dived no-catalyst in today's
+  RESEARCH-LOG (AMKR stale/undated AI-semis background; BMNR crypto-beta,
+  no company-specific catalyst).
+All candidates fail the catalyst+confluence gate — STEPs 5-6 (orders/stops)
+skipped.
+
+STEP 7 (notification): N/A — no trade fired this run.
+
+Weekly trade count: 0/3 (week of Oct 19). 74th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 112th+
+straight session, operator review pending. STEP 8 (commit/push): skipped —
+no trades fired.
