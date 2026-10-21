@@ -16610,3 +16610,24 @@ Filtered out (price<$3): AGMH $0.50 +7.08%, PEPG $2.89 +6.46%. Only 4 qualifying
 | HXL | B | Momentum confluence | daily swing | ADX14 27.82, EMA9 88.29 > EMA21 87.86, RSI 62.63, px $92.07 (SMA200 $90.54) |
 
 0 errors. 0 grade-A hits -> no Telegram/ClickUp alert (per rule: stay quiet unless >=1 grade-A).
+
+## 2026-10-21 Pre-Market (cloud)
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 (margin) | 0 positions | 0 open orders | daytrade count n/a (none). Same $100k-vs-$10k baseline mismatch flagged Jul 27 (operator review pending).
+
+**Market context** (Apify RAG + XTB/oilprice/Markets Insider; no Yahoo used)
+- Oil: WTI ~$99.9 (+2.1%), Brent ~$110.8 (+1.8%) as of ~07:00 ET — energy bid continues; Hormuz/Iran-driven crisis backdrop.
+- Indices (Tue close): Dow +~1%, Russell 2000 +~1.8%, Nasdaq ~flat — rotation to small caps on lower long yields; AI trade wobbling (Griffin: AI "almost certainly" a bubble; AI-debt/yield fears; XTB: "oil surges as AI stocks face volatility").
+- S&P futures: GAP — Apify query returned irrelevant pages. VIX: GAP — only quote-page shells (CNBC/Cboe), no number scraped. Earnings-today list: GAP (search failed/timed out).
+- Data/events: EIA crude inventories + US Treasury auction today. Overnight: US pending home sales -7.3% m/m (record-low index), housing starts weak, permits beat. RBA hawkish (Nov hike odds up); BOJ Dec hike ~75% priced. SpaceX Q rev ~$14.6B (AI >50%). META/TSLA earnings flagged for Wed in prior log.
+- Sector momentum: energy leading; defense (NOC earnings gap Tue); housing/rate-sensitives weak; AI/crypto-beta choppy.
+
+**Ideas (watch only — confluence unverifiable pre-open, no TV tool this session):**
+1. XOM — oil >$99 catalyst; entry only on reclaim/hold above prior-day high with RSI<70; stop 10% trail; target +15-20%.
+2. CVX — same thesis; pick one of XOM/CVX (corr-gate); same stop/target.
+3. NOC — post-earnings gap hold; entry only if holds gap low through first 30 min; stop below gap low (~-7% max); target +12%.
+HXL (grade-B setup-scan, daily swing) — secondary watch, not a catalyst trade.
+
+**Risks:** oil spike/reversal on Iran headlines; AI-bubble/yield-driven tech selloff before META/TSLA earnings; weak housing/macro; stale-looking wide spreads in some quotes; incomplete VIX/futures read.
+
+**Decision: HOLD** (default; patience > activity). No catalyst+confluence confirmation. Weekly trades 0/3.
+Notification: silent (nothing urgent).
