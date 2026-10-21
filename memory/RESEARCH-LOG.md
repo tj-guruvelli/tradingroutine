@@ -16645,3 +16645,25 @@ Only 1 hit of ~60 scanned. Deep-dive cap 5; only 1 gapper.
 - Impact: Thin premarket volume (~118k); unconfirmed gap is fade-prone.
 - Horizon: SHORT_TERM, no confirmed durable catalyst.
 - Opportunity cost: 100% cash, 0/3 weekly trades, nothing displaced; fails catalyst gate, earnings binary risk near; 2:1 R:R needs ~$52+ target at 7-10% stop. Research only.
+
+### Gappers (auto-scan 09:16 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AMKR | 45.41 | +8.44 | 117,927 | No same-day catalyst found; NVIDIA $1.3B packaging deal background |
+| 2 | BMNR | 23.29 | +8.02 | 1,340,213 | No same-day catalyst; ETH holdings 6.04M ($15.1B) update ~Oct 19 |
+
+2 hits of ~60 scanned. Deep-dive cap 5; only 2 gappers.
+
+#### Deep dive: AMKR $45.41 +8.44%
+- Catalyst: Same-day trigger NOT confirmed; stale/undated results. Background: NVIDIA $1.3B multi-year packaging deal. Q3 earnings date unverified.
+- Why: Probable AI-semis sympathy/pre-earnings positioning; unverified.
+- Impact: Thin premarket volume (~118k); fade-prone.
+- Horizon: SHORT_TERM, no confirmed durable catalyst.
+- Opportunity cost: Nothing displaced; fails catalyst gate, earnings binary risk; 2:1 R:R needs ~$52+ at 7-10% stop. Research only.
+
+#### Deep dive: BMNR $23.29 +8.02%
+- Catalyst: No same-day headline; weekly ETH-treasury update ~Oct 19 (6.04M ETH, $15.1B crypto+cash). Next earnings ~Nov 21.
+- Why: Levered ETH proxy; move likely follows ETH/crypto beta; unverified.
+- Impact: Volume 1.34M healthy but crypto-beta driven, reversible with ETH.
+- Horizon: SHORT_TERM, no documented company-specific catalyst.
+- Opportunity cost: High-vol crypto beta; competes with energy/defense ideas; fails catalyst gate; 2:1 needs ~$27 at ~$21.5 stop. Research only.
