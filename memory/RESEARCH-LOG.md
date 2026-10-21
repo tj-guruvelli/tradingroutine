@@ -16727,3 +16727,13 @@ grade_a_possible: false (outside 10:00-15:30 ET window; Setup A not evaluated). 
 | HXL | B | Momentum confluence | daily swing | ADX 28.1, EMA9 $88.91 > EMA21 $88.19, px $91.44 |
 
 No grade-A hits — no Telegram alert sent (silent per rule).
+
+### Setup Scan (18:37 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window; Setup A not evaluated). 60 candidates checked, 0 errors.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 29.7, EMA9 $394.82 > EMA21 $384.33, px $405.68 |
+| NOC | B | Momentum confluence | daily swing | ADX 29.7, EMA9 $505.61 > EMA21 $503.21, px $553.40 |
+| HXL | B | Momentum confluence | daily swing | ADX 28.1, EMA9 $88.91 > EMA21 $88.19, px $91.44 |
+
+No grade-A hits — no Telegram alert sent (silent per rule).
