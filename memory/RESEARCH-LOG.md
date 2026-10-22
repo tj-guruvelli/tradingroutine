@@ -16737,3 +16737,26 @@ grade_a_possible: false (outside 10:00-15:30 ET window; Setup A not evaluated). 
 | HXL | B | Momentum confluence | daily swing | ADX 28.1, EMA9 $88.91 > EMA21 $88.19, px $91.44 |
 
 No grade-A hits — no Telegram alert sent (silent per rule).
+
+## 2026-10-22 — Pre-Market Research (cloud, Apify RAG; Yahoo-blocked)
+
+**Account:** equity $100,000.00 | cash $100,000.00 | buying power $400,000 | daytrade count n/a (0 trades) | 0 positions | 0 open orders. Still the live-vs-$10k-baseline mismatch (unresolved).
+
+**Market context**
+- Oil: WTI ~$99.1 (+2.0%), Brent ~$111.7 (+2.7%), near 4-yr high $114.44 (May 4). Drivers: US/Israel strike planning post-midterms, Houthi/Iran attacks on Saudi (Shaybah drone, Yanbu), US ordering non-emergency staff out of Saudi. Hormuz crude flows near pre-war; refined products still tight. (oilprice.com, TradingEconomics)
+- Futures (TradingEconomics, ~7am ET): ES -0.9%, NQ -1.6%, YM ~-110 pts. S&P ~7,679 vs ATH 7,844.67. Tech/semis rotation continuing, AI-capex worries.
+- VIX 18.25 (+9.4%, prev 16.68; 52w 13.38-35.30). Cboe/CNBC.
+- Rates/FX/metals: US10Y ~5.07%, DXY 101.7, gold ~$4,078 (-1.5%), silver -3.7%, BTC ~$81.9k (-2.5%).
+- Movers: LRCX -7% (weak guide), TSLA -3.2% (capex cut), NVDA -2%, IBM -4.2%, HON -2.1% (despite raised guide), META -0.6%. LMT +2.6% (beat), VLO beat (EPS 23.90). Today also: PG, WDC.
+- Macro: Fed funds 4.00% (raised from 3.75%), CPI 3.70% (prev 3.40%), unemployment 4.2%. Releases today: jobless claims (cons 200K, prior 199K), CB Leading Index, Kansas Fed mfg (18), EIA nat gas, 5Y TIPS auction. No CPI/PPI/FOMC today.
+- Sector momentum YTD: query not run (no clean non-Yahoo source returned) — gap. Recent pattern: energy + defense bid, semis/mega-cap tech rolling over.
+
+**Trade ideas (none cleared the gate; research only)**
+1. LMT — catalyst: Q3 beat (EPS 7.97), Middle East escalation. Premarket quote unusable (bid 519/ask 577 stale). Entry on confirmed hold of gap after 10:00; stop ~-8%; target needs 2:1. Needs ≥2 confluence (VWAP/RSI/200-SMA) — unverified premarket.
+2. XOM/CVX — catalyst: Brent $111+, supply risk. XOM ~$178 (TE), Alpaca quote stale/wide. Oil already extended near 4-yr high; chase risk. Entry only on pullback holding 20-EMA; stop 7-8%.
+3. VLO — catalyst: EPS 23.90 beat, refining margins (heating oil +103% y/y). Unverified price/technicals; watch only.
+
+**Risk factors:** ES -0.9%/NQ -1.6% gap-down open; VIX jump +9%; US10Y ~5.07%; oil headline whipsaw (a Middle East de-escalation reverses energy/defense longs); midterms next month; stale Alpaca quotes premarket.
+
+**Decision: HOLD.** No entry without documented catalyst + ≥2 confluence confirmed in-session; gap-down tape argues patience. Weekly trades 0/3.
+Notes: Apify rag-web-browser used (no Yahoo URLs surfaced). Futures/earnings queries partly failed; filled via TradingEconomics fetch.
