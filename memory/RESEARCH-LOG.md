@@ -16789,3 +16789,49 @@ Note: OPEN (-7.32%) excluded, price 1.90 < $3. Only 1 hit; deep dive on 1 ticker
 - Impact: ~2.2M vol, no confirmed catalyst; fade risk.
 - Horizon: SHORT_TERM, headline-less move, no durable thesis.
 - Opportunity cost: Negative gap, sub-$3.50 price; poor R:R, nothing worth displacing.
+
+### Gappers (auto-scan 10:19 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | HXL | 79.7 | -11.38 | 88743 | Gapping down the morning after Q3 2026 earnings (reported Oct 21 after close); specific miss/guide detail not retrieved. |
+| 2 | META | 654.87 | -6.25 | 478268 | Q3 2026: revenue +26% to $64.6B but costs +68%, operating margin 20% vs 40% a year ago. |
+| 3 | BW | 4.34 | -6.06 | 59592 | No fresh catalyst found; only result was a stale May 2026 offering story (discarded). |
+| 4 | BE | 225.02 | -5.76 | 106037 | No fresh catalyst found; results were stale (S&P 500 inclusion article). |
+| 5 | NBIS | 162.07 | -5.54 | 239382 | Sliding on AI-hype bear pressure and concerns over AI infrastructure expansion (Timothy Sykes, 2026-10-22). |
+
+Filter: |gap|>=5%, price>=3, pm vol>=50k -> 5 of 9 raw hits kept (AMKR, KLIC, LMT, GFS dropped on volume). All 5 got deep dive (cap 5). Catalyst sourcing thin: HXL/BW/BE causes unverified.
+
+#### Deep dive: HXL $79.7 -11.38%
+- Catalyst: Hexcel reported Q3 2026 results Wed Oct 21 after the close. The -11% gap is consistent with an earnings/guidance reaction, but the search returned only the release schedule, not the results, so the actual miss/guide is unverified.
+- Why: Likely earnings/guidance disappointment repricing an aerospace-composites name; unconfirmed.
+- Impact: Volume 88.7k pre-market is modest; large gap on earnings usually holds for days (post-earnings drift) but unverified. No peer read-through confirmed.
+- Horizon: SHORT_TERM, Catalyst unverified; no durable thesis established, do not carry.
+- Opportunity cost: Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap.
+
+#### Deep dive: META $654.87 -6.25%
+- Catalyst: Meta's Q3 revenue grew 26% to $64.6B, but costs and expenses jumped 68% to $51.6B, cutting operating income 37% to $13.0B and operating margin to 20% from 40%. Management framed it as investment in frontier AI (Muse model launch).
+- Why: Margin compression from AI spend overwhelms the revenue beat; investors de-rate on capex/opex intensity.
+- Impact: Heavy 478k pre-market volume suggests real repricing, not thin-tape noise. Likely read-through to AI-infrastructure names (NBIS, BE also gapping down).
+- Horizon: SHORT_TERM, Spending-driven selloff; thesis (core business strong) intact but needs stabilization before any long entry.
+- Opportunity cost: Most liquid name on the list; a long would be catching a falling knife versus waiting for support. Would use a slot under the 6-position cap; 2:1 R:R only viable after a base forms. Research only.
+
+#### Deep dive: BW $4.34 -6.06%
+- Catalyst: Search surfaced only a May 15, 2026 article about a $200M equity offering; nothing dated today. Cause of today's gap unknown.
+- Why: Unknown; sub-$5 small cap moving with the AI-power/AI-infrastructure group selloff is plausible but unverified.
+- Impact: 59.6k volume is thin for a $4 stock; spike could mean-revert. Low-priced, high-volatility, poor fit for ATR sizing.
+- Horizon: SHORT_TERM, No identified catalyst.
+- Opportunity cost: Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap.
+
+#### Deep dive: BE $225.02 -5.76%
+- Catalyst: Search returned only an older Seeking Alpha piece on S&P 500 inclusion and an upgrade. Nothing dated today explains the gap.
+- Why: Likely sympathy with META/AI-capex de-risking (BE is AI-power exposed); unverified.
+- Impact: 106k volume moderate. Sector read-through: NBIS, META, BW gapping down same morning, suggesting a group move rather than stock-specific news.
+- Horizon: SHORT_TERM, Sympathy move, no stock-specific catalyst.
+- Opportunity cost: Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap.
+
+#### Deep dive: NBIS $162.07 -5.54%
+- Catalyst: Nebius is trading lower on investor concern about its AI infrastructure expansion strategy and bearish AI-hype sentiment, same day META's spending-heavy results hit AI-capex names.
+- Why: AI-capex skepticism after META's margin compression; sector de-risking.
+- Impact: 239k volume is healthy; part of an AI-infra group selloff (META, BE, NBIS).
+- Horizon: SHORT_TERM, Sentiment-driven; no structural change shown.
+- Opportunity cost: Highest-beta AI-infra name; would add correlated exposure to any existing AI holdings (correlation gate). 2:1 R:R unlikely until the group stabilizes.

@@ -1,1 +1,89 @@
-{"scanned_at":"2026-10-22T13:13:00Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"NIO","price":3.25,"gap_pct":-5.11,"premarket_volume":2194901,"catalyst":"No dated catalyst found; only generic Seeking Alpha/Robinhood pages.","headlines":[],"catalyst_detail":"Research returned no dated news explaining the drop. Only a generic Seeking Alpha 'favorable catalyst landscape' piece and quote pages.","why":"Unconfirmed; likely China EV sector sentiment or a low-priced momentum fade.","impact":"~2.2M volume but no confirmed catalyst; reads as a fade-prone sentiment move.","horizon":"SHORT_TERM","opportunity_cost":"Negative gap on a sub-$3.50 stock; poor R:R at a sane stop and no China EV momentum edge; nothing worth displacing."}]}
+{
+  "scanned_at": "2026-10-22T14:19:21.852990Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "HXL",
+      "price": 79.7,
+      "gap_pct": -11.38,
+      "premarket_volume": 88743,
+      "catalyst": "Gapping down the morning after Q3 2026 earnings (reported Oct 21 after close); specific miss/guide detail not retrieved.",
+      "headlines": [
+        "Hexcel Schedules Third Quarter 2026 Earnings Release and Conference Call (gurufocus)"
+      ],
+      "catalyst_detail": "Hexcel reported Q3 2026 results Wed Oct 21 after the close. The -11% gap is consistent with an earnings/guidance reaction, but the search returned only the release schedule, not the results, so the actual miss/guide is unverified.",
+      "why": "Likely earnings/guidance disappointment repricing an aerospace-composites name; unconfirmed.",
+      "impact": "Volume 88.7k pre-market is modest; large gap on earnings usually holds for days (post-earnings drift) but unverified. No peer read-through confirmed.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Catalyst unverified; no durable thesis established, do not carry.",
+      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+    },
+    {
+      "rank": 2,
+      "symbol": "META",
+      "price": 654.87,
+      "gap_pct": -6.25,
+      "premarket_volume": 478268,
+      "catalyst": "Q3 2026: revenue +26% to $64.6B but costs +68%, operating margin 20% vs 40% a year ago.",
+      "headlines": [
+        "Meta Reports Third Quarter 2026 Results (investor.atmeta.com)"
+      ],
+      "catalyst_detail": "Meta's Q3 revenue grew 26% to $64.6B, but costs and expenses jumped 68% to $51.6B, cutting operating income 37% to $13.0B and operating margin to 20% from 40%. Management framed it as investment in frontier AI (Muse model launch).",
+      "why": "Margin compression from AI spend overwhelms the revenue beat; investors de-rate on capex/opex intensity.",
+      "impact": "Heavy 478k pre-market volume suggests real repricing, not thin-tape noise. Likely read-through to AI-infrastructure names (NBIS, BE also gapping down).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Spending-driven selloff; thesis (core business strong) intact but needs stabilization before any long entry.",
+      "opportunity_cost": "Most liquid name on the list; a long would be catching a falling knife versus waiting for support. Would use a slot under the 6-position cap; 2:1 R:R only viable after a base forms. Research only."
+    },
+    {
+      "rank": 3,
+      "symbol": "BW",
+      "price": 4.34,
+      "gap_pct": -6.06,
+      "premarket_volume": 59592,
+      "catalyst": "No fresh catalyst found; only result was a stale May 2026 offering story (discarded).",
+      "headlines": [],
+      "catalyst_detail": "Search surfaced only a May 15, 2026 article about a $200M equity offering; nothing dated today. Cause of today's gap unknown.",
+      "why": "Unknown; sub-$5 small cap moving with the AI-power/AI-infrastructure group selloff is plausible but unverified.",
+      "impact": "59.6k volume is thin for a $4 stock; spike could mean-revert. Low-priced, high-volatility, poor fit for ATR sizing.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No identified catalyst.",
+      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+    },
+    {
+      "rank": 4,
+      "symbol": "BE",
+      "price": 225.02,
+      "gap_pct": -5.76,
+      "premarket_volume": 106037,
+      "catalyst": "No fresh catalyst found; results were stale (S&P 500 inclusion article).",
+      "headlines": [
+        "Bloom Energy Just Won Another Catalyst (Rating Upgrade) - Seeking Alpha (older)"
+      ],
+      "catalyst_detail": "Search returned only an older Seeking Alpha piece on S&P 500 inclusion and an upgrade. Nothing dated today explains the gap.",
+      "why": "Likely sympathy with META/AI-capex de-risking (BE is AI-power exposed); unverified.",
+      "impact": "106k volume moderate. Sector read-through: NBIS, META, BW gapping down same morning, suggesting a group move rather than stock-specific news.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sympathy move, no stock-specific catalyst.",
+      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+    },
+    {
+      "rank": 5,
+      "symbol": "NBIS",
+      "price": 162.07,
+      "gap_pct": -5.54,
+      "premarket_volume": 239382,
+      "catalyst": "Sliding on AI-hype bear pressure and concerns over AI infrastructure expansion (Timothy Sykes, 2026-10-22).",
+      "headlines": [
+        "Nebius Group NBIS Slides As Bears Lean In On AI Hype"
+      ],
+      "catalyst_detail": "Nebius is trading lower on investor concern about its AI infrastructure expansion strategy and bearish AI-hype sentiment, same day META's spending-heavy results hit AI-capex names.",
+      "why": "AI-capex skepticism after META's margin compression; sector de-risking.",
+      "impact": "239k volume is healthy; part of an AI-infra group selloff (META, BE, NBIS).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sentiment-driven; no structural change shown.",
+      "opportunity_cost": "Highest-beta AI-infra name; would add correlated exposure to any existing AI holdings (correlation gate). 2:1 R:R unlikely until the group stabilizes."
+    }
+  ]
+}
