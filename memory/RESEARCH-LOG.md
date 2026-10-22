@@ -16893,3 +16893,10 @@ _Note: deep-dive limited to top 5 (cap). Catalysts mostly unconfirmed; 'volume' 
 | HXL | B | Momentum confluence | daily swing | px $81.37, RSI 55, ADX 28, EMA9 $89.11 > EMA21 $88.34 |
 
 Note: grade_a_possible=false (16:37 ET, outside 10:00-15:30 ET intraday window) — Setup A not evaluated this run. 60 symbols checked, 0 errors, 1 hit (grade B only).
+
+### Setup Scan (18:37 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| HXL | B | Momentum confluence | daily swing | px $81.37, RSI 55, ADX 28, EMA9 $89.11 > EMA21 $88.34 |
+
+Note: grade_a_possible=false (18:37 ET, outside 10:00-15:30 ET intraday window) — Setup A not evaluated this run. 60 symbols checked, 0 errors, 1 hit (grade B only, unchanged from 16:37 ET run — daily bars not yet updated).
