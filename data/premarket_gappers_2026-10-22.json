@@ -1,89 +1,122 @@
 {
-  "scanned_at": "2026-10-22T14:19:21.852990Z",
+  "scanned_at": "2026-10-22T15:20:26.383302Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
       "symbol": "HXL",
-      "price": 79.7,
-      "gap_pct": -11.38,
-      "premarket_volume": 88743,
-      "catalyst": "Gapping down the morning after Q3 2026 earnings (reported Oct 21 after close); specific miss/guide detail not retrieved.",
-      "headlines": [
-        "Hexcel Schedules Third Quarter 2026 Earnings Release and Conference Call (gurufocus)"
-      ],
-      "catalyst_detail": "Hexcel reported Q3 2026 results Wed Oct 21 after the close. The -11% gap is consistent with an earnings/guidance reaction, but the search returned only the release schedule, not the results, so the actual miss/guide is unverified.",
-      "why": "Likely earnings/guidance disappointment repricing an aerospace-composites name; unconfirmed.",
-      "impact": "Volume 88.7k pre-market is modest; large gap on earnings usually holds for days (post-earnings drift) but unverified. No peer read-through confirmed.",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "Catalyst unverified; no durable thesis established, do not carry.",
-      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+      "price": 78.81,
+      "gap_pct": -12.37,
+      "premarket_volume": 121380,
+      "catalyst": "Hexcel reported Q3 2026 results after close Oct 21 (sales $496M, +8.8% y/y); stock gapping down hard on the print, call at 9:30 ET.",
+      "headlines": [],
+      "catalyst_detail": "Hexcel posted Q3 2026 results Oct 21 after close: sales $496M (+8.8% y/y, +9.2% cc). The 12% gap implies a miss on margin/EPS or a guidance cut, but the specifics were not retrievable.",
+      "why": "Earnings disappointment vs a stock up ~40% over 12 months forces de-rating of a priced-for-perfection aerospace composites name.",
+      "impact": "Volume 121k pre-open is thin for a -12% move; post-earnings gaps on guidance usually persist several days. Aerospace read-through (supply chain) possible.",
+      "horizon": "LONG_TERM",
+      "opportunity_cost": "Would displace nothing; a short-side/avoid name, long entry fails 2:1 R:R with no base. Higher-ranked ideas none; stocks only, no shorts.",
+      "horizon_reason": "Guidance-driven repricing tends to hold, but we are not long and aerospace is not a current rotation leader; fade risk low, entry thesis absent."
     },
     {
       "rank": 2,
-      "symbol": "META",
-      "price": 654.87,
-      "gap_pct": -6.25,
-      "premarket_volume": 478268,
-      "catalyst": "Q3 2026: revenue +26% to $64.6B but costs +68%, operating margin 20% vs 40% a year ago.",
-      "headlines": [
-        "Meta Reports Third Quarter 2026 Results (investor.atmeta.com)"
-      ],
-      "catalyst_detail": "Meta's Q3 revenue grew 26% to $64.6B, but costs and expenses jumped 68% to $51.6B, cutting operating income 37% to $13.0B and operating margin to 20% from 40%. Management framed it as investment in frontier AI (Muse model launch).",
-      "why": "Margin compression from AI spend overwhelms the revenue beat; investors de-rate on capex/opex intensity.",
-      "impact": "Heavy 478k pre-market volume suggests real repricing, not thin-tape noise. Likely read-through to AI-infrastructure names (NBIS, BE also gapping down).",
+      "symbol": "AMKR",
+      "price": 39.53,
+      "gap_pct": -9.58,
+      "premarket_volume": 86713,
+      "catalyst": "No same-day catalyst found; search returned stale Nvidia-deal coverage (Jul). Move coincides with AI-infra/semis sell-off.",
+      "headlines": [],
+      "catalyst_detail": "No same-day news found. Latest items are July Nvidia $1.5B partnership coverage. Move aligns with broad AI/semis sell-off.",
+      "why": "Sector de-risking in AI-hardware beta after META capex/earnings reaction (inferred).",
+      "impact": "Volume 87k light; sector-wide so likely to trade with SOXX/AI complex, not stock-specific.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Spending-driven selloff; thesis (core business strong) intact but needs stabilization before any long entry.",
-      "opportunity_cost": "Most liquid name on the list; a long would be catching a falling knife versus waiting for support. Would use a slot under the 6-position cap; 2:1 R:R only viable after a base forms. Research only."
+      "opportunity_cost": "Could not clear 2:1 R:R without a defined base; competes with other AI names already in the tape."
     },
     {
       "rank": 3,
-      "symbol": "BW",
-      "price": 4.34,
-      "gap_pct": -6.06,
-      "premarket_volume": 59592,
-      "catalyst": "No fresh catalyst found; only result was a stale May 2026 offering story (discarded).",
+      "symbol": "BE",
+      "price": 217.56,
+      "gap_pct": -8.88,
+      "premarket_volume": 212485,
+      "catalyst": "No direct catalyst found; trades with AI-power names into META earnings reaction (stock +174% YTD, extended).",
       "headlines": [],
-      "catalyst_detail": "Search surfaced only a May 15, 2026 article about a $200M equity offering; nothing dated today. Cause of today's gap unknown.",
-      "why": "Unknown; sub-$5 small cap moving with the AI-power/AI-infrastructure group selloff is plausible but unverified.",
-      "impact": "59.6k volume is thin for a $4 stock; spike could mean-revert. Low-priced, high-volatility, poor fit for ATR sizing.",
+      "catalyst_detail": "No direct catalyst found. Stock +174% YTD, extended; trades as AI-power proxy and sold with META/AI complex.",
+      "why": "Crowded momentum name unwinding on AI-capex worry.",
+      "impact": "Volume 212k modest; extended names can gap-and-trap lower for days.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "No identified catalyst.",
-      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+      "opportunity_cost": "Would displace a lower-beta holding; stop distance for a name this volatile makes 2:1 hard."
     },
     {
       "rank": 4,
-      "symbol": "BE",
-      "price": 225.02,
-      "gap_pct": -5.76,
-      "premarket_volume": 106037,
-      "catalyst": "No fresh catalyst found; results were stale (S&P 500 inclusion article).",
-      "headlines": [
-        "Bloom Energy Just Won Another Catalyst (Rating Upgrade) - Seeking Alpha (older)"
-      ],
-      "catalyst_detail": "Search returned only an older Seeking Alpha piece on S&P 500 inclusion and an upgrade. Nothing dated today explains the gap.",
-      "why": "Likely sympathy with META/AI-capex de-risking (BE is AI-power exposed); unverified.",
-      "impact": "106k volume moderate. Sector read-through: NBIS, META, BW gapping down same morning, suggesting a group move rather than stock-specific news.",
+      "symbol": "BW",
+      "price": 4.215,
+      "gap_pct": -8.77,
+      "premarket_volume": 121676,
+      "catalyst": "No company-specific catalyst identified; prior offering (May) and class action overhang.",
+      "headlines": [],
+      "catalyst_detail": "No company-specific catalyst identified by aggregators. Background: $200M offering in May, class action overhang.",
+      "why": "Low-priced small cap drifting on dilution/legal overhang.",
+      "impact": "Volume 122k; price near $4 low-quality liquidity.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Sympathy move, no stock-specific catalyst.",
-      "opportunity_cost": "Needs a slot under the 6-position / 3-new-trades-per-week caps; short-side idea is outside the long-only playbook, so it would only displace a higher-ranked long setup. 2:1 R:R at a stop inside the 7% cut-loss band is unlikely right after a gap."
+      "opportunity_cost": "Low priority; fails quality screen."
     },
     {
       "rank": 5,
-      "symbol": "NBIS",
-      "price": 162.07,
-      "gap_pct": -5.54,
-      "premarket_volume": 239382,
-      "catalyst": "Sliding on AI-hype bear pressure and concerns over AI infrastructure expansion (Timothy Sykes, 2026-10-22).",
-      "headlines": [
-        "Nebius Group NBIS Slides As Bears Lean In On AI Hype"
-      ],
-      "catalyst_detail": "Nebius is trading lower on investor concern about its AI infrastructure expansion strategy and bearish AI-hype sentiment, same day META's spending-heavy results hit AI-capex names.",
-      "why": "AI-capex skepticism after META's margin compression; sector de-risking.",
-      "impact": "239k volume is healthy; part of an AI-infra group selloff (META, BE, NBIS).",
+      "symbol": "GFS",
+      "price": 43.565,
+      "gap_pct": -8.67,
+      "premarket_volume": 131809,
+      "catalyst": "No direct catalyst found; semis weakness, govt-funded fab deal still unsigned per recent SA note.",
+      "headlines": [],
+      "catalyst_detail": "No direct catalyst found. Recent note: govt-funded fab deal unsigned; stock priced at fair value.",
+      "why": "Semis sector weakness.",
+      "impact": "Volume 132k; follows sector.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Sentiment-driven; no structural change shown.",
-      "opportunity_cost": "Highest-beta AI-infra name; would add correlated exposure to any existing AI holdings (correlation gate). 2:1 R:R unlikely until the group stabilizes."
+      "opportunity_cost": "Lower rank than other semis; no 2:1 setup at gap."
+    },
+    {
+      "rank": 6,
+      "symbol": "CRWV",
+      "price": 56.595,
+      "gap_pct": -8.47,
+      "premarket_volume": 591123,
+      "catalyst": "No direct catalyst found; AI-cloud sell-off (already weak since mid-Oct on financing/demand concerns).",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "NBIS",
+      "price": 159.07,
+      "gap_pct": -7.29,
+      "premarket_volume": 313451,
+      "catalyst": "No clean catalyst found (only Yahoo result, discarded); AI-cloud sell-off read-through.",
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "AMPX",
+      "price": 7.73,
+      "gap_pct": -7.04,
+      "premarket_volume": 120504,
+      "catalyst": "No catalyst; aggregators note none, stock already sliding since Oct 16.",
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "META",
+      "price": 655.57,
+      "gap_pct": -6.15,
+      "premarket_volume": 689317,
+      "catalyst": "Q3 earnings reaction (reported this week); likely capex/guidance concern but not confirmed by a same-day source.",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "STM",
+      "price": 44.58,
+      "gap_pct": -6.01,
+      "premarket_volume": 189238,
+      "catalyst": "No catalyst found; semis weakness.",
+      "headlines": []
     }
   ]
 }

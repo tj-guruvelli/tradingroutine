@@ -16835,3 +16835,54 @@ Filter: |gap|>=5%, price>=3, pm vol>=50k -> 5 of 9 raw hits kept (AMKR, KLIC, LM
 - Impact: 239k volume is healthy; part of an AI-infra group selloff (META, BE, NBIS).
 - Horizon: SHORT_TERM, Sentiment-driven; no structural change shown.
 - Opportunity cost: Highest-beta AI-infra name; would add correlated exposure to any existing AI holdings (correlation gate). 2:1 R:R unlikely until the group stabilizes.
+
+### Gappers (auto-scan 11:17 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | HXL | 78.81 | -12.37% | 121380 | Hexcel reported Q3 2026 results after close Oct 21 (sales $496M, +8.8% y/y); stock gapping down hard on the print, call at 9:30 ET. |
+| 2 | AMKR | 39.53 | -9.58% | 86713 | No same-day catalyst found; search returned stale Nvidia-deal coverage (Jul). Move coincides with AI-infra/semis sell-off. |
+| 3 | BE | 217.56 | -8.88% | 212485 | No direct catalyst found; trades with AI-power names into META earnings reaction (stock +174% YTD, extended). |
+| 4 | BW | 4.215 | -8.77% | 121676 | No company-specific catalyst identified; prior offering (May) and class action overhang. |
+| 5 | GFS | 43.565 | -8.67% | 131809 | No direct catalyst found; semis weakness, govt-funded fab deal still unsigned per recent SA note. |
+| 6 | CRWV | 56.595 | -8.47% | 591123 | No direct catalyst found; AI-cloud sell-off (already weak since mid-Oct on financing/demand concerns). |
+| 7 | NBIS | 159.07 | -7.29% | 313451 | No clean catalyst found (only Yahoo result, discarded); AI-cloud sell-off read-through. |
+| 8 | AMPX | 7.73 | -7.04% | 120504 | No catalyst; aggregators note none, stock already sliding since Oct 16. |
+| 9 | META | 655.57 | -6.15% | 689317 | Q3 earnings reaction (reported this week); likely capex/guidance concern but not confirmed by a same-day source. |
+| 10 | STM | 44.58 | -6.01% | 189238 | No catalyst found; semis weakness. |
+
+_Note: deep-dive limited to top 5 (cap). Catalysts mostly unconfirmed; 'volume' = Alpaca snapshot volume. Filtered LMT (+6.16%, vol 46k), KLIC, UMAC on volume <50k. Broad AI/semis sell-off; META -6%._
+
+#### Deep dive: HXL $78.81 -12.37%
+- Catalyst: Hexcel posted Q3 2026 results Oct 21 after close: sales $496M (+8.8% y/y, +9.2% cc). The 12% gap implies a miss on margin/EPS or a guidance cut, but the specifics were not retrievable.
+- Why: Earnings disappointment vs a stock up ~40% over 12 months forces de-rating of a priced-for-perfection aerospace composites name.
+- Impact: Volume 121k pre-open is thin for a -12% move; post-earnings gaps on guidance usually persist several days. Aerospace read-through (supply chain) possible.
+- Horizon: LONG_TERM, Guidance-driven repricing tends to hold, but we are not long and aerospace is not a current rotation leader; fade risk low, entry thesis absent.
+- Opportunity cost: Would displace nothing; a short-side/avoid name, long entry fails 2:1 R:R with no base. Higher-ranked ideas none; stocks only, no shorts.
+
+#### Deep dive: AMKR $39.53 -9.58%
+- Catalyst: No same-day news found. Latest items are July Nvidia $1.5B partnership coverage. Move aligns with broad AI/semis sell-off.
+- Why: Sector de-risking in AI-hardware beta after META capex/earnings reaction (inferred).
+- Impact: Volume 87k light; sector-wide so likely to trade with SOXX/AI complex, not stock-specific.
+- Horizon: SHORT_TERM, Macro/sector headline-driven; no durable stock thesis today.
+- Opportunity cost: Could not clear 2:1 R:R without a defined base; competes with other AI names already in the tape.
+
+#### Deep dive: BE $217.56 -8.88%
+- Catalyst: No direct catalyst found. Stock +174% YTD, extended; trades as AI-power proxy and sold with META/AI complex.
+- Why: Crowded momentum name unwinding on AI-capex worry.
+- Impact: Volume 212k modest; extended names can gap-and-trap lower for days.
+- Horizon: SHORT_TERM, Sentiment-driven; no new structural fact.
+- Opportunity cost: Would displace a lower-beta holding; stop distance for a name this volatile makes 2:1 hard.
+
+#### Deep dive: BW $4.215 -8.77%
+- Catalyst: No company-specific catalyst identified by aggregators. Background: $200M offering in May, class action overhang.
+- Why: Low-priced small cap drifting on dilution/legal overhang.
+- Impact: Volume 122k; price near $4 low-quality liquidity.
+- Horizon: SHORT_TERM, No catalyst; avoid.
+- Opportunity cost: Low priority; fails quality screen.
+
+#### Deep dive: GFS $43.565 -8.67%
+- Catalyst: No direct catalyst found. Recent note: govt-funded fab deal unsigned; stock priced at fair value.
+- Why: Semis sector weakness.
+- Impact: Volume 132k; follows sector.
+- Horizon: SHORT_TERM, Sector-driven.
+- Opportunity cost: Lower rank than other semis; no 2:1 setup at gap.
