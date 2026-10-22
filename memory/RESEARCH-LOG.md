@@ -16775,3 +16775,17 @@ Note: OPEN (-7.32%) excluded, price 1.90 < $3. Only 1 hit; deep dive on 1 ticker
 - Impact: ~2.2M vol, no confirmed catalyst; fade risk.
 - Horizon: SHORT_TERM, headline-less move, no durable thesis.
 - Opportunity cost: Negative gap, sub-$3.5 price; poor R:R, nothing worth displacing.
+
+### Gappers (auto-scan 09:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NIO | 3.25 | -5.11 | 2.19M | No dated catalyst found |
+- Filtered out: OPEN $1.91 (-6.83%), price < $3.
+- Deep dive: only 1 qualifying (cap 5).
+
+#### Deep dive: NIO $3.25 -5.11%
+- Catalyst: No dated news found; only generic SA/Robinhood pages.
+- Why: Unconfirmed; likely China EV sentiment.
+- Impact: ~2.2M vol, no confirmed catalyst; fade risk.
+- Horizon: SHORT_TERM, headline-less move, no durable thesis.
+- Opportunity cost: Negative gap, sub-$3.50 price; poor R:R, nothing worth displacing.
