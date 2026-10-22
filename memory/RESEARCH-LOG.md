@@ -16760,3 +16760,18 @@ No grade-A hits — no Telegram alert sent (silent per rule).
 
 **Decision: HOLD.** No entry without documented catalyst + ≥2 confluence confirmed in-session; gap-down tape argues patience. Weekly trades 0/3.
 Notes: Apify rag-web-browser used (no Yahoo URLs surfaced). Futures/earnings queries partly failed; filled via TradingEconomics fetch.
+
+## 2026-10-22
+### Gappers (auto-scan 08:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NIO | 3.25 | -5.11 | 2,194,901 | None found (unconfirmed) |
+
+Note: OPEN (-7.32%) excluded, price 1.90 < $3. Only 1 hit; deep dive on 1 ticker.
+
+#### Deep dive: NIO $3.25 -5.11%
+- Catalyst: No dated news found; only generic SA/CNN pages.
+- Why: Unknown; likely sentiment/China EV sector.
+- Impact: ~2.2M vol, no confirmed catalyst; fade risk.
+- Horizon: SHORT_TERM, headline-less move, no durable thesis.
+- Opportunity cost: Negative gap, sub-$3.5 price; poor R:R, nothing worth displacing.
