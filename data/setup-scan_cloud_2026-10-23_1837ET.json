@@ -1,0 +1,80 @@
+{
+  "scanned_at": "2026-10-23T22:37:41.707Z",
+  "ny_time": "18:37",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "V",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 410.59,
+      "prev_daily_high": 414.57,
+      "prev_daily_close": 414.28,
+      "sma200": 340.31,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 412.51,
+      "rsi14": 79.02,
+      "adx14": 33.64,
+      "ema9": 400.79,
+      "ema21": 389,
+      "premarket_volume": 0,
+      "daily_volume": 420728,
+      "avg_daily_volume_30": 264025,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "LMT",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 602.39,
+      "prev_daily_high": 607.88,
+      "prev_daily_close": 590.14,
+      "sma200": 565.76,
+      "sma200_window_days": 200,
+      "pmh": 589.89,
+      "today_hod": 609.27,
+      "rsi14": 75.27,
+      "adx14": 35.9,
+      "ema9": 546.99,
+      "ema21": 534.43,
+      "premarket_volume": 50,
+      "daily_volume": 107211,
+      "avg_daily_volume_30": 46769,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "RTX",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 191.46,
+      "prev_daily_high": 196.13,
+      "prev_daily_close": 194.6,
+      "sma200": 195.15,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 192.46,
+      "rsi14": 56.4,
+      "adx14": 34.9,
+      "ema9": 190.71,
+      "ema21": 190.2,
+      "premarket_volume": 0,
+      "daily_volume": 461244,
+      "avg_daily_volume_30": 212363,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}

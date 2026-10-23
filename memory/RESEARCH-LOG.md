@@ -17015,3 +17015,12 @@ grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated, grade
 | V | B | Momentum confluence | daily swing | ADX 33.6, EMA9 $400.79 > EMA21 $389.00, RSI 79 |
 | LMT | B | Momentum confluence | daily swing | ADX 35.9, EMA9 $546.99 > EMA21 $534.43, RSI 75.3 |
 | RTX | B | Momentum confluence | daily swing | ADX 34.9, EMA9 $190.71 > EMA21 $190.20, RSI 56.4 |
+
+### Setup Scan (18:37 ET, cloud)
+grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated, grade A unreachable this run. 60 symbols scanned, 0 errors. Same 3 grade-B hits as the 16:38 ET run (no new candidates).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| --- | --- | --- | --- | --- |
+| V | B | Momentum confluence | daily swing | ADX 33.6, EMA9 $400.79 > EMA21 $389.00, RSI 79 |
+| LMT | B | Momentum confluence | daily swing | ADX 35.9, EMA9 $546.99 > EMA21 $534.43, RSI 75.3 |
+| RTX | B | Momentum confluence | daily swing | ADX 34.9, EMA9 $190.71 > EMA21 $190.20, RSI 56.4 |
