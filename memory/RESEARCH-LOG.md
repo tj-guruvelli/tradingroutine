@@ -16977,3 +16977,17 @@ _Only 5 rows cleared the filters (cap 10); all 5 deep-dived. Volume is session v
 - Impact: 1.5M volume, small gap; reads as beta move, likely to follow crypto. No sustainability edge.
 - Horizon: SHORT_TERM, Beta/tape-driven, no company catalyst; no durable thesis for a swing.
 - Opportunity cost: Crypto-proxy volatility makes a 2:1 R:R at a 7-10% stop poor; ranks below LMT and offers no sector-momentum support. Not worth a weekly trade slot.
+
+### Gappers (auto-scan 10:12 ET, cloud)
+_Only 1 row cleared filters (cap 10); deep-dived. Volume is session volume (no premarket field). CRWV/META/LMT/BMNR from 09:19 scan no longer clear 5%._
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $194.31 | -10.72% | 381,160 | Q3 beat but sell-the-news continues; BMO PT $260 (no fresh headline found) |
+
+#### Deep dive: BE $194.31 -10.72%
+- Catalyst: Q3 beat but shares gapped down earlier (~-12.6% at 09:19); Apify returned only IR/overview pages, no new headline. Now $194.31 vs prev close $217.64.
+- Why: Sell-the-news after a big run plus AI-infra de-risking shared with CRWV/META.
+- Impact: Price sliding lower since 09:19; continuation, no stabilization.
+- Horizon: SHORT_TERM, positioning-driven, no thesis change.
+- Opportunity cost: Falling knife; 2:1 R:R marginal at 7-10% stop; would use 1 of 3 weekly trades.
