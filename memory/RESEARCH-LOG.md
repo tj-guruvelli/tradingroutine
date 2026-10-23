@@ -16928,3 +16928,52 @@ Only 1 hit >=5% / >=$3 (Apify catalyst data thin; deep-dive cap 5, only 1 qualif
 - Impact: Sector-wide read-through, likely sentiment-driven; continuation risk high on gap-down tape. Premarket volume not reported.
 - Horizon: SHORT_TERM, no durable thesis change identified.
 - Opportunity cost: Fails confluence (unverified) on a falling knife; -7% stop vs >10% daily range can't give 2:1 R:R; energy/defense ideas rank higher. Research only.
+
+
+## 2026-10-23
+
+### Gappers (auto-scan 09:19 ET, cloud)
+_Only 5 rows cleared the filters (cap 10); all 5 deep-dived. Volume is session volume from gappers-alpaca (no premarket field)._
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | $208.71 | -12.59% | 724,369 | Q3 earnings beat but stock sold off hard; BMO raised PT to $260 (Outperform) |
+| 2 | CRWV | $54.75 | -11.45% | 1,656,989 | AI financing/borrowing concerns; shares -9.7% Oct 22, down ~25% last week |
+| 3 | META | $641.63 | -8.15% | 1,442,061 | Post-earnings selloff on AI capex spend (-5% to -7% Thursday, further gap down) |
+| 4 | LMT | $589.89 | +6.87% | 107,206 | Q3 beat: sales +11% to $20.7B, EPS $7.97, guidance raised again |
+| 5 | BMNR | $22.56 | -5.76% | 1,536,415 | No fresh company catalyst; ETH treasury at 6.04M ETH (~$15.1B total holdings), weekly buys continue |
+
+#### Deep dive: BE $208.71 -12.59%
+- Catalyst: Bloom reported better-than-expected Q3 results yet shares gap down ~12.6% (prev close $238.78). Analysts (BMO) stayed constructive with PT $260. Snippets give conflicting price levels, so exact reaction magnitude is not independently confirmed.
+- Why: Sell-the-news after a big run: beat not enough vs elevated AI-power expectations; likely guidance/margin detail or positioning unwind.
+- Impact: Volume 724k premarket-ish is heavy; move looks like a high-beta AI-infra de-risk shared with CRWV, not a single-name issue. Fade/continuation both plausible.
+- Horizon: SHORT_TERM, Headline/positioning-driven gap down, no durable thesis change; downtrend risk until support holds.
+- Opportunity cost: Falling-knife entry vs higher-quality LMT beat; a long needs a stop ~10% away and 2:1 R:R requires ~20% upside to prior close, marginal. Would consume 1 of 3 weekly trades.
+
+#### Deep dive: CRWV $54.75 -11.45%
+- Catalyst: CoreWeave fell 9.67% on Oct 22 to $55.84 on AI-infrastructure financing worries, extending a ~25% weekly drop reported by Reuters on Oct 16 (rate-hike fears, borrowing costs). Another ~11% gap down today.
+- Why: Highly levered neocloud; rising rates and tighter credit hit equity and bonds, and Meta's AI capex selloff amplifies funding doubts.
+- Impact: Heavy volume (1.66M) and multi-day slide read as sector-wide de-risking (BE, META also down). Mean-reversion bounce possible but trend is down.
+- Horizon: SHORT_TERM, Macro/credit-driven, no stabilization yet; avoid catching it.
+- Opportunity cost: Counter-trend vs sector-momentum rule; fails confluence on trend. Displaces any better setup (LMT); 2:1 R:R unlikely at a sane 7-10% stop given volatility.
+
+#### Deep dive: META $641.63 -8.15%
+- Catalyst: Meta fell ~5-7% Thursday midday (~$660) as investors punished AI spending, and gaps another ~8% lower today vs $698.54 close. Cost of AI buildout is the core worry.
+- Why: Capex growth outpacing revenue/margin; investors de-rate until ROI visible. Spills into AI-infra names (CRWV, BE).
+- Impact: 1.4M volume with two-day drop ~13% looks like a repricing, not a one-day spike; may carry further near-term but large-cap quality limits downside.
+- Horizon: SHORT_TERM, Wait for base; thesis intact long term but entry timing unproven. Could become LONG_TERM after stabilization.
+- Opportunity cost: Large cap, liquid; a 20% position with 10% trail risks ~2% equity. R:R to prior close ~9% vs 7-10% stop fails 2:1. Competes with LMT for the slot.
+
+#### Deep dive: LMT $589.89 +6.87%
+- Catalyst: Lockheed reported Q3 sales +11% to $20.7B, net earnings +14% to $1.8B ($7.97/sh), operating cash flow $3.4B, and raised guidance for a consecutive time. Stock gaps up ~6.9% to $589.89.
+- Why: Double beat plus consecutive guidance raises drive estimate upgrades and pull in momentum/defensive rotation buyers.
+- Impact: Volume 107k light but early; sector rotation out of AI-beta into defense is a plausible read-through. Looks more durable than the AI-complex selloffs.
+- Horizon: LONG_TERM, Structural: accelerating growth and guidance raises; fits rotation out of tech, pending Confluence check.
+- Opportunity cost: Best-ranked setup of the 5 on quality; chasing a 6.9% gap hurts R:R (stop 10% below ~$530 gives risk ~$60 vs target needs ~$120). Better to wait for a pullback; would use 1 of 3 weekly trades.
+
+#### Deep dive: BMNR $22.56 -5.76%
+- Catalyst: No news specific to today. Bitmine's latest weekly update (4 days ago) shows 6.04M ETH and $15.1B crypto plus cash holdings, with weekly ETH purchases since June 30, 2025. Gap down tracks ETH/risk-off tape.
+- Why: Proxy for ETH price; risk-off in high-beta assets drags the treasury premium.
+- Impact: 1.5M volume, small gap; reads as beta move, likely to follow crypto. No sustainability edge.
+- Horizon: SHORT_TERM, Beta/tape-driven, no company catalyst; no durable thesis for a swing.
+- Opportunity cost: Crypto-proxy volatility makes a 2:1 R:R at a 7-10% stop poor; ranks below LMT and offers no sector-momentum support. Not worth a weekly trade slot.
