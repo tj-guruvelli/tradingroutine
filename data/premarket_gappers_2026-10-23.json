@@ -1,1 +1,15 @@
-{"scanned_at":"2026-10-23T14:12:30Z","deep_dive_cap":5,"gappers":[{"rank":1,"symbol":"BE","price":194.31,"gap_pct":-10.72,"premarket_volume":381160,"catalyst":"Q3 beat but sell-the-news continues; BMO PT $260 Outperform (from 09:19 scan; no fresh headline found)","headlines":[],"catalyst_detail":"Bloom beat Q3 but shares gapped down ~12.6% earlier today (prev close $217.64 per Alpaca baseline); Apify fetch returned only IR/overview pages, no new headline. Gap now -10.7% at $194.31, deeper than the 09:19 scan.","why":"Sell-the-news after a big run plus AI-infra de-risking shared with CRWV/META.","impact":"Volume 381k and price sliding lower since 09:19 scan; reads as continuation, not stabilization.","horizon":"SHORT_TERM","opportunity_cost":"Falling knife; 2:1 R:R needs ~12%+ recovery vs a 7-10% stop, marginal. Would use 1 of 3 weekly trades; LMT (not on today's list now) was higher quality."}]}
+{
+  "scanned_at": "2026-10-23T15:16:33Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {"rank": 1, "symbol": "BE", "price": 193.58, "gap_pct": -11.05, "premarket_volume": 598718,
+     "catalyst": "Q3 beat-and-raise (record Q3 reported Oct 22) sold off on cash outflows and expansion costs; 3-month low",
+     "headlines": ["Bloom Energy stock drops to 3-month low despite strong earnings: Q3 beat-and-raise clouded by cash outflows, expansion costs", "Bloom Energy Reports Record Third Quarter 2026 (Oct 22)"],
+     "catalyst_detail": "Bloom reported record Q3 2026 on Oct 22 with a beat-and-raise, but the stock gapped down ~11% to a 3-month low as the market focused on cash outflows and capacity-expansion costs. Stock was up >1,000% over the past year on AI data-center power demand, so expectations were extreme.",
+     "why": "Sell-the-news on a crowded momentum name: strong guidance was priced in, cash burn/capex raised quality-of-earnings doubts, triggering de-grossing by momentum holders.",
+     "impact": "Heavy gap on elevated volume after a parabolic run reads as a distribution/reset, not a one-day blip; fade or further downside likely to continue until support is found. Read-through to AI-power/fuel-cell peers possible.",
+     "horizon": "SHORT_TERM",
+     "horizon_reason": "Post-earnings gap-down with broken momentum; no durable long thesis until the trend stabilizes.",
+     "opportunity_cost": "Long here is catching a falling knife and would use 1 of 3 weekly trades and up to 20% equity; a defined stop within the 7-10% rules makes 2:1 R:R hard on a stock with this ATR. Not a trade; any short is off-limits per strategy rules (no shorting not in scope)."}
+  ]
+}

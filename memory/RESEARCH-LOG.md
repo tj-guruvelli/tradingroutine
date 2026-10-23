@@ -16991,3 +16991,18 @@ _Only 1 row cleared filters (cap 10); deep-dived. Volume is session volume (no p
 - Impact: Price sliding lower since 09:19; continuation, no stabilization.
 - Horizon: SHORT_TERM, positioning-driven, no thesis change.
 - Opportunity cost: Falling knife; 2:1 R:R marginal at 7-10% stop; would use 1 of 3 weekly trades.
+
+## 2026-10-23
+
+### Gappers (auto-scan 11:16 ET, cloud)
+Deep-dive cap: 5 (only 1 qualifying gapper). PEPG (-5.37%, $2.56) excluded: price < $3.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 193.58 | -11.05 | 598,718 | Q3 beat-and-raise sold off on cash outflows/expansion costs; 3-mo low |
+
+#### Deep dive: BE $193.58 -11.05%
+- Catalyst: Record Q3 2026 reported Oct 22 with beat-and-raise; stock fell to 3-month low on cash outflows and expansion costs after a >1,000% 1-yr run (AI data-center power).
+- Why: Sell-the-news on crowded momentum; guidance priced in, cash burn raised quality doubts, momentum de-grossing.
+- Impact: Large gap on elevated volume after parabolic run reads as distribution/reset, not a blip. Possible read-through to AI-power peers.
+- Horizon: SHORT_TERM, post-earnings gap-down, broken momentum, no durable thesis yet.
+- Opportunity cost: Would burn 1 of 3 weekly trades and up to 20% equity; falling knife, 2:1 R:R at a sane stop is doubtful. Research only.
