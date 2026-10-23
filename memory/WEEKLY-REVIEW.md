@@ -539,3 +539,47 @@ Template for each entry:
 - Escalate the $10k vs $100k baseline mismatch again as the top-priority operator item (16th week flagged, zero response) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; every blocker this week and prior weeks is operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-10-23
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -0.59% (SPY proxy: $763.335 → $759.83, Alpaca daily bars, Fri Oct 16 close → Fri Oct 23 close) |
+| Bot vs S&P | +0.59% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a genuinely catalyst-dense AI-capex wobble tape (LMT Q3 beat + raised guidance gap +6.87%, BE Q3 beat but -12.59% selloff, CRWV -11.45% on financing/leverage concerns, META -8.15% on capex de-rating, BMNR -5.76%) — zero forced trades
+- Correctly caught and rejected LMT (Oct 23) on the explicit no-chase rule (no entry within 3% of a print >5% up on the day) despite a genuine Q3 beat-and-raise catalyst — the clearest hard-rule-over-tempting-setup catch of the week
+- Correctly disqualified XOM/CVX/VLO/NOC/HXL/AMKR all week on unverifiable confluence (no `tradingview-data` MCP this session) rather than assuming a pass — "unverifiable = FAIL" applied consistently across all 5 sessions
+- Correctly read recurring wide/stale bid-ask spreads (LMT, XOM, NOC, VLO, BE, CRWV at various points) as a data-quality red flag and treated them as untradeable regardless of confluence
+- 6th consecutive clean week of Market-Open + EOD TRADE-LOG entries — the intermittent missing-entry pattern flagged in 7+ reviews before Sep 25 remains resolved; account/position state re-confirmed live via `alpaca.sh` every session
+### What Didn't Work
+- 17th consecutive zero-entry week (76 trading days since launch, Jul 9) — sat in 100% cash through a modestly negative (-0.59%) S&P week, though the bot edged the index this particular week
+- `tradingview-data` MCP still down the entire week (12th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a 12th straight week this exact fix has been proposed and not shipped
+- `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` directly re-confirmed still the literal placeholder strings this review (HTTP 500 on this review's own STEP 6 send) — 6th straight week confirmed broken, fallback notification channel has not delivered a single message since first found (Sep 18)
+- **New confirmed finding**: `scripts/perplexity.sh` now fails with HTTP 401 (vs. the documented exit-3 "key not set" case) — the Perplexity credential itself appears invalid/expired, a 3rd distinct broken-credential item alongside ClickUp's placeholder IDs; fell back to the Alpaca SPY-bars proxy for the S&P-500 weekly fact per the last two reviews' established lesson (works cleanly, no Apify/WebSearch round-trip needed)
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (17th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- A second straight AI-capex-wobble gap cluster (LMT/BE/CRWV/META/BMNR) with zero entries again shows the catalyst+confluence+no-chase gate is doing real filtering work, not defaulting to HOLD only because the MCP is down — the LMT no-chase catch against a genuine beat-and-raise catalyst is the clearest example yet of discipline overriding a tempting setup
+- The Perplexity wrapper's new HTTP 401 (credential actively invalid, not merely missing) is a different failure mode than the ClickUp placeholder-ID issue but has the same root cause class — unverified/stale operator credentials; both now need an explicit operator fix rather than another log entry
+- 12 weeks (Alpaca-bars confluence wiring) and 17 weeks (baseline mismatch) are now the two longest-running unshipped items in the challenge's history — both remain pure process failures sitting on top of a trading discipline that continues to hold up correctly under real catalysts
+### Adjustments for Next Week
+- Escalate the $10k vs $100k baseline mismatch again as the top-priority operator item (17th week flagged, zero response) — recommend the operator explicitly reconcile the figure or confirm $100k is correct
+- Fix `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` with real values — 6th straight week confirmed broken
+- Fix or rotate the `PERPLEXITY_API_KEY` credential — newly confirmed HTTP 401 this review, a 3rd broken-credential item on top of ClickUp
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 12th straight week, still the top open infra item after the credential fixes
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's LMT no-chase catch against a real beat-and-raise catalyst is further evidence the discipline itself is sound, independent of the down MCP
+### Overall Grade: C
