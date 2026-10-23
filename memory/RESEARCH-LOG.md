@@ -17006,3 +17006,12 @@ Deep-dive cap: 5 (only 1 qualifying gapper). PEPG (-5.37%, $2.56) excluded: pric
 - Impact: Large gap on elevated volume after parabolic run reads as distribution/reset, not a blip. Possible read-through to AI-power peers.
 - Horizon: SHORT_TERM, post-earnings gap-down, broken momentum, no durable thesis yet.
 - Opportunity cost: Would burn 1 of 3 weekly trades and up to 20% equity; falling knife, 2:1 R:R at a sane stop is doubtful. Research only.
+
+### Setup Scan (16:38 ET, cloud)
+grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated, grade A unreachable this run. 60 symbols scanned, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| --- | --- | --- | --- | --- |
+| V | B | Momentum confluence | daily swing | ADX 33.6, EMA9 $400.79 > EMA21 $389.00, RSI 79 |
+| LMT | B | Momentum confluence | daily swing | ADX 35.9, EMA9 $546.99 > EMA21 $534.43, RSI 75.3 |
+| RTX | B | Momentum confluence | daily swing | ADX 34.9, EMA9 $190.71 > EMA21 $190.20, RSI 56.4 |
