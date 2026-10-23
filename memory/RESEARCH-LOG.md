@@ -16915,3 +16915,16 @@ Note: grade_a_possible=false (18:37 ET, outside 10:00-15:30 ET intraday window) 
 - WDC — earnings beat gap; chase risk after AI-led sell-off; wait for base. Stop -7%, target +14%.
 **Risks:** AI/semis de-risking continues, oil/Iran headline whipsaw, wide index-futures disagreement, Fed/midterm event risk, stale-quote issues seen in prior runs.
 **Decision: HOLD** (0/3 trades this week; patience > activity). Equity flat, no positions to manage.
+
+### Gappers (auto-scan 08:15 ET, cloud)
+Only 1 hit >=5% / >=$3 (Apify catalyst data thin; deep-dive cap 5, only 1 qualified).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 55.02 | -11.01 | 1.66M (day) | No fresh headline; AI-capex sympathy selloff + leverage/financing worries |
+
+#### Deep dive: CRWV $55.02 -11.01%
+- Catalyst: No dated CRWV-specific news found. Context: Oct 22 AI-capex sympathy selloff, commentary on high debt / ~15% bond yields, customer-concentration and GPU-depreciation risk.
+- Why: Leveraged AI-infra name sold as high-beta proxy when hyperscaler capex returns are questioned.
+- Impact: Sector-wide read-through, likely sentiment-driven; continuation risk high on gap-down tape. Premarket volume not reported.
+- Horizon: SHORT_TERM, no durable thesis change identified.
+- Opportunity cost: Fails confluence (unverified) on a falling knife; -7% stop vs >10% daily range can't give 2:1 R:R; energy/defense ideas rank higher. Research only.
