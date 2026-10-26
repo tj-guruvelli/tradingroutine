@@ -17082,3 +17082,25 @@ Watchlist scan, threshold 5%: 1 hit (only BE). Ranks 2-10: none.
 
 ### Gappers (auto-scan 10:17 ET, cloud)
 - 0 hits >=5% gap, price>=$3. Raw sub-$3 only: OPEN -6.3% $1.86, AGMH -5.3% $0.46. No catalyst/deep-dive run.
+
+### Gappers (auto-scan 11:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 209.83 | +8.66 | 270,308 | Unverified; sources conflict (stale Oct 22 -8.7% selloff) |
+| 2 | CRWV | 57.67 | +6.33 | 698,842 | CONFLICT: WSJ/CNN say sliding premarket on AI jitters |
+
+Deep dive cap 5; only 2 rows passed filters.
+
+#### Deep dive: BE $209.83 +8.66%
+- Catalyst: No confirmed catalyst. Stale Oct 22 -8.7% (close $217.77) and a weak-cash note; Alpaca prev_close $193.10 doesn't match, so possibly a rebound.
+- Why: Likely oversold bounce in AI-power names; unconfirmed.
+- Impact: Light volume, no verified catalyst, mean-reversion risk. CRWV/AI-infra weak today.
+- Horizon: SHORT_TERM, no durable thesis found.
+- Opportunity cost: Uses one of 3 weekly slots; 2:1 R:R likely fails at a sane stop. Research only.
+
+#### Deep dive: CRWV $57.67 +6.33%
+- Catalyst: WSJ (Oct 26) says CRWV sliding premarket with neocloud peers after Elon Musk comments; CNN shows -$2.48 premarket. Alpaca shows +6.33%: contradiction, data suspect.
+- Why: AI-trade fear drives a drop; Alpaca reading may be a bad print.
+- Impact: Direction unverified; not tradeable on this data.
+- Horizon: SHORT_TERM, headline-driven.
+- Opportunity cost: Don't act on the gap. R:R unassessable until price is reconciled. Research only.

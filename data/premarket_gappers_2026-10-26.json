@@ -1,1 +1,35 @@
-{"scanned_at":"2026-10-26T14:17:00Z","deep_dive_cap":5,"gappers":[],"note":"0 hits after filter; raw: OPEN -6.3% $1.86, AGMH -5.3% $0.46 (both < $3)"}
+{
+  "scanned_at": "2026-10-26T15:22:15.715844Z",
+  "deep_dive_cap": 5,
+  "note": "Only 2 rows passed filters; catalysts unverified, CRWV direction conflicts with WSJ/CNN",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 209.83,
+      "gap_pct": 8.66,
+      "premarket_volume": 270308,
+      "catalyst": "Unverified: no clean same-day catalyst found; sources conflict (Oct 22 close $217.77 -8.7% per heygotrade; Trefis piece has wrong date)",
+      "headlines": [],
+      "catalyst_detail": "No confirmed catalyst. Search returned a stale Oct 22 -8.7% selloff (close $217.77, AH $202.84) and a Trefis note citing weak cash; Alpaca prev_close $193.10 does not match those figures, so the gap may be a rebound from a multi-day drop.",
+      "why": "Likely oversold bounce in AI-power/fuel-cell names after a sharp drop; mechanism unconfirmed.",
+      "impact": "Premarket volume 270k is light; no verified catalyst, reads as a mean-reversion bounce, not sustainable until confirmed. Sector read-through: CRWV/AI-infra under pressure today (WSJ).",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Unverified headline plus conflicting prices. Would compete for one of 3 weekly slots; 2:1 R:R needs a stop within ~5% of entry (10% trail is wider), so it likely fails the minimum. Research only."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 57.67,
+      "gap_pct": 6.33,
+      "premarket_volume": 698842,
+      "catalyst": "CONFLICT: WSJ/CNN say CRWV is sliding premarket on AI-trade jitters; Alpaca shows +6.33%",
+      "headlines": [],
+      "catalyst_detail": "WSJ (Oct 26 live blog) says CoreWeave is sliding again premarket with other neocloud names after comments from Elon Musk; CNN shows -$2.48 premarket vs prev close ~$54.24. Alpaca feed shows $57.67 (+6.33%), contradicting both. Treat the Alpaca gap as suspect data.",
+      "why": "If the sources are right, AI-infra fear is driving a gap DOWN, not up; the Alpaca reading may be a bad print or wrong prev_close.",
+      "impact": "Volume 699k is decent but direction is unverified. Neocloud peers also weak per WSJ. Not tradeable on this data.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Do not act on the Alpaca gap. If a real drop, AI-infra is a falling-sector candidate under the 2-failed-trades rule; R:R unassessable until the price is reconciled. Research only."
+    }
+  ]
+}
