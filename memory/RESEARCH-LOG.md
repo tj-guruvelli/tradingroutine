@@ -17104,3 +17104,10 @@ Deep dive cap 5; only 2 rows passed filters.
 - Impact: Direction unverified; not tradeable on this data.
 - Horizon: SHORT_TERM, headline-driven.
 - Opportunity cost: Don't act on the gap. R:R unassessable until price is reconciled. Research only.
+
+### Setup Scan (16:37 ET, cloud)
+60 candidates checked. `grade_a_possible`: false (16:37 ET outside 10:00-15:30 ET window — Setup A not evaluated). 1 grade-B hit, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LMT | B | Momentum confluence | daily swing | px $595.08, RSI 78.11, ADX 37.44, EMA9 $558.52 > EMA21 $540.82 |
