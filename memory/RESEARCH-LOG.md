@@ -17111,3 +17111,10 @@ Deep dive cap 5; only 2 rows passed filters.
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | LMT | B | Momentum confluence | daily swing | px $595.08, RSI 78.11, ADX 37.44, EMA9 $558.52 > EMA21 $540.82 |
+
+### Setup Scan (18:37 ET, cloud)
+60 candidates checked. `grade_a_possible`: false (18:37 ET outside 10:00-15:30 ET window — Setup A not evaluated). 1 grade-B hit, 0 errors. Same LMT hit as the 16:37 ET run (no new candidates).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LMT | B | Momentum confluence | daily swing | px $595.08, RSI 78.11, ADX 37.44, EMA9 $558.52 > EMA21 $540.82 |
