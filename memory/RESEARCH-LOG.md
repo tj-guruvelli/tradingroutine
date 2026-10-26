@@ -17045,3 +17045,16 @@ _Sources: Apify RAG (oil), WebSearch fallback (futures/VIX/calendar; Apify VIX s
 **Risks:** FOMC Wed + mega-cap AI earnings Wed/Thu (gap risk in AI complex); PCE Thu; oil/Hormuz headline reversals; VIX ~19-20 with broadening selloff; rate-hike-odds sources conflict (10% vs 80% Dec).
 
 **Decision: HOLD.** 0/3 weekly trades. No catalyst+confluence+no-chase setup before FOMC/mega-cap earnings; patience > activity.
+
+### Gappers (auto-scan 08:19 ET, cloud)
+Watchlist scan, threshold 5%: 1 hit (only BE). Ranks 2-10: none.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 197.60 | -9.21 | 1,099,045 | No fresh headline found; AI-capex de-rating continuation after Q3-beat selloff (Oct 23) |
+
+#### Deep dive: BE $197.60 -9.21%
+- Catalyst: No same-day news located (Apify returned irrelevant/IR pages). Prior logs: Q3 beat sold off -12.59% Oct 23 in AI-capex/debt sympathy selloff (NBIS/AMKR/GFS/CRWV). Prev close 217.64.
+- Why: AI-capex/financing worries on high-multiple AI-power names ahead of FOMC Wed + mega-cap AI earnings; unconfirmed.
+- Impact: Sector de-rating continuation, falling-knife risk; peers weak.
+- Horizon: SHORT_TERM, no durable thesis found, headline-less fade/continuation.
+- Opportunity cost: Failed no-chase/R:R gate Oct 23; defense setups (LMT/RTX) rank higher; 2:1 R:R at sane stop doubtful. Research only.
