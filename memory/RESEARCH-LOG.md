@@ -17058,3 +17058,24 @@ Watchlist scan, threshold 5%: 1 hit (only BE). Ranks 2-10: none.
 - Impact: Sector de-rating continuation, falling-knife risk; peers weak.
 - Horizon: SHORT_TERM, no durable thesis found, headline-less fade/continuation.
 - Opportunity cost: Failed no-chase/R:R gate Oct 23; defense setups (LMT/RTX) rank higher; 2:1 R:R at sane stop doubtful. Research only.
+
+### Gappers (auto-scan 09:11 ET, cloud)
+2 hits >=5% (price>=$3) of ~60 scanned; both gap DOWN. Deep dive on both (cap 5, <5 hits).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 197.30 | -9.34 | 1,099,045 | No BE-specific news; AI-infra/neocloud selloff (Musk comments, capex/debt fears) |
+| 2 | CRWV | 51.77 | -6.84 | 1,038,910 | Musk: buying a neocloud "pointless"; neocloud debt-financing fears |
+
+#### Deep dive: BE $197.30 -9.34%
+- Catalyst: No same-day company news found. Q1 2026 rev $751.1M (+130% y/y), FY26 growth guide raised to ~80%. Follows -12.6% Oct 23; drop coincides with weekend AI-infra sentiment shock.
+- Why: De-rating of high-multiple AI-power names on financing/capex fears ahead of mega-cap AI earnings + FOMC Wed. Inference, unconfirmed.
+- Impact: Second big down leg in 2 sessions; sector-wide (CRWV/NBIS/IREN weak). Falling-knife risk until capex guidance lands.
+- Horizon: SHORT_TERM, sentiment-driven, no new thesis; wait for stabilization.
+- Opportunity cost: No positions, 0/3 trades used. Failed no-chase/R:R gate Oct 23; 2:1 R:R at a sane stop doubtful. Research only.
+
+#### Deep dive: CRWV $51.77 -6.84%
+- Catalyst: Musk (Sun night) said buying a neocloud is "pointless", debt markets shutting for AI data-center players. Near 52W low ($53.50), earnings Nov 11. BofA $140 PT, JPM Overweight, DB Catalyst Call Buy hold.
+- Why: Financing-risk narrative on levered GPU cloud; AI bubble gauge elevated; hyperscaler earnings this week.
+- Impact: Sector-wide (NBIS, IREN, APLD); no stabilization, pre-market volume light vs 29.5M avg. Snap-back possible on capex prints.
+- Horizon: SHORT_TERM, counter-trend to sector momentum; revisit after MSFT/GOOGL/AMZN capex.
+- Opportunity cost: No positions, 0/3 trades used. Same sector as BE (2-failed-trade sector rule). Failed counter-trend gate Oct 23. Research only.
