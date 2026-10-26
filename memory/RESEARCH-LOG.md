@@ -17079,3 +17079,6 @@ Watchlist scan, threshold 5%: 1 hit (only BE). Ranks 2-10: none.
 - Impact: Sector-wide (NBIS, IREN, APLD); no stabilization, pre-market volume light vs 29.5M avg. Snap-back possible on capex prints.
 - Horizon: SHORT_TERM, counter-trend to sector momentum; revisit after MSFT/GOOGL/AMZN capex.
 - Opportunity cost: No positions, 0/3 trades used. Same sector as BE (2-failed-trade sector rule). Failed counter-trend gate Oct 23. Research only.
+
+### Gappers (auto-scan 10:17 ET, cloud)
+- 0 hits >=5% gap, price>=$3. Raw sub-$3 only: OPEN -6.3% $1.86, AGMH -5.3% $0.46. No catalyst/deep-dive run.
