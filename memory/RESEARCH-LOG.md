@@ -17024,3 +17024,24 @@ grade_a_possible=false (outside 10:00-15:30 ET) — Setup A not evaluated, grade
 | V | B | Momentum confluence | daily swing | ADX 33.6, EMA9 $400.79 > EMA21 $389.00, RSI 79 |
 | LMT | B | Momentum confluence | daily swing | ADX 35.9, EMA9 $546.99 > EMA21 $534.43, RSI 75.3 |
 | RTX | B | Momentum confluence | daily swing | ADX 34.9, EMA9 $190.71 > EMA21 $190.20, RSI 56.4 |
+
+## 2026-10-26 — Pre-Market Research (cloud)
+_Sources: Apify RAG (oil), WebSearch fallback (futures/VIX/calendar; Apify VIX scrape returned empty). No Yahoo._
+
+**Account:** equity $100,000 | cash $100,000 | BP $400,000 (margin 4x) | daytrades 0 | 0 positions | 0 open orders. $100k-vs-$10k baseline mismatch still unresolved (flagged Jul 27).
+
+**Market context**
+- Oil: WTI ~$101 (-2.1%), Brent ~$115 (-1.5%) — easing after last week's spike; Hormuz supply headlines ongoing (oilprice.com, Business Insider).
+- Futures (~5am ET): S&P +0.3%, Dow +0.5%, Nasdaq-100 +0.2% (CNBC/Reuters). Fri: Dow -650, S&P -0.5%; 2nd straight weekly loss for S&P and Nasdaq.
+- VIX 19.45 Fri close (19.03 Thu, 16.68 Wed) — elevated, AI-capex/debt + yields worries.
+- Calendar: Tue durable goods + consumer confidence; **Wed FOMC 2pm ET (hold expected, 3.75-4.00%, Warsh presser)** + GOOGL/MSFT AMC; Thu Q3 GDP + core PCE 8:30, AMZN/INTC/LLY/MA/CAT; Fri XOM/CVX. ~1/3 of S&P reports this week.
+- Sector: AI/neocloud weak (META, CRWV, BE de-rated); defense (LMT, RTX) and quality momentum (V) relatively firm per setup scans; energy supported by $100+ WTI.
+
+**Ideas (all conditional, none actionable pre-open)**
+1. LMT — Q3 beat/guide raise, ADX 35.9. Entry only on pullback toward EMA9 (~$547); stop ~-8% below entry; target ≥2:1. Fails no-chase if still >5% extended.
+2. RTX — grade B, RSI 56 (not overbought), defense momentum. Entry on hold above EMA21 (~$190); stop -7-8%; target ≥2:1.
+3. Energy (XOM/CVX) — WTI $100+, but reports Fri and oil reversing lower; wait for print.
+
+**Risks:** FOMC Wed + mega-cap AI earnings Wed/Thu (gap risk in AI complex); PCE Thu; oil/Hormuz headline reversals; VIX ~19-20 with broadening selloff; rate-hike-odds sources conflict (10% vs 80% Dec).
+
+**Decision: HOLD.** 0/3 weekly trades. No catalyst+confluence+no-chase setup before FOMC/mega-cap earnings; patience > activity.
