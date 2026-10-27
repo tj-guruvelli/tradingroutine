@@ -17280,3 +17280,10 @@ Note: top-5 deep dive only (ranks 6-10 quick-scan). Volume = session volume at s
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | LMT | B | Momentum confluence | daily swing | px $627.47, RSI 82.65, ADX 39.46, EMA9 $573.89 > EMA21 $549.41 |
+
+### Setup Scan (18:37 ET, cloud)
+60 candidates checked. `grade_a_possible`: false (18:37 ET outside 10:00-15:30 ET window — Setup A not evaluated). 1 grade-B hit, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LMT | B | Momentum confluence | daily swing | px $627.47, RSI 82.65, ADX 39.46, EMA9 $573.89 > EMA21 $549.41 |
