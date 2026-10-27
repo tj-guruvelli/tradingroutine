@@ -17222,3 +17222,54 @@ Deep dive capped at top 5; ranks 6-10 quick-scan only. Filtered out: DPRO (vol 4
 - Horizon: SHORT_TERM, Thin volume, no catalyst.
 - Opportunity cost: Low-priced illiquid name; position sizing by ATR would be tiny and stop distance wide. Displaces nothing worth it vs BE/NBIS.
 
+
+### Gappers (auto-scan 11:22 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 167.885 | +9.71% | 275,088 | Seeking Alpha: Nebius poised to benefit from CoreWeave rout; 3.7x fwd P/S vs 9.4x 3-yr avg (7 days old, not a fresh catalyst). |
+| 2 | BA | 170.38 | -9.44% | 538,465 | No fresh catalyst found; search returned stale 2023 UBS note and a Perplexity snippet on a 737 MAX launch (undated). |
+| 3 | LUNR | 11.44 | +9.32% | 165,257 | No fresh news; StockTwits cites SpaceX lock-up release day; Macquarie coverage initiation Oct 16 did not hold. |
+| 4 | BE | 221.385 | +8.6% | 272,163 | Q3 blowout (revenue +138%, record profit, raised FY guidance) plus analyst upgrade; stock had fallen ~11% post-print before today's gap up. |
+| 5 | SATL | 4.03 | +8.48% | 80,989 | No fresh catalyst found; sympathy with space small-caps. |
+| 6 | ASTS | 42.595 | +7.94% | 153,096 | No fresh catalyst found; sympathy with space small-caps. |
+| 7 | RCAT | 4.72 | +7.27% | 179,984 | No fresh catalyst found; analyst Buy/$15 PT mention only. |
+| 8 | RKLB | 57.59 | +7.0% | 378,473 | No fresh catalyst found; recent ARK buying and contract flow noted earlier in Oct. |
+| 9 | ONDS | 6.59 | +6.89% | 479,901 | No fresh catalyst found; analyst Strong Buy consensus, $19.42 PT. |
+| 10 | STM | 48.055 | +6.3% | 330,343 | No fresh catalyst found; recent satellite/semis read-through only. |
+
+Note: top-5 deep dive only (ranks 6-10 quick-scan). Volume = session volume at scan time. Catalyst sourcing thin; Yahoo results discarded.
+
+#### Deep dive: NBIS $167.885 +9.71%
+- Catalyst: Only a 7-day-old Seeking Alpha piece surfaced: Nebius trades at 3.7x forward P/S vs a 9.4x 3-yr average, framed as a beneficiary of the CoreWeave rout. No same-day news found (the Yahoo hit was discarded).
+- Why: AI-cloud sympathy and rotation from CoreWeave into a cheaper GPU-rental peer; mechanism is valuation, not a company event.
+- Impact: 275K volume by 11:22 ET is decent; CRWV also gaps +5.75%, so this is a sector-wide AI-infra move. Sustainability unconfirmed.
+- Horizon: SHORT_TERM, No same-day catalyst; sector bounce.
+- Opportunity cost: Most liquid of today's gap-ups. Would displace nothing held-known; vs BE it has weaker catalyst evidence. 2:1 R:R needs a stop ~7% below, feasible only on a pullback entry.
+
+#### Deep dive: BA $170.38 -9.44%
+- Catalyst: No fresh catalyst located; search returned a stale 2023 UBS note and an undated Perplexity snippet. Cause of a -9.4% gap is unknown from this research.
+- Why: Unknown; a gap this size usually means earnings or a program/delivery/regulatory event. Not verified.
+- Impact: 538K volume is the highest on the list, so it is real repricing, not noise. No peer read-through found.
+- Horizon: SHORT_TERM, Cause unknown, falling-knife profile.
+- Opportunity cost: Long setup disallowed against the trend and shorting is banned. Takes no slot; ranking it ahead of nothing.
+
+#### Deep dive: LUNR $11.44 +9.32%
+- Catalyst: No fresh news. StockTwits cites SpaceX lock-up release day; Macquarie initiated coverage Oct 16 and shares still closed lower.
+- Why: Oversold bounce in space small-caps after a roughly month-long slide.
+- Impact: 165K volume; ASTS, RCAT, SATL, RKLB also up, so it is a sector bounce likely to mean-revert.
+- Horizon: SHORT_TERM, Bounce in a downtrend, no structural catalyst.
+- Opportunity cost: Space is crowded today (5 names); sector rule exits after 2 failed trades. BE has the better evidence.
+
+#### Deep dive: BE $221.385 +8.6%
+- Catalyst: Q3 print: revenue +138%, record profitability, FY guidance raised. Shares fell ~11% on the print, then gapped up today on an analyst upgrade (MarketBeat, 57 min old).
+- Why: Guidance raise plus upgrade pulls momentum buyers back after a post-earnings flush; dip-buyers reclaim the move.
+- Impact: 272K volume at 11:22 ET is healthy. AI-power theme read-through, but gap is partly a retrace of the post-print drop.
+- Horizon: LONG_TERM, Structural growth and raised guidance, aligned with AI power demand; needs Confluence check on a /trade run.
+- Opportunity cost: Strongest-evidenced name today. Would compete with NBIS for the AI-infra slot; at ~$221 a 20% cap is ~$2K = ~9 shares, so a 7% stop gives roughly 2:1 only with a pullback entry.
+
+#### Deep dive: SATL $4.03 +8.48%
+- Catalyst: No fresh catalyst found. A Perplexity snippet cites a ~1.6% close to $3.90 after a 6.6% Friday drop, so today's move recovers that.
+- Why: Sympathy with the space small-cap bounce; mechanism unconfirmed.
+- Impact: 81K volume is thin and illiquid; likely fades.
+- Horizon: SHORT_TERM, Thin volume, no catalyst.
+- Opportunity cost: Low-priced illiquid name; ATR sizing gives a tiny position with a wide stop. Not worth a slot vs BE/NBIS.
