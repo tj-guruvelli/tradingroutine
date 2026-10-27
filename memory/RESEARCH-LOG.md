@@ -17273,3 +17273,10 @@ Note: top-5 deep dive only (ranks 6-10 quick-scan). Volume = session volume at s
 - Impact: 81K volume is thin and illiquid; likely fades.
 - Horizon: SHORT_TERM, Thin volume, no catalyst.
 - Opportunity cost: Low-priced illiquid name; ATR sizing gives a tiny position with a wide stop. Not worth a slot vs BE/NBIS.
+
+### Setup Scan (16:38 ET, cloud)
+60 candidates checked. `grade_a_possible`: false (16:38 ET outside 10:00-15:30 ET window — Setup A not evaluated). 1 grade-B hit, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| LMT | B | Momentum confluence | daily swing | px $627.47, RSI 82.65, ADX 39.46, EMA9 $573.89 > EMA21 $549.41 |
