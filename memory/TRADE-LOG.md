@@ -2054,3 +2054,54 @@ N/A — no action taken this run.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-10-23`, equity/cash unchanged at $100,000). Market-open HOLD (LMT, RTX, BE/CRWV all failed catalyst+confluence+no-chase gate); midday scan found nothing to cut/tighten (no positions held). Weekly trade count: 0/3 (week of Oct 26). 77th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) unresolved, 121st+ straight session, operator review pending. Local mode: no git push. Tomorrow: pre-market re-scan for a candidate clearing the catalyst+confluence+no-chase gate.
+
+### Oct 27, Market-Open (Day 78, Tuesday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-26`).
+
+STEP 1: today's RESEARCH-LOG (2026-10-27 Pre-Market, decision HOLD) — ideas:
+Energy/XLE-XOM (WTI>$100, Iran tension, entry on pullback only, no specific
+trigger), LMT (carryover, RSI 78/ADX 37, extended, wait for EMA9 pullback
+~$558), AI-infra BE/CRWV (wait for MSFT/GOOGL/AMZN capex prints before any
+entry). Gappers 08:11 ET: 0 hits. Gappers 09:14 ET: BE +10.46% (earnings,
+order still contingent on pipeline), CRWV +6.28% (no new catalyst, bounce
+after last week's 24% slide) — both carryover AI-infra names already
+flagged "research only."
+
+STEP 2: setup-scan — no same-day file yet at run time (expected; market-open
+fires before setup-scan-cloud's first 2026-10-27 run). Used prior day's most
+recent file, `data/setup-scan_cloud_2026-10-26_1837ET.json`: 1 hit — LMT
+grade B (RSI14 78.11, ADX14 37.44, EMA9 $558.52, EMA21 $540.82, curr_px
+$595.08 at scan time). Same ticker as STEP 1 carryover; merged, not
+duplicated.
+
+STEP 3: live quotes re-pulled — LMT ap $660.24/bp $629.25 (spread ~4.9%,
+wide), BE ap $219.78/bp $209.11 (spread ~4.9%, wide), CRWV ap $57.62/bp
+$57.03 (spread ~1.0%), XOM ap $182.91/bp $182.81 (spread ~0.05%, tight).
+
+STEP 4 — pass/fail per candidate:
+- LMT: FAIL — violates no-chase/overbought rule; RSI14 78.11 (overbought),
+  live ask $660.24 is now ~18% above the EMA9 pullback trigger ($558.52),
+  more extended than every prior session's read (Oct 23 $588.94, Oct 26
+  $622.00); no pullback, trend accelerating away from entry zone.
+- BE: FAIL — no-chase rule; still up double-digits off yesterday's close
+  per gappers scan (+10.46% at 09:14 ET), no fresh company-specific
+  catalyst beyond the already-logged earnings/pipeline note, carryover
+  sector caution (AI-infra, repeated no-chase/R:R fails Oct 23 + Oct 26).
+- CRWV: FAIL — no-chase rule; gapped +6.28% with no new catalyst (pure
+  technical bounce per RESEARCH-LOG), same AI-infra sector as BE, carryover
+  fail history.
+- XOM/Energy: FAIL — no documented ticker-specific catalyst or confluence
+  check (RESEARCH-LOG idea is sector-level only — "entry on pullback only,
+  none actionable pre-open"); tight live spread doesn't substitute for a
+  missing catalyst + confluence read.
+All candidates fail the catalyst+confluence+no-chase gate — STEPs 5-6
+(orders/stops) skipped.
+
+STEP 8 (notification): N/A — no trade fired this run.
+
+Weekly trade count: 0/3 (week of Oct 26). 78th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 122nd+
+straight session, operator review pending. Cloud mode: committing/pushing
+this log per STEP 9 (STEP 7 wrote candidate pass/fail entries).
