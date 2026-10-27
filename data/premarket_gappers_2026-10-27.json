@@ -1,38 +1,126 @@
 {
-  "scanned_at": "2026-10-27T13:16:00Z",
+  "scanned_at": "2026-10-27T14:47:41Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "BE",
-      "price": 213.29,
-      "gap_pct": 10.46,
-      "premarket_volume": 593038,
-      "catalyst": "Bloom Energy just reported earnings; largest order still waiting on a pipeline (Investing.com).",
-      "headlines": [
-        "Bloom Energy Just Reported\u2014Its Biggest Order Is Still Waiting on a Pipeline"
-      ],
-      "catalyst_detail": "Bloom Energy reported quarterly results; coverage notes its biggest order is still contingent on a pipeline buildout. Fundamentals fetch failed (502), so detail is headline-level only.",
-      "why": "Post-earnings gap on AI-datacenter power demand narrative; momentum buyers chase fuel-cell backlog.",
-      "impact": "593K premarket volume is heavy; earnings gaps with a large order backlog can sustain, but order timing risk caps conviction. Read-through to AI-power peers.",
+      "symbol": "NBIS",
+      "price": 166.78,
+      "gap_pct": 8.99,
+      "premarket_volume": 249639,
+      "catalyst": "No same-day catalyst found; AI-infra momentum name, Q3 results pending (per Perplexity Finance snippet, ~$9B customer prepayments expected).",
+      "headlines": [],
+      "catalyst_detail": "No same-day catalyst located. Background: Nebius is an AI-cloud infrastructure name, strong 2026 YTD run and Microsoft deal (Sep 2025); Q3 results are the next scheduled catalyst and ~$9B customer prepayments were flagged as expected.",
+      "why": "Likely sector beta / AI-capex momentum ahead of earnings rather than a discrete news event (unconfirmed).",
+      "impact": "Premarket volume 250K at $167 is thin relative to a name this size; unconfirmed gap, could fade. AI-infra peers (BE) also gapping up, sector read-through positive.",
       "horizon": "SHORT_TERM",
-      "opportunity_cost": "Would consume one of 3 weekly slots and displace weaker holding or CRWV; +10% gap makes a 7-10% stop wide, 2:1 R:R only clears with a measured pullback entry."
+      "horizon_reason": "No verified durable catalyst today; earnings pending adds binary risk.",
+      "opportunity_cost": "Would displace a weaker holding or compete with BE for the single AI-infra slot (correlation gate); 20% cap at ~$167 and 10% trail needs stop ~$150 \u2014 2:1 needs ~$200 target, plausible only post-earnings."
     },
     {
       "rank": 2,
-      "symbol": "CRWV",
-      "price": 57.64,
-      "gap_pct": 6.28,
-      "premarket_volume": 1247758,
-      "catalyst": "Rebound after ~24% weekly slide on bond-yield and debt-service worries (Market Ontology).",
-      "headlines": [
-        "CoreWeave stock plunged 24% over the past week on rising bond yields, debt service concerns"
-      ],
-      "catalyst_detail": "No fresh company-specific news found. Stock fell ~24% last week on rising yields and debt-service cost fears; today's gap reads as a bounce. Backlog was $66.8B at end-2025 with 2025 revenue $5.1B (+168% YoY).",
-      "why": "Oversold bounce in a highly levered AI-infrastructure name; sensitive to rates.",
-      "impact": "1.25M premarket volume is solid, but a no-news bounce after a sharp drop tends to mean-revert if yields rise again. Peer read-through with BE and AI-infra complex.",
+      "symbol": "BE",
+      "price": 220.655,
+      "gap_pct": 8.24,
+      "premarket_volume": 210260,
+      "catalyst": "Q3 2026 reported Oct 22: revenue +138% YoY to $1.24B, non-GAAP EPS $0.94 (stock fell post-print per headline); no same-day catalyst found.",
+      "headlines": [],
+      "catalyst_detail": "Q3 2026 (Oct 22): revenue +138% YoY to $1.24B, non-GAAP EPS $0.94; headline notes stock fell after the print. Today's +8% gap has no confirmed fresh news; earlier Oracle fuel-cell deal (Apr 2026) is structural backdrop.",
+      "why": "Rebound after post-earnings selloff plus AI-power demand narrative; buyers returning to the structural story.",
+      "impact": "210K premarket volume decent; peer NBIS also up, suggesting sector-wide AI-infrastructure bid rather than idiosyncratic spike.",
+      "horizon": "LONG_TERM",
+      "horizon_reason": "Structural AI-power demand and huge revenue growth, but today's move itself is unconfirmed and may fade.",
+      "opportunity_cost": "Competes with NBIS for AI-infra exposure; at $220 a 10% trail stop (~$198) needs ~$264 for 2:1. Strongest fundamental of today's list but extended."
+    },
+    {
+      "rank": 3,
+      "symbol": "BA",
+      "price": 175.115,
+      "gap_pct": -6.92,
+      "premarket_volume": 291213,
+      "catalyst": "No same-day catalyst found; recent snippets cite a steep ~7% selloff earlier and cabin-certification delays (May 2026), cause of today's gap-down unverified.",
+      "headlines": [],
+      "catalyst_detail": "Gap-down; cause unverified. Snippets show a steep ~7% selloff earlier followed by a dip-buy rebound, and May 2026 cabin-certification delays leaving completed aircraft waiting on seats.",
+      "why": "Likely headline-driven de-risking (production/certification or macro); cannot confirm mechanism.",
+      "impact": "291K premarket volume is highest on the list, so move has real participation; no sector read-through found.",
       "horizon": "SHORT_TERM",
-      "opportunity_cost": "Competes with BE for a weekly slot; high volatility makes a sane stop wide, so 2:1 R:R is doubtful without a pullback entry. Also check correlation gate vs existing AI holdings."
+      "horizon_reason": "Unknown catalyst, falling-knife profile; long setup disallowed by trend, no shorting per rules.",
+      "opportunity_cost": "Not actionable long; gap-down in a name we do not hold. Would displace nothing \u2014 better use of a slot is a gap-up with confirmed news."
+    },
+    {
+      "rank": 4,
+      "symbol": "LUNR",
+      "price": 11.135,
+      "gap_pct": 6.4,
+      "premarket_volume": 82414,
+      "catalyst": "No same-day catalyst found; space small-cap group down ~30% over a month, gap reads as bounce.",
+      "headlines": [],
+      "catalyst_detail": "No fresh news found. Perplexity snippet: shares closed little changed after a month-long ~30% slide, steepest in the small-cap space group; StockTwits mentions a SpaceX lock-up overhang.",
+      "why": "Oversold bounce in space small-caps, not news-driven.",
+      "impact": "82K premarket volume is light; likely mean-reverting. ASTS, RCAT, SATL also up, so a sector bounce.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Bounce within a downtrend; no structural catalyst.",
+      "opportunity_cost": "Space is crowded today (4 names); sector rule exits after 2 failed trades. A tight stop at $11 gives poor 2:1 odds in a downtrend."
+    },
+    {
+      "rank": 5,
+      "symbol": "SATL",
+      "price": 3.95,
+      "gap_pct": 6.33,
+      "premarket_volume": 51751,
+      "catalyst": "No same-day catalyst found; geospatial satellite name, recent volatility.",
+      "headlines": [],
+      "catalyst_detail": "No fresh catalyst found; recent snippet cites a volatile stretch with the stock closing near $5.53 earlier, and today it is quoted $3.95 premarket, so the snippet appears stale and the price history is unverified.",
+      "why": "Part of the space small-cap bounce; mechanism unconfirmed.",
+      "impact": "51.7K premarket volume just clears the 50K floor; illiquid, likely fades.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Thin volume, no catalyst.",
+      "opportunity_cost": "Low-priced illiquid name; position sizing by ATR would be tiny and stop distance wide. Displaces nothing worth it vs BE/NBIS."
+    },
+    {
+      "rank": 6,
+      "symbol": "RCAT",
+      "price": 4.67,
+      "gap_pct": 6.14,
+      "premarket_volume": 121673,
+      "catalyst": "Red Cat moving to acquire Steyr Motors (TipRanks via Webull); date unverified.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "AMKR",
+      "price": 38.895,
+      "gap_pct": 5.69,
+      "premarket_volume": 166921,
+      "catalyst": "Bouncing after ~8% drop on B. Riley price-target cut; Oct 21 rally on new $1.3B announcement.",
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "ASTS",
+      "price": 41.61,
+      "gap_pct": 5.45,
+      "premarket_volume": 81416,
+      "catalyst": "Scotiabank upgrade to Outperform (PT $55) noted yesterday; space/satcom momentum.",
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "STM",
+      "price": 47.59,
+      "gap_pct": 5.28,
+      "premarket_volume": 232703,
+      "catalyst": "No same-day catalyst found.",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "ONDS",
+      "price": 6.48,
+      "gap_pct": 5.11,
+      "premarket_volume": 365681,
+      "catalyst": "Defense order momentum and AI launch support sentiment (Moomoo snippet).",
+      "headlines": []
     }
   ]
 }

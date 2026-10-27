@@ -17170,3 +17170,55 @@ Only 2 hits >=5% gap; deep-dive cap 5 not reached. BE fundamentals query failed 
 - Impact: 1.25M premarket volume is solid, but a no-news bounce after a sharp drop tends to mean-revert if yields rise again. Peer read-through with BE and AI-infra complex.
 - Horizon: SHORT_TERM, No new catalyst; leverage/rates overhang unresolved.
 - Opportunity cost: Competes with BE for a weekly slot; high volatility makes a sane stop wide, so 2:1 R:R is doubtful without a pullback entry. Also check correlation gate vs existing AI holdings.
+
+### Gappers (auto-scan 10:44 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 166.78 | +8.99 | 249,639 | No same-day catalyst found; AI-infra momentum name, Q3 results pending (per Perplexity Finance snippet, ~$9B customer prepayments expected). |
+| 2 | BE | 220.655 | +8.24 | 210,260 | Q3 2026 reported Oct 22: revenue +138% YoY to $1.24B, non-GAAP EPS $0.94 (stock fell post-print per headline); no same-day catalyst found. |
+| 3 | BA | 175.115 | -6.92 | 291,213 | No same-day catalyst found; recent snippets cite a steep ~7% selloff earlier and cabin-certification delays (May 2026), cause of today's gap-down unverified. |
+| 4 | LUNR | 11.135 | +6.4 | 82,414 | No same-day catalyst found; space small-cap group down ~30% over a month, gap reads as bounce. |
+| 5 | SATL | 3.95 | +6.33 | 51,751 | No same-day catalyst found; geospatial satellite name, recent volatility. |
+| 6 | RCAT | 4.67 | +6.14 | 121,673 | Red Cat moving to acquire Steyr Motors (TipRanks via Webull); date unverified. |
+| 7 | AMKR | 38.895 | +5.69 | 166,921 | Bouncing after ~8% drop on B. Riley price-target cut; Oct 21 rally on new $1.3B announcement. |
+| 8 | ASTS | 41.61 | +5.45 | 81,416 | Scotiabank upgrade to Outperform (PT $55) noted yesterday; space/satcom momentum. |
+| 9 | STM | 47.59 | +5.28 | 232,703 | No same-day catalyst found. |
+| 10 | ONDS | 6.48 | +5.11 | 365,681 | Defense order momentum and AI launch support sentiment (Moomoo snippet). |
+
+Deep dive capped at top 5; ranks 6-10 quick-scan only. Filtered out: DPRO (vol 4,718), BW (vol 23,667). Yahoo-sourced Apify results discarded. Catalyst research thin this run.
+
+#### Deep dive: NBIS $166.78 +8.99%
+- Catalyst: No same-day catalyst located. Background: Nebius is an AI-cloud infrastructure name, strong 2026 YTD run and Microsoft deal (Sep 2025); Q3 results are the next scheduled catalyst and ~$9B customer prepayments were flagged as expected.
+- Why: Likely sector beta / AI-capex momentum ahead of earnings rather than a discrete news event (unconfirmed).
+- Impact: Premarket volume 250K at $167 is thin relative to a name this size; unconfirmed gap, could fade. AI-infra peers (BE) also gapping up, sector read-through positive.
+- Horizon: SHORT_TERM, No verified durable catalyst today; earnings pending adds binary risk.
+- Opportunity cost: Would displace a weaker holding or compete with BE for the single AI-infra slot (correlation gate); 20% cap at ~$167 and 10% trail needs stop ~$150 — 2:1 needs ~$200 target, plausible only post-earnings.
+
+#### Deep dive: BE $220.655 +8.24%
+- Catalyst: Q3 2026 (Oct 22): revenue +138% YoY to $1.24B, non-GAAP EPS $0.94; headline notes stock fell after the print. Today's +8% gap has no confirmed fresh news; earlier Oracle fuel-cell deal (Apr 2026) is structural backdrop.
+- Why: Rebound after post-earnings selloff plus AI-power demand narrative; buyers returning to the structural story.
+- Impact: 210K premarket volume decent; peer NBIS also up, suggesting sector-wide AI-infrastructure bid rather than idiosyncratic spike.
+- Horizon: LONG_TERM, Structural AI-power demand and huge revenue growth, but today's move itself is unconfirmed and may fade.
+- Opportunity cost: Competes with NBIS for AI-infra exposure; at $220 a 10% trail stop (~$198) needs ~$264 for 2:1. Strongest fundamental of today's list but extended.
+
+#### Deep dive: BA $175.115 -6.92%
+- Catalyst: Gap-down; cause unverified. Snippets show a steep ~7% selloff earlier followed by a dip-buy rebound, and May 2026 cabin-certification delays leaving completed aircraft waiting on seats.
+- Why: Likely headline-driven de-risking (production/certification or macro); cannot confirm mechanism.
+- Impact: 291K premarket volume is highest on the list, so move has real participation; no sector read-through found.
+- Horizon: SHORT_TERM, Unknown catalyst, falling-knife profile; long setup disallowed by trend, no shorting per rules.
+- Opportunity cost: Not actionable long; gap-down in a name we do not hold. Would displace nothing — better use of a slot is a gap-up with confirmed news.
+
+#### Deep dive: LUNR $11.135 +6.4%
+- Catalyst: No fresh news found. Perplexity snippet: shares closed little changed after a month-long ~30% slide, steepest in the small-cap space group; StockTwits mentions a SpaceX lock-up overhang.
+- Why: Oversold bounce in space small-caps, not news-driven.
+- Impact: 82K premarket volume is light; likely mean-reverting. ASTS, RCAT, SATL also up, so a sector bounce.
+- Horizon: SHORT_TERM, Bounce within a downtrend; no structural catalyst.
+- Opportunity cost: Space is crowded today (4 names); sector rule exits after 2 failed trades. A tight stop at $11 gives poor 2:1 odds in a downtrend.
+
+#### Deep dive: SATL $3.95 +6.33%
+- Catalyst: No fresh catalyst found; recent snippet cites a volatile stretch with the stock closing near $5.53 earlier, and today it is quoted $3.95 premarket, so the snippet appears stale and the price history is unverified.
+- Why: Part of the space small-cap bounce; mechanism unconfirmed.
+- Impact: 51.7K premarket volume just clears the 50K floor; illiquid, likely fades.
+- Horizon: SHORT_TERM, Thin volume, no catalyst.
+- Opportunity cost: Low-priced illiquid name; position sizing by ATR would be tiny and stop distance wide. Displaces nothing worth it vs BE/NBIS.
+
