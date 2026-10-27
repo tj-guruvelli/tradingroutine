@@ -17142,3 +17142,8 @@ Deep dive cap 5; only 2 rows passed filters.
 **Risks:** FOMC tomorrow (hawkish tone/hike pricing), mega-cap earnings Wed/Thu, oil/Iran headline gaps, GDP/PCE Thu, stale/inconsistent data feeds (Alpaca equity static at $100k).
 
 **Decision: HOLD.** No catalyst+confluence+no-chase setup clears the gate ahead of FOMC and big-tech earnings. Weekly trades 0/3. Notification: none (not urgent).
+
+## 2026-10-27
+
+### Gappers (auto-scan 08:11 ET, cloud)
+No watchlist names met gap >=5% / price >=$3 / volume filters. 0 hits; deep dive skipped (cap 5). No notification (hits = 0, no error).
