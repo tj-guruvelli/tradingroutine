@@ -17118,3 +17118,27 @@ Deep dive cap 5; only 2 rows passed filters.
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | LMT | B | Momentum confluence | daily swing | px $595.08, RSI 78.11, ADX 37.44, EMA9 $558.52 > EMA21 $540.82 |
+
+### Oct 27, Pre-Market Research (Day 78, Tuesday, cloud run)
+**Source note:** Apify RAG returned usable data for VIX only (Cboe/CNBC); oil/futures/catalyst queries came back stale/empty -> fell back to native WebSearch (Yahoo domains blocked). No Yahoo data used.
+
+**Account:** Equity $100,000 | Cash $100,000 | BP $400,000 (4x margin) | Daytrade count 0 | 0 positions | 0 open orders. `balance_asof: 2026-10-26`. Live-vs-$10k-baseline mismatch (flagged Jul 27) still unresolved.
+
+**Market context**
+- Futures ~flat/slightly up (S&P +0.1%, Nasdaq-100 +0.11%, Dow +0.18% at 5:30 ET). Mon Oct 26 rally on Anthropic IPO filing (AI optimism).
+- Oil elevated on US-Iran tension: WTI ~$102.3, Brent ~$111.7-116.4 (sources disagree; verify live).
+- VIX 17.88 (-2.77%, Cboe 11:01 ET; prev close 18.39; 52w 13.38-35.30). Down from mid-Oct spike.
+- Fed: FOMC decision Wed 2:00 PM ET (Warsh presser 2:30). Hold expected (~9% hike odds); markets price 2+ hikes by mid-2027 after last month's hike.
+- Today: pre-open Boeing, Coca-Cola, PayPal, UPS (Novartis +1.7%, HSBC -7.1% premarket); 10:00 ET consumer confidence + new home sales; durable goods. After close: Visa, Seagate, NXP.
+- Rest of week: MSFT/GOOGL Wed AMC, AMZN Thu, Q3 GDP + core PCE Thu Oct 29.
+
+**Held tickers:** none.
+
+**Trade ideas (research only, none actionable pre-FOMC)**
+1. Energy (XLE/XOM-type) - catalyst: WTI >$100, Iran escalation. Entry on pullback only; stop 7-10% below; target 2:1. Risk: headline reversal on de-escalation; chasing after multi-week highs.
+2. LMT (carryover) - RSI 78, ADX 37, px ~$595, EMA9 $558. Extended; wait for pullback toward EMA9. Stop ~7% under entry; target 2:1 min. Fails no-chase today.
+3. AI-infra (BE/CRWV) - Oct 26 AI-infra volatility; Anthropic IPO is a sentiment tailwind but sector has 2-failed-trade caution. Wait for MSFT/GOOGL/AMZN capex prints before any entry.
+
+**Risks:** FOMC tomorrow (hawkish tone/hike pricing), mega-cap earnings Wed/Thu, oil/Iran headline gaps, GDP/PCE Thu, stale/inconsistent data feeds (Alpaca equity static at $100k).
+
+**Decision: HOLD.** No catalyst+confluence+no-chase setup clears the gate ahead of FOMC and big-tech earnings. Weekly trades 0/3. Notification: none (not urgent).
