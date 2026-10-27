@@ -17147,3 +17147,26 @@ Deep dive cap 5; only 2 rows passed filters.
 
 ### Gappers (auto-scan 08:11 ET, cloud)
 No watchlist names met gap >=5% / price >=$3 / volume filters. 0 hits; deep dive skipped (cap 5). No notification (hits = 0, no error).
+
+
+### Gappers (auto-scan 09:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 213.29 | +10.46 | 593K | Earnings; biggest order still waiting on pipeline |
+| 2 | CRWV | 57.64 | +6.28 | 1.25M | No new news; bounce after 24% weekly slide (yields/debt) |
+
+Only 2 hits >=5% gap; deep-dive cap 5 not reached. BE fundamentals query failed (502), headline-level only.
+
+#### Deep dive: BE $213.29 10.46%
+- Catalyst: Bloom Energy reported quarterly results; coverage notes its biggest order is still contingent on a pipeline buildout. Fundamentals fetch failed (502), so detail is headline-level only.
+- Why: Post-earnings gap on AI-datacenter power demand narrative; momentum buyers chase fuel-cell backlog.
+- Impact: 593K premarket volume is heavy; earnings gaps with a large order backlog can sustain, but order timing risk caps conviction. Read-through to AI-power peers.
+- Horizon: SHORT_TERM, Headline/earnings-driven, key order not yet converting; unverified durable thesis.
+- Opportunity cost: Would consume one of 3 weekly slots and displace weaker holding or CRWV; +10% gap makes a 7-10% stop wide, 2:1 R:R only clears with a measured pullback entry.
+
+#### Deep dive: CRWV $57.64 6.28%
+- Catalyst: No fresh company-specific news found. Stock fell ~24% last week on rising yields and debt-service cost fears; today's gap reads as a bounce. Backlog was $66.8B at end-2025 with 2025 revenue $5.1B (+168% YoY).
+- Why: Oversold bounce in a highly levered AI-infrastructure name; sensitive to rates.
+- Impact: 1.25M premarket volume is solid, but a no-news bounce after a sharp drop tends to mean-revert if yields rise again. Peer read-through with BE and AI-infra complex.
+- Horizon: SHORT_TERM, No new catalyst; leverage/rates overhang unresolved.
+- Opportunity cost: Competes with BE for a weekly slot; high volatility makes a sane stop wide, so 2:1 R:R is doubtful without a pullback entry. Also check correlation gate vs existing AI holdings.

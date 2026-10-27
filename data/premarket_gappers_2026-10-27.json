@@ -1,0 +1,38 @@
+{
+  "scanned_at": "2026-10-27T13:16:00Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 213.29,
+      "gap_pct": 10.46,
+      "premarket_volume": 593038,
+      "catalyst": "Bloom Energy just reported earnings; largest order still waiting on a pipeline (Investing.com).",
+      "headlines": [
+        "Bloom Energy Just Reported\u2014Its Biggest Order Is Still Waiting on a Pipeline"
+      ],
+      "catalyst_detail": "Bloom Energy reported quarterly results; coverage notes its biggest order is still contingent on a pipeline buildout. Fundamentals fetch failed (502), so detail is headline-level only.",
+      "why": "Post-earnings gap on AI-datacenter power demand narrative; momentum buyers chase fuel-cell backlog.",
+      "impact": "593K premarket volume is heavy; earnings gaps with a large order backlog can sustain, but order timing risk caps conviction. Read-through to AI-power peers.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Would consume one of 3 weekly slots and displace weaker holding or CRWV; +10% gap makes a 7-10% stop wide, 2:1 R:R only clears with a measured pullback entry."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 57.64,
+      "gap_pct": 6.28,
+      "premarket_volume": 1247758,
+      "catalyst": "Rebound after ~24% weekly slide on bond-yield and debt-service worries (Market Ontology).",
+      "headlines": [
+        "CoreWeave stock plunged 24% over the past week on rising bond yields, debt service concerns"
+      ],
+      "catalyst_detail": "No fresh company-specific news found. Stock fell ~24% last week on rising yields and debt-service cost fears; today's gap reads as a bounce. Backlog was $66.8B at end-2025 with 2025 revenue $5.1B (+168% YoY).",
+      "why": "Oversold bounce in a highly levered AI-infrastructure name; sensitive to rates.",
+      "impact": "1.25M premarket volume is solid, but a no-news bounce after a sharp drop tends to mean-revert if yields rise again. Peer read-through with BE and AI-infra complex.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Competes with BE for a weekly slot; high volatility makes a sane stop wide, so 2:1 R:R is doubtful without a pullback entry. Also check correlation gate vs existing AI holdings."
+    }
+  ]
+}
