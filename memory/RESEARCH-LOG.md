@@ -17287,3 +17287,22 @@ Note: top-5 deep dive only (ranks 6-10 quick-scan). Volume = session volume at s
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | LMT | B | Momentum confluence | daily swing | px $627.47, RSI 82.65, ADX 39.46, EMA9 $573.89 > EMA21 $549.41 |
+
+## 2026-10-28 — Pre-market (cloud)
+Sourcing: Apify RAG returned empty/blocked pages (barchart/MarketWatch/CNBC quote pages, YouTube); fell back to WebSearch. Yahoo excluded. Live oil/futures/VIX levels NOT obtained — gap, not guessed.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | positions 0 | open orders 0 | PDT/daytrade count not shown by API. Still the $100k-vs-$10k baseline mismatch (flagged Jul 27).
+
+**Market context:**
+- Oil / S&P futures / VIX: no dated same-day data found (search returned undated Schwab previews). Gap.
+- Earnings (Digrin, third-party, timing unconfirmed): BMO — GE Vernova, T-Mobile, Boeing, Otis, UMC, Santander, Equinor. AMC — Alphabet, ServiceNow.
+- Econ calendar: no source found. Gap.
+
+**Ideas (none actionable pre-open, entry on pullback only):**
+- GEV — post-earnings reaction; wait for gap to settle, no chase. Entry: pullback to prior-day close; stop 7% below; target 2:1.
+- GOOGL — AMC print tonight; no pre-earnings entry. Revisit tomorrow.
+- BA — earnings BMO; falling-knife history (-9% gap Oct 27 w/o catalyst); long only if base forms.
+
+**Risks:** missing macro data; Alphabet/ServiceNow AMC event risk; AI-infra sector chop; thin/spread-wide names.
+
+**Decision: HOLD** (0/3 trades this week; patience > activity).
