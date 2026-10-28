@@ -17306,3 +17306,6 @@ Sourcing: Apify RAG returned empty/blocked pages (barchart/MarketWatch/CNBC quot
 **Risks:** missing macro data; Alphabet/ServiceNow AMC event risk; AI-infra sector chop; thin/spread-wide names.
 
 **Decision: HOLD** (0/3 trades this week; patience > activity).
+
+### Gappers (auto-scan 08:19 ET, cloud)
+- No gappers: 0 rows with |gap| >= 5% (price >= $3). Top mover ORCL +4.28%, then META -1.41%. No deep dive.
