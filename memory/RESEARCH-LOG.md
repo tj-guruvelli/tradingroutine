@@ -17327,3 +17327,6 @@ Sourcing: Apify RAG returned empty/blocked pages (barchart/MarketWatch/CNBC quot
 
 ### Gappers (auto-scan 10:10 ET, cloud)
 No hits: 0 rows with |gap| >= 5% (largest TRMD +4.84%, HAFN +4.24%, RR -4.23%). Script rc=0. No catalyst/deep-dive run. Research only, no orders.
+
+### Gappers (auto-scan 11:20 ET, cloud)
+- No hits: 0 watchlist tickers with |gap| >= 5% (price >= $3). No deep dive.
