@@ -2112,3 +2112,59 @@ Weekly trade count: 0/3 (week of Oct 26). 78th trading day since launch
 confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 122nd+
 straight session, operator review pending. Cloud mode: committing/pushing
 this log per STEP 9 (STEP 7 wrote candidate pass/fail entries).
+
+### Oct 28, Market-Open (Day 79, Wednesday, cloud run)
+**No trades.** Account re-confirmed live: $100,000 equity, $100,000 cash, 0
+positions, 0 open orders (`balance_asof: 2026-10-27`).
+
+STEP 1: today's RESEARCH-LOG — Pre-Market (decision HOLD): GEV (post-
+earnings reaction, wait for gap to settle, entry only on pullback to prior-
+day close, no trigger hit today), GOOGL (AMC earnings print tonight,
+explicitly no pre-earnings entry), BA (earnings BMO, falling-knife history,
+long only if a base forms — no base confirmed). Gappers 08:19 ET: 0 hits.
+Gappers 09:26 ET: NBIS +12.89%, CRWV +10.66%, BE +10.41%, ONDS +8.35%, OKLO
++6.22%, RDW +6.0% — deep dive NOT completed, every catalyst logged as
+"n/a"/"unconfirmed" (Apify returned only quote/aggregator pages, Yahoo hits
+discarded).
+
+STEP 2: setup-scan — no same-day file yet at run time (expected; market-
+open fires before setup-scan-cloud's first 2026-10-28 run). Used prior
+day's most recent file, `data/setup-scan_cloud_2026-10-27_1837ET.json`: 1
+hit — LMT grade B (RSI14 82.65, ADX14 39.46, EMA9 $573.89, EMA21 $549.41,
+curr_px $627.47 at scan time). Same carryover ticker as Oct 26/Oct 27,
+now more overbought than either prior read (RSI 78.11 on Oct 26 scan).
+
+STEP 3: live quotes re-pulled — GEV ap $868/bp $836 (spread ~3.7%), GOOGL
+ap $324.02/bp $323.95, BA ap $167.79/bp $167.48 (down further from
+Oct 27's $170.38 print), NBIS ap $174.70/bp $168.00, CRWV ap $59.13/bp
+$57.04, BE ap $222.12/bp $210.20, ONDS ap $6.61/bp $6.60, OKLO ap $26.56/bp
+$26.51, RDW ap $8.79/bp $8.77, LMT ap $652.05/bp $583.12.
+
+STEP 4 — pass/fail per candidate:
+- GEV: FAIL — RESEARCH-LOG explicitly says wait for pullback to prior-day
+  close; no trigger hit, no confluence check run, no documented catalyst
+  beyond stale post-earnings reaction note.
+- GOOGL: FAIL — RESEARCH-LOG explicitly defers entry until after tonight's
+  AMC print; no pre-earnings entry by rule.
+- BA: FAIL — no catalyst documented for the ongoing decline (still a
+  falling knife, now $167.79 vs $170.38 Oct 27); no base formed; shorting
+  banned regardless.
+- NBIS/CRWV/BE/ONDS/OKLO/RDW: FAIL — catalyst requirement; today's
+  RESEARCH-LOG logs every one as "n/a"/"unconfirmed" catalyst (deep dive
+  not completed), so none clears the documented-catalyst gate. BE
+  additionally carries a carryover no-chase fail history (Oct 23, Oct 26,
+  Oct 27).
+- LMT: FAIL — no-chase/overbought rule; RSI14 82.65 (deeper overbought than
+  Oct 26's 78.11, which already failed), no pullback to EMA9 ($573.89),
+  price has only extended further away from any valid entry zone on every
+  successive read.
+All candidates fail the catalyst+confluence+no-chase gate — STEPs 5-6
+(orders/stops) skipped.
+
+STEP 8 (notification): N/A — no trade fired this run.
+
+Weekly trade count: 0/3 (week of Oct 26). 79th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 123rd+
+straight session, operator review pending. Cloud mode: committing/pushing
+this log per STEP 9 (STEP 7 wrote candidate pass/fail entries).
