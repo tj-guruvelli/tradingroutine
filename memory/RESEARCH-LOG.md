@@ -17330,3 +17330,12 @@ No hits: 0 rows with |gap| >= 5% (largest TRMD +4.84%, HAFN +4.24%, RR -4.23%). 
 
 ### Gappers (auto-scan 11:20 ET, cloud)
 - No hits: 0 watchlist tickers with |gap| >= 5% (price >= $3). No deep dive.
+
+### Setup Scan (16:38 ET, cloud)
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 35.3, EMA9 $402.52 > EMA21 $392.87, px $400.74 |
+| MA | B | Momentum confluence | daily swing | ADX 34.3, EMA9 $613.94 > EMA21 $600.96, px $585.27 |
+| LMT | B | Momentum confluence | daily swing | ADX 41.3, EMA9 $583.73 > EMA21 $556.11, px $630.24 |
+
+- 60/60 watchlist tickers scanned, 0 errors. Setup A not evaluated (16:38 ET outside 10:00-15:30 ET window) — grade A unreachable this run, not a 0-hit result. 0 grade-A hits regardless; 3 grade-B hits above are next-day daily-swing candidates for `market-open.md`. No trades placed (research only).
