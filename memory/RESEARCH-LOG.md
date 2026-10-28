@@ -17309,3 +17309,18 @@ Sourcing: Apify RAG returned empty/blocked pages (barchart/MarketWatch/CNBC quot
 
 ### Gappers (auto-scan 08:19 ET, cloud)
 - No gappers: 0 rows with |gap| >= 5% (price >= $3). Top mover ORCL +4.28%, then META -1.41%. No deep dive.
+
+
+## 2026-10-28
+### Gappers (auto-scan 09:26 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 172.75 | +12.89% | 632,984 | n/a (Apify returned no usable catalyst) |
+| 2 | CRWV | 61.05 | +10.66% | 1,408,672 | n/a (Apify returned no usable catalyst) |
+| 3 | BE | 225.09 | +10.41% | 468,305 | n/a (Apify returned no usable catalyst) |
+| 4 | ONDS | 6.68 | +8.35% | 1,082,627 | n/a (Apify returned no usable catalyst) |
+| 5 | OKLO | 27.56 | +6.22% | 406,237 | Unconfirmed; only found older item: Oklo launches $1B at-the-market stock offering program (investing.com) |
+| 6 | RDW | 8.83 | +6.0% | 547,464 | Unconfirmed; Truist upgrade to Buy / PT raise surfaced (source Yahoo, discarded; date unverified) |
+
+- Deep dive (top 5, cap 5): NOT completed. Apify RAG returned only quote/aggregator pages (several Yahoo hits discarded, CRWV query 502'd once). No sourced catalyst_detail/why/impact; left null. Gap: catalyst data.
+- Vol = intraday share volume from Alpaca snapshot. Research only, no orders.
