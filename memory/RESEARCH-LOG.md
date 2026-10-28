@@ -17324,3 +17324,6 @@ Sourcing: Apify RAG returned empty/blocked pages (barchart/MarketWatch/CNBC quot
 
 - Deep dive (top 5, cap 5): NOT completed. Apify RAG returned only quote/aggregator pages (several Yahoo hits discarded, CRWV query 502'd once). No sourced catalyst_detail/why/impact; left null. Gap: catalyst data.
 - Vol = intraday share volume from Alpaca snapshot. Research only, no orders.
+
+### Gappers (auto-scan 10:10 ET, cloud)
+No hits: 0 rows with |gap| >= 5% (largest TRMD +4.84%, HAFN +4.24%, RR -4.23%). Script rc=0. No catalyst/deep-dive run. Research only, no orders.
