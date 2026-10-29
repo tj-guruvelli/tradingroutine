@@ -17367,3 +17367,25 @@ Sourcing: Apify RAG returned CNN/CNBC shells with no live numbers, YouTube, and 
 **Risks:** missing macro data; Alphabet/AI-capex reaction; oil/geopolitics; thin/wide-spread names.
 
 **Decision: HOLD** (0/3 trades this week; patience > activity).
+
+## 2026-10-29
+### Gappers (auto-scan 08:34 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GOOG | 286.04 | -9.72 | 718k | Q3 EPS/revenue miss, slowing Search, AI capex (CNBC) |
+| 2 | ORCL | 141.54 | +8.41* | 2.64M | *Likely stale prev_close; +10.7% yesterday on investor day, ~-1% to -2% today |
+Filtered: OPEN $2.02 +5.48% (price<3). Only 2 rows qualified; no ranks 6-10. Apify returned stale/irrelevant pages (one Yahoo URL discarded); catalysts sourced via WebSearch.
+
+#### Deep dive: GOOG $286.04 -9.72%
+- Catalyst: Missed Q3 EPS and revenue; Search growth slowing, AI spend rising, $8.2B unrealized SpaceX stake loss hit net income. MSFT ~+4%.
+- Why: Miss plus capex worries break the growth-justifies-spend narrative.
+- Impact: Heavy volume; post-earnings gap-downs usually drift/retest. Negative read-through for AI-capex names.
+- Horizon: SHORT_TERM, earnings-driven, thesis debated, no base.
+- Opportunity cost: Falling knife, fails Confluence; no sane stop for 2:1 R:R. Pass. Check -7% cut if held.
+
+#### Deep dive: ORCL $141.54 +8.41% (suspect)
+- Catalyst: ~+11% on 10/28 (investor day, $523B backlog); scanner prev_close 130.56 predates it. True gap ~-2%.
+- Why: AI-payoff narrative buying yesterday; today a giveback.
+- Impact: Not a real gap; extended after +11% day.
+- Horizon: SHORT_TERM, move already happened.
+- Opportunity cost: Chasing extended; wide stop, fails 2:1 R:R. Pass. Verify gappers-alpaca.sh prev_close logic.

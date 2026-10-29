@@ -1,0 +1,15 @@
+{"scanned_at":"2026-10-29T12:34:44Z","deep_dive_cap":5,"note":"OPEN ($2.02, +5.48%) filtered: price<3. Only 2 qualifying rows. ORCL gap likely stale-prev_close artifact.",
+"gappers":[
+{"rank":1,"symbol":"GOOG","price":286.04,"gap_pct":-9.72,"premarket_volume":718101,"catalyst":"Q3 earnings miss (EPS+revenue), slowing Search growth, rising AI capex; ~-10% premarket, on track for worst post-earnings drop ever (CNBC)","headlines":["Alphabet falls 10% in premarket, putting it on course for its biggest ever post-earnings drop (CNBC)"],
+"catalyst_detail":"Alphabet missed Q3 EPS and revenue estimates. Search growth slowed, AI spend rose, and an $8.2B unrealized loss on its SpaceX stake hit net income. Microsoft was ~+4% on its own print.",
+"why":"Earnings/revenue miss plus capex worries remove the growth-justifies-spend narrative; momentum holders exit.",
+"impact":"Volume 718k premarket is heavy for the session. Post-earnings gap-downs of this size usually drift or retest rather than fully mean-revert. Read-through: negative for AI-capex-heavy names, positive relative bid for MSFT.",
+"horizon":"SHORT_TERM","horizon_reason":"Earnings-driven, thesis debate unresolved (Morningstar calls it oversold); not a long entry without base formation.",
+"opportunity_cost":"Long-only strategy: a falling knife, fails Confluence rule. Would displace any stronger momentum holding; cannot clear 2:1 R:R at a sane stop below the gap low. Pass; a held GOOG position needs the -7% cut check."},
+{"rank":2,"symbol":"ORCL","price":141.54,"gap_pct":8.41,"premarket_volume":2642938,"catalyst":"Gap likely a data artifact: ORCL rallied ~+10.7% to ~144.5 yesterday (investor day); 24/7 Wall St reports it -1.2% premarket today","headlines":["Oracle Just Did What Alphabet Couldn't: Convince Wall Street That AI Spending Pays Off (24/7 Wall St.)"],
+"catalyst_detail":"Oracle jumped ~11% on 10/28 on its investor day ($523B cloud backlog cited in coverage). Scanner prev_close of 130.56 predates that rally; true gap vs ~144.5 close is about -2%.",
+"why":"Investor-day AI-spend payoff narrative drew buyers yesterday; today is a small giveback, not a fresh catalyst.",
+"impact":"Not a real 8.4% gap. Extended after +11% day; sector read-through is GOOG weakness vs ORCL strength on AI-capex returns.",
+"horizon":"SHORT_TERM","horizon_reason":"Move already happened yesterday; chasing after an 11% day is poor R:R.",
+"opportunity_cost":"Entering extended after a one-day spike; stop distance too wide for 2:1 R:R. Pass. Also verify scanner prev_close logic (stale reference)."}
+]}
