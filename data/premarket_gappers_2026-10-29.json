@@ -1,23 +1,36 @@
 {
-  "scanned_at": "2026-10-29T13:27:00Z",
+  "scanned_at": "2026-10-29T14:45:00Z",
   "deep_dive_cap": 5,
   "gappers": [
-    {"rank": 1, "symbol": "GOOG", "price": 283.87, "gap_pct": -10.4, "premarket_volume": 718101,
-     "catalyst": "Q3 earnings miss (EPS $2.12 vs $3.02 est) and FCF deficit overshadow Google Cloud +103%.",
-     "headlines": ["Alphabet shares tumble as earnings miss overshadows cloud boom (Investing.com)", "Alphabet tumbles as earnings miss overshadows Google Cloud surge (Seeking Alpha)"],
-     "catalyst_detail": "Q3 reported 10/28 after close. EPS $2.12 vs $3.02 consensus (adj $2.67), hurt by an $8.7B equity-securities loss. Revenue +25% to $127.6B, in line. Cloud revenue +103% to $30.71B beat, but search/ads missed and FCF turned to a $9.07B deficit. Capex guided to rise significantly in 2027.",
-     "why": "Cash burn and capex ramp reignite AI-spend worries; ads miss removes the offset from Cloud strength.",
-     "impact": "Premarket volume 718K and Nasdaq futures -1.1% on the name. Large-cap earnings gap-downs often continue on analyst downgrades, but Cloud beat may attract dip buyers. Read-through: AI/megacap tech sentiment.",
-     "horizon": "SHORT_TERM",
-     "opportunity_cost": "Long-side catch-the-knife is weak vs rulebook (no confirmed reversal). Would use a slot of 6 and 1 of 3 weekly trades; a 10% trail stop is ~within gap range, so 2:1 R:R is doubtful until price stabilises.",
-     "sources_note": "Move magnitude varies by source (8.5%-11%)."},
-    {"rank": 2, "symbol": "ORCL", "price": 141.64, "gap_pct": 8.49, "premarket_volume": 2642938,
-     "catalyst": "Investor Day: FY30 revenue target $225B and $20B cap on new funding.",
-     "headlines": ["Oracle shares jump as long-term outlook targets $225 billion in revenue (Investing.com)", "Oracle jumps as company provides long-term guidance at analyst day (Seeking Alpha)"],
-     "catalyst_detail": "Oracle set FY30 revenue goal of at least $225B and capped new capital-market funding at $20B ($10B equity, $10B gross debt) through FY30. Reports place the main jump on 10/28 (~+9-11%), so the Alpaca gap vs prev_close may partly reflect that session's move rather than a fresh overnight gap. Stock is still ~-48% over 12 months.",
-     "why": "Funding cap eases the debt/financing overhang while the revenue target restores growth narrative; short covering and analyst reiterations (Wells Fargo Overweight) add fuel.",
-     "impact": "Volume 2.6M is strong. Move is a rebound within a long downtrend; follow-through uncertain after a two-day pop.",
-     "horizon": "LONG_TERM",
-     "opportunity_cost": "Structural guidance reset fits multi-week swing, but extended after a 1-2 day run. Would displace a weaker holding or GOOG idea; entry near highs makes 2:1 R:R at a 10% trail hard to clear."}
+    {
+      "rank": 1,
+      "symbol": "GOOG",
+      "price": 283.34,
+      "gap_pct": -12.06,
+      "premarket_volume": 896289,
+      "catalyst": "Q3 EPS/FCF miss, Cloud +103% beat, capex guide held at $195-205B (CNBC/TradingView)",
+      "headlines": [],
+      "catalyst_detail": "Q3 out 10/28 AMC: adj EPS $2.67 vs $3.02 est (GAAP $2.12 incl $8.7B equity-securities loss), revenue $127.6B vs $128.2B, FCF -$9.07B vs -$2.7B est. Cloud +103% YoY beat; capex $51.4B (below est), FY guide held $195-205B with 2027 seen far higher.",
+      "why": "Cash burn plus capex ramp reignites AI-spend ROI fears; ads/search miss outweighs Cloud strength.",
+      "impact": "Volume 896k and still widening (-12% vs -9.7% earlier runs). Neocloud peers (NBIS, CRWV, IREN) also sold off on MSFT/GOOG capex read-through. Gap-downs this size tend to drift/retest; Cloud beat may attract dip buyers.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "earnings reaction, no confirmed base",
+      "opportunity_cost": "Falling knife, fails Confluence; no sane stop for 2:1 R:R. Would use 1 of 3 weekly slots. Pass."
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 173.05,
+      "gap_pct": -5.15,
+      "premarket_volume": 118179,
+      "catalyst": "AI neocloud selloff after MSFT/GOOG capex miss; financing concerns (Benzinga/Invezz)",
+      "headlines": [],
+      "catalyst_detail": "Neocloud group (NBIS, CRWV, IREN, APLD) fell premarket after Microsoft capex missed on delayed third-party capacity. Earlier overhang: CEO said some capital sources temporarily closed, Musk neocloud-financing warnings, $3.5B Citi facility debt worries. One analyst upgraded to Buy on the dip.",
+      "why": "Capex delay read as execution/demand-timing risk for third-party AI capacity providers; financing fear compounds it.",
+      "impact": "Premarket vol 118k, thin. Sector-wide move (CRWV/IREN same direction), so more beta than idiosyncratic; likely trades with GOOG/MSFT tape.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "sector sentiment shock, financing overhang unresolved",
+      "opportunity_cost": "Catching a sector knife; sector momentum rule says avoid until AI-capex tape stabilises. No clean 2:1 R:R at a 7% stop. Pass."
+    }
   ]
 }

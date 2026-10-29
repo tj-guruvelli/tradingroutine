@@ -17411,3 +17411,25 @@ Only 2 hits >=5%. Apify RAG results were stale/off-target (Yahoo URLs discarded)
 - Impact: 2.6M vol strong; rebound inside long downtrend, follow-through uncertain after 1-2 day pop.
 - Horizon: LONG_TERM, structural guidance reset, but extended near term.
 - Opportunity cost: Would displace a weaker holding; entry after run-up makes 2:1 R:R at 10% trail hard.
+
+### Gappers (auto-scan 10:42 ET, cloud) — 2026-10-29
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GOOG | 283.34 | -12.06 | 896K | Q3 EPS/FCF miss, Cloud +103%, capex guide held $195-205B |
+| 2 | NBIS | 173.05 | -5.15 | 118K | Neocloud selloff after MSFT/GOOG capex miss; financing worries |
+
+Only 2 hits >=5%. Apify RAG returned empty/off-target pages; catalysts via WebSearch (CNBC, TradingView, Benzinga, Invezz). Deep dive covered both (cap 5).
+
+#### Deep dive: GOOG $283.34 -12.06%
+- Catalyst: Q3 out 10/28 AMC. Adj EPS $2.67 vs $3.02 (GAAP $2.12, $8.7B securities loss); rev $127.6B vs $128.2B; FCF -$9.07B vs -$2.7B est. Cloud +103%; capex $51.4B, FY guide held $195-205B.
+- Why: Cash burn + capex ramp reignite AI-spend fears; ads miss offsets Cloud.
+- Impact: Gap widened vs earlier runs (-9.7%/-10.4%); neocloud peers also down. Retest/drift likely; Cloud beat may draw dip buyers.
+- Horizon: SHORT_TERM, earnings reaction, no confirmed base.
+- Opportunity cost: Falling knife, fails Confluence, no 2:1 R:R stop. Pass.
+
+#### Deep dive: NBIS $173.05 -5.15%
+- Catalyst: Neocloud group fell after Microsoft capex missed on delayed third-party capacity; prior overhang from CEO "some capital sources temporarily closed" and $3.5B Citi facility debt concerns. One analyst upgraded to Buy on dip.
+- Why: Capex delays read as demand-timing/execution risk for capacity providers; financing fear compounds.
+- Impact: Thin 118K premarket vol; sector beta (CRWV, IREN same way), trades with AI-capex tape.
+- Horizon: SHORT_TERM, sector sentiment shock, financing overhang unresolved.
+- Opportunity cost: Sector knife; no clean 2:1 R:R at 7% stop. Pass.
