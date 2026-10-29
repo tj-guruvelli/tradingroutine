@@ -17389,3 +17389,25 @@ Filtered: OPEN $2.02 +5.48% (price<3). Only 2 rows qualified; no ranks 6-10. Api
 - Impact: Not a real gap; extended after +11% day.
 - Horizon: SHORT_TERM, move already happened.
 - Opportunity cost: Chasing extended; wide stop, fails 2:1 R:R. Pass. Verify gappers-alpaca.sh prev_close logic.
+
+### Gappers (auto-scan 09:26 ET, cloud) — 2026-10-29
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GOOG | 283.87 | -10.4 | 718K | Q3 EPS miss ($2.12 vs $3.02), FCF deficit; Cloud +103% |
+| 2 | ORCL | 141.64 | +8.49 | 2.64M | Investor Day: FY30 $225B rev target, $20B funding cap |
+
+Only 2 hits >=5%. Apify RAG results were stale/off-target (Yahoo URLs discarded); catalysts sourced via WebSearch (Investing.com, Seeking Alpha, CNBC).
+
+#### Deep dive: GOOG $283.87 -10.4%
+- Catalyst: Q3 out 10/28 AMC. EPS $2.12 vs $3.02 est (adj $2.67); $8.7B equity-securities loss. Rev +25% to $127.6B in line; Cloud +103% beat; search/ads missed; FCF -$9.07B; 2027 capex to rise significantly.
+- Why: Cash burn + capex ramp reignite AI-spend fears; ads miss offsets Cloud strength.
+- Impact: Futures -1.1%. Gap-downs of this size often extend on downgrades; Cloud beat may draw dip buyers. Move size varies by source (8.5-11%).
+- Horizon: SHORT_TERM, headline/earnings reaction, no confirmed reversal.
+- Opportunity cost: Uses 1 of 3 weekly trades/slot of 6; no 2:1 R:R at a 10% trail until price stabilises.
+
+#### Deep dive: ORCL $141.64 +8.49%
+- Catalyst: Investor Day: FY30 revenue >= $225B; new capital-market funding capped at $20B ($10B equity/$10B debt). Main jump reportedly 10/28, so gap vs prev_close may be partly stale. Still ~-48% over 1yr.
+- Why: Funding cap eases debt overhang; revenue target restores growth narrative; analyst reiterations.
+- Impact: 2.6M vol strong; rebound inside long downtrend, follow-through uncertain after 1-2 day pop.
+- Horizon: LONG_TERM, structural guidance reset, but extended near term.
+- Opportunity cost: Would displace a weaker holding; entry after run-up makes 2:1 R:R at 10% trail hard.
