@@ -17433,3 +17433,17 @@ Only 2 hits >=5%. Apify RAG returned empty/off-target pages; catalysts via WebSe
 - Impact: Thin 118K premarket vol; sector beta (CRWV, IREN same way), trades with AI-capex tape.
 - Horizon: SHORT_TERM, sector sentiment shock, financing overhang unresolved.
 - Opportunity cost: Sector knife; no clean 2:1 R:R at 7% stop. Pass.
+
+### Gappers (auto-scan 11:11 ET, cloud) — 2026-10-29
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GOOG | 283.71 | -11.95 | 1.05M | Q3 EPS/FCF miss, Cloud +103%, capex guide held $195-205B |
+
+Only 1 hit. AVAV +5.32% ($132.61) excluded: vol 5.9K < 50K. Catalyst reused from 10:42 run (no new fetch).
+
+#### Deep dive: GOOG $283.71 -11.95%
+- Catalyst: Adj EPS $2.67 vs $3.02; rev $127.6B vs $128.2B; FCF -$9.07B vs -$2.7B est; Cloud +103%; capex guide held $195-205B.
+- Why: Cash burn + capex ramp reignite AI-spend fears; ads miss offsets Cloud.
+- Impact: Gap steady vs 10:42 run; 1.05M vol. Retest/drift likely; dip buyers possible.
+- Horizon: SHORT_TERM, earnings reaction, no confirmed base.
+- Opportunity cost: Falling knife, fails Confluence, no 2:1 R:R. Pass.
