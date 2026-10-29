@@ -17457,3 +17457,13 @@ Only 1 hit. AVAV +5.32% ($132.61) excluded: vol 5.9K < 50K. Catalyst reused from
 | MA | B | Momentum confluence | daily swing | px $634.97 > SMA200 $534.84, RSI 59.5, ADX 33.7, EMA9 $613.31 > EMA21 $601.86 |
 
 No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
+
+### Setup Scan (18:37 ET, cloud)
+60 scanned. grade_a_possible: false (outside 10:00-15:30 ET — Setup A not evaluated, 16:30 ET cadence fire). 0 grade-A, 2 grade-B, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | px $406.19 > SMA200 $341.39, RSI 61.4, ADX 34.2, EMA9 $402.22 > EMA21 $393.62 |
+| MA | B | Momentum confluence | daily swing | px $634.97 > SMA200 $534.84, RSI 59.5, ADX 33.7, EMA9 $613.31 > EMA21 $601.86 |
+
+No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
