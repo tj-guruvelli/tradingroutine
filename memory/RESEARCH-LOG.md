@@ -17348,3 +17348,22 @@ No hits: 0 rows with |gap| >= 5% (largest TRMD +4.84%, HAFN +4.24%, RR -4.23%). 
 | LMT | B | Momentum confluence | daily swing | RSI 75.9, ADX 41.3, EMA9 $583.73 > EMA21 $556.11 |
 
 - 60/60 watchlist tickers scanned, 0 errors. Setup A not evaluated (18:38 ET outside 10:00-15:30 ET window) — grade A unreachable this run. 0 grade-A hits; same 3 grade-B hits as the 16:38 ET run (V, MA, LMT unchanged). No trades placed (research only).
+
+## 2026-10-29 — Pre-market (cloud)
+Sourcing: Apify RAG returned CNN/CNBC shells with no live numbers, YouTube, and Yahoo calendar pages (DISCARDED); econ-calendar query timed out. WebSearch fallback returned only undated items. Live oil/futures/VIX/econ calendar NOT obtained — gaps, not guessed.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | positions 0 | open orders 0 | daytrade count not shown by API. Still the $100k-vs-$10k baseline mismatch (flagged Jul 27).
+
+**Market context:**
+- Oil / S&P futures / VIX: gap. Undated snippets hint Brent ~$97 and Alphabet capex guide raised to $195-205B with a miss (unverified date, not relied on). CNN headline Oct 27: Trump remarks on Venezuelan oil.
+- Earnings: Alphabet reported AMC Oct 28 per prior log; reaction unverified.
+- Econ calendar: no source found. Gap.
+
+**Ideas (none actionable pre-open):**
+- GOOGL — post-earnings reaction; no chase. Entry only on pullback/base after reaction confirmed; stop 7% below; target 2:1.
+- GEV — wait for pullback to prior-day close; stop 7%; target 2:1.
+- LMT — RSI >75, overbought; only on pullback to EMA9 (~$584); stop 7%.
+
+**Risks:** missing macro data; Alphabet/AI-capex reaction; oil/geopolitics; thin/wide-spread names.
+
+**Decision: HOLD** (0/3 trades this week; patience > activity).
