@@ -17467,3 +17467,24 @@ No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; fe
 | MA | B | Momentum confluence | daily swing | px $634.97 > SMA200 $534.84, RSI 59.5, ADX 33.7, EMA9 $613.31 > EMA21 $601.86 |
 
 No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
+
+### Pre-Market — 2026-10-30 (Fri)
+**Account:** equity $100,000 | cash $100,000 | BP $400,000 (4x margin) | 0 positions | 0 open orders | daytrade count n/a (not returned). Still $100k vs $10k baseline mismatch (unresolved, operator review pending).
+
+**Market context** (Apify RAG used; 2 of 3 queries unusable -> WebSearch fallback; Yahoo hit discarded)
+- Oil: WTI ~$103.4-104.2, Brent ~$115.4-116.2 (oilprice.com / BusinessInsider, 10/30). Elevated, WTI +1.5% intraday.
+- Futures: GAP — no Oct 30 premarket source found. Last data Oct 26: SPX fut ~7,600, NDX ~29,200, Dow ~52,500.
+- VIX: GAP — no clean non-Yahoo Oct 29/30 print found.
+- Calendar: FOMC Oct 27-28 done; Sept PCE due Oct 29 (result not confirmed). Oct 30 earnings/catalysts: GAP — not found.
+- Sector momentum YTD: query returned only Yahoo (discarded) — GAP.
+- Carryover: GOOG gap-down on Q3 FCF/capex miss (Oct 29); neocloud group weak (NBIS) on MSFT capex; V/MA grade-B momentum setups (Oct 29 scan).
+- Held tickers: none.
+
+**Trade ideas (watch only, none actionable pre-open)**
+1. V — daily momentum: px $406.19 > SMA200 $341, RSI 61, ADX 34. Entry on pullback to EMA9 ~$402; stop ~$377 (-7%); target ~$432+ (2:1). Needs catalyst doc + insider/VWAP confluence.
+2. MA — px $634.97 > SMA200 $535, RSI 59.5. Entry ~EMA9 $613 pullback; stop ~$570; target ~$700 (2:1). Same catalyst gap.
+3. GEV/GOOGL/LMT — carry prior-day triggers (pullbacks to prior close / base / EMA9 ~$584); no-chase.
+
+**Risks:** Oil >$100 (inflation/rates), post-PCE reaction, AI-capex sentiment shock (GOOG/MSFT), month-end flows, thin data this run (futures/VIX/catalyst gaps).
+
+**Decision: HOLD.** No documented catalyst + confluence; 0/3 weekly trades; patience > activity.
