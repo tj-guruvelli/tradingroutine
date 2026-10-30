@@ -17568,3 +17568,54 @@ Deep dive cap: top 5 (ranks 6-8 quick-scan only; only 8 passed filter). Note: se
 - Impact: Volume 1.5M; sector read-through with NBIS/CRWV. Deeply below 52w high, trend down.
 - Horizon: SHORT_TERM, sentiment-driven; LONG_TERM only if backlog thesis intact (unverified).
 - Opportunity cost: Correlation with GOOG/CRWV/NBIS limits to one AI name; no clear 2:1 setup mid-downtrend.
+
+### Gappers (auto-scan 10:25 ET, cloud)
+Filter: |gap|>=5%, price>=$3, vol>=50k. 24 raw hits, 10 pass (all gap DOWN). Deep dive capped at top 5; ranks 6-10 quick-scan only. Catalyst sourcing weak: Apify returned mostly stale results (finance.yahoo.com result discarded).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QCOM | 167.25 | -9.79 | 142,932 | No dated catalyst found; searches returned Sept AI-roadmap news and stale price notes. Likely part of a broad AI-semis/infra selloff. |
+| 2 | CRWV | 55.21 | -9.12 | 487,021 | No fresh catalyst found; analyst targets cited ($140.58) are far above the $54 price; sector-wide AI-infra weakness. |
+| 3 | NBIS | 156.49 | -9.04 | 172,086 | Stocktwits snippet cites ServiceNow -27% and AI-fear selloff (unverified); NBIS bounced ~11% days ago on a French media report. |
+| 4 | BE | 205.29 | -7.73 | 104,728 | No fresh catalyst found; stale results (Apr price-target hikes, S&P 500 inclusion). Reads as sector/AI-power de-risking. |
+| 5 | QBTS | 10.68 | -7.69 | 259,131 | No fresh catalyst; Trefis notes ~50% drawdown since 6/30 after weak fiscal Q2 results; quantum group weak. |
+| 6 | RGTI | 11.145 | -7.66 | 151,850 | Quantum names rallied Oct 27 after Intel news, now giving it back; trading near 52-week low per MarketBeat. |
+| 7 | OKLO | 24.84 | -7.21 | 85,792 | No fresh catalyst; UBS cut PT to $41 from $55 in Sept; nuclear/AI-power group weak. |
+| 8 | BMNR | 20.13 | -7.02 | 541,530 | Oct 26 TipRanks: -4.5% as Bitmine bought back $45.9M of shares and added 10,452 ETH; no new news today (crypto-beta). |
+| 9 | ONDS | 6.415 | -6.96 | 220,804 | No catalyst found; company reports Q3 on Nov 12, 8:30 ET. |
+| 10 | RDW | 8.545 | -6.61 | 53,383 | No catalyst found; space-group weakness (RKLB -5.6%, LUNR -6.7% same tape). |
+
+#### Deep dive: QCOM $167.25 -9.79%
+- Catalyst: Pre-market -9.8% on 143k shares with no sourced company news; possible read-through from today's AI/semis selloff.
+- Why: Unverified: likely multiple compression in AI-exposed semis as risk is cut across the cohort.
+- Impact: Gap on thin pre-market volume with no named catalyst reads as sentiment-driven; fades or extends depending on the open. No peer confirmation sourced beyond the same-tape moves.
+- Horizon: SHORT_TERM, no verified catalyst, tape-driven.
+- Opportunity cost: Competes with other 8 cluster names; all fail 'follow sector momentum' while the cluster is falling. A stop 7-10% below entry leaves little room for 2:1 R:R after a -10% gap.
+
+#### Deep dive: CRWV $55.21 -9.12%
+- Catalyst: Down 9.1% to $55.21 on 487k shares, highest volume of the list. Prior close $60.75. No fresh company news surfaced; the 52-week range is $59.51-$150.40 per ADVFN, so it trades below the prior range low.
+- Why: Unverified: AI-infra/neocloud de-risking and debt/financing sensitivity; no sourced trigger.
+- Impact: Volume is heavy relative to peers, so the move looks real, not a thin print. NBIS (-9.0%) confirms a sector read-through. Mean-reversion bounce possible but trend is down.
+- Horizon: SHORT_TERM, downtrend through range low, no durable catalyst; do not carry.
+- Opportunity cost: Would displace nothing held but fails the sector-momentum rule while the cohort sells off; a catch-the-knife entry has no sane stop for 2:1.
+
+#### Deep dive: NBIS $156.49 -9.04%
+- Catalyst: Down 9.0% to $156.49 on 172k shares. Stocktwits chatter cites ServiceNow -27% and AI-fear selloff (unverified). Days ago NBIS rallied ~11% on a French media report per Tickeron, so the stock is whipsawing.
+- Why: Unverified: AI-software/infra sentiment shock with CRWV moving in lockstep.
+- Impact: High volatility regime; CRWV -9.1% on same tape implies sector-wide, not name-specific. Sustainability depends on the broader AI tape at the open.
+- Horizon: SHORT_TERM, headline whipsaw, no structural change.
+- Opportunity cost: Overlaps CRWV (correlation gate would likely block holding both). Wide ATR makes 1% risk sizing small; 2:1 R:R needs a ~15%+ target.
+
+#### Deep dive: BE $205.29 -7.73%
+- Catalyst: Down 7.7% to $205.29 on 105k shares. Search results were stale (April price-target hikes after Q1; S&P 500 inclusion news at ~$265). Stock is well below the level cited in the inclusion story.
+- Why: Unverified: AI-power-demand names sold with the AI-infra cohort.
+- Impact: Volume moderate. OKLO (-7.2%) is also down on the same theme, so it reads as group de-risking.
+- Horizon: SHORT_TERM, no fresh catalyst; sector-driven.
+- Opportunity cost: Same AI-power theme as OKLO; one position max. A 10% trail from a -7.7% gap day is hard to justify before stabilization.
+
+#### Deep dive: QBTS $10.68 -7.69%
+- Catalyst: Down 7.7% to $10.68 on 259k shares. Trefis says QBTS has lost ~50% since 6/30/2026 on weaker-than-expected fiscal Q2 results. No new company news today.
+- Why: Continuation of a multi-month downtrend plus group weakness (RGTI -7.7% same tape).
+- Impact: Heavy relative volume but in an established downtrend; quantum names rallied Oct 27 and are now giving it back.
+- Horizon: SHORT_TERM, downtrend, post-earnings damage; spec basket.
+- Opportunity cost: Fails sector-momentum rule; correlated with RGTI. Fits no open slot and cannot show 2:1 R:R without a close stop in a volatile name.
+
