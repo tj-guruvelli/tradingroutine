@@ -17671,3 +17671,15 @@ Note: all gaps negative (risk-off tape); sourcing thin, most catalysts unconfirm
 - Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
 - Opportunity cost: Fails sector-momentum rule; correlated with other space names. No action.
 
+
+### Setup Scan (16:37 ET, cloud)
+60 scanned. grade_a_possible: false (outside 10:00-15:30 ET — Setup A not evaluated, 16:30 ET cadence fire). 0 grade-A, 4 grade-B, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 34.0 > 20, EMA9 $403.89 > EMA21 $395.16, RSI 67.9, px $400.11 |
+| MA | B | Momentum confluence | daily swing | ADX 34.7 > 20, EMA9 $617.81 > EMA21 $604.94, RSI 70.0, px $637.36 |
+| MSFT | B | Momentum confluence | daily swing | ADX 23.2 > 20, EMA9 $530.46 > EMA21 $526.59, RSI 55.5, px $520.41 |
+| RTX | B | Momentum confluence | daily swing | ADX 29.9 > 20, EMA9 $194.56 > EMA21 $192.42, RSI 60.5, px $192.34 (below SMA200 $195.30) |
+
+No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
