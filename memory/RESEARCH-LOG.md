@@ -17683,3 +17683,16 @@ Note: all gaps negative (risk-off tape); sourcing thin, most catalysts unconfirm
 | RTX | B | Momentum confluence | daily swing | ADX 29.9 > 20, EMA9 $194.56 > EMA21 $192.42, RSI 60.5, px $192.34 (below SMA200 $195.30) |
 
 No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
+
+### Setup Scan (18:38 ET, cloud)
+60 scanned. grade_a_possible: false (outside 10:00-15:30 ET — Setup A not evaluated). 0 grade-A, 4 grade-B, 0 errors.
+Note: same daily bars as the 16:37 ET run today (market closed, EOD data unchanged) — same 4 tickers, same figures.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| MA | B | Momentum confluence | daily swing | ADX 34.65 > 20, EMA9 $617.81 > EMA21 $604.94, RSI 70.03, px $637.36 |
+| V | B | Momentum confluence | daily swing | ADX 34.04 > 20, EMA9 $403.89 > EMA21 $395.16, RSI 67.89, px $400.11 |
+| RTX | B | Momentum confluence | daily swing | ADX 29.86 > 20, EMA9 $194.56 > EMA21 $192.42, RSI 60.52, px $192.34 (below SMA200 $195.30) |
+| MSFT | B | Momentum confluence | daily swing | ADX 23.21 > 20, EMA9 $530.46 > EMA21 $526.59, RSI 55.45, px $520.41 |
+
+No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
