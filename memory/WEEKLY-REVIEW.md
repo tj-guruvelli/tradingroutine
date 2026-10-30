@@ -583,3 +583,46 @@ Template for each entry:
 - Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 12th straight week, still the top open infra item after the credential fixes
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's LMT no-chase catch against a real beat-and-raise catalyst is further evidence the discipline itself is sound, independent of the down MCP
 ### Overall Grade: C
+
+## Week ending 2026-10-30
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -0.54% (SPY proxy: $759.83 → $755.72, Alpaca daily bars, Fri Oct 23 close → Fri Oct 30 close) |
+| Bot vs S&P | +0.54% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through a dense AI-capex/neocloud-funding-fear tape (GOOG -9 to -13% on Q3 EPS/FCF miss + capex ramp, NBIS/CRWV -5 to -13% on Bernstein's ~$85B funding-gap warning + MSFT capex-timing read-through, QCOM -9 to -11% unconfirmed-catalyst semis selloff, quantum basket QBTS/RGTI giving back the Oct 27 rally) — zero forced trades
+- Correctly disqualified V and MA on the no-pullback-to-EMA9 trigger despite MA's genuine Q3-beat-plus-KeyBanc-PT-raise catalyst — waited for the rule's entry trigger rather than chasing the gap
+- Correctly treated the recurring NBIS/CRWV/GOOG/ORCL/QCOM/BMNR/GFS/QBTS/RGTI cluster as a single correlated AI-infra/sector-beta move (correlation gate), not independent signals — consistent with every prior AI-capex gap week this phase
+- Correctly passed on GOOG's falling-knife gap all week (no 2:1 R:R at a sane stop, no base formed) despite heavy volume and index weight
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- 7th consecutive clean week of Market-Open + EOD TRADE-LOG entries — the logging-gap pattern flagged in 7+ reviews before Sep 25 remains resolved
+### What Didn't Work
+- 18th consecutive zero-entry week (81 trading days since launch, Jul 9) — sat in 100% cash through a modestly negative (-0.54%) S&P week
+- `tradingview-data` MCP still down the entire week (13th+ straight week) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself — now a 13th straight week this exact fix has been proposed and not shipped (confirmed via `git log`: no commits touching `scripts/gappers-alpaca.sh`, `scripts/alpaca.sh`, or the pre-market/market-open routines this week)
+- `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` directly re-confirmed still the literal placeholder strings `your_clickup_workspace_id_here` / `your_clickup_channel_id_here` in the live environment — 7th straight week confirmed broken; this review's own STEP 6 send is expected to fail for the same reason
+- `scripts/perplexity.sh` directly re-confirmed still HTTP 401 this review (2nd straight week) — credential remains invalid, no operator rotation yet
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (18th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- A third straight week of AI-capex/neocloud-funding-fear gap clusters (now GOOG, NBIS, CRWV, QCOM, ORCL, BMNR, GFS, plus a quantum-basket echo) with zero entries continues to show the correlation-gate + catalyst-gate + no-chase combination handling this exact pattern consistently, independent of the down MCP
+- Three distinct broken-credential/config items — ClickUp placeholder IDs (7 weeks), Perplexity 401 (2 weeks), and the $10k/$100k baseline (18 weeks) — have each been re-flagged repeatedly with zero operator action; at this point they are the dominant risk to the review/notification process itself, not to the trading discipline, which keeps correctly filtering real catalysts
+- No infra progress shipped this week on any of the three standing items (confirmed via git log + direct re-checks) — the "re-flag without shipping" pattern that took 5 recurrences to break on the gappers stale-baseline bug is now repeating on a larger, multi-item scale
+### Adjustments for Next Week
+- Escalate all three broken/stale items together as one operator action item (baseline mismatch 18 weeks, ClickUp placeholder IDs 7 weeks, Perplexity 401 2 weeks) — recommend a single credential/config reconciliation pass rather than continuing to re-flag each separately
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 13th straight week, still the top open infra item
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; discipline held correctly under a third straight week of AI-capex sector-beta gap clusters
+### Overall Grade: C
