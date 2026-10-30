@@ -17619,3 +17619,55 @@ Filter: |gap|>=5%, price>=$3, vol>=50k. 24 raw hits, 10 pass (all gap DOWN). Dee
 - Horizon: SHORT_TERM, downtrend, post-earnings damage; spec basket.
 - Opportunity cost: Fails sector-momentum rule; correlated with RGTI. Fits no open slot and cannot show 2:1 R:R without a close stop in a volatile name.
 
+
+### Gappers (auto-scan 11:32 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | QCOM | 164.39 | -11.33% | 240929 | No confirmed catalyst; search returned only Oct 29 close ($185.41) and stale earnings pages. Large post-close drop (-11% vs $185.40). |
+| 2 | CRWV | 54.84 | -9.73% | 732829 | No same-day headline found; neocloud debt/dilution fears (Oct 14 bond selloff) remain the live overhang. |
+| 3 | GFS | 41.68 | -9.09% | 63201 | No catalyst found; earnings due Nov 4, 2026. |
+| 4 | SATL | 3.41 | -8.82% | 61628 | No catalyst found; last known: Q2 revenue +259% YoY to $15.9M. |
+| 5 | RCAT | 4.62 | -8.7% | 55771 | No catalyst found; Steyr Motors business combination news earlier this week. |
+| 6 | BE | 204.095 | -8.26% | 190243 | No usable catalyst (only Yahoo/stale results; discarded). |
+| 7 | NBIS | 157.97 | -8.18% | 234687 | No same-day headline; neocloud financing fears weighing on sector. |
+| 8 | QBTS | 10.63 | -8.12% | 409704 | No catalyst found; quantum basket giving back Oct 27 rally. |
+| 9 | RGTI | 11.13 | -7.79% | 200903 | No catalyst found; quantum group weakness. |
+| 10 | LUNR | 10.84 | -7.27% | 98945 | No catalyst found (results stale, 2025). |
+
+Note: all gaps negative (risk-off tape); sourcing thin, most catalysts unconfirmed. Ranks 6-10 quick-scan only. Yahoo results discarded. Volume = Alpaca `volume` field (session, not strictly premarket); BLSH/UMAC/KLIC/DPRO/AVAV excluded <50k vol, RR excluded <$3.
+
+#### Deep dive: QCOM $164.39 -11.33%
+- Catalyst: QCOM gapped from $185.40 to $164.39 (-11.3%) on 241k early volume. Search surfaced no confirmed headline for today; Oct 29 close was $185.41 and overnight indications were already ~$177.6 (-4.2%), so the drop deepened after hours. Likely earnings/guidance reaction but UNVERIFIED.
+- Why: Large-cap semis gap-down of this size usually means a guide/outlook miss or a customer-share concern; unverified here.
+- Impact: Volume is heavy for the hour; a >10% gap in a mega-cap tends to hold or extend into follow-through, though semis peers (GFS -9%, STM -6.7%) also weak, so read-through is sector-wide.
+- Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
+- Opportunity cost: Knife-catch in a falling semis group; fails sector-momentum rule. Would displace nothing now and needs a close stop to show 2:1 R:R. No action.
+
+#### Deep dive: CRWV $54.84 -9.73%
+- Catalyst: CRWV fell from $60.75 to $54.84 (-9.7%) on 733k volume, the heaviest of the list. No new headline found; the standing overhang is debt/dilution worry after the Oct 14 bond selloff (-15% day). Q2 results (Aug 11) showed record revenue/backlog.
+- Why: Leverage-sensitive neocloud reprices on financing/credit headlines; sector peer NBIS also -8.2%.
+- Impact: Volume is high but this is a credit/sentiment story, not new fundamentals; sector-wide read-through (NBIS) suggests basket de-risking. Mean-reversion possible but trend is down (52w high $138).
+- Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
+- Opportunity cost: Correlated with NBIS; fails sector-momentum rule while AI-infra financing fears persist. Wide stop needed in a ~high-vol name, hard to clear 2:1. No action.
+
+#### Deep dive: GFS $41.68 -9.09%
+- Catalyst: GFS gapped from $45.85 to $41.68 (-9.1%) on 63k volume. No catalyst found. Earnings due Nov 4, 2026; stock historically averages +2.9% day-one post earnings.
+- Why: Likely sympathy with QCOM/semis weakness ahead of its own print; unverified.
+- Impact: Volume is modest, consistent with sector sympathy rather than company-specific news; could rebound if semis stabilise.
+- Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
+- Opportunity cost: Earnings in 3 trading days adds event risk; no clean 2:1 setup mid-gap. No action.
+
+#### Deep dive: SATL $3.41 -8.82%
+- Catalyst: SATL gapped from $3.74 to $3.41 (-8.8%) on 62k volume, price near the $3 floor. No catalyst found. Fundamentals: Q2 2026 revenue +259% YoY to $15.9M.
+- Why: Small-cap space name trading with the space/speculative basket (RCAT, LUNR, RDW, RKLB all down).
+- Impact: Thin volume, sub-$4 price; reads as sector beta, likely to keep tracking the space basket.
+- Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
+- Opportunity cost: Space basket already failing momentum rule; sub-$4 spread/slippage risk. No action.
+
+#### Deep dive: RCAT $4.62 -8.7%
+- Catalyst: RCAT gapped from $5.06 to $4.62 (-8.7%) on 56k volume. No same-day catalyst found. Context: Steyr Motors business combination signed this week; FY2025 revenue +161%, but March guidance gap caused a prior -17% leg.
+- Why: Drone/space speculative basket selling off; deal news adds dilution/complexity uncertainty.
+- Impact: Low volume, downtrend; peers (LUNR, RDW, SATL, RKLB) also down so sector-wide.
+- Horizon: SHORT_TERM, headline/sector-driven, no confirmed durable thesis.
+- Opportunity cost: Fails sector-momentum rule; correlated with other space names. No action.
+
