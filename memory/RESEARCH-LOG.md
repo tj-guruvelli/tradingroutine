@@ -17519,3 +17519,52 @@ Only 3 hits (all gap-downs); deep-dive cap 5, ranks 1-3 covered. Yahoo results d
 - Horizon: SHORT_TERM, Funding-fear headline plus tape weakness; mean-reversion possible but unconfirmed.
 - Opportunity cost: Correlated with NBIS; ranked below GOOG on gap; wide ATR makes a 2:1 R:R at sane stop hard; research only.
 
+
+### Gappers (auto-scan 09:24 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 157.84 | -13.48% | 383,211 | Neocloud sell-off after Microsoft's lower-than-expected capex (CNBC 10/28); AI-infra scalability worries. |
+| 2 | GOOG | 280.02 | -13.09% | 2,958,114 | Alphabet plunged ~11-13% on earnings/AI-capex reaction; drags Nasdaq-100 >1% (Schwab). |
+| 3 | CRWV | 55.83 | -12.66% | 1,061,059 | Neocloud drop on Microsoft capex cut (CNBC); AI debt-fear backdrop (Reuters 10/15). |
+| 4 | BMNR | 20.44 | -7.47% | 830,334 | No fresh catalyst found; ETH-treasury name, likely moving with crypto/risk-off tape. |
+| 5 | ORCL | 133.7 | -7.34% | 1,521,717 | AI-infra sell-off alongside GOOG/neoclouds; no company-specific headline found. |
+| 6 | GFS | 42.93 | -6.92% | 195,569 | No clear catalyst found (news feed only); likely semis/AI risk-off. |
+| 7 | ONDS | 6.43 | -6.54% | 1,346,518 | No fresh catalyst; speculative drone/small-cap name, down with risk-off. |
+| 8 | MA | 645.27 | +5.65% | 394,332 | Q3 earnings beat; 52-week high; KeyBanc PT raised to $735 from $722. |
+
+Deep dive cap: top 5 (ranks 6-8 quick-scan only; only 8 passed filter). Note: separate fundamentals query not run; deep dive built from catalyst research (CNBC, Schwab, Reuters).
+
+#### Deep dive: NBIS $157.84 -13.48%
+- Catalyst: Microsoft's capex came in below expectations, read as infrastructure partners (CoreWeave, Nebius, IREN) taking longer to deliver capacity; neoclouds fell after-hours 10/28 and Alphabet's ~11% drop on 10/30 deepened the AI rout.
+- Why: Lower hyperscaler capex cuts expected neocloud contract/backlog growth; high-beta, debt-funded names de-rate hardest.
+- Impact: Sector-wide (CRWV -12.7%, GOOG -13%, ORCL -7.3% same tape). Premarket vol only 383k so far; reads as capitulation gap, mean-revert bounce possible but trend broken.
+- Horizon: SHORT_TERM, sector-sentiment gap, no company-specific news; falling-knife until capex narrative stabilizes.
+- Opportunity cost: Would displace a healthier holding; R:R vs a 7-10% stop on a 13% gap is poor; CRWV/NBIS are correlated (corr gate), only one could be taken; GOOG/ORCL setups are not better. Fails 2:1 until it basing.
+
+#### Deep dive: GOOG $280.02 -13.09%
+- Catalyst: Alphabet's post-earnings plunge (~11% per Schwab, -13% in Alpaca premarket) hit the AI complex; Amazon and Intel also fell on disappointing results/guidance, with defensives bid.
+- Why: Earnings/guidance disappointment plus capex worries removes the premium multiple; index-heavy name forces passive/ETF selling.
+- Impact: Heavy volume (2.96M premarket) = real repricing, not thin. Sector read-through negative for AI infra (NBIS/CRWV/ORCL).
+- Horizon: SHORT_TERM, a gap-down on guidance usually needs days to base; LONG_TERM thesis would need a reset on earnings detail not yet reviewed.
+- Opportunity cost: Largest cap, most liquid; but buying a -13% gap violates patience rule. Would displace nothing cleanly; stop distance at 10% trail makes R:R sub-2:1 unless gap fills. Watch for support hold.
+
+#### Deep dive: CRWV $55.83 -12.66%
+- Catalyst: CoreWeave fell after Microsoft's lower capex implied slower capacity delivery by partners; debt-funding worries since mid-Oct (Reuters) compound it.
+- Why: Leveraged neocloud model is sensitive to hyperscaler demand and credit conditions.
+- Impact: Volume 1.06M, sector-wide move with NBIS. Likely sustained pressure unless financing news turns.
+- Horizon: SHORT_TERM, macro/sector driven, debt overhang unresolved.
+- Opportunity cost: Correlated with NBIS (one slot only); weaker balance sheet than ORCL/GOOG; fails 2:1 at a sane stop.
+
+#### Deep dive: BMNR $20.44 -7.47%
+- Catalyst: No same-day catalyst located; search surfaced older ETH-holdings headlines (1.15M ETH, largest corporate holder). Gap read as risk-off/ETH beta.
+- Why: Equity tracks ETH NAV premium; risk-off compresses the premium.
+- Impact: Volume 830k moderate; no confirmed durable driver.
+- Horizon: SHORT_TERM, no durable thesis found.
+- Opportunity cost: Crypto-beta overlaps risk already in the book; lower-quality than non-crypto setups; not worth a limited weekly slot.
+
+#### Deep dive: ORCL $133.7 -7.34%
+- Catalyst: No Oracle-specific catalyst found; shares fell with the AI complex after Alphabet's plunge and Microsoft's capex trim (ORCL ~$139-149 earlier, 52w high $269.76).
+- Why: Oracle's OCI build-out is debt-funded and tied to AI-demand narrative; capex doubts hit it.
+- Impact: Volume 1.5M; sector read-through with NBIS/CRWV. Deeply below 52w high, trend down.
+- Horizon: SHORT_TERM, sentiment-driven; LONG_TERM only if backlog thesis intact (unverified).
+- Opportunity cost: Correlation with GOOG/CRWV/NBIS limits to one AI name; no clear 2:1 setup mid-downtrend.
