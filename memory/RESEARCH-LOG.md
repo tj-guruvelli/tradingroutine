@@ -17488,3 +17488,34 @@ No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; fe
 **Risks:** Oil >$100 (inflation/rates), post-PCE reaction, AI-capex sentiment shock (GOOG/MSFT), month-end flows, thin data this run (futures/VIX/catalyst gaps).
 
 **Decision: HOLD.** No documented catalyst + confluence; 0/3 weekly trades; patience > activity.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | GOOG | 279.75 | -13.18% | 2,958,114 | No confirmed catalyst found (clean sources returned nothing dated today); likely post-earnings/AI-capex reaction, unverified. |
+| 2 | NBIS | 158.45 | -13.15% | 383,211 | Neocloud/AI-infra selloff; stock closed -5.68% at $171.99 prior session, ~-6% after hours (Perplexity Finance snippet); no company-specific news confirmed. |
+| 3 | CRWV | 56.2 | -12.08% | 1,061,059 | Bernstein warning of ~$85B funding gap (Seeking Alpha via Markets Insider, ~3d old); Nasdaq down >2% and a major customer cut revenue per snippets. |
+
+Only 3 hits (all gap-downs); deep-dive cap 5, ranks 1-3 covered. Yahoo results discarded.
+
+#### Deep dive: GOOG $279.75 -13.18%
+- Catalyst: Gap-down ~13% on heavy volume; specific trigger not confirmed from clean sources this run.
+- Why: Probable earnings/capex guidance reaction pulling momentum holders out (unverified).
+- Impact: Volume ~3M pre-market is large for a mega-cap; GOOG, NBIS, CRWV all down >12% points to AI-complex read-through, not idiosyncratic.
+- Horizon: SHORT_TERM, Cause unverified, sector-wide AI de-risking; do not carry until catalyst confirmed.
+- Opportunity cost: Mega-cap would displace a smaller AI name; a falling-knife long can't set a sane stop for 2:1 R:R; research only.
+
+#### Deep dive: NBIS $158.45 -13.15%
+- Catalyst: Down ~13% following a -5.7% prior close and ~-6% after hours; part of AI-infra selloff.
+- Why: High-beta neocloud de-rates when AI-capex/funding fears rise.
+- Impact: Thin pre-market volume (383k); follows CRWV/GOOG moves, so sector read-through, likely further volatility.
+- Horizon: SHORT_TERM, Sector-fear driven, no durable thesis shown; wait for stabilization.
+- Opportunity cost: Overlaps CRWV (correlated, corr gate likely trips); would displace any AI-infra holding; 2:1 R:R doubtful at a 7% stop in this volatility.
+
+#### Deep dive: CRWV $56.2 -12.08%
+- Catalyst: Bernstein flagged ~$85B funding problem; Nasdaq fell >2%; reports of a major customer cutting revenue; stock -12%.
+- Why: Funding/credit fears for debt-financed GPU buildouts hit leveraged neoclouds hardest.
+- Impact: 1.06M pre-market volume, in line with real selling; NBIS and GOOG moving same way confirms sector read-through.
+- Horizon: SHORT_TERM, Funding-fear headline plus tape weakness; mean-reversion possible but unconfirmed.
+- Opportunity cost: Correlated with NBIS; ranked below GOOG on gap; wide ATR makes a 2:1 R:R at sane stop hard; research only.
+
