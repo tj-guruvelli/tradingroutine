@@ -17730,3 +17730,18 @@ Watchlist scan: 1 hit (|gap| >= 5%, price >= $3). Deep-dive cap 5; only 1 qualif
 - Impact: Thin premarket vol (598k); reads as sentiment mean-reversion, not fundamental break. Peers moved same direction last week.
 - Horizon: SHORT_TERM, no durable new thesis; unverified catalyst.
 - Opportunity cost: No positions, 0/3 trades used, nothing displaced. Fails documented-catalyst gate; wide ATR makes 2:1 R:R hard. Research only.
+
+## 2026-11-02
+### Gappers (auto-scan 10:23 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ORCL | 123.77 | -5.29 | 523K | No same-day catalyst found (stale AI/backlog coverage) |
+
+Only 1 qualifier. OPEN +6.96% excluded (price $1.92 < $3). Deep-dive cap 5; only 1 row.
+
+#### Deep dive: ORCL $123.77 -5.29%
+- Catalyst: No dated news for today. Context: 29.6% rev growth, 121% OCI growth, FY27 targets raised; post-earnings gains faded; AI capex/debt scrutiny.
+- Why: Likely AI-infra financing worries hitting crowded AI name (unconfirmed).
+- Impact: 523K vol, headline-free gap; sector-driven. Check NVDA/MSFT read-through.
+- Horizon: SHORT_TERM, no verified trigger, no durable thesis.
+- Opportunity cost: Fails Confluence without catalyst; would use a weekly slot; 2:1 R:R unlikely at sane stop.
