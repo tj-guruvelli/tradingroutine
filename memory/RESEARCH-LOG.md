@@ -17712,3 +17712,8 @@ No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; fe
 3. MA — RSI 70, no-chase. Wait for pullback toward EMA9 ~$617.8; stop ~$575; target ~$680.
 **Risk factors:** Brent >$108 / -4% swing = energy-shock volatility and inflation risk; VIX rising off lows; futures/calendar unverified (possible Nov data/FOMC-week prints unknown); data gaps above.
 **Decision: HOLD.** Weekly trade count 0/3 (week of Nov 2). 82nd trading day with zero entries. No candidate has a verified catalyst + confluence + no-chase pass. Re-check at market-open with live quotes.
+
+## 2026-11-02
+
+### Gappers (auto-scan 07:12 ET, cloud)
+- No gappers >=5% (price>=$3) on watchlist. Scan clean, no errors. No notification sent.
