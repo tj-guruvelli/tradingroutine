@@ -17696,3 +17696,19 @@ Note: same daily bars as the 16:37 ET run today (market closed, EOD data unchang
 | MSFT | B | Momentum confluence | daily swing | ADX 23.21 > 20, EMA9 $530.46 > EMA21 $526.59, RSI 55.45, px $520.41 |
 
 No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; feed to market-open.md next session.
+
+### Nov 2, Pre-Market Research (Day 82, Monday, cloud run)
+**Account:** equity $100,000.00 | cash $100,000.00 | buying power $400,000 (margin 4x) | daytrade count 0 | 0 positions, 0 open orders (`balance_asof: 2026-10-30`). Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.
+**Market context (Apify RAG, Yahoo suffix applied; no Yahoo sources used):**
+- Brent $108.47, -4.37% on day (TradingEconomics); +8.1% 1mo, +67% YoY. Investing.com intraday ~$110-111, prev close $113.43. Oil very elevated but sliding this morning.
+- VIX ~19.4 (TradingView 19.41, +12.9% 24h; CNBC prev close 19.42). 52wk high 35.30 (Mar 9). Sub-20 = calm-ish regime, but rising.
+- WTI: not captured separately (gap).
+- S&P futures / today's catalysts / earnings / econ calendar: GAPS. Apify S&P query returned irrelevant junk; WebSearch fallback returned no Nov 2 data. Nothing verified — no trade should rest on this.
+- Sector momentum YTD, held-ticker news: N/A (no positions); not re-queried.
+**Carryover candidates (Oct 30 setup scan, grade-B only):** MA (RSI 70.0, overbought), V (RSI 67.9), MSFT (RSI 55.5, ADX 23, px $520.41 below EMA9 $530.46 — ahead of EMA9/EMA21 stack, momentum confluence), RTX (below SMA200 $195.30 — fails long filter).
+**Trade ideas (research-only, none actionable pre-open):**
+1. MSFT — catalyst: AI-capex read-through selloff late Oct; confluence: ADX>20, RSI mid. Entry only on reclaim of EMA21 ~$526.6; stop ~$485 (-7%); target ~$580 (2:1+). No documented catalyst reversal yet.
+2. V — payments momentum, ADX 34. Entry on pullback to EMA9 ~$403.9; stop ~$372; target ~$440. No fresh catalyst documented.
+3. MA — RSI 70, no-chase. Wait for pullback toward EMA9 ~$617.8; stop ~$575; target ~$680.
+**Risk factors:** Brent >$108 / -4% swing = energy-shock volatility and inflation risk; VIX rising off lows; futures/calendar unverified (possible Nov data/FOMC-week prints unknown); data gaps above.
+**Decision: HOLD.** Weekly trade count 0/3 (week of Nov 2). 82nd trading day with zero entries. No candidate has a verified catalyst + confluence + no-chase pass. Re-check at market-open with live quotes.
