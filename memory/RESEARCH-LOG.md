@@ -17753,3 +17753,12 @@ grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason).
 | CMCSA | B | Momentum confluence | daily swing | RSI 58.9, ADX 25.5, EMA9 $22.27 > EMA21 $22.19, px $23.73 |
 
 No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is below SMA200 ($26.08), fails long-trend filter — research only, not an actionable candidate.
+
+### Setup Scan (17:37 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason). 60 candidates checked, 0 errors, 1 hit (grade B only).
+Note: same daily bars as the 15:38 ET run today (market closed, EOD data unchanged) — same ticker, same figures.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| CMCSA | B | Momentum confluence | daily swing | RSI 58.94, ADX 25.53, EMA9 $22.27 > EMA21 $22.19, px $23.69 |
+
+No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is below SMA200 ($26.08), fails long-trend filter — research only, not an actionable candidate.
