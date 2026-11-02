@@ -1,1 +1,23 @@
-{"scanned_at":"2026-11-02T12:12:40Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-11-02T13:10:25Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 206.22,
+      "gap_pct": -7.31,
+      "premarket_volume": 598177,
+      "catalyst": "No same-day catalyst confirmed; search returned stale items (S&P 500 inclusion, Q1'26 record results/raised guide). Likely AI-infra sentiment read-through.",
+      "headlines": [
+        "Bloom Energy Just Won Another Catalyst (Rating Upgrade) - Seeking Alpha",
+        "Bloom Energy Reports Record Q1 2026 Results, Raises FY26 Guidance - IR"
+      ],
+      "catalyst_detail": "No dated Nov 2 headline found. Background: Q1'26 revenue $751.1M (+130% YoY), FY26 growth guide raised to ~80%, gross margin 30%; S&P 500 inclusion. Prior sessions show AI-infra/neocloud selloff (Oct 30) with BE gapping up 10% Oct 29 then reversing.",
+      "why": "Likely sector de-risking after a +10% prior-session spike in AI-power names; no company-specific negative found.",
+      "impact": "Premarket vol 598k is thin vs typical BE volume; -7% looks like sentiment-driven AI-infra mean-reversion, not fundamental break. Peers (NBIS, CRWV) were same-direction movers last week.",
+      "horizon": "SHORT_TERM",
+      "opportunity_cost": "Zero open positions, 0/3 weekly trades used, so no displacement. A long here fails the documented-catalyst gate; high ATR makes a sane stop with 2:1 R:R hard. Research only."
+    }
+  ]
+}

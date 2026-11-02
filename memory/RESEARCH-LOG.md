@@ -17717,3 +17717,16 @@ No grade-A hits -> no Telegram alert per rule. Candidates only, no execution; fe
 
 ### Gappers (auto-scan 07:12 ET, cloud)
 - No gappers >=5% (price>=$3) on watchlist. Scan clean, no errors. No notification sent.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+Watchlist scan: 1 hit (|gap| >= 5%, price >= $3). Deep-dive cap 5; only 1 qualified.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 206.22 | -7.31 | 598k | No same-day catalyst confirmed; likely AI-infra sentiment read-through |
+
+#### Deep dive: BE $206.22 -7.31%
+- Catalyst: No dated Nov 2 headline found. Background: Q1'26 rev $751.1M (+130% YoY), FY26 growth guide raised to ~80%, S&P 500 inclusion. BE gapped +10% Oct 29 then AI-infra selloff Oct 30.
+- Why: Likely de-risking after prior spike in AI-power names; no company-specific negative found.
+- Impact: Thin premarket vol (598k); reads as sentiment mean-reversion, not fundamental break. Peers moved same direction last week.
+- Horizon: SHORT_TERM, no durable new thesis; unverified catalyst.
+- Opportunity cost: No positions, 0/3 trades used, nothing displaced. Fails documented-catalyst gate; wide ATR makes 2:1 R:R hard. Research only.
