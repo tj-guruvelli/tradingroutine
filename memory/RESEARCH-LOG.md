@@ -17745,3 +17745,11 @@ Only 1 qualifier. OPEN +6.96% excluded (price $1.92 < $3). Deep-dive cap 5; only
 - Impact: 523K vol, headline-free gap; sector-driven. Check NVDA/MSFT read-through.
 - Horizon: SHORT_TERM, no verified trigger, no durable thesis.
 - Opportunity cost: Fails Confluence without catalyst; would use a weekly slot; 2:1 R:R unlikely at sane stop.
+
+### Setup Scan (15:38 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET window, setup_a_skipped_reason). 60 candidates checked, 0 errors, 1 hit (grade B only).
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| CMCSA | B | Momentum confluence | daily swing | RSI 58.9, ADX 25.5, EMA9 $22.27 > EMA21 $22.19, px $23.73 |
+
+No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is below SMA200 ($26.08), fails long-trend filter — research only, not an actionable candidate.
