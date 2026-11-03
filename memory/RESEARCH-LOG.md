@@ -17807,3 +17807,50 @@ Only 1 hit >=5% (watchlist scan). Deep-dive cap 5; 1 row.
 | 3 | CRWV | 51.70 | -5.95 | 1.04M | n/a (only Yahoo/stale results, discarded) |
 
 - Deep dive skipped: catalyst sources failed; nothing fabricated. All 3 are downside gaps (AI-infra/cloud cluster: ORCL+CRWV) — no long setups; research only.
+
+### Gappers (auto-scan 10:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 217.75 | +11.0 | 101222 | Bloom Energy gaps up; recent coverage cites a carbon-capture fuel-cell venture with California and AI data-center fuel-cell demand (no confirmed same-day headline). |
+| 2 | SATL | 3.295 | +7.15 | 11202 | No same-day catalyst found; earnings due Nov 10, stock ~$3.90 recently. |
+| 3 | NBIS | 150.51 | +6.48 | 99604 | No same-day headline found; background: Q2'26 revenue $582M, >$40B customer commitments, Meta deal. |
+| 4 | LUNR | 10.48 | +5.97 | 21605 | No catalyst found; searches returned only generic pages. |
+| 5 | CRWV | 52.95 | +5.6 | 212494 | No same-day headline; recent news is financing fears / 52-wk-low selloff, Bernstein PT cut to $51, so gap may be a bounce. |
+| 6 | AMPX | 8.825 | +5.18 | 22099 | No same-day catalyst; Canaccord initiated Buy Oct 14, stock -10.6% last month. |
+
+_Filtered: RR (+10.77%, $0.94) excluded <$3. Deep dive cap 5; rank 6 quick-scan only. Deep dive used first-query results only (thin sourcing)._
+
+#### Deep dive: BE $217.75 +11.0%
+- Catalyst: AI data-center fuel-cell name; recent coverage notes a California carbon-capture venture and price-target hikes. No confirmed same-day trigger found.
+- Why: Sympathy with AI-power demand narrative plus analyst support pulls momentum buyers.
+- Impact: Gap +11% on thin early volume; extended after prior run, fade risk is real. Peer AI-infra names (NBIS, CRWV) also up, so likely sector bid.
+- Horizon: LONG_TERM, AI-power theme is structural, but entry needs pullback/confluence; unconfirmed catalyst.
+- Opportunity cost: Would displace an existing weaker holding or NBIS/CRWV; wide ATR stop at ~$218 makes 2:1 R:R doubtful unless entered on a pullback.
+
+#### Deep dive: SATL $3.295 +7.15%
+- Catalyst: No same-day catalyst located. Earnings Nov 10. Low-priced ($3.30), thin volume.
+- Why: Likely run-up into earnings/space-sector sympathy.
+- Impact: 11k early volume is thin; reads as a speculative spike likely to mean-revert. Space peer LUNR also up.
+- Horizon: SHORT_TERM, No durable thesis found; earnings binary a week out.
+- Opportunity cost: Sub-$4 small cap would displace a higher-quality gapper (BE/NBIS); stop distance needed for 2:1 is wide relative to price.
+
+#### Deep dive: NBIS $150.51 +6.48%
+- Catalyst: No same-day headline found. Background: Q2'26 revenue $582.3M, >$40B customer commitments, Meta $27B deal, prior $3.75B convert raise.
+- Why: AI-infra sentiment bounce lifting neoclouds together (BE, CRWV up as well).
+- Impact: ~100k early volume is decent; sector-wide move supports it, but dilution/financing overhang persists.
+- Horizon: LONG_TERM, Structural contract backlog fits AI-infra theme; still needs Confluence check.
+- Opportunity cost: Competes with BE and CRWV for same AI-infra slot; correlation gate likely binds if multiple held. 2:1 feasible only on pullback to support.
+
+#### Deep dive: LUNR $10.48 +5.97%
+- Catalyst: Searches returned only generic pages; no catalyst identified. Stock had been consolidating near converging MAs.
+- Why: Possible space-sector sympathy move.
+- Impact: 21k early volume is light; unconfirmed, likely fades.
+- Horizon: SHORT_TERM, No identified catalyst.
+- Opportunity cost: Would displace higher-ranked BE/NBIS; no sourced edge to justify.
+
+#### Deep dive: CRWV $52.95 +5.6%
+- Catalyst: No same-day headline. Recent news: shares near 52-wk low on financing fears and AI-spending selloff; Bernstein cut PT to $51.
+- Why: Oversold bounce with AI-infra peers rather than new news.
+- Impact: Highest volume of the list (~212k) but trend is down; reads as relief bounce.
+- Horizon: SHORT_TERM, Bounce in a downtrend with financing overhang; no structural change.
+- Opportunity cost: Displaces NBIS as the cleaner AI-infra name; stop above 52-wk low gives tight but gappy risk, 2:1 unproven.

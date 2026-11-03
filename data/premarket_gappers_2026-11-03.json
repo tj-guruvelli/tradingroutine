@@ -1,4 +1,86 @@
-{"scanned_at":"2026-11-03T14:13:00Z","deep_dive_cap":5,"gappers":[
-{"rank":1,"symbol":"ORCL","price":121.03,"gap_pct":-7.38,"premarket_volume":2219324,"catalyst":null,"headlines":[],"catalyst_detail":null,"why":null,"impact":null,"horizon":null,"opportunity_cost":null},
-{"rank":2,"symbol":"ONDS","price":5.89,"gap_pct":-6.8,"premarket_volume":1025225,"catalyst":null,"headlines":[],"catalyst_detail":null,"why":null,"impact":null,"horizon":null,"opportunity_cost":null},
-{"rank":3,"symbol":"CRWV","price":51.7,"gap_pct":-5.95,"premarket_volume":1043740,"catalyst":null,"headlines":[],"catalyst_detail":null,"why":null,"impact":null,"horizon":null,"opportunity_cost":null}]}
+{
+ "scanned_at": "2026-11-03T15:12:04.417819Z",
+ "deep_dive_cap": 5,
+ "note": "RR excluded (price<3). 'volume' field from scan used as premarket_volume; second deep-dive Apify query skipped, deep dive built from first-query results only.",
+ "gappers": [
+  {
+   "rank": 1,
+   "symbol": "BE",
+   "price": 217.75,
+   "gap_pct": 11.0,
+   "premarket_volume": 101222,
+   "catalyst": "Bloom Energy gaps up; recent coverage cites a carbon-capture fuel-cell venture with California and AI data-center fuel-cell demand (no confirmed same-day headline).",
+   "headlines": [],
+   "catalyst_detail": "AI data-center fuel-cell name; recent coverage notes a California carbon-capture venture and price-target hikes. No confirmed same-day trigger found.",
+   "why": "Sympathy with AI-power demand narrative plus analyst support pulls momentum buyers.",
+   "impact": "Gap +11% on thin early volume; extended after prior run, fade risk is real. Peer AI-infra names (NBIS, CRWV) also up, so likely sector bid.",
+   "horizon": "LONG_TERM",
+   "opportunity_cost": "Would displace an existing weaker holding or NBIS/CRWV; wide ATR stop at ~\$218 makes 2:1 R:R doubtful unless entered on a pullback."
+  },
+  {
+   "rank": 2,
+   "symbol": "SATL",
+   "price": 3.295,
+   "gap_pct": 7.15,
+   "premarket_volume": 11202,
+   "catalyst": "No same-day catalyst found; earnings due Nov 10, stock ~\$3.90 recently.",
+   "headlines": [],
+   "catalyst_detail": "No same-day catalyst located. Earnings Nov 10. Low-priced (\$3.30), thin volume.",
+   "why": "Likely run-up into earnings/space-sector sympathy.",
+   "impact": "11k early volume is thin; reads as a speculative spike likely to mean-revert. Space peer LUNR also up.",
+   "horizon": "SHORT_TERM",
+   "opportunity_cost": "Sub-\$4 small cap would displace a higher-quality gapper (BE/NBIS); stop distance needed for 2:1 is wide relative to price."
+  },
+  {
+   "rank": 3,
+   "symbol": "NBIS",
+   "price": 150.51,
+   "gap_pct": 6.48,
+   "premarket_volume": 99604,
+   "catalyst": "No same-day headline found; background: Q2'26 revenue \$582M, >\$40B customer commitments, Meta deal.",
+   "headlines": [],
+   "catalyst_detail": "No same-day headline found. Background: Q2'26 revenue \$582.3M, >\$40B customer commitments, Meta \$27B deal, prior \$3.75B convert raise.",
+   "why": "AI-infra sentiment bounce lifting neoclouds together (BE, CRWV up as well).",
+   "impact": "~100k early volume is decent; sector-wide move supports it, but dilution/financing overhang persists.",
+   "horizon": "LONG_TERM",
+   "opportunity_cost": "Competes with BE and CRWV for same AI-infra slot; correlation gate likely binds if multiple held. 2:1 feasible only on pullback to support."
+  },
+  {
+   "rank": 4,
+   "symbol": "LUNR",
+   "price": 10.48,
+   "gap_pct": 5.97,
+   "premarket_volume": 21605,
+   "catalyst": "No catalyst found; searches returned only generic pages.",
+   "headlines": [],
+   "catalyst_detail": "Searches returned only generic pages; no catalyst identified. Stock had been consolidating near converging MAs.",
+   "why": "Possible space-sector sympathy move.",
+   "impact": "21k early volume is light; unconfirmed, likely fades.",
+   "horizon": "SHORT_TERM",
+   "opportunity_cost": "Would displace higher-ranked BE/NBIS; no sourced edge to justify."
+  },
+  {
+   "rank": 5,
+   "symbol": "CRWV",
+   "price": 52.95,
+   "gap_pct": 5.6,
+   "premarket_volume": 212494,
+   "catalyst": "No same-day headline; recent news is financing fears / 52-wk-low selloff, Bernstein PT cut to \$51, so gap may be a bounce.",
+   "headlines": [],
+   "catalyst_detail": "No same-day headline. Recent news: shares near 52-wk low on financing fears and AI-spending selloff; Bernstein cut PT to \$51.",
+   "why": "Oversold bounce with AI-infra peers rather than new news.",
+   "impact": "Highest volume of the list (~212k) but trend is down; reads as relief bounce.",
+   "horizon": "SHORT_TERM",
+   "opportunity_cost": "Displaces NBIS as the cleaner AI-infra name; stop above 52-wk low gives tight but gappy risk, 2:1 unproven."
+  },
+  {
+   "rank": 6,
+   "symbol": "AMPX",
+   "price": 8.825,
+   "gap_pct": 5.18,
+   "premarket_volume": 22099,
+   "catalyst": "No same-day catalyst; Canaccord initiated Buy Oct 14, stock -10.6% last month.",
+   "headlines": []
+  }
+ ]
+}
