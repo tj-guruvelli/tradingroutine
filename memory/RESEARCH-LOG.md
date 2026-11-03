@@ -17872,3 +17872,18 @@ Weekly trade count: 0/3 (week of Nov 2). 83rd trading day since launch
 confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 132nd+
 straight session, operator review pending. STEP 7 (notification) N/A — no
 action taken this run.
+
+### Setup Scan (15:38 ET, cloud)
+60 tickers scanned. `grade_a_possible: false` (ny_time 15:38, outside
+10:00-15:30 ET intraday window) — Setup A not evaluated, grade A
+unreachable this run per CLOUD CADENCE NOTE. 1 hit, 0 errors.
+
+```
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+LMT     B      Momentum confluence   daily swing   ADX14 45.8, EMA9 616.59 > EMA21 582.35, RSI14 76.6
+```
+
+No grade-A hits -> no Telegram/ClickUp alert per STEP 4 rule. JSON saved to
+`data/setup-scan_cloud_2026-11-03_1538ET.json`. Candidate only — feed to
+`/trade` or let `market-open.md` pick it up next session (STEP 6, no
+auto-trade).
