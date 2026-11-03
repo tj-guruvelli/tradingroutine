@@ -17798,3 +17798,12 @@ Only 1 hit >=5% (watchlist scan). Deep-dive cap 5; 1 row.
 - Impact: 2.2M vol; sustainability unclear; no verified peer read-through.
 - Horizon: SHORT_TERM, no verified durable thesis.
 - Opportunity cost: Fails Entry Checklist without catalyst; falling-knife risk; 2:1 R:R unlikely at sane stop.
+
+### Gappers (auto-scan 09:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ORCL | 121.03 | -7.38 | 2.22M | n/a (Apify returned only Yahoo/irrelevant; Benzinga 403) |
+| 2 | ONDS | 5.89 | -6.80 | 1.03M | n/a (no usable result) |
+| 3 | CRWV | 51.70 | -5.95 | 1.04M | n/a (only Yahoo/stale results, discarded) |
+
+- Deep dive skipped: catalyst sources failed; nothing fabricated. All 3 are downside gaps (AI-infra/cloud cluster: ORCL+CRWV) — no long setups; research only.
