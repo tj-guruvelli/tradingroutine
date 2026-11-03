@@ -17762,3 +17762,20 @@ Note: same daily bars as the 15:38 ET run today (market closed, EOD data unchang
 | CMCSA | B | Momentum confluence | daily swing | RSI 58.94, ADX 25.53, EMA9 $22.27 > EMA21 $22.19, px $23.69 |
 
 No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is below SMA200 ($26.08), fails long-trend filter — research only, not an actionable candidate.
+
+## 2026-11-03
+
+### Pre-market Research (Day 83, Tuesday, cloud)
+**Account:** equity $100,000 | cash $100,000 | BP $400,000 (margin 4x) | daytrade count 0 | 0 positions, 0 open orders (`balance_asof 2026-11-02`). Still the $100k-vs-$10k baseline mismatch (flagged Jul 27, unresolved).
+**Market context (Apify; Yahoo-block suffix applied, no Yahoo URLs used):**
+- Nov 2 close (MSN/Cboe, delayed): S&P 500 7,541.40 (-0.51%), Nasdaq Comp 25,164.36 (-1.07%), Dow 51,983.98 (+0.41%), R2K 2,805.88 (-0.21%). MSFT 507.12 (-2.83%), AMD -7.52%, AAPL -1.83%.
+- VIX 21.28 (+8.91%, prev 19.42); 1M +39%, 52w 13.38-35.30. Risk-off tilt.
+- Oil (OilPrice.com, ~11m delayed): WTI 97.72 (+1.31%), Brent 105.90 (+1.03%). Whipsaw on US-Iran headlines: -7% on peace-draft hopes Nov 2, rebound on reports of US strikes on Iran. Brent hit $117 last week. Goldman Dec Brent fcst $105.
+- Today Nov 3 = US midterm election day (oil/market event risk; oilprice flags renewed US-Iran hostility fear post-election).
+- Gaps: S&P futures, earnings-today list, econ calendar (Apify scrapes failed/returned nothing usable; not re-queried via WebSearch). Nothing verified — no trade should rest on this. Sector YTD momentum / held-ticker news: N/A (no positions).
+**Carryover candidates (research-only):**
+1. MSFT — AI-capex selloff continues (507, below EMA9/EMA21 area). Entry only on reclaim of EMA21 ~$526.6; stop ~$485; target ~$580. No catalyst yet.
+2. V — pullback to EMA9 ~$403.9; stop ~$372; target ~$440. No fresh catalyst.
+3. MA — no-chase (RSI 70); wait pullback to ~$617.8; stop ~$575; target ~$680.
+**Risk factors:** midterm election day; VIX >21 and rising; Nasdaq -1.07% / AI-semis weakness (AMD -7.5%); Iran/Hormuz oil headline whipsaw; data gaps above.
+**Decision: HOLD.** Weekly trade count 0/3 (week of Nov 2). 83rd trading day, zero entries. No candidate has verified catalyst + confluence + no-chase pass. ClickUp: silent (nothing urgent).
