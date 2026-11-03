@@ -17782,3 +17782,19 @@ No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is bel
 
 ### Gappers (auto-scan 07:10 ET, cloud)
 - No gappers: 0 rows >=5% gap (price>=$3) across watchlist. Scan ran clean (also empty at 2% threshold). No catalyst/deep-dive fetch. No notification sent.
+
+## 2026-11-03
+
+### Gappers (auto-scan 08:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ORCL | 119.03 | -8.91 | 2.22M | No same-day catalyst found (stale AI/capex/backlog results only) |
+
+Only 1 hit >=5% (watchlist scan). Deep-dive cap 5; 1 row.
+
+#### Deep dive: ORCL $119.03 -8.91%
+- Catalyst: Unverified. Only older context (cloud backlog, ~$50B FY26 capex guide, post-earnings give-backs).
+- Why: Likely AI-capex/financing worry or sector de-rating (inference).
+- Impact: 2.2M vol; sustainability unclear; no verified peer read-through.
+- Horizon: SHORT_TERM, no verified durable thesis.
+- Opportunity cost: Fails Entry Checklist without catalyst; falling-knife risk; 2:1 R:R unlikely at sane stop.

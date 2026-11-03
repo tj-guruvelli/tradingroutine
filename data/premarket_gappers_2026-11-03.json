@@ -1,1 +1,23 @@
-{"scanned_at":"2026-11-03T12:10:33Z","deep_dive_cap":5,"gappers":[]}
+{
+ "scanned_at": "2026-11-03T13:12:00Z",
+ "deep_dive_cap": 5,
+ "gappers": [
+  {
+   "rank": 1,
+   "symbol": "ORCL",
+   "price": 119.03,
+   "gap_pct": -8.91,
+   "premarket_volume": 2219324,
+   "catalyst": "No same-day catalyst found; search returned only stale Oracle AI/capex/backlog pieces (no dated 11/3 headline).",
+   "headlines": [
+    "Oracle Selloff Tests Confidence in $523 Billion Cloud Backlog (investing.com, Feb 2026)",
+    "Oracle's AI business exploded higher... gave it all back (substack)"
+   ],
+   "catalyst_detail": "Unverified. Research surfaced only older context: large cloud-infrastructure backlog, heavily raised capex (~$50B FY26 guide), and repeated post-earnings give-backs. No confirmed trigger for today's -8.9% gap.",
+   "why": "Likely AI-capex/financing worry or sector de-rating (inference, unconfirmed).",
+   "impact": "2.2M volume; unclear sustainability. No peer read-through verified. Treat as unexplained gap-down: fade/bounce risk both ways.",
+   "horizon": "SHORT_TERM - no verified durable thesis.",
+   "opportunity_cost": "Long-side catch would need confirmed catalyst; unexplained gap-down fails Entry Checklist. Falling-knife risk; 2:1 R:R unlikely at a sane stop. Only 1 gapper today, nothing to rank against."
+  }
+ ]
+}
