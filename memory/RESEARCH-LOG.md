@@ -17779,3 +17779,6 @@ No grade-A hits — no Telegram/ClickUp notification sent per rule. CMCSA is bel
 3. MA — no-chase (RSI 70); wait pullback to ~$617.8; stop ~$575; target ~$680.
 **Risk factors:** midterm election day; VIX >21 and rising; Nasdaq -1.07% / AI-semis weakness (AMD -7.5%); Iran/Hormuz oil headline whipsaw; data gaps above.
 **Decision: HOLD.** Weekly trade count 0/3 (week of Nov 2). 83rd trading day, zero entries. No candidate has verified catalyst + confluence + no-chase pass. ClickUp: silent (nothing urgent).
+
+### Gappers (auto-scan 07:10 ET, cloud)
+- No gappers: 0 rows >=5% gap (price>=$3) across watchlist. Scan ran clean (also empty at 2% threshold). No catalyst/deep-dive fetch. No notification sent.
