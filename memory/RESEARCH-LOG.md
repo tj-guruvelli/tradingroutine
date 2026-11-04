@@ -17902,3 +17902,26 @@ No grade-A hits -> no Telegram/ClickUp alert per STEP 4 rule. JSON saved to
 `data/setup-scan_cloud_2026-11-03_1737ET.json`. Candidate only — feed to
 `/trade` or let `market-open.md` pick it up next session (STEP 6, no
 auto-trade).
+
+### Nov 4, Pre-Market Research (Day 84, Wednesday, cloud run)
+**Sources:** Apify RAG (Cboe/CNBC VIX clean; oil/futures/catalyst queries returned junk pages) -> fell back to native WebSearch for futures/oil/calendar. No Yahoo used.
+
+**Account:** equity $100,000 | cash $100,000 | buying power $400,000 | 0 positions | 0 open orders | daytrade count n/a (0). Still the $100k-vs-$10k baseline mismatch flagged Jul 27 (operator review pending).
+
+**Market context:**
+- Midterms: Democrats swept/projected to win House; Trump said he'd accept results. Futures whipsawed overnight (Nasdaq-100 -2% on House call, later reversed to S&P ~+0.9%, Dow ~+1.3% per TipRanks ~5:25am ET). Direction of open unsettled.
+- Nasdaq >10% below Oct 6 record (tech sell-off, per Reuters via search).
+- VIX 18.22 (-12.5%, prev close 20.83; Cboe 11:01 UTC read) — fear fading post-election; 52wk 13.38-35.30.
+- Oil: Brent ~$102.8 (-0.75%), WTI ~$95.8 (-0.27%); volatile on US-Israel/Iran war-ending efforts.
+- Data: ADP 8:15 ET (cons ~69-80K, prior 90K); trade balance 8:30; ISM Services 10:00 (cons ~54.5-54.8, prior 54.9, prices 74.0); Treasury refunding. Oct jobs report Fri Nov 6.
+- Earnings: AMD after close; Qualcomm after close Thu. No confirmed major pre-market names found.
+
+**Trade ideas (watch only, none actionable yet):**
+1. MSFT — trigger: reclaim EMA21 ~$526.6 on pullback; stop 8% below entry; target 2:1+. Needs catalyst (AMD print AH could be it). No chase at ~$540.
+2. V — trigger: pullback to EMA9 ~$403.9; stop -8%; target ~$440. Needs documented catalyst.
+3. MA — trigger: pullback to EMA9 ~$617.8; stop -8%; RSI70 no-chase.
+Carryover: LMT (setup-scan grade B, RSI 76.6 overbought -> no-chase).
+
+**Risks:** Post-election gap volatility; thin-spread pre-open quotes; ADP/ISM prints; AMD AH earnings / AI-semis sentiment; oil/Iran headlines; Friday jobs report.
+
+**Decision: HOLD.** No candidate with catalyst + confluence + no-chase. Weekly trades 0/3. Notification: silent (nothing urgent).
