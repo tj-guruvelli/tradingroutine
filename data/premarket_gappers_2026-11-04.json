@@ -1,39 +1,49 @@
 {
-  "scanned_at": "2026-11-04T13:17:45.350978Z",
+  "scanned_at": "2026-11-04T14:20:00Z",
   "deep_dive_cap": 5,
   "gappers": [
     {
       "rank": 1,
-      "symbol": "BE",
-      "price": 209.54,
-      "gap_pct": 6.81,
-      "premarket_volume": 334965,
-      "catalyst": "Barclays upgraded BE Hold->Buy; non-binding MOU with California Resources Corp for fuel cell + carbon-capture projects (TipRanks/Investing.com).",
+      "symbol": "MSFT",
+      "price": 538.99,
+      "gap_pct": 6.31,
+      "premarket_volume": 779919,
+      "catalyst": "Search result: 'Microsoft earnings analysis: questions answered and next catalysts' (investing.com); page body not retrieved, date unverified.",
       "headlines": [
-        "Barclays upgrade to Buy",
-        "MOU with California Resources Corp"
+        "Microsoft earnings analysis: questions answered and next catalysts"
       ],
-      "catalyst_detail": "Barclays (Christine Cho) upgraded to Buy and BE signed a non-binding MOU with California Resources to explore fuel-cell projects with carbon capture. Cho flagged possible added inventory/capacity spend ahead of revenue. Premarket quotes conflicted across sources ($207-$229); Alpaca shows $209.54 vs $196.18 prev close in this scan's reference.",
-      "why": "Analyst upgrade plus an AI-power/energy partnership headline pulls in momentum buyers.",
-      "impact": "Premarket volume 335K is thin; MOU is non-binding and one source showed the move fading. BE was -7% on AI-infra sentiment recently, so reads as headline spike with mean-revert risk. Sector read-through: AI-power names.",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "Upgrade + non-binding MOU, no durable thesis; volatile name, expect fade.",
-      "opportunity_cost": "0 open positions, 0/3 weekly trades, so nothing displaced; but prior BE research failed the catalyst+confluence+no-chase gate and gap is a chase entry. 2:1 R:R at a 10% trail stop would need ~$251+, unlikely near-term."
+      "catalyst_detail": "Only a headline surfaced (earnings-analysis piece); article text empty, so specifics unverified.",
+      "why": "Likely earnings/guidance-driven re-rating pulling in momentum buyers (unconfirmed).",
+      "impact": "780k premarket vol on a mega-cap is heavy; 6% gap on MSFT usually holds better than small-cap spikes, but unverified. Check for sector read-through (mega-cap tech, QCOM also +5%).",
+      "horizon": "LONG_TERM",
+      "horizon_reason": "Mega-cap earnings reset tends to persist multi-day, pending confirmation.",
+      "opportunity_cost": "Gap entry at $539 needs a ~10% trail stop (~$485) and 2:1 R:R implies a ~$590+ target (~+9.5%), tight. Would use a scarce new-trade slot (max 3/week) and up to 20% equity; competes with QCOM (same tech momentum, correlation gate applies)."
     },
     {
       "rank": 2,
+      "symbol": "QCOM",
+      "price": 170.58,
+      "gap_pct": 5.37,
+      "premarket_volume": 410238,
+      "catalyst": "Shares rose after company said it is working with Amazon (Schwab Network post); details unverified.",
+      "headlines": [
+        "Qualcomm (QCOM) shares rose after the company said it is working with Amazon (AMZN)"
+      ],
+      "catalyst_detail": "Schwab Network post says QCOM rose on news of working with Amazon; no article body or date retrieved.",
+      "why": "Partnership headline ties QCOM to AI/cloud demand, attracting momentum buyers.",
+      "impact": "410k premarket vol is solid; partnership news without financial terms can fade. MSFT also gapping, suggesting tech-wide bid.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Partnership headline without disclosed economics; fade risk within days.",
+      "opportunity_cost": "Ranks below MSFT; likely correlated with it and other tech holdings (corr gate). 2:1 R:R at 10% trail needs ~+20% target, unlikely for a headline gap."
+    },
+    {
+      "rank": 3,
       "symbol": "BMNR",
       "price": 20.585,
       "gap_pct": 5.29,
       "premarket_volume": 762788,
-      "catalyst": "No company-specific news found; likely ETH/crypto beta (latest 8-K Oct 12: ~6.03M ETH held).",
-      "headlines": [],
-      "catalyst_detail": "No Nov 4 reporting found. Latest Bitmine release (Oct 12) showed ~6.03M ETH (~4.9% of supply), $16.2B holdings, ongoing buybacks. Move appears ETH-driven.",
-      "why": "BMNR trades as a levered ETH treasury proxy; post-election risk-on bid in crypto lifts it.",
-      "impact": "Volume 763K is moderate; no company catalyst, so likely beta that fades with ETH. Read-through: crypto-treasury names.",
-      "horizon": "SHORT_TERM",
-      "horizon_reason": "No catalyst of its own; tied to ETH direction.",
-      "opportunity_cost": "No positions to displace; previously logged research-only/FAIL on gate. Unclear catalyst and high vol make 2:1 R:R at a sane stop hard; BE ranks higher on catalyst quality."
+      "catalyst": null,
+      "headlines": []
     }
   ]
 }

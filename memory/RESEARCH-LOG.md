@@ -17951,3 +17951,31 @@ Only 2 hits >=5%; deep-dive cap 5 not reached (both deep-dived). Apify returned 
 - Impact: Moderate vol (763K), no own catalyst; fades with ETH.
 - Horizon: SHORT_TERM, beta not thesis.
 - Opportunity cost: Nothing displaced; BE better catalyst; R:R at sane stop unclear.
+
+## 2026-11-04
+
+### Gappers (auto-scan 09:13 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | MSFT | 538.99 | +6.31 | 779,919 | Earnings-analysis headline (investing.com); body unverified |
+| 2 | QCOM | 170.58 | +5.37 | 410,238 | Working with Amazon (Schwab Network); unverified |
+| 3 | BMNR | 20.59 | +5.29 | 762,788 | none found (Apify returned nothing) |
+
+Only 3 hits (<10). Deep-dive cap 5; only 3 qualified. Apify returned thin results; deep-dive second query skipped, fields built from catalyst search only.
+
+#### Deep dive: MSFT $538.99 +6.31%
+- Catalyst: Earnings-analysis headline only; specifics unverified.
+- Why: Likely earnings/guidance re-rating, momentum buyers (unconfirmed).
+- Impact: Heavy 780k premarket vol for mega-cap; tech-wide bid (QCOM too).
+- Horizon: LONG_TERM, mega-cap earnings resets tend to persist (pending confirmation).
+- Opportunity cost: 10% trail ~$485; 2:1 needs ~$590+ (+9.5%), tight. Uses a scarce weekly slot, competes with QCOM.
+
+#### Deep dive: QCOM $170.58 +5.37%
+- Catalyst: Shares rose on Amazon collaboration news; no body/date retrieved.
+- Why: Partnership ties QCOM to AI/cloud demand.
+- Impact: 410k vol solid; no disclosed economics, fade risk.
+- Horizon: SHORT_TERM, headline-driven.
+- Opportunity cost: Below MSFT, correlated; 2:1 at 10% trail needs ~+20%, unlikely.
+
+#### Deep dive: BMNR $20.59 +5.29%
+- Catalyst: none found. Horizon: unknown. Research-only; no thesis.
