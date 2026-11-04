@@ -17930,3 +17930,24 @@ Carryover: LMT (setup-scan grade B, RSI 76.6 overbought -> no-chase).
 
 ### Gappers (auto-scan 07:09 ET, cloud)
 - No watchlist names with |gap| >= 5% (price >= $3). Scan returned empty; no catalyst/deep-dive run.
+
+### Gappers (auto-scan 08:17 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 209.54 | +6.81 | 334,965 | Barclays upgrade to Buy; non-binding MOU w/ California Resources (fuel cell + carbon capture) |
+| 2 | BMNR | 20.585 | +5.29 | 762,788 | No company news found; likely ETH beta |
+Only 2 hits >=5%; deep-dive cap 5 not reached (both deep-dived). Apify returned Yahoo/junk for BE -> discarded, used WebSearch.
+
+#### Deep dive: BE $209.54 +6.81%
+- Catalyst: Barclays upgrade Hold->Buy + non-binding MOU with California Resources for fuel cell/carbon capture. Analyst warns of inventory/capacity spend before revenue. Premarket quotes conflicted across sources.
+- Why: Upgrade + AI-power partnership headline draws momentum buyers.
+- Impact: Thin vol (335K), non-binding MOU, one source showed fade; mean-revert risk.
+- Horizon: SHORT_TERM, headline-driven, no durable thesis.
+- Opportunity cost: Nothing displaced (0 positions, 0/3 trades); chase entry, prior BE gate FAIL, 2:1 R:R unlikely.
+
+#### Deep dive: BMNR $20.585 +5.29%
+- Catalyst: No Nov 4 news found; last 8-K Oct 12 (~6.03M ETH, $16.2B holdings, buybacks).
+- Why: Levered ETH-proxy riding crypto risk-on.
+- Impact: Moderate vol (763K), no own catalyst; fades with ETH.
+- Horizon: SHORT_TERM, beta not thesis.
+- Opportunity cost: Nothing displaced; BE better catalyst; R:R at sane stop unclear.
