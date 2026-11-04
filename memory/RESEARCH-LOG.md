@@ -18028,3 +18028,7 @@ Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at t
 - Impact: Sub-$5 stock, high spread/fade risk.
 - Horizon: SHORT_TERM, no thesis.
 - Opportunity cost: Barely above $3 floor; low-quality; would displace a better setup; 10% trail is ~34c noise range; fails 2:1.
+
+### Setup Scan (15:37 ET, cloud)
+- 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 15:37, outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit). JSON saved to `data/setup-scan_cloud_2026-11-04_1537ET.json` (gitignored, not committed — matches this run's other `/data/` scans today).
