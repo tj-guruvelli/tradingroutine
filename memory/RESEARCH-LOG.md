@@ -17925,3 +17925,8 @@ Carryover: LMT (setup-scan grade B, RSI 76.6 overbought -> no-chase).
 **Risks:** Post-election gap volatility; thin-spread pre-open quotes; ADP/ISM prints; AMD AH earnings / AI-semis sentiment; oil/Iran headlines; Friday jobs report.
 
 **Decision: HOLD.** No candidate with catalyst + confluence + no-chase. Weekly trades 0/3. Notification: silent (nothing urgent).
+
+## 2026-11-04
+
+### Gappers (auto-scan 07:09 ET, cloud)
+- No watchlist names with |gap| >= 5% (price >= $3). Scan returned empty; no catalyst/deep-dive run.
