@@ -17979,3 +17979,52 @@ Only 3 hits (<10). Deep-dive cap 5; only 3 qualified. Apify returned thin result
 
 #### Deep dive: BMNR $20.59 +5.29%
 - Catalyst: none found. Horizon: unknown. Research-only; no thesis.
+
+### Gappers (auto-scan 10:11 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | 13.55 | -7.32 | 24,571 | No fresh catalyst found; recent tape = risk-off tech rout (Oct 30 close -10%); prior offering dilution history (Mar 2026). |
+| 2 | BMNR | 21.96 | +6.94 | 266,441 | No dated catalyst found; ETH-treasury high-beta name, $4B buyback authorization (Apr 2026), likely crypto beta. |
+| 3 | CRWV | 50.19 | -6.59 | 345,598 | AI-infrastructure selloff: Amazon FCF deficit, Intel guidance warning, Alphabet post-earnings rout. |
+| 4 | MSFT | 554.35 | +6.43 | 539,524 | No catalyst found (searches returned stale/Yahoo-only items, discarded); gap unexplained. |
+| 5 | NIO | 3.39 | +6.27 | 556,880 | No company-specific catalyst per latest news flow; next earnings is the marker. |
+| 6 | KTOS | 38.68 | -5.66 | 48,816 | No fresh catalyst found; Q3 2026 results release was pending per Oct 27 note. |
+| 7 | GOOG | 292.33 | +5.06 | 183,068 | Stabilizing after record post-earnings rout (Q3 miss, slowing Search growth, negative FCF). |
+| 8 | RCAT | 4.235 | -5.04 | 84,690 | No fresh catalyst found; stock down sharply from $15-16 resistance. |
+
+Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at top 5; ranks 6-8 quick-scan only. Catalyst sourcing thin (Apify returned stale/no-news results; Yahoo hits discarded).
+
+#### Deep dive: UMAC $13.55 -7.32%
+- Catalyst: Thin sourcing: only a Perplexity-finance snippet citing Oct 30 -10% risk-off tech rout and a Mar 2026 offering story. No Nov 4 headline found.
+- Why: Likely sector risk-off follow-through plus dilution overhang; unconfirmed.
+- Impact: Volume 24.6K is far below normal at this hour; no read-through evidence. Reads as fade/noise.
+- Horizon: SHORT_TERM, no verified thesis; do not carry.
+- Opportunity cost: Would displace a funded holding for an unexplained drop; sub-50K volume; fails 2:1 R:R on unknown catalyst. Higher-ranked liquid names exist.
+
+#### Deep dive: BMNR $21.96 +6.94%
+- Catalyst: Thin sourcing: only Apr 2026 NYSE uplist and $4B buyback news; no Nov 4 headline found.
+- Why: High-beta ETH treasury proxy moves with crypto; gap likely crypto-tape driven.
+- Impact: 266K vol is moderate; sustainability depends on ETH, not company news.
+- Horizon: SHORT_TERM, crypto-beta, no company catalyst.
+- Opportunity cost: Crypto-proxy, outside sector-rotation leaders; would displace an equity holding on beta alone; 10% trail wide for a 7% gapper, R:R unlikely 2:1.
+
+#### Deep dive: CRWV $50.19 -6.59%
+- Catalyst: AI-infra selloff cited in Perplexity snippet: Amazon trailing FCF deficit, Intel guidance warning, Alphabet post-earnings rout. No CRWV-specific item.
+- Why: Sector-wide AI-capex fear hits leveraged GPU-cloud names hardest.
+- Impact: 345K vol; peers (GOOG gapping up though) mixed. Sector read-through negative; could bounce or extend.
+- Horizon: SHORT_TERM, sector-sentiment driven.
+- Opportunity cost: Catching a falling AI-infra name vs MSFT/GOOG strength; correlation gate vs AI holdings likely trips; stop distance wide, 2:1 doubtful.
+
+#### Deep dive: MSFT $554.35 +6.43%
+- Catalyst: No catalyst found. Searches returned only stale items (Jul 2025, Nov 2025 Yahoo item discarded, Oct 12 2026 $4T cap reclaim). A +6.4% large-cap gap implies real news (possible earnings/AI-deal) that is unverified.
+- Why: Unknown; do not infer. Large-cap +6% gap on 540K vol suggests institutional demand.
+- Impact: Volume strong for time of day; if news-backed, large-cap gaps often hold. Unverified.
+- Horizon: LONG_TERM candidate only if catalyst confirmed; currently UNVERIFIED.
+- Opportunity cost: At ~$554 one 20% position is ~$2K=~3.6 shares of equity; chasing +6% gap gives poor entry vs stop; displaces weaker holding only after catalyst confirmed. R:R unclear until verified.
+
+#### Deep dive: NIO $3.39 +6.27%
+- Catalyst: No company-specific catalyst per moomoo summary; price ~$3.39 on 557K vol.
+- Why: Low-priced EV name drifting up on volume, no thesis; possibly China EV sector tape.
+- Impact: Sub-$5 stock, high spread/fade risk.
+- Horizon: SHORT_TERM, no thesis.
+- Opportunity cost: Barely above $3 floor; low-quality; would displace a better setup; 10% trail is ~34c noise range; fails 2:1.
