@@ -18080,3 +18080,52 @@ Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at t
 
 - Only 5 hits (OPEN +11.24% excluded, <$3). Deep-dive fields null: Apify gave only stale/off-date pages, none fabricated.
 - Read-through (data only): CRWV/NBIS/BE all -10%+ = AI-infra/neocloud selloff, sector-wide not idiosyncratic. Research only, no orders.
+
+### Gappers (auto-scan 09:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BKSY | 20.335 | +16.47 | 59113 | Gap up after latest contract announcement; stock had given back gains Tue (thin PM vol). |
+| 2 | CRWV | 46.41 | -13.62 | 1483591 | Gap down: Democratic midterm sweep raises Texas/state data-center moratorium and debt-cost risk. |
+| 3 | ONDS | 5.05 | -12.86 | 2013923 | Gap down despite Europe/Asia counter-UAS contract news; stock down ~22% in a month. |
+| 4 | NBIS | 135.74 | -10.47 | 459790 | Gap down on midterm-driven AI data-center permit risk; earnings report due Nov 12. |
+| 5 | BE | 192.18 | -10.2 | 572454 | Gap down after analyst downgrade to Hold (PT $176) and AI-infra selloff. |
+| 6 | OKLO | 21.5 | -8.49 | 587172 | Nuclear/AI-power names weak on midterm policy fallout; search data stale/inconsistent. |
+| 7 | QCOM | 152.77 | -7.11 | 787912 | Gap down; no clear catalyst found (earlier +5% pop to ~$173 now reversed). |
+| 8 | NIO | 3.41 | +6.9 | 3130066 | Gap up; no fresh catalyst found (new ES8 edition/swap-station buzz, EV delivery trends). |
+| 9 | MSFT | 556.68 | +6.88 | 1907869 | Record high on FQ1 2027 earnings strength and midterm results boosting AI infrastructure bets. |
+Note: OPEN (+11.2%, $1.93) excluded <$3. Deep dive uses search snippets only (no fundamentals query). Deep-dive cap: top 5; ranks 6-9 quick-scan only.
+
+#### Deep dive: BKSY $20.335 +16.47%
+- Catalyst: BlackSky gapped +16% on thin premarket volume (~59k). Search shows a recent contract announcement and a small insider sale (~$337k, 10-22); no hard new catalyst confirmed.
+- Why: Contract/earnings-season headline pulls in momentum buyers in a low-float space name.
+- Impact: Volume thin (59k) vs fill needs; reads as headline spike likely to fade/mean-revert; stock gave back gains after prior contract news.
+- Horizon: SHORT_TERM, headline-driven, prior contract pop already faded once.
+- Opportunity cost: Would use a slot vs stronger-liquidity names; wide gap makes a sane stop >7% from entry, 2:1 R:R doubtful; not in a clear rotation phase.
+
+#### Deep dive: CRWV $46.41 -13.62%
+- Catalyst: AI neocloud sold off after Democratic wins in the 2026 midterms raised risk of data-center permit delays/moratoria (incl. Texas) and higher debt costs. Fell ~6% Wed regular session already, now another gap down.
+- Why: Policy/regulatory risk plus leverage repricing hits capex-heavy AI infra.
+- Impact: Heavy volume (1.48M PM) and sector-wide read-through (NBIS also -10%); sustained pressure possible but policy-fear gaps often partly retrace.
+- Horizon: SHORT_TERM, headline/policy-driven, no earnings change; long thesis not invalidated yet.
+- Opportunity cost: Long-only, so only a rebound play; competes with NBIS/BE same-theme gaps; correlated AI-infra names would trip corr gate; R:R unclear in falling knife.
+
+#### Deep dive: ONDS $5.05 -12.86%
+- Catalyst: Ondas announced multi-million counter-UAS contracts in Europe and Asia and FEMA counter-drone funding tailwind, yet shares have lost ~22% in a month; source price data inconsistent ($5 vs ~$9-10 cited elsewhere).
+- Why: Likely broad speculative/small-cap risk-off rather than company news; dilution/sentiment concerns possible but unconfirmed.
+- Impact: High PM volume; no durable negative company catalyst found, so could bounce, but trend is down.
+- Horizon: SHORT_TERM, no confirmed structural catalyst; momentum negative.
+- Opportunity cost: Low-priced volatile name; 20% cap sizing at ATR risk is small; would displace higher-quality setups; 2:1 R:R poor in downtrend.
+
+#### Deep dive: NBIS $135.74 -10.47%
+- Catalyst: Nebius fell ~6.7% in regular trading and gaps lower after Democrats won both chambers, raising AI data-center permit risk. Concerns on slowing cloud growth and competition cited. Earnings Nov 12.
+- Why: Policy-risk de-rating of AI infra group; earnings catalyst ahead keeps volatility high.
+- Impact: Sector-wide (CRWV, BE also down); not stock-specific, so could mean-revert, but downtrend ~-21% in a month.
+- Horizon: SHORT_TERM, wait for Nov 12 earnings and policy clarity.
+- Opportunity cost: Overlaps CRWV/BE correlation gate; earnings in 1 week adds binary risk; R:R at 7% stop unlikely 2:1 now.
+
+#### Deep dive: BE $192.18 -10.2%
+- Catalyst: Bloom Energy was downgraded to Hold with $176 target (14% downside) after a run to ~$214 on a Barclays buy call. AI-power names sold off on midterm policy risk.
+- Why: Downgrade plus sector derisking removes momentum bid after sharp run.
+- Impact: Volume moderate; downgrade-driven fades can persist days; peers also down.
+- Horizon: SHORT_TERM, downgrade + sector rotation out of AI infra.
+- Opportunity cost: Would displace nothing held-to-strength; PT $176 implies further downside, R:R <2:1 for longs.
