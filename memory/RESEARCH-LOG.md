@@ -18129,3 +18129,54 @@ Note: OPEN (+11.2%, $1.93) excluded <$3. Deep dive uses search snippets only (no
 - Impact: Volume moderate; downgrade-driven fades can persist days; peers also down.
 - Horizon: SHORT_TERM, downgrade + sector rotation out of AI infra.
 - Opportunity cost: Would displace nothing held-to-strength; PT $176 implies further downside, R:R <2:1 for longs.
+
+### Gappers (auto-scan 10:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 164.68 | -17.8% | 248122 | Bloom Energy downgraded to Hold, PT $176 (SA 11/4) after run to ~$214; AI-power names selling off. |
+| 2 | RDW | 6.4 | -17.1% | 271456 | Q3 revenue $109M missed ~$126.8M est (EPS -$0.06 beat); stock gaps down on revenue miss. |
+| 3 | UMAC | 10.9 | -16.28% | 49122 | No verified catalyst; fell ~9% on 11/4 with no news, earnings due Thu (est EPS -$0.09). |
+| 4 | NBIS | 119.84 | -15.33% | 274540 | AI data-center permit/policy risk post-election plus slowing-cloud-growth worries; earnings Nov 12. |
+| 5 | QBTS | 8.84 | -14.92% | 181314 | No catalyst found (search empty); moves with quantum-computing group selloff. |
+| 6 | ASTS | 30.42 | -14.53% | 175205 | No catalyst found (search empty); space/speculative-tech selloff. |
+| 7 | RGTI | 9.6 | -14.48% | 173340 | Quantum group weakness; ~80% off highs, Q3 earnings Nov 10 AMC. |
+| 8 | LUNR | 8.53 | -14.01% | 94430 | Space-sector weakness; down ~25% in 30d, 75-80% revenue now Lanteris, no fresh news. |
+| 9 | RCAT | 3.46 | -13.5% | 37752 | No fresh catalyst; down ~30% in 30d on Steyr Motors acquisition news. |
+| 10 | BW | 3.205 | -12.91% | 79395 | No catalyst found (search empty). |
+
+#### Deep dive: BE $164.68 -17.8%
+- Catalyst: Downgraded to Hold, PT $176 (~14% downside) after a Barclays-driven run to ~$214; gap extends the AI-power derisking.
+- Why: Downgrade removes momentum bid after a sharp run; sector policy fear adds pressure.
+- Impact: Volume moderate so far; peers NBIS/CRWV also gapping down, so read-through is sector-wide.
+- Horizon: SHORT_TERM, downgrade/sector rotation, no thesis change
+- Opportunity cost: Long-only: rebound play only, competes with NBIS/CRWV (corr gate likely trips); PT below price makes 2:1 R:R unlikely at a 7-10% stop.
+
+#### Deep dive: RDW $6.4 -17.1%
+- Catalyst: Q3 revenue $109.0M (+5.4% y/y) missed ~$126.8M consensus; EPS -$0.06 beat -$0.10 est.
+- Why: Revenue miss in a high-multiple space name triggers de-rating; beat on EPS not enough.
+- Impact: Gap ~-17% on 271k early volume; space peers ASTS/LUNR/RKLB also -12 to -15%, so partly sector.
+- Horizon: SHORT_TERM, earnings reaction plus sector selloff; no structural change evident
+- Opportunity cost: Would displace nothing strong; sub-$7 volatile name; falling-knife long can't show 2:1 R:R at sane stop.
+
+#### Deep dive: UMAC $10.9 -16.28%
+- Catalyst: No verified news; fell ~9% on 11/4 with no catalyst, earnings expected Thu 11/5 (est EPS -$0.09).
+- Why: Likely small-cap drone/defense risk-off ahead of earnings; unconfirmed.
+- Impact: Thin PM volume (~49k); drone peer RCAT also -13.5%, suggests group weakness.
+- Horizon: SHORT_TERM, no confirmed catalyst, earnings binary risk
+- Opportunity cost: Earnings day binary risk; thin liquidity; fails confluence, would not displace a higher-ranked setup.
+
+#### Deep dive: NBIS $119.84 -15.33%
+- Catalyst: Shares fell on AI data-center permit risk after post-election politics, plus concerns about slowing cloud growth and competition. Earnings Nov 12; ~-21% over the past month.
+- Why: Policy/leverage repricing of capex-heavy AI infra.
+- Impact: Sector-wide (BE, CRWV also down); heavy volume, could partly retrace but trend is down.
+- Horizon: SHORT_TERM, policy-driven, wait for Nov 12 earnings
+- Opportunity cost: Overlaps BE/CRWV (corr gate); earnings in a week adds binary risk; R:R <2:1 now.
+
+#### Deep dive: QBTS $8.84 -14.92%
+- Catalyst: No news found by search; quantum names (RGTI also -14.5%) all gap down together.
+- Why: Group de-rating of speculative quantum names, likely ahead of RGTI earnings Nov 10 and sentiment.
+- Impact: Sector-wide, not stock-specific; mean-reversion possible but unconfirmed.
+- Horizon: SHORT_TERM, no catalyst, momentum negative
+- Opportunity cost: Correlated with RGTI; low-priced high-ATR name; no clean 2:1 setup.
+
+_Deep dive capped at top 5; ranks 6-10 quick-scan only. Second fundamentals query skipped (search tool only; catalyst snippets used)._
