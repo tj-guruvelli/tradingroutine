@@ -18065,3 +18065,6 @@ Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at t
 
 ### Decision
 **HOLD.** 0/3 trades this week. Patience > activity. Re-check at market-open for pullback entries.
+
+### Gappers (auto-scan 07:13 ET, cloud)
+- 0 hits >=5% gap, price>=$3 across watchlist. No catalyst research run. No notification sent.
