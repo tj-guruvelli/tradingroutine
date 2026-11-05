@@ -18194,3 +18194,17 @@ _Deep dive capped at top 5; ranks 6-10 quick-scan only. Second fundamentals quer
 | MSFT | B | Momentum confluence | daily swing | ADX 22.7, EMA9 530.2>EMA21 527.0, RSI 64.3 |
 
 JSON saved to `data/setup-scan_cloud_2026-11-05_1537ET.json`.
+
+### Setup Scan (17:37 ET, cloud)
+- 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 17:37, outside 10:00-15:30 ET) — Setup A not evaluated this run (post-close), so 0 grade-A is not a real "no setups" signal.
+- 5 grade-B hits (Momentum confluence: ADX14>20 AND EMA9>EMA21), 0 grade-A/C. Same 5 tickers/values as the 15:37 ET run (daily bars unchanged after close). No Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 38.0, EMA9 416.8>EMA21 404.6, RSI 75.9 |
+| MA | B | Momentum confluence | daily swing | ADX 40.6, EMA9 640.8>EMA21 620.9, RSI 74.9 |
+| LMT | B | Momentum confluence | daily swing | ADX 44.1, EMA9 615.9>EMA21 588.2, RSI 54.8 |
+| NOC | B | Momentum confluence | daily swing | ADX 38.1, EMA9 544.6>EMA21 533.8, RSI 47.6 |
+| MSFT | B | Momentum confluence | daily swing | ADX 22.7, EMA9 530.2>EMA21 527.0, RSI 64.3 |
+
+JSON saved to `data/setup-scan_cloud_2026-11-05_1737ET.json`.
