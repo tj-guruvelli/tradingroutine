@@ -2497,3 +2497,15 @@ Weekly trade count: 0/3 (week of Nov 2). 85th trading day since launch
 (Jul 9) with zero entries. Equity flat at $100,000 — still the
 confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 135th+
 straight session, operator review pending.
+
+### Nov 5, Midday Scan (Day 85, Thursday, local run)
+**No action.** `alpaca.sh positions`/`orders`: 0 positions, 0 open orders —
+nothing to cut at -7%, nothing to tighten, no thesis to re-check. Matches
+Nov 5 Market-Open HOLD (all 6 candidates failed catalyst+confluence+
+no-chase+reliable-quote gate). STEP 6 intraday research not triggered — no
+held position to move sharply. STEP 7: no action, no notification sent.
+
+Weekly trade count: 0/3 (week of Nov 2). 85th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — confirmed-live-vs-$10k-
+baseline mismatch flagged Jul 27, unresolved 136th+ straight session,
+operator review pending.
