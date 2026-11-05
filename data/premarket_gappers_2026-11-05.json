@@ -1,1 +1,77 @@
-{"scanned_at":"2026-11-05T12:14:01Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-11-05T13:14:00Z",
+  "deep_dive_cap": 5,
+  "note": "Apify returned stale/off-date results only; catalysts unverified. Volume = Alpaca total volume (premarket_volume not populated). OPEN (+11.24%, $1.93) excluded: price<$3.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 46.38,
+      "gap_pct": -13.68,
+      "volume": 1483591,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": null,
+      "horizon": null,
+      "opportunity_cost": null
+    },
+    {
+      "rank": 2,
+      "symbol": "ONDS",
+      "price": 5.07,
+      "gap_pct": -12.51,
+      "volume": 2013923,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": null,
+      "horizon": null,
+      "opportunity_cost": null
+    },
+    {
+      "rank": 3,
+      "symbol": "BE",
+      "price": 188.98,
+      "gap_pct": -11.7,
+      "volume": 572454,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": null,
+      "horizon": null,
+      "opportunity_cost": null
+    },
+    {
+      "rank": 4,
+      "symbol": "NBIS",
+      "price": 136.1,
+      "gap_pct": -10.24,
+      "volume": 459790,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": null,
+      "horizon": null,
+      "opportunity_cost": null
+    },
+    {
+      "rank": 5,
+      "symbol": "NIO",
+      "price": 3.39,
+      "gap_pct": 6.27,
+      "volume": 3130066,
+      "catalyst": null,
+      "headlines": [],
+      "catalyst_detail": null,
+      "why": null,
+      "impact": null,
+      "horizon": null,
+      "opportunity_cost": null
+    }
+  ]
+}

@@ -18068,3 +18068,15 @@ Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at t
 
 ### Gappers (auto-scan 07:13 ET, cloud)
 - 0 hits >=5% gap, price>=$3 across watchlist. No catalyst research run. No notification sent.
+
+### Gappers (auto-scan 08:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 46.38 | -13.68 | 1.48M | unverified (search stale) |
+| 2 | ONDS | 5.07 | -12.51 | 2.01M | unverified (search stale) |
+| 3 | BE | 188.98 | -11.70 | 0.57M | unverified (search stale) |
+| 4 | NBIS | 136.10 | -10.24 | 0.46M | unverified (search stale) |
+| 5 | NIO | 3.39 | +6.27 | 3.13M | unverified (search stale) |
+
+- Only 5 hits (OPEN +11.24% excluded, <$3). Deep-dive fields null: Apify gave only stale/off-date pages, none fabricated.
+- Read-through (data only): CRWV/NBIS/BE all -10%+ = AI-infra/neocloud selloff, sector-wide not idiosyncratic. Research only, no orders.
