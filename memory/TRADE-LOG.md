@@ -2455,3 +2455,45 @@ action taken this run.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-11-03`, equity/cash unchanged at $100,000). Market-Open HOLD (MSFT/V/MA/LMT all failed catalyst+confluence+no-chase gate); Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 2). 84th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 134th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing the catalyst+confluence+no-chase gate; watch MSFT for EMA21 reclaim, V/MA for EMA9 pullback, LMT for RSI cooldown.
+
+### Nov 5, Market-Open (Day 85, Thursday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules, today's Pre-Market RESEARCH-LOG
+(explicit **HOLD**, 0/3 trades this week, no candidate actionable pre-open),
+TRADE-LOG tail (weekly trade count 0/3, week of Nov 2).
+
+STEP 2: Setup-scan — no 2026-11-04 file exists; used prior day's latest,
+`data/setup-scan_cloud_2026-11-03_1737ET.json` (stale, 17:37ET Nov 3). One
+hit: LMT grade B, RSI14 76.59 (overbought). Merged with pre-market carryover
+candidates: AAPL, AMZN (today's ideas), MSFT, V, MA (carryover).
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-04`). Live quotes pulled, all stamped
+`2026-11-04T21:00` (prior-close snapshot again — pre-open feed thin/stale,
+same recurring data-quality issue as prior sessions):
+- AAPL: ap $0 (no ask) / bp $330.94 — FAIL: unreliable quote (bad ask, same
+  failure mode as MSFT on Nov 4); no confirmed pullback-to-EMA9/21 trigger
+  verifiable off this data.
+- AMZN: ap $283.37 / bp $256.78 — spread ~$26 (~10%), unreliable; no
+  confirmed retest level documented pre-open — FAIL.
+- MSFT: ap $582.07 / bp $527.44 — spread ~$55, unreliable quote; bp near
+  EMA21 reclaim trigger (~$526.6) but quote untrustworthy — FAIL.
+- V: ap $451.82 / bp $407.55 — spread ~$44, unreliable; near EMA9 trigger
+  (~$403.9) but FAIL: no catalyst documented in today's RESEARCH-LOG + bad
+  quote.
+- MA: ap $695.89 / bp $637.48 — spread ~$58, unreliable; near EMA9 trigger
+  (~$617.8 carryover) but FAIL: no catalyst documented today + bad quote.
+- LMT (setup-scan grade B, stale Nov 3 17:37ET): FAIL — RSI14 76.59
+  overbought, explicit no-chase rule (Strategy Hard Rules: RSI>70 = no new
+  long); also no catalyst documented today.
+
+STEP 4: All 6 candidates (AAPL, AMZN, MSFT, V, MA, LMT) fail the
+catalyst+confluence+no-chase+reliable-quote gate — STEPs 5-6 (orders/stops)
+skipped. No trade fired.
+
+STEP 7 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 2). 85th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 135th+
+straight session, operator review pending.
