@@ -18036,3 +18036,32 @@ Note: 8 passed filters (OPEN +15.3% excluded, $2.00 < $3). Deep dive capped at t
 ### Setup Scan (17:37 ET, cloud)
 - 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 17:37, outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
 - 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit). JSON saved to `data/setup-scan_cloud_2026-11-04_1737ET.json` (gitignored, not committed — matches this run's other `/data/` scans today).
+
+## 2026-11-05 — Pre-Market Research (Day 85, Thursday, cloud run)
+
+### Account
+- Equity $100,000 | Cash $100,000 | BP $400,000 (4x margin) | Daytrade count 0 | 0 positions | 0 open orders
+- `balance_asof: 2026-11-04`. Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.
+
+### Market context (Apify RAG; no Yahoo used)
+- Source: investing.com page snapshot (cached; timestamp unclear — likely Nov 4 close/overnight). Treat as approximate.
+- S&P 500 7,688.6 (+1.58%), Dow 53,356 (+3.03%, "best day in 19 months" headline), S&P fut 7,703 (+0.19%), Nasdaq-100 fut 28,303 (-0.47%).
+- VIX 16.83. US10Y 4.877%, 30Y 5.261%. DXY 101.40.
+- WTI 88.71 (+0.67%), Brent 96.17 (+1.64%). Gold 4,138. Oil reported falling in Asia on Nov 5 after midterms.
+- Catalyst: Democrats swept US midterms -> removal of uncertainty rally (Dow). Rotation out of AI trades (Hindu BusinessLine: "global shift away from AI trades").
+- Mega-cap tape: AAPL +5.3%, AMZN +6.1%, GOOGL +3.2%, META +1.4%; NVDA -3.2%, TSLA -3.3%. QCOM slipping on midterm-fallout note.
+- Gaps (data not retrievable): economic calendar (jobless claims etc.), today's BMO earnings, sector YTD momentum — Apify returned irrelevant/stale hits (query 2 returned dictionary "S" pages; Hindu BusinessLine India-only). Not re-queried; logged as gap.
+
+### Trade ideas (watch only, none actionable pre-open)
+1. AAPL ~349.5 — catalyst: +5.3% mega-cap strength post-midterm. Entry: pullback to EMA9/21 only (no chase of +5% print). Stop 10% trail. Target +12% (2:1+). Unverified catalyst/RSI.
+2. AMZN ~266 — catalyst: +6.1% rally. Same no-chase rule; wait for retest. Stop 10% trail / target +12%.
+3. MSFT (carryover) — wait for EMA21 reclaim; V/MA EMA9 pullback; LMT RSI cooldown (>70 prior).
+- All need >=2 confluence + documented catalyst; none met pre-open.
+
+### Risks
+- Post-event gap-up exhaustion after 1-day +1.6% S&P / +3% Dow; no-chase rule (>5% prints) blocks AAPL/AMZN.
+- AI-trade unwind (NVDA, TSLA weak) — tech divergence; 10Y near 4.9%, 30Y >5.2%.
+- Oil ~$89-96 elevated. Weak catalyst sourcing today (Apify thin).
+
+### Decision
+**HOLD.** 0/3 trades this week. Patience > activity. Re-check at market-open for pullback entries.
