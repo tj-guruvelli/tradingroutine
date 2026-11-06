@@ -2585,3 +2585,10 @@ Weekly trade count: 0/3 (week of Nov 2, final trading day of the week).
 86th trading day since launch (Jul 9) with zero entries. Equity flat at
 $100,000 — confirmed-live-vs-$10k-baseline mismatch flagged Jul 27,
 unresolved 138th+ straight session, operator review pending.
+
+### Nov 6, EOD Snapshot (Day 86, Friday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-11-05`, equity/cash unchanged at $100,000). Market-Open: all 7 candidates (MSFT, V, MA, LMT, NOC, ONDS, BE, NBIS) failed catalyst+confluence+no-chase+reliable-quote gate — no trade fired. Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 2, final trading day of the week). 86th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 138th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing the catalyst+confluence+no-chase gate; watch MSFT for EMA21 reclaim, V/MA for RSI cooldown from overbought, LMT for pullback-to-EMA trigger.
