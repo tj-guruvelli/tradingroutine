@@ -2516,3 +2516,60 @@ operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-11-04`, equity/cash unchanged at $100,000). Market-Open: all 6 candidates (AAPL, AMZN, MSFT, V, MA, LMT) failed catalyst+confluence+no-chase+reliable-quote gate — no trade fired. Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 2). 85th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 136th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing the catalyst+confluence+no-chase gate; watch MSFT for EMA21 reclaim, V/MA for EMA9 pullback, LMT for RSI cooldown from overbought.
+
+### Nov 6, Market-Open (Day 86, Friday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules, today's RESEARCH-LOG (only
+gappers auto-scans logged: ONDS/BE/NBIS deep dives, all three explicitly
+concluded "Research only" / no entry — falling-knife or crowded-unwind
+moves, no durable stock-specific catalyst, 2:1 R:R unlikely). TRADE-LOG tail
+(weekly trade count 0/3, week of Nov 2). No dedicated pre-market research
+entry beyond gappers; carryover watch list from Nov 5 EOD notes: MSFT (EMA21
+reclaim), V/MA (EMA9 pullback), LMT (RSI cooldown).
+
+STEP 2: Setup-scan — latest file `data/setup-scan_cloud_2026-11-05_1737ET.json`
+(17:37ET Nov 5). Hits: V grade B (rsi14 75.87), MA grade B (rsi14 74.88),
+MSFT grade B (rsi14 64.32), NOC grade B (rsi14 47.64), LMT grade B (rsi14
+54.83, no longer overbought vs Nov 3's 76.59). Merged with carryover
+candidates (MSFT, V, MA, LMT) and today's gappers (ONDS, BE, NBIS).
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-05`). Live quotes pulled:
+- MSFT: ap $561.33 / bp $515.65, stamped `2026-11-05T21:00` (stale
+  prior-close snapshot, same recurring pre-open data-quality issue), spread
+  ~$45.68 (~8%) — FAIL: unreliable quote; also no catalyst documented in
+  today's RESEARCH-LOG.
+- V: ap $445.68 / bp $399.08, stamped `2026-11-05T21:00`, spread ~$46.6
+  (~10%) — FAIL: unreliable quote + rsi14 75.87 overbought, explicit
+  no-chase rule (RSI>70 = no new long).
+- MA: ap $704.80 / bp $617.50, stamped `2026-11-05T21:00`, spread ~$87.3
+  (~12%) — FAIL: unreliable quote + rsi14 74.88 overbought, no-chase rule.
+- LMT: ap $610.57 / bp $547.12, stamped `2026-11-05T21:00`, spread ~$63.45
+  (~10%) — FAIL: unreliable quote; rsi14 cooled to 54.83 but curr_px
+  ($578.85 on setup-scan) sits below both ema9 ($615.93) and ema21
+  ($588.23) — no pullback-to-EMA trigger reached; no catalyst documented
+  today.
+- NOC: not in original plan, flagged by setup-scan only — curr_px below
+  ema9/ema21, no documented catalyst — FAIL (research/confluence gate, not
+  carried further).
+- ONDS: ap $4.71 / bp $4.65, stamped `2026-11-06T13:11` (fresh pre-market
+  quote, reliable) — FAIL per today's deep dive: falling knife, below
+  200-day SMA (~$7.07), tiny ATR sizing at sub-$5, 2:1 R:R not clearable —
+  research-only conclusion stands.
+- BE: ap $0 (no ask) / bp $160.90, stamped `2026-11-05T21:00` — FAIL:
+  unreliable quote (no ask, same failure mode as AAPL/BE on prior
+  sessions); also momentum-unwind thesis unproven per today's deep dive.
+- NBIS: ap $138.46 / bp $104.85, stamped `2026-11-05T21:00`, spread ~$33.6
+  (~24%) — FAIL: unreliable quote; sector-wide AI/data-center risk-off, no
+  stock-specific catalyst per today's deep dive.
+
+STEP 4: All 7 candidates checked (MSFT, V, MA, LMT, NOC, ONDS, BE, NBIS)
+fail the catalyst+confluence+no-chase+reliable-quote gate — STEPs 5-6
+(orders/stops) skipped. No trade fired.
+
+STEP 7 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 2, final trading day of the week). 86th
+trading day since launch (Jul 9) with zero entries. Equity flat at $100,000
+— still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27,
+unresolved 137th+ straight session, operator review pending.
