@@ -18208,3 +18208,24 @@ JSON saved to `data/setup-scan_cloud_2026-11-05_1537ET.json`.
 | MSFT | B | Momentum confluence | daily swing | ADX 22.7, EMA9 530.2>EMA21 527.0, RSI 64.3 |
 
 JSON saved to `data/setup-scan_cloud_2026-11-05_1737ET.json`.
+
+### Nov 6, Pre-Market Research (Day 86, Friday, cloud)
+Sources: Apify web-search (RAG browser tool unavailable; Yahoo blocked via -site + blockedDomains) + native WebSearch fallback. Several Apify queries returned 0 results (date filter too tight).
+
+**Account:** Equity $100,000 | Cash $100,000 | BP $400,000 | Positions 0 | Open orders 0 | Daytrades 0. (Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending.)
+
+**Market context**
+- Thu Nov 5 = AI-led crash: S&P ~-4.4% (~7,354), Dow ~-3.4% (~51,523), Nasdaq ~-5.5% (worst day since Apr 2025, ~$2.5T lost). Trigger: Democratic midterm sweep -> AI-regulation / data-center-buildout fears; chips/cloud routed globally. Closing figures vary by source (VIX 25.4-27.3 vs 16.78 prior close).
+- Premarket Fri: mixed. Nasdaq futs ~+1.2% (chip bounce, NVDA ~+3.6%), S&P futs ~+0.2%, Dow futs ~-0.8%. Memory names weak (QCOM ~-9%), APP ~+20%.
+- Oil: WTI ~$89.8-91.7, Brent ~$99.9 (CNBC); renewed US-Iran conflict headlines. Elevated, volatile.
+- Today: Oct jobs report 8:30 ET (consensus ~+59K, UE 4.2%). Fed: >65% odds of a DECEMBER HIKE (CME FedWatch) — strong print = hawkish risk. Earnings in focus: ABNB, NET, LRCX.
+- Sector momentum YTD query returned nothing usable (gap). Held tickers: none.
+
+**Trade ideas (watch only, none actionable pre-open)**
+1. LMT/NOC (defense) — catalyst: US-Iran escalation + oil ~$90-100; setup-scan grade B, ADX 44/38, RSI 55/48 (not overbought). Entry only on pullback to EMA9/21 hold; stop 7-10% below; target 2:1+. Needs fresh quote check at open.
+2. MSFT — post-crash reclaim of EMA21 (~$527) if AI bounce holds; catalyst thin (sector fear, not stock-specific). Stop below crash low; target prior EMA9 ~$530+ is too close -> R:R <2:1 now. Low priority.
+3. Energy (XOM/CVX) — oil >$90 on Iran headlines; no setup-scan hit, no documented confluence. Idea only; needs chart read.
+
+**Risks:** VIX ~25+ regime shift; jobs print + Dec hike odds could re-trigger selloff; AI/tech de-rating spillover to V/MA/MSFT; oil headline whipsaw; wide/unreliable premarket quotes (recurring).
+
+**Decision: HOLD.** No clean catalyst+confluence+no-chase setup; vol spike argues patience. Re-evaluate at market-open after jobs print settles. Weekly trade count 0/3.
