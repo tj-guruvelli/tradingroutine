@@ -18318,3 +18318,54 @@ Deep-dive cap: 5 (ranks 6-10 quick-scan only). Fundamentals query skipped; deep 
 - Opportunity cost: Adds semis correlation (corr-gate likely trips); revisit after the sector stabilizes.
 
 - Correction: OPEN ($1.79, -9.37%) fails the price>=3.0 filter; excluded from the JSON, only 9 qualifying rows. It still appears in the table/deep dive above and in the Telegram message.
+
+### Gappers (auto-scan 10:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | OKLO | 22.785 | +18.67 | 126754 | Q3 2026 results out pre-market; reports of a new $1B at-the-market share offering also cited. |
+| 2 | LUNR | 9.64 | +11.9 | 50012 | Selected by NASA to provide spacecraft platform and mission solutions (Nov 4 press release). |
+| 3 | ONDS | 5.005 | +10.85 | 206442 | Plans significant US manufacturing expansion; >$165M new orders since last update, >$270M since June 30. |
+| 4 | RGTI | 10.77 | +10.07 | 105742 | Quantum stocks bouncing after a brutal sell-off; no company-specific news found. |
+| 5 | NBIS | 130.78 | +8.67 | 119007 | AI neocloud rebound ahead of Q3 earnings Nov 12 before open; prior sell-off on financing worries and election-driven AI/permit risk. |
+| 6 | RDW | 6.675 | +7.92 | 157493 | No fresh catalyst found; space-theme sympathy bounce (analyst target $14.28). |
+| 7 | QBTS | 9.73 | +7.75 | 89457 | No news found; quantum sympathy bounce. |
+| 8 | BE | 180.01 | +7.43 | 181757 | Bounce after -16% drop on reports Oracle invoked force majeure / data-center delay fears; Seeking Alpha downgrade to Hold. |
+| 9 | RKLB | 49.195 | +7.04 | 54579 | No news returned; space sector bounce. |
+| 10 | CRWV | 46.05 | +5.5 | 316172 | AI neocloud bounce; Q3 earnings reportedly due Tuesday after close (per IBD). |
+
+Deep dive cap 5; ranks 6-10 quick-scan only. Volume = Alpaca snapshot volume. OPEN (<$3) excluded. Single search per fundamentals query; several returned thin results.
+
+#### Deep dive: OKLO $22.785 +18.67%
+- Catalyst: Oklo reported Q3 2026 results before the open (call 8:30 ET). Pre-open pop ~12.8% per Investing.com; one source notes a new up-to-$1B ATM program. No reactor revenue until the 2028 start-up target.
+- Why: Earnings relief on a heavily sold name, momentum buyers chase; ATM supply caps upside.
+- Impact: Gap driven by one print on thin pre-market volume (127k); ATM dilution makes fade risk high. Sector read: nuclear/AI-power names sold off this week (BE -17%).
+- Horizon: SHORT_TERM, Headline/earnings-driven, ATM overhang, no new durable thesis; do not carry.
+- Opportunity cost: Would displace any existing holding or higher-quality setups; 10% trail stop on a gap-extended, volatile name makes 2:1 R:R doubtful. Not clearing the bar without a pullback entry.
+
+#### Deep dive: LUNR $9.64 +11.9%
+- Catalyst: Intuitive Machines announced selection to provide a spacecraft platform and mission solutions for NASA. Stock closed Nov 4 near $9.93, -5.5%, then gapped up from $8.615 prev close. Follow-up fundamentals search returned nothing.
+- Why: Government contract win pulls in space-theme momentum buyers.
+- Impact: Volume just at 50k floor; space peers (RDW +7.9, RKLB +7.0) also up so move is sector-wide, which supports follow-through but also reads as theme bounce.
+- Horizon: SHORT_TERM, Sector-bounce plus contract headline; no sized backlog figure found, treat as swing fade risk.
+- Opportunity cost: Space is already a crowded theme (RDW, RKLB same list); taking LUNR displaces a stronger peer like RKLB. R:R at 7% max loss would need 14%+ target; unproven.
+
+#### Deep dive: ONDS $5.005 +10.85%
+- Catalyst: Ondas announced a major US manufacturing expansion and over $165M in new orders since its last update (>$270M since Jun 30). Q3 results consensus: revenue ~$148M, EPS -0.13; earnings date not confirmed in search. Shares closed Nov 5 at 4.52 (-14%) on 65M volume.
+- Why: Order backlog and capacity expansion reassure after a sharp -14% drop; dip-buy bounce.
+- Impact: Highest volume of the list; but today's gap only partly retraces yesterday's 14% drop, so reads as mean-reversion bounce. Defense/drone peers not confirmed moving.
+- Horizon: SHORT_TERM, Bounce after selloff; durable only if Q3 print confirms order conversion into revenue.
+- Opportunity cost: Sub-$5 name with wide ranges; stop at 10% trail is inside normal daily range. Likely fails 2:1 R:R; ranks below RKLB/RDW as sector exposure.
+
+#### Deep dive: RGTI $10.77 +10.07%
+- Catalyst: No Rigetti-specific news. Stock is down ~26% over 30 days and ~53% YTD. Quantum names rebounded Nov 4 after a post-election rout in AI/semis; TipRanks flags Q4 C-DAC system revenue recognition as the next catalyst. QBTS also +7.75% today.
+- Why: Sector oversold bounce, no stock-specific driver.
+- Impact: Sympathy move with QBTS; no fundamental trigger, likely to fade with the tape.
+- Horizon: SHORT_TERM, Sector beta bounce, no durable thesis.
+- Opportunity cost: Would displace nothing of higher quality; downtrend (-26% 30d) and no catalyst fail Confluence rule. R:R not supportable.
+
+#### Deep dive: NBIS $130.78 +8.67%
+- Catalyst: NBIS fell ~6.7% Nov 5 to ~141 and is ~53% off highs, with concern about financing and data-center permit risk after the US election. A $3.5B Citi facility supports its build; Q3 results due Nov 12 pre-market. Today's gap is from a 120.35 prior close.
+- Why: Oversold bounce plus pre-earnings positioning in a heavily shorted name (~20% short per SA).
+- Impact: Volume 119k pre-market is decent; CoreWeave also up 5.5%, so neocloud sector read-through is positive but it is a bounce within a downtrend.
+- Horizon: SHORT_TERM, Pre-earnings bounce; earnings Nov 12 is a binary event, avoid carrying through without edge.
+- Opportunity cost: Binary earnings in 4 sessions; at 10% stop the risk is sized large on a ~$130 name. Competes with CRWV for the same theme; only worth it after confirmation above gap.

@@ -1,127 +1,125 @@
 {
-  "scanned_at": "2026-11-06T14:15:00Z",
+  "scanned_at": "2026-11-06T15:14:00Z",
   "deep_dive_cap": 5,
-  "note": "premarket_volume not populated by scanner; 'volume' field used. Deep-dive fundamentals query skipped; built from catalyst-search results only. All 10 gaps are DOWN. OPEN ($1.79) dropped post-hoc: fails price>=3.0 filter (already in Telegram msg).",
   "gappers": [
     {
       "rank": 1,
-      "symbol": "RDW",
-      "price": 6.48,
-      "gap_pct": -16.06,
-      "premarket_volume": 1222466,
-      "catalyst": "Q3 2026 earnings reaction; stock down from $7.72 pre-print",
-      "headlines": [
-        "5 revealing analyst questions from Redwire's Q3 2026 earnings call (StockStory)"
-      ],
-      "catalyst_detail": "Redwire reported Q3 2026 results after the close; shares trade near $6.3-6.5 vs $7.72 prior close. Company touts record margins/backlog but the market is selling the print. Specific miss/guide details not confirmed in search.",
-      "why": "Post-earnings de-rating of a small-cap space name; likely guidance/execution disappointment despite backlog headlines.",
-      "impact": "Gap on ~1.2M shares looks like a genuine re-rate, not thin-volume noise; ASTS and ONDS (space/drone peers) are also down hard, so sector-wide pressure.",
+      "symbol": "OKLO",
+      "price": 22.785,
+      "gap_pct": 18.67,
+      "premarket_volume": 126754,
+      "catalyst": "Q3 2026 results out pre-market; reports of a new $1B at-the-market share offering also cited.",
+      "headlines": [],
+      "catalyst_detail": "Oklo reported Q3 2026 results before the open (call 8:30 ET). Pre-open pop ~12.8% per Investing.com; one source notes a new up-to-$1B ATM program. No reactor revenue until the 2028 start-up target.",
+      "why": "Earnings relief on a heavily sold name, momentum buyers chase; ATM supply caps upside.",
+      "impact": "Gap driven by one print on thin pre-market volume (127k); ATM dilution makes fade risk high. Sector read: nuclear/AI-power names sold off this week (BE -17%).",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Earnings gap-down with sector weakness; no durable long thesis, avoid catching the knife.",
-      "opportunity_cost": "Long-only strategy: nothing to buy here. Sector (space/defense small caps) is in a drawdown; any long would displace stronger setups and a stop <7% from a gap-down is hard to keep above the 2:1 R:R minimum."
+      "horizon_reason": "Headline/earnings-driven, ATM overhang, no new durable thesis; do not carry.",
+      "opportunity_cost": "Would displace any existing holding or higher-quality setups; 10% trail stop on a gap-extended, volatile name makes 2:1 R:R doubtful. Not clearing the bar without a pullback entry."
     },
     {
       "rank": 2,
-      "symbol": "ASTS",
-      "price": 30.49,
-      "gap_pct": -14.33,
-      "premarket_volume": 885293,
-      "catalyst": "Securities class-action notices (lead-plaintiff deadline Nov 13) plus funding concerns; ASTS -27% in Oct",
-      "headlines": [
-        "AST SpaceMobile Faces Lawsuit and Funding Risks (Tradytics)",
-        "AST SpaceMobile's Brazil deal could be a growth catalyst (Globe and Mail)"
-      ],
-      "catalyst_detail": "Law-firm lawsuit notices circulating with Nov 13 lead-plaintiff deadline; report of funding risk. Stock fell 27% in October and is far below its high. Brazil commercial-service deal is the offsetting bull headline. No single new trigger for today's gap found.",
-      "why": "Legal overhang and dilution/funding fear pressure a pre-revenue, high-multiple name already in a downtrend.",
-      "impact": "Continuation of an existing slide with elevated volume; space/drone peers (RDW, ONDS) also down, so sector read-through is negative.",
+      "symbol": "LUNR",
+      "price": 9.64,
+      "gap_pct": 11.9,
+      "premarket_volume": 50012,
+      "catalyst": "Selected by NASA to provide spacecraft platform and mission solutions (Nov 4 press release).",
+      "headlines": [],
+      "catalyst_detail": "Intuitive Machines announced selection to provide a spacecraft platform and mission solutions for NASA. Stock closed Nov 4 near $9.93, -5.5%, then gapped up from $8.615 prev close. Follow-up fundamentals search returned nothing.",
+      "why": "Government contract win pulls in space-theme momentum buyers.",
+      "impact": "Volume just at 50k floor; space peers (RDW +7.9, RKLB +7.0) also up so move is sector-wide, which supports follow-through but also reads as theme bounce.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Downtrend with legal/funding overhang; no confirmed reversal.",
-      "opportunity_cost": "Would displace any quality holding for a falling momentum name; fails sector-momentum rule. Stop distance needed on a 14% gap-down name likely makes 2:1 R:R unattainable."
+      "horizon_reason": "Sector-bounce plus contract headline; no sized backlog figure found, treat as swing fade risk.",
+      "opportunity_cost": "Space is already a crowded theme (RDW, RKLB same list); taking LUNR displaces a stronger peer like RKLB. R:R at 7% max loss would need 14%+ target; unproven."
     },
     {
       "rank": 3,
       "symbol": "ONDS",
-      "price": 4.74,
-      "gap_pct": -10.14,
-      "premarket_volume": 2337614,
-      "catalyst": "Sell-off despite $165M+ new orders and US manufacturing expansion announcement",
-      "headlines": [
-        "Ondas plans significant U.S. manufacturing expansion for ULTRA ISR aircraft, 10/month by 2028",
-        "Ondas secured $165M+ new orders, $270M+ since June 30"
-      ],
-      "catalyst_detail": "Ondas announced a US manufacturing expansion and over $165M of new orders (>$270M since June 30). Despite positive news flow, shares gap down ~10% on the heaviest volume of the group (2.3M).",
-      "why": "Good-news-sold pattern: likely capital-raise expectations or sector risk-off in speculative drone/space names.",
-      "impact": "High volume suggests real distribution; peers RDW/ASTS also weak, so it reads as sector-driven rather than company-specific.",
+      "price": 5.005,
+      "gap_pct": 10.85,
+      "premarket_volume": 206442,
+      "catalyst": "Plans significant US manufacturing expansion; >$165M new orders since last update, >$270M since June 30.",
+      "headlines": [],
+      "catalyst_detail": "Ondas announced a major US manufacturing expansion and over $165M in new orders since its last update (>$270M since Jun 30). Q3 results consensus: revenue ~$148M, EPS -0.13; earnings date not confirmed in search. Shares closed Nov 5 at 4.52 (-14%) on 65M volume.",
+      "why": "Order backlog and capacity expansion reassure after a sharp -14% drop; dip-buy bounce.",
+      "impact": "Highest volume of the list; but today's gap only partly retraces yesterday's 14% drop, so reads as mean-reversion bounce. Defense/drone peers not confirmed moving.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Orders are a real positive but price action is negative; wait for stabilization.",
-      "opportunity_cost": "Price near $4.7 with wide intraday range makes a sane stop hard; sector in a failed-momentum phase, so it would displace better-trending names."
+      "horizon_reason": "Bounce after selloff; durable only if Q3 print confirms order conversion into revenue.",
+      "opportunity_cost": "Sub-$5 name with wide ranges; stop at 10% trail is inside normal daily range. Likely fails 2:1 R:R; ranks below RKLB/RDW as sector exposure."
     },
     {
       "rank": 4,
-      "symbol": "AMKR",
-      "price": 32.58,
-      "gap_pct": -8.6,
-      "premarket_volume": 298352,
-      "catalyst": "No stock-specific news found; likely semiconductor sector sell-off after Arm/Qualcomm reports",
+      "symbol": "RGTI",
+      "price": 10.77,
+      "gap_pct": 10.07,
+      "premarket_volume": 105742,
+      "catalyst": "Quantum stocks bouncing after a brutal sell-off; no company-specific news found.",
       "headlines": [],
-      "catalyst_detail": "Search returned no AMKR-specific items. Chip stocks tumbled after Arm and Qualcomm reports (QCOM -7%, STM -7% also in this list), consistent with a sector move.",
-      "why": "Semiconductor read-through from QCOM/Arm earnings hits OSAT and chip names together.",
-      "impact": "Lower volume (298K) than peers; move tracks the sector, with QCOM, STM, and AMKR all down 7-9%.",
+      "catalyst_detail": "No Rigetti-specific news. Stock is down ~26% over 30 days and ~53% YTD. Quantum names rebounded Nov 4 after a post-election rout in AI/semis; TipRanks flags Q4 C-DAC system revenue recognition as the next catalyst. QBTS also +7.75% today.",
+      "why": "Sector oversold bounce, no stock-specific driver.",
+      "impact": "Sympathy move with QBTS; no fundamental trigger, likely to fade with the tape.",
       "horizon": "SHORT_TERM",
-      "horizon_reason": "Sector-driven, unconfirmed; could mean-revert or extend with chips.",
-      "opportunity_cost": "If the bot already holds semis, this adds correlation (corr-gate likely trips). Could clear 2:1 only after the sector stabilizes."
+      "horizon_reason": "Sector beta bounce, no durable thesis.",
+      "opportunity_cost": "Would displace nothing of higher quality; downtrend (-26% 30d) and no catalyst fail Confluence rule. R:R not supportable."
     },
     {
       "rank": 5,
-      "symbol": "BE",
-      "price": 183.19,
-      "gap_pct": -8.57,
-      "premarket_volume": 1040852,
-      "catalyst": "Reported Oracle force-majeure / data-center demand fears drove BE sell-off (Tickeron); some sources stale",
-      "headlines": [
-        "Why Is Bloom Energy (BE) Stock Down -15.56% Today? (Tickeron, Nov 5)"
-      ]
+      "symbol": "NBIS",
+      "price": 130.78,
+      "gap_pct": 8.67,
+      "premarket_volume": 119007,
+      "catalyst": "AI neocloud rebound ahead of Q3 earnings Nov 12 before open; prior sell-off on financing worries and election-driven AI/permit risk.",
+      "headlines": [],
+      "catalyst_detail": "NBIS fell ~6.7% Nov 5 to ~141 and is ~53% off highs, with concern about financing and data-center permit risk after the US election. A $3.5B Citi facility supports its build; Q3 results due Nov 12 pre-market. Today's gap is from a 120.35 prior close.",
+      "why": "Oversold bounce plus pre-earnings positioning in a heavily shorted name (~20% short per SA).",
+      "impact": "Volume 119k pre-market is decent; CoreWeave also up 5.5%, so neocloud sector read-through is positive but it is a bounce within a downtrend.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Pre-earnings bounce; earnings Nov 12 is a binary event, avoid carrying through without edge.",
+      "opportunity_cost": "Binary earnings in 4 sessions; at 10% stop the risk is sized large on a ~$130 name. Competes with CRWV for the same theme; only worth it after confirmation above gap."
     },
     {
       "rank": 6,
-      "symbol": "QCOM",
-      "price": 161.01,
-      "gap_pct": -7.32,
-      "premarket_volume": 1412062,
-      "catalyst": "Q4 FY26 earnings: rev $10.44B vs $10.12B est, EPS $2.17 vs $2.16; stock sold off after the print",
-      "headlines": [
-        "QCOM Q4 earnings beat but shares ~-7.5% post-report (ChartMill)"
-      ]
+      "symbol": "RDW",
+      "price": 6.675,
+      "gap_pct": 7.92,
+      "premarket_volume": 157493,
+      "catalyst": "No fresh catalyst found; space-theme sympathy bounce (analyst target $14.28).",
+      "headlines": []
     },
     {
       "rank": 7,
-      "symbol": "STM",
-      "price": 42.47,
-      "gap_pct": -6.81,
-      "premarket_volume": 1539536,
-      "catalyst": "Sector rout: chip stocks tumbled after Arm and Qualcomm reports",
-      "headlines": [
-        "Chip Stocks Tumble After Arm, Qualcomm Reports (IBD)"
-      ]
+      "symbol": "QBTS",
+      "price": 9.73,
+      "gap_pct": 7.75,
+      "premarket_volume": 89457,
+      "catalyst": "No news found; quantum sympathy bounce.",
+      "headlines": []
     },
     {
       "rank": 8,
-      "symbol": "NBIS",
-      "price": 132.0,
-      "gap_pct": -6.73,
-      "premarket_volume": 1474516,
-      "catalyst": "AI data-center sentiment weak; no clean same-day catalyst found (search results showed inconsistent prices, discarded)",
-      "headlines": [
-        "Nebius whipsaws as AI data-center hype cools (Timothy Sykes, Nov 4)"
-      ]
+      "symbol": "BE",
+      "price": 180.01,
+      "gap_pct": 7.43,
+      "premarket_volume": 181757,
+      "catalyst": "Bounce after -16% drop on reports Oracle invoked force majeure / data-center delay fears; Seeking Alpha downgrade to Hold.",
+      "headlines": []
     },
     {
       "rank": 9,
-      "symbol": "KTOS",
-      "price": 33.98,
-      "gap_pct": -5.45,
-      "premarket_volume": 288094,
-      "catalyst": null,
+      "symbol": "RKLB",
+      "price": 49.195,
+      "gap_pct": 7.04,
+      "premarket_volume": 54579,
+      "catalyst": "No news returned; space sector bounce.",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "CRWV",
+      "price": 46.05,
+      "gap_pct": 5.5,
+      "premarket_volume": 316172,
+      "catalyst": "AI neocloud bounce; Q3 earnings reportedly due Tuesday after close (per IBD).",
       "headlines": []
     }
   ]
