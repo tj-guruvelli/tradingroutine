@@ -626,3 +626,48 @@ Template for each entry:
 - Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 13th straight week, still the top open infra item
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; discipline held correctly under a third straight week of AI-capex sector-beta gap clusters
 ### Overall Grade: C
+
+## Week ending 2026-11-06
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -2.69% (SPY proxy: $755.72 → $735.40, Alpaca daily bars, Fri Oct 30 close → Fri Nov 6 close) |
+| Bot vs S&P | +2.69% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through the week's defining event: a Thu Nov 5 AI-led crash (S&P ~-4.4% to ~7,354, Nasdaq ~-5.5%, worst day since Apr 2025, ~$2.5T lost) triggered by a Democratic midterm sweep stoking AI-regulation/data-center-crackdown fears — zero exposure meant zero drawdown on the single worst trading day of the challenge to date
+- Correctly read ONDS's Nov 6 gap-down (-10 to -11%) as "good news sold" — $165M+ new orders and a US manufacturing expansion announcement did not offset macro/policy fear — and passed rather than buying the fundamental mismatch
+- Correctly treated the recurring AI-infra/chip/space cluster (BE, NBIS, CRWV, QCOM, STM, ASTS, RDW, ONDS, OKLO, RGTI, QBTS) as a single correlated sector-beta move both on the Nov 5-6 selloff and the Nov 6 10:14 ET bounce — consistent with every prior AI-capex gap week this phase, correlation gate would have bound regardless
+- Correctly stood down LMT/NOC defense setups (grade-B, ADX 35-44, RSI 47-56) on Nov 6 pre-market for lack of a fresh entry trigger rather than chasing an oil/Iran-headline thesis
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+- 8th consecutive clean week of Market-Open + EOD TRADE-LOG entries — the logging-gap pattern flagged in 7+ reviews before Sep 25 remains resolved
+### What Didn't Work
+- 19th consecutive zero-entry week (86 trading days since launch, Jul 9) — the streak itself remains the dominant fact about this account, though this week's variance (flat vs. -2.69% S&P) was the most favorable of the whole streak
+- `tradingview-data` MCP still unavailable the entire week (14th+ straight week, reconfirmed via ToolSearch this review — no `mcp__tradingview-data__*` tools present) — confluence's technical leg remains structurally unsatisfiable via the primary path; the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself, now a 14th straight week this exact fix has been proposed and not shipped
+- `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` directly re-confirmed still the literal placeholder strings `your_clickup_workspace_id_here` / `your_clickup_channel_id_here` this review (env-var length/value check, not just inferred from HTTP 500 logs) — 8th straight week confirmed broken, fallback notification channel has not delivered a single message since first found (Sep 18)
+- `scripts/perplexity.sh` directly re-confirmed still HTTP 401 this review (3rd straight week) — credential remains invalid, no operator rotation yet
+- New minor finding: Nov 6 pre-market research hit the Apify RAG web browser tool itself unavailable (fell back to the plain Apify web-search tool + native WebSearch) — first time this specific tool, rather than just query quality, has been reported down; one session only so far, not yet a confirmed pattern
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (19th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- This week is the clearest evidence yet that "patience > activity" has real teeth, not just a defensible absence of regret: zero positions meant zero exposure to the single worst trading day of the challenge (Nov 5, S&P -4.4%), which is a materially different claim than "the bot didn't lose money in a quiet week"
+- ONDS's good-news-sold gap-down shows the catalyst gate and the confluence gate are catching different failure modes — a real, positive, company-specific catalyst can still fail to clear a long entry when the macro/sector tape overwhelms it; conflating "has a catalyst" with "should buy" would have produced a loss this week
+- Three distinct broken-credential/config items — ClickUp placeholder IDs (8 weeks), Perplexity 401 (3 weeks), and the $10k/$100k baseline (19 weeks) — remain unshipped with zero operator action despite being escalated together last week; no infra progress shipped this week either (confirmed via `git log`: no commits touching `scripts/gappers-alpaca.sh`, ClickUp/Perplexity config, or the pre-market/market-open routines)
+### Adjustments for Next Week
+- Escalate all three broken/stale items together again as one operator action item (baseline mismatch 19 weeks, ClickUp placeholder IDs 8 weeks, Perplexity 401 3 weeks) — the joint escalation last week produced no action; recommend the operator treat this as blocking rather than informational
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 14th straight week, still the top open infra item
+- Watch for recurrence of the Apify RAG web browser tool itself being unavailable (not just degraded results) — one data point this week, needs a second to call it a pattern
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week is the single strongest data point yet that the zero-entry discipline is protecting capital on real tail-risk days, not just avoiding regret in calm ones
+### Overall Grade: B
