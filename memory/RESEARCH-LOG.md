@@ -18369,3 +18369,18 @@ Deep dive cap 5; ranks 6-10 quick-scan only. Volume = Alpaca snapshot volume. OP
 - Impact: Volume 119k pre-market is decent; CoreWeave also up 5.5%, so neocloud sector read-through is positive but it is a bounce within a downtrend.
 - Horizon: SHORT_TERM, Pre-earnings bounce; earnings Nov 12 is a binary event, avoid carrying through without edge.
 - Opportunity cost: Binary earnings in 4 sessions; at 10% stop the risk is sized large on a ~$130 name. Competes with CRWV for the same theme; only worth it after confirmation above gap.
+
+### Setup Scan (15:38 ET, cloud)
+- 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 15:38, outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 6 grade-B hits (Momentum confluence: ADX14>20 AND EMA9>EMA21), 0 grade-A/C. No Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| V | B | Momentum confluence | daily swing | ADX 39.8, EMA9 417.95>EMA21 406.17, RSI 63.1 |
+| MA | B | Momentum confluence | daily swing | ADX 42.6, EMA9 643.72>EMA21 624.03, RSI 65.4 |
+| MSFT | B | Momentum confluence | daily swing | ADX 21.8, EMA9 531.40>EMA21 527.85, RSI 54.5 |
+| NOC | B | Momentum confluence | daily swing | ADX 35.8, EMA9 540.72>EMA21 533.04, RSI 47.7 |
+| LMT | B | Momentum confluence | daily swing | ADX 41.1, EMA9 608.01>EMA21 587.15, RSI 49.1 |
+| SYNA | B | Momentum confluence | daily swing | ADX 37.3, EMA9 117.34>EMA21 115.98, RSI 56.0 |
+
+JSON saved to `data/setup-scan_cloud_2026-11-06_1538ET.json`.
