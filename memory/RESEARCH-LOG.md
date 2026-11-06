@@ -18234,3 +18234,33 @@ Sources: Apify web-search (RAG browser tool unavailable; Yahoo blocked via -site
 
 ### Gappers (auto-scan 07:10 ET, cloud)
 - 0 hits at |gap| >= 5%, price >= $3 across watchlist. No deep dive. No notification sent.
+
+### Gappers (auto-scan 08:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | ONDS | 4.68 | -11.28 | 2337614 | Ondas announced US manufacturing expansion for ULTRA ISR aircraft and >$165M new orders (Nov 5); stock fell with speculative tech. |
+| 2 | BE | 183.92 | -8.2 | 1040852 | Reversal after +9% Nov 4 (Barclays upgrade, California Resources fuel-cell collaboration); AI-infrastructure names sold off Nov 5-6. |
+| 3 | NBIS | 132.08 | -6.68 | 1474516 | AI trade meltdown: Nasdaq reported down >5% as post-midterm fears of AI/data-center crackdown build. |
+
+Only 3 hits passed filters (OPEN -9.87% excluded: price $1.78 < $3). Deep dive cap 5; all 3 covered.
+
+#### Deep dive: ONDS $4.68 -11.28%
+- Catalyst: Company news was positive (orders >$270M since Jun 30, capacity expansion to 10 aircraft/month by 2028), yet shares gap down 11% from 5.275. No company-specific negative found; move aligns with broad AI/speculative-growth selloff.
+- Why: Beta-driven de-risking in small-cap speculative tech; good news did not offset macro/policy fear.
+- Impact: Volume 2.3M. Likely macro-driven, could mean-revert but trades well below 200-day avg (~7.07), downtrend intact. Peers (BE, NBIS) also down.
+- Horizon: SHORT_TERM, No durable new negative thesis; macro-driven, no entry on a falling knife.
+- Opportunity cost: Sub-$5 high-vol name; ATR sizing would be tiny and a sane stop likely cannot clear 2:1 R:R. Would displace a stronger holding; ranks below nothing actionable. Research only.
+
+#### Deep dive: BE $183.92 -8.2%
+- Catalyst: BE ran +9% on Nov 4 on a Barclays upgrade and a California Resources large fuel-cell collaboration, then gave it back as data-center power names sold off on AI-regulation fears post-midterms.
+- Why: Momentum unwind of a crowded AI-power trade; policy risk to data-center buildout hits BE's demand story.
+- Impact: Volume 1.04M. Gap erases the upgrade pop; sector read-through confirmed by NBIS and Generac weakness. Looks macro-driven rather than company-specific.
+- Horizon: SHORT_TERM, Policy-headline driven; thesis intact but unproven, wait for stabilization.
+- Opportunity cost: At ~$184 and high vol, wide ATR stop vs 20% cap limits size; 2:1 R:R unlikely while sector is in free fall. Would compete with any existing AI-theme holding (correlation gate). Research only.
+
+#### Deep dive: NBIS $132.08 -6.68%
+- Catalyst: No Nebius-specific news found. Move tracks the AI infrastructure selloff after midterms; investors fear a Democratic Congress could crack down on AI and data centers.
+- Why: Sector-wide AI/data-center risk-off after midterms (Nasdaq reported down >5%; NPR) -- fear a Democratic Congress targets AI/data centers. NBIS is a high-beta AI-cloud name.
+- Impact: Volume 1.47M. Sector-wide, not idiosyncratic; expect high volatility and continued pressure until policy clarity or Fed/jobs data today calm tape.
+- Horizon: SHORT_TERM, Macro headline spike; no stock-specific structural change.
+- Opportunity cost: Hard to clear 2:1 R:R while whole AI complex is falling; deploying here would displace cash for better-quality setups later. Jobs report today adds event risk. Research only.

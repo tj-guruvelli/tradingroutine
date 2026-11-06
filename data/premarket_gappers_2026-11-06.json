@@ -1,0 +1,61 @@
+{
+ "scanned_at": "2026-11-06T13:15:00Z",
+ "deep_dive_cap": 5,
+ "note": "Only 3 symbols passed filters (OPEN $1.78 excluded, price<3). Deep-dive used the single catalyst search per ticker; second fundamentals query skipped.",
+ "gappers": [
+  {
+   "rank": 1,
+   "symbol": "ONDS",
+   "price": 4.68,
+   "gap_pct": -11.28,
+   "premarket_volume": 2337614,
+   "catalyst": "Ondas announced US manufacturing expansion for ULTRA ISR aircraft and >$165M new orders (Nov 5); stock fell with speculative tech.",
+   "headlines": [
+    "Ondas Plans Significant U.S. Manufacturing Expansion to Scale ULTRA ISR Aircraft Production",
+    "Ondas secured >$165M new orders, >$270M since June 30"
+   ],
+   "catalyst_detail": "Company news was positive (orders >$270M since Jun 30, capacity expansion to 10 aircraft/month by 2028), yet shares gap down 11% from 5.275. No company-specific negative found; move aligns with broad AI/speculative-growth selloff.",
+   "why": "Beta-driven de-risking in small-cap speculative tech; good news did not offset macro/policy fear.",
+   "impact": "Volume 2.3M. Likely macro-driven, could mean-revert but trades well below 200-day avg (~7.07), downtrend intact. Peers (BE, NBIS) also down.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "No durable new negative thesis; macro-driven, no entry on a falling knife.",
+   "opportunity_cost": "Sub-$5 high-vol name; ATR sizing would be tiny and a sane stop likely cannot clear 2:1 R:R. Would displace a stronger holding; ranks below nothing actionable. Research only."
+  },
+  {
+   "rank": 2,
+   "symbol": "BE",
+   "price": 183.92,
+   "gap_pct": -8.2,
+   "premarket_volume": 1040852,
+   "catalyst": "Reversal after +9% Nov 4 (Barclays upgrade, California Resources fuel-cell collaboration); AI-infrastructure names sold off Nov 5-6.",
+   "headlines": [
+    "Bloom Energy rose 9.05% after Barclays upgrade and California Resources collaboration",
+    "AI-infrastructure/data-center-linked names sold off (Bloom Energy, Generac)"
+   ],
+   "catalyst_detail": "BE ran +9% on Nov 4 on a Barclays upgrade and a California Resources large fuel-cell collaboration, then gave it back as data-center power names sold off on AI-regulation fears post-midterms.",
+   "why": "Momentum unwind of a crowded AI-power trade; policy risk to data-center buildout hits BE's demand story.",
+   "impact": "Volume 1.04M. Gap erases the upgrade pop; sector read-through confirmed by NBIS and Generac weakness. Looks macro-driven rather than company-specific.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Policy-headline driven; thesis intact but unproven, wait for stabilization.",
+   "opportunity_cost": "At ~$184 and high vol, wide ATR stop vs 20% cap limits size; 2:1 R:R unlikely while sector is in free fall. Would compete with any existing AI-theme holding (correlation gate). Research only."
+  },
+  {
+   "rank": 3,
+   "symbol": "NBIS",
+   "price": 132.08,
+   "gap_pct": -6.68,
+   "premarket_volume": 1474516,
+   "catalyst": "AI trade meltdown: Nasdaq reported down >5% as post-midterm fears of AI/data-center crackdown build.",
+   "headlines": [
+    "Stocks sink as AI fears build after midterms (NPR)",
+    "Stocks poised for steep weekly losses as post-election rally turns into AI trade meltdown"
+   ],
+   "catalyst_detail": "No Nebius-specific news found. Move tracks the AI infrastructure selloff after midterms; investors fear a Democratic Congress could crack down on AI and data centers.",
+   "why": "Sector-wide AI/data-center risk-off after midterms (Nasdaq reported down >5%; NPR) -- fear a Democratic Congress targets AI/data centers. NBIS is a high-beta AI-cloud name.",
+   "impact": "Volume 1.47M. Sector-wide, not idiosyncratic; expect high volatility and continued pressure until policy clarity or Fed/jobs data today calm tape.",
+   "horizon": "SHORT_TERM",
+   "horizon_reason": "Macro headline spike; no stock-specific structural change.",
+   "opportunity_cost": "Hard to clear 2:1 R:R while whole AI complex is falling; deploying here would displace cash for better-quality setups later. Jobs report today adds event risk. Research only."
+  }
+ ]
+}
