@@ -1,61 +1,128 @@
 {
- "scanned_at": "2026-11-06T13:15:00Z",
- "deep_dive_cap": 5,
- "note": "Only 3 symbols passed filters (OPEN $1.78 excluded, price<3). Deep-dive used the single catalyst search per ticker; second fundamentals query skipped.",
- "gappers": [
-  {
-   "rank": 1,
-   "symbol": "ONDS",
-   "price": 4.68,
-   "gap_pct": -11.28,
-   "premarket_volume": 2337614,
-   "catalyst": "Ondas announced US manufacturing expansion for ULTRA ISR aircraft and >$165M new orders (Nov 5); stock fell with speculative tech.",
-   "headlines": [
-    "Ondas Plans Significant U.S. Manufacturing Expansion to Scale ULTRA ISR Aircraft Production",
-    "Ondas secured >$165M new orders, >$270M since June 30"
-   ],
-   "catalyst_detail": "Company news was positive (orders >$270M since Jun 30, capacity expansion to 10 aircraft/month by 2028), yet shares gap down 11% from 5.275. No company-specific negative found; move aligns with broad AI/speculative-growth selloff.",
-   "why": "Beta-driven de-risking in small-cap speculative tech; good news did not offset macro/policy fear.",
-   "impact": "Volume 2.3M. Likely macro-driven, could mean-revert but trades well below 200-day avg (~7.07), downtrend intact. Peers (BE, NBIS) also down.",
-   "horizon": "SHORT_TERM",
-   "horizon_reason": "No durable new negative thesis; macro-driven, no entry on a falling knife.",
-   "opportunity_cost": "Sub-$5 high-vol name; ATR sizing would be tiny and a sane stop likely cannot clear 2:1 R:R. Would displace a stronger holding; ranks below nothing actionable. Research only."
-  },
-  {
-   "rank": 2,
-   "symbol": "BE",
-   "price": 183.92,
-   "gap_pct": -8.2,
-   "premarket_volume": 1040852,
-   "catalyst": "Reversal after +9% Nov 4 (Barclays upgrade, California Resources fuel-cell collaboration); AI-infrastructure names sold off Nov 5-6.",
-   "headlines": [
-    "Bloom Energy rose 9.05% after Barclays upgrade and California Resources collaboration",
-    "AI-infrastructure/data-center-linked names sold off (Bloom Energy, Generac)"
-   ],
-   "catalyst_detail": "BE ran +9% on Nov 4 on a Barclays upgrade and a California Resources large fuel-cell collaboration, then gave it back as data-center power names sold off on AI-regulation fears post-midterms.",
-   "why": "Momentum unwind of a crowded AI-power trade; policy risk to data-center buildout hits BE's demand story.",
-   "impact": "Volume 1.04M. Gap erases the upgrade pop; sector read-through confirmed by NBIS and Generac weakness. Looks macro-driven rather than company-specific.",
-   "horizon": "SHORT_TERM",
-   "horizon_reason": "Policy-headline driven; thesis intact but unproven, wait for stabilization.",
-   "opportunity_cost": "At ~$184 and high vol, wide ATR stop vs 20% cap limits size; 2:1 R:R unlikely while sector is in free fall. Would compete with any existing AI-theme holding (correlation gate). Research only."
-  },
-  {
-   "rank": 3,
-   "symbol": "NBIS",
-   "price": 132.08,
-   "gap_pct": -6.68,
-   "premarket_volume": 1474516,
-   "catalyst": "AI trade meltdown: Nasdaq reported down >5% as post-midterm fears of AI/data-center crackdown build.",
-   "headlines": [
-    "Stocks sink as AI fears build after midterms (NPR)",
-    "Stocks poised for steep weekly losses as post-election rally turns into AI trade meltdown"
-   ],
-   "catalyst_detail": "No Nebius-specific news found. Move tracks the AI infrastructure selloff after midterms; investors fear a Democratic Congress could crack down on AI and data centers.",
-   "why": "Sector-wide AI/data-center risk-off after midterms (Nasdaq reported down >5%; NPR) -- fear a Democratic Congress targets AI/data centers. NBIS is a high-beta AI-cloud name.",
-   "impact": "Volume 1.47M. Sector-wide, not idiosyncratic; expect high volatility and continued pressure until policy clarity or Fed/jobs data today calm tape.",
-   "horizon": "SHORT_TERM",
-   "horizon_reason": "Macro headline spike; no stock-specific structural change.",
-   "opportunity_cost": "Hard to clear 2:1 R:R while whole AI complex is falling; deploying here would displace cash for better-quality setups later. Jobs report today adds event risk. Research only."
-  }
- ]
+  "scanned_at": "2026-11-06T14:15:00Z",
+  "deep_dive_cap": 5,
+  "note": "premarket_volume not populated by scanner; 'volume' field used. Deep-dive fundamentals query skipped; built from catalyst-search results only. All 10 gaps are DOWN. OPEN ($1.79) dropped post-hoc: fails price>=3.0 filter (already in Telegram msg).",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "RDW",
+      "price": 6.48,
+      "gap_pct": -16.06,
+      "premarket_volume": 1222466,
+      "catalyst": "Q3 2026 earnings reaction; stock down from $7.72 pre-print",
+      "headlines": [
+        "5 revealing analyst questions from Redwire's Q3 2026 earnings call (StockStory)"
+      ],
+      "catalyst_detail": "Redwire reported Q3 2026 results after the close; shares trade near $6.3-6.5 vs $7.72 prior close. Company touts record margins/backlog but the market is selling the print. Specific miss/guide details not confirmed in search.",
+      "why": "Post-earnings de-rating of a small-cap space name; likely guidance/execution disappointment despite backlog headlines.",
+      "impact": "Gap on ~1.2M shares looks like a genuine re-rate, not thin-volume noise; ASTS and ONDS (space/drone peers) are also down hard, so sector-wide pressure.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Earnings gap-down with sector weakness; no durable long thesis, avoid catching the knife.",
+      "opportunity_cost": "Long-only strategy: nothing to buy here. Sector (space/defense small caps) is in a drawdown; any long would displace stronger setups and a stop <7% from a gap-down is hard to keep above the 2:1 R:R minimum."
+    },
+    {
+      "rank": 2,
+      "symbol": "ASTS",
+      "price": 30.49,
+      "gap_pct": -14.33,
+      "premarket_volume": 885293,
+      "catalyst": "Securities class-action notices (lead-plaintiff deadline Nov 13) plus funding concerns; ASTS -27% in Oct",
+      "headlines": [
+        "AST SpaceMobile Faces Lawsuit and Funding Risks (Tradytics)",
+        "AST SpaceMobile's Brazil deal could be a growth catalyst (Globe and Mail)"
+      ],
+      "catalyst_detail": "Law-firm lawsuit notices circulating with Nov 13 lead-plaintiff deadline; report of funding risk. Stock fell 27% in October and is far below its high. Brazil commercial-service deal is the offsetting bull headline. No single new trigger for today's gap found.",
+      "why": "Legal overhang and dilution/funding fear pressure a pre-revenue, high-multiple name already in a downtrend.",
+      "impact": "Continuation of an existing slide with elevated volume; space/drone peers (RDW, ONDS) also down, so sector read-through is negative.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Downtrend with legal/funding overhang; no confirmed reversal.",
+      "opportunity_cost": "Would displace any quality holding for a falling momentum name; fails sector-momentum rule. Stop distance needed on a 14% gap-down name likely makes 2:1 R:R unattainable."
+    },
+    {
+      "rank": 3,
+      "symbol": "ONDS",
+      "price": 4.74,
+      "gap_pct": -10.14,
+      "premarket_volume": 2337614,
+      "catalyst": "Sell-off despite $165M+ new orders and US manufacturing expansion announcement",
+      "headlines": [
+        "Ondas plans significant U.S. manufacturing expansion for ULTRA ISR aircraft, 10/month by 2028",
+        "Ondas secured $165M+ new orders, $270M+ since June 30"
+      ],
+      "catalyst_detail": "Ondas announced a US manufacturing expansion and over $165M of new orders (>$270M since June 30). Despite positive news flow, shares gap down ~10% on the heaviest volume of the group (2.3M).",
+      "why": "Good-news-sold pattern: likely capital-raise expectations or sector risk-off in speculative drone/space names.",
+      "impact": "High volume suggests real distribution; peers RDW/ASTS also weak, so it reads as sector-driven rather than company-specific.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Orders are a real positive but price action is negative; wait for stabilization.",
+      "opportunity_cost": "Price near $4.7 with wide intraday range makes a sane stop hard; sector in a failed-momentum phase, so it would displace better-trending names."
+    },
+    {
+      "rank": 4,
+      "symbol": "AMKR",
+      "price": 32.58,
+      "gap_pct": -8.6,
+      "premarket_volume": 298352,
+      "catalyst": "No stock-specific news found; likely semiconductor sector sell-off after Arm/Qualcomm reports",
+      "headlines": [],
+      "catalyst_detail": "Search returned no AMKR-specific items. Chip stocks tumbled after Arm and Qualcomm reports (QCOM -7%, STM -7% also in this list), consistent with a sector move.",
+      "why": "Semiconductor read-through from QCOM/Arm earnings hits OSAT and chip names together.",
+      "impact": "Lower volume (298K) than peers; move tracks the sector, with QCOM, STM, and AMKR all down 7-9%.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sector-driven, unconfirmed; could mean-revert or extend with chips.",
+      "opportunity_cost": "If the bot already holds semis, this adds correlation (corr-gate likely trips). Could clear 2:1 only after the sector stabilizes."
+    },
+    {
+      "rank": 5,
+      "symbol": "BE",
+      "price": 183.19,
+      "gap_pct": -8.57,
+      "premarket_volume": 1040852,
+      "catalyst": "Reported Oracle force-majeure / data-center demand fears drove BE sell-off (Tickeron); some sources stale",
+      "headlines": [
+        "Why Is Bloom Energy (BE) Stock Down -15.56% Today? (Tickeron, Nov 5)"
+      ]
+    },
+    {
+      "rank": 6,
+      "symbol": "QCOM",
+      "price": 161.01,
+      "gap_pct": -7.32,
+      "premarket_volume": 1412062,
+      "catalyst": "Q4 FY26 earnings: rev $10.44B vs $10.12B est, EPS $2.17 vs $2.16; stock sold off after the print",
+      "headlines": [
+        "QCOM Q4 earnings beat but shares ~-7.5% post-report (ChartMill)"
+      ]
+    },
+    {
+      "rank": 7,
+      "symbol": "STM",
+      "price": 42.47,
+      "gap_pct": -6.81,
+      "premarket_volume": 1539536,
+      "catalyst": "Sector rout: chip stocks tumbled after Arm and Qualcomm reports",
+      "headlines": [
+        "Chip Stocks Tumble After Arm, Qualcomm Reports (IBD)"
+      ]
+    },
+    {
+      "rank": 8,
+      "symbol": "NBIS",
+      "price": 132.0,
+      "gap_pct": -6.73,
+      "premarket_volume": 1474516,
+      "catalyst": "AI data-center sentiment weak; no clean same-day catalyst found (search results showed inconsistent prices, discarded)",
+      "headlines": [
+        "Nebius whipsaws as AI data-center hype cools (Timothy Sykes, Nov 4)"
+      ]
+    },
+    {
+      "rank": 9,
+      "symbol": "KTOS",
+      "price": 33.98,
+      "gap_pct": -5.45,
+      "premarket_volume": 288094,
+      "catalyst": null,
+      "headlines": []
+    }
+  ]
 }

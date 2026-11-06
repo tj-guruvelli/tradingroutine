@@ -18264,3 +18264,57 @@ Only 3 hits passed filters (OPEN -9.87% excluded: price $1.78 < $3). Deep dive c
 - Impact: Volume 1.47M. Sector-wide, not idiosyncratic; expect high volatility and continued pressure until policy clarity or Fed/jobs data today calm tape.
 - Horizon: SHORT_TERM, Macro headline spike; no stock-specific structural change.
 - Opportunity cost: Hard to clear 2:1 R:R while whole AI complex is falling; deploying here would displace cash for better-quality setups later. Jobs report today adds event risk. Research only.
+
+### Gappers (auto-scan 09:15 ET, cloud) — 2026-11-06
+All 10 hits are gap-DOWNs (risk-off tape: chips, space/drone, AI infra). Vol = session volume (premarket_volume not populated).
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | RDW | 6.48 | -16.06 | 1.22M | Q3 earnings reaction, down from $7.72 |
+| 2 | ASTS | 30.49 | -14.33 | 885K | Class-action notices (Nov 13 deadline) + funding risk; -27% in Oct |
+| 3 | ONDS | 4.74 | -10.14 | 2.34M | Sold despite $165M+ new orders / US mfg expansion |
+| 4 | OPEN | 1.79 | -9.37 | 1.67M | Q3 net loss $218M, wider YoY |
+| 5 | AMKR | 32.58 | -8.60 | 298K | No own news; chip sector sell-off after Arm/QCOM |
+| 6 | BE | 183.19 | -8.57 | 1.04M | Oracle force-majeure / data-center demand fears (Tickeron) |
+| 7 | QCOM | 161.01 | -7.32 | 1.41M | Q4 beat ($10.44B rev) but sold off post-print |
+| 8 | STM | 42.47 | -6.81 | 1.54M | Chip rout after Arm/QCOM reports |
+| 9 | NBIS | 132.00 | -6.73 | 1.47M | AI data-center sentiment weak; no clean catalyst |
+| 10 | KTOS | 33.98 | -5.45 | 288K | No catalyst found (search empty) |
+
+Deep-dive cap: 5 (ranks 6-10 quick-scan only). Fundamentals query skipped; deep dives built from catalyst search only.
+
+#### Deep dive: RDW $6.48 -16.06%
+- Catalyst: Q3 2026 earnings; record margins/backlog touted but shares fell from $7.72 to ~$6.3-6.5.
+- Why: Post-earnings de-rating of small-cap space name; likely guide/execution disappointment.
+- Impact: ~1.2M volume = genuine re-rate; ASTS/ONDS also down, sector pressure.
+- Horizon: SHORT_TERM, earnings gap-down amid sector weakness, no durable long thesis.
+- Opportunity cost: Nothing to buy; any long displaces stronger setups; 2:1 R:R hard on a gap-down.
+
+#### Deep dive: ASTS $30.49 -14.33%
+- Catalyst: Lawsuit notices (lead-plaintiff deadline Nov 13) + funding-risk reports; -27% in Oct. Brazil deal is the offsetting bull headline.
+- Why: Legal/dilution overhang on pre-revenue high-multiple name in a downtrend.
+- Impact: Continuation of slide; space peers also red.
+- Horizon: SHORT_TERM, downtrend with overhang, no reversal confirmed.
+- Opportunity cost: Fails sector-momentum rule; R:R <2:1 at sane stop.
+
+#### Deep dive: ONDS $4.74 -10.14%
+- Catalyst: $165M+ new orders ($270M+ since Jun 30) and US ULTRA ISR manufacturing expansion, yet stock gaps down on 2.3M shares.
+- Why: Good-news-sold; likely raise expectations / speculative-sector risk-off.
+- Impact: Heavy volume = distribution; sector-driven with RDW/ASTS.
+- Horizon: SHORT_TERM, orders real but price action negative; wait for stabilization.
+- Opportunity cost: Wide range at ~$4.7 makes a sane stop hard; displaces better-trending names.
+
+#### Deep dive: OPEN $1.79 -9.37%
+- Catalyst: Q3 revenue $1.02B, net loss $218M (wider YoY).
+- Why: Widening losses in rate-sensitive housing-tech.
+- Impact: Fundamental disappointment, sub-$2 drift likely.
+- Horizon: SHORT_TERM, earnings-driven, no structural catalyst.
+- Opportunity cost: Near the $3 price floor, off sector-momentum list; can't reach 2:1.
+
+#### Deep dive: AMKR $32.58 -8.60%
+- Catalyst: No AMKR-specific news; chips tumbled after Arm/QCOM reports (QCOM, STM also -7%).
+- Why: Semiconductor read-through hits OSAT and chip names together.
+- Impact: Lower volume (298K); tracks sector.
+- Horizon: SHORT_TERM, sector-driven and unconfirmed.
+- Opportunity cost: Adds semis correlation (corr-gate likely trips); revisit after the sector stabilizes.
+
+- Correction: OPEN ($1.79, -9.37%) fails the price>=3.0 filter; excluded from the JSON, only 9 qualifying rows. It still appears in the table/deep dive above and in the Telegram message.
