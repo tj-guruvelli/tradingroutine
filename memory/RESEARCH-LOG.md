@@ -18229,3 +18229,8 @@ Sources: Apify web-search (RAG browser tool unavailable; Yahoo blocked via -site
 **Risks:** VIX ~25+ regime shift; jobs print + Dec hike odds could re-trigger selloff; AI/tech de-rating spillover to V/MA/MSFT; oil headline whipsaw; wide/unreliable premarket quotes (recurring).
 
 **Decision: HOLD.** No clean catalyst+confluence+no-chase setup; vol spike argues patience. Re-evaluate at market-open after jobs print settles. Weekly trade count 0/3.
+
+## 2026-11-06
+
+### Gappers (auto-scan 07:10 ET, cloud)
+- 0 hits at |gap| >= 5%, price >= $3 across watchlist. No deep dive. No notification sent.
