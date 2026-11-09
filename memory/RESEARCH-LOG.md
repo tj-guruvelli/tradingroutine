@@ -18399,3 +18399,25 @@ JSON saved to `data/setup-scan_cloud_2026-11-06_1538ET.json`.
 | SYNA | B | Momentum confluence | daily swing | ADX 37.3, EMA9 117.34>EMA21 115.98, RSI 56.0 |
 
 JSON saved to `data/setup-scan_cloud_2026-11-06_1738ET.json`.
+
+### 2026-11-09 Pre-Market Research (cloud, Day 87, Monday)
+Note: Apify RAG tool not exposed this run; used native WebSearch (Yahoo domains blocked).
+
+**Account:** Equity $100,000 | Cash $100,000 | BP $400,000 (margin) | 0 positions | 0 orders | daytrade count n/a (none). Live-vs-$10k-baseline mismatch still unresolved (flagged Jul 27).
+
+**Market context**
+- S&P futures ~+0.3-0.4% (CNBC, ~7,430); Nasdaq-100 fut ~+0.5%. Partial rebound after Thursday's AI-led selloff.
+- VIX: low-mid 20s (Investing.com widgets, undated) — clean precise print = gap (only Yahoo-sourced number found, discarded).
+- Oil: WTI ~$90, Brent ~$97 (Investing.com snapshot, unverified timestamp). Iran-war backdrop.
+- NVDA -~5% premarket: board probe re CEO Huang. NVDA earnings Nov 17.
+- Releases: Mon — KKR, Barrick, Ferguson (AM); Take-Two, Occidental, Rocket Lab (PM). Tue Nov 10 — Oct CPI 8:30 ET (est ~3.9% y/y vs 3.7%), CRWV AMC. Wed Nov 11 — Veterans Day (bonds closed). Thu — Cisco, AMAT AMC. Fri — PPI.
+- Sector momentum YTD: not separately sourced; Nov 6 scan grade-B: V, MA, MSFT, NOC, LMT, SYNA.
+
+**Trade ideas (none actionable pre-CPI)**
+1. LMT/NOC (defense, Iran-war tailwind): catalyst = geopolitics; wait pullback to EMA21 (LMT ~587). Stop 7-10% below; target 2:1+.
+2. V/MA: strong ADX but RSI 63-65; wait RSI cooldown. Stop 7%, target 14%.
+3. MSFT: EMA21 reclaim (~528) after AI selloff; entry only on confirmation. Stop ~7%.
+
+**Risks:** Hot CPI Tue (3.9% est) → rate/yield shock; AI/semis volatility (NVDA probe); oil ~$90 / Iran war; possible shutdown risk; Take-Two/OXY/RKLB prints after close.
+
+**Decision: HOLD.** CPI tomorrow, tape unsettled, no clean catalyst+confluence setup. Weekly trades 0/3.
