@@ -2592,3 +2592,59 @@ unresolved 138th+ straight session, operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-11-05`, equity/cash unchanged at $100,000). Market-Open: all 7 candidates (MSFT, V, MA, LMT, NOC, ONDS, BE, NBIS) failed catalyst+confluence+no-chase+reliable-quote gate — no trade fired. Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 2, final trading day of the week). 86th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 138th+ straight session, operator review pending. Tomorrow: pre-market re-scan for a candidate clearing the catalyst+confluence+no-chase gate; watch MSFT for EMA21 reclaim, V/MA for RSI cooldown from overbought, LMT for pullback-to-EMA trigger.
+
+### Nov 9, Market-Open (Day 87, Monday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules. Today's RESEARCH-LOG: pre-market
+entry explicit **Decision: HOLD** (CPI print due tomorrow Nov 10, tape
+unsettled post-AI-selloff, no clean catalyst+confluence setup); gappers
+auto-scan (08:16 ET) logged 4 hits (LUNR, ONDS, NBIS, NIO) with deep dives,
+none recommended as a trade (see pass/fail below). TRADE-LOG tail: weekly
+trade count 0/3 (new week of Nov 9).
+
+STEP 2: Setup-scan — no Nov 9 file exists yet (market-open runs before
+setup-scan-cloud's first same-day fire, expected). Used prior trading day's
+latest file `data/setup-scan_cloud_2026-11-06_1738ET.json` (17:38 ET Nov 6,
+3 trading days stale): 6 grade-B hits — V, MA, MSFT, NOC, LMT, SYNA. Merged
+with STEP 1 gappers (LUNR, ONDS, NBIS, NIO) for 10 total candidates.
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-06`). Live quotes pulled for all 10 candidates.
+
+STEP 4 — pass/fail per candidate:
+- V: bp $400.28, ap $0 (no ask), stamped `2026-11-06T21:00` (stale,
+  3 sessions old) — FAIL: unreliable quote.
+- MA: ap $702.70 / bp $608.19, stamped `2026-11-06T21:00`, spread ~$94.5
+  (~13%) — FAIL: unreliable quote; rsi14 65.4 also approaching overbought.
+- MSFT: bp $508.51, ap $0 (no ask), stamped `2026-11-06T21:00` — FAIL:
+  unreliable quote.
+- NOC: bp $484.76, ap $0 (no ask), stamped `2026-11-06T21:00` — FAIL:
+  unreliable quote.
+- LMT: ap $598.63 / bp $540.55, stamped `2026-11-06T21:00`, spread ~$58.1
+  (~10%) — FAIL: unreliable quote; also setup-scan curr_px ($569.59) still
+  below ema9 ($608.01) — pullback-to-EMA trigger not reached.
+- SYNA: ap $133.50 / bp $100.36, stamped `2026-11-06T21:00`, spread ~$33.1
+  (~25%) — FAIL: unreliable quote.
+- LUNR: ap $10.97 / bp $10.89, stamped `2026-11-09T13:00` (fresh), spread
+  ~0.7% (reliable) — FAIL: no-chase rule (today's deep dive: +27% gap,
+  stop would need to exceed 10% for 2:1 R:R, thin single-source catalyst
+  confirmation; displaces nothing better per RESEARCH-LOG).
+- ONDS: ap $5.42 / bp $5.41, stamped `2026-11-09T13:39` (fresh) — FAIL: no
+  verified catalyst per today's deep dive ("do not carry"), extended after
+  two consecutive double-digit up days.
+- NBIS: bp $112.36, ap $0 (no ask), stamped `2026-11-06T21:00` — FAIL:
+  unreliable quote (best-quality setup per research but quote unusable for
+  an order right now).
+- NIO: ap $3.35 / bp $3.33, stamped `2026-11-09T13:39` (fresh) — FAIL: no
+  catalyst documented per today's deep dive, sub-$5 chop.
+
+All 10 candidates fail the catalyst+confluence+no-chase+reliable-quote
+gate — STEPs 5-6 (orders/stops) skipped. No trade fired.
+
+STEP 8 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 9). 87th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 139th+
+straight session, operator review pending. CPI print Nov 10 8:30 ET is the
+next catalyst gate; watch NBIS for a reliable quote re-check post-CPI.
