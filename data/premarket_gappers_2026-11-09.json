@@ -1,1 +1,126 @@
-{"scanned_at":"2026-11-09T14:15:35Z","deep_dive_cap":5,"gappers":[]}
+{
+  "scanned_at": "2026-11-09T15:14:47.163528Z",
+  "deep_dive_cap": 5,
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 197.8,
+      "gap_pct": 14.29,
+      "premarket_volume": 140703,
+      "catalyst": "No fresh company news found; bounce after post-Q3 selloff (Q3 rev +138% to $1.24B, guidance raised, stock -11% post-print, SA downgrade to Hold 11/4).",
+      "headlines": [],
+      "catalyst_detail": "Q3 (late Oct) was a blowout: revenue +138% to $1.24B, operating margin 23.1%, guidance raised, yet shares fell ~11% and a Seeking Alpha downgrade to Hold (PT $176) followed 11/4. No new Monday-specific catalyst surfaced in search.",
+      "why": "Rebound/short-covering in a beaten-down AI-power name; no new news, so the move is sentiment/flow-driven.",
+      "impact": "14% gap already ABOVE the $176 downgrade PT; premarket vol 141k is thin. Reads as a rebound spike prone to fade; no peer read-through confirmed.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No new durable catalyst today; fundamentals strong but gap is flow-driven.",
+      "opportunity_cost": "Would displace nothing held (0 positions, 0/3 trades) but a ~14% gap needs a wide stop; 10% trail from ~$198 sits near $178, 2:1 needs ~$238 target. Poor R:R chasing; ranks below nothing today but fails no-chase."
+    },
+    {
+      "rank": 2,
+      "symbol": "ASTS",
+      "price": 35.73,
+      "gap_pct": 10.62,
+      "premarket_volume": 123986,
+      "catalyst": "Pre-earnings run: Firefly $1.3B engine deal for AST's own Blacklift rocket, Brazil commercial-service step; Q3 report imminent.",
+      "headlines": [],
+      "catalyst_detail": "AST unveiled plans for its own reusable heavy-lift rocket (Blacklift) with a $1.3B Firefly engine deal (Reuters 11/6) and a Brazil service step. Stock was -21% on the week before a +7% Friday; Q3 earnings are imminent (consensus EPS -$0.40, rev ~$47.9M) amid satellite-deployment delay worries.",
+      "why": "Vertical integration narrative plus pre-earnings positioning/short covering after a -21% week.",
+      "impact": "Pre-earnings binary: a gap into the print with 124k vol is fragile; delays could reverse it. Space peers (RKLB, LUNR, PL, RDW) all gap up, so partly sector beta.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Earnings-event risk dominates; do not carry through the print.",
+      "opportunity_cost": "Earnings gap risk breaks the 10% trail logic; 2:1 R:R unclear. Better to wait for post-earnings reaction than enter before it."
+    },
+    {
+      "rank": 3,
+      "symbol": "PL",
+      "price": 13.88,
+      "gap_pct": 10.6,
+      "premarket_volume": 53953,
+      "catalyst": "No clear catalyst; sector bounce in space names (recent ESA project win, agriculture AI news; stock -51% in 6 months).",
+      "headlines": [],
+      "catalyst_detail": "No Monday-specific headline found (deep-dive search returned nothing). Recent items: ESA project win, agriculture AI news; shares down ~51% in 6 months; avg analyst PT ~$31 per TipRanks.",
+      "why": "Sympathy move with the space group (ASTS/RKLB/LUNR/RDW) rather than company news.",
+      "impact": "Volume just over the 50k floor; sector-driven spike likely to fade without own catalyst. Fundamentals data missing (gap in research).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sympathy bounce, no thesis found.",
+      "opportunity_cost": "Lower quality than LUNR (has contract news); sub-$14 stock, would count toward space-sector exposure cap; R:R unproven."
+    },
+    {
+      "rank": 4,
+      "symbol": "LUNR",
+      "price": 11.5,
+      "gap_pct": 9.89,
+      "premarket_volume": 66637,
+      "catalyst": "NASA CLPS 2 contract win (third NASA award in six months); FALCON-RADAR mission selection; Q2/Q3 backlog $1.8B.",
+      "headlines": [],
+      "catalyst_detail": "Intuitive Machines won a NASA CLPS 2 contract (GuruFocus, premarket 11/9) and earlier a NASA FALCON-RADAR spacecraft platform selection (11/3). Reported quarter-end backlog of $1.8B record. Stock fell ~25% in Oct on a NASA mission postponement.",
+      "why": "Contract wins re-rate backlog visibility after an Oct drawdown; momentum buyers return.",
+      "impact": "Most fundamentally supported gapper (real contract, backlog). Volume 67k decent; sector tailwind from peers also gapping.",
+      "horizon": "LONG_TERM",
+      "horizon_reason": "Structural NASA contract flow and backlog; would need Confluence pass later.",
+      "opportunity_cost": "Best of today's list by catalyst quality; at ~$11.5 a 10% trail ($10.35) gives ~1:1 unless target >$13.8. Space sector is already crowded on today's list; would be the one to pick over ASTS/PL."
+    },
+    {
+      "rank": 5,
+      "symbol": "RKLB",
+      "price": 57.37,
+      "gap_pct": 8.13,
+      "premarket_volume": 127108,
+      "catalyst": "Space-sector rally; reported Nasdaq-100 inclusion chatter; no single company catalyst found.",
+      "headlines": [],
+      "catalyst_detail": "Search surfaced Nasdaq-100 inclusion chatter and a booking change that cut reported launch revenue in the June quarter; consensus sees losses shrinking ~54%/yr to 2027 and profit by 2028. No company news Monday.",
+      "why": "Sector sympathy plus index-inclusion flow expectations.",
+      "impact": "127k premarket vol is solid; moves with the space group, so correlated with LUNR/ASTS (corr gate would limit stacking).",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "Sector-driven, valuation rich; no new structural catalyst today.",
+      "opportunity_cost": "Would be correlated with any other space pick (corr gate >0.75 blocks 2+). LUNR has the cleaner catalyst; R:R at ~$57 with a 10% trail needs ~$68."
+    },
+    {
+      "rank": 6,
+      "symbol": "ONDS",
+      "price": 5.76,
+      "gap_pct": 8.07,
+      "premarket_volume": 305680,
+      "catalyst": "No new catalyst; Friday +18% rebound after -14% day, Q3 results ahead.",
+      "headlines": []
+    },
+    {
+      "rank": 7,
+      "symbol": "RDW",
+      "price": 7.715,
+      "gap_pct": 7.15,
+      "premarket_volume": 241006,
+      "catalyst": "Rebound after weak Q3 (rev $109M vs $126M est); fell ~12% post-earnings.",
+      "headlines": []
+    },
+    {
+      "rank": 8,
+      "symbol": "AMPX",
+      "price": 9.275,
+      "gap_pct": 6.24,
+      "premarket_volume": 52254,
+      "catalyst": "No new catalyst found; follows +16% Friday close.",
+      "headlines": []
+    },
+    {
+      "rank": 9,
+      "symbol": "NBIS",
+      "price": 137.44,
+      "gap_pct": 6.16,
+      "premarket_volume": 181969,
+      "catalyst": "No new news; AI-infra bid ahead of Q3 earnings Thu 11/12.",
+      "headlines": []
+    },
+    {
+      "rank": 10,
+      "symbol": "STM",
+      "price": 44.155,
+      "gap_pct": 5.87,
+      "premarket_volume": 90747,
+      "catalyst": "AI datacenter demand, ~$20B backlog, restructuring margin recovery narrative; +4.4% Friday.",
+      "headlines": []
+    }
+  ]
+}

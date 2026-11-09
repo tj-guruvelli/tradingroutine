@@ -18467,3 +18467,54 @@ No watchlist names met gap>=5% / price>=$3 (scan returned []). No deep dives.
 - 0 gappers >=5% vs Friday close. No deep dive.
 - Scanner bug fixed: Monday pre-market, dailyBar (Fri) != prevDailyBar (Thu) so it used Thu close as baseline -> fake gaps (LUNR +27%, ONDS +19%, OPEN -22%, NBIS +7%, BE +7%). Real: LUNR +4.7, BE +3.4, BMNR -4.2, ONDS +0.9, NBIS -0.4. Fix: only treat dailyBar as today if date >= today (UTC).
 - NBIS reports Q3 Thu 11/12.
+
+### Gappers (auto-scan 10:14 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 197.8 | +14.29% | 140,703 | No fresh company news found; bounce after post-Q3 selloff (Q3 rev +138% to $1.24B, guidance raised, stock -11% post-print, SA downgrade to Hold 11/4). |
+| 2 | ASTS | 35.73 | +10.62% | 123,986 | Pre-earnings run: Firefly $1.3B engine deal for AST's own Blacklift rocket, Brazil commercial-service step; Q3 report imminent. |
+| 3 | PL | 13.88 | +10.6% | 53,953 | No clear catalyst; sector bounce in space names (recent ESA project win, agriculture AI news; stock -51% in 6 months). |
+| 4 | LUNR | 11.5 | +9.89% | 66,637 | NASA CLPS 2 contract win (third NASA award in six months); FALCON-RADAR mission selection; Q2/Q3 backlog $1.8B. |
+| 5 | RKLB | 57.37 | +8.13% | 127,108 | Space-sector rally; reported Nasdaq-100 inclusion chatter; no single company catalyst found. |
+| 6 | ONDS | 5.76 | +8.07% | 305,680 | No new catalyst; Friday +18% rebound after -14% day, Q3 results ahead. |
+| 7 | RDW | 7.715 | +7.15% | 241,006 | Rebound after weak Q3 (rev $109M vs $126M est); fell ~12% post-earnings. |
+| 8 | AMPX | 9.275 | +6.24% | 52,254 | No new catalyst found; follows +16% Friday close. |
+| 9 | NBIS | 137.44 | +6.16% | 181,969 | No new news; AI-infra bid ahead of Q3 earnings Thu 11/12. |
+| 10 | STM | 44.155 | +5.87% | 90,747 | AI datacenter demand, ~$20B backlog, restructuring margin recovery narrative; +4.4% Friday. |
+
+Filters: |gap|>=5%, price>=3, vol>=50k. Dropped on vol/price: BW, UMAC, WLDS, SATL, BKSY, AVAV, AMKR. Deep dive top 5 only; ranks 6-10 quick-scan.
+
+#### Deep dive: BE $197.8 +14.29%
+- Catalyst: Q3 (late Oct) was a blowout: revenue +138% to $1.24B, operating margin 23.1%, guidance raised, yet shares fell ~11% and a Seeking Alpha downgrade to Hold (PT $176) followed 11/4. No new Monday-specific catalyst surfaced in search.
+- Why: Rebound/short-covering in a beaten-down AI-power name; no new news, so the move is sentiment/flow-driven.
+- Impact: 14% gap already ABOVE the $176 downgrade PT; premarket vol 141k is thin. Reads as a rebound spike prone to fade; no peer read-through confirmed.
+- Horizon: SHORT_TERM, No new durable catalyst today; fundamentals strong but gap is flow-driven.
+- Opportunity cost: Would displace nothing held (0 positions, 0/3 trades) but a ~14% gap needs a wide stop; 10% trail from ~$198 sits near $178, 2:1 needs ~$238 target. Poor R:R chasing; ranks below nothing today but fails no-chase.
+
+#### Deep dive: ASTS $35.73 +10.62%
+- Catalyst: AST unveiled plans for its own reusable heavy-lift rocket (Blacklift) with a $1.3B Firefly engine deal (Reuters 11/6) and a Brazil service step. Stock was -21% on the week before a +7% Friday; Q3 earnings are imminent (consensus EPS -$0.40, rev ~$47.9M) amid satellite-deployment delay worries.
+- Why: Vertical integration narrative plus pre-earnings positioning/short covering after a -21% week.
+- Impact: Pre-earnings binary: a gap into the print with 124k vol is fragile; delays could reverse it. Space peers (RKLB, LUNR, PL, RDW) all gap up, so partly sector beta.
+- Horizon: SHORT_TERM, Earnings-event risk dominates; do not carry through the print.
+- Opportunity cost: Earnings gap risk breaks the 10% trail logic; 2:1 R:R unclear. Better to wait for post-earnings reaction than enter before it.
+
+#### Deep dive: PL $13.88 +10.6%
+- Catalyst: No Monday-specific headline found (deep-dive search returned nothing). Recent items: ESA project win, agriculture AI news; shares down ~51% in 6 months; avg analyst PT ~$31 per TipRanks.
+- Why: Sympathy move with the space group (ASTS/RKLB/LUNR/RDW) rather than company news.
+- Impact: Volume just over the 50k floor; sector-driven spike likely to fade without own catalyst. Fundamentals data missing (gap in research).
+- Horizon: SHORT_TERM, Sympathy bounce, no thesis found.
+- Opportunity cost: Lower quality than LUNR (has contract news); sub-$14 stock, would count toward space-sector exposure cap; R:R unproven.
+
+#### Deep dive: LUNR $11.5 +9.89%
+- Catalyst: Intuitive Machines won a NASA CLPS 2 contract (GuruFocus, premarket 11/9) and earlier a NASA FALCON-RADAR spacecraft platform selection (11/3). Reported quarter-end backlog of $1.8B record. Stock fell ~25% in Oct on a NASA mission postponement.
+- Why: Contract wins re-rate backlog visibility after an Oct drawdown; momentum buyers return.
+- Impact: Most fundamentally supported gapper (real contract, backlog). Volume 67k decent; sector tailwind from peers also gapping.
+- Horizon: LONG_TERM, Structural NASA contract flow and backlog; would need Confluence pass later.
+- Opportunity cost: Best of today's list by catalyst quality; at ~$11.5 a 10% trail ($10.35) gives ~1:1 unless target >$13.8. Space sector is already crowded on today's list; would be the one to pick over ASTS/PL.
+
+#### Deep dive: RKLB $57.37 +8.13%
+- Catalyst: Search surfaced Nasdaq-100 inclusion chatter and a booking change that cut reported launch revenue in the June quarter; consensus sees losses shrinking ~54%/yr to 2027 and profit by 2028. No company news Monday.
+- Why: Sector sympathy plus index-inclusion flow expectations.
+- Impact: 127k premarket vol is solid; moves with the space group, so correlated with LUNR/ASTS (corr gate would limit stacking).
+- Horizon: SHORT_TERM, Sector-driven, valuation rich; no new structural catalyst today.
+- Opportunity cost: Would be correlated with any other space pick (corr gate >0.75 blocks 2+). LUNR has the cleaner catalyst; R:R at ~$57 with a 10% trail needs ~$68.
