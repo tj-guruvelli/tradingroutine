@@ -18518,3 +18518,10 @@ Filters: |gap|>=5%, price>=3, vol>=50k. Dropped on vol/price: BW, UMAC, WLDS, SA
 - Impact: 127k premarket vol is solid; moves with the space group, so correlated with LUNR/ASTS (corr gate would limit stacking).
 - Horizon: SHORT_TERM, Sector-driven, valuation rich; no new structural catalyst today.
 - Opportunity cost: Would be correlated with any other space pick (corr gate >0.75 blocks 2+). LUNR has the cleaner catalyst; R:R at ~$57 with a 10% trail needs ~$68.
+
+### Setup Scan (15:37 ET, cloud)
+Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SYNA | B | Momentum confluence | daily swing | px $117.01, ADX14 36.3, EMA9 $117.23 > EMA21 $116.05, RSI 57.4 |
