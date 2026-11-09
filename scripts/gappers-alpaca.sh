@@ -98,7 +98,7 @@ for sym, snap in data.items():
     prev = snap.get("prevDailyBar") or {}
     daily_date = str(daily.get("t", ""))[:10]
     prev_date = str(prev.get("t", ""))[:10]
-    if daily_date and prev_date and daily_date != prev_date:
+    if daily_date and prev_date and daily_date != prev_date and daily_date >= today:
         # dailyBar is today's own bar (forming or complete) -> prevDailyBar
         # is yesterday's close, the correct gap baseline.
         prev_close = prev.get("c") or daily.get("c") or 0.0

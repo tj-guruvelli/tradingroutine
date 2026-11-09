@@ -18462,3 +18462,8 @@ No watchlist names met gap>=5% / price>=$3 (scan returned []). No deep dives.
 - Impact: Low-priced, no catalyst; likely to fade.
 - Horizon: SHORT_TERM, No catalyst, sub-$5 chop.
 - Opportunity cost: Lowest ranked; would waste a weekly slot, fails quality bar vs NBIS.
+
+### Gappers (auto-scan 09:14 ET, cloud)
+- 0 gappers >=5% vs Friday close. No deep dive.
+- Scanner bug fixed: Monday pre-market, dailyBar (Fri) != prevDailyBar (Thu) so it used Thu close as baseline -> fake gaps (LUNR +27%, ONDS +19%, OPEN -22%, NBIS +7%, BE +7%). Real: LUNR +4.7, BE +3.4, BMNR -4.2, ONDS +0.9, NBIS -0.4. Fix: only treat dailyBar as today if date >= today (UTC).
+- NBIS reports Q3 Thu 11/12.
