@@ -18421,3 +18421,6 @@ Note: Apify RAG tool not exposed this run; used native WebSearch (Yahoo domains 
 **Risks:** Hot CPI Tue (3.9% est) → rate/yield shock; AI/semis volatility (NVDA probe); oil ~$90 / Iran war; possible shutdown risk; Take-Two/OXY/RKLB prints after close.
 
 **Decision: HOLD.** CPI tomorrow, tape unsettled, no clean catalyst+confluence setup. Weekly trades 0/3.
+
+### Gappers (auto-scan 07:14 ET, cloud)
+No watchlist names met gap>=5% / price>=$3 (scan returned []). No deep dives.
