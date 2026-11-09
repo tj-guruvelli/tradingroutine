@@ -18424,3 +18424,41 @@ Note: Apify RAG tool not exposed this run; used native WebSearch (Yahoo domains 
 
 ### Gappers (auto-scan 07:14 ET, cloud)
 No watchlist names met gap>=5% / price>=$3 (scan returned []). No deep dives.
+
+## 2026-11-09
+### Gappers (auto-scan 08:16 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | $10.96 | +27.22% | 427,501 | Third NASA Earth-science award reported; stock bounced from ~$8.6 after ~27% 30-day slide. |
+| 2 | ONDS | $5.42 | +20.04% | 1,653,433 | Rallied from $4.52 close; sources show high short interest, no confirmed fresh catalyst found. |
+| 3 | NBIS | $128.0 | +6.36% | 584,693 | Continuation after +7.6% Nov 6 close ($129.49 per MSN); AI-cloud momentum, Meta $27B deal backdrop. |
+| 4 | NIO | $3.36 | +5.33% | 3,057,575 | No clear catalyst found; sources say no new company catalysts, retail sentiment bearish. |
+(Only 4 hits >=5%/$3. Deep dive on all 4; search via apify web-search, rag-web-browser tool unavailable; sources thin.)
+
+#### Deep dive: LUNR $10.96 +27.22%
+- Catalyst: Intuitive Machines reportedly won a third NASA Earth-science award; backlog ~$1.8B last quarter. Stock had fallen ~27% over 30 days from ~$14, so gap is partly a rebound. Thin source detail (aggregator snippets only).
+- Why: Contract win plus oversold bounce draws momentum/retail buyers.
+- Impact: PM volume 428K is modest for a +27% gap; looks like headline spike prone to partial fade. Space-sector peers not checked.
+- Horizon: SHORT_TERM, Contract headline into oversold bounce, no confirmed durable re-rating; fade risk within days.
+- Opportunity cost: Would take 1 of 3 weekly slots; a 27% gap needs a wide stop (>10%) so 2:1 R:R is hard unless it holds above ~$11. Displaces nothing better today than ONDS/NBIS.
+
+#### Deep dive: ONDS $5.42 +20.04%
+- Catalyst: Ondas (drones/autonomous systems) closed Nov 6 at $5.34 after +18% on Nov 6 and sits far below its $9-10 2025/Aug-2026 levels. Catalyst for today's further gap not confirmed; MSN notes elevated short interest.
+- Why: Likely short-squeeze/momentum continuation in drone/defense small-caps.
+- Impact: Volume 1.65M strongest of list; two consecutive double-digit up days = extended; squeeze-type moves mean-revert sharply.
+- Horizon: SHORT_TERM, No verified catalyst, squeeze-style; do not carry.
+- Opportunity cost: Extended after 2 big up days; entry would be chasing, stop distance too wide for 2:1 R:R. Ranks below NBIS on quality.
+
+#### Deep dive: NBIS $128.0 +6.36%
+- Catalyst: Nebius (AI cloud) has a $27B Meta contract and large capital raises to fund data centers; closed Nov 6 at ~$120-129 range. No specific new item for today found in search.
+- Why: AI-infrastructure momentum plus prior mega-contract keeps buyers engaged; dilution risk from converts is the offset.
+- Impact: PM volume 585K reasonable; move is smaller and fits an established AI-infra trend, more sustainable than LUNR/ONDS.
+- Horizon: LONG_TERM, Structural AI-compute demand (Meta deal) aligned with momentum sector; needs Confluence check.
+- Opportunity cost: Best-quality setup on the list; would compete with existing AI/semis holdings for sector exposure and a weekly slot. 10% trail on a ~$128 stock is feasible for 2:1 only if targeting ~$154+.
+
+#### Deep dive: NIO $3.36 +5.33%
+- Catalyst: NIO gap of 5.3% on $3.36 with no identified news. Aggregators cite Geely/NIO Power deal discussion in the past but nothing dated today.
+- Why: Probably sector/China-EV sympathy or noise.
+- Impact: Low-priced, no catalyst; likely to fade.
+- Horizon: SHORT_TERM, No catalyst, sub-$5 chop.
+- Opportunity cost: Lowest ranked; would waste a weekly slot, fails quality bar vs NBIS.
