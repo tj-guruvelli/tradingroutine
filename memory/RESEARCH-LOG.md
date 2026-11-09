@@ -18525,3 +18525,10 @@ Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | SYNA | B | Momentum confluence | daily swing | px $117.01, ADX14 36.3, EMA9 $117.23 > EMA21 $116.05, RSI 57.4 |
+
+### Setup Scan (17:37 ET, cloud)
+Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| SYNA | B | Momentum confluence | daily swing | px $117.01, ADX14 36.3, EMA9 $117.23 > EMA21 $116.05, RSI 57.4 |
