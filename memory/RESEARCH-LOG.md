@@ -18646,3 +18646,9 @@ Only 3 hits >=5% / >=$3. Deep dive cap 5; all 3 got deep dive.
 - Impact: 302k volume moderate; macro-driven fade could extend if yields keep rising. No peer data confirmed.
 - Horizon: SHORT_TERM, macro-driven, no durable thesis; do not buy a falling knife.
 - Opportunity cost: Long on a gap down against rising yields fails the momentum rule; no clean 2:1 R:R. If held, check the -7% cut rule at the open.
+
+### Setup Scan (15:39 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 checkable). 60 candidates checked, 1 hit, 0 errors.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BKSY | B | Momentum confluence | daily swing | px $24.04, RSI 65.75, ADX 23.27, EMA9 $19.68 > EMA21 $19.31 |
