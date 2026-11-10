@@ -18553,3 +18553,6 @@ Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 
 **Risks:** CPI 8:30 ET binary for rates/tape; elevated oil vol; inflation expectations high (4.7%); thin/unverified data this run.
 
 **Decision: HOLD.** No trade pre-CPI; reassess at market-open with post-CPI tape. Weekly trades 0/3.
+
+### Gappers (auto-scan 07:12 ET, cloud)
+- 0 hits at |gap| >= 5%, price >= $3 (watchlist scan returned []; also empty at 2% threshold). No catalyst/deep-dive. No Telegram sent (hits = 0, no error).
