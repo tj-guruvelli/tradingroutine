@@ -18617,3 +18617,32 @@ Only 5 hits (>=5% gap, >=$3); all 5 deep-dived (cap 5). Yahoo result for RKLB di
 - Impact: Volume 935k; peers RKLB and ASTS also down, so the move is part of a sector flush on top of an earnings overhang.
 - Horizon: SHORT_TERM, Earnings-miss drift plus sector pressure; no durable bullish catalyst.
 - Opportunity cost: Weakest fundamentals of the space group; no 2:1 R:R at a sane stop, would waste a weekly slot.
+
+### Gappers (auto-scan 10:12 ET, cloud)
+Only 3 hits >=5% / >=$3. Deep dive cap 5; all 3 got deep dive.
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | PEPG | 6.12 | +156.07 | 448,343 | Positive Ph2 FREEDOM2-DM1 10 mg/kg topline (PGN-EDODM1, myotonic dystrophy 1) plus Q3 results. |
+| 2 | BW | 4.36 | +15.04 | 157,500 | Reported earnings Nov 9 (per aggregator); specific headline not confirmed. |
+| 3 | QBTS | 10.6 | -7.46 | 302,035 | No specific catalyst found; gap down -7.5%. |
+
+#### Deep dive: PEPG $6.12 +156.07%
+- Catalyst: 10 mg/kg cohort: mean muscle splicing correction 46.5% at Wk13 vs 6.8% placebo; 5/6 pts >20%, 4/6 >50%. Grip strength +16.2% at Wk16; 10m walk/run improved. Well tolerated. Cash $104.8M, runway into 2028; 12.5 mg/kg cohort fully enrolled, data 1H27.
+- Why: Strong pharmacodynamic plus functional data de-risks a rare-disease Ph2 asset and a micro-cap re-rates; funded runway lowers dilution fear near-term.
+- Impact: Volume 448k pre-open is meaningful for a $2 stock, but +156% is a binary-event gap with 52w high $7.80 overhead; follow-on equity raise is a common fade trigger. Small-n (6 pts) data.
+- Horizon: SHORT_TERM, binary biotech spike; offering risk and thin n, no sector-rotation fit; do not carry.
+- Opportunity cost: Sub-$10 biotech with an extreme gap rarely supports a sane stop at 2:1 R:R (10% trail is ~$0.60 of chop). Would use one of 3 weekly trade slots on a lottery-style setup; BW or higher-quality names are better uses.
+
+#### Deep dive: BW $4.36 +15.04%
+- Catalyst: Search returned no post-earnings article; only that BW reported Nov 9 and the analyst average target sits far above price ($20-21.50). Details not verified.
+- Why: Likely earnings/backlog reaction on a low-priced name; mechanism not confirmed.
+- Impact: 157k volume is light; unconfirmed catalyst, low price, previous close in sources ($3.25 Nov 6) shows high volatility. Treat as unproven.
+- Horizon: SHORT_TERM, catalyst unverified; no basis for a multi-day thesis.
+- Opportunity cost: Cannot assess R:R without the catalyst; would displace a better-researched candidate for one of 3 weekly slots. Research gap, verify at the open.
+
+#### Deep dive: QBTS $10.6 -7.46%
+- Catalyst: Searches found no D-Wave-specific news. Backdrop per Investing.com: Oct CPI hot (+0.4% m/m vs 0.3% est), 10Y near 5.0% (+13bp), NVDA -3%; rate shock hits speculative growth.
+- Why: Likely high-beta speculative-tech de-risking on rate spike; not confirmed company-specific.
+- Impact: 302k volume moderate; macro-driven fade could extend if yields keep rising. No peer data confirmed.
+- Horizon: SHORT_TERM, macro-driven, no durable thesis; do not buy a falling knife.
+- Opportunity cost: Long on a gap down against rising yields fails the momentum rule; no clean 2:1 R:R. If held, check the -7% cut rule at the open.
