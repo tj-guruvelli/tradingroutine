@@ -18532,3 +18532,24 @@ Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | SYNA | B | Momentum confluence | daily swing | px $117.01, ADX14 36.3, EMA9 $117.23 > EMA21 $116.05, RSI 57.4 |
+
+### Nov 10, Pre-Market Research (Day 88, Tuesday, cloud run)
+**Source note:** Apify RAG web browser not exposed this run; used `apify--web-search` (snippets only, Yahoo domains blocked). Data thin/partly stale — treat as indicative.
+
+**Account:** equity $100,000.00 | cash $100,000.00 | buying power $400,000 (margin) | 0 positions | 0 open orders | `balance_asof: 2026-11-09`. Still the $100k-vs-$10k baseline mismatch (flagged Jul 27, unresolved).
+
+**Market context**
+- Indices: ES Dec futures roughly flat-to-slightly-down in snippets (Barchart ESZ26 -0.29%; Investing.com scoreboard ~7726, +0.04%) — undated, low confidence.
+- Oil: WTI ~$88-92 range (CME 11/4 last 88.28; Barchart Nov micro 91.42 on 10/8); WTI CVOL 64.6 (11/6) — elevated oil vol. No clean live quote found.
+- VIX: no clean non-Yahoo level found — gap.
+- Today: **Oct CPI + core CPI, 8:30 ET** (Kiplinger: economists expect headline moderated on lower gas prices). UMich 1-yr inflation expectations 4.7% (Oct). No earnings list retrieved — gap.
+- Sector momentum: not retrieved this run — gap.
+
+**Trade ideas (none actionable pre-CPI)**
+1. NBIS — best setup per prior research; needs reliable quote post-CPI. Entry only on confirmed ask + confluence; stop 10% trail; target ≥2:1.
+2. LUNR — NASA CLPS 2 / $1.8B backlog catalyst; ~$11.5 gives ~1:1 on 10% trail unless target >$13.8. Wait for pullback.
+3. SYNA (Grade B momentum, px ~$117, RSI 57) — daily swing; entry on hold above EMA9 ~$117.2, stop ~$105, target ~$129+. Needs catalyst documented.
+
+**Risks:** CPI 8:30 ET binary for rates/tape; elevated oil vol; inflation expectations high (4.7%); thin/unverified data this run.
+
+**Decision: HOLD.** No trade pre-CPI; reassess at market-open with post-CPI tape. Weekly trades 0/3.
