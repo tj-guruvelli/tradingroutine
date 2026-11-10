@@ -18652,3 +18652,9 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | BKSY | B | Momentum confluence | daily swing | px $24.04, RSI 65.75, ADX 23.27, EMA9 $19.68 > EMA21 $19.31 |
+
+### Setup Scan (17:37 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 checkable). 60 candidates checked, 1 hit, 0 errors.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| BKSY | B | Momentum confluence | daily swing | px $23.36, RSI 65.75, ADX 23.27, EMA9 $19.68 > EMA21 $19.31 |
