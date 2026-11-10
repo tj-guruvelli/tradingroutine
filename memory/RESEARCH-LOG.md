@@ -18556,3 +18556,18 @@ Grade A unreachable (outside 10:00-15:30 ET window). 60 symbols checked, 1 hit, 
 
 ### Gappers (auto-scan 07:12 ET, cloud)
 - 0 hits at |gap| >= 5%, price >= $3 (watchlist scan returned []; also empty at 2% threshold). No catalyst/deep-dive. No Telegram sent (hits = 0, no error).
+
+## 2026-11-10
+### Gappers (auto-scan 08:16 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | PEPG | 5.21 | +117.99 | 119,624 | Unconfirmed (earnings listed 11/10; no same-day PR found) |
+
+Only 1 hit >=5%. Deep dive cap 5; 1 qualifying.
+
+#### Deep dive: PEPG $5.21 +118%
+- Catalyst: DM1/DMD oligonucleotide biotech; no confirmed same-day release (earnings listed 11/10). History: -44% on DM1 data 3/30/26, +115% on data 9/2025.
+- Why: Likely data/earnings news pulling momentum buyers into micro-cap; unverified.
+- Impact: Thin volume, unverified catalyst, history of reversals; likely mean-reverts.
+- Horizon: SHORT_TERM, headline-driven binary biotech.
+- Opportunity cost: Fails 2:1 R:R at sane stop; would burn a weekly trade slot.
