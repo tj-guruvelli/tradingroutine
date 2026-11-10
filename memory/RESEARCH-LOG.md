@@ -18571,3 +18571,49 @@ Only 1 hit >=5%. Deep dive cap 5; 1 qualifying.
 - Impact: Thin volume, unverified catalyst, history of reversals; likely mean-reverts.
 - Horizon: SHORT_TERM, headline-driven binary biotech.
 - Opportunity cost: Fails 2:1 R:R at sane stop; would burn a weekly trade slot.
+
+### Gappers (auto-scan 09:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | PEPG | 5.42 | +126.78 | 119,624 | PepGen surged ~125% pre-open on positive topline results from its 10-mg/kg-class clinical trial (Investing.com); Q3 EPS -$0.28 also reported today. |
+| 2 | RKLB | 53.23 | -9.49 | 626,985 | Rocket Lab gapped down after Q3 results (record ~$3.6B backlog, +52% since Q2, positive GAAP op cash flow $7.2M) amid Neutron launch-delay concerns and a stock ~70% off its record. |
+| 3 | QBTS | 10.7 | -6.59 | 834,365 | No catalyst found (search empty); likely sector sympathy |
+| 4 | ASTS | 34.52 | -6.48 | 1,091,746 | No catalyst found (search empty); likely sector sympathy |
+| 5 | RDW | 7.71 | -5.46 | 934,962 | Redwire fell after a Q3 loss and revenue miss ($109M vs $126M consensus); stock was down ~12% since earnings. |
+
+Only 5 hits (>=5% gap, >=$3); all 5 deep-dived (cap 5). Yahoo result for RKLB discarded.
+
+#### Deep dive: PEPG $5.42 +126.78%
+- Catalyst: Clinical-stage biotech (DM1) posted positive topline data on 11/10, the same day as Q3 earnings (EPS -$0.28 vs -$0.27 est). Stock closed $2.39 on 11/9. Trial detail beyond the headline not retrieved.
+- Why: Positive pivotal-style data re-rates a binary biotech and pulls in momentum buyers.
+- Impact: Only 120k shares pre-market on a ~$171M cap; binary biotech with prior -44% (3/2026) and +115% (9/2025) swings, so high reversal risk. No sector read-through.
+- Horizon: SHORT_TERM, Headline-driven binary biotech, thin volume, likely to fade; offering/dilution risk after a data pop.
+- Opportunity cost: Off-theme (biotech not in the space/AI momentum sectors); sub-$6 price makes a sane 10% stop tiny in $ terms and fails 2:1 R:R on a fade-prone move; would burn one of 3 weekly slots.
+
+#### Deep dive: RKLB $53.23 -9.49%
+- Catalyst: Q3 2026 results showed record backlog of ~$3.6B and ~$1B in new awards, but the stock fell anyway; coverage cites the Neutron delay and a ~70% drawdown from peak. Not verified which item triggered today's gap.
+- Why: Sell-the-news on a stretched growth name: fundamentals strong but the market is punishing launch-schedule risk.
+- Impact: Volume 627k pre-market is meaningful. ASTS, RDW and QBTS are all down 5-7%, so this is a sector-wide space/speculative-tech selloff, not idiosyncratic.
+- Horizon: SHORT_TERM, Sector-wide risk-off flush; structural backlog story is intact but no confirmed bottom - wait for stabilization.
+- Opportunity cost: Space sector is failing today (4 of 4 names down), and the sector rule exits after 2 failed trades; a long would displace a stronger-trend holding and has no confirmed reversal for 2:1 R:R.
+
+#### Deep dive: QBTS $10.7 -6.59%
+- Catalyst: No catalyst found in the news search (zero results). Likely sympathy move with the speculative-tech/space selloff.
+- Why: Unverified; probably beta to sector risk-off.
+- Impact: Volume 834k; moving alongside RKLB/ASTS/RDW, so sector-driven rather than a one-name event.
+- Horizon: SHORT_TERM, No identified catalyst; sympathy move, treat as noise.
+- Opportunity cost: Same weak-sector problem as RKLB; no catalyst means no thesis; fails 2:1 R:R on an unconfirmed bounce.
+
+#### Deep dive: ASTS $34.52 -6.48%
+- Catalyst: No catalyst found in the news search (zero results). Moving in line with space peers RKLB and RDW.
+- Why: Unverified; sector sympathy with the RKLB-led space selloff.
+- Impact: Highest volume of the group (1.09M); peers also down, indicating sector flow.
+- Horizon: SHORT_TERM, No identified catalyst; sympathy move.
+- Opportunity cost: Would duplicate sector exposure with any RKLB/RDW holding (correlation gate); no 2:1 R:R without a confirmed reversal.
+
+#### Deep dive: RDW $7.71 -5.46%
+- Catalyst: Redwire reported a Q3 loss with revenue of $109.04M vs ~$126M consensus. Analyst target ~$13.39 per MSN, but the stock is trending lower.
+- Why: Earnings miss plus sector weakness; guidance reaction already priced across prior sessions.
+- Impact: Volume 935k; peers RKLB and ASTS also down, so the move is part of a sector flush on top of an earnings overhang.
+- Horizon: SHORT_TERM, Earnings-miss drift plus sector pressure; no durable bullish catalyst.
+- Opportunity cost: Weakest fundamentals of the space group; no 2:1 R:R at a sane stop, would waste a weekly slot.
