@@ -1,0 +1,10 @@
+{
+  "scanned_at": "2026-11-11T20:37:55.967Z",
+  "ny_time": "15:37",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [],
+  "errors": []
+}
