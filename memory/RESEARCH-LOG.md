@@ -18658,3 +18658,105 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 | TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
 | ------ | ----- | -------- | --------- | ------- |
 | BKSY | B | Momentum confluence | daily swing | px $23.36, RSI 65.75, ADX 23.27, EMA9 $19.68 > EMA21 $19.31 |
+
+### Nov 11, Pre-Market Research (Day 89, Wednesday, cloud run)
+**Source note:** Apify RAG web browser not exposed this run; used `apify--web-search` +
+`apify--web-fetch` (Yahoo domains blocked via query suffix AND `blockedDomains`; zero
+Yahoo results cited). Web snippets were thin/stale, so index, sector and single-name
+numbers below are computed from **Alpaca daily bars** (primary, non-web) rather than
+search text. VIX and oil from named non-Yahoo primaries. Confidence is flagged per line.
+
+**Account:** equity $100,000.00 | cash $100,000.00 (100%) | buying power $400,000 (margin)
+| non-marginable BP $100,000 | 0 positions | 0 open orders | `balance_asof: 2026-11-10`.
+`daytrade_count` not returned by the account endpoint — unavailable this run (0 trades
+placed in 89 sessions, so effective day-trade count is 0). Still the $100k-vs-$10k
+baseline mismatch (flagged Jul 27, unresolved 144th straight session).
+
+**Market context**
+- **TODAY IS VETERANS DAY.** Equities open normal 9:30-16:00 ET (Fidelity, StockTitan
+  11/10); **US bond market CLOSED** (SIFMA holiday schedule lists Nov 11, 2026). Expect
+  thin liquidity, wider spreads, no Treasury cash print to anchor rates.
+- **No economic releases scheduled today** (Kiplinger, modified 11/10: "no economic
+  reports scheduled for release on Wednesday, November 11"). Next: **PPI Fri Nov 13,
+  8:30 ET** (fedratecalc).
+- VIX: **19.46**, -0.46 (-2.31%) as of 11/10 close — **Cboe** (primary); corroborated by
+  MarketWatch (prev close 19.92, day range 19.29-21.61). FRED 11/9 = 19.92. Mid-range,
+  not stressed.
+- Oil: **WTI $86.87**, +0.96% d/d, **-7.33% over the past month** (TradingEconomics,
+  stamped Nov 11, 2026). Brent-WTI spread ~$7.39 (11/3, globaloilshock) → Brent ~$94.
+  Oil momentum has turned DOWN — supports the XLE fade below.
+- Indices (Alpaca 1D closes, 11/10): SPY 749.93 (-0.37% d/d), QQQ 674.82 (-0.58%),
+  IWM 280.58 (-0.68%). SPY RSI14 44.5, **below EMA20 (758.15) and EMA50 (761.79)**,
+  -4.05% off 52w high. QQQ RSI 39.9, **below SMA200 (681.38)**, -11.54% off high.
+  Broad tape is rolling over; it is not a healthy index trend.
+- **Single-name overhang: NVDA.** Board opened an investigation into whether CEO Jensen
+  Huang was the target of a foreign-intelligence effort (announced Mon 11/9 — AP wire via
+  Fox21/WGNO/Morning Call/Bozeman; analysts quoted calling it "an overhang on shares near
+  term"). NVDA closes: 206.57 (11/3) → 178.64 (11/9) → **168.79 (11/10)**, i.e. **-18.3%
+  in five sessions, -30.6% off its 52w high**, RSI14 **23.7**, below SMA200 (204.54).
+  As a top SPY/QQQ weight this is an index-level risk, not just a single name.
+
+**Sector momentum (Alpaca 1D bars, close 11/10 — computed, high confidence)**
+| ETF | Last | YTD | 1-mo | RSI14 | vs SMA200 | % off 52wH |
+|---|---|---|---|---|---|---|
+| XLV Health | 188.90 | +21.45% | **+11.28%** | 68.4 | YES | -1.78% |
+| XLP Staples | 91.04 | +17.18% | +8.16% | 62.0 | YES | -2.53% |
+| XLY Disc | 121.06 | +2.26% | +7.74% | 63.4 | YES | -3.15% |
+| XLF Fins | 58.28 | +6.08% | +6.31% | 61.1 | YES | -2.92% |
+| XLB Mat | 52.83 | +14.55% | +6.30% | 57.7 | YES | -3.29% |
+| XLU Util | 43.73 | +1.25% | +4.49% | 62.9 | no | -8.48% |
+| XLI Indu | 168.76 | +6.82% | +0.08% | — | YES | — |
+| XLE Energy | 62.23 | +36.32% | **-7.38%** | 36.9 | YES | -11.29% |
+| QQQ | 674.82 | +10.07% | -9.25% | 39.9 | no | -11.54% |
+| XLK Tech | 168.95 | +17.07% | **-13.92%** | 36.3 | **no** | -16.86% |
+
+Read: a clean **defensive / mid-cycle rotation** — healthcare, staples, financials and
+materials all above their 200-SMA and making 1-month highs, while tech and energy break
+down. This matches the strategy's mid-cycle row (Healthcare / Staples / Utilities).
+Documented catalyst for the rotation: Pro Terminal 11/1 (flows into XLP and XLV),
+protickersignals 10/19 (healthcare rally on defensive rotation), MarketWatch 10/16
+(traders rotating out of tech into defensives), UCapital 10/15 (hot inflation + rising
+yields pushing investors defensive). One low-quality source (fxbrokertrust 11/6) claims
+post-midterm rotation pressured AI infrastructure *and financials* — **conflicts** with
+XLF's own +6.31% 1-mo tape; treat the XLF leg as lower confidence.
+
+**Trade ideas (entry levels set; none fired today — see Decision)**
+1. **XLV — Tier 1, primary.** Catalyst: documented defensive rotation + strongest 1-month
+   momentum of all 11 sectors (+11.28%); strategy's own sector table favors Healthcare in
+   mid-cycle. Confluence 3/4: price > 200-SMA (188.90 vs 159.70), price > EMA20 > EMA50,
+   RSI 68.4 rising. **Caveat: RSI 68.4 and only -1.78% off the 52w high = extended.**
+   Do NOT buy at the high. Entry: pullback into **$182-186** (EMA20 $181.97).
+   Stop: 10% trailing GTC. Target: **$205+** (≈+11% from $185) → ≈2:1 R:R on a 5-6%
+   initial adverse move. Size per `scripts/size.mjs XLV`: ATR14 3.25 (1.76%), atr_shares
+   308 but **20%-equity cap binds → 108 shares** (~$20k). `corr-gate XLV` = PASS.
+2. **XLP — Tier 1, alternate / lower beta.** Same rotation thesis, **less extended**
+   (RSI 62.0, -2.53% off high). Entry on hold above EMA20 **$88.65**; stop 10% trail;
+   target $100+. Use instead of XLV if XLV gaps up and never offers the pullback.
+3. **XLF — Tier 2, watch only.** RSI 61.1, > SMA200, +6.31% 1-mo, but the one
+   post-midterm source claims financials are under pressure, and with the bond market
+   shut today there is no rates print to confirm the thesis. Needs a clean catalyst
+   before promotion.
+
+**Explicitly avoid (long side):** XLK, QQQ, NVDA and the AI/semi complex — all below the
+200-SMA, RSI 36/40/24, and NVDA carries an unresolved governance probe. Strategy rule
+"only long when price > 200-SMA on daily" blocks every one of them. XLE also fails on
+momentum (-7.38% 1-mo, RSI 36.9) with WTI -7.33% on the month.
+
+**Risks for the day**
+- Veterans Day: bond market closed → thin equity liquidity, wider spreads, poor fills.
+  A 20%-of-equity ETF order into a holiday tape is a bad execution risk for no reward.
+- No scheduled catalyst today; nothing to trade *into*. First real event is PPI Fri 11/13.
+- NVDA governance probe unresolved and index-level; escalation drags SPY/QQQ regardless
+  of defensive leadership.
+- Broad index trend is negative (SPY < EMA20/EMA50, RSI 44.5; QQQ < SMA200). Defensive
+  rotation is real but it is rotation *within* a weakening tape, not a bull market.
+- Rates: 10Y reported near 5.0% as of 11/10 research — no fresh print today (bonds shut).
+- XLV is 1.8% off its 52-week high with RSI 68 — chasing it here invites an immediate
+  drawdown against a fresh 10% trail.
+
+**Decision: HOLD.** No order today. Rationale: the setup is good but the *day* is wrong —
+holiday-thin liquidity with the bond market closed, zero scheduled catalyst, and the
+primary candidate extended 1.8% below its 52w high with RSI 68. Patience > activity.
+**Queued for the Thursday 11/12 market-open run:** XLV limit-buy 108 sh into $182-186 on
+a pullback (or XLP above $88.65 as the lower-beta alternate), 10% trailing GTC stop
+attached on fill. Weekly trades 0/3 (week of Nov 9).
