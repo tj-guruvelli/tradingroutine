@@ -18772,3 +18772,10 @@ STEP 5 notification was sent via **`scripts/telegram.sh` instead (delivered OK,
 message_id 326)**. Alpaca keys are real and unaffected.
 **Operator action needed:** set real ClickUp creds in the cloud environment, or make
 `clickup.sh` treat `your_*_here` placeholder values as unset so it falls back cleanly.
+
+## 2026-11-11
+### Gappers (auto-scan 07:10 ET, cloud)
+- **0 hits** at |gap| >= 5%, price >= $3. Watchlist scan returned `[]`; also empty at 2% and 1%. No catalyst fetch, no deep dive (deep-dive cap 5; 0 qualifying). No Telegram sent (hits = 0, scan did not error).
+- **Not a gap drought — no premarket tape yet.** At 07:10 ET the Alpaca/IEX snapshot carried **no 2026-11-11-dated trade or quote for any of the 67 symbols returned**, including SPY/TSLA/NVDA. Every `latestTrade` was 2026-11-10 20:59 UTC (yesterday's close). `gappers-alpaca.sh` behaved correctly: it skips symbols with no fresh print rather than computing a fake gap off a stale daily bar.
+- **Structural cause — DST drift in the cron.** Schedule is pinned to UTC (`0 12,13,14,15 * * 1-5`). Under EDT that mapped to the documented 08/09/10/11 ET. Now that ET is on EST it fires **07/08/09/10 ET**, so the first run of every trading day lands ~1h before IEX early trading opens (08:00 ET) and is **structurally guaranteed to return 0 hits**. Identical outcome logged 2026-11-10 at 07:12 ET.
+- **Operator action:** shift the cron to `0 13,14,15,16 * * 1-5` UTC for the winter (restores 08/09/10/11 ET), or accept that the first daily run is a no-op until March. The 08:00 ET run (next, ~13:xx UTC) is the first one with real premarket data.

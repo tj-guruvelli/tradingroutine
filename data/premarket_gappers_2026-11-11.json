@@ -1,0 +1,7 @@
+{
+  "scanned_at": "2026-11-11T12:10:31Z",
+  "deep_dive_cap": 5,
+  "gappers": [],
+  "scan_note": "0 hits. Alpaca watchlist scan (67 symbols returned) produced no rows at the 5.0% gate, and also none at 2.0% or 1.0%. Root cause is not a gap drought: at 07:10 ET the Alpaca/IEX feed carried NO 2026-11-11-dated trade or quote for ANY of the 67 symbols (incl. SPY/TSLA/NVDA) - latest prints were all 2026-11-10 20:59 UTC (yesterday's close). gappers-alpaca.sh correctly skips symbols with no fresh price rather than fabricating a gap off a stale bar. IEX early trading opens 08:00 ET, so a 07:xx ET run has no premarket tape to read.",
+  "schedule_note": "Cron is pinned to UTC (0 12,13,14,15 * * 1-5). Under EDT that was 08/09/10/11 ET as documented; under EST (now) it fires 07/08/09/10 ET, so the first run of each day lands ~1h before IEX premarket opens and is structurally guaranteed to return 0 hits. Same outcome logged 2026-11-10 07:12 ET."
+}
