@@ -1,7 +1,45 @@
 {
-  "scanned_at": "2026-11-11T12:10:31Z",
+  "scanned_at": "2026-11-11T13:12:53Z",
   "deep_dive_cap": 5,
-  "gappers": [],
-  "scan_note": "0 hits. Alpaca watchlist scan (67 symbols returned) produced no rows at the 5.0% gate, and also none at 2.0% or 1.0%. Root cause is not a gap drought: at 07:10 ET the Alpaca/IEX feed carried NO 2026-11-11-dated trade or quote for ANY of the 67 symbols (incl. SPY/TSLA/NVDA) - latest prints were all 2026-11-10 20:59 UTC (yesterday's close). gappers-alpaca.sh correctly skips symbols with no fresh price rather than fabricating a gap off a stale bar. IEX early trading opens 08:00 ET, so a 07:xx ET run has no premarket tape to read.",
-  "schedule_note": "Cron is pinned to UTC (0 12,13,14,15 * * 1-5). Under EDT that was 08/09/10/11 ET as documented; under EST (now) it fires 07/08/09/10 ET, so the first run of each day lands ~1h before IEX premarket opens and is structurally guaranteed to return 0 hits. Same outcome logged 2026-11-10 07:12 ET."
+  "note": "Watchlist scan returned 2 qualifying gappers (>=5% gap, >=$3, >=50k premarket vol). Both fall inside the top-5 deep-dive cap, so both received full deep-dive treatment; no ranks 6-10 exist. First run of 2026-11-11 with live premarket tape (the 07:10 ET run returned 0 hits — pre-IEX-open, per the DST cron drift logged that run).",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "NBIS",
+      "price": 151.87,
+      "gap_pct": 13.37,
+      "premarket_volume": 557901,
+      "catalyst": "Nebius jumped ~12% premarket after rival AI-cloud provider CoreWeave beat Q3 estimates and raised full-year revenue guidance, reviving the beaten-down neocloud trade one day before Nebius' own Q3 report.",
+      "headlines": [
+        "Why Is Nebius Group Stock Soaring Wednesday? (Benzinga, 2026-11-11 07:10 ET)",
+        "Nebius Could Swing $6.56 Billion After Earnings (Benzinga, 2026-11-09)",
+        "Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move (Benzinga, 2026-11-08)"
+      ],
+      "catalyst_detail": "CoreWeave (CRWV) reported Q3 results that beat Wall Street estimates and raised its full-year revenue forecast, and CRWV itself was up ~14.6% premarket. That read straight across to Nebius as the closest listed neocloud comp, lifting NBIS ~12-13% from a $134.00 close. The move is pure sympathy and anticipation: Nebius has not yet reported. Its own Q3 2026 print lands tomorrow, Thursday Nov 12, before the open, with a conference call at 8:00 AM ET. Consensus is a loss of $0.69/share on revenue of ~$907.5M, against a $146.1M revenue and -$0.40 EPS year-ago base. (Benzinga's quote page separately shows a -$1.11 EPS estimate; the two figures disagree and the spread itself signals how unsettled the estimate set is.)",
+      "why": "A peer's guidance raise de-risks the sector thesis that AI-infrastructure demand can justify the capex and financing load, so money rotates back into the whole neocloud complex ahead of the next print. Added fuel: 22.3% of NBIS float is short at only 2.2 days to cover, so a sector-wide bid forces short covering into a thin premarket book. None of this is Nebius-specific news.",
+      "impact": "Reads as a one-day sympathy spike with a binary event stapled to it, not a sustainable trend change. Premarket volume of ~558k (Benzinga shows ~2.45M by 07:54 ET) is a fraction of the 20.70M average daily, so the move is not volume-confirmed. Technicals contradict the tape: price sits 3.7% below the 20-day SMA ($158.16) and 23.5% below the 50-day SMA ($198.90), MACD is below its signal line, and RSI is a neutral 44. Sector read-through is explicit and two-way — CRWV +14.6% is the cause, and both names re-price together on tomorrow's Nebius print. Traders are watching $168.50 resistance and $146 support.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The catalyst belongs to another company and expires in under 24 hours when Nebius reports; there is no durable Nebius-specific thesis in today's move, and holding past tomorrow's 08:00 ET call converts a momentum trade into an un-hedged earnings bet.",
+      "opportunity_cost": "Nothing to displace on the book — the account is 100% cash, zero open positions, 0 of 3 weekly trades used (week of Nov 9). The real cost is the already-queued XLV limit-buy (108 sh into $182-186) planned for tomorrow's market-open run: NBIS would consume one of three weekly trade slots and swap a mid-cycle, low-beta healthcare entry for a high-beta tech name held through an earnings event. On the 2:1 R:R test it fails at any sane stop. The $146 support stop is only $6 away (0.36 ATR) against $16.50 of room to $168.50 resistance — nominally 2.75:1, but ATR14 is $16.45 (10.8% of price), so a stop that tight is inside the noise and gets taken out on a routine wiggle. Widen the stop to a real 1-ATR ($135.55) and 2:1 would require a move to $185+, well above the $168.50 resistance, so the reward simply is not there. The strategy's own chase rule is decisive anyway: no entry within 3% of a print more than 5% up on the day, and this is +13.4%. Research only; no size recommended."
+    },
+    {
+      "rank": 2,
+      "symbol": "OKLO",
+      "price": 26.87,
+      "gap_pct": 7.07,
+      "premarket_volume": 449588,
+      "catalyst": "Oklo gapped ~7% on a broad risk-on tape (Nasdaq futures +1.9%) with residual lift from a Nov 10 note that Aurora-INL construction is advancing toward structural work; no fresh same-day company news.",
+      "headlines": [
+        "Oklo Posts Higher Q3 Net Loss, Aurora-ID Construction Moves Toward Structural Work (Benzinga, 2026-11-10)",
+        "Oklo Q3 2026 Earnings Call Transcript (Benzinga, 2026-11-06)",
+        "Why Is Oklo Stock Gaining Friday? (Benzinga, 2026-11-06)"
+      ],
+      "catalyst_detail": "No Oklo-specific headline is dated today. The nearest catalyst is a Nov 10 analyst note reporting that construction on the Aurora powerhouse at Idaho National Laboratory is progressing toward structural work, with HC Wainwright reiterating Buy and a $90 target; the company reaffirmed a 2028-29 first-deployment target and roughly 1GW by 2031-32. Q3 2026 landed earlier, on Fri Nov 6 pre-open, and was a modest beat on a tiny base — EPS -$0.22 vs -$0.26 expected, revenue $1.86M vs $1.11M — alongside a wider net loss. Today's gap tracks the macro bid (Nasdaq futures +1.92%, QQQ +1.94% premarket) more than anything Oklo published. Benzinga's own 'Why Is It Moving' banner still carries the prior session's note that nuclear and uranium names were trading lower.",
+      "why": "A high-beta, pre-revenue name sitting near 52-week lows mechanically over-recovers when the broad tape turns risk-on, and 20.7% of the float is short at 4.88 days to cover — a far slower unwind than NBIS — so a macro bid squeezes a crowded book. The mechanism is beta and positioning, not new information about the reactor business.",
+      "impact": "Looks like a mean-reversion bounce inside a severe downtrend rather than the start of a sustainable move. Premarket volume of ~450k (Benzinga shows ~290k at 07:54 ET) against a 10.21M average daily is weak confirmation for a 7% gap. The stock is down roughly 78% from its $117.44 52-week high and sits only ~36% above the $18.54 low, and the analyst trend is brutal: six price-target cuts in three weeks (Canaccord $100→$66, B. Riley $92→$61, Truist $51→$31, Citi $58→$33, Barclays $76→$59, TD Cowen initiating at $26) make the $83.68 'consensus' a stale lagging number. RSI 47 is neutral. Sector read-through is the AI-power complex broadly, which is why this moved with NBIS today rather than with utilities.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The move is macro-beta plus a short squeeze with no company-specific news today, and the genuine structural catalyst — first Aurora deployment — is 2028-29, far too distant to support a swing hold; it also sits awkwardly against the sector-rotation table, where Utilities is a mid-cycle defensive sleeve and this pre-revenue name trades like speculative tech.",
+      "opportunity_cost": "Again nothing on the book to displace (zero positions, all cash), so the cost is the weekly trade budget and the ranking against today's own list: OKLO is the weaker of the two gappers on volume confirmation and has a visibly deteriorating analyst trend, while NBIS at least has a dated, identifiable catalyst. It would also compete directly with the queued XLV entry, which is the better sector-rotation fit. R:R is the more interesting case of the two: a 1-ATR stop (ATR14 $1.91) sits at $24.96, about 7.1% below the $26.87 print, which lines up almost exactly with the strategy's -7% manual cut, and 2:1 then needs $30.69 — below Wedbush's $36 target and therefore not absurd. So the geometry can clear 2:1, but the setup still fails the entry gate: a +7.07% gap trips the no-chase rule, there is no documented same-day catalyst as the Confluence rule requires, and buying a name down 78% on macro beta alone is the bottom-fishing the strategy explicitly forbids. Research only; no size recommended."
+    }
+  ]
 }

@@ -18779,3 +18779,62 @@ message_id 326)**. Alpaca keys are real and unaffected.
 - **Not a gap drought — no premarket tape yet.** At 07:10 ET the Alpaca/IEX snapshot carried **no 2026-11-11-dated trade or quote for any of the 67 symbols returned**, including SPY/TSLA/NVDA. Every `latestTrade` was 2026-11-10 20:59 UTC (yesterday's close). `gappers-alpaca.sh` behaved correctly: it skips symbols with no fresh print rather than computing a fake gap off a stale daily bar.
 - **Structural cause — DST drift in the cron.** Schedule is pinned to UTC (`0 12,13,14,15 * * 1-5`). Under EDT that mapped to the documented 08/09/10/11 ET. Now that ET is on EST it fires **07/08/09/10 ET**, so the first run of every trading day lands ~1h before IEX early trading opens (08:00 ET) and is **structurally guaranteed to return 0 hits**. Identical outcome logged 2026-11-10 at 07:12 ET.
 - **Operator action:** shift the cron to `0 13,14,15,16 * * 1-5` UTC for the winter (restores 08/09/10/11 ET), or accept that the first daily run is a no-op until March. The 08:00 ET run (next, ~13:xx UTC) is the first one with real premarket data.
+
+### Gappers (auto-scan 08:08 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 151.87 | +13.37% | 557,901 | CoreWeave Q3 beat + raised FY guidance revives the neocloud trade; NBIS reports its own Q3 tomorrow pre-open |
+| 2 | OKLO | 26.87 | +7.07% | 449,588 | Risk-on tape (Nasdaq futures +1.9%) plus residual lift from a Nov 10 note on Aurora-INL construction progress; no same-day company news |
+
+**Premarket tape is live again.** This is the first 2026-11-11 run with real premarket data —
+the 07:10 ET run returned 0 hits because it fired before IEX early trading opens, exactly as the
+DST cron-drift diagnosis in that entry predicted. Operator action from that entry still stands
+(shift cron to `0 13,14,15,16 * * 1-5` UTC for the winter).
+
+**Deep-dive cap: 5.** Only 2 symbols cleared the gate (|gap| >= 5%, price >= $3,
+premarket vol >= 50k), so both sit inside the cap and both got the full deep dive.
+No ranks 6-10 exist — nothing was dropped to quick-scan-only.
+
+#### Deep dive: NBIS $151.87 +13.37%
+- Catalyst: CoreWeave (CRWV) reported a Q3 beat and raised its full-year revenue forecast, with CRWV itself up ~14.6% premarket. That read straight across to Nebius as the closest listed neocloud comp, lifting NBIS ~12-13% off a $134.00 close. The move is sympathy plus anticipation — Nebius has not reported yet. Its own Q3 2026 print lands tomorrow, Thu Nov 12, before the open, call at 8:00 AM ET. Consensus is a $0.69/sh loss on ~$907.5M revenue, vs $146.1M revenue and -$0.40 EPS a year ago. (The Benzinga quote page shows a -$1.11 EPS estimate against the article's -$0.69; the disagreement itself shows how unsettled the estimate set is.)
+- Why: A peer's guidance raise de-risks the sector thesis that AI-infra demand justifies the capex and financing load, so money rotates back into the whole neocloud complex ahead of the next print. Added fuel: 22.3% of float short at just 2.2 days to cover, so a sector bid forces covering into a thin premarket book. None of it is Nebius-specific.
+- Impact: A one-day sympathy spike with a binary event stapled to it, not a trend change. Premarket volume ~558k (Benzinga shows ~2.45M by 07:54 ET) against a 20.70M average daily — not volume-confirmed. Technicals contradict the tape: 3.7% below the 20-SMA ($158.16), 23.5% below the 50-SMA ($198.90), MACD below signal, RSI neutral at 44. Sector read-through is explicit and two-way — CRWV +14.6% is the cause, and both re-price together on tomorrow's print. Levels: $168.50 resistance, $146 support.
+- Horizon: SHORT_TERM, the catalyst belongs to another company and expires in under 24 hours when Nebius reports; holding past tomorrow's call converts a momentum trade into an un-hedged earnings bet.
+- Opportunity cost: Nothing on the book to displace — 100% cash, zero positions, 0/3 weekly trades used (week of Nov 9). The real cost is the queued XLV limit-buy (108 sh into $182-186) for tomorrow's market-open run: NBIS would burn one of three weekly slots and swap a mid-cycle low-beta healthcare entry for a high-beta tech name held through earnings. It fails 2:1 at any sane stop — the $146 support stop is $6 away (0.36 ATR) against $16.50 to resistance, nominally 2.75:1, but ATR14 is $16.45 (10.8% of price) so that stop sits inside the noise and gets taken out on a routine wiggle; widen to a true 1-ATR stop ($135.55) and 2:1 needs $185+, well above the $168.50 resistance. The chase rule settles it regardless: no entry within 3% of a print >5% up on the day, and this is +13.4%.
+
+#### Deep dive: OKLO $26.87 +7.07%
+- Catalyst: No Oklo-specific headline is dated today. Nearest is a Nov 10 analyst note that Aurora powerhouse construction at Idaho National Laboratory is progressing toward structural work, HC Wainwright reiterating Buy/$90, with 2028-29 first deployment and ~1GW by 2031-32 reaffirmed. Q3 2026 landed earlier, Fri Nov 6 pre-open — a modest beat on a tiny base (EPS -$0.22 vs -$0.26 est, revenue $1.86M vs $1.11M) alongside a wider net loss. Today's gap tracks the macro bid (Nasdaq futures +1.92%, QQQ +1.94%) more than anything Oklo published; Benzinga's "Why Is It Moving" banner still carries the prior session's note that nuclear/uranium names were trading *lower*.
+- Why: A high-beta pre-revenue name near 52-week lows mechanically over-recovers when the tape turns risk-on, and 20.7% of float is short at 4.88 days to cover — a much slower unwind than NBIS — so a macro bid squeezes a crowded book. Beta and positioning, not new information about the reactor business.
+- Impact: A mean-reversion bounce inside a severe downtrend. Premarket volume ~450k (Benzinga ~290k at 07:54 ET) vs a 10.21M average daily is weak confirmation for a 7% gap. The stock is ~78% off its $117.44 52-week high and only ~36% above the $18.54 low, and the analyst trend is brutal — six PT cuts in three weeks (Canaccord $100→$66, B. Riley $92→$61, Truist $51→$31, Citi $58→$33, Barclays $76→$59, TD Cowen initiating at $26), which makes the $83.68 "consensus" a stale lagging number. RSI 47. Read-through is the AI-power complex, which is why it moved with NBIS today rather than with utilities.
+- Horizon: SHORT_TERM, macro-beta plus a short squeeze with no company news today, and the genuine structural catalyst (first Aurora deployment) is 2028-29 — far too distant for a swing hold; it also sits awkwardly against the sector-rotation table, where Utilities is a mid-cycle defensive sleeve while this pre-revenue name trades like speculative tech.
+- Opportunity cost: Nothing to displace (zero positions, all cash), so the cost is the weekly trade budget and the ranking against today's own list — OKLO is the weaker of the two on volume confirmation with a visibly deteriorating analyst trend, while NBIS at least has a dated, identifiable catalyst. It also competes with the queued XLV entry, the better rotation fit. R:R is the more interesting case: a 1-ATR stop (ATR14 $1.91) sits at $24.96, ~7.1% below the print, lining up almost exactly with the -7% manual cut, and 2:1 then needs $30.69 — below Wedbush's $36 target, so not absurd. The geometry can clear 2:1, but the entry gate still fails: +7.07% trips the no-chase rule, there is no documented same-day catalyst as the Confluence rule requires, and buying a name down 78% on macro beta alone is the bottom-fishing the strategy explicitly forbids.
+
+**Net read: 2 hits, 0 actionable.** Both gaps trip the no-chase rule (>5% up on the day), both
+are SHORT_TERM, and neither clears the Confluence rule — NBIS has a catalyst but it belongs to
+CoreWeave and fails 2:1 at a sane ATR stop; OKLO has workable R:R geometry but no same-day
+catalyst at all. No orders placed (routine is research-only). Weekly trades remain 0/3.
+Queued XLV entry for the 11/12 market-open run is unaffected and remains the better fit.
+
+**Yahoo-block gap found (search-side, new 11/11).** The mandated suffix
+(`-site:finance.yahoo.com -site:uk.finance.yahoo.com -site:sg.finance.yahoo.com`) is
+**insufficient** and leaked on 3 of 4 Apify queries this run. Two distinct failures:
+1. **Regional domains are not covered.** Results surfaced `ca.finance.yahoo.com`,
+   `au.finance.yahoo.com` and `nz.finance.yahoo.com`, none of which the three-domain
+   suffix excludes. All discarded; facts sourced from Benzinga instead.
+2. **The suffix did not even exclude `finance.yahoo.com` itself** on the NBIS
+   fundamentals query — two `finance.yahoo.com` results came back at positions 5-6
+   despite the operator being present.
+**Fix that worked:** the Apify web-search tool's native `blockedDomains` array parameter
+(`["finance.yahoo.com","uk.finance.yahoo.com","sg.finance.yahoo.com","ca.finance.yahoo.com",
+"au.finance.yahoo.com","nz.finance.yahoo.com","yahoo.com"]`) enforced cleanly — zero Yahoo
+results on re-run. **Operator action:** switch every routine/command from the text suffix to
+`blockedDomains`, and add the `ca/au/nz` regional domains (plus bare `yahoo.com`) to the
+CLAUDE.md ban list. No Yahoo-sourced number was cited in this entry.
+
+**Note on generic catalyst queries.** The STEP 2 query shape ("<TICKER> stock news today
+catalyst") returned only stale results — NBIS prices of $209/$233/$134/$165 and OKLO prices
+of $35.97/$19.43/$23.55, dated Aug-Sep 2026, none matching today's tape. Date-bounding
+(`dateFrom`) collapsed to 0-1 results. **Benzinga `/quote/<T>` was the only reliable
+same-day catalyst source this run** and carried the dated article, the earnings calendar,
+analyst-action history, short interest and volume-vs-average in one fetch. Worth promoting
+it from fallback to primary for this routine.
