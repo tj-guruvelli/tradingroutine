@@ -2691,3 +2691,47 @@ no carry candidate.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (`balance_asof: 2026-11-09`, equity/cash unchanged at $100,000). Midday scan had nothing to cut or tighten (no positions held). CPI print (8:30 ET) was today's catalyst gate; today's gappers (PEPG +156%, BW +15%, QBTS -7.5%, RKLB -9.5%, ASTS/RDW weak) all failed catalyst/R:R gate — no carry candidate, no trade fired. Weekly trade count: 0/3 (week of Nov 9). 88th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 143rd+ straight session, operator review pending.
+
+### Nov 11, Market-Open (Day 89, Wednesday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules. Today's RESEARCH-LOG pre-market
+entry: explicit **Decision: HOLD** (Veterans Day — US bond market closed,
+thin equity liquidity/wider spreads, zero scheduled economic releases, NVDA
+governance-probe overhang; defensive rotation setup is good but the day is
+wrong). XLV/XLP are queued for the **Nov 12** market-open run, not today's.
+TRADE-LOG tail: weekly trade count 0/3 (week of Nov 9).
+
+STEP 2: Setup-scan — no Nov 11 file exists yet (market-open runs before
+setup-scan-cloud's first same-day fire, expected). Used prior trading day's
+latest file `data/setup-scan_cloud_2026-11-10_1737ET.json` (17:37 ET Nov 10,
+1 trading day stale): 1 grade-B hit — BKSY. Merged with STEP 1 (no same-day
+pre-market tickers — today's only setup is explicitly deferred to tomorrow)
+for 1 total candidate.
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-10`). `alpaca.sh quote BKSY`: ap $27.11 / bp $19.60,
+stamped `2026-11-10T21:00` (stale — yesterday's close, no today print),
+spread ~29%.
+
+STEP 4 — pass/fail:
+- BKSY: FAIL — stale/unreliable quote (~29% spread, no 2026-11-11 print);
+  also setup-scan's own curr_px $23.36 < sma200 $27.05, violating the
+  strategy's long-bias filter (only long when price > 200-SMA on daily);
+  no catalyst documented in today's RESEARCH-LOG. Skipped without an Apify
+  catalyst fetch since the SMA-filter and quote fails are dispositive on
+  their own.
+- XLV / XLP: not evaluated this run by design — today's pre-market research
+  explicitly deferred both to the Nov 12 market-open run (Veterans-Day thin
+  tape, no same-day catalyst); will re-check live levels then.
+
+1 candidate, 0 pass — STEPs 5-6 (orders/stops) skipped. No trade fired.
+
+STEP 8 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 9). 89th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 144th+
+straight session, operator review pending. Queued for tomorrow (Nov 12):
+XLV limit-buy 108 sh into $182-186 (or XLP above $88.65 as the lower-beta
+alternate), 10% trailing GTC stop on fill, per the Nov 11 pre-market
+research decision.
