@@ -18760,3 +18760,15 @@ primary candidate extended 1.8% below its 52w high with RSI 68. Patience > activ
 **Queued for the Thursday 11/12 market-open run:** XLV limit-buy 108 sh into $182-186 on
 a pullback (or XLP above $88.65 as the lower-beta alternate), 10% trailing GTC stop
 attached on fill. Weekly trades 0/3 (week of Nov 9).
+
+**INFRA FAILURE (new, 11/11): ClickUp notification channel is dead.** All three vars are
+set but hold literal placeholders — `CLICKUP_API_KEY=your_clickup_api_key_here`,
+`CLICKUP_WORKSPACE_ID=your_clickup_workspace_id_here`,
+`CLICKUP_CHANNEL_ID=your_clickup_channel_id_here`. `scripts/clickup.sh` therefore does NOT
+hit its "not set in environment" fallback (the vars are non-empty); it builds a live URL
+from the placeholder IDs and the ClickUp API returns **HTTP 500** with an internal
+resolver error (`dial tcp: lookup comment-service.chat.svc.cluster.local: no such host`).
+STEP 5 notification was sent via **`scripts/telegram.sh` instead (delivered OK,
+message_id 326)**. Alpaca keys are real and unaffected.
+**Operator action needed:** set real ClickUp creds in the cloud environment, or make
+`clickup.sh` treat `your_*_here` placeholder values as unset so it falls back cleanly.
