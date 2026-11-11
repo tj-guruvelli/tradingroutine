@@ -18942,3 +18942,84 @@ ids 328/329/330, all `ok:true`). **Operator action:** add chunking to `scripts/t
 (split on paragraph boundaries at ~3800 chars and send sequentially) so the deep-dive
 format cannot drop an alert; also worth checking why ClickUp returned 500, since the
 documented fallback channel is currently dead too.
+
+### Gappers (auto-scan 10:08 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | PEPG | 5.73 | +23.92 | 91,747 | Phase 2 FREEDOM2-DM1 at 10 mg/kg showed 46.5% mean splicing correction vs 6.8% placebo; near-doubled Nov 10 and extending |
+| 2 | CRWV | 58.63 | +20.29 | 576,974 | Q3 revenue +168% to ~$3.66B beat, record ~$133B backlog, FY26 guidance raised |
+| 3 | NBIS | 154.08 | +15.02 | 265,079 | Sympathy rally on CRWV's beat easing neocloud demand fears; own Q3 lands Nov 12 |
+| 4 | BE | 208.74 | +12.56 | 103,338 | Data-center power re-rating (NTT DATA 900 MW, Google Wyoming 702 MW) rebounding from post-midterm selloff |
+| 5 | BW | 4.96 | +10.11 | 136,982 | Q3 revenue $290.8M vs $139.2M, bookings +112%, 2027 adj-EBITDA target $125-140M, pipeline >$16B |
+| 6 | AMKR | 37.32 | +8.30 | 54,357 | Semi/AI-packaging sympathy bid; no own-name news found and Q4 guide ($1.95B mid) was below ~$2.01B consensus |
+| 7 | ORCL | 125.96 | +6.78 | 409,617 | Rebound from post-election AI-infra selloff; separately priced a $20B common stock offering |
+| 8 | SATL | 4.18 | +6.37 | 75,227 | Q3 record revenue $16.0M (+342%), 2nd positive adj-EBITDA qtr, ~$37M sovereign 3-satellite deal; Cantor PT $9 -> $7, keeps Overweight |
+| 9 | RKLB | 66.58 | +6.10 | 109,254 | Q3 lifted launch backlog to a record 117; Neutron timeline still spring 2027 |
+
+9 hits cleared the filter (|gap| >= 5.0, price >= $3.00, premkt vol >= 50k) out of
+12 raw rows. **Deep-dive cap = 5** per routine: ranks 1-5 get the full writeup below;
+ranks 6-9 are quick-scan only and were NOT dropped, just not deep-dived.
+
+**Theme read — today is one trade, not nine.** Ranks 2,3,4,6,7 (CRWV, NBIS, BE, AMKR,
+ORCL) are all the same factor: the AI-infrastructure/neocloud complex re-rating off
+CoreWeave's Q3 beat-and-raise, which falsified the post-midterm thesis that hyperscaler
+compute commitments were softening. Treat them as one correlated exposure, not five
+independent setups — the strategy's correlation gate (>0.75 vs 2+ open positions) would
+almost certainly block the second and third entry from this cohort. PEPG (biotech) and
+SATL/RKLB (space) are the only idiosyncratic names on the board.
+
+#### Deep dive: PEPG $5.73 +23.92%
+- Catalyst: Phase 2 FREEDOM2-DM1 results in myotonic dystrophy type 1 — the 10 mg/kg cohort delivered 46.5% mean splicing correction vs 6.8% on placebo, which the company calls the highest reported in a multiple-dose study and Guggenheim flagged as a potential new splicing benchmark. No serious/severe adverse events, no dose-limiting toxicities; cash $104.8M at Sep 30 guided into 2028. Offsetting: a simultaneously proposed $125M public equity offering, an FDA partial clinical hold still in force with no US participants dosed, and the 12.5 mg/kg cohort not reading out until 1H 2027. Q3 loss $0.28/sh, slightly wider than consensus but immaterial next to the data.
+- Why: Binary clinical readout on a lead asset re-rates the whole equity at once — a sub-$5 stock with a credible best-in-class splicing result draws biotech momentum and short-covering, amplified by BofA's upgrade off underperform to neutral ($6 PT) against a Street consensus PT far above spot.
+- Impact: Volume cuts against the *second* leg. 105M shares traded on the Nov 10 event day against a tiny float, but only ~92K in premarket today — thinnest on this list. An extended third day with no fresh information means today's +24% is momentum chasing an already-priced catalyst. The $125M offering is hard overhead supply that typically caps post-data runs, and the partial hold caps the ceiling until lifted. No sector read-through; idiosyncratic, not part of the AI complex driving the rest of the board.
+- Horizon: SHORT_TERM — the catalyst is structurally real for the asset, but the tradable move is 3 days old, dilution sits directly overhead, and biotech is not favored in either the early- or mid-cycle row of the rotation table.
+- Opportunity cost: Nothing to displace (0 open positions, $100,000 cash), so the cost is the weekly budget — 0/3 used for the week of Nov 9, with XLV (XLP alternate) already earmarked for the Nov 12 market-open. Taking PEPG spends a scarce slot on the one name here that contradicts the desk's own defensive-rotation call. R:R also fails at a sane stop: the mandated 10% trail sits ~$5.15, so 2:1 needs ~$6.87 (+20%) from a base already +150% in two days, with an offering overhead. Research only, no size recommended.
+
+#### Deep dive: CRWV $58.63 +20.29%
+- Catalyst: Q3 reported Nov 10 — revenue ~$3.66B (+168% y/y) vs ~$3.55B consensus, adjusted operating income $379M vs $200-260M guided. Revenue backlog/RPO hit a record ~$132.5-133B (+138% y/y) and FY26 revenue guidance rose to $13.0-13.3B vs $12.86B consensus, with a $20-21B exit run-rate. The offset is capital intensity: net loss widened to $709M from $110M, Q3 capex was $14.5B, FY26 capex guidance $37-39B. Management said it will not tap the unsecured debt market at current yields and pointed to ~$9B of expected customer prepayments over the next three months.
+- Why: This print was the swing factor for the entire AI-infrastructure trade, not just for CoreWeave. The complex had been sold hard post-midterms on fears hyperscaler commitments were softening; a beat-and-raise with a record contracted backlog directly falsifies that, so the stock gaps and the whole neocloud/data-center-power group gets re-marked with it.
+- Impact: Most sustainable-looking move on the board. ~577K premarket volume is second-heaviest here and the catalyst is a company-specific, contractually-backed fundamental reset rather than a headline, so this reads as repricing, not a spike. Sector read-through is explicit and visible in today's own list — NBIS +15%, BE +12.6%, ORCL +6.8% all move on this same print. The real risk is not the quarter but the funding model: $37-39B capex, a widening loss, and an unsecured market management itself calls unusable, so any credit or AI-capex wobble hits this name hardest and fastest.
+- Horizon: LONG_TERM — raised guidance plus a 138%-y/y contracted backlog is a structural reset, and it sits in Technology, favored in the early-cycle row of the rotation table; worth a multi-day swing if it later clears the Confluence rule on a /trade check.
+- Opportunity cost: With 0 open positions nothing is displaced, so this competes against today's list and the queued defensives. Of the five deep dives this catalyst best survives scrutiny, so taking it would most reasonably displace the Nov 12 XLV/XLP entry — a genuine trade-off, not a free swap: it exchanges a low-beta defensive for the highest-beta expression of AI capex, in a week allowing only 3 trades. R:R clears 2:1 on paper (10% trail ~$52.77, 2:1 needs ~$70.36), but entering a +20% gap means buying the top of the move; a pullback toward the gap base is the only version that passes a sane stop distance. Research only, no size recommended.
+
+#### Deep dive: NBIS $154.08 +15.02%
+- Catalyst: Nebius has not reported yet — today's gap is pure read-through from CoreWeave's beat-and-raise easing neocloud demand fears. It follows a sharp prior-session decline tied to concerns Microsoft was scaling back its neocloud partnership with Nebius, so part of the gap is the unwind of that specific fear rather than new information. Q3 lands Nov 12, consensus ~$907.5M revenue (from $146.1M a year earlier) and a ~$0.69/sh loss. FY26 guidance reaffirmed at $3.0-3.4B revenue and a $7-9B annualized run-rate. Stock remains far below its $300 all-time high after the neocloud de-rating.
+- Why: Highest-beta liquid proxy for the same AI-compute demand thesis CoreWeave just validated, so momentum flow reaches for it first. The mechanism is correlation, not company news — nothing about Nebius' own economics changed overnight.
+- Impact: Least durable of the AI-complex gaps precisely because it is borrowed conviction. ~265K premarket volume is solid, but the move is unsupported by any Nebius-specific disclosure and the stock carries a binary event in under 24 hours. Buying a +15% sympathy gap directly into your own earnings print takes the gap risk twice, and the unresolved Microsoft-partnership question is exactly what the Nov 12 call addresses, in either direction. Same CoreWeave-driven cohort as CRWV/BE/ORCL.
+- Horizon: SHORT_TERM — the catalyst belongs to a different company and the durable information arrives tomorrow, so there is no own-name thesis to hold through and a stop is meaningless overnight.
+- Opportunity cost: Spends one of 3 weekly slots on the same factor exposure CRWV already offers, one step removed from the actual catalyst and with an earnings gap in front of it. It would also likely trip the correlation gate against CRWV if that position existed, since this cohort trades as one factor. Within today's list it is strictly dominated by CRWV, which has the real catalyst and no imminent event. R:R is not assessable at a sane stop: a 10% trail at ~$138.67 sits well inside a plausible post-earnings move, so the stop gets gapped through rather than respected — fails the 2:1 minimum on any honest reckoning. Research only, no size recommended.
+
+#### Deep dive: BE $208.74 +12.56%
+- Catalyst: A continuation rather than a single new headline. On Nov 5 Bloom announced a 900 MW onsite power agreement with NTT DATA across multiple global data-center projects and a 702 MW role supplying fuel cells for Google's newly unveiled $17B Wyoming campus, on top of a Brookfield AI-infrastructure financing framework since expanded to $25B and a backlog reported around $25B. The stock then plunged ~22% in the two days after the midterms as policy risk for data-center-exposed names was repriced, and has been recovering since, with a ~13% bounce Nov 9 helped by an RBC Outperform reiteration at a $335 target. Today's gap extends that recovery on CoreWeave's confirmation that AI capex is not slowing. Quote note: Alpaca's prev close $185.45 is the authoritative reference — press figures of $185-200 conflict across sources.
+- Why: Bloom is the power bottleneck in the AI buildout, so it trades as a levered derivative of data-center capex. CoreWeave's record backlog and $37-39B capex guide is direct evidence the megawatts Bloom sells are still being contracted, reversing the post-election de-rating premise.
+- Impact: Moderately sustainable, with a caveat — this is the third large directional swing in four sessions (-22%, +13%, +12.6%), which is a volatility regime, not a trend, and ~103K premarket volume is light against the ~15M shares that traded on the Nov 9 bounce. The underlying contract flow is real and multi-year, but day-to-day price is being set by AI sentiment and election-policy headlines rather than order news. Read-through runs both to the AI complex above and to broader power/industrial names.
+- Horizon: LONG_TERM — the 900 MW and 702 MW agreements plus a $25B Brookfield framework are structural multi-year revenue, and Industrials is favored in the early-cycle row; entry timing mid-swing is the weak point, not the thesis.
+- Opportunity cost: At $208.74 the 20%-of-equity cap allows ~95 shares against $100,000 equity, so this is a full-size position competing directly with the queued XLV/XLP entry for one of 3 weekly slots. It is also the same AI-capex factor as CRWV and NBIS, so pairing any two would concentrate the book in one theme and likely trip the correlation gate. The 2:1 test is the binding problem: a 10% trail at ~$187.87 is below the Nov 10 close and inside the recent 22% swing range, so realized vol is wide enough to stop the trade out on noise, while clearing 2:1 needs ~$250 (+20%). Waiting for the swing to settle is the better-priced version of this exposure. Research only, no size recommended.
+
+#### Deep dive: BW $4.96 +10.11%
+- Catalyst: Q3 reported Nov 9 — revenue $290.8M vs $139.2M a year earlier, adjusted EBITDA $17.7M, and net income $93.9M that includes a large non-cash warrant and stock-valuation gain. That gain explains the headline EPS conflict: the company's release shows $0.61/sh while the AP snapshot reports $0.02/sh adjusted for non-recurring items, and the adjusted figure is the honest one. Bookings exceeded $228M (+112% y/y), backlog $2.5B, pipeline expanded past $16B including 6 GW of incremental power-generation opportunity. Management repurchased $38M of shares and fully paid down its unsecured bonds, kept FY26 adj-EBITDA guidance at $80-105M, and set a 2027 target of $125-140M.
+- Why: A sub-$5 balance-sheet-repair story levered to the same power-generation demand as Bloom — deleveraging plus a 112% bookings jump plus raised forward EBITDA converts a distressed equity into a going concern, and the small float makes that re-rating violent.
+- Impact: Mixed, and the most likely of the five to mean-revert. The operational improvement and deleveraging are genuine, but the $93.9M net income is mostly a non-cash warrant gain rather than earnings, and quoted prices disagree sharply across sources ($3.76-$4.37 post-release), signalling a thin, erratic tape. ~137K premarket volume on a ~$5 stock is modest. Adjusted EBITDA of $17.7M against a $125-140M 2027 target means the forward number depends on execution not yet in the run rate. Power/industrial read-through aligns it with BE.
+- Horizon: SHORT_TERM — the 2027 EBITDA reset is structurally meaningful, but at $4.96 with a thin tape, a non-cash-driven headline and a 2-day-old catalyst, this trades as a low-priced momentum vehicle rather than a thesis a stop can protect.
+- Opportunity cost: The binding constraint is quality rather than capital — with 0 positions and $100,000 cash nothing is displaced, but spending one of 3 weekly slots on the lowest-priced, thinnest-tape name on the list is a poor use of the budget when CRWV offers a cleaner catalyst with real liquidity. The 2:1 test is the hardest failure of the five: a 10% trail at ~$4.46 is only ~$0.50 wide on a stock whose quoted price varies by more than that between data sources, so the stop sits inside the noise, and clearing 2:1 requires ~$5.95 (+20%). Does not clear the gate at a sane stop distance. Research only, no size recommended.
+
+**Account state at scan:** equity $100,000.00, cash $100,000.00, buying power $400,000,
+**0 positions, 0 open orders** (`balance_asof: 2026-11-10`). Weekly trade count 0/3
+(week of Nov 9). Still the unresolved $100k-vs-$10k-baseline mismatch flagged Jul 27.
+No orders placed — this routine is research-only (STEP 8).
+
+**Tooling note — Apify `web-search` degraded hard this run (new 11/11 10:08).** 8 of 13
+calls returned **HTTP 504 `SEARCH_TIMEOUT`** ("Search exceeded the 60s time budget"),
+including 3 consecutive retries for PEPG (rank 1), AMKR and SATL. Failures were not
+query-specific — the same ticker failed on reworded queries while other tickers
+succeeded in the same batch — so this reads as upstream actor capacity, not a param
+bug. Recovered by falling back to the **native WebSearch tool** with
+`blocked_domains: [finance.yahoo.com, uk.finance.yahoo.com, sg.finance.yahoo.com]`,
+which returned materially richer, correctly-dated results than Apify did on the calls
+that succeeded. **Operator action:** gappers-cloud.md STEP 2's fallback chain is still
+wrong as written — it documents WebFetch-against-Benzinga, which the 08:08 run proved
+returns 403. Native WebSearch with `blocked_domains` worked on every attempt this run
+and should be the documented fallback. The Yahoo block held: zero finance.yahoo.com
+URLs surfaced across all 13 Apify calls and 7 WebSearch calls, with the suffix applied
+to every query plus `blockedDomains`/`blocked_domains` belt-and-braces.
