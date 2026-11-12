@@ -19031,3 +19031,61 @@ to every query plus `blockedDomains`/`blocked_domains` belt-and-braces.
 ### Setup Scan (17:37 ET, cloud)
 - 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 17:37, outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
 - 0 hits (grade A or B/C) this run. No table to print; no Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit). JSON saved to `data/setup-scan_cloud_2026-11-11_1737ET.json`.
+
+## 2026-11-12 — Pre-Market Research (Day 90, Thursday, cloud run)
+
+### Account
+- Equity $100,000.00 | Cash $100,000.00 (100%) | BP $400,000 (4x) | Daytrade count 0 | **0 positions | 0 open orders**
+- `balance_asof: 2026-11-11`. Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending (147th+ session).
+- Peak equity $100,000 -> drawdown 0.0%. Circuit breaker NOT tripped.
+- Deployment 0% vs the strategy's mandated **75-85%** — 90th straight trading day under-deployed. See Decision.
+
+### Market context (Apify web-search + native WebSearch fallback; Alpaca for all price data; no Yahoo used)
+- **Futures (03:09-06:00 ET):** Nasdaq-100 fut **-0.9%** (-240 pts), S&P 500 fut **-0.4%** (-32 pts), Dow fut ~flat to **+0.16%**. Risk-off concentrated in tech, not breadth.
+- **Cash close Nov 11 (Alpaca):** SPY 759.80, QQQ 689.21 (last PM print 689.30). SPY 20-SMA 760.23, 50-SMA 764.98, 200-SMA 731.28 — index is *below* its 20/50 but above 200.
+- **VIX 18.33, +4.80% (+0.84)** — Cboe spot, Nov 12. Nov 11 close 17.49 (CNBC). Elevated but not stressed.
+- **Oil:** WTI ~$86.31-86.47, Brent ~$92.40-92.84 (Nov 11 close; aggregators disagree ±$0.40, no exchange settle retrieved). Brent dipped below $90 intraday Nov 10 on Iran talks, then recovered. Oil still historically elevated (Brent ~+52% YTD).
+- **Rates:** US 10Y reported hovering near 5% (riotimesonline briefing, Nov 12) — unverified against a primary source, logged as approximate.
+- **THE DRIVER — NVDA governance crisis.** WSJ reported the board was preparing to force out CEO Jensen Huang after admitted affairs, one with Alice Huang, whom US officials allege is a Chinese intelligence asset (disputed, uncharged). Board met late Wed, meeting ran into the evening, **no decision announced as of this run**. NVDA -8-9% after hours; ~$600B of market cap erased over the de-rating. Polymarket 83-88% odds he resigns/is removed by year-end. No clear successor. House Select Committee on China wants him for a closed-door briefing Nov 18. **NVDA earnings Nov 17.**
+- NVDA tape (Alpaca daily closes): 213.70 (10/29) -> 181.59 (11/5) -> 178.64 (11/9, 25.2M sh) -> 168.79 (11/10) -> 173.85 (11/11). **-18.7% in 9 sessions** on 2-10x normal volume.
+- **Today's calendar:** Initial jobless claims 08:30 ET (cons. ~194-195K vs 189K prior; continuing ~1.71-1.72M), existing home sales, EIA crude inventories. **No CPI today** — October CPI already printed Nov 10; next CPI Dec 10 (BLS schedule). **PPI is Friday Nov 13** (headline cons. +0.4% m/m after +1.3%; core +0.3% after +0.7%) — that is the week's real macro event, not today.
+- **Earnings:** NBIS Q3 **before the open** (cons. ~$907M rev, ~-$0.72 EPS; options implying ~14.9% move). CSCO after the close (~7.9% implied). AMAT and Cerebras also today.
+
+### Sector momentum (computed from Alpaca daily bars — no third-party sector table)
+| ETF | Last | 1mo | 3mo | YTD |
+|---|---|---|---|---|
+| XLV Health | 188.98 | **+11.3%** | **+12.2%** | +21.1% |
+| XLP Staples | 91.44 | +8.6% | +6.3% | +16.9% |
+| XLY Disc | 120.98 | +7.7% | +2.1% | -0.9% |
+| XLF Fin | 58.61 | +6.9% | +0.6% | +5.4% |
+| XLB Mat | 53.00 | +6.6% | +1.3% | +14.9% |
+| XLRE RE | 44.58 | +6.6% | -1.2% | +10.0% |
+| XLU Util | 43.83 | +4.7% | -0.4% | +2.4% |
+| XLI Ind | 170.94 | +1.4% | -8.0% | +8.7% |
+| XLC Comm | 108.63 | -3.2% | -3.5% | -7.9% |
+| XLE Energy | 63.36 | -5.7% | +3.8% | **+38.8%** |
+| XLK Tech | 174.35 | **-11.2%** | -8.6% | +19.0% |
+| SPY | 759.80 | -2.3% | -2.3% | +10.1% |
+- Unambiguous **defensive rotation**: XLK -11.2% / 1mo while XLV +11.3% and XLP +8.6%. Healthcare is the strongest sector on both 1mo and 3mo. This confirms, not contradicts, the Nov 11 pre-market call.
+
+### Trade ideas (catalyst + entry/stop/target)
+1. **XLV (Health Care Select) — queued from Nov 11, DO NOT CHASE.** Catalyst: AI-complex de-rating (NVDA governance + China chip curbs) forcing capital into defensives; XLV leads all 11 sectors 1mo/3mo. Technicals: 188.98 vs 20-SMA 182.52 / 50-SMA 174.44 / 200-SMA 159.86 (long-bias filter PASS), RSI(14) **68.5** (1.5 pts under the no-new-long line), ATR(14) 3.43 (1.82%). Entry: **limit 108 sh $182-186** (unchanged — 20-SMA retest, ~2-4% below spot). Stop: 10% trailing GTC -> ~$165 on a $184 fill. Target: +20% -> ~$221. **Gate result: FAILS 2:1** (see Risks).
+2. **XLP (Staples) — lower-beta alternate.** Catalyst: same rotation, less extended. 91.44 vs 20-SMA 89.04 / 200-SMA 84.79 (PASS), RSI 63.1, ATR 1.54 (1.68%). Trigger from Nov 11 was "above $88.65" — already satisfied, so the honest entry is a 20-SMA retest at **$89.00-89.50**, not spot. Stop 10% trail ~$80.1. Target +20% ~$107. **Also fails 2:1.**
+3. **ABBV — single-name expression of the same rotation, best R:R math of the three.** Catalyst: healthcare leadership + defensive bid; no binary event pending. 294.87, RSI 62.6, ATR 2.35%, 200-SMA 240.02 (PASS), +7.5% 1mo / +28.6% YTD. Entry: pullback to **$285-288**. Stop 10% trail ~$258. Target +20% ~$345 (8.5 ATR) — still a multi-month hold, not a swing. Alternates screened: JNJ 280.33 (RSI 61.4, +12.8% 1mo, PASS) usable; **LLY excluded, RSI 70.4 = overbought, no new long**; **XLE excluded on 1mo momentum -5.7% despite RSI 42.4 and YTD +38.8%**.
+- **NBIS: explicitly NOT a candidate.** Earnings before the open with ~14.9% implied move, after a +15.4% sympathy gap on someone else's print (CRWV). A 10% trailing stop gets gapped through, not respected. Rule 7 and the 2:1 gate both fail. Watch only.
+
+### Risks
+- **NVDA binary, unresolved and live.** Board can remove the CEO by simple majority with or without cause. A decision can land any time today; either outcome is a gap risk for XLK/SOX and, through index weight, for SPY. Earnings Nov 17 compounds it.
+- Chasing the defensive rotation at its 1mo high. XLV +11.3% in a month with RSI 68.5 is late to the move, not early.
+- PPI tomorrow after a +1.3% prior headline. A second hot print re-prices rate-cut odds against every long.
+- 10Y near 5% (unverified) pressures long-duration equity multiples.
+- **Structural rule conflict — the real reason for 90 days of no entries.** The mandated 10% trailing stop fixes initial risk at 10%, so the 2:1 minimum demands a **+20%** target. For XLV that is 11 ATR, for XLP 12 ATR, for ABBV 8.5 ATR. No quality large-cap or sector ETF clears +20% inside a swing horizon, so every disciplined candidate is rejected by arithmetic rather than by judgment. Meanwhile the names that *could* move 20% (sub-$5 gappers, post-earnings AI beta) are rejected for stop-width and catalyst-staleness. The rulebook's stop rule and its R:R rule are mutually exclusive for the entire investable universe. **Operator decision required** — either allow a tighter initial stop (e.g. 1.5-2 ATR) with the 10% trail as a ceiling, or lower the R:R floor to ~1.5:1 for sub-2%-ATR instruments. Logged, not self-resolved.
+- Oil ~$86 WTI keeps the inflation impulse alive; favors XLE late-cycle, but XLE's 1mo momentum is negative.
+
+### Decision
+**HOLD.** 0/3 trades used (week of Nov 9). Nothing clears the Entry Checklist today: XLV/XLP/ABBV all pass the 200-SMA filter and have a documented catalyst, but all three fail the 2:1 R:R gate against a mandated 10% stop; NBIS fails on a pre-open binary. Keep the **XLV $182-186 limit idea live for the market-open run** as a pullback-only entry, and treat the NVDA board outcome as the day's dominant risk. Do not initiate into an unresolved mega-cap governance event with the index below its 20- and 50-SMA.
+
+### Tooling notes
+- Apify `web-search` returned **HTTP 200 on all 7 calls** (no SEARCH_TIMEOUT recurrence from 11/11), but results were **stale or off-date on 5 of 7** — oil quotes dated 10/27-11/07, "premarket movers" hits from 2019/2023/2026-06, sector tables from 2023/2025. One call errored on a param bug (`query` passed as a string, not an object) and was re-sent correctly. Recovered with native **WebSearch** (`blocked_domains` set), which returned correctly-dated Nov 11-12 material on every attempt — same finding as 11/11. **Sector momentum and all technicals were computed from Alpaca bars instead of any web source**, which is the better pattern and should be the documented default.
+- Yahoo block held: suffix applied to every Apify query plus `blockedDomains`; `blocked_domains` on every WebSearch. **Zero finance.yahoo.com URLs surfaced or cited.**
+- **Notification channels:** `clickup.sh` returned **HTTP 400** on both a long and a short payload — the wrapper, not the message, is broken (second consecutive session ClickUp has failed). `telegram.sh` worked on both sends (`ok: true`, msg 337+), contradicting the 11/11 note that the fallback was dead. Primary channel is healthy; **ClickUp needs an operator fix** (likely a stale `CLICKUP_CHANNEL_ID`/endpoint — the env var is set, so this is not a missing-key failure).
