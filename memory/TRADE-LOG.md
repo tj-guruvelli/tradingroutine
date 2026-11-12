@@ -2757,3 +2757,50 @@ pre-market research).
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-10`). Market-Open run skipped BKSY (stale quote + below 200-SMA) and deferred XLV/XLP to Nov 12 per pre-market research (Veterans Day thin tape). Midday scan had nothing to cut or tighten. Weekly trade count: 0/3 (week of Nov 9). 89th trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 146th+ straight session, operator review pending.
+
+### Nov 12, Market-Open (Day 90, Thursday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules. Today's RESEARCH-LOG pre-market
+entry (19035): explicit **Decision: HOLD**. XLV/XLP/ABBV all pass the 200-SMA
+long-bias filter and have a documented catalyst (defensive rotation off the
+AI-complex de-rate), but all three **fail the 2:1 R:R gate** against the
+mandated 10% trailing stop — flagged as a structural rule conflict pending
+operator review (10% stop forces a +20% target that no quality large-cap/ETF
+clears). NBIS failed on a pre-open earnings binary. The Nov 11 queued XLV
+limit idea ($182-186) was kept "live for a pullback-only entry" but the
+research's own R:R calc at that exact limit price still reads FAILS 2:1 — no
+exception was granted. The two later gappers auto-scans (07:12, 08:08 ET)
+found nothing that clears entry either: LUNR is a pre-print earnings binary
+(results due 8:30 ET, un-assessable for Confluence/2:1 before the print),
+NBIS/CRWV fail R:R on the same AI-infra de-rate, PEPG is RSI 83.6 overbought
+(no-new-long), BMNR has no documented catalyst (pure ETH beta). TRADE-LOG
+tail: weekly trade count 0/3 (week of Nov 9).
+
+STEP 2: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-11`). `alpaca.sh quote XLV`: ap $193.16 / bp $183.45
+(~5.3% spread), `alpaca.sh quote XLP`: ap $94.19 / bp $88.60 (~6.3% spread),
+both stamped `2026-11-11T21:00Z` — stale IEX prior-close quotes per the
+documented pre-market IEX blind spot, not usable to confirm a live pullback
+price even if the R:R gate had passed.
+
+STEP 3 — pass/fail:
+- XLV: FAIL — documented 2:1 R:R gate fails at the queued limit price per
+  today's pre-market research; no operator override on record; live quote
+  unusable (stale IEX, wide spread) to re-check regardless.
+- XLP: FAIL — same 2:1 R:R gate fail per pre-market research; same stale-quote
+  issue.
+- LUNR/NBIS/CRWV/PEPG/BMNR (gappers list): FAIL — each already dispositioned
+  in pre-market research (pre-print binary / R:R fail / overbought RSI / no
+  catalyst, respectively).
+
+6 candidates evaluated, 0 pass — STEPs 4-5 (orders/stops) skipped. No trade
+fired.
+
+STEP 7 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 9). 90th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 148th+
+straight session, operator review pending. Structural rule conflict
+(10%-stop vs 2:1-R:R floor, logged in today's RESEARCH-LOG) remains the
+proximate cause of the drought and still needs an operator decision.
