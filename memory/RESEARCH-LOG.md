@@ -19346,3 +19346,10 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 | ------ | ----- | -------- | --------- | ------- |
 | PEPG | B | Momentum confluence | daily swing | px $5.00, RSI 83.83, ADX 20.54, EMA9 $3.35 > EMA21 $2.92 |
 | BKSY | B | Momentum confluence | daily swing | px $25.10, RSI 66.35, ADX 24.35, EMA9 $21.23 > EMA21 $20.12 |
+
+### Setup Scan (17:37 ET, cloud)
+grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 checkable). 60 candidates checked, 2 hits, 0 errors.
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| PEPG | B | Momentum confluence | daily swing | px $4.29, RSI 83.83, ADX 20.54, EMA9 $3.35 > EMA21 $2.92 |
+| BKSY | B | Momentum confluence | daily swing | px $23.38, RSI 66.35, ADX 24.35, EMA9 $21.23 > EMA21 $20.12 |
