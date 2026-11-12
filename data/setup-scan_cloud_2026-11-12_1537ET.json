@@ -1,0 +1,57 @@
+{
+  "scanned_at": "2026-11-12T20:37:53.393Z",
+  "ny_time": "15:37",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "PEPG",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 5,
+      "prev_daily_high": 5.87,
+      "prev_daily_close": 5.27,
+      "sma200": 2.94,
+      "sma200_window_days": 200,
+      "pmh": 5.43,
+      "today_hod": 5.33,
+      "rsi14": 83.83,
+      "adx14": 20.54,
+      "ema9": 3.35,
+      "ema21": 2.92,
+      "premarket_volume": 6257,
+      "daily_volume": 514995,
+      "avg_daily_volume_30": 157143,
+      "setup_a_checkable": false
+    },
+    {
+      "symbol": "BKSY",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 25.1,
+      "prev_daily_high": 24.88,
+      "prev_daily_close": 24.11,
+      "sma200": 27.03,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 24.04,
+      "rsi14": 66.35,
+      "adx14": 24.35,
+      "ema9": 21.23,
+      "ema21": 20.12,
+      "premarket_volume": 0,
+      "daily_volume": 72992,
+      "avg_daily_volume_30": 45667,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
