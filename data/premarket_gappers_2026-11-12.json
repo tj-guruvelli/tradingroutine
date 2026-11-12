@@ -1,77 +1,108 @@
 {
-  "scanned_at": "2026-11-12T12:12:00Z",
-  "scanned_at_et": "2026-11-12 07:12 ET",
+  "scanned_at": "2026-11-12T13:08:00Z",
+  "scanned_at_et": "2026-11-12 08:08 ET",
   "deep_dive_cap": 5,
-  "universe": "memory/WATCHLIST.md (69 symbols, 64 resolved by Alpaca, 56 with fresh prints)",
-  "filters": {"min_abs_gap_pct": 5.0, "min_price": 3.0, "min_premarket_volume": 50000},
-  "data_note": "Alpaca feed=delayed_sip (15-min delayed SIP) for snapshots/trades; bars with feed omitted. The routine's default IEX feed returns NO pre-market prints and yielded an empty scan - see tooling_note.",
-  "tooling_note": "scripts/gappers-alpaca.sh passed no feed param, defaulting to IEX, which has no pre-market coverage: every snapshot timestamp was the prior session's close, so the freshness guard correctly rejected all 64 symbols and the scan returned []. feed=sip is 403 (not subscribed); feed=delayed_sip works. Script patched this run.",
-  "excluded": [
-    {"symbol": "AGMH", "price": 0.413, "gap_pct": -7.89, "premarket_volume": 2576, "reason": "price 0.413 < 3.00 floor AND premarket_volume 2576 < 50000"}
-  ],
+  "hits": 5,
+  "data_source": "Alpaca snapshots feed=delayed_sip (15-min delayed); premarket_volume from 5Min bars since 09:00Z",
+  "note": "Only 5 names cleared the filters, so all 5 received the full deep dive; there are no quick-scan-only ranks 6-10 this run. AGMH (-8.34%) was dropped by the price>=3.00 filter at $0.411.",
   "gappers": [
     {
       "rank": 1,
-      "symbol": "CRWV",
-      "price": 56.37,
-      "prev_close": 60.77,
-      "gap_pct": -7.24,
-      "premarket_volume": 1882830,
-      "catalyst": "Giving back part of Tuesday's +24.75% post-earnings pop as the AI-infrastructure complex sells off on a WSJ report that Nvidia's board is weighing replacing CEO Jensen Huang.",
+      "symbol": "LUNR",
+      "price": 13.72,
+      "gap_pct": 12.64,
+      "premarket_volume": 1208726,
+      "catalyst": "Q3 2026 results due before the open today (8:30 am ET); stock ramping into the print after NASA's CLPS 2 selection.",
       "headlines": [
-        "CoreWeave (CRWV) Rises 25% on Strong Q3 and Guidance - KoalaGains, 2026-11-11",
-        "CoreWeave Beats Q3 and Lifts Guidance, but Debt/Financing Risk - tradingtips.com, 2026-11-11",
-        "Nvidia falls 7% pre-market, board reportedly set to replace CEO - Il Sole 24 ORE (WSJ-sourced), 2026-11-12"
+        "Intuitive Machines Q3 Earnings Today: Wall Street and options markets' last-minute verdict on LUNR stock (TipRanks, 2026-11-12)",
+        "What Does Intuitive Machines (LUNR) Winning CLPS 2 Mean For It (Simply Wall St, 2026-11-10)",
+        "Intuitive Machines Announces Date for Third Quarter 2026 Results - Nov 12 before market open, 8:30 am ET (FT Markets, 2026-10-29)"
       ],
-      "catalyst_detail": "CoreWeave reported Q3 on Nov 11: revenue $3.66B (+168% YoY), adjusted EBITDA $2.26B, revenue backlog up to $132.5B from ~$104B at end-Q2, and raised FY2026 revenue guidance to $13.0-13.3B. Shares closed +24.75% at $60.77. Overnight the AI-infra complex sold off on a WSJ report that Nvidia's board is considering removing CEO Jensen Huang - unconfirmed, with no Nvidia comment. NVDA is -7.5% pre-market and CRWV is handing back part of the earnings move.",
-      "why": "The decline is not company-specific. CRWV is beta to the AI-infra complex's keystone supplier: its economics depend on Nvidia GPU supply and on the credibility of the AI capex cycle, so a governance shock at Nvidia re-prices the whole chain. Mechanically this is profit-taking into an unrelated macro headline one day after a +25% gap.",
-      "impact": "Pre-market volume 1.88M is heavy and the spread is tight (56.26/56.37), so the price is real rather than a stale-quote artifact. Sector read-through is clear but dispersed: NVDA -7.5%, SMCI -5.5%, MU -3.5%, ORCL -2.4%, while SPY is only -0.5% and AMD +2.5% / AVGO +1.8% are higher - rotation inside AI, not broad risk-off. Because the driver is a single-source unconfirmed report, the path is event-dependent: an Nvidia denial likely reverses much of it, a confirmed board move extends it. The Nov 11 fundamental print is unaffected either way.",
+      "catalyst_detail": "Intuitive Machines reports Q3 2026 before the open today (Nov 12, 8:30 am ET), so this gap is positioning INTO the print - no results had been released as of this 08:08 ET scan. The structural setup behind the bid: NASA selected LUNR for CLPS 2, a lunar-delivery program valued at up to $10B, and backlog had already climbed to $1.8B as of Jun 30 2026 from $213.1M at Dec 31 2025, on Q2 revenue of $206M. TipRanks notes the options market is pricing a ~13.7% post-earnings move against a ~$29 average analyst target.",
+      "why": "Pre-earnings positioning layered on a genuine contract catalyst. The CLPS 2 award turns an up-to-$10B program into a credible backlog pipeline, and momentum buyers are front-running a possible second straight record-revenue, positive-adjusted-EBITDA quarter.",
+      "impact": "Least sustainable of the five at this exact moment, because the event has not happened yet. Options-implied ~13.7% means roughly this entire gap can be erased or doubled in one print at 8:30 ET. LUNR has already shown violent two-way swings this month (+16% -> -16% -> -8% -> +22% per Schwab Network). Pre-market volume of 1.21M is the thinnest of the five, so the gap is real but lightly traded. No sector read-through: space infrastructure is uncorrelated to today's AI-complex selloff, which is a point in its favor on a day when most of this list is bleeding.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The earnings/backlog news is structural, but today's move is a headline-driven give-back on someone else's governance story, and CRWV sits below both its 50-SMA (73.71) and 200-SMA (89.47), failing the strategy's long-bias filter for a swing hold.",
-      "opportunity_cost": "No open positions and 0/3 weekly trades used, so nothing gets displaced; the cost is a weekly trade slot and the 20%-of-equity cap ($20k of $100k). ATR(14) is $5.77 (9.5% of price), so a 1-ATR stop sits near $50.60 (-10.2%) and a 2:1 target needs ~$67.90 - roughly 10% above the post-earnings high of $62.03. It clears 2:1 only by assuming new highs while price is under the 200-SMA and the Nvidia headline is unresolved. Fails the long-bias filter and confluence; research-only, no entry.",
-      "technicals": {"rsi14": 49.7, "atr14": 5.774, "atr_pct": 9.5, "sma50": 73.71, "sma200": 89.47, "above_200sma": false, "as_of": "2026-11-11 close"}
+      "horizon_reason": "A pre-print gap is by definition headline-driven and binary; the CLPS 2 thesis could become LONG_TERM, but only once the 8:30 ET numbers and guidance are in hand.",
+      "opportunity_cost": "Displaces nothing - the book is 100% cash, 0 positions, 0/3 weekly trades used. The real cost is the 2:1 R:R test: entering a +12.6% pre-print gap puts any honest stop below a gap that may not hold, while the strategy bans stops within 3% of price. It also fails the Entry Checklist, which needs a documented catalyst already in the price, and the Confluence rule's >=2-of-{VWAP,RSI,200-SMA,insider} agreement cannot be assessed on an unprinted quarter. Buying a binary 20 minutes before it resolves is the opposite of 'patience > activity' - let the print land and re-evaluate on the 09:00/10:00 ET run."
     },
     {
       "rank": 2,
-      "symbol": "PEPG",
-      "price": 5.61,
-      "prev_close": 5.26,
-      "gap_pct": 6.65,
-      "premarket_volume": 475378,
-      "catalyst": "Post-dilution relief bounce holding above the implied ~$5.00 price of the $125M offering that was launched hours after positive Phase 2 FREEDOM2-DM1 data.",
+      "symbol": "NBIS",
+      "price": 138.88,
+      "gap_pct": -10.22,
+      "premarket_volume": 7314996,
+      "catalyst": "Slides ahead of its own Q3 2026 report due today, caught in a broad AI-infrastructure derating.",
       "headlines": [
-        "PepGen stock soars over 100% on positive Phase 2 trial results - StreetInsider, 2026-11-10",
-        "PepGen Announces Proposed $125.0 Million Public Offering of Common Stock - ADVFN, 2026-11-10",
-        "PepGen Surges on Positive FREEDOM2-DM1 Data Despite In-Line Q3 Results; cash runway into 2028 - ChartMill, 2026-11-10"
+        "NBIS Retreats After CoreWeave Rally Ahead Of Q3 Report; analyst says market can't squeeze out top players amid record cloud demand (Stocktwits, 2026-11-12)",
+        "Nebius Group Q3 2026 Earnings Date and Estimates - scheduled Nov 12 2026 (MarketBeat, 2026-11-12)",
+        "NVDA falls amid further CEO allegations; board meeting to consider removal (Newsquawk, 2026-11-12)",
+        "AI jitters erupt after Democrats threaten data centre build-out - 20 most valuable AI and chip stocks lost more than $1 trillion in one week (Dealroom, 2026-11-12)"
       ],
-      "catalyst_detail": "On Nov 10 PepGen reported positive topline Phase 2 FREEDOM2-DM1 results at the 10 mg/kg dose in myotonic dystrophy type 1 and shares spiked over 115% pre-market. Late the same day the company launched a $125.0M public offering of common stock, with pre-funded warrants in lieu of shares for certain investors, and then announced pricing of a 25,000,000-share offering - implying roughly $5.00/share ($125M / 25M; the per-share figure is implied, the issuer IR page returned HTTP 403 and was not read directly). Management guides cash runway into 2028. The stock closed $4.61 on Nov 10 and $5.26 on Nov 11, and is $5.61 pre-market.",
-      "why": "Two opposing forces. The Phase 2 readout is genuine de-risking that opens a path to Phase 3. The same-day equity raise capped it: ~25M new shares against ~69.3M outstanding is ~36% dilution, which is why the 115% spike was given back within hours. Today's +6.65% is a relief bounce as the deal clears and the stock holds above the implied deal price.",
-      "impact": "475k pre-market shares is solid for a $5 biotech and the spread is tight (5.55/5.62), so the move is real. No sector read-through - idiosyncratic single-asset biotech with no peer confirmation. Sustainability depends on the deal overhang clearing rather than on new information, since the catalyst is already public and has been priced twice. RSI(14) is 83.6 on the Nov 11 close, deeply overbought, which the Indicator Canon treats as an explicit no-new-long.",
+      "catalyst_detail": "Nebius reports Q3 2026 today (Nov 12). Consensus per Koyfin is revenue +521% YoY to ~$907.2M with an adjusted loss of ~$0.63/share, versus -$0.40 a year ago. The drop is not company-specific news - it is the AI complex repricing. Nvidia's board has opened an independent investigation into CEO Jensen Huang and NVDA fell sharply (reported between 4% and 7.8% across outlets, and -7.48% on this run's own tape read), while Washington-side threats to data-centre build-out have knocked more than $1 trillion off the 20 most valuable AI and chip names in a week. NBIS had been +11.7% pre-bell on Nov 11 on CoreWeave's strong print and has now given all of it back and more.",
+      "why": "Multiple compression on a pre-profit, capex-heavy neocloud. NBIS trades on a ~$7-9B end-2026 ARR target, so when the market questions whether AI capex keeps compounding - via political risk to data-centre permitting and governance risk at the sector's anchor vendor - terminal value is what gets marked down first, and hardest in the highest-multiple, cash-burning names.",
+      "impact": "Pre-market volume of 7.31M is the heaviest of the five by a wide margin, and the move is sector-wide rather than idiosyncratic, which argues against a clean one-day mean-revert. Read-through is explicit and two-way: CRWV is down almost identically (-10.15%) on the same tape, so this is a factor move, not a stock move. It also will not resolve on technicals - today's Q3 print is the binary that decides direction. Note this run's own deterioration signal: NBIS was only -1.33% on the 07:12 ET tape read and is -10.22% an hour later.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The thesis is arguably LONG_TERM - a de-risking readout plus runway into 2028, and Healthcare is in the strategy's mid-cycle favored block - but this particular move is a dilution-relief bounce rather than a fresh catalyst, and an 83.6 RSI bars a new long now, so it is SHORT_TERM for trading purposes.",
-      "opportunity_cost": "Nothing to displace; the cost is one of three weekly slots plus the 20% cap. The R:R geometry is the best of the three: ATR(14) $0.573, a 1-ATR stop at ~$5.04 sits right on the implied $5.00 deal price (a real support shelf), and a 2:1 target of ~$6.75 is just above the Nov 10 high of $6.49 - so 2:1 is reachable without a blue-sky breakout. It is nonetheless blocked today by the overbought RSI and would need a pullback toward the deal price with RSI cooling to pass confluence. Entering now would spend a slot on a 10.9%-ATR name whose next real catalyst (Phase 3 plans) has no date.",
-      "technicals": {"rsi14": 83.6, "atr14": 0.573, "atr_pct": 10.9, "sma50": 2.74, "sma200": 2.94, "above_200sma": true, "as_of": "2026-11-11 close"}
+      "horizon_reason": "The proximate driver is a headline-driven sector derating plus an unresolved earnings event, not a structural change at Nebius; the $7-9B ARR thesis is intact but unconfirmed until today's print.",
+      "opportunity_cost": "Displaces no existing holding (0 open positions, 0/3 weekly trades). Within today's own list NBIS and CRWV are the same bet - owning both would trip the correlation gate (>0.75 against 2+ open positions), so at most one neocloud is ownable, and CRWV is the better-documented of the two because its results are actually in hand. On R:R: catching a -10% knife into its own earnings print cannot clear 2:1 at a sane stop, since any stop wide enough to survive a post-earnings gap leaves ATR-based 1.0%-of-equity sizing with a position too small to matter. The 'exit a sector after 2 failed trades' rule and the long-bias filter both argue for watching, not catching."
     },
     {
       "rank": 3,
-      "symbol": "BMNR",
-      "price": 18.27,
-      "prev_close": 19.24,
-      "gap_pct": -5.04,
-      "premarket_volume": 377647,
-      "catalyst": "No issuer news overnight; tracking ETH, which is ~-2.4% since the Nov 11 equity close, at roughly 2x beta.",
+      "symbol": "CRWV",
+      "price": 54.6,
+      "gap_pct": -10.15,
+      "premarket_volume": 4925214,
+      "catalyst": "Giving back its post-earnings spike as the AI-infrastructure complex derates.",
       "headlines": [
-        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.07 Million Tokens and Total Crypto and Cash & Marketable Securities of $14.3 Billion - PR Newswire, 2026-11-09",
-        "BMNR Reports $14.3B in Holdings; 6.07M ETH = 4.97% of 122.2M ETH supply - TradingView, 2026-11-09",
-        "BMNR dropped 4.5% as the firm resumed its stock buyback after a 10-week pause - StockAnalysis.com"
+        "CoreWeave Reports Strong Third Quarter 2026 Results - FY26 capex guidance raised at the low end to $37-39B (CoreWeave IR, 2026-11-10)",
+        "CoreWeave Q3: revenue jumped 168%, $132.5B revenue backlog, up from $104B (CNBC, 2026-11-10)",
+        "CoreWeave Q3 Revenue Surges 168% but Capex Soars - net loss $709M, capex $14.511B (TradingKey, 2026-11-10)",
+        "AI jitters erupt after Democrats threaten data centre build-out (Dealroom, 2026-11-12)"
       ],
-      "catalyst_detail": "On Nov 9 BitMine Immersion announced ETH holdings of 6.07M tokens (~4.97% of the 122.2M ETH supply) and total crypto plus cash and marketable securities of $14.3B, against a market cap around $12.05B. It has also resumed its buyback after a ~10-week pause, having repurchased ~22.9M shares during 2026 for ~$399.6M. There is no company-specific news overnight; the decline tracks ETH at $2,018 versus $2,069 at the Nov 11 equity close, about -2.4% (Alpaca crypto bars).",
-      "why": "BMNR is a levered ETH treasury proxy, so the equity moves as a multiple of spot ETH. ETH -2.4% overnight maps to BMNR -5.0%, roughly 2x beta, the normal transmission for these vehicles and consistent with the absence of any issuer headline. The move is mechanical, not informational.",
-      "impact": "377k pre-market shares with a tight spread (18.23/18.27) makes the price trustworthy, but the volume is unremarkable against ~31.9M average daily, so there is no sign of forced selling or new flow. Read-through is to the crypto-treasury cohort rather than any equity sector. Mean reversion depends entirely on ETH. The standing value argument is that it trades below the stated value of its own holdings (mNAV ~0.84), which the resumed buyback is designed to exploit - but that discount has persisted for months and is not a timing trigger.",
+      "catalyst_detail": "CoreWeave reported strong Q3 on Nov 10: revenue +168% YoY, revenue backlog $132.5B (up from $104B), but a $709M net loss and $14.511B of quarterly capex, with full-year 2026 capex guidance raised at the low end to $37-39B from $35-39B. The stock spiked on the print (reported +15% to +27% across outlets) and closed Nov 11 at $60.77. Today's -10.15% is give-back driven by the same two sector shocks hitting NBIS - the Nvidia CEO investigation and political threats to data-centre build-out - with no fresh CoreWeave-specific news found.",
+      "why": "The backlog-versus-capex trade flipping sign. On Nov 10 the market paid for the $132.5B backlog; two days later it is discounting the $37-39B of capex and the rising debt needed to serve that backlog. Once data-centre build-out itself becomes a political risk, a company whose entire equity story is 'spend $38B to convert backlog' is the most levered expression of that risk.",
+      "impact": "Volume is the tell: 4.93M shares pre-market on top of an enormous 165.2M prior full session is consistent with genuine two-way repricing rather than a thin headline spike. But the direction of travel is a round-trip of a two-day-old earnings pop, which is textbook post-event fade rather than fresh distribution. Sector read-through is direct and already visible in NBIS (-10.22%) - treat these as one position, not two. This also deepened within today: CRWV was -7.24% on the 07:12 ET scan and is -10.15% now.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "Nothing structural happened today; it is spot-ETH beta. Price is below both the 50-SMA (23.67) and 200-SMA (20.54), failing the long-bias filter, and a crypto treasury proxy maps to no sector in the rotation table, so it cannot satisfy the 'sector in momentum' line of the Entry Checklist.",
-      "opportunity_cost": "Nothing to displace. ATR(14) $1.43 (7.4%), so a 1-ATR stop is ~$16.84 (-7.8%) and a 2:1 target ~$21.13 - attainable in principle since that is below the 50-SMA, but it requires an ETH rally the strategy has no edge in forecasting, making it a crypto-direction bet wearing an equity ticker. Spending one of three weekly slots on undifferentiated ETH beta is the weakest use of the budget among today's three, and it fails the long-bias filter besides.",
-      "technicals": {"rsi14": 40.6, "atr14": 1.431, "atr_pct": 7.4, "sma50": 23.67, "sma200": 20.54, "above_200sma": false, "as_of": "2026-11-11 close"}
+      "horizon_reason": "The Q3 backlog is structural, but the proximate move is a sentiment and factor unwind of a two-day-old spike; nothing in the business changed between Nov 10 and today.",
+      "opportunity_cost": "Displaces nothing on a flat book. Against NBIS it is the better of the two neocloud expressions - actual reported results rather than an unprinted quarter - so if the strategy ever takes one, CRWV is the one that can be underwritten. It still fails R:R here: a second-day fade with no support level established puts the nearest honest stop below the pre-earnings base in the mid-$40s, roughly 15-20% away, which would demand a $65+ target to clear 2:1 and blows through ATR-based 1.0%-risk sizing. The cheap version of this trade is waiting for a base to form; the expensive version is catching the fade today."
+    },
+    {
+      "rank": 4,
+      "symbol": "PEPG",
+      "price": 5.55,
+      "gap_pct": 5.51,
+      "premarket_volume": 761973,
+      "catalyst": "Third-day continuation after Nov 10's positive Phase 2 FREEDOM2-DM1 data, plus a Wedbush target raise.",
+      "headlines": [
+        "PepGen (NASDAQ:PEPG) Surges on Positive FREEDOM2 DM1 Data Despite In-Line Q3 Results (ChartMill, 2026-11-10)",
+        "PepGen spotlights 46.5% mean splicing correction in Phase 2 FREEDOM2-DM1 10 mg/kg cohort (Market Chameleon, 2026-11-10)",
+        "PepGen (NASDAQ:PEPG) Stock Price Target Raised at Wedbush; shares rose 92.9% (MarketBeat, 2026-11-11)",
+        "PepGen Q3 Results Show Modest Loss Miss and Extended Cash Runway With New Trial Data (Tickeron, 2026-11-12)"
+      ],
+      "catalyst_detail": "On Nov 10 PepGen reported positive Phase 2 FREEDOM2-DM1 results for PGN-EDODM1 in myotonic dystrophy type 1 at the 10 mg/kg cohort: a 46.5% mean splicing correction at Week 13, described as the highest reported, with improvements across multiple functional measures. The stock re-rated violently, quoted between +92.9% and +148% intraday on over 70M shares. Q3 itself was unremarkable - a $19.4M net loss, $0.28/share, a penny worse than the $0.27 consensus - though the company also flagged an extended cash runway. Wedbush raised its price target on Nov 11. Today's +5.51% is third-day continuation drift, not the initial catalyst.",
+      "why": "A binary de-risking event in a clinical-stage biotech. The 46.5% splicing-correction figure re-rates the probability that PGN-EDODM1 works at all, which in a pre-revenue name moves the whole NPV rather than an earnings line. The same trial carried an FDA partial clinical hold in March 2026 that knocked the stock over 20%, so this readout also clears a standing overhang - which is why the re-rate was violent rather than incremental.",
+      "impact": "The initial move looks real rather than a headline spike: over 70M shares on a ~$5 stock is genuine institutional repositioning, and a sell-side target raise followed. But today's +5.5% is the low-conviction part of the sequence - the easy money was Nov 10, and third-day drift on a doubled biotech is where momentum chasers get caught. Pre-market volume of 762k is the second-thinnest here. The dominant forward risk is dilution: this is a cash-burning clinical name whose runway has been the standing concern, and a doubled share price is exactly when such a company raises equity. No sector read-through, and usefully uncorrelated to today's AI unwind.",
+      "horizon": "LONG_TERM",
+      "horizon_reason": "The catalyst is structural - a dose-cohort readout that changes the asset's probability of success and clears a prior FDA hold - and healthcare is the favored sector in the mid-cycle row of TRADING-STRATEGY.md's rotation table, the phase this book has been positioning for; worth a multi-day/week swing on a pullback, not on day three of a vertical move.",
+      "opportunity_cost": "Displaces nothing on a flat book, and it is the most interesting name here precisely because it is NOT part of the AI-complex trade that makes NBIS and CRWV one correlated bet - it passes the correlation gate trivially. Honest R:R read: it can clear 2:1, but not at this price. After a near-double, ATR(14) is hugely inflated, so ATR-based sizing at 1.0% equity risk yields a small position, and any stop outside the 3% minimum distance sits deep inside the gap. The genuine competing use of capital is the already-queued XLV/XLP entry, which is lower beta and expresses the same mid-cycle healthcare read - PEPG is the high-variance version of a thesis the book already has a boring way to own."
+    },
+    {
+      "rank": 5,
+      "symbol": "BMNR",
+      "price": 18.25,
+      "gap_pct": -5.15,
+      "premarket_volume": 674528,
+      "catalyst": "No ticker-specific Nov 12 news found; moving with crypto as an Ethereum-treasury proxy.",
+      "headlines": [
+        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.05 Million Tokens, and Total Crypto and Total Cash & Marketable Securities (FT Markets, 2026-10-26)",
+        "BitMine Immersion Crypto Treasuries - treasury valued at $12.63B, 100% allocated to Ethereum (6,070,092 ETH) (CoinGecko)",
+        "Bitmine Immersion (BMNR) Announces ETH Holdings Reach 5.81 Million Tokens, Total Crypto and Cash of $11.6B (RBC Richardson Barr, 2026-10-23)"
+      ],
+      "catalyst_detail": "No BitMine-specific catalyst surfaced for today - both the dated ticker-news query and a crypto-selloff query returned zero results, and BMNR's own most recent disclosures are treasury updates rather than events: ETH holdings rising to roughly 6.05-6.07M tokens, about 2% of supply, with crypto plus cash and marketable securities around $11.6-12.6B as of late October. BMNR is also the only one of the five with a genuinely fresh, tight two-sided quote at scan time (bid $17.90 / ask $17.99 at 08:11 ET), so the -5.15% is a real liquid print rather than a thin mark.",
+      "why": "Pure beta to Ethereum. BMNR is effectively a levered ETH holding company - essentially 100% of a ~$12.6B treasury allocated to Ethereum against an ~$18 share price - so the equity tracks ETH spot plus a sentiment premium or discount to NAV. With no company news, a -5% move is the market marking the treasury down, likely compounded by the same broad risk-off hitting high-beta AI and crypto-adjacent names together.",
+      "impact": "Thin on evidence, which is itself the finding: a 5% move with no locatable catalyst is a NAV and beta move, not an information event, so it carries no edge in either direction. It has the tightest quote of the five and healthy liquidity, so the price is trustworthy even though the story is absent. Read-through is to crypto-treasury proxies generally rather than to anything in the current book. Note it was -5.04% at 07:12 ET and dropped below the 5% threshold on that run's 07:24 ET verification pass, so it is a borderline rather than a decisive gapper.",
+      "horizon": "SHORT_TERM",
+      "horizon_reason": "No durable thesis and no catalyst; the move is a derivative of an asset price rather than a change in the business.",
+      "opportunity_cost": "Displaces nothing, and it is the clearest decline of the five. It has the weakest claim on capital here: the smallest gap at -5.15%, barely over the threshold and already borderline, zero documented catalyst, and a thesis that reduces to 'long ETH' - which is not a stock thesis and which the strategy has no mandate for. Taking it would burn one of three weekly trades on unlevered crypto beta while a documented biotech re-rate (PEPG) and the queued healthcare rotation entry (XLV/XLP) both rank ahead of it. It cannot be assessed against the 2:1 R:R minimum at all, because there is no catalyst-defined target to measure reward against."
     }
   ]
 }
