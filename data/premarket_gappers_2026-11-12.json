@@ -1,0 +1,77 @@
+{
+  "scanned_at": "2026-11-12T12:12:00Z",
+  "scanned_at_et": "2026-11-12 07:12 ET",
+  "deep_dive_cap": 5,
+  "universe": "memory/WATCHLIST.md (69 symbols, 64 resolved by Alpaca, 56 with fresh prints)",
+  "filters": {"min_abs_gap_pct": 5.0, "min_price": 3.0, "min_premarket_volume": 50000},
+  "data_note": "Alpaca feed=delayed_sip (15-min delayed SIP) for snapshots/trades; bars with feed omitted. The routine's default IEX feed returns NO pre-market prints and yielded an empty scan - see tooling_note.",
+  "tooling_note": "scripts/gappers-alpaca.sh passed no feed param, defaulting to IEX, which has no pre-market coverage: every snapshot timestamp was the prior session's close, so the freshness guard correctly rejected all 64 symbols and the scan returned []. feed=sip is 403 (not subscribed); feed=delayed_sip works. Script patched this run.",
+  "excluded": [
+    {"symbol": "AGMH", "price": 0.413, "gap_pct": -7.89, "premarket_volume": 2576, "reason": "price 0.413 < 3.00 floor AND premarket_volume 2576 < 50000"}
+  ],
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "CRWV",
+      "price": 56.37,
+      "prev_close": 60.77,
+      "gap_pct": -7.24,
+      "premarket_volume": 1882830,
+      "catalyst": "Giving back part of Tuesday's +24.75% post-earnings pop as the AI-infrastructure complex sells off on a WSJ report that Nvidia's board is weighing replacing CEO Jensen Huang.",
+      "headlines": [
+        "CoreWeave (CRWV) Rises 25% on Strong Q3 and Guidance - KoalaGains, 2026-11-11",
+        "CoreWeave Beats Q3 and Lifts Guidance, but Debt/Financing Risk - tradingtips.com, 2026-11-11",
+        "Nvidia falls 7% pre-market, board reportedly set to replace CEO - Il Sole 24 ORE (WSJ-sourced), 2026-11-12"
+      ],
+      "catalyst_detail": "CoreWeave reported Q3 on Nov 11: revenue $3.66B (+168% YoY), adjusted EBITDA $2.26B, revenue backlog up to $132.5B from ~$104B at end-Q2, and raised FY2026 revenue guidance to $13.0-13.3B. Shares closed +24.75% at $60.77. Overnight the AI-infra complex sold off on a WSJ report that Nvidia's board is considering removing CEO Jensen Huang - unconfirmed, with no Nvidia comment. NVDA is -7.5% pre-market and CRWV is handing back part of the earnings move.",
+      "why": "The decline is not company-specific. CRWV is beta to the AI-infra complex's keystone supplier: its economics depend on Nvidia GPU supply and on the credibility of the AI capex cycle, so a governance shock at Nvidia re-prices the whole chain. Mechanically this is profit-taking into an unrelated macro headline one day after a +25% gap.",
+      "impact": "Pre-market volume 1.88M is heavy and the spread is tight (56.26/56.37), so the price is real rather than a stale-quote artifact. Sector read-through is clear but dispersed: NVDA -7.5%, SMCI -5.5%, MU -3.5%, ORCL -2.4%, while SPY is only -0.5% and AMD +2.5% / AVGO +1.8% are higher - rotation inside AI, not broad risk-off. Because the driver is a single-source unconfirmed report, the path is event-dependent: an Nvidia denial likely reverses much of it, a confirmed board move extends it. The Nov 11 fundamental print is unaffected either way.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The earnings/backlog news is structural, but today's move is a headline-driven give-back on someone else's governance story, and CRWV sits below both its 50-SMA (73.71) and 200-SMA (89.47), failing the strategy's long-bias filter for a swing hold.",
+      "opportunity_cost": "No open positions and 0/3 weekly trades used, so nothing gets displaced; the cost is a weekly trade slot and the 20%-of-equity cap ($20k of $100k). ATR(14) is $5.77 (9.5% of price), so a 1-ATR stop sits near $50.60 (-10.2%) and a 2:1 target needs ~$67.90 - roughly 10% above the post-earnings high of $62.03. It clears 2:1 only by assuming new highs while price is under the 200-SMA and the Nvidia headline is unresolved. Fails the long-bias filter and confluence; research-only, no entry.",
+      "technicals": {"rsi14": 49.7, "atr14": 5.774, "atr_pct": 9.5, "sma50": 73.71, "sma200": 89.47, "above_200sma": false, "as_of": "2026-11-11 close"}
+    },
+    {
+      "rank": 2,
+      "symbol": "PEPG",
+      "price": 5.61,
+      "prev_close": 5.26,
+      "gap_pct": 6.65,
+      "premarket_volume": 475378,
+      "catalyst": "Post-dilution relief bounce holding above the implied ~$5.00 price of the $125M offering that was launched hours after positive Phase 2 FREEDOM2-DM1 data.",
+      "headlines": [
+        "PepGen stock soars over 100% on positive Phase 2 trial results - StreetInsider, 2026-11-10",
+        "PepGen Announces Proposed $125.0 Million Public Offering of Common Stock - ADVFN, 2026-11-10",
+        "PepGen Surges on Positive FREEDOM2-DM1 Data Despite In-Line Q3 Results; cash runway into 2028 - ChartMill, 2026-11-10"
+      ],
+      "catalyst_detail": "On Nov 10 PepGen reported positive topline Phase 2 FREEDOM2-DM1 results at the 10 mg/kg dose in myotonic dystrophy type 1 and shares spiked over 115% pre-market. Late the same day the company launched a $125.0M public offering of common stock, with pre-funded warrants in lieu of shares for certain investors, and then announced pricing of a 25,000,000-share offering - implying roughly $5.00/share ($125M / 25M; the per-share figure is implied, the issuer IR page returned HTTP 403 and was not read directly). Management guides cash runway into 2028. The stock closed $4.61 on Nov 10 and $5.26 on Nov 11, and is $5.61 pre-market.",
+      "why": "Two opposing forces. The Phase 2 readout is genuine de-risking that opens a path to Phase 3. The same-day equity raise capped it: ~25M new shares against ~69.3M outstanding is ~36% dilution, which is why the 115% spike was given back within hours. Today's +6.65% is a relief bounce as the deal clears and the stock holds above the implied deal price.",
+      "impact": "475k pre-market shares is solid for a $5 biotech and the spread is tight (5.55/5.62), so the move is real. No sector read-through - idiosyncratic single-asset biotech with no peer confirmation. Sustainability depends on the deal overhang clearing rather than on new information, since the catalyst is already public and has been priced twice. RSI(14) is 83.6 on the Nov 11 close, deeply overbought, which the Indicator Canon treats as an explicit no-new-long.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The thesis is arguably LONG_TERM - a de-risking readout plus runway into 2028, and Healthcare is in the strategy's mid-cycle favored block - but this particular move is a dilution-relief bounce rather than a fresh catalyst, and an 83.6 RSI bars a new long now, so it is SHORT_TERM for trading purposes.",
+      "opportunity_cost": "Nothing to displace; the cost is one of three weekly slots plus the 20% cap. The R:R geometry is the best of the three: ATR(14) $0.573, a 1-ATR stop at ~$5.04 sits right on the implied $5.00 deal price (a real support shelf), and a 2:1 target of ~$6.75 is just above the Nov 10 high of $6.49 - so 2:1 is reachable without a blue-sky breakout. It is nonetheless blocked today by the overbought RSI and would need a pullback toward the deal price with RSI cooling to pass confluence. Entering now would spend a slot on a 10.9%-ATR name whose next real catalyst (Phase 3 plans) has no date.",
+      "technicals": {"rsi14": 83.6, "atr14": 0.573, "atr_pct": 10.9, "sma50": 2.74, "sma200": 2.94, "above_200sma": true, "as_of": "2026-11-11 close"}
+    },
+    {
+      "rank": 3,
+      "symbol": "BMNR",
+      "price": 18.27,
+      "prev_close": 19.24,
+      "gap_pct": -5.04,
+      "premarket_volume": 377647,
+      "catalyst": "No issuer news overnight; tracking ETH, which is ~-2.4% since the Nov 11 equity close, at roughly 2x beta.",
+      "headlines": [
+        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.07 Million Tokens and Total Crypto and Cash & Marketable Securities of $14.3 Billion - PR Newswire, 2026-11-09",
+        "BMNR Reports $14.3B in Holdings; 6.07M ETH = 4.97% of 122.2M ETH supply - TradingView, 2026-11-09",
+        "BMNR dropped 4.5% as the firm resumed its stock buyback after a 10-week pause - StockAnalysis.com"
+      ],
+      "catalyst_detail": "On Nov 9 BitMine Immersion announced ETH holdings of 6.07M tokens (~4.97% of the 122.2M ETH supply) and total crypto plus cash and marketable securities of $14.3B, against a market cap around $12.05B. It has also resumed its buyback after a ~10-week pause, having repurchased ~22.9M shares during 2026 for ~$399.6M. There is no company-specific news overnight; the decline tracks ETH at $2,018 versus $2,069 at the Nov 11 equity close, about -2.4% (Alpaca crypto bars).",
+      "why": "BMNR is a levered ETH treasury proxy, so the equity moves as a multiple of spot ETH. ETH -2.4% overnight maps to BMNR -5.0%, roughly 2x beta, the normal transmission for these vehicles and consistent with the absence of any issuer headline. The move is mechanical, not informational.",
+      "impact": "377k pre-market shares with a tight spread (18.23/18.27) makes the price trustworthy, but the volume is unremarkable against ~31.9M average daily, so there is no sign of forced selling or new flow. Read-through is to the crypto-treasury cohort rather than any equity sector. Mean reversion depends entirely on ETH. The standing value argument is that it trades below the stated value of its own holdings (mNAV ~0.84), which the resumed buyback is designed to exploit - but that discount has persisted for months and is not a timing trigger.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Nothing structural happened today; it is spot-ETH beta. Price is below both the 50-SMA (23.67) and 200-SMA (20.54), failing the long-bias filter, and a crypto treasury proxy maps to no sector in the rotation table, so it cannot satisfy the 'sector in momentum' line of the Entry Checklist.",
+      "opportunity_cost": "Nothing to displace. ATR(14) $1.43 (7.4%), so a 1-ATR stop is ~$16.84 (-7.8%) and a 2:1 target ~$21.13 - attainable in principle since that is below the 50-SMA, but it requires an ETH rally the strategy has no edge in forecasting, making it a crypto-direction bet wearing an equity ticker. Spending one of three weekly slots on undifferentiated ETH beta is the weakest use of the budget among today's three, and it fails the long-bias filter besides.",
+      "technicals": {"rsi14": 40.6, "atr14": 1.431, "atr_pct": 7.4, "sma50": 23.67, "sma200": 20.54, "above_200sma": false, "as_of": "2026-11-11 close"}
+    }
+  ]
+}

@@ -22,6 +22,19 @@ DATA="${ALPACA_DATA_ENDPOINT:-https://data.alpaca.markets/v2}"
 H_KEY="APCA-API-KEY-ID: $ALPACA_API_KEY"
 H_SEC="APCA-API-SECRET-KEY: $ALPACA_SECRET_KEY"
 THRESH="${GAP_THRESHOLD:-3.0}"
+# Data feed. The default (IEX) has effectively NO pre-market coverage: before
+# the open every snapshot's latestTrade/latestQuote still carries the PRIOR
+# session's close, so the freshness guard below rejects every symbol and the
+# scan silently returns [] -- a false all-clear, not a quiet tape (confirmed
+# 2026-11-12: `[]` at GAP_THRESHOLD=0.5 across 69 symbols). Verified feed
+# matrix: iex -> prior-session prints only; sip -> HTTP 403 "subscription does
+# not permit querying recent SIP data"; delayed_sip -> works, today's
+# pre-market prints on a 15-minute delay. Hence delayed_sip is the default.
+# NOTE: the /stocks/bars endpoint REJECTS delayed_sip (HTTP 400) -- bars must
+# omit `feed` entirely, which resolves to 15-min-delayed SIP.
+# The 15-min delay is fine for research but means market-open and /trade MUST
+# re-quote before acting on anything this scan reports.
+FEED="${ALPACA_FEED:-delayed_sip}"
 
 get_symbols() {
   case "${1:-}" in
@@ -71,7 +84,7 @@ fi
 
 # Alpaca snapshot endpoint returns previous daily bar + latest quote/trade.
 # Batch (comma-separated) — endpoint supports up to 1000 symbols per call.
-snap_url="$DATA/stocks/snapshots?symbols=$symbols"
+snap_url="$DATA/stocks/snapshots?symbols=$symbols&feed=$FEED"
 snapshot="$(curl -fsS --ssl-no-revoke -H "$H_KEY" -H "$H_SEC" "$snap_url")"
 TODAY_UTC="$(date -u +%Y-%m-%d)"
 
