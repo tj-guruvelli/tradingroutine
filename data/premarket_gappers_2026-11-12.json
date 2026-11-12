@@ -1,81 +1,128 @@
 {
-  "scanned_at": "2026-11-12T14:08:00Z",
-  "scan_time_et": "09:08",
-  "run_label": "gappers-cloud 09:08 ET (3rd of 4 today)",
+  "scanned_at": "2026-11-12T15:15:59.297100+00:00",
   "deep_dive_cap": 5,
-  "deep_dive_note": "Cap is 5; only 4 rows passed the filters, so all 4 received the deep dive. No ranks 5-10 existed, so none were dropped to quick-scan only.",
-  "filters": {"min_abs_gap_pct": 5.0, "min_price": 3.0, "min_premarket_volume": 50000, "premarket_volume_field_populated": false},
-  "excluded": [
-    {"symbol": "AGMH", "gap_pct": -7.58, "price": 0.4144, "reason": "price 0.41 < 3.00 floor"}
-  ],
-  "tape_context": {
-    "note": "Concentrated AI-infrastructure unwind, not a broad risk-off. NVDA premarket 156.49 vs Nov-11 close 173.85 = -9.99% on the open board-level investigation into CEO Jensen Huang. Broad index premarket far milder: QQQ 681.72 vs 690.40 = -1.26%, SPY 755.12 vs 759.80 = -0.62%.",
-    "data_caveat": "Alpaca snapshot prevDailyBar lagged one session (returned Nov-10 closes) at scan time. All gap math in this file is re-based on verified Nov-11 1Day closes: NVDA 173.85, NBIS 154.90, CRWV 60.80, LUNR 12.19, BMNR 19.245."
-  },
   "gappers": [
     {
       "rank": 1,
-      "symbol": "NBIS",
-      "price": 128.80,
-      "gap_pct": -16.74,
-      "premarket_volume": 41299569,
-      "verify_pass": {"price": 127.07, "gap_pct": -17.97, "at": "2026-11-12T13:57:53Z"},
-      "catalyst": "Reported a large Q3 2026 beat before the open - revenue $980.8M, up 571% YoY, with first positive operating income - and sold off anyway as the whole AI-infrastructure complex de-rated alongside NVDA -10%.",
-      "headlines": [],
-      "catalyst_detail": "Nebius released Q3 2026 results before market open: revenue $980.8M, up 571% YoY and ahead of the roughly $937M consensus; operating income of +$50.4M against a $130.2M loss a year ago; adjusted EBITDA of $465.8M versus a $5.2M loss; net loss from continuing operations narrowed to $37.5M, or $0.13 per diluted share. Nine-month revenue was $1,962.1M, up 549%. Operating cash outflow from continuing operations was $273.0M for the quarter. The print is a clear beat on every headline line, and the stock is still gapping down about 18%. The company had already run +15.4% on Wednesday in sympathy with CoreWeave's Q3, so today's gap unwinds that entire move and then some, taking NBIS below its Nov-10 close of $133.96.",
-      "why": "The beat is being swamped by a sector-wide de-rating rather than contradicted by it. The marginal driver is NVDA, down 9.99% premarket on the open board-level investigation into CEO Jensen Huang, which re-prices every levered AI-capex proxy at once. Against that, the one soft spot in the print gets all the attention: $273M of quarterly operating cash outflow set against a 2026 capex program reported around $19.3B, funded by a $2B Nvidia investment, $4.33B of convertible bonds and Meta prepayments. Financing, not demand, is the bear case for the neoclouds, and a governance shock at their main supplier is exactly the headline that reopens it.",
-      "impact": "Reads as a genuine repricing rather than a one-day headline spike, and therefore not something to expect to mean-revert into the open. 41.3M premarket shares is heavy participation. The read-through is complex-wide and visible in today's own list: CRWV -12.9%, BMNR -6.3%, NVDA -10.0%, while QQQ is only -1.3% and SPY -0.6% - this is a concentrated AI-infra unwind, not broad risk-off. The one asymmetry versus peers is that NBIS now has positive operating income and positive adjusted EBITDA, a fundamental floor most neoclouds lack, so it should bottom earlier than the group if the group bottoms.",
-      "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The gap is sector-flow and governance-headline driven, not a change in the Nebius thesis; the business actually improved this quarter, so there is no durable new information here to hold for weeks.",
-      "opportunity_cost": "The book is flat - 0 of 6 position slots used, $100,000 equity all in cash, 0 of 3 weekly trades spent - so nothing existing would be displaced; the real cost is the slot and the correlation budget. Within today's own list it loses to LUNR, which is gapping up on its own fundamentals rather than down on someone else's governance scandal. It also competes directly with CRWV: both are neocloud names, so once either is on, the >0.75 correlation gate makes the second one hard to add, and NBIS is the better of the two on fundamentals. On R:R it fails at the open: a 10% trailing GTC stop sits near $116 and the 3%-minimum rule forbids anything tighter, so roughly $13 of risk needs a ~$154 target to clear 2:1 - that is yesterday's close, back through the entire gap, which is not a credible first objective. No defined support below until the gap fills or the complex stabilizes. Research only; wait for a base."
+      "symbol": "LUNR",
+      "price": 14.1,
+      "gap_pct": 15.76,
+      "premarket_volume": 8472626,
+      "catalyst": "Q3 2026 beat before the open (EPS -$0.02 vs -$0.11 est; revenue $269.3M vs $245.9M FactSet est) three days after NASA awarded it a slot in the $10B CLPS 2 lunar program.",
+      "headlines": [
+        "Intuitive Machines Expects 2026 Revenue Range $920M-$950M, Reports Q3 Revenue $269.3M vs FactSet Est $245.9M (MarketScreener)",
+        "Intuitive Machines, Inc. (LUNR) Reports Q3 Loss, Beats Revenue Estimates (Zacks)",
+        "NASA Awards Intuitive Machines Spot In $10 Billion Lunar Program (Benzinga, Nov 9)",
+        "Intuitive Machines Is No Longer Just About the Moon, CEO Sees Bigger Space Opportunity (Benzinga)"
+      ],
+      "catalyst_detail": "Intuitive Machines reported Q3 2026 at 07:30 ET, before the open. EPS came in at -$0.02 against a -$0.11 consensus (a +16.7% surprise per Zacks) and revenue was $269.3M against a $245.9M FactSet estimate (+10.7%). FY2026 revenue guidance was set at $920M-$950M, essentially in line with the $925.8M FactSet number rather than a raise. The print lands three days after NASA named the company to its $10B CLPS 2 lunar delivery program (Nov 9), and on the call the CEO reframed the story away from pure lunar landers toward broader space infrastructure-as-a-service. Benzinga shows short interest at 27.56% of float with 6.07 days to cover.",
+      "why": "A genuine earnings beat on both lines, stacked on a $10B government program award, into a 27.6%-short float. The mechanism is primarily a short squeeze on top of a real fundamental catalyst: shorts positioned for another miss were forced to cover against a beat, and the CLPS 2 award gives covering shorts no obvious re-entry. Momentum buyers then chased the gap. Note the sell side is not confirming: B. Riley cut its target $43->$34 on Nov 4 and KeyBanc $38->$30 on Nov 2, both ahead of this print.",
+      "impact": "Volume supports it: ~8.5M shares by 09:54 ET against an 8.33M full-day average, so roughly a full session of turnover in the first 25 minutes. That is real participation, not a thin headline pop. But the stock has already run from $8.62 (Nov 5) to $14.10 \u2014 +64% in five sessions, +22.9% in the last five closes alone \u2014 and it faded from a $14.35 open and a $14.62 high to $13.70 by 10:13 ET, so the gap is already leaking. Sector read-through is weak rather than confirming: this is Industrials / Aerospace & Defense, and XLI is +1.4% 1mo / -8.0% 3mo, one of the laggards, while the broad tape is in a defensive rotation (XLK -11.2% 1mo). No peer space name is moving with it; SATL (-5.5%) and ONDS (-5.2%) are both down today, which argues this is idiosyncratic to LUNR, not a space-sector bid.",
+      "horizon": "LONG_TERM",
+      "horizon_reasoning": "The CLPS 2 award and the guidance reset are structural, multi-year revenue events rather than a one-day headline, which is the LONG_TERM test. The caveat is that it does NOT align with the current sector-rotation phase in TRADING-STRATEGY.md: capital is rotating into Healthcare/Staples defensives, not Industrials, so the sector gate withholds endorsement even though the single-name catalyst qualifies.",
+      "opportunity_cost": "Nothing to displace on the book \u2014 0 open positions, $100k cash, 0% deployed, and 0 of 3 weekly trade slots used \u2014 so the cost is not a sold holding but the queued XLV $182-186 / XLP $89.00-89.50 / ABBV $285-288 pullback entries plus one of three weekly slots. The decisive problem is the 2:1 R:R gate: ATR(14) is $1.05, or 8.6% of price, so the mandated 10% trailing stop sits at just 1.16 ATR and would be taken out by a single average day's range. Clearing 2:1 against that stop requires a +20% target at $16.92, which is 2.7 ATR and above the entire post-gap range. Entering here also means paying up after a +64% five-session run with RSI 59 and the gap already fading intraday. It cannot clear 2:1 at a sane stop distance under the current rulebook."
     },
     {
       "rank": 2,
-      "symbol": "LUNR",
-      "price": 13.8839,
-      "gap_pct": 13.99,
-      "premarket_volume": 9969974,
-      "verify_pass": {"price": 13.91, "gap_pct": 14.11, "at": "2026-11-12T13:57:46Z"},
-      "catalyst": "Q3 2026 beat before the open - revenue $269.35M up 413.6% YoY, GAAP EPS -$0.02, record ~$1.9B backlog and first positive free cash flow - the first estimate beat in roughly five quarters.",
-      "headlines": [],
-      "catalyst_detail": "Intuitive Machines reported Q3 2026 before the open: revenue of $269.35M, up 413.63% YoY, and GAAP EPS of -$0.02, improved 66.67% YoY. The company reported a record contracted backlog of roughly $1.9B (up from $1.1B earlier in the year) and positive free cash flow, and set a full-year 2026 outlook of $920M revenue with positive adjusted EBITDA, giving no margin or EPS guidance. Market commentary frames this as the first beat after roughly five straight quarters of misses. It follows NASA naming Intuitive Machines to its roughly $10B CLPS 2.0 lunar-services framework earlier this month, and the company carries a $2.79B market cap against a 52-week range of $7.78 to $46.75.",
-      "why": "A company the market had priced for perpetual misses delivered a beat, a record backlog and its first positive free cash flow in the same print. That forces a re-rate off a deeply depressed base rather than an incremental move: positive FCF from a pre-profit space name removes the standing dilution-and-cash-burn objection that was the core short case, and the backlog plus CLPS 2.0 gives revenue visibility that the $2.79B cap was not discounting. Short interest had built through a five-month downtrend, so part of today's move is covering into a fundamental catalyst.",
-      "impact": "Looks sustainable rather than a one-day spike, with the usual caveat that the first hour of a 14% gap is the worst place to measure. 10.0M premarket shares against a 7.41M average full-day volume is real participation, not a thin print. The backlog and the CLPS 2.0 award are durable, multi-year items, which is what separates this from the rest of today's list. There is no sector read-through to lean on - space names have been pressured by capital rotation into the SpaceX listing, and neither RKLB nor ASTS is gapping with it - so this is idiosyncratic, which is a feature here: it is the only name on today's list not wired to the AI-infra unwind.",
-      "horizon": "LONG_TERM",
-      "horizon_reasoning": "Record backlog, inclusion in the $10B CLPS 2.0 framework and a first positive-FCF quarter are structural changes to the earnings path, not a headline, so this is worth a multi-day or multi-week swing if it holds the gap and clears the Confluence rule on a later /trade check.",
-      "opportunity_cost": "Displaces nothing held - the book is flat with $100,000 cash - so the cost is one of three weekly new-trade slots plus the opportunity to deploy that capital elsewhere. Against today's own list it is the best candidate by a wide margin: it is the only name gapping up on its own fundamentals, and it passes the correlation gate trivially because it is uncorrelated with the AI-infra cluster that makes NBIS and CRWV effectively one bet. The honest R:R constraint is entry price, not direction: a stop beneath the $12.19 prior close is about 12.3% of risk from $13.88, which needs roughly $17.30 to clear the 2:1 minimum - above the $15 round number traders are watching but far below the $46.75 52-week high, so achievable but not comfortable. That math only works near $13; chasing above about $14.50 breaks 2:1 at any sane stop. Size by ATR(14) via scripts/size.mjs at 1.0% equity risk before any entry - after a 14% gap ATR is inflated, so the rule will return a smaller position than the 20% cap allows. Research only; execution belongs to market-open or /trade."
+      "symbol": "NBIS",
+      "price": 131.39,
+      "gap_pct": -15.06,
+      "premarket_volume": 26972274,
+      "catalyst": "Q3 revenue beat big ($980.8M, +571% YoY vs $904.8M consensus) but 2026 revenue was steered to the low end of the $3.0-3.4B range while capex was raised, so the stock gave back all of Tuesday's +15.4% sympathy gap.",
+      "headlines": [
+        "Nebius Q3 earnings: revenue $980.8M, 2027 guide $12B-$13B, 2026 steered to low end, capex raised (ValueAddVC)",
+        "Nebius (NBIS) stock drops despite 571% AI revenue growth in Q3 2026 (Beinsure)",
+        "Nebius Group (NBIS) Surpasses Q3 Earnings and Revenue Estimates - surprises +149.18% EPS / +6.98% revenue (Zacks)",
+        "Nebius Q3 2026 Earnings Call: adj EBITDA margin 47.5%, prepayments cover >100% of contracted-capacity capex, site-timing risks (StockAnalysis transcript)"
+      ],
+      "catalyst_detail": "Nebius reported Q3 2026 before the open on Nov 12. Revenue was $980.8M, up 571% year over year and 8.4% above the $904.8M consensus of 17 analysts; adjusted EBITDA was $466M at a 47.5% margin against a nominal loss a year earlier; the EPS surprise was +149%. Management guided 2027 revenue to $12B-$13B and flagged Q4 pre-tax break-even. The damage came from the rest of the guide: 2026 revenue was steered to the LOW end of the previously issued $3.0-3.4B range, the 2026 capex plan was raised, and the call flagged site-timing risks on new capacity. The stock had closed up 15.44% at $154.69 on Nov 11 purely in sympathy with CoreWeave's print, so it entered today carrying expectations it had not set itself.",
+      "why": "A textbook good-quarter / bad-guide de-rating, amplified by a borrowed starting point. Investors looked past a 571% revenue beat and priced the two forward items that change the capital story: revenue to the low end of the 2026 range plus higher capex means more cash burn per dollar of revenue and a larger future financing need. Because the stock had already rallied 15.4% on someone else's earnings, the beat was fully in the price and the guide had nothing to cushion it, so the move is a round trip of the sympathy gap rather than a reaction to a bad business.",
+      "impact": "Volume is heavy and genuine at 27.0M shares, and the realized -15.1% move matches the ~14.9% implied move almost exactly, so options were correctly priced and this is an orderly re-rating rather than a liquidity break. It is not a one-day headline spike that mean-reverts: the repriced item is forward capital intensity, which persists until the next print. Sector read-through is direct and confirming \u2014 this is the same AI-infrastructure complex that is being de-rated across the board, with CRWV -6.5% today, XLK -11.2% over one month, and the unresolved NVDA governance crisis still sitting over the group. The quote is also disorderly right now (bid $120.00 / ask $134.40 at 10:13 ET), a $14 spread that makes any execution assumption unreliable.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "There is no durable long thesis to act on here: the structural news is negative (capex up, 2026 revenue to the low end) and the sector is in an active de-rating, so any long would be a mechanical bounce trade on a stock that just priced a worse capital path. It fails the LONG_TERM test and should not be carried.",
+      "opportunity_cost": "Again nothing to sell to make room, but this name was already excluded by name in this morning's pre-market log as 'explicitly NOT a candidate' for exactly this setup, and today's outcome vindicates that call \u2014 so taking it now would spend one of three weekly slots on a setup the bot had already reasoned its way out of. The R:R is the worst on the board: ATR(14) is $16.39, or 10.6% of price, so a 10% trailing stop is 0.94 ATR \u2014 literally inside one average day's range, guaranteed to be gapped or noised through. A 2:1 target would need +20% to ~$157.67, which is back above the Nov 11 close the market just rejected. With the bid/ask $14 wide, slippage alone could exceed a meaningful fraction of the intended risk. No sane stop distance clears 2:1."
     },
     {
       "rank": 3,
       "symbol": "CRWV",
-      "price": 53.10,
-      "gap_pct": -12.62,
-      "premarket_volume": 165200727,
-      "verify_pass": {"price": 52.96, "gap_pct": -12.89, "at": "2026-11-12T13:57:53Z"},
-      "catalyst": "Giving back Wednesday's +24.7% post-earnings rally as the AI-infra complex unwinds with NVDA -10%; no new company news since the Nov-10 Q3 double beat.",
-      "headlines": [],
-      "catalyst_detail": "No fresh CoreWeave news today - this is the unwind of its own earnings move. Q3, released after the Nov-10 close, was a double beat: revenue $3.66B up 168% YoY and ahead of estimates, contracted revenue backlog around $132.5B, full-year guidance raised to $13.0-13.3B, and adjusted profitability guided for the first half of 2028. Management also said it would not tap unsecured debt markets at current yields and would lean on customer-backed financing and prepayments, which was the line that calmed neocloud financing fears and lifted the whole group, NBIS included, on Wednesday. The stock closed Nov 11 at $60.80, up from $48.74 pre-earnings, and is now gapping back to roughly $53. The 52-week range is $40.58 to $138.25.",
-      "why": "Mechanically the same unwind as NBIS, from the opposite starting point. CRWV was the stock whose print lifted the group; with NVDA down 10% premarket on the Huang investigation, the AI-bubble and financing narratives both reopen, and the group hands the move back. CRWV gives back the most because it is the highest-beta and most debt-scrutinized name in the cohort - the bull case rests specifically on a financing structure that only works while capital markets stay friendly, so a confidence shock at the group's main supplier hits it hardest. Nothing in the business has changed in 48 hours; this is positioning.",
-      "impact": "Reads as forced or institutional repositioning rather than retail noise: 165.2M premarket shares against a 56.95M average full-day volume is extraordinary, and that size argues against a clean intraday mean-reversion. Two levels matter. At roughly $53 the stock is still above the $48.74 pre-earnings close, so the post-earnings gain is not yet fully erased - a break of $48.74 would be the signal the earnings move has failed outright. Below that there is no visible support until the low $40s and the $40.58 52-week low. Read-through is the whole complex: NBIS -18%, BMNR -6%, NVDA -10%, against QQQ only -1.3%.",
+      "price": 56.82,
+      "gap_pct": -6.5,
+      "premarket_volume": 36580497,
+      "catalyst": "Third day of giving back Tuesday's post-earnings pop; Q3 beat (revenue $3.66B, +168% YoY, backlog $132.5B) is being outweighed by a widening loss and AI-infra de-rating on the unresolved NVDA governance crisis.",
+      "headlines": [
+        "CoreWeave (CRWV) Q3 revenue rose 168% to $3.66B, above ~$3.55B consensus, backlog reached $132.5B from ~$104B in June (Threads/DailyMarketBrief)",
+        "CoreWeave Q3 Net Loss Widens, Revenue Rises - loss $1.27/diluted share vs $0.22 a year earlier (MarketScreener)",
+        "CoreWeave expects $13.0B-$13.3B 2026 revenue and targets $20B-$21B exit run-rate (UCapital)",
+        "CoreWeave Q3 2026 Earnings: Sold Out and Paying Up - active power 1.7GW, ~2.9x a year ago (Ren, Substack)"
+      ],
+      "catalyst_detail": "CoreWeave reported Q3 late on Nov 10: revenue of $3.66-3.7B, up 168% year over year and above the ~$3.55B consensus, with backlog expanding to $132.5B from roughly $104B in June and active power reaching 1.7GW, about 2.9x a year ago. Guidance was $13.0-13.3B for 2026 revenue with a $20-21B exit run-rate target. The offset was a GAAP net loss of $1.27 per diluted share, sharply wider than the $0.22 loss a year earlier, against a heavily debt-funded build. The stock entered the print at $48.73, popped roughly 16-25%, closed Nov 11 at $60.80, and is now unwinding that move for a third session.",
+      "why": "Mechanical post-earnings profit-taking compounded by sector contagion. The fundamental news was good, so this is not a thesis break \u2014 it is holders monetizing a 25% two-day gain into a tape that has turned hostile to the AI-infrastructure trade. The contagion channel is specific: the WSJ report that Nvidia's board was preparing to force out CEO Jensen Huang is still unresolved, NVDA is -18.7% over nine sessions, and CRWV's economics are a leveraged derivative of exactly that GPU complex. The widening loss gives sellers a clean story to point at while they de-risk.",
+      "impact": "Volume is the heaviest on today's board at 36.6M shares, so the unwind is broad rather than a thin drift. This reads as sustained rather than a one-day spike, because the driver is not a CRWV headline at all but an unresolved mega-cap governance event with a known forward date (NVDA earnings Nov 17) that can re-ignite it either way. Sector read-through is strong and confirming: NBIS -15.1% today on its own print, XLK -11.2% over one month, and this is the third straight session of give-back, which is distribution, not a single gap fill. The $132.5B backlog argues the business is intact; the tape argues nobody wants to own the financing risk right now.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "Nothing fundamental changed between Tuesday's beat and this morning; the move is flow and sentiment, which by definition has no multi-week thesis attached - though short-term here means do not buy the dip, not fade it.",
-      "opportunity_cost": "Nothing held to displace, but this is the worst use of a slot on the list. It is the highest-volatility name here and demands the widest stop: a 10% trail from $53.10 sits near $47.80, which is below the $48.74 pre-earnings marker, so the stop is placed exactly where the bear thesis gets confirmed, and clearing 2:1 from there needs roughly $63.70 - above Wednesday's close and through the whole gap. Strictly worse R:R than LUNR at strictly higher risk. It is also correlation-blocked against NBIS under the >0.75 rule: these are one neocloud bet, and of the two NBIS has the better fundamentals, so if an AI-infra entry is ever taken it should not be this one. The genuine competing use of this capital today is LUNR, which offers an uncorrelated fundamental catalyst at a third of the risk per share. Research only."
+      "horizon_reasoning": "The backlog and power growth are genuinely structural, but the price driver today is a multi-day unwind inside an actively de-rating sector with a live binary (NVDA board, NVDA earnings Nov 17) overhead. Buying a falling knife in the weakest sector is a days-horizon trade against the rotation, not a swing hold, so it does not clear LONG_TERM.",
+      "opportunity_cost": "Nothing to displace on the book, but this is the same name the 07:12 ET scan already ranked #1 and declined, so re-raising it costs a weekly slot on an idea already passed over twice today. R:R fails the same way as NBIS: ATR(14) is $5.73, or 9.4% of price, so a 10% trailing stop is 1.06 ATR and sits inside a single day's expected range in the middle of an active three-day unwind. A 2:1 target requires +20% to ~$68.18, which is above the Nov 11 close and roughly 2.1 ATR away, while the stock is trending down and the sector gate points the other way. Taking it would also concentrate the first position of a 90-day-flat book into the single weakest sector on the 1-month table, against a defensive rotation the bot has documented for two straight sessions. Cannot clear 2:1 at a sane stop."
     },
     {
       "rank": 4,
-      "symbol": "BMNR",
-      "price": 18.0997,
-      "gap_pct": -5.93,
-      "premarket_volume": 31911096,
-      "verify_pass": {"price": 18.03, "gap_pct": -6.31, "at": "2026-11-12T13:57:48Z"},
-      "catalyst": "No company news; an Ethereum-treasury proxy sliding with the combined crypto and AI risk-off. Latest disclosure (Nov 9) showed 6.07M ETH and $14.3B crypto plus cash and marketable securities, down from $16.2B on Oct 12.",
-      "headlines": [],
-      "catalyst_detail": "No BitMine-specific catalyst surfaced for today, and the company's own recent disclosures are weekly treasury updates rather than events. The latest, dated Nov 9, put holdings at 6.07M ETH with total crypto plus cash and marketable securities of $14.3B; the same series read $14.5B on Nov 2, $15.0B on Oct 26 and $16.2B on Oct 12, so the treasury has shed roughly $1.9B of mark in a month on ETH price alone while the token count barely moved from 6.03M to 6.07M. The company has repurchased 22.9M shares in 2026 at an average $17.48, about $399.6M in total. This is the second consecutive gappers run in which BMNR appears with a null catalyst, and it is the smallest gap on today's list.",
-      "why": "BMNR trades as a levered claim on Ethereum, so the equity moves on two things at once: the mark on the treasury and the premium or discount the market pays over that NAV. In a tape where crypto and high-beta AI are both being de-risked in the same session, those compress together, which is why the equity falls faster than the token. There is no information event here - the market is simply remarking a holding company.",
-      "impact": "Beta, not information, which is the finding rather than a gap in the research. 31.9M premarket shares is heavy for an $18 stock, but heavy volume on no news is repricing, not a signal, and it carries no edge in either direction - expect it to keep tracking ETH rather than mean-revert on its own. No read-through to anything in the book. The one real level is the $17.48 buyback average sitting just under the current price: a soft floor, since the company has demonstrated it buys around there, but not a support level in the technical sense.",
+      "symbol": "AMPX",
+      "price": 8.01,
+      "gap_pct": -6.32,
+      "premarket_volume": 966106,
+      "catalyst": "Continued slide after Tuesday's Q3: revenue beat at $39.1M (+83% YoY) and FY2026 outlook raised to ~$145M, but adjusted EPS of -$0.02 missed the -$0.01 consensus.",
+      "headlines": [
+        "Amprius Technologies Reports Wider Than Expected Q3 2026 Loss - GAAP net loss $0.02/sh vs $0.01 consensus (AlphaStreet)",
+        "Amprius Q3 Revenue Jumps 83% to $39.1 Million, Raises 2026 Outlook to ~$145 Million (Minichart)",
+        "Amprius Technologies falls 7% on third quarter earnings miss (Investing.com)",
+        "Amprius: Q3 Earnings Snapshot - loss of $3.5 million in the third quarter (WTOP/AP)"
+      ],
+      "catalyst_detail": "Amprius reported Q3 2026 on Nov 10. Revenue was $39.1M, up 83% from $21.4M a year earlier and comfortably ahead of the ~$35.9M consensus, and the company raised its full-year 2026 outlook to roughly $145M from at least $140M. The miss was on the bottom line: a GAAP/adjusted loss of $0.02 per share against a $0.01 consensus, a $3.5M net loss for the quarter. The stock fell about 7% on the print and is extending that today, a third session lower. The sell side remains constructive in aggregate \u2014 15 Buy, 1 Hold, 0 Sell across 18 analysts with an average target of $23.14 against an $8.01 print.",
+      "why": "A narrow bottom-line miss is being weighted over a clear top-line beat and a raised outlook, which is what happens to pre-revenue-scale growth names when the tape turns risk-averse. For a silicon-anode battery maker still losing money, a penny of extra loss reads as the unit economics not yet inflecting, and in a week where capital intensity is being punished across the board (see NBIS) that is the number the market chooses to price. The move is a slow bleed on light volume rather than a gap-and-go, so it is positioning drift, not a repricing event.",
+      "impact": "Volume is the lightest on the board at 966k shares, which cuts both ways: the decline is not being driven by heavy institutional distribution, but it also means there is no capitulation flush to buy against. Against the stock's own history this looks closer to a drift than a one-day headline spike, and the five-day change of just +1.1% shows the name has gone nowhere while the rest of the board whipsawed. The bid/ask is tight at $8.15/$8.16, so this is the most orderly quote of the five. Sector read-through is limited \u2014 there is no clean peer moving with it today, and the broader EV/battery complex is not a named leader or laggard on the current sector table, so this is close to a single-name drift inside a risk-off tape.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "A crypto-beta drawdown with no catalyst and no durable thesis; the move is a derivative of an asset price rather than a change in the business, and crypto proxies are not in the favored row of the TRADING-STRATEGY.md rotation table.",
-      "opportunity_cost": "Displaces nothing held, and has the weakest claim on capital of the four: the smallest gap at -5.9%, barely over the 5% threshold, zero documented catalyst for the second run in a row, and a thesis that reduces to long ETH - which is not a stock thesis and which this strategy has no mandate for. Taking it would burn one of three weekly trades on unlevered crypto beta while LUNR offers a documented fundamental re-rate for the same slot. It cannot be scored against the 2:1 R:R minimum at all, because with no catalyst there is no defined target to measure reward against; a 10% stop near $16.30 would be risk against an unspecified reward. If crypto exposure is wanted it should be a deliberate allocation decision, not a gapper trade. Pass."
+      "horizon_reasoning": "The raised FY outlook is mildly structural, but a one-cent EPS miss on an unprofitable small cap is not a thesis event in either direction, and the name sits in no favored sector under the current defensive rotation. There is no durable catalyst to hold for, so this is a days-horizon drift, not a swing thesis.",
+      "opportunity_cost": "With 0 positions there is nothing to sell, so the real cost is relative: AMPX would consume one of three weekly slots and roughly 20% of equity at the cap, while offering the weakest catalyst on the board \u2014 a three-day-stale earnings reaction with a mixed print. Ranked against today's own list it is strictly behind LUNR, which at least has a fresh, idiosyncratic, same-morning catalyst. On R:R, ATR(14) is $0.757, or 8.9% of price, putting the mandated 10% trailing stop at 1.12 ATR \u2014 inside the noise band again. A 2:1 target needs +20% to ~$9.61, about 2.1 ATR, which the $23.14 average analyst target makes defensible on a long horizon but which has no near-term catalyst to drive it now that earnings are behind it. Marginal at best and it does not clear 2:1 against a 10% stop."
+    },
+    {
+      "rank": 5,
+      "symbol": "BMNR",
+      "price": 18.12,
+      "gap_pct": -5.82,
+      "premarket_volume": 5346818,
+      "catalyst": "No issuer-specific negative \u2014 an ETH-treasury proxy tracking crypto lower (ETH ~-3.9%, BTC ~-3.6%) at roughly 2x beta, on the same day it disclosed ETH holdings above 6 million tokens.",
+      "headlines": [
+        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach over 6 Million Tokens with Total Crypto, Cash & Marketable Securities Holdings of $17.2B; ~4.9% of ETH supply (TMX Money, Nov 12)",
+        "Bitmine stock rises after ETH holdings exceed $1 billion (Investing.com, earlier)",
+        "ETH 2,042.21 -3.85% / BTC-USD 71,293.76 -3.56% on the session (MSN / Benzinga tape)"
+      ],
+      "catalyst_detail": "There is no adverse company announcement. BitMine Immersion disclosed today that its ether holdings passed 6 million tokens, about 4.9% of total ETH supply, with total crypto, cash and marketable securities of $17.2B. The stock is nevertheless down 5.8% because it functions as a levered ETH treasury vehicle and the underlying is falling: ETH is around $2,042, off roughly 3.9% on the session, with BTC near $71,294, off about 3.6%. The 5.8% equity move against a 3.9% move in the asset is close to the ~2x beta the 07:12 ET scan logged for this name earlier today, when it was -5.04% against ETH -2.4%.",
+      "why": "Pure NAV mechanics with leverage, not a company event. BMNR's equity is a claim on a crypto balance sheet, so its price is ETH's price geared up by the market's willingness to pay a premium or discount to that NAV. When ETH falls, both legs move against the holder: the asset value drops and the premium compresses as risk appetite fades. The 6M-token disclosure is a position update, not a catalyst \u2014 it tells you the size of the exposure, which is precisely why the stock is falling faster than the coin.",
+      "impact": "Volume at 5.3M shares is moderate and the quote is tight ($18.08/$18.09), so this is an orderly beta move rather than a dislocation. It is not a headline spike that mean-reverts on its own, because nothing about BMNR is driving it \u2014 it will mean-revert if and only if ETH does, which makes any position here a crypto directional bet wearing an equity ticker. The read-through is the broader risk-off tape rather than a sector: BTC -3.6%, GLD -2.62%, VIX 18.33 (+4.8%), SPY -0.21%, with 6 of today's 7 qualifying gappers red. BMNR is also the weakest name on the board on trend, -11.5% over five sessions and -13.6% over twenty, so the beta has been working against it for a month.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The only driver is ETH's direction, which is not a structural thesis the rulebook can underwrite, and the name is in a confirmed month-long downtrend. There is no M&A, guidance reset, contract or regime change to hold for, so it fails the LONG_TERM test outright.",
+      "opportunity_cost": "Nothing to displace, but this is the third time today BMNR has surfaced and been passed over (it ranked #3 on the 07:12 ET scan at -5.04%), and a slot spent here buys crypto beta rather than equity edge \u2014 the strategy is a stocks-only momentum book, and sector-momentum rules cannot be applied to a name whose sector is effectively 'ether'. R:R is the least-bad of the five and still fails: ATR(14) is $1.411, or 7.3% of price, the lowest ATR% on the board, which puts the 10% trailing stop at 1.37 ATR \u2014 the only one meaningfully outside a one-day range, but still well inside a two-day move for a crypto proxy. A 2:1 target needs +20% to ~$21.74, about 2.6 ATR, against a name that has fallen 13.6% in twenty sessions and whose upside depends entirely on an ETH reversal nobody on this desk is forecasting. Buying a downtrending 2x-beta proxy into a risk-off tape is the opposite of the documented defensive rotation."
+    },
+    {
+      "rank": 6,
+      "symbol": "SATL",
+      "price": 3.59,
+      "gap_pct": -5.53,
+      "premarket_volume": 1147652,
+      "catalyst": "Giving back part of its post-earnings pop: Q3 revenue hit a record $16M (+342% YoY) with positive adjusted EBITDA of $1.2M, but the release also pushed key constellation transfers out to mid-2027.",
+      "headlines": [
+        "Satellogic outlines mid-2027 transfers; Q3 revenue hits a record $16 million, up 342%, with positive adjusted EBITDA of $1.2 million (UCapital, Nov 11)"
+      ]
+    },
+    {
+      "rank": 7,
+      "symbol": "ONDS",
+      "price": 5.43,
+      "gap_pct": -5.24,
+      "premarket_volume": 18374913,
+      "catalyst": "Falling with the broader drone complex despite its own order momentum - the company has disclosed over $165M in new orders since its last update, including an ~$56M award.",
+      "headlines": [
+        "Ondas Secures Over $165 Million in New Orders Since Last Order Update; Awarded ~$56M (Benzinga)",
+        "Ondas stock has wavered in the past few months, moving from last year's high of $15.30 to the current level, mirroring the performance of other drone companies (StockAnalysis.com)"
+      ]
     }
   ]
 }
