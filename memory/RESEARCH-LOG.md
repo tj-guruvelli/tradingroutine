@@ -19537,3 +19537,16 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 - No Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit; this run has 0). JSON saved to `data/setup-scan_cloud_2026-11-13_1537ET.json`.
 - **PEPG caveat:** RSI 79.2 is already over the strategy's 70 no-new-long line (also showed up as a gap-down name in this afternoon's 10:08 ET gappers scan) — the setup trigger fires here mechanically from ADX/EMA alone (local `/setup-scan`'s dropped `stock_score >= 6` gate would likely have filtered names like this), but the rulebook's RSI ceiling already disqualifies it for a fresh long regardless of grade.
 - Research-only run. No orders placed, no stops moved.
+
+### Setup Scan (17:38 ET, cloud)
+- 60 symbols scanned, 0 errors. `grade_a_possible: false` (ny_time 17:38, outside 10:00-15:30 ET) — Setup A not evaluated this run, so 0 grade-A is not a real "no setups" signal.
+- 2 grade-B hits, 0 grade-A — same two names as the 15:37 ET run, px moved intraday-to-close:
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| ------ | ----- | -------- | --------- | ------- |
+| PEPG | B | Momentum confluence | daily swing | ADX 23.7, EMA9 $3.69 > EMA21 $3.11, RSI 79.2 (overbought), px $3.80 |
+| BKSY | B | Momentum confluence | daily swing | ADX 23.6, EMA9 $21.64 > EMA21 $20.40, RSI 62.0, px $24.04 |
+
+- No Telegram/ClickUp notification per STEP 4 (notify only on >=1 grade-A hit; this run has 0). JSON saved to `data/setup-scan_cloud_2026-11-13_1738ET.json`.
+- **PEPG caveat unchanged:** RSI 79.2 still over the strategy's 70 no-new-long line — disqualified for a fresh long regardless of grade. Both names unchanged from the prior run except price drift (PEPG $4.39→$3.80, BKSY $23.99→$24.04); no new candidate entered or dropped between runs.
+- Research-only run. No orders placed, no stops moved.
