@@ -19353,3 +19353,67 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 | ------ | ----- | -------- | --------- | ------- |
 | PEPG | B | Momentum confluence | daily swing | px $4.29, RSI 83.83, ADX 20.54, EMA9 $3.35 > EMA21 $2.92 |
 | BKSY | B | Momentum confluence | daily swing | px $23.38, RSI 66.35, ADX 24.35, EMA9 $21.23 > EMA21 $20.12 |
+
+## 2026-11-13 — Pre-Market Research (Day 91, Friday, cloud run)
+
+### Account
+- Equity $100,000.00 | Cash $100,000.00 (100%) | BP $400,000 (4x) | Daytrade count 0 | **0 positions | 0 open orders**
+- `balance_asof: 2026-11-12` (fresh). Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending (151st+ session).
+- Peak equity $100,000 -> drawdown 0.0%. Circuit breaker NOT tripped.
+- Deployment 0% vs the mandated **75-85%** — 91st straight trading day under-deployed. See Decision.
+
+### Market context (Apify web-search/web-fetch + native WebSearch fallback; Alpaca for all price data; no Yahoo used)
+- **Cash close Nov 12:** S&P 500 **7,592.40 (-0.35%)**, ~2.9% below the Oct 6 record 7,818.93. Nasdaq Composite -0.39% to 25,366.09; Dow -189.40 to 52,297.09; **Russell 2000 -1.66% to 2,799.06** — small caps the worst of the four, breadth still deteriorating.
+- **Alpaca closes Nov 12:** SPY 757.16 (20-SMA 759.50 / 50-SMA 764.82 / 200-SMA 731.59, RSI 48.5); QQQ 688.20 (20-SMA 696.95 / 50-SMA 718.62 / **200-SMA 681.95** — QQQ is 0.9% above its 200-SMA, the last support level standing).
+- **VIX 18.35, -1.87% (-0.35)** — Cboe spot, Nov 13 11:02. Prev close 18.70, open 18.78, 52wk 13.38-35.30. Easing, not stressed: the tape is de-rating in an orderly way, not panicking.
+- **Oil (TradingEconomics, not Yahoo):** WTI **$88.22 (-0.59%)**, Brent **$95.73 (-0.09%)**. WTI -7.27% 1mo but **+46.8% YoY**. On track for a **second consecutive weekly decline** — Saudi October output +26%, Iraq at a wartime record, EIA crude build **+4.657M bbl** (largest since August, reversing five weekly draws). Offsetting: Trump said the US "no longer needs a deal" with Iran and told VP Vance to deprioritize Tehran talks; Iran demands the naval blockade lift first and refuses to remove enriched material. Supply recovery is currently beating the war premium.
+- **Rates: 10Y ~5.103%, +0.10pt** — reported in Nov 12/13 press coverage; **no primary Treasury source retrieved this run, logged as approximate.** A 5.10% 10Y is the highest cited level of the challenge window and is the quiet driver under the equity de-rate.
+- **THE DRIVER — NVDA's governance crisis RESOLVED, badly.** **Jensen Huang resigned as CEO and from the board, effective immediately, Thursday Nov 12**, after reports of extramarital affairs — one with a woman US officials allege is a Chinese intelligence asset (disputed, uncharged). **CFO Colette Kress is interim CEO; Harvey C. Jones (ex-Synopsys) becomes the company's first-ever board chair. No permanent successor named.** NVDA closed **-4.34%** after being down as much as **-14%** intraday; retail bought ~$111M at the open, >40x a normal open. Bernstein cut its target **$400 -> $200**; KeyBanc flagged a material step-up in strategic/organizational/execution risk; Dan Ives puts the company 25-30% lower without Huang; Janus Henderson's Buckley dissents and calls it a "clearing event." Neoclouds took the read-through: **CRWV -12%, NBIS -17%.**
+- **NVDA tape (Alpaca daily closes):** 200.17 (11/4) -> 181.59 -> 186.70 -> 178.64 -> 168.78 -> 173.85 -> **166.07 (11/12)**. RSI(14) **25.9**, 18.7% below its 200-SMA (204.33), ATR 5.93% of price. **NVDA reports Tuesday Nov 17** — its first print with an interim CEO and no chair precedent.
+- **Today's calendar: one item — PPI for October 2026 (BLS) at 08:30 ET.** Aggregator consensus (Investing.com-style calendars, **not** a published survey — treat as soft): headline **+0.4% m/m** after +1.3%, **~6.6% y/y** vs 6.3% prior; core **+0.3% m/m**, ~5.0% y/y. A 6.6% y/y producer print lands one hour before the bell into a 5.10% 10Y.
+- **Earnings: none today** on the verified calendar. CSCO, AMAT and Cerebras printed after Thursday's close. Next week: retail sales + **DIS/HD/NVDA Tue 11/17**, **FOMC minutes (Oct 27-28) Wed 11/18** + TGT/TJX/PANW, WMT Thu 11/19.
+- **Held-ticker news:** N/A — zero positions.
+
+### Sector momentum (computed from Alpaca daily bars — no third-party sector table)
+| ETF | Last | 1mo | 3mo | YTD |
+|---|---|---|---|---|
+| XLY Disc | 120.44 | **+8.0%** | +1.9% | +1.7% |
+| XLV Health | 187.83 | **+8.0%** | **+12.2%** | +20.8% |
+| XLRE RE | 44.34 | +6.8% | -2.0% | +9.8% |
+| XLF Fin | 58.19 | +6.8% | +0.1% | +5.9% |
+| XLP Staples | 91.07 | +5.8% | +5.8% | +17.2% |
+| XLB Mat | 52.32 | +5.4% | -0.4% | +13.4% |
+| XLU Util | 43.82 | +5.0% | -1.1% | +1.5% |
+| XLI Ind | 169.42 | +1.4% | -9.2% | +7.2% |
+| SPY | 757.16 | -1.6% | -2.5% | +10.8% |
+| XLC Comm | 107.58 | -2.9% | -4.7% | -8.0% |
+| XLE Energy | 64.31 | -4.9% | +3.9% | **+40.9%** |
+| XLK Tech | 173.73 | **-8.8%** | -8.6% | +20.4% |
+- **Defensive rotation intact and now broadening.** XLK is still the worst sector on both 1mo (-8.8%) and 3mo (-8.6%); XLV leads on 3mo (+12.2%) and ties for first on 1mo. New this run: **9 of 11 sectors are positive on 1mo while SPY is -1.6%** — the index decline is almost entirely the cap-weighted tech complex, not broad distribution. XLE remains the YTD leader (+40.9%) but is the second-worst 1mo sector (-4.9%) and sits **below its 20-SMA (66.34)** — Rule 9 still fails it.
+
+### Trade ideas (catalyst + entry/stop/target)
+1. **XLV (Health Care Select) — queued idea, still the best candidate, still gated.** Catalyst: AI-complex de-rating now compounded by NVDA's leadership vacuum; XLV is the only sector leading on both 1mo and 3mo. Technicals: 187.83 vs 20-SMA 183.05 / 50-SMA 174.74 / 200-SMA 160.03 (long-bias filter **PASS**), RSI(14) **65.1** (under the 70 no-new-long line), ATR(14) 3.394 (**1.81%**). Entry: **limit 108 sh $182-186** (unchanged, now ~1-3% below spot and sitting on the 20-SMA). Stop: 10% trailing GTC -> ~$165.60 on a $184 fill. Target: +20% -> ~$220.80. **Gate: FAILS 2:1** — +20% is **11.0 ATR**, not a swing-horizon move.
+2. **ABBV — single-name expression of the same rotation, best ATR math of the three.** Catalyst: healthcare leadership plus defensive bid; no binary pending. 294.49 vs 20-SMA 289.15 / 50-SMA 274.81 / 200-SMA 240.40 (**PASS**), RSI 62.0, ATR 6.814 (2.31%). Entry: pullback to **$285-288**. Stop: 10% trail -> ~$257.50. Target: +20% -> ~$345. **Gate: FAILS 2:1** — +20% is **8.6 ATR**.
+3. **XLP (Staples) — lower-beta alternate.** 91.07 vs 20-SMA / 200-SMA 84.83 (**PASS**), RSI 60.1, ATR 1.634 (1.79%). Entry on a 20-SMA retest **$89.00-89.50**; stop ~$80.3; target ~$107. **Gate: FAILS 2:1** — **11.2 ATR**.
+- **NVDA: explicitly NOT a candidate, despite RSI 25.9.** The oversold reading is real and the "clearing event" bull case is coherent, but: no permanent CEO, **earnings Tuesday**, ATR 5.93% of price so the mandated 10% stop is **1.69 ATR** and gets gapped through on the print, and XLK is the worst sector on 1mo/3mo so Rule 9 fails. Three independent rule failures. Watch only.
+- **XLE/CVX/XOM: screened and rejected on momentum, corrected mid-run.** First pass flagged energy as oversold (simple-average RSI read XLE 32.8 / CVX 30.4 / XOM 34.2); **recomputed with Wilder smoothing the true readings are XLE 46.7, CVX 47.4, XOM 46.9 — neutral, not oversold.** Energy has risen five straight sessions but is -4.9% on 1mo and below its 20-SMA, and the oil tape is in its second down week on recovering Saudi/Iraqi supply. No entry. **Use Wilder smoothing for every RSI from here — the simple-average variant materially misreads a mean-reverting tape.**
+
+### Risks
+- **PPI at 08:30 ET is a binary one hour before the bell.** Consensus ~6.6% y/y producer inflation against a 10Y at 5.10%. A hot print re-prices rate-cut odds and hits every long simultaneously; the futures read at the open is not the day's read.
+- **NVDA earnings Tuesday with an interim CEO and no permanent successor.** NVDA is ~6% of the S&P 500. Entering any tech-adjacent long before that print is taking an uncompensated index-level binary.
+- Consensus figures for PPI come from third-party calendars, not a published survey — the "hot vs cool" framing could be wrong at the margin.
+- 10Y at 5.10% is sourced from press coverage, not a primary Treasury release. Flagged, not cited as precise.
+- Chasing the defensive rotation at its highs: XLV is +8.0% in a month with RSI 65.1 — late to the move, not early.
+- **Structural rule conflict — the proximate cause of 91 days without an entry, unchanged.** The mandated 10% trailing stop fixes initial risk at 10%, so the 2:1 floor demands **+20%**. For XLV that is 11.0 ATR, XLP 11.2 ATR, ABBV 8.6 ATR — no quality large-cap or sector ETF clears it in a swing window. The names that *can* move 20% (high-ATR gappers, post-earnings AI beta) fail the same rule from the opposite side, where a 10% stop is under 1.4 ATR and dies to ordinary noise (the 11/12 gappers table documented 7 of 7 in that band). **The stop rule and the R:R rule are mutually exclusive across the entire investable volatility spectrum.** Operator decision required: allow a tighter initial stop (e.g. 1.5-2 ATR) with the 10% trail as a ceiling, make the stop ATR-proportional, or lower the R:R floor to ~1.5:1 for sub-2%-ATR instruments. Logged, not self-resolved — 4th consecutive session escalated.
+
+### Decision
+**HOLD.** 0/3 trades used; the week of Nov 9 closes today at **0/3**. Nothing clears the Entry Checklist: XLV/ABBV/XLP all pass catalyst + 200-SMA + confluence but fail the 2:1 R:R gate against the mandated 10% stop; NVDA fails on three rules; XLE/CVX/XOM fail Rule 9 on 1mo momentum. Independently of the structural conflict, **today is not an entry day**: an 08:30 PPI print lands before the bell with the index below its 20- and 50-SMA, and the sector most likely to set the tape reports Tuesday under an interim CEO. Keep the **XLV $182-186** limit idea live as a pullback-only entry for the market-open run. Patience > activity.
+
+### Tooling notes
+- Apify `web-search`: **DuckDuckGo provider returned HTTP 502 on 3 of 4 calls** (UPSTREAM_SEARCH_ERROR / "Failed to reach the search backend"). Google provider returned 200 on all 4 retries but was **stale or off-date on 3 of 4** (2020/2022/2025 oil and PPI hits). This inverts the 11/12 recommendation to prefer DuckDuckGo — **treat provider choice as per-run trial-and-error, not a fixed preference**, and fall through to native WebSearch quickly.
+- Native **WebSearch (`mode: extended`, `blocked_domains` set)** recovered everything the Apify calls missed — the Huang resignation, the Nov 12 closing levels, the PPI consensus — on the first attempt each time. Fourth consecutive session where native WebSearch beats Apify on freshness.
+- `apify--web-fetch` **timed out at 60s on 2 of 5 calls** (CNBC quote page, TradingEconomics PPI page) after succeeding on 3 (regardsofwallstreet x2, cboe.com, tradingeconomics crude). Consistent with the 11/12 note: best-effort, not a reliable fallback.
+- **YAHOO FINDING — a non-Yahoo URL served Yahoo data.** `regardsofwallstreet.com/premarket` returned clean, well-formed futures/VIX/WTI/gold/10Y tiles, then disclosed in its own footer: *"Futures, index and stock quotes are delayed feeds from Yahoo Finance."* **All of its quote numbers were discarded and re-sourced** — VIX from Cboe, oil from TradingEconomics, index closes from Alpaca and CNBC-sourced press. Only its *verified calendar* content (PPI 08:30 ET, no earnings today, next-week schedule) was kept, since that is the site's own data, not the Yahoo feed. **The domain-based Yahoo block does not catch Yahoo data laundered through an aggregator — check the data-provenance footer of any new quote source before citing it.**
+- Yahoo block otherwise held: suffix plus `blockedDomains` on every Apify call, `blocked_domains` on every WebSearch. **Zero finance.yahoo.com URLs surfaced.**
+- **RSI method bug caught in-run** — see trade idea 5. Simple-average RSI read energy as oversold (30-35) when Wilder RSI reads it neutral (46-47), a 14-point error large enough to have produced a bad entry. Any script or command in this repo computing RSI should be audited for the same mistake.
+- All price data, SMAs, ATR and sector momentum computed from `scripts/alpaca.sh bars` directly, excluding today's partial bar. `scripts/size.mjs` not used (stale-price defect logged 11/12, still unfixed).
