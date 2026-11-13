@@ -671,3 +671,51 @@ Template for each entry:
 - Watch for recurrence of the Apify RAG web browser tool itself being unavailable (not just degraded results) — one data point this week, needs a second to call it a pattern
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week is the single strongest data point yet that the zero-entry discipline is protecting capital on real tail-risk days, not just avoiding regret in calm ones
 ### Overall Grade: B
+
+## Week ending 2026-11-13
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | +2.57% (SPY proxy: $735.40 → $754.27, Alpaca daily bars, Fri Nov 6 close → Fri Nov 13 close) |
+| Bot vs S&P | -2.57% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held through the week's defining shock: NVDA CEO Jensen Huang resigned Nov 12 (extramarital-affair scandal, one relationship alleged — disputed — to a Chinese intelligence asset); NVDA closed -4.34% after an intraday -14%, with CRWV -12%/-17% and NBIS -17%/-21% read-through, continuing into a 10-name AI-infra/space/quantum gap-down cluster (-5% to -10%) on Nov 13 — zero forced trades into a binary, high-ATR, single-company-driven tape
+- **Quantified the standing structural rule conflict with hard data instead of another qualitative flag**: across Nov 12 (7 names) and Nov 13 (10 names), 17 of 17 high-ATR gappers landed in a band where the mandated 10% trailing stop is 0.71-1.16 ATR — i.e. inside one ordinary day's range — while clearing the 2:1 R:R floor simultaneously requires 8.6-11.2 ATR on the low-ATR quality names (XLV, XLP, ABBV). The stop rule and the R:R rule are now shown to be mutually exclusive across the full investable volatility spectrum, not just asserted
+- Caught and fixed an RSI methodology bug mid-run (simple-average RSI misread XLE/CVX/XOM as oversold at 30-35; Wilder-smoothed RSI correctly reads them neutral at 46-47) — corrected before it could seed a bad entry, and flagged "use Wilder smoothing everywhere" for every script in the repo
+- Caught a Yahoo-data-laundering source (`regardsofwallstreet.com` disclosed in its own footer that its quotes were delayed Yahoo Finance feeds) — all of its figures discarded and re-sourced from Cboe/TradingEconomics/Alpaca; the domain-suffix ban alone would have missed this
+- Found and worked around a real notification defect: the mandated full-deep-dive-in-message format for a 5-ticker gappers hit produced a 5,558-char body against Telegram's 4,096-char limit, returning HTTP 400 on both Telegram and the ClickUp fallback (same oversized payload) — manually chunked into parts so the alert still delivered instead of silently failing
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- **20th consecutive zero-entry week** (91 trading days since launch, Jul 9) — sat in 100% cash through a +2.57% S&P week, the largest single-week opportunity cost since Aug 7 (-3.6%)
+- Structural rule conflict (10% mandated stop vs 2:1 R:R floor) now escalated 5 consecutive sessions, this week with a full quantitative sample (17/17) behind it — still unresolved, still "operator decision required," zero response
+- **Regression in TRADE-LOG discipline**: no dedicated Market-Open entry logged for Nov 10 or Nov 13 (2 of 5 sessions) — the missing-entry pattern had been clean for 8 straight weeks (Sep 25-Nov 6) and partially recurred this week, though the underlying HOLD logic is still traceable via RESEARCH-LOG pre-market/midday notes for both days
+- `tradingview-data` MCP still unavailable the entire week (15th+ straight week) — the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself
+- `CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID` still literal placeholder strings — recurring HTTP 500/400 failures, unresolved since first found Sep 18 (9th+ straight week)
+- `scripts/perplexity.sh` still returns HTTP 401 — credential remains invalid/unrotated (4th+ straight week)
+- Apify MCP connector hard-failed on 3 consecutive gappers scans Nov 13 morning (07:09, 08:15, 09:17 ET — three distinct error shapes: `CLIENT_HTTP_NOT_IMPLEMENTED`, `CONNECT_TIMEOUT`, `REQUEST_TIMEOUT`) before recovering at 10:08 ET — no output impact this time (zero gappers qualified during the outage), but the connector is flaky, not reliably up
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27 (20th consecutive weekly review), still unresolved — no operator response yet
+### Key Lessons
+- Turning the stop/R:R conflict from a repeated qualitative flag into a 17/17 quantitative sample is the same forcing-function pattern that finally got the gappers stale-baseline bug fixed after 5 recurrences (Sep 4) — a concrete, measured incident moves things that a re-flag alone doesn't; this is the strongest case yet for an operator decision on initial-stop sizing
+- The discipline held under the single largest company-specific governance shock of the challenge (an unscheduled CEO resignation on a sex-scandal/espionage allegation) without needing `tradingview-data` MCP at all — ATR math, Rule 9 sector momentum, the RSI ceiling, and the chase rule did the filtering independent of the broken primary data path, reinforcing the Nov 6 review's finding that the rules themselves are sound
+- The TRADE-LOG logging-gap regression (Nov 10/13) after 8 clean weeks shows "resolved" claims in this review need re-confirmation each week, not a one-time close-out — worth treating any multi-week-clean streak as provisional until it's explicitly re-checked the following week
+### Adjustments for Next Week
+- Escalate the stop/R:R structural conflict as the #1 operator item, now backed by a 17/17 quantified sample (Nov 12-13) — recommend the operator pick one of: an ATR-proportional initial stop (1.5-2x ATR, 10% as ceiling), or a lower R:R floor (~1.5:1) for sub-2%-ATR instruments
+- Escalate the $10k/$100k baseline mismatch (20 weeks), ClickUp placeholder IDs (9+ weeks), and Perplexity 401 (4+ weeks) again as one bundled operator action item — joint escalation in each of the last 2 reviews has produced no action
+- Patch `scripts/telegram.sh` and `scripts/clickup.sh` to auto-chunk messages above ~3,500-3,900 chars — newly confirmed failure mode this week, will recur on every multi-ticker deep-dive hit until fixed
+- Re-verify the Market-Open TRADE-LOG entry gap next week — confirm whether Nov 10/13 were isolated misses or a recurrence of the pre-Sep-25 pattern
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's NVDA-shock response is the clearest evidence yet the discipline holds under single-company tail risk, not just macro-wide ones; every blocker remains operational/data-pipeline, not the rules themselves
+### Overall Grade: C
