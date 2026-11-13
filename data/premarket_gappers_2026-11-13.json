@@ -1,11 +1,12 @@
 {
-  "scanned_at": "2026-11-13T13:16:11Z",
+  "scanned_at": "2026-11-13T14:17:00Z",
   "deep_dive_cap": 5,
-  "scan_time_et": "08:15",
+  "scan_time_et": "09:17",
   "gap_threshold_pct": 5.0,
+  "price_floor": 3.0,
   "symbols_scanned": 69,
-  "symbols_with_fresh_price": 58,
-  "max_abs_gap_pct_observed": 3.69,
-  "note": "Scan succeeded; zero watchlist names met the 5.0% gap threshold. Largest absolute move was RR +3.69% at $0.849, which fails the $3.00 price floor regardless; largest mover clearing the price floor was BMNR -2.71%. No deep dives performed (nothing qualified). Run fired 08:15 ET, 15 minutes ahead of the 08:30 ET PPI print that is today's likely gap catalyst. Feed: delayed_sip (15-min delayed pre-market). Apify MCP failed to connect this session (503); no impact, as zero hits meant zero catalyst fetches.",
+  "symbols_with_fresh_price": 59,
+  "max_abs_gap_pct_observed": 6.33,
+  "note": "Scan succeeded; zero watchlist names met the 5.0% gap threshold AND the $3.00 price floor. One name cleared the gap bar: AGMH -6.33% at $0.41, rejected on the price floor. Largest mover clearing the price floor was UMAC +2.62% at $12.14. No deep dives performed (nothing qualified). THIRD cloud run of the day (after 07:09 and 08:15 ET) and the FIRST one after the 08:30 ET PPI print the earlier runs flagged as today's likely gap catalyst: PPI landed headline +0.3% MoM vs +0.4% expected, core +0.5% MoM vs +0.3% expected, 6.5% YoY -- and it produced no watchlist dispersion. Feed: delayed_sip (15-min delayed pre-market). Apify MCP failed to connect this session (CONNECT_TIMEOUT); no impact, as zero hits meant zero catalyst fetches.",
   "gappers": []
 }

@@ -19449,3 +19449,24 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 - **Apify MCP server failed to connect this session** (`Apify (503) … CLIENT_HTTP_NOT_IMPLEMENTED`), so STEP 2/3 catalyst research was unavailable. **No impact on this run's output** — zero tickers cleared the gap filter, so zero catalyst fetches were required. Had the tape produced hits, the run would have fallen through to the WebFetch/Benzinga path. Worth watching: this is a hard connect failure, distinct from the intermittent 502/timeout flakiness logged 11/12 and 11/13 pre-market.
 - Alpaca wrapper clean on all calls; feed returned fresh pre-market prints.
 - Yahoo block: no external search or fetch was performed, so no exposure this run.
+
+### Gappers (auto-scan 09:17 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | **No qualifying gappers.** 0 of 69 watchlist names cleared the 5.0% threshold **and** the $3.00 price floor. |
+
+- **Scan succeeded — quiet tape, not a data failure.** Third cloud run of the day (after 07:09 and 08:15 ET). 59 of 69 requested watchlist symbols returned a priced pre-market print; 10 returned no fresh print and were skipped rather than faked. Verified by re-running at `GAP_THRESHOLD=0.0`.
+- **One name did clear the gap bar and was rejected on price:** AGMH **-6.33% at $0.4099** (vol 102,733). Sub-$1 and ~100k pre-market shares — correctly filtered, not a missed trade.
+- Largest mover **clearing the $3.00 floor** is **UMAC +2.62% at $12.14** (vol 2.2M). Nothing above $3 is within half the entry bar.
+- Largest movers, all sub-threshold or sub-$3: AGMH -6.33% (sub-$3), OPEN +3.64% (sub-$3), RR +2.86% (sub-$3), UMAC +2.62%, RCAT +2.29%, BW +2.10%, TRMD +2.05%, NBIS -2.04%, BMNR -1.72%, STM +1.66%, GOOG +1.55%, BWLP +1.40%.
+- **Deep dive: none.** The cap is 5, but nothing qualified, so ranks 1-5 are empty and ranks 6-10 do not exist. No deep-dive fields fabricated; `gappers` is an empty array in `data/premarket_gappers_2026-11-13.json`.
+- **PPI resolved — and it was a non-event for this watchlist.** The 07:09 and 08:15 entries both flagged that they fired *before* the 08:30 ET PPI print and that this 09:00 run would be the first to see post-PPI dispersion. It now has, and there is none. October PPI printed **headline +0.3% MoM** (vs +0.4% consensus, modestly cool), **core +0.5% MoM** (vs +0.3% consensus, hot), **6.5% YoY**; September revised up 1.3% → 1.4%. Goods +0.5%, services +0.2%. A cool-headline/hot-core split is a genuinely mixed print, which is the most plausible reason it produced no single-name dispersion: no clean directional read for momentum to trade. Macro backdrop per pre-release coverage remains a market expecting a December Fed **hike** — core at 4.9% YoY does not argue against that.
+  - *Caveat:* BLS release figures above are from the 11/13 BLS news-release page via search; no post-release market-reaction reporting was available yet at scan time, so the "why no dispersion" reading is inference, not sourced fact.
+- **Three consecutive empty scans is now a tape read, not a timing artifact.** The prior two empties had a ready explanation (both fired pre-PPI). This one does not. Max abs gap by run: 2.60% (07:09) → 3.69% (08:15) → 6.33% (09:17, but sub-$1). Same names lead every run. Treat today as a low-dispersion session: the 10:00/11:00 re-fires are unlikely to find a 5% gapper on this universe absent fresh single-name news.
+- No notification sent: hits = 0 and the scan did not error, per the routine's send rule.
+- Research-only run. No orders placed, no stops moved.
+
+#### Tooling notes
+- **Apify MCP failed to connect again this session** — now three distinct error shapes in one run (`CONNECT_TIMEOUT` after 30s, `REQUEST_TIMEOUT`, `503 CLIENT_HTTP_NOT_IMPLEMENTED`). This is the **third consecutive cloud run today** with Apify unavailable (07:09, 08:15, 09:17). **No impact on output** — zero tickers cleared the filter, so zero catalyst fetches were required. But the STEP 2/3 catalyst path is now effectively offline for the day; if the 10:00/11:00 runs *do* find a gapper, they will be on the WebFetch/Benzinga fallback for catalysts. Worth operator attention: this has stopped looking like flakiness and started looking like a broken connector.
+- WebSearch fallback used for the PPI print (Apify down), with the Yahoo domain block applied via `blocked_domains`. No Yahoo URL resolved; no Yahoo-sourced figure cited.
+- Alpaca wrapper clean on all calls; feed `delayed_sip` returned fresh pre-market prints.
