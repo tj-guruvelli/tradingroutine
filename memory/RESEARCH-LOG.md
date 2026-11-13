@@ -19417,3 +19417,16 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 - Yahoo block otherwise held: suffix plus `blockedDomains` on every Apify call, `blocked_domains` on every WebSearch. **Zero finance.yahoo.com URLs surfaced.**
 - **RSI method bug caught in-run** — see trade idea 5. Simple-average RSI read energy as oversold (30-35) when Wilder RSI reads it neutral (46-47), a 14-point error large enough to have produced a bad entry. Any script or command in this repo computing RSI should be audited for the same mistake.
 - All price data, SMAs, ATR and sector momentum computed from `scripts/alpaca.sh bars` directly, excluding today's partial bar. `scripts/size.mjs` not used (stale-price defect logged 11/12, still unfixed).
+
+### Gappers (auto-scan 07:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | **No qualifying gappers.** 0 of 69 watchlist names met the 5.0% threshold. |
+
+- **Scan succeeded — this is a quiet tape, not a data failure.** 56 of 69 symbols returned a fresh, trustworthy pre-market print (feed `delayed_sip`, latest trade 06:51 ET). Verified by re-running at `GAP_THRESHOLD=0.0`: the full unfiltered list returned 56 priced rows with a **maximum absolute gap of 2.60%**, less than half the 5.0% entry bar.
+- Largest movers, all sub-threshold: RR +2.60%, BW +2.47%, BMNR -2.44%, RCAT +2.41%, STM +2.39%, UMAC +2.20%, AMPX +1.90%, SATL +1.70%.
+- 13 symbols returned no fresh print and were skipped rather than faked: AST, KLIC, KOG, LAKE, PTNM, QMMM, SYNA, WLDS (genuinely untraded pre-market at this hour) plus CMB, BREA, ETF, OL, TECH (watchlist-parser false tickers picked out of prose, not real holdings — worth a WATCHLIST.md cleanup).
+- **Deep dive: none.** The cap is 5, but nothing qualified, so ranks 1-5 are empty. No deep-dive fields fabricated; `gappers` is an empty array in `data/premarket_gappers_2026-11-13.json`.
+- **Timing caveat — this run is early relative to today's real catalyst.** The scan fired at 07:09 ET, but **PPI prints at 08:30 ET** (flagged in this morning's pre-market entry). Today's gaps, if any, will be made by that release, not by overnight news. The 09:00 / 10:00 / 11:00 ET re-fires are the ones that will see them.
+- No notification sent: hits = 0 and the scan did not error, per the routine's send rule.
+- Research-only run. No orders placed, no stops moved.
