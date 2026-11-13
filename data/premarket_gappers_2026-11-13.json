@@ -1,12 +1,94 @@
 {
-  "scanned_at": "2026-11-13T14:17:00Z",
+  "scanned_at": "2026-11-13T15:08:00Z",
+  "scan_label": "10:08 ET cloud re-fire (4th of 4 today)",
   "deep_dive_cap": 5,
-  "scan_time_et": "09:17",
-  "gap_threshold_pct": 5.0,
-  "price_floor": 3.0,
-  "symbols_scanned": 69,
-  "symbols_with_fresh_price": 59,
-  "max_abs_gap_pct_observed": 6.33,
-  "note": "Scan succeeded; zero watchlist names met the 5.0% gap threshold AND the $3.00 price floor. One name cleared the gap bar: AGMH -6.33% at $0.41, rejected on the price floor. Largest mover clearing the price floor was UMAC +2.62% at $12.14. No deep dives performed (nothing qualified). THIRD cloud run of the day (after 07:09 and 08:15 ET) and the FIRST one after the 08:30 ET PPI print the earlier runs flagged as today's likely gap catalyst: PPI landed headline +0.3% MoM vs +0.4% expected, core +0.5% MoM vs +0.3% expected, 6.5% YoY -- and it produced no watchlist dispersion. Feed: delayed_sip (15-min delayed pre-market). Apify MCP failed to connect this session (CONNECT_TIMEOUT); no impact, as zero hits meant zero catalyst fetches.",
-  "gappers": []
+  "volume_field_note": "Market opened 09:30 ET; 'premarket_volume' holds consolidated session volume at scan time, not pre-market-only volume. gap_pct is change vs prior close.",
+  "tape_context": {
+    "spy": {"last": 751.64, "prev_close": 757.16, "chg_pct": -0.73, "vs_sma200_pct": 2.74},
+    "qqq": {"last": 677.78, "prev_close": 688.20, "chg_pct": -1.51, "sma200": 681.95, "vs_sma200_pct": -0.61, "note": "QQQ has LOST its 200-SMA, the last support level flagged in this morning's pre-market entry"},
+    "nvda": {"last": 161.75, "prev_close": 166.07, "chg_pct": -2.60},
+    "read": "Concentrated AI-infrastructure/high-beta unwind, not a broad market crash. SPY -0.73% while all 10 qualifying names are -5% to -10%. Day-2 continuation of the Nov 12 Jensen Huang resignation shock."
+  },
+  "gappers": [
+    {
+      "rank": 1, "symbol": "NBIS", "price": 115.64, "gap_pct": -10.11, "premarket_volume": 11171732,
+      "catalyst": "Nebius guided FY2026 revenue to the low end and pushed third-party datacenter capacity into H1 2027; day-2 continuation of the Nov 12 NVDA leadership shock that took it down ~17-21%.",
+      "headlines": [],
+      "catalyst_detail": "Q3 printed revenue of $981M (+571% YoY) with a $50.4M operating profit, beating consensus, but management guided FY2026 revenue to the LOW END of its prior forecast and disclosed that third-party datacenter capacity originally expected in 2026 slips into H1 2027. Shares fell roughly 17-21% on Nov 12 on that guidance reset compounded by Jensen Huang's resignation as NVDA CEO. Today extends the de-rate another -10%.",
+      "why": "Guiding to the low end plus a capacity-timeline slip is a direct hit to the compounding narrative that justified the multiple, and the NVDA leadership vacuum removes the sector's anchor sponsor in the same week. Neocloud names are levered beta on AI-capex confidence, so a confidence shock de-rates them several multiples faster than the hyperscalers it flows through.",
+      "impact": "11.17M shares by 10:08 ET against a 0.75M 20-day IEX average is genuine institutional distribution, not a thin headline spike. Structurally broken: $115.64 vs 50-SMA $196.50 (-41%) and 20-SMA $153.62, RSI(14) 38.3. Sector read-through confirmed same session (CRWV -7.7%; Roundhill Neocloud ETF -13% on Nov 12).",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The catalyst is structural but points DOWN; a guidance reset argues for continued de-rating, not a long, and Rule 9 fails outright with XLK the worst sector on both 1mo (-8.8%) and 3mo (-8.6%).",
+      "opportunity_cost": "With 0 open positions nothing is displaced; the real cost is one of 3 weekly trades, and the week of Nov 9 closes today at 0/3, so an entry here spends the week's last slot catching a knife. R:R fails decisively on the stop side: ATR(14) is $18.12 = 14.06% of price, so the mandated 10% trailing stop is 0.71 ATR and gets taken out by less than one ordinary day's range. The +20% needed to clear 2:1 is only 1.42 ATR and is theoretically reachable, but the stop triggers first with near-certainty."
+    },
+    {
+      "rank": 2, "symbol": "PEPG", "price": 4.64, "gap_pct": -7.94, "premarket_volume": 666885,
+      "catalyst": "PepGen priced a $125.0M public offering of common stock into its Phase 2 DM1 data pop, converting the spike into permanent dilution.",
+      "headlines": [],
+      "catalyst_detail": "PepGen announced a proposed $125.0M public offering of common stock on Nov 10 and priced it on roughly Nov 11-12 (Business Wire), immediately after the stock ran about +110% intraday on Phase 2 DM1 topline data showing no serious adverse events. Q3 net loss widened to $19.4M from $18.0M. One analyst raised a price target to $10 from $4 on the data.",
+      "why": "Textbook biotech catalyst-then-raise. Management monetized the data spike by selling equity into it; the offering price sets a near-term ceiling and the new share count re-bases per-share value. Everyone who bought the pop is now marked against a known supply overhang.",
+      "impact": "666,885 shares vs a 0.23M 20-day average is roughly 3x - consistent with offering-related repositioning rather than fresh news flow, so the bleed toward the clearing price likely continues. No sector read-through: this is idiosyncratic biotech and the ONLY name on today's list whose move is not AI-complex beta.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "A dilutive raise is a one-time re-basing event; the stock drifts to the offering clearing price and then trades on the next clinical readout, not on today's print.",
+      "opportunity_cost": "Nothing displaced at 0 positions. ATR(14) $0.520 = 10.28% of price, so the 10% stop is 0.97 ATR - again inside one day's range - and +20% is 1.95 ATR. It fails before R:R even matters: PEPG is the one name trading far ABOVE its 50-SMA ($5.06 close vs $2.78) with RSI(14) 79.1, over the 70 no-new-long line. Two independent rule failures, and buying a freshly diluted post-spike biotech would displace the only name on the list with a real franchise (CRWV)."
+    },
+    {
+      "rank": 3, "symbol": "CRWV", "price": 52.23, "gap_pct": -7.72, "premarket_volume": 15042034,
+      "catalyst": "CoreWeave is round-tripping its post-earnings rally as the NVDA leadership shock re-prices AI-infrastructure credit; debt approached $47B at quarter end.",
+      "headlines": [],
+      "catalyst_detail": "Q3 beat substantially - revenue $3.66B (+168% YoY), adjusted EBITDA $2.26B, revenue backlog $132.5B up from $104B (+271% YoY), FY26 guidance raised, customer concentration improved from roughly 85% to under 35% for the top client - and the stock rallied about 23-26% on Nov 11. Jensen Huang's Nov 12 resignation then knocked it down roughly 14% from those highs. Today extends the move another -7.7%. Debt approached $47B at quarter end.",
+      "why": "The bull case was always that backlog and hyperscaler demand outrun the debt load. Remove NVDA's leadership anchor and the market re-prices the odds that AI-capex commitments get honored - which attacks precisely the backlog assumption that services $47B of debt. A highly levered balance sheet converts a sentiment shock into a solvency question.",
+      "impact": "15.04M shares vs a 1.59M 20-day average is roughly 9.5x, the heaviest participation on the list - real repricing, not a spike. Clean mean-reversion looks unlikely: the stock has round-tripped a 25% earnings rally in two sessions, which says the macro has fully discounted the beat. Sector read-through strong (NBIS -10.1% same session).",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Fundamentals are genuinely LONG_TERM-constructive, but price is being set by AI-complex sentiment and by an NVDA earnings print on Tue Nov 17 that CoreWeave cannot influence - no durable thesis survives inside this week.",
+      "opportunity_cost": "Nothing displaced at 0 positions; cost is a weekly trade slot. ATR(14) $6.392 = 11.29%, so the 10% stop is 0.89 ATR and +20% is 1.77 ATR - fails on the stop side like every other name here. The binding cost is timing: NVDA reports Tuesday Nov 17, so any CRWV long carried past Monday is an uncompensated bet on NVDA's first print under an interim CEO with no permanent successor named. Of today's ten this has the best fundamental story, which makes it the one worth re-examining AFTER Nov 17 rather than now."
+    },
+    {
+      "rank": 4, "symbol": "BW", "price": 4.50, "gap_pct": -7.41, "premarket_volume": 679644,
+      "catalyst": "No fresh Nov 13 catalyst; a securities class action alleging misleading statements about a $2.4B AI data-center power contract remains the standing overhang as the sector bid disappears.",
+      "headlines": [],
+      "catalyst_detail": "No new Nov 13 news surfaced. The live overhang is a securities class action over a $2.4B power-generation contract: the complaint alleges Babcock & Wilcox made materially false or misleading statements about an AI data-center power deal, class period Nov 5 2025 to Mar 11 2026, with Pomerantz, Rosen and Levi & Korsinsky all soliciting claimants. The stock has ground down through the autumn ($4.56 on Oct 28, $4.07 on Nov 2 per ChartMill) into today's $4.50.",
+      "why": "BW's entire bid was 'small-cap levered to AI data-center power demand.' Litigation alleging that exact deal was overstated removes the thesis, and today's AI-infrastructure unwind removes the sector bid at the same moment - the same mechanism hitting CRWV and NBIS lands on BW with a worse balance sheet and no earnings cushion to absorb it.",
+      "impact": "679,644 shares vs a 0.28M 20-day average is about 2.4x - elevated but far below the CRWV/NBIS multiples, which reads as sympathy selling in a thin name rather than a discrete news event. A sub-$5 price plus unresolved litigation makes mean-reversion unreliable even if the complex bounces.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "There is no durable thesis to hold: the operative catalyst is an unresolved lawsuit, which is an open-ended overhang with no scheduled resolution date rather than a tradeable event.",
+      "opportunity_cost": "Nothing displaced at 0 positions. ATR(14) $0.455 = 9.35% of price - the only name on the list where the mandated 10% stop (1.07 ATR) even slightly exceeds one ATR, and still well inside normal two-day noise; +20% is 2.14 ATR. Taking it would spend a weekly slot on a litigated sub-$5 name while passing on CRWV, which has the same sector exposure plus $132.5B of backlog. Lowest-quality setup in the top 5."
+    },
+    {
+      "rank": 5, "symbol": "ASTS", "price": 32.11, "gap_pct": -6.93, "premarket_volume": 2032470,
+      "catalyst": "AST SpaceMobile missed Q3 revenue and widened its loss while announcing the new Blacklift rocket program, extending cash burn into a tape that has stopped paying for long-duration growth.",
+      "headlines": [],
+      "catalyst_detail": "Q3 2026 revenue was $42.3M, up 187% YoY but short of roughly $46M consensus, with a loss of $0.44/sh against $0.41 expected and $52.3M of stock-based compensation. Rising BlueBird satellite spend plus the newly announced Blacklift rocket program weigh on near-term cash, and this follows an August one-time charge for the loss of the BlueBird 7 satellite.",
+      "why": "A revenue miss on a pre-scale story is survivable; a revenue miss plus a brand-new capital program is not, because it lengthens the cash-burn runway exactly when the market has stopped funding duration. With the 10Y near 5.10%, long-dated space names de-rate on the discount rate alone before any company-specific news.",
+      "impact": "2.03M shares vs a 0.52M 20-day average is roughly 3.9x. The read-through is the single most important pattern on today's list: LUNR -6.5%, SATL -5.4% and RDW -5.2% are all moving in lockstep with no individual news, which is evidence of factor selling across the space complex rather than five separate stories.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Blacklift is structural but it is a cost program, not a revenue catalyst, and nothing in the thesis resolves inside a swing window - the next real datapoint is satellite deployment, quarters away.",
+      "opportunity_cost": "Nothing displaced at 0 positions. ATR(14) $4.060 = 11.77%, so the 10% stop is 0.85 ATR and +20% is 1.70 ATR. It also fails the long-bias filters independently: $32.11 sits below both the 20-SMA ($38.20) and 50-SMA ($50.29) with RSI(14) 38.7, so Rule 9 and the trend filter both reject it. An entry would consume a weekly slot on the fifth-best expression of a trade whose best expression (CRWV) is already rejected on timing."
+    },
+    {
+      "rank": 6, "symbol": "LUNR", "price": 12.1799, "gap_pct": -6.52, "premarket_volume": 2178908,
+      "catalyst": "No fresh catalyst; giving back the Nov 9-12 run (+15% on NASA selecting it among eight providers, then +16-18% on Q3 revenue $269.35M, +413% YoY, EPS -$0.02) as the space complex sells off.",
+      "headlines": []
+    },
+    {
+      "rank": 7, "symbol": "SATL", "price": 3.33, "gap_pct": -5.40, "premarket_volume": 735654,
+      "catalyst": "No fresh catalyst found; small-cap VLEO imaging name moving with the broader space complex. (A Yahoo Finance result ranked first on this query and was discarded per the no-Yahoo rule.)",
+      "headlines": []
+    },
+    {
+      "rank": 8, "symbol": "AMPX", "price": 7.9186, "gap_pct": -5.17, "premarket_volume": 748284,
+      "catalyst": "No fresh catalyst; silicon-anode battery name marketed as 'physical AI' adjacent, unwinding with the rest of high-beta growth.",
+      "headlines": []
+    },
+    {
+      "rank": 9, "symbol": "RDW", "price": 7.6152, "gap_pct": -5.17, "premarket_volume": 1565727,
+      "catalyst": "No fresh catalyst; already down 12.3% since its last earnings report, now selling off in sympathy with the space-defense complex.",
+      "headlines": []
+    },
+    {
+      "rank": 10, "symbol": "RGTI", "price": 9.8093, "gap_pct": -5.04, "premarket_volume": 2488085,
+      "catalyst": "No fresh catalyst; last real news was Nov 11 (99.5% gate fidelity, up to $100M Dept. of Commerce funding, FY26 revenue guide ~$20M). Quantum complex selling with high-beta tech, as on a prior -10% day attributed to a broad technology selloff.",
+      "headlines": []
+    }
+  ]
 }
