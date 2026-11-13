@@ -2844,3 +2844,10 @@ straight session, operator review pending. Matches today's pre-market
 research (deployment 0% vs mandated 75-85%, 91st straight day
 under-deployed; structural rule conflict 10%-stop vs 2:1-R:R floor remains
 unresolved).
+
+### Nov 13, EOD Snapshot (Day 91, Friday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-12`). Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 9, closed out at zero). 91st trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 152nd+ straight session, operator review pending. Structural rule conflict (10%-stop vs 2:1-R:R floor) remains the proximate cause of the drought and still needs an operator decision.
