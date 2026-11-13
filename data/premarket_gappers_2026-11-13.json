@@ -1,11 +1,11 @@
 {
-  "scanned_at": "2026-11-13T12:09:31Z",
+  "scanned_at": "2026-11-13T13:16:11Z",
   "deep_dive_cap": 5,
-  "scan_time_et": "07:09",
+  "scan_time_et": "08:15",
   "gap_threshold_pct": 5.0,
   "symbols_scanned": 69,
-  "symbols_with_fresh_price": 56,
-  "max_abs_gap_pct_observed": 2.60,
-  "note": "Scan succeeded; zero watchlist names met the 5.0% gap threshold. Largest absolute move on the list was RR +2.60%. No deep dives performed (nothing qualified). Feed: delayed_sip (15-min delayed pre-market).",
+  "symbols_with_fresh_price": 58,
+  "max_abs_gap_pct_observed": 3.69,
+  "note": "Scan succeeded; zero watchlist names met the 5.0% gap threshold. Largest absolute move was RR +3.69% at $0.849, which fails the $3.00 price floor regardless; largest mover clearing the price floor was BMNR -2.71%. No deep dives performed (nothing qualified). Run fired 08:15 ET, 15 minutes ahead of the 08:30 ET PPI print that is today's likely gap catalyst. Feed: delayed_sip (15-min delayed pre-market). Apify MCP failed to connect this session (503); no impact, as zero hits meant zero catalyst fetches.",
   "gappers": []
 }

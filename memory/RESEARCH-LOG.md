@@ -19430,3 +19430,22 @@ grade_a_possible: false (outside 10:00-15:30 ET; Setup A not evaluated, 0/60 che
 - **Timing caveat — this run is early relative to today's real catalyst.** The scan fired at 07:09 ET, but **PPI prints at 08:30 ET** (flagged in this morning's pre-market entry). Today's gaps, if any, will be made by that release, not by overnight news. The 09:00 / 10:00 / 11:00 ET re-fires are the ones that will see them.
 - No notification sent: hits = 0 and the scan did not error, per the routine's send rule.
 - Research-only run. No orders placed, no stops moved.
+
+### Gappers (auto-scan 08:15 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | **No qualifying gappers.** 0 of 69 watchlist names met the 5.0% threshold. |
+
+- **Scan succeeded — quiet tape, not a data failure.** Second cloud run of the day (after 07:09 ET). 58 of 69 requested watchlist symbols returned a priced pre-market print; 11 returned no fresh print and were skipped rather than faked. Verified by re-running at `GAP_THRESHOLD=0.0`: full unfiltered list returned 58 priced rows with a **maximum absolute gap of 3.69%**, still well under the 5.0% bar.
+- The 3.69% top print is **RR at $0.849**, which fails the $3.00 price floor regardless. Largest mover that clears the price floor is **BMNR -2.71% at $17.95**.
+- Largest movers, all sub-threshold: RR +3.69% (sub-$3), BMNR -2.71%, NBIS -2.33%, NIO -1.97% (sub-$3), RCAT +1.91%, AMPX +1.80%, STM +1.79%, BWLP +1.77%, NOC -1.66%, KLIC +1.63%.
+- **Drift vs the 07:09 run is minimal** — max abs gap moved 2.60% → 3.69%, and the same names lead (RR, BMNR, NBIS, RCAT, STM, AMPX). One hour of additional pre-market tape produced no new dispersion.
+- **Deep dive: none.** The cap is 5, but nothing qualified, so ranks 1-5 are empty and ranks 6-10 do not exist. No deep-dive fields fabricated; `gappers` is an empty array in `data/premarket_gappers_2026-11-13.json`.
+- **Timing caveat still binding — this run is 15 minutes ahead of the day's actual catalyst.** Fired 08:15 ET; **PPI prints at 08:30 ET**. Like the 07:09 run, this scan is structurally blind to the event most likely to set today's gaps. The **09:00 / 10:00 / 11:00 ET re-fires are the first that will see post-PPI dispersion** — two consecutive empty scans before 08:30 are the expected result, not evidence the watchlist is stale.
+- No notification sent: hits = 0 and the scan did not error, per the routine's send rule.
+- Research-only run. No orders placed, no stops moved.
+
+#### Tooling notes
+- **Apify MCP server failed to connect this session** (`Apify (503) … CLIENT_HTTP_NOT_IMPLEMENTED`), so STEP 2/3 catalyst research was unavailable. **No impact on this run's output** — zero tickers cleared the gap filter, so zero catalyst fetches were required. Had the tape produced hits, the run would have fallen through to the WebFetch/Benzinga path. Worth watching: this is a hard connect failure, distinct from the intermittent 502/timeout flakiness logged 11/12 and 11/13 pre-market.
+- Alpaca wrapper clean on all calls; feed returned fresh pre-market prints.
+- Yahoo block: no external search or fetch was performed, so no exposure this run.
