@@ -19988,3 +19988,20 @@ TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER
 No Telegram/ClickUp notification sent (0 grade-A hits — matches the
 local `/setup-scan` quiet rule). Candidate: none for `/trade` or
 `market-open.md`'s next read of `data/setup-scan_cloud_*.json`.
+
+### Setup Scan (17:37 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60/60 watchlist tickers checked, 0
+errors. `grade_a_possible: false` — `setup_a_skipped_reason: "outside
+10:00-15:30 ET"` (run at 17:37 ET, well past the Setup A intraday-breakout
+cutoff and past this run's 16:30 ET scheduled cadence slot per the
+CLOUD CADENCE NOTE — next-day daily-swing-only candidates expected from
+this slot, none fired). **0 hits — no Grade A or Grade B setups across the
+full universe this run.** No ranked table to print (empty result set).
+
+TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER
+--- | --- | --- | --- | ---
+(none) | — | — | — | —
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches the
+local `/setup-scan` quiet rule). Candidate: none for `/trade` or
+`market-open.md`'s next read of `data/setup-scan_cloud_*.json`.
