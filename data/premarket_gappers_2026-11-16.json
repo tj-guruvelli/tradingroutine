@@ -1,239 +1,111 @@
 {
- "scanned_at": "2026-11-16T14:09:00Z",
- "scanned_at_et": "2026-11-16 09:09 ET",
- "run": "3 of 4",
- "deep_dive_cap": 5,
- "deep_dive_cap_note": "Ranks 1-5 (NBIS, CRWV, BMNR, BE, KLIC) received the full deep dive. Ranks 6-8 (BLSH, BW, AMKR) received quick-scan catalyst only and are NOT silently dropped - they are listed here and in RESEARCH-LOG Part A with a catalyst line each. BLSH is new to the scan this run and is the most materially new name of the day; it lands at rank 6 so the cap gives it quick-scan treatment, but it is flagged in the headline finding because it adds a third binary event to Wed Nov 18.",
- "filters": {
-  "gap_threshold_pct": 5.0,
-  "min_price": 3.0,
-  "premarket_volume_filter": "NOT APPLIED - Alpaca's snapshot endpoint exposes no premarket-volume field, so premarket_volume is null (not zero) for every row. The volume reported is prior_session_volume: the prior session's full-day consolidated volume."
- },
- "universe": {
-  "symbols_scanned": 69,
-  "source": "memory/WATCHLIST.md"
- },
- "baseline": {
-  "prev_close_session": "2026-11-13 (Friday)",
-  "note": "Last completed daily bar is Fri 2026-11-13 for all 8 symbols (304 bars each), so all eight are genuine Monday-vs-Friday gaps."
- },
- "account": {
-  "equity": 100000,
-  "cash": 100000,
-  "positions": 0,
-  "trades_used_this_week": 0,
-  "trades_allowed_per_week": 3,
-  "deployment_pct": 0
- },
- "crypto": {
-  "eth_fri": 1927.5,
-  "eth_mon": 1801.47,
-  "eth_chg_pct": -6.54,
-  "btc_fri": 68245.82,
-  "btc_mon": 64000.67,
-  "btc_chg_pct": -6.22,
-  "btc_sunday_low": 62100,
-  "note": "Alpaca crypto-bars (primary source, not a scraped quote page). BTC Sunday low $62,100 was its lowest since July 14, after a ~$2B weekend liquidation flush; 6th consecutive weekly BTC loss."
- },
- "decision": "NO ACTION - research only by mandate (STEP 8). Independently: 8 of 8 fail the 200-SMA long-bias filter, 7 of 8 fail Rule 9 (below 20-SMA with XLK worst sector), and 4 of 8 have a 10% stop inside one ATR. Week of Nov 16 stays 0/3 trades used.",
- "gappers": [
-  {
-   "rank": 1,
-   "symbol": "NBIS",
-   "price": 106.6,
-   "gap_pct": -8.01,
-   "premarket_volume": null,
-   "prior_session_volume": 48852589,
-   "catalyst": "5th session of the post-earnings collapse and the worst gap in the scan; no new company news since Nov 13 (a dateFrom=2026-11-14 search returned zero rows), so this is pure continuation: Q3 revenue +571% and a beat, but FY26 guide top end cut, capacity delays flagged, capex to ~$45B; Baird $340->$200, BofA ->$265",
-   "catalyst_detail": "Q3 (Nov 12) delivered revenue $980.8M, +571% YoY and ahead of consensus, with adjusted net income turning positive at +$90.9M from a -$100.4M adjusted loss a year earlier. The market traded the guidance instead: Nebius lowered the top end of FY26 revenue guidance, attributed data-centre capacity delays, and raised capex toward ~$45B. Shares fell -20.25% Nov 12 and -9.92% Nov 13, with Baird cutting $340->$200 and BofA ->$265. Today extends the slide to a fifth session at $106.60, ~64.4% below the $299.72 52-week high. A fresh news search bounded to Nov 14 onward returned zero results, confirming no new information today.",
-   "why": "Beat the quarter, broke the story. Revenue growth was never the swing factor; a guidance cut plus capacity delays plus a ~$45B capex number converts the thesis from self-funding compounder to capital-hungry builder with execution risk - and it landed into Huang's NVIDIA resignation, which de-rated every Nvidia-backed neocloud at once. With no new catalyst today, the incremental move is positioning and sector beta, not information.",
-   "impact": "Most damaged chart in the scan and a sustained de-rating, not a spike to fade: -29.5% vs 20-SMA, -45.2% vs 50-SMA, -40.6% vs 200-SMA, on prior-session volume of 48.9M. The five-session path 154.90 -> 128.91 -> 115.84 -> (Mon) 106.60 is -31.2%. Read-through is identical to CRWV - one trade expressed twice, not two independent signals.",
-   "horizon": "SHORT_TERM",
-   "horizon_reasoning": "The guidance reset is structural but structurally bearish; a long thesis needs the capex and capacity-delay questions answered first, and XLK fails sector momentum on both 1mo and 3mo.",
-   "opportunity_cost": "Account is flat ($100,000, 0 positions), so nothing is displaced - the real cost is one of three weekly trade slots. ATR14 is 17.19% of price, the widest in the scan, so a 10% stop is 0.58 ATR, barely over half an average day's range, near-certain to fire on noise alone; the +20% target is 1.16 ATR. Fails the 2:1 R:R gate outright at every permitted stop distance. Would burn a weekly slot on the worst-trending name in the worst-performing sector, one day before the NVDA print that caused the move. Dominated on R:R shape within today's own list by KLIC (1.45 ATR stop). Research only, no order.",
-   "technicals": {
-    "atr14_pct": 17.19,
-    "rsi14": 35.8,
-    "vs_sma20_pct": -29.5,
-    "vs_sma50_pct": -45.2,
-    "vs_sma200_pct": -40.6,
-    "stop_in_atr": 0.58,
-    "target_in_atr": 1.16,
-    "sma20": 151.14,
-    "high_52w": 299.72,
-    "vs_52w_high_pct": -64.4
-   }
+  "scanned_at": "2026-11-16T15:09:20Z",
+  "run_label": "Run 4 of 4 today — 10:08 ET (cron 0 15 * * 1-5 UTC = 10:00 ET in EST; the routine doc's ET labels run an hour late in winter, as logged at 07:09/08:08/09:09)",
+  "deep_dive_cap": 5,
+  "volume_field_note": "premarket_volume is NULL for every row, not zero — Alpaca's snapshot endpoint exposes no premarket-volume field, so the >=50000 filter was NOT applied (consistent with the 09:09 ET run). prev_session_volume is the prior full session's consolidated volume and is reported in its place. Not fabricated.",
+  "market_context": {
+    "spy_close_prev": 754.27, "spy_now": 745.06, "spy_pct": -1.22,
+    "qqq_close_prev": 680.01, "qqq_now": 665.74, "qqq_pct": -2.1,
+    "regime": "RISK-OFF, NDX-led",
+    "driver": "Continuation of the AI-complex unwind that began 2026-11-12, when Nvidia CEO Jensen Huang resigned (NVDA fell ~8% to a 16-month low, ~$600B of market value erased, market cap back below $4T). Confirmed via CNBC, WSJ, Reuters and NBC News. NVDA reports Tuesday after the close with an interim CEO and no named successor.",
+    "event_pileup": "Unchanged from the 09:09 ET run and still the dominant risk: NVDA Tuesday 2026-11-17 after the close, then THREE events on Wednesday 2026-11-18 — KLIC fiscal Q4, BLSH Q3 pre-market, and the FOMC minutes. Four binaries in three sessions."
   },
-  {
-   "rank": 2,
-   "symbol": "CRWV",
-   "price": 49.05,
-   "gap_pct": -7.68,
-   "premarket_volume": null,
-   "prior_session_volume": 80168979,
-   "catalyst": "7th session of the neocloud de-rate and now the 2nd-widest gap: Q3 beat + FY26 guide raise given back in full as Huang's NVIDIA exit repriced Nvidia-backed AI clouds; ~64.5% off its 52wk high. The Nov 10 backlog conflict logged at 08:08 is now RESOLVED at ~$133B",
-   "catalyst_detail": "Q3 (Nov 10) was a beat, not a miss - revenue $3.66B (+168% YoY, up >$1B sequentially), FY26 guidance raised to $13.0-13.3B vs ~$12.9B consensus, and customer concentration improved to no customer above ~35% from ~85% at the start of the year. The stock surged ~25%, then reversed completely over six sessions (60.80 -> 56.59 -> 53.10 -> Mon 49.05). The backlog source conflict flagged in the 08:08 entry (one feed at $55.6B/+271% vs three at ~$132.5B/+138%) is now resolved: a Nov 16 Stocktwits neocloud comparison independently confirms ~$133B, so the majority figure stands and the minority figure is discarded.",
-   "why": "A financing-and-sentiment re-rate, not an earnings problem. The same quarter carried Q3 capex $14.5B, an FY capex guide of $37-39B, $846M quarterly interest expense and a $709M loss - the equity is a leveraged bet on AI capex continuing. Huang's exit removes the perceived Nvidia backstop for exactly that vendor-financed model, so the market reprices the structure regardless of the backlog beat.",
-   "impact": "Sustained repricing, not a headline spike - seven consecutive down sessions on prior-session volume of 80.2M, the heaviest in the scan, now ~64.5% below the $138.23 52-week high: -10.8% vs 20-SMA, -32.4% vs 50-SMA, -44.9% vs 200-SMA. Sector read-through is the story itself: NBIS is the identical trade, BE/BW its power-derivative expression.",
-   "horizon": "SHORT_TERM",
-   "horizon_reasoning": "The driver is a live binary (Huang succession plus NVDA Tuesday after the close, ~+/-7-9% implied), not a settled reset, and XLK is the worst sector on both 1mo and 3mo.",
-   "opportunity_cost": "Nothing to displace (flat), so the cost is one of three weekly slots. A 10% stop is 0.76 ATR - inside one average day, taken out by noise before any thesis can resolve; +20% is 1.51 ATR. Cannot clear 2:1 at any permitted stop. Would spend a weekly slot carrying the NVDA print as an uncompensated overnight binary. The 11-13 log deferred CRWV until after that print, and the 07:09 and 08:08 runs both reaffirmed it - earliest legitimate look is Wednesday, and nothing today changes it. Research only, no order.",
-   "technicals": {
-    "atr14_pct": 13.23,
-    "rsi14": 43.1,
-    "vs_sma20_pct": -10.8,
-    "vs_sma50_pct": -32.4,
-    "vs_sma200_pct": -44.9,
-    "stop_in_atr": 0.76,
-    "target_in_atr": 1.51,
-    "sma20": 54.99,
-    "high_52w": 138.23,
-    "vs_52w_high_pct": -64.5
-   }
+  "headline_finding": "THE GAP LIST IS DECAYING IN REAL TIME, AND BLSH IS THE ONLY NAME NOT PARTICIPATING. Three successive pulls this run: 10 rows >=5% at 10:09 ET, then 6 rows at 10:13 ET, with every single down-gap narrowing over those four minutes — CRWV -5.21 -> -4.27, LUNR -5.31 -> -4.15, QBTS -5.02 -> -4.08, ONDS -6.97 -> -5.72, NBIS -6.26 -> -5.57, BE -5.92 -> -5.10, and APT's up-gap fading +5.18 -> +3.72. The three names that led the 09:09 list have fallen out of the scan entirely (BMNR -7.62 -> -4.49, AMKR -5.23 -> -4.13, BW -5.26 -> -3.40). SPY and QQQ were flat across the same window (745.06 vs 744.95; 665.74 vs 665.35), so this is single-name mean reversion off the open, not an index rally. The exception is BLSH, pinned at exactly -6.18% ($21.10, unchanged tick for tick) while its entire cohort bounced — it finished the run as the WIDEST gap on the board after starting 4th. Relative weakness that refuses a cohort-wide bid, two sessions ahead of a pre-market print with a double-digit implied move and deteriorating operating metrics, is a warning, not a setup.",
+  "gappers": [
+    {
+      "rank": 1, "symbol": "ONDS", "price": 4.8006, "gap_pct": -6.97,
+      "premarket_volume": null, "prev_session_volume": 8651178, "gap_pct_at_1013et": -5.72,
+      "catalyst": "No ONDS-specific news today; giving back the pop from its 2026-11-13 Q3 print (revenue $167.5M, +100% q/q, backlog $835M, FY26 target raised to >=$550M) as the post-Huang AI/defense-tech unwind continues. Narrowed to -5.72% within four minutes.",
+      "headlines": ["Ondas Q3 2026: revenue $167.5M (+100% q/q), backlog $835M, FY26 target raised to >=$550M, >$165M of new orders since the last update (Reddit r/ONDS, 2026-11-13)", "Ondas builds defense backlog; ONBERG Autonomous Systems launched in Germany with HD Advanced Technologies (StocksToTrade)"],
+      "catalyst_detail": "Ondas reported Q3 2026 revenue of $167.5M, roughly double the prior quarter, with an $835M backlog, a raised FY26 revenue target of at least $550M, and more than $165M of new orders booked since its last update. The counter-drone and ISR franchise is real and growing — Rotron Aero, American Robotics' Optimus, the ONBERG joint venture in Germany, 2026 FIFA World Cup counter-drone work, a >$50M border demining tender. None of that changed today. What changed is the tape: ONDS carries a ~2.9 beta and short interest reported above 40% of float, so it moves roughly 3x the index in either direction.",
+      "why": "High-beta microcap with a crowded long and a large short base, de-rating on index beta rather than news. With QQQ -2.1% and no bid under the AI complex at the open, recent earnings buyers became the marginal sellers — then the move began reversing as soon as that flow exhausted.",
+      "impact": "Reads as a one-day beta spike, not a fundamental break, and the intraday evidence supports that: the gap narrowed from -6.97% to -5.72% in four minutes with no news. The prior session's 8.65M shares is heavy, but the volume that matters is today's and it is not yet measurable. Sector read-through is uniform — NBIS, CRWV, BE, QBTS and LUNR all gapped 5-7% on the same list and all bounced together, confirming a factor move rather than an ONDS problem.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The order-book story is structural, but today's move is pure factor beta into a binary (NVDA Tuesday PM) and is already mean-reverting — there is no durable multi-day thesis in a gap that half-closes before the scan finishes.",
+      "opportunity_cost": "Displaces nothing: 0 open positions, 0/3 weekly trades used, $100,000 cash. The binding constraint is R:R, not capacity. ATR(14) is $0.43 = 9.0% of price, so the mandated 10% trailing stop sits at just 1.11 ATR — inside normal daily noise — and clearing 2:1 needs +20% (2.21 ATR) from a stop that cannot hold. It also fails the long-bias filter (below both 20- and 200-SMA, per the 07:09/08:08 ET runs), and buying a down-gap with no symbol-specific catalyst is forbidden outright. No entry."
+    },
+    {
+      "rank": 2, "symbol": "AMPX", "price": 7.4, "gap_pct": -6.68,
+      "premarket_volume": null, "prev_session_volume": 765104, "gap_pct_at_1013et": -5.49,
+      "catalyst": "No AMPX-specific news today; unwinding the 2026-11-11 Q3 beat (record revenue $39.1M, +83% y/y) with the physical-AI/battery complex. New to the scan this run — it was not on the 09:09 ET list.",
+      "headlines": ["Amprius Technologies reports Q3 2026 revenue of $39.1M, up 83% y/y from $21.4M, on record silicon-anode demand (company Q3 release via ADVFN/RBC, 2026-11-11)", "AMPX Q3 2026 earnings call: continued strong demand for energy-dense silicon-anode lithium-ion batteries (transcript, 2026-11-12)"],
+      "catalyst_detail": "Amprius posted record Q3 2026 revenue of $39.1M, up 83% from $21.4M a year earlier, with management citing sustained demand for its energy-dense silicon-anode lithium-ion cells; the company remains loss-making at the net line. The print landed 2026-11-11 and the stock rose on it. Today's gap carries no new company news. AMPX trades as a 'physical AI' derivative — drones, eVTOL, defense payloads — so it de-rates on the same factor as the compute names despite having no AI-capex exposure of its own.",
+      "why": "A pre-profitability, long-duration growth story whose valuation is almost entirely terminal value. When the AI/duration factor sells off, the discount rate on that terminal value rises and the equity drops hard regardless of the quarter just reported.",
+      "impact": "The prior session's 765k shares is unremarkable for AMPX, and the gap narrowed from -6.68% to -5.49% in four minutes — both point to thin, headline-less beta rather than a repricing, which makes this the more mean-reversion-prone end of the list. Read-through is sector-wide (ONDS, LUNR on the same board), so there is no idiosyncratic edge to isolate. Worth noting it entered the scan as the cohort rotated: crypto-treasury and semi names (BMNR, AMKR, BW) stabilized out of the list while drone/battery/space/quantum names rotated in.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Thin-volume, catalyst-free beta drawdown in a loss-making name; nothing structural happened today, and the sector-rotation table does not favor speculative battery/physical-AI exposure while the factor is in drawdown.",
+      "opportunity_cost": "Displaces nothing (0 positions, 0/3 trades, full cash). ATR(14) $0.63 = 8.5% of price, so a 10% stop is 1.18 ATR and the +20% 2:1 target is 2.35 ATR — the stop sits inside one normal session's range. Below its 20- and 200-SMA, so the long-bias filter fails before R:R even matters. No entry."
+    },
+    {
+      "rank": 3, "symbol": "NBIS", "price": 108.63, "gap_pct": -6.26,
+      "premarket_volume": null, "prev_session_volume": 7841461, "gap_pct_at_1013et": -5.57,
+      "catalyst": "6th session of the post-earnings de-rate, no new company news since Nov 13. The Q3 print beat on revenue ($980.8M, +571% y/y; adjusted EBITDA +$465.8M) but CUT the FY26 guidance top end, flagged capacity delays and took capex toward ~$45B; Baird cut its target $340->$200 and BofA to $265.",
+      "headlines": ["Nebius Q3 2026: revenue $980.8M, +571% y/y, adjusted EBITDA positive at $465.8M, capex $7.3B in the quarter (NFC Market Live, 2026-11-12)", "Nebius Q3 2026 earnings review: investors contrast the call unfavorably with CoreWeave's handling of the same concerns (Reddit r/NBIS_Stock, 2026-11-13)"],
+      "catalyst_detail": "This is the one name on the list where the de-rate is NOT catalyst-free, and the 09:09 ET run established why: Q3 revenue of $980.8M (+571% y/y) and positive adjusted EBITDA of $465.8M beat, but Nebius cut the top end of FY26 guidance, flagged capacity delays, and guided capex toward roughly $45B — then Baird cut its price target from $340 to $200 and BofA to $265. The market is no longer paying for AI-infrastructure revenue growth funded at that scale; it is discounting the financing risk. Huang's resignation removed the most credible voice underwriting the AI-capex cycle, and Musk's 'neocloud collapse' warning has been circulating against the same group.",
+      "why": "A levered, capex-funded buildout re-rates on cost of capital, not on last quarter's revenue. A guidance-top-end cut plus capacity delays plus two large target cuts is a genuine thesis impairment, and it is compounding with the factor unwind rather than being rescued by it.",
+      "impact": "The least likely name here to mean-revert, and the only one whose drawdown rests on company-specific bad news rather than beta. NBIS has round-tripped from roughly $141 to $108.63, a ~23% drawdown in days, and it is the epicenter of the factor — so it is also the name most exposed to a bad NVDA print on Tuesday. It did bounce with the cohort (-6.26% -> -5.57%), but off the deepest base.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The capex-financing concern is structural but structurally BEARISH — a long here is catching a falling knife on a real guidance cut into an unresolved binary, the opposite of the strategy's momentum mandate.",
+      "opportunity_cost": "Displaces nothing (0 positions, 0/3 trades, full cash), but it is the hardest mechanical reject on the board: ATR(14) $15.27 = 14.1% of price, so the mandated 10% trailing stop sits at 0.71 ATR — well inside a single average day's range and certain to be stopped out by ordinary noise, with a 2:1 target needing +20% from a stop that cannot hold. Also below its 200-SMA. Cannot clear 2:1 at any stop distance the rules permit. No entry."
+    },
+    {
+      "rank": 4, "symbol": "BLSH", "price": 21.1, "gap_pct": -6.18,
+      "premarket_volume": null, "prev_session_volume": 207931, "gap_pct_at_1013et": -6.18,
+      "catalyst": "THE ONLY NAME THAT DID NOT BOUNCE — pinned at -6.18% ($21.10, unchanged) while every other row narrowed, finishing the run as the widest gap after starting 4th. Crypto-beta selling into a Q3 PRE-MARKET print on Wednesday Nov 18 with a double-digit implied move, and operating metrics are deteriorating into it: October volume fell to $37.7B from $48.6B in September, average spreads widened to 2.43bps.",
+      "headlines": ["Bullish agreed to acquire transfer agent Equiniti for $4.25B, expanding beyond exchange trading into issuer services, 24/7 trading and stablecoin settlement; close expected January 2027 (Binance Square / The Cryptonomist, 2026-05-05)", "Bullish Q3 reports pre-market Wednesday Nov 18 with a double-digit move implied by options; October volume $37.7B vs $48.6B in September, spreads 2.43bps (per the 09:09 ET run)"],
+      "catalyst_detail": "Bullish's standing bull case is the $4.25B acquisition of transfer agent Equiniti, announced 2026-05-05 and still expected to close January 2027, which would move it from a pure crypto exchange into issuer services and tokenized real-world assets. Nothing advanced that today. What is live is the near term: Q3 lands pre-market Wednesday Nov 18 with a double-digit implied move, and the operating metrics heading into it are deteriorating — October volume of $37.7B against $48.6B in September, with average spreads widening to 2.43bps. The stock remains far below its $37 IPO price and a $118 post-IPO high, with consensus around Hold. It also sits on the same weekend crypto flush that hit BMNR, after bitcoin's sixth consecutive weekly loss and a Sunday low of ~$62,100.",
+      "why": "Crypto-correlated equities are the highest-beta expression of risk appetite, so BLSH gapped with the asset class. But the mechanism that matters is what happened next: when the whole gapper cohort caught a bid off the open, BLSH did not. A name that will not participate in its own sector's bounce is being distributed, not accumulated — and the obvious reason is the pre-market print 48 hours out with falling volumes and widening spreads.",
+      "impact": "This is the one row where the move does NOT read as a one-day headline spike likely to mean-revert, and the evidence is the absence of a bounce rather than the size of the gap. The prior session's 208k shares is thin, which normally argues for reversion, so the refusal to bounce on thin volume is more telling, not less. Read-through: BMNR shared the crypto flush and recovered out of the scan entirely (-7.62% -> -4.49%), which isolates BLSH's weakness as idiosyncratic rather than crypto-wide.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The Equiniti/tokenization thesis is structural but closes in January 2027, far outside this strategy's swing horizon; everything actionable here is a two-day binary, and the relative weakness argues the market is positioning against the print, not for it.",
+      "opportunity_cost": "Displaces nothing (0 positions, 0/3 trades, full cash), and this is exactly the trap the 09:09 ET run flagged: BLSH has one of the better R:R shapes on the board (ATR(14) $1.81 = 8.6% of price, so a 10% stop is 1.17 ATR — the second-tightest-but-least-absurd on the list) precisely BECAUSE it has earnings inside the window. Taking it would be paying for an event, not harvesting an edge. A 2:1 target still needs +20% (2.33 ATR) from a stop inside one day's range, it is below its 20-SMA, and no long should be opened in front of a pre-market print with a double-digit implied move. No entry — and if anything this is a name to keep OFF the buy list through Wednesday."
+    },
+    {
+      "rank": 5, "symbol": "BE", "price": 180.63, "gap_pct": -5.92,
+      "premarket_volume": null, "prev_session_volume": 2680276, "gap_pct_at_1013et": -5.1,
+      "catalyst": "5th session giving back a +13% post-earnings spike as AI-power beta, with no company-specific bad news at any point: Q3 revenue $1.236B (+138% y/y), FY26 guidance raised to $4.4-4.6B, a 900MW NTT DATA deal. Now ~-14% from the Nov 11 close.",
+      "headlines": ["Bloom Energy Q3 revenue beats estimates on record product sales; raises FY2026 guidance (Reuters via TradingView, 2026-10-22)", "Bloom Energy Q3 2026 revenue $1,235.8M, +138.1% y/y vs $519.0M in Q3 2025 (8-K via Longbridge)", "Barclays upgraded BE to Overweight while cutting its price target from $316 to $289 (Moomoo, 2026-11-03)"],
+      "catalyst_detail": "Bloom Energy's Q3 2026, reported 2026-10-22, was a clean beat: revenue $1,235.8M, up 138.1% from $519.0M, on record product sales, with FY2026 guidance raised to $4.4-4.6B and a 900MW NTT DATA agreement behind it — the on-site data-center power thesis working as advertised. Barclays upgraded to Overweight on 2026-11-03 while cutting its target from $316 to $289, which captures the setup exactly: the business is fine, the multiple is not. Today's gap has no company news behind it, and the stock has now given back the entire +13% post-earnings spike.",
+      "why": "BE is a second-derivative AI trade — it sells power to data centers, so it was bid as an AI-capex beneficiary and unwinds as one. When the market questions whether the buildout gets financed (post-Huang, pre-NVDA print), the picks-and-shovels suppliers de-rate alongside the compute providers even though their order books have not changed.",
+      "impact": "Orderly institutional mark-down rather than panic, and it bounced with the cohort (-5.92% -> -5.10%), so the one-day-spike reading holds: the fundamentals are intact and the move is multiple compression. Read-through is explicit on this very board — BE, NBIS and CRWV trading as one factor. But a durable bottom most likely requires NVDA's Tuesday print to clear, so a long today is a bet on the event, not on the chart.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Revenue +138% and raised guidance are structural positives, but today's move is multiple compression into an unresolved binary, and the sector-rotation table does not favor adding AI-adjacent power exposure while the factor is in drawdown.",
+      "opportunity_cost": "Displaces nothing (0 positions, 0/3 trades, full cash). ATR(14) $19.66 = 10.9% of price, so the mandated 10% trailing stop is 0.92 ATR — literally inside one average day's range, so it would be hit on noise before any thesis resolved, and 2:1 is unreachable at any permitted stop. Below its 200-SMA. No entry."
+    },
+    {
+      "rank": 6, "symbol": "LUNR", "price": 12.31, "gap_pct": -5.31,
+      "premarket_volume": null, "prev_session_volume": 1138825, "gap_pct_at_1013et": -4.15,
+      "catalyst": "Giving back the 2026-11-12 Q3 earnings pop (+11% that day on revenue of $269M vs ~$246M consensus) as analyst target cuts and a post-midterm selloff in defense and space names bite; no new company news. Bounced out of the >=5% screen within four minutes."
+    },
+    {
+      "rank": 7, "symbol": "CRWV", "price": 50.36, "gap_pct": -5.21,
+      "premarket_volume": null, "prev_session_volume": 13321958, "gap_pct_at_1013et": -4.27,
+      "catalyst": "8th session of the neocloud de-rate: Q3 beat plus an FY26 guide raise given back in full as Huang's exit repriced Nvidia-backed AI clouds, with a Barclays Hold and Musk's 'neocloud collapse' warning against the group; backlog confirmed at ~$133B, ~40% below its 200-day average. Bounced out of the >=5% screen."
+    },
+    {
+      "rank": 8, "symbol": "APT", "price": 6.5, "gap_pct": 5.18,
+      "premarket_volume": null, "prev_session_volume": 26307, "gap_pct_at_1013et": 3.72,
+      "catalyst": "The only up-gap on the board and not a tradable move: a NYSE-American microcap whose prior session traded ~26k shares, i.e. an illiquid print. No dated news behind the gap; Q3 2026 context is net sales up 12.0% to $18.7M. The up-gap faded to +3.72% within four minutes, consistent with noise rather than demand."
+    },
+    {
+      "rank": 9, "symbol": "KLIC", "price": 65.54, "gap_pct": -5.11,
+      "premarket_volume": null, "prev_session_volume": 62693, "gap_pct_at_1013et": -5.17,
+      "catalyst": "NOT newsless (reframed in the 09:09 ET run): a Singapore Advanced Solutions capacity expansion supporting ~$400M of segment revenue by early fiscal 2027 is being read as capacity added INTO cooling semi/memory capex, not as a win. Fiscal Q4 lands Wednesday Nov 18 ($1.43 EPS on $376.8M consensus). Along with BLSH, one of only two rows that did not narrow — and the second of the two with earnings inside the event window."
+    },
+    {
+      "rank": 10, "symbol": "QBTS", "price": 9.08, "gap_pct": -5.02,
+      "premarket_volume": null, "prev_session_volume": 1787835, "gap_pct_at_1013et": -4.08,
+      "catalyst": "No QBTS-specific news; quantum compute is the highest-beta sleeve of the AI trade and is being sold hardest, with the stock down from roughly $13.74 in mid-October. Bounced out of the >=5% screen within four minutes."
+    }
+  ],
+  "composition_change_vs_0909": {
+    "dropped_out": ["BMNR -7.62% -> -4.49%", "AMKR -5.23% -> -4.13%", "BW -5.26% -> -3.40%"],
+    "entered": ["ONDS", "AMPX", "LUNR", "APT", "QBTS"],
+    "read": "Crypto-treasury and semi/OSAT names stabilized out of the scan while drone/defense, battery, space and quantum names rotated in — then most of those bounced too. The selloff is rotating and losing amplitude rather than broadening."
   },
-  {
-   "rank": 3,
-   "symbol": "BMNR",
-   "price": 16.24,
-   "gap_pct": -7.62,
-   "premarket_volume": null,
-   "prior_session_volume": 24131560,
-   "catalyst": "No company news - ETH treasury (5.90M ETH, ~$15.6B crypto+cash) marking to a 6th straight weekly crypto loss; ETH -6.54% and BTC -6.22% Fri->Mon per Alpaca crypto-bars, with BTC printing $62,100 Sunday, its lowest since July 14. The gap again runs ~1.1pt WIDER than ether itself",
-   "catalyst_detail": "No BMNR-specific release dated today. The Nov 12 disclosure put holdings at 5.90M ETH and ~$15.6B of crypto plus cash, making the equity a levered claim on ether. Crypto traded through a weekend the stock could not: per Alpaca crypto-bars, ETH went 1927.50 (Fri) -> 1767.99 (Sat) -> 1834.64 (Sun) -> 1801.47 (Mon), -6.54%; BTC 68,245.82 -> 64,113.15 -> 65,320.52 -> 64,000.67, -6.22%. CoinDesk reports BTC rebounded from a Sunday low of $62,100 - its lowest since July 14 - after a ~$2B weekend liquidation flush, and records bitcoin's sixth consecutive weekly loss.",
-   "why": "Mechanical balance-sheet repricing, not information - the Monday open catching up to a mark ether already set while US equities were shut. But the gap stays decoupled to the downside: -7.62% against ether's -6.54%, a ~1.1pt wedge that is NAV-premium compression (the market paying less per dollar of treasury ETH). That wedge was ~0 at 07:09 and ~1pt at 08:08, so it has persisted rather than closed - a modestly worse signal than pure pass-through beta.",
-   "impact": "Persistent rather than mean-reverting, but with zero informational edge - the move is fully explained by a public price the bot can read directly, and reverses as fast on an ether bounce. Prior-session volume of 24.1M against an IEX 20d average near 1.2M confirms heavy participation. Read-through hits the whole digital-asset-treasury complex, and BLSH at rank 6 is the same crypto beta in an exchange wrapper. Broken on every frame: -21.0% vs 20-SMA, -30.6% vs 50-SMA, -20.6% vs 200-SMA.",
-   "horizon": "SHORT_TERM",
-   "horizon_reasoning": "A daily mark-to-ETH is not a thesis, and crypto treasuries appear nowhere in the strategy's late-cycle favored set (Energy, Materials, Financials).",
-   "opportunity_cost": "Nothing to displace (flat), so the cost is one of three weekly slots. A 10% stop is 1.09 ATR and +20% is 2.19 ATR - technically outside one average day, the third-best shape in the scan, but the stop still sits close enough to a single ETH move to be noise-triggered. More decisively, taking it would stack crypto beta on top of the AI-capex beta carried by six of the other seven rows - exactly what corr-gate.mjs exists to block - and it would pay for zero edge, since the driver is a public crypto quote. Dominated on R:R shape within today's own list by KLIC. Research only, no order.",
-   "technicals": {
-    "atr14_pct": 9.13,
-    "rsi14": 35.3,
-    "vs_sma20_pct": -21.0,
-    "vs_sma50_pct": -30.6,
-    "vs_sma200_pct": -20.6,
-    "stop_in_atr": 1.09,
-    "target_in_atr": 2.19,
-    "sma20": 20.56,
-    "high_52w": 42.05,
-    "vs_52w_high_pct": -61.4
-   }
-  },
-  {
-   "rank": 4,
-   "symbol": "BE",
-   "price": 180.0,
-   "gap_pct": -6.25,
-   "premarket_volume": null,
-   "prior_session_volume": 16051298,
-   "catalyst": "5th session giving back a +13% post-earnings spike as AI-power beta, with no company-specific bad news at any point: Q3 revenue $1.24B (+138% YoY), guide raised to $4.4-4.6B, 900MW NTT DATA deal - all outweighed by the AI-capex de-rate. Now -14.1% from the Nov 11 close",
-   "catalyst_detail": "Bloom's Q3 2026 was the strongest fundamental print in this scan - revenue $1.24B, +138% YoY, product revenue +179%, adjusted operating margin expanding 8.9% -> 23.1%, and FY26 guidance raised again to $4.4-4.6B (~122% growth). It also announced a partnership with NTT DATA to deploy 900MW of fuel-cell power across global data centres, against a record that includes powering an Oracle data centre in 55 days vs a 90-day target. The stock closed $209.47, +13.0% on Nov 11, and has fallen every session since - 209.36, 201.94, 191.92, now gapping to $180.00, about -14.1% - with no company-specific bad news at any point.",
-   "why": "Bloom is an AI-datacentre power derivative, so it trades as AI-capex beta rather than on its own order book. Huang's resignation and the neocloud de-rate dragged the whole AI-power complex down with the chips and the clouds - which is why a company that raised guidance and signed 900MW is down double digits in five sessions. BW at rank 7 is the same trade in a lower-quality wrapper, confirming the driver is sectoral rather than company-specific.",
-   "impact": "Mixed, and the most genuinely interesting fundamental story in the scan. Order book and margin trajectory are the best here and the NTT deal is structural, so the drawdown is sector-driven, not thesis-driven. But the technicals are the disqualifier: -12.4% vs 20-SMA, -26.2% vs 50-SMA, -19.5% vs 200-SMA - long-bias filter and sector-momentum rule both fail - and it is the same trade as CRWV, NBIS and BW, and as TLN/CEG in today's pre-market log.",
-   "horizon": "LONG_TERM",
-   "horizon_reasoning": "Alone among the top five the catalyst is structural and intact (138% revenue growth, raised guide, 900MW contracted), so the business merits a multi-week swing thesis - the entry is wrong today, not the thesis.",
-   "opportunity_cost": "A 10% stop is 0.84 ATR and +20% is 1.68 ATR, so it fails 2:1 before anything else is considered. More decisively, BE is strictly dominated for the SAME AI-power exposure by TLN from today's pre-market log: TLN's ATR is 5.13%, its 10% stop 1.95 ATR, its +20% target 3.9 ATR, its R:R gate PASSES, and it sits above its 20-, 50- and 200-SMA rather than below all three. Both carry the NVDA Tuesday binary, so the right move is to spend no weekly slot on either today and revisit TLN, not BE, after the Nov 18 FOMC minutes. On R:R shape BE is also dominated within today's list by KLIC. BE earns a watchlist slot, not a trade. Research only, no order.",
-   "technicals": {
-    "atr14_pct": 11.91,
-    "rsi14": 43.5,
-    "vs_sma20_pct": -12.4,
-    "vs_sma50_pct": -26.2,
-    "vs_sma200_pct": -19.5,
-    "stop_in_atr": 0.84,
-    "target_in_atr": 1.68,
-    "sma20": 205.4,
-    "high_52w": 350.9,
-    "vs_52w_high_pct": -48.7
-   }
-  },
-  {
-   "rank": 5,
-   "symbol": "KLIC",
-   "price": 65.0,
-   "gap_pct": -5.89,
-   "premarket_volume": null,
-   "prior_session_volume": 698078,
-   "catalyst": "REFRAMED from 08:08: KLIC is NOT newsless. A Singapore Advanced Solutions capacity expansion supporting ~$400M of segment revenue by early fiscal 2027 surfaced today - and is being read as capacity added INTO cooling semi/memory capex, not as a win. Fiscal Q4 still lands Wed Nov 18 ($1.43 EPS on $376.8M consensus), after a year in which the stock ran +93.6%",
-   "catalyst_detail": "The 08:08 entry recorded 'no company news' for KLIC. That is now corrected: KLIC is expanding its Advanced Solutions production footprint in Singapore to support about US$400M in segment revenue by early fiscal 2027 - and the coverage frames it explicitly as capacity being added 'even as semiconductor and memory capital spending shows signs of cooling', i.e. the market is reading the expansion as risk rather than as a win. KLIC supplies the thermocompression and advanced-packaging bonders used in HBM and AI-accelerator assembly, and reports fiscal Q4 2026 on Wednesday Nov 18. The last reported quarter (fiscal Q3) was exceptional: revenue $330.4M (+122.6% YoY), gross margin 47.8%, operating profit $68.3M (+1,220%), net income $57.4M (+1,845.7%). Wednesday's consensus is refined to $1.43 EPS on $376.80M revenue (vs the ~$384M used at 08:08). Valuation views are violently split: analyst consensus fair value $95 against a Simply Wall St DCF of $48.73 - i.e. the sell side calls it ~46% undervalued and the DCF calls it ~25% overvalued at $65.",
-   "why": "Pre-earnings positioning inside a sector-wide de-rate, now with a company-specific negative read attached. KLIC is advanced-packaging capex beta, so it trades on the same AI-capex doubt as the neoclouds and the power names - but the Singapore expansion gives the bears a concrete hook: committing capacity into cooling memory/semi capex is exactly the execution risk the de-rate is pricing. Holders who rode +93.6% are de-risking ahead of a number that has to clear a very high bar, and AMKR at rank 8 is the same packaging trade already punished for exactly that, having missed Q3 and guided Q4 soft.",
-   "impact": "A sustained de-rate, not a spike to fade: five consecutive down sessions, -11.3% vs 20-SMA, -20.8% vs 50-SMA, -25.3% vs 200-SMA, and -32.1% over 90 days despite still being up ~42.9% YTD. Sector read-through is explicit and confirmatory - AMKR gapped -5.23% on the same driver and its Oct 26 miss is a live preview of the risk in KLIC's Wednesday print. Liquidity is adequate: prior-session consolidated volume 698k shares (~$45M notional), so a $10-20k clip is immaterial - though the IEX-only 20d average of ~36k shares badly understates the real book, and a limit order remains mandatory. Note the price has been pinned at exactly $65.00 across both the 08:08 and 09:09 scans, which for a 698k-share name is more likely a thin pre-market quote than genuine stability - treat the level as soft.",
-   "horizon": "SHORT_TERM",
-   "horizon_reasoning": "The underlying advanced-packaging growth is genuinely structural, but with earnings two days out the tradeable horizon is dominated by a binary event, and the thesis cannot be underwritten until Wednesday's number and guide are known - now less, not more, attractive given the expansion-into-cooling-capex read.",
-   "opportunity_cost": "Still the one row with a real argument rather than a flat rejection, and the best ATR fit in the scan: at 6.90% of price the 10% stop is 1.45 ATR and the +20% target 2.90 ATR - the only row where the stop sits comfortably outside one average day's range, and the closest any gapper has come to the mid-vol passing band identified in today's pre-market entry. It still fails on four independent counts: price is 25.3% below its 200-SMA, so the long-bias filter fails outright; price is below the 20-SMA while XLK is worst sector on 1mo and 3mo, so Rule 9 fails; fiscal Q4 earnings land Wednesday, an uncompensated binary two days out and immediately after NVDA's; and the newly surfaced Singapore read-through makes the print riskier, not safer. Within today's list it dominates all seven other rows on R:R shape - so if any gapper is ever worth a slot it is this one - but the correct action is to spend no slot today and re-examine after Wednesday's print, with a reclaim of the ~$73 20-SMA as the minimum technical precondition. Research only, no order.",
-   "technicals": {
-    "atr14_pct": 6.9,
-    "rsi14": 41.2,
-    "vs_sma20_pct": -11.3,
-    "vs_sma50_pct": -20.8,
-    "vs_sma200_pct": -25.3,
-    "stop_in_atr": 1.45,
-    "target_in_atr": 2.9,
-    "sma20": 73.31,
-    "high_52w": 135.76,
-    "vs_52w_high_pct": -52.1
-   }
-  },
-  {
-   "rank": 6,
-   "symbol": "BLSH",
-   "price": 21.29,
-   "gap_pct": -5.34,
-   "premarket_volume": null,
-   "prior_session_volume": 1229946,
-   "catalyst": "NEW to the scan. Bullish, the NYSE-listed crypto exchange (~$4.2B cap), falling on the same weekend crypto flush as BMNR - and it reports Q3 PRE-MARKET Wed Nov 18 with a double-digit move implied by options. Operating metrics are deteriorating into the print: October volume fell to $37.7B from $48.6B in September, with average spreads widening to 2.43bps",
-   "technicals": {
-    "atr14_pct": 8.3,
-    "rsi14": 36.7,
-    "vs_sma20_pct": -15.8,
-    "vs_sma50_pct": -31.4,
-    "vs_sma200_pct": -32.7,
-    "stop_in_atr": 1.2,
-    "target_in_atr": 2.41,
-    "sma20": 25.28,
-    "high_52w": 48.89,
-    "vs_52w_high_pct": -56.5
-   }
-  },
-  {
-   "rank": 7,
-   "symbol": "BW",
-   "price": 4.32,
-   "gap_pct": -5.26,
-   "premarket_volume": null,
-   "prior_session_volume": 5557962,
-   "catalyst": "Low-quality AI-power beta under active securities litigation - multiple class actions (Pomerantz, Bragar Eagel) over the Nov 5 2025-Mar 11 2026 class period; -61.5% vs its 200-SMA and -80.4% off its 52wk high, the worst-damaged name in the scan. No fresh news since Nov 13; the lone row still above its 20-SMA (+1.6%)",
-   "technicals": {
-    "atr14_pct": 11.02,
-    "rsi14": 48.7,
-    "vs_sma20_pct": 1.6,
-    "vs_sma50_pct": -20.9,
-    "vs_sma200_pct": -61.5,
-    "stop_in_atr": 0.91,
-    "target_in_atr": 1.81,
-    "sma20": 4.25,
-    "high_52w": 22.02,
-    "vs_52w_high_pct": -80.4
-   }
-  },
-  {
-   "rank": 8,
-   "symbol": "AMKR",
-   "price": 34.22,
-   "gap_pct": -5.23,
-   "premarket_volume": null,
-   "prior_session_volume": 2157562,
-   "catalyst": "Advanced-packaging OSAT still de-rating after its Oct 26 Q3 miss ($1.99B rev vs $2.04B est, EPS $0.76 vs $0.79) and a soft Q4 guide ($1.9-2.0B), mobile/comms weakness offsetting AI packaging strength - the same trade as KLIC and a live preview of its Wednesday print. No fresh news since Nov 13",
-   "technicals": {
-    "atr14_pct": 8.17,
-    "rsi14": 42.0,
-    "vs_sma20_pct": -9.9,
-    "vs_sma50_pct": -24.6,
-    "vs_sma200_pct": -39.5,
-    "stop_in_atr": 1.22,
-    "target_in_atr": 2.45,
-    "sma20": 37.98,
-    "high_52w": 96.53,
-    "vs_52w_high_pct": -64.5
-   }
-  }
- ]
+  "disposition": "NO ACTION — research only, no orders placed. Four independent reasons, any one sufficient: (1) every down-gap except NBIS and KLIC lacks a symbol-specific catalyst, which is bottom-fishing and forbidden outright; (2) all five deep-dive names are below their 200-SMA, so the long-bias filter fails on every row; (3) all five fail the 2:1 R:R gate at the mandated 10% trailing stop — 10% equals 1.11 ATR on ONDS, 1.18 on AMPX, 0.71 on NBIS, 1.17 on BLSH and 0.92 on BE, putting the stop inside normal daily noise on all five and inside a single average day's range on NBIS and BE; (4) four binaries land in three sessions (NVDA Tue PM, then KLIC Q4 + BLSH Q3 + FOMC minutes all Wed Nov 18), and the two rows with the best R:R shape are precisely the two with earnings inside that window. The only up-gap, APT, traded ~26k shares and faded. This is the 4th scan today; the 07:09, 08:08 and 09:09 ET runs and the market-open run independently reached the same NO ACTION. Weekly trade count 0/3; 92nd consecutive trading day with zero entries.",
+  "operator_flags": [
+    "UNRESOLVED (153rd+ session): account equity is $100,000, not the ~$10,000 baseline in CLAUDE.md. Flagged 2026-07-27, still awaiting operator reconciliation.",
+    "UNRESOLVED (structural): the 10%-trailing-stop rule and the 2:1 R:R floor are mutually exclusive for any name with ATR(14) above ~5% of price, which is the entire high-beta universe this watchlist tracks. It is the proximate cause of the 92-session drought, not market conditions. Today's five deep-dive names all fail on stop-inside-ATR, and so did every row in the three earlier runs. Operator decision needed: either the stop becomes ATR-proportional, or the watchlist moves toward mid-vol names. TLN (queued for Wed Nov 18, post-FOMC-minutes) remains the only candidate on record to clear both gates."
+  ]
 }
