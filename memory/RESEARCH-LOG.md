@@ -19955,3 +19955,20 @@ The lone up-gap, APT, traded ~26k shares and faded to +3.72% — not a setup. We
 - `mcp__Apify__apify--rag-web-browser` is **not present** in this cloud session's tool list; `mcp__Apify__apify--web-search` is the available Apify equivalent and was used for all 13 queries. Benzinga WebFetch fallback was not needed — every ticker returned usable results.
 - `scripts/size.mjs` returns a **stale reference price** (ONDS $5.28 vs $4.80 live, NBIS $141.53 vs $108.63 live), so its `suggested_shares` is unreliable in a fast tape. **Only its `atr14` was used**, with ATR% recomputed against the live Alpaca quote. Worth a fix.
 - `scripts/alpaca.sh bars` requires explicit `START END` args (`bars SYM TF START END [LIMIT]`); a bare `bars SPY 1Day 3` silently returns nothing. Noted for future runs.
+
+### Nov 16, Midday Scan (Day 92, Monday, cloud run)
+**No action.** `alpaca.sh positions`/`orders`: 0 positions, 0 open orders —
+nothing to cut at -7% (STEP 3), nothing to tighten (STEP 4), no thesis to
+re-check (STEP 5). `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00 (`balance_asof: 2026-11-13`), unchanged from this morning's
+market-open and gappers runs. STEP 6 intraday research not triggered — no
+held position moving sharply. STEP 7: no action taken, no notification sent.
+
+Weekly trade count: 0/3 (week of Nov 16). 92nd trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 153rd+
+straight session, operator review pending. Structural rule conflict
+(10%-stop vs 2:1-R:R floor) remains the proximate cause of the drought.
+TLN (queued for Wed Nov 18, post-FOMC-minutes) and KLIC (post Wed Nov 18
+print, precondition: reclaim ~$73 20-SMA) remain the only carried-forward
+candidates.
