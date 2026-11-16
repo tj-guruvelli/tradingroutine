@@ -2851,3 +2851,58 @@ unresolved).
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-12`). Midday scan had nothing to cut or tighten (no positions held). Weekly trade count: 0/3 (week of Nov 9, closed out at zero). 91st trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 152nd+ straight session, operator review pending. Structural rule conflict (10%-stop vs 2:1-R:R floor) remains the proximate cause of the drought and still needs an operator decision.
+
+### Nov 16, Market-Open (Day 92, Monday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules. Today's RESEARCH-LOG pre-market
+entry (19554): explicit **Decision: HOLD**, week of Nov 16 opens 0/3. GILD and
+ABBV pass the 200-SMA long-bias filter + documented catalyst + confluence but
+both **fail the 2:1 R:R gate** (7.8 and 9.0 ATR to +20% target against the
+mandated 10% stop). TLN is the first name in 92 sessions to pass the stop rule
+AND the 2:1 gate (ATR 5.13%, 1.95 ATR stop / 3.9 ATR target) but is explicitly
+**deferred to after the Nov 18 FOMC minutes**, not an entry today — it also
+carries NVDA's Tuesday-after-close print (~±7%, interim CEO, no successor
+named) as an uncompensated binary. NVDA itself rejected on 4 independent
+rules (RSI 24.9, -20.3% vs 200-SMA, ATR 6.12% -> 1.63 ATR stop, XLK worst
+sector). CRWV not ready (-40.3% vs 200-SMA, 0.82 ATR stop). Two later
+gappers auto-scans (07:09, 08:08 ET) independently reached NO ACTION: all 8
+scanned symbols (BMNR, NBIS, CRWV, KLIC, BE, BW, AMKR, ONDS) trade below
+their 200-SMA (long-bias filter fails on every row), 7 of 8 also fail Rule 9
+(below 20-SMA) and the 2:1 R:R gate; every down-gap carries no
+symbol-specific catalyst, which is bottom-fishing and forbidden outright.
+TRADE-LOG tail: weekly trade count 0/3 (week of Nov 16, fresh).
+
+STEP 2: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-13`). Matches pre-market research exactly — no
+change since that run. No planned-ticker quotes pulled: no candidate cleared
+pre-market screening to the point of needing a live entry-price check.
+
+STEP 3 — pass/fail:
+- GILD: FAIL — documented 2:1 R:R gate fails per today's pre-market research
+  (+20% target = 7.8 ATR); no operator override on record.
+- ABBV: FAIL — same 2:1 R:R gate fail (+20% target = 9.0 ATR).
+- TLN: FAIL (for today) — passes stop rule + 2:1 gate but is explicitly dated
+  to no-earlier-than Wed Nov 18 (post-FOMC minutes) in pre-market research;
+  entering today would mean carrying the NVDA Tuesday print as an
+  uncompensated binary one session before the planned entry window opens.
+- NVDA: FAIL — 4 independent rule failures (RSI oversold-but-no-catalyst,
+  below 200-SMA, ATR/stop mismatch, worst-momentum sector) plus earnings
+  tomorrow after the close with no permanent CEO.
+- BMNR/NBIS/CRWV/KLIC/BE/BW/AMKR/ONDS (gappers list): FAIL — each already
+  dispositioned in the 07:09/08:08 ET gappers runs (200-SMA fail on all 8,
+  no symbol-specific catalyst on any, R:R fail on 7 of 8).
+
+12 candidates evaluated, 0 pass — STEPs 4-5 (orders/stops) skipped. No trade
+fired.
+
+STEP 7 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 16, fresh). 92nd trading day since
+launch (Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 153rd+
+straight session, operator review pending. Structural rule conflict
+(10%-stop vs 2:1-R:R floor, logged across 11/12-11/16 RESEARCH-LOG entries)
+remains the proximate cause of the drought; TLN (queued for Wed Nov 18) is
+the first candidate on record to clear it and still needs operator sign-off
+on whether the mid-vol passing band is the intended universe or the stop
+rule should become ATR-proportional.
