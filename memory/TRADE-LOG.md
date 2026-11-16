@@ -2906,3 +2906,10 @@ remains the proximate cause of the drought; TLN (queued for Wed Nov 18) is
 the first candidate on record to clear it and still needs operator sign-off
 on whether the mid-vol passing band is the intended universe or the stop
 rule should become ATR-proportional.
+
+### Nov 16, EOD Snapshot (Day 92, Monday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-13`). Market-open logged HOLD: 12 candidates evaluated (GILD, ABBV, TLN, NVDA, plus 8 gappers), 0 passed the stop-rule + 2:1 R:R gate combo — TLN is the first to clear both but is deliberately deferred to Wed Nov 18 (post-FOMC minutes, to avoid carrying NVDA's Tue-after-close earnings binary). No midday scan logged today; no positions held so nothing to cut/tighten. Weekly trade count: 0/3 (week of Nov 16, fresh). 92nd trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 154th+ straight session, operator review pending. Structural rule conflict (10%-stop vs 2:1-R:R floor) remains the proximate cause of the drought; TLN entry window opens Wed Nov 18 pending operator sign-off on the open stop-rule question.
