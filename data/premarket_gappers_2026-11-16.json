@@ -1,0 +1,139 @@
+{
+  "scanned_at": "2026-11-16T12:09:00Z",
+  "scanned_at_et": "2026-11-16 07:09 ET",
+  "deep_dive_cap": 5,
+  "hits": 5,
+  "notes": {
+    "volume_field": "Alpaca's snapshot endpoint exposes no premarket-volume field. premarket_volume is therefore null for every row (NOT zero, NOT fabricated); prior_session_volume carries the most recent completed session's full-day consolidated volume (Fri 2026-11-13) instead. The >=50000 premarket-volume filter was consequently NOT applied - the field is not populated.",
+    "deep_dive_coverage": "The scan returned exactly 5 hits, so the top-5 deep dive covers the ENTIRE list. There are no rank 6-10 quick-scan-only rows this run.",
+    "feed": "delayed_sip, 15-minute delayed. market-open and /trade MUST re-quote before acting.",
+    "baseline_verified": "prev_close cross-checked against Alpaca daily bars - last completed bar is 2026-11-13 (Fri), so all gaps are genuine Monday-vs-Friday gaps, not intraday artifacts.",
+    "sma200": "200-SMA unavailable for all five (<200 daily bars in the fetched window: BMNR/CRWV/NBIS recent listings, 137 bars fetched). Not reported rather than approximated.",
+    "yahoo_block": "Suffix applied to every Apify query AND finance.yahoo.com/uk/sg set as blockedDomains. Zero Yahoo URLs surfaced across 11 queries this run.",
+    "headline_finding": "ALL FIVE fail the 2:1 R:R gate structurally: ATR(14) is so wide (8.3%-16.2% of price) that the mandated 10% trailing stop sits at 0.62-1.21 ATR, i.e. inside one average day's range. No actionable setup in this scan."
+  },
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BMNR",
+      "price": 16.41,
+      "prev_close": 17.58,
+      "gap_pct": -6.66,
+      "premarket_volume": null,
+      "prior_session_volume": 24131560,
+      "atr14_pct": 8.26,
+      "rsi14": 36.3,
+      "stop_10pct_in_atr": 1.21,
+      "target_20pct_in_atr": 2.42,
+      "catalyst": "No company news; BitMine's ETH treasury is marking to a weekend crypto drawdown - ETH fell from $1,927.50 (Fri close) to $1,796.85, -6.78%, almost exactly the stock's -6.66% gap.",
+      "headlines": [
+        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.90 Million Tokens, and Total Crypto and Total Cash Holdings of $15.6 Billion (OTC Markets, 2026-11-12)"
+      ],
+      "catalyst_detail": "There is no BMNR-specific news dated today. The company's own most recent release (Nov 12) disclosed ETH holdings of 5.90 million tokens and total crypto plus cash of $15.6 billion, which makes the equity a levered claim on ether. Crypto traded through the weekend while the stock did not: ETH went $1,927.50 (Fri) -> $1,767.98 (Sat) -> $1,834.64 (Sun) -> $1,796.85 (Mon), a net -6.78%, and BTC fell $68,246 -> $64,121, -6.0%. The gap is the Monday open catching up to that mark.",
+      "why": "Mechanical balance-sheet repricing, not information. BMNR's gap of -6.66% tracks ETH's -6.78% weekend move at close to 1:1 - the equity is a wrapper that reprices at 09:30 for what ether already did while US equities were closed. Nothing about the business changed.",
+      "impact": "Sustainable in the narrow sense that it is not a headline spike that mean-reverts: it will persist exactly as long as ETH stays at ~$1,800, and would reverse as fast on a crypto bounce. But it carries zero edge - the move is fully explained by a public price the bot can read directly. Prior-session consolidated volume 24.1M (IEX 20d avg 1.18M) confirms heavy participation. Read-through is the entire digital-asset-treasury complex: Strategy (STRK) surfaced in the same newswire feed moving on the same driver.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "A daily mark-to-ETH is not a durable thesis, and crypto/digital-asset treasuries appear nowhere in TRADING-STRATEGY.md's late-cycle favored set (Energy, Materials, Financials).",
+      "opportunity_cost": "Nothing to displace - the account is flat at $100,000 with 0 positions - so the true cost is one of three weekly trade slots. ATR(14) is 8.26% of price, the best fit of the five, but the mandated 10% trailing stop still sits at only 1.21 ATR and the +20% target at 2.42 ATR, so clearing 2:1 R:R requires a stop that is already inside daily noise. It also adds crypto beta that is currently correlated ~1 with the AI/risk complex selling off in the other four rows of this same list, which the correlation gate exists to prevent. Research only - no order."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 49.94,
+      "prev_close": 53.13,
+      "gap_pct": -6.0,
+      "premarket_volume": null,
+      "prior_session_volume": 80168979,
+      "atr14_pct": 12.06,
+      "rsi14": 48.3,
+      "stop_10pct_in_atr": 0.83,
+      "target_20pct_in_atr": 1.66,
+      "catalyst": "Fifth session of the neocloud de-rate: CoreWeave beat Q3 and raised FY26 guidance, then gave it all back as Jensen Huang's resignation as NVIDIA CEO re-rated every Nvidia-backed AI cloud.",
+      "headlines": [
+        "CoreWeave Q3: $3.66B Revenue, $132.5B Backlog, FY26 guidance raised to $13.3B, but $846M quarterly interest cost (Tech Jacks, 2026-11-10)",
+        "Neoclouds, AI stocks slide again as Nvidia turmoil rattles sector - CoreWeave and Nebius dropped 8.8% and 9% (rallies.ai, 2026-11-13)"
+      ],
+      "catalyst_detail": "CoreWeave's Q3 (Nov 10) was a beat, not a miss: revenue $3.66B, up more than $1B sequentially, revenue backlog ~$132.5B (+138% YoY), FY26 guidance raised to $13.0-13.3B against a ~$12.9B consensus, and customer concentration improved to no customer above ~35% from ~85% at the start of the year. The stock initially surged ~25%. It then reversed completely across four sessions ($60.80 -> $56.59 -> $53.11 -> $49.94) as Jensen Huang's surprise resignation as NVIDIA CEO hit the Nvidia-backed neocloud cohort. Note a source conflict on backlog: one feed reports $55.6B (+271% YoY) while three report ~$132.5B (+138%) - the ~$132.5B figure is used as the majority read, flagged not resolved.",
+      "why": "A financing-and-sentiment re-rate, not an earnings problem. The quarter also carried Q3 capex of $14.5B, FY capex guidance of $37-39B, $846M of quarterly interest expense and a $709M loss, so the equity is a leveraged bet on AI capex continuing. Huang's exit removes the perceived Nvidia backstop for precisely that vendor-financed model, and the market is repricing the structure regardless of the backlog beat.",
+      "impact": "Reads as sustained repricing rather than a one-day spike - four consecutive down sessions on heavy volume (prior-session consolidated 80.2M), now ~59% below the $138.25 52-week high and -26.8% versus its 50-SMA. The sector read-through IS the story: NBIS (rank 3) and BE (rank 5) in this same list are the identical trade, which is why the list is not five independent ideas.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The driver is a live binary - Huang's succession plus NVIDIA's own print Tuesday after the close at ~+/-7-9% implied - not a settled structural reset, and XLK is the worst sector on both 1mo (-10.0%) and 3mo (-10.5%), failing the sector-momentum rule.",
+      "opportunity_cost": "ATR(14) is 12.06% of price, so the mandated 10% trailing stop equals 0.83 ATR - less than one average day's range - and would be taken out by noise before any thesis resolved; the +20% target is only 1.66 ATR. The setup cannot clear the 2:1 minimum at any stop distance the rulebook permits. With 0 open positions nothing is displaced, but it would spend one of three weekly trades carrying the NVDA print as an uncompensated overnight binary. The 2026-11-13 log already deferred CRWV until after that print, making Wednesday the earliest legitimate look; nothing today changes that. Research only - no order."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 109.24,
+      "prev_close": 115.88,
+      "gap_pct": -5.73,
+      "premarket_volume": null,
+      "prior_session_volume": 48852589,
+      "atr14_pct": 16.16,
+      "rsi14": 40.7,
+      "stop_10pct_in_atr": 0.62,
+      "target_20pct_in_atr": 1.24,
+      "catalyst": "Fourth session of a post-earnings collapse: Q3 revenue grew 571% and beat, but Nebius cut the top end of FY26 revenue guidance, flagged data-centre capacity delays and lifted capex toward $45B, drawing target cuts from Baird ($340 -> $200) and BofA (-> $265).",
+      "headlines": [
+        "Nebius Group Q3 2026 revenue surges 571% to $980.8M (StreetInsider, 2026-11-12)",
+        "Nebius Stock Sinks as AI Cloud Provider Lowers Revenue Outlook, Lifts Capital Spending Guidance (MarketScreener, 2026-11-12)",
+        "Post-earnings analyst target cuts: Baird to $200 from $340, BofA to $265 (Tickeron)"
+      ],
+      "catalyst_detail": "Nebius reported Q3 on Nov 12: revenue $980.8M, +571% YoY and ahead of consensus, with adjusted net income turning positive at +$90.9M against a -$100.4M adjusted loss a year earlier - on the face of it an excellent quarter. The market reacted to the guidance instead: Nebius lowered the top end of its FY26 revenue outlook and now expects the low end of its range, attributed capacity delays at its data centres, and raised capex guidance toward ~$45B. The stock fell 20.25% on Nov 12 and a further 9.92% on Nov 13 to close $115.845, and analysts cut targets hard (Baird $340 -> $200, BofA -> $265). It now trades far below its $299.86 52-week high.",
+      "why": "Beat the quarter, broke the story. Hypergrowth revenue is not the swing factor; the guidance cut plus the capacity delays plus a ~$45B capex number converts the thesis from self-funding compounder to capital-hungry builder with execution risk. That landed into Huang's resignation, which de-rated every Nvidia-backed neocloud simultaneously - the same mechanism driving CRWV.",
+      "impact": "The most damaged chart of the five and reads as a sustained de-rating, not a spike: -23.4% versus its 20-SMA, -40.5% versus its 50-SMA, and -29.5% across three sessions ($154.90 -> $128.91 -> $115.85 -> $109.24) on prior-session consolidated volume of 48.9M. Sector read-through is identical to CRWV and BE; this is one trade expressed three ways, not three signals.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The guidance reset IS structural, but structurally bearish - a long thesis would need the capex and capacity-delay questions answered first, and the sector fails the momentum rule on both 1mo and 3mo.",
+      "opportunity_cost": "ATR(14) is 16.16% of price, the widest of the five, so the mandated 10% trailing stop equals just 0.62 ATR - under two-thirds of an average day - and is near-certain to fire on noise alone; the +20% target is 1.24 ATR. This fails the 2:1 gate outright at every permitted stop. Taking it would burn one of three weekly trades on the worst-trending name in the worst-performing sector, one day ahead of the NVDA print that set the tape for this entire move. Research only - no order."
+    },
+    {
+      "rank": 4,
+      "symbol": "PEPG",
+      "price": 4.5833,
+      "prev_close": 4.36,
+      "gap_pct": 5.12,
+      "premarket_volume": null,
+      "prior_session_volume": 5919940,
+      "atr14_pct": 13.61,
+      "rsi14": 70.2,
+      "stop_10pct_in_atr": 0.73,
+      "target_20pct_in_atr": 1.47,
+      "catalyst": "The only gap UP in the scan, and it is not new news: a bounce inside the fade of the Nov 10 Phase 2 FREEDOM2-DM1 spike, which showed 46.5% mean splicing correction and sent the stock up ~125% premarket.",
+      "headlines": [
+        "PepGen Announces Positive Phase 2 FREEDOM2-DM1 10 mg/kg Results (FT markets / BusinessWire, 2026-11-10)",
+        "PepGen stock soars over 100% on positive Phase 2 trial data for DM1 drug - 46.5% mean splicing correction at Week 13, 5 of 6 participants >20% (StreetInsider, 2026-11-10)",
+        "Why Is PepGen Inc. (PEPG) Stock Down -6.67% Today? - profit-taking (Tickeron, 2026-11-14)"
+      ],
+      "catalyst_detail": "On Nov 10 PepGen released positive topline data from the 10 mg/kg cohort of the randomized, double-blind, placebo-controlled Phase 2 FREEDOM2-DM1 study of PGN-EDODM1 in myotonic dystrophy type 1: mean splicing correction of 46.5% at Week 13, with five of six participants above 20% correction - reported as the highest splicing correction yet disclosed in DM1. The stock gapped ~125-136% premarket to ~$5.65, closed +92.89%, then added +22.99% on Nov 11. Q3 financials landed the same day: net loss $19.4M, or $(0.28) per share, with cash runway into 2028 and the next data readout guided to 1H 2027. It has faded since ($5.27 -> $5.06 -> $4.36, including -6.67% Friday on profit-taking), and today's +5.12% carries no news dated today.",
+      "why": "Binary clinical de-risking in a small-float rare-disease name - the classic biotech repricing. Today's move is the mechanism in reverse: a mean-reversion bounce after a 22.8% three-session give-back off the spike high, with no fresh information behind it.",
+      "impact": "Reads as a one-day bounce likely to keep mean-reverting, not a sustainable new leg. The tell is confluence failing on the long side: RSI(14) is 70.2, at the Indicator Canon's >70 no-new-long line, while price sits +46.1% above its 20-SMA and +55.8% above its 50-SMA - a stock that has already made its move. No sector read-through at all; this is idiosyncratic single-asset biotech, which is also the one row in this list uncorrelated with the other four.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The science is arguably durable - highest reported splicing correction plus cash into 2028 - but the next catalyst is 1H 2027, leaving 6+ months with nothing to carry the price, and biotech is not in the favored late-cycle set.",
+      "opportunity_cost": "Fails on three independent counts before sizing is even considered: RSI 70.2 breaches the no-new-long line; ATR(14) at 13.61% of a $4.58 stock puts the mandated 10% stop at 0.73 ATR (+20% target = 1.47 ATR), so 2:1 is unreachable at any sane stop; and at +46% above the 20-SMA there is no stop that is neither inside noise nor a ~25% catastrophe. Liquidity compounds it - IEX 20d average volume is ~238k shares, so even a ~$10-20k clip is a meaningful share of the tape. Against today's own list it would displace nothing by rank but would spend one of three weekly trades chasing a spike that has already faded 22.8%. Research only - no order."
+    },
+    {
+      "rank": 5,
+      "symbol": "BE",
+      "price": 182.26,
+      "prev_close": 191.99,
+      "gap_pct": -5.07,
+      "premarket_volume": null,
+      "prior_session_volume": 16051298,
+      "atr14_pct": 11.43,
+      "rsi14": 47.0,
+      "stop_10pct_in_atr": 0.88,
+      "target_20pct_in_atr": 1.75,
+      "catalyst": "Giving back a +13% post-earnings spike as AI-power beta: Q3 revenue $1.24B (+138% YoY), FY26 guidance raised to $4.4-4.6B and a 900MW NTT DATA fuel-cell deal, all outweighed by the AI-capex de-rate.",
+      "headlines": [
+        "Bloom Energy Q3 2026 revenue hits $1.24B with 138% growth; product revenue +179%; FY26 guidance raised to $4.4-4.6B (2026-11-10)",
+        "Bloom Energy Reports Strong Q3 Performance with Major Deal - partnered with NTT DATA to deploy 900 megawatts of fuel cell power across global data centers (Intellectia, 2026-11-15)",
+        "Bloom Energy closed at $209.47, up 13.0% (InvestorsHub, 2026-11-12)"
+      ],
+      "catalyst_detail": "Bloom's Q3 2026 was the strongest fundamental print in this scan: revenue $1.24B, +138% YoY, product revenue (fuel-cell servers) +179%, adjusted operating margin expanding from 8.9% to 23.1%, and FY26 guidance raised again to $4.4-4.6B, roughly 122% growth. It also announced a partnership with NTT DATA to deploy 900MW of fuel-cell power across global data centres, against a delivery record that includes powering an Oracle data centre in 55 days versus a 90-day target. The stock closed $209.47, +13.0%, on Nov 11 - and has fallen every session since ($209.36 -> $201.94 -> $191.92 -> $182.26, -12.9%) with no company-specific bad news.",
+      "why": "Bloom is an AI-datacentre power derivative, so it trades as AI-capex beta rather than on its own order book. Huang's resignation and the neocloud de-rate pulled the whole AI-power complex down with the chips and the clouds, which is why a company that raised guidance and signed a 900MW contract is down 12.9% in three sessions.",
+      "impact": "Mixed, and the most genuinely interesting of the five. The fundamentals are the best in the list and the NTT deal is structural, so the drawdown is sector-driven rather than thesis-driven. But the sector read-through is exactly the disqualifier: this is the same trade as CRWV and NBIS above, and the same trade as TLN/CEG in today's pre-market log. Price is below both its 20-SMA (-6.6%) and 50-SMA (-21.3%), so the sector-momentum rule fails.",
+      "horizon": "LONG_TERM",
+      "horizon_reasoning": "Unlike the other four, the catalyst is structural and still intact - 138% revenue growth, a raised guide and 900MW contracted - so the business merits a multi-week swing thesis; the entry is wrong today, not the thesis.",
+      "opportunity_cost": "This is the one row with a real dominance argument rather than a flat rejection. ATR(14) at 11.43% puts the mandated 10% stop at 0.88 ATR and the +20% target at 1.75 ATR, so it fails 2:1 at the permitted stop. More decisively, BE is strictly dominated for the SAME AI-power exposure by TLN from today's pre-market log: TLN's ATR is 5.13% of price, its 10% stop is 1.95 ATR and its +20% target 3.9 ATR, and its R:R gate actually PASSES while sitting above its 20-, 50- and 200-SMA. Both carry the NVDA Tuesday binary, so the correct action is to spend no weekly trade slot on either today and revisit TLN - not BE - after the Nov 18 FOMC minutes. BE earns a watchlist slot, not a trade. Research only - no order."
+    }
+  ]
+}
