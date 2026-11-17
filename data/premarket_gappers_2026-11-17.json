@@ -1,52 +1,65 @@
 {
-  "scanned_at": "2026-11-17T14:09:30Z",
-  "scanned_at_et": "2026-11-17 09:09 ET",
-  "run_slot": "09:00 ET (third of four today)",
-  "feed": "delayed_sip",
+  "scanned_at": "2026-11-17T15:08:00Z",
+  "scanned_at_et": "2026-11-17 10:08 ET",
+  "run_slot": "10:00 ET (run 4 of 4 today)",
+  "feed": "delayed_sip (15-min delayed)",
+  "universe": "memory/WATCHLIST.md — 69 tickers",
   "gap_threshold_pct": 5.0,
-  "universe_size": 69,
-  "raw_hits_ge_threshold": 1,
-  "hits_passing_all_filters": 0,
+  "raw_hits_ge_5pct": 5,
+  "hits_passing_all_filters": 2,
+  "filters_applied": {
+    "abs_gap_pct_min": 5.0,
+    "price_min": 3.0,
+    "session_volume_min": 50000
+  },
+  "filtered_out_below_price_floor": [
+    {"symbol": "RCAT", "price": 2.485, "gap_pct": -29.6, "note": "gapped THROUGH the $3.00 floor from a $3.53 close; fully covered in the 07:12/08:08/09:09 ET entries"},
+    {"symbol": "OPEN", "price": 1.22, "gap_pct": 7.96, "note": "below $3.00 floor"},
+    {"symbol": "DPRO", "price": 2.495, "gap_pct": -7.25, "note": "below $3.00 floor"}
+  ],
   "deep_dive_cap": 5,
   "deep_dive_cap_binding": false,
-  "notification_sent": false,
-  "notification_gate": "hits > 0 OR scan errored; hits passing filters = 0 and scan ran clean -> gate not met",
+  "note_on_volume_field": "Market is OPEN at this run slot, so Alpaca snapshot dailyBar carries TODAY's session volume (verified dailyBar t=2026-11-17), not the prior session as in the 07:12/08:08/09:09 ET pre-open runs. Values below are intraday-so-far on a 15-min delay, NOT premarket volume — Alpaca exposes no premarket-volume field.",
   "gappers": [
     {
       "rank": 1,
-      "symbol": "RCAT",
-      "price": 2.3316,
-      "prev_close": 3.53,
-      "gap_pct": -33.95,
-      "premarket_volume": null,
-      "premarket_volume_note": "Alpaca exposes no premarket-volume field; snapshot `volume` (10,389,521) is PRIOR-SESSION CONSOLIDATED volume. Filter treated as unpopulated, not faked.",
-      "passes_filters": false,
-      "filter_failures": ["price >= 3.00 (at $2.3316)"],
-      "catalyst": "Fiscal Q3 2026 after the Nov 16 close: revenue $11.8M (+22% YoY) but gross profit collapsed to $65k, net loss widened to $40.448M, and the full-year 2026 revenue target was WITHDRAWN citing slower funding and contract awards.",
+      "symbol": "PEPG",
+      "price": 3.97,
+      "gap_pct": -5.25,
+      "premarket_volume": 215566,
+      "volume_basis": "today's session so far (delayed_sip), NOT premarket",
+      "catalyst": "Sixth straight session unwinding the Nov 10 Phase 2 DM1 data pop — now ~20% below the $5.00 price of the $125M follow-on that was sold into that strength.",
       "headlines": [
-        "Red Cat Q3 loss widens to $40.4M; 2026 target withdrawn (StockTitan, 8-K material event, 2026-11-16)",
-        "Red Cat withdraws 2026 revenue target, reports Q3 results (Investing.com, 2026-11-16)",
-        "Red Cat withdraws 2026 revenue target as Q3 loss widens to $40.4M (Dealroom, 2026-11-17)"
+        "PepGen Reports Third Quarter 2026 Financial Results and Recent Corporate Highlights (investors.pepgen.com, 2026-11-10)",
+        "PepGen Announces Pricing of $125 Million Public Offering — 25,000,000 shares (investors.pepgen.com, 2026-11-11)",
+        "Why Is PepGen Inc. (PEPG) Stock Down -8.13% Today? — cites the $125M equity offering priced at $5.00 (tickeron.com, 2026-11-13)"
       ],
-      "catalyst_detail": "Red Cat reported fiscal Q3 2026 after the Nov 16 close. Revenue came in at $11.8M, +22% YoY, but gross profit collapsed to roughly $65,000 from $638,000 a year earlier - an effectively zero (~0.6%) gross margin - while net loss widened to $40.448M from $16.017M. Management withdrew the full-year 2026 revenue target outright, citing funding and contract awards progressing more slowly than expected plus the loss of an anticipated revenue contribution following Gauntlet II. Nine-month revenue is still +227% YoY at $47.4M, so the break is this quarter and the forward guide rather than the year-to-date trajectory. Re-confirmed this run against StockTitan's 8-K page, Investing.com and Dealroom; no Yahoo-sourced figures.",
-      "why": "The guidance withdrawal combined with the near-zero gross margin is the mechanism, not the revenue line itself. Pulling a full-year target with one quarter left removes the revenue ramp the equity was priced on, and $65k of gross profit on $11.8M of revenue says the units that shipped carried no contribution - so the de-rating hits the growth multiple and the credibility of operating leverage simultaneously. Gauntlet II deletes the named near-term program catalyst. Forced-seller mechanics compound it: the stock slid steadily into the print ($4.28 Nov 11 -> $3.525 Nov 16), and breaking the $3 handle drops it out of many funds' and screeners' eligible universes.",
-      "impact": "Structural, not a one-day headline spike, and still deteriorating rather than mean-reverting. The move has deepened monotonically across all three of today's runs: -30.03% at 07:12 ET -> -32.71% at 08:08 ET -> -33.95% at 09:09 ET, with no dead-cat bid in two hours. A withdrawn full-year guide plus a zero gross margin has no same-day repair path. The balance sheet is thinner than the headline cash suggests: $242.7M cash against $156.8M of nine-month operating burn is roughly 14 months of runway at the current rate, before the proposed all-cash Steyr Motors offer (EUR 39.00/share, acceptance period ends Dec 18 2026) consumes more - so a raise/dilution is a live risk, not a remote one. Sector read-through remains largely idiosyncratic: drone/defense peers are mixed and small (DPRO +1.49%, AVAV -1.03%), i.e. no peer is being repriced on this.",
+      "catalyst_detail": "On Nov 10 PepGen released positive topline results from the 10 mg/kg multiple-ascending-dose cohort of the Phase 2 FREEDOM2-DM1 trial of PGN-EDODM1 in myotonic dystrophy type 1: mean splicing correction of 46.5% (the highest reported to date in a multiple-dose study), 5 of 6 participants above 20% splicing improvement and 4 above 50% at Week 13, with improvements across vHOT, hand-grip strength, 10MWRT and TUG, and no SAEs, DLTs or treatment discontinuations. An independent DSMB cleared advance into the third and highest 12.5 mg/kg cohort (fully enrolled; results 1H 2027) and approved OLE escalation from 5 to 10 mg/kg. The stock closed Nov 10 at $4.61 from a $2.39 prior close on ~106.5M shares versus a ~1M-share normal day. The same morning the company announced a proposed $125.0M follow-on, priced Nov 11 at $5.00 for 25,000,000 shares. Q3 showed $104.8M cash (runway into 2028), $19.4M net loss, and the FDA's March 2026 partial clinical hold on the US arm of FREEDOM2 still unresolved.",
+      "why": "This is offering indigestion, not a thesis change. Management sold 25M new shares at $5.00 into a one-day data spike — roughly a third of the 69.3M-share count — and the deal buyers are now ~20% underwater, so every bounce meets supply from holders whose cost basis is $5.00. The clean data has already been priced and paid for; what is left in the tape is the float that was created to monetize it. The slide is monotonic ($4.61 -> $5.26 -> $5.04 -> $4.36 -> $4.205 -> $3.93), which is the signature of mechanical post-deal distribution rather than a reaction to news — no new PepGen headline has crossed since Nov 11.",
+      "impact": "Reads as continued orderly distribution, not a fresh one-day spike and not capitulation. Today's 215,566 shares by ~10:00 ET is extremely light against the ~2.6M prior session and a 7.9M 20-day average (itself inflated by the 106M-share Nov 10 print) — this is drift on no volume, which argues the supply overhang is still working through rather than resolving. Sector read-through is nil: XBI is -0.10% and the move is entirely idiosyncratic, so there is no peer confirmation to trade off. The $5.00 deal price is now overhead resistance, and the next genuine catalysts are distant — FREEDOM-OLE 10 mg/kg safety plus 5 mg/kg clinical data in January 2027 and the 12.5 mg/kg cohort in 1H 2027 — with the FDA partial hold unresolved in between, so there is no near-term event to arrest the fade.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The reset is structural but structurally BEARISH; for a long-biased book the only expression is a days-long oversold bounce, and the name sits far below its 200-SMA, so there is no multi-week long thesis until a contract award or the Steyr close carries a firm date and number.",
-      "opportunity_cost": "Book is 100% cash ($100,000 equity, 0 positions, 0 open orders), so nothing would be displaced and all 3/3 weekly trade slots are open - the binding constraint is the rulebook, not capacity. RCAT fails on four independent counts: (1) at $2.3316 it is below this routine's own $3.00 price floor, having gapped THROUGH it from a $3.53 close; (2) it is far under its 200-SMA, so the long-bias filter blocks any long outright; (3) there is no documented bullish catalyst - guidance was withdrawn - so it fails the Confluence rule (>=2 indicators + 1 catalyst), and bottom-fishing on drawdown alone is explicitly forbidden; (4) R:R cannot clear the 2:1 minimum at a sane stop - ATR(14) of about $0.385 is ~10.9% of the Nov 16 close and ~16.5% of the current price, so a 10% stop near $2.10 is only ~0.6 ATR, inside a single day's range and near-certain to be hit before any thesis resolves, while a 2:1 target would demand a near-full round trip to yesterday's close within days. The real cost of taking it would be burning one of three weekly slots and up to 20% of equity on a falling knife while trend-aligned names (NIO +4.0%, CMBT +2.7%, NBIS +2.0%) go untouched. Research only - no order placed (STEP 8)."
+      "horizon_reasoning": "The catalyst is seven days stale and is actively being sold rather than bought; the structural readouts are 2-6 months out and the US clinical hold is still open, so nothing here supports a multi-day swing hold in the current Mid-cycle tape (Healthcare is the favored sector, but a post-deal biotech fade is not a Healthcare momentum expression).",
+      "opportunity_cost": "The book is 100% cash — $100,000 equity, 0 of 6 positions, 0 open orders — so nothing would be displaced and all 3/3 weekly trade slots are open. The binding cost is the weekly slot itself, and the setup cannot earn it. ATR(14) is $0.621, or 14.25% of price, so the mandated 10% stop (~$3.57) sits at just 0.70 ATR — inside a single day's normal range and near-certain to be stopped out on noise before any thesis resolves. Clearing 2:1 R:R off that stop requires a ~20% move to ~$4.76, which is directly into the $5.00 deal-price supply wall, so the reward leg is capped exactly where the selling lives. It also fails the Entry Checklist on catalyst (the documented catalyst is bullish but already monetized and being distributed) and offers no bullish confluence — buying a sixth down day on no volume is bottom-fishing, which the rulebook forbids. Against today's trend-aligned movers (NIO +4.0%, NBIS +3.5%, CMBT +2.7%) PEPG is the weakest use of a slot. Research only — no order placed (STEP 8)."
+    },
+    {
+      "rank": 2,
+      "symbol": "RGTI",
+      "price": 8.60,
+      "gap_pct": -5.08,
+      "premarket_volume": 3490276,
+      "volume_basis": "today's session so far (delayed_sip), NOT premarket",
+      "catalyst": "Sixth straight down session after a large Q3 revenue miss on Nov 10, now compounded by a sector-wide derisking of the whole quantum complex while the broad tape is flat.",
+      "headlines": [
+        "Rigetti Computing Reports Third Quarter 2026 Financial Results (globenewswire.com, 2026-11-10)",
+        "Rigetti Computing Misses Q3 2026 Estimates as Revenue Falls — $1.4M vs $3.5M expected, -28% YoY (LinkedIn/MarketCatalyst)",
+        "Rigetti Computing Q3 2026 Earnings Call Transcript — $497.1M cash, no debt, FY revenue guided to ~$20M (benzinga.com, 2026-11-10)"
+      ],
+      "catalyst_detail": "Rigetti reported Q3 2026 on Nov 10: revenue of $1.41M against roughly $3.5M expected and down ~28% year over year, with gross profit of $857k and adjusted EPS of -$0.06 versus -$0.05 expected. Nine-month revenue is still $10.9M, up 110% from $5.2M, and the balance sheet is genuinely strong at $497.1M of cash and investments with no debt. Management nonetheless reiterated roughly $20M of full-year revenue, which implies a ~$9M Q4 off a $1.4M Q3 — a step-up the market plainly does not believe. The stock has fallen every session since: $12.99 open on Nov 11 to $8.60-8.69 now, about -33%, closing at a 52-day low. Today the entire quantum group is being sold together — IONQ -3.55%, QBTS -3.81%, QUBT -2.67%, RGTI -4.73% — against SPY -0.14% and QQQ -0.14%.",
+      "why": "Two mechanisms are stacked. The company-specific one is a credibility break on revenue timing: a 60% miss plus a reiterated full-year guide that needs a 6x sequential jump removes the market's willingness to underwrite the commercialization ramp, and for a pre-revenue story stock the multiple IS the thesis. The sector-wide one is a rotation out of speculative, cash-burning, pre-revenue tech — the quantum complex is down 2.7-4.7% today while the S&P and Nasdaq are flat, which is forced derisking rather than a market move. RGTI is leading the group down because it is the name that just handed the bears a printed number.",
+      "impact": "Sustainable direction, but not yet a completed washout. Today's 3.49M shares by ~10:00 ET against a 15.8M 20-day average and a 15.2M prior session is a normal-to-firm pace, not panic volume — there is no capitulation print and no bid stepping in. The sector read-through is the important finding and it is unambiguous: with IONQ, QBTS and QUBT all down 2.7-3.8% on a flat tape, this is a complex-wide repricing, so an RGTI long would be fighting both a single-name credibility problem and a sector outflow at once. Technically there is nothing to lean on — price is below the 20-SMA ($11.44) and far below the 50-SMA ($13.44), at a 52-day closing low, six consecutive down days, with no catalyst between here and the ~March Q4 print to force a re-rate. The $497.1M cash pile removes solvency risk, which is why this bleeds rather than collapses, but cash is not a catalyst.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The driver is sentiment and sector positioning rather than a structural reset — the balance sheet is intact and nine-month revenue is still +110% — but the direction is down, the next verifiable datapoint is a quarter away, and XLK is the worst sector on every horizon (1d, 1mo, 3mo) and has lost its 200-SMA, so nothing supports carrying a long past the session.",
+      "opportunity_cost": "Same capacity picture: 100% cash, 0 of 6 positions, 3/3 weekly slots open, nothing to displace. Within today's own list RGTI ranks below PEPG on gap size, and both are down-gaps, so the honest comparison is not PEPG-versus-RGTI but either-versus-nothing — and nothing wins. ATR(14) is $1.137, or 11.82% of price, so the mandated 10% stop (~$7.74) is only 0.76 ATR, inside one day's range on a name that has moved more than 10% intraday twice in the last week. A 2:1 target off that stop needs ~$10.32, which would require retracing nearly the entire post-earnings decline and still lands below the 20-SMA, with a flat-to-down sector pulling the other way — so the reward leg depends on a reversal no evidence supports. It fails the long-bias filter outright (below both the 20- and 50-SMA at a 52-day low), fails the Confluence rule (no bullish indicator agreement and no bullish catalyst — the documented catalyst is a miss), and buying a sixth consecutive down day into an active sector outflow is textbook bottom-fishing. Sector rule 9 also applies in spirit: the quantum/speculative-tech pocket is where today's losses are concentrated, and the rulebook says follow sector momentum, not catch it. Research only — no order placed (STEP 8)."
     }
-  ],
-  "sub_threshold_tape": [
-    {"symbol": "NIO", "gap_pct": 4.02, "price": 2.8294},
-    {"symbol": "CMBT", "gap_pct": 2.68, "price": 17.25},
-    {"symbol": "TRMD", "gap_pct": -2.47, "price": 35.15},
-    {"symbol": "KLIC", "gap_pct": 2.33, "price": 67.21},
-    {"symbol": "ASTS", "gap_pct": -2.24, "price": 27.94},
-    {"symbol": "APT", "gap_pct": 2.18, "price": 6.57},
-    {"symbol": "NBIS", "gap_pct": 2.02, "price": 109.2907},
-    {"symbol": "BE", "gap_pct": 1.96, "price": 180.75},
-    {"symbol": "OPEN", "gap_pct": 1.77, "price": 1.15},
-    {"symbol": "AMKR", "gap_pct": 1.76, "price": 34.65}
-  ],
-  "feed_liveness": "20 of 69 watchlist names moved >1% premarket - feed confirmed live, tape genuinely quiet outside RCAT"
+  ]
 }
