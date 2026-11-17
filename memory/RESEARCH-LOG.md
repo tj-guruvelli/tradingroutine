@@ -20276,3 +20276,10 @@ archive copy.
 - 0 errors.
 - Raw JSON: `data/setup-scan_cloud_2026-11-17_1537ET.json`.
 - 0 grade-A hits → no Telegram/ClickUp notification sent (per STEP 4 rule).
+
+### Setup Scan (17:37 ET, cloud)
+- 60 candidates checked, 0 hits (grade A, B, or C).
+- `grade_a_possible: false` — 17:37 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A was never evaluated this run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`).
+- 0 errors.
+- Raw JSON: `data/setup-scan_cloud_2026-11-17_1737ET.json`.
+- 0 grade-A hits → no Telegram/ClickUp notification sent (per STEP 4 rule).
