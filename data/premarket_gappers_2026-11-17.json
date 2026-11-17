@@ -1,49 +1,52 @@
 {
-  "scanned_at": "2026-11-17T13:08:00Z",
-  "scanned_at_et": "2026-11-17 08:08 ET",
-  "run": "gappers-cloud (08:00 ET slot, 2nd of 4 today)",
+  "scanned_at": "2026-11-17T14:09:30Z",
+  "scanned_at_et": "2026-11-17 09:09 ET",
+  "run_slot": "09:00 ET (third of four today)",
   "feed": "delayed_sip",
   "gap_threshold_pct": 5.0,
   "universe_size": 69,
-  "raw_hits_ge_5pct": 1,
+  "raw_hits_ge_threshold": 1,
   "hits_passing_all_filters": 0,
   "deep_dive_cap": 5,
   "deep_dive_cap_binding": false,
   "notification_sent": false,
-  "notification_reason": "hits passing filters = 0 and scan did not error; STEP 6 gate not met",
+  "notification_gate": "hits > 0 OR scan errored; hits passing filters = 0 and scan ran clean -> gate not met",
   "gappers": [
     {
       "rank": 1,
       "symbol": "RCAT",
-      "price": 2.3754,
+      "price": 2.3316,
       "prev_close": 3.53,
-      "gap_pct": -32.71,
+      "gap_pct": -33.95,
       "premarket_volume": null,
-      "premarket_volume_note": "Alpaca exposes no premarket-volume field; snapshot `volume` 10,389,521 is PRIOR-session consolidated volume, not premarket. Filter treated as unpopulated, not faked.",
-      "filter_status": "FAILS price >= 3.00 floor (gapped through it from a $3.53 close). Reported in full rather than dropped; NOT tradeable under the rulebook.",
-      "catalyst": "Fiscal Q3 2026 (qtr ended Sep 30) printed revenue $11.8M with gross profit collapsing to $65k, net loss widening to $40.4M, and the full-year revenue target withdrawn outright.",
+      "premarket_volume_note": "Alpaca exposes no premarket-volume field; snapshot `volume` (10,389,521) is PRIOR-SESSION CONSOLIDATED volume. Filter treated as unpopulated, not faked.",
+      "passes_filters": false,
+      "filter_failures": ["price >= 3.00 (at $2.3316)"],
+      "catalyst": "Fiscal Q3 2026 after the Nov 16 close: revenue $11.8M (+22% YoY) but gross profit collapsed to $65k, net loss widened to $40.448M, and the full-year 2026 revenue target was WITHDRAWN citing slower funding and contract awards.",
       "headlines": [
-        "Red Cat Reports Q3 2026 Revenue Growth Of 22% Y/Y; YTD Q3 2026 Revenue Growth of 227% Y/Y; Announced Public Purchase to Acquire Steyr Motors AG; and Advancement to Dow Swarm Forge Crucible 4 (StockTitan, 11/16/2026 16:05 ET)"
+        "Red Cat Q3 loss widens to $40.4M; 2026 target withdrawn (StockTitan, 8-K material event, 2026-11-16)",
+        "Red Cat withdraws 2026 revenue target, reports Q3 results (Investing.com, 2026-11-16)",
+        "Red Cat withdraws 2026 revenue target as Q3 loss widens to $40.4M (Dealroom, 2026-11-17)"
       ],
-      "catalyst_detail": "Red Cat reported fiscal Q3 2026 after the Nov 16 close. Revenue was $11.8M, +22% YoY, but gross profit collapsed to $65,000 from $638,000 a year earlier -- a roughly 0.6% gross margin, effectively zero. Net loss widened to $40.448M from $16.017M. Management withdrew the full-year revenue target outright, attributing it to slower funding and contract awards plus the loss of an anticipated revenue contribution following Gauntlet II. Nine-month revenue is still +227% YoY at $47.4M, so the break is the quarter and the forward guide, not the year-to-date trajectory. Cash stood at $242.731M against nine-month operating cash use of $156.844M. Offsetting positives in the same release: Blue Ops received its first U.S. government B-26 purchase order, Apium advanced with Anduril's team to Swarm Forge Crucible 4 with further demonstrations beginning January 2027, Teal Drones and FlightWave were combined under Red Cat Aerial, and the company reiterated its proposed all-cash voluntary public purchase offer for Steyr Motors AG at EUR 39.00/share (28.9% premium to the Oct 16 close, acceptance period ending Dec 18 2026).",
-      "why": "The guidance withdrawal plus a near-zero gross margin is the mechanism, not the revenue miss. Pulling the full-year target with one quarter left removes the revenue ramp the equity was priced on, and $65k of gross profit on $11.8M of revenue says the units that did ship carried no contribution -- so the de-rating hits both the growth multiple and the path to operating leverage at once. The Gauntlet II non-contribution deletes the named near-term program catalyst. Forced-seller mechanics then compound it: the stock was already in a steady slide into the print ($4.28 on Nov 11 to $3.525 on Nov 16), and breaking the $3 handle pushes the name out of many funds' and screeners' eligible universes.",
-      "impact": "Structural, not a one-day headline spike. A withdrawn full-year guide and a zero gross margin have no same-day repair path, and the move has deepened rather than bounced: -30.03% at the 07:12 ET scan, -32.71% at 08:08 ET, with no sign of a dead-cat bid in that hour. Balance sheet is thinner than the headline cash figure suggests -- $242.7M cash against $156.8M of nine-month operating burn is roughly 14 months of runway at the current rate, before the all-cash Steyr Motors offer consumes more of it, so dilution or a raise is a live risk rather than a remote one. Sector read-through looks contained and idiosyncratic: no other drone/defense name on the watchlist registered even a 1% premarket move, and the whole 69-symbol universe shows only 17 names moving >1%.",
+      "catalyst_detail": "Red Cat reported fiscal Q3 2026 after the Nov 16 close. Revenue came in at $11.8M, +22% YoY, but gross profit collapsed to roughly $65,000 from $638,000 a year earlier - an effectively zero (~0.6%) gross margin - while net loss widened to $40.448M from $16.017M. Management withdrew the full-year 2026 revenue target outright, citing funding and contract awards progressing more slowly than expected plus the loss of an anticipated revenue contribution following Gauntlet II. Nine-month revenue is still +227% YoY at $47.4M, so the break is this quarter and the forward guide rather than the year-to-date trajectory. Re-confirmed this run against StockTitan's 8-K page, Investing.com and Dealroom; no Yahoo-sourced figures.",
+      "why": "The guidance withdrawal combined with the near-zero gross margin is the mechanism, not the revenue line itself. Pulling a full-year target with one quarter left removes the revenue ramp the equity was priced on, and $65k of gross profit on $11.8M of revenue says the units that shipped carried no contribution - so the de-rating hits the growth multiple and the credibility of operating leverage simultaneously. Gauntlet II deletes the named near-term program catalyst. Forced-seller mechanics compound it: the stock slid steadily into the print ($4.28 Nov 11 -> $3.525 Nov 16), and breaking the $3 handle drops it out of many funds' and screeners' eligible universes.",
+      "impact": "Structural, not a one-day headline spike, and still deteriorating rather than mean-reverting. The move has deepened monotonically across all three of today's runs: -30.03% at 07:12 ET -> -32.71% at 08:08 ET -> -33.95% at 09:09 ET, with no dead-cat bid in two hours. A withdrawn full-year guide plus a zero gross margin has no same-day repair path. The balance sheet is thinner than the headline cash suggests: $242.7M cash against $156.8M of nine-month operating burn is roughly 14 months of runway at the current rate, before the proposed all-cash Steyr Motors offer (EUR 39.00/share, acceptance period ends Dec 18 2026) consumes more - so a raise/dilution is a live risk, not a remote one. Sector read-through remains largely idiosyncratic: drone/defense peers are mixed and small (DPRO +1.49%, AVAV -1.03%), i.e. no peer is being repriced on this.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The reset is structural but structurally BEARISH; for a long-biased book the only expression is a days-long oversold bounce, and the name sits far below its 200-SMA, so there is no multi-week long thesis until a contract award or the Steyr close carries a date and a number.",
-      "opportunity_cost": "Book is 100% cash -- $100,000 equity, 0 open positions, 0 open orders -- so nothing would be displaced and all 3/3 weekly trade slots are open. The binding constraint is the rulebook, not capacity. RCAT fails on four independent counts: (1) at $2.3754 it is below this routine's own $3.00 price floor; (2) it is far under its 200-SMA, so the long-bias filter blocks any long outright; (3) there is no documented bullish catalyst, so it fails the Confluence rule (>=2 indicators + 1 catalyst); (4) the R:R cannot clear 2:1 at a sane stop -- ATR(14) is $0.385, 10.9% of the Nov 16 close and ~16% of the current price, so a 10% stop at ~$2.14 is only 0.62 ATR, inside a single day's range and certain to be hit before any thesis resolves, while the +20% target at ~$2.85 demands a near-full round trip to yesterday's close within days. The real cost of taking it would be burning one of three weekly slots and up to 20% of equity on a falling knife while trend-aligned names (NBIS +3.3%, SATL +3.3%, BE +2.8%) go untouched. Research only -- no order placed (STEP 8)."
+      "horizon_reasoning": "The reset is structural but structurally BEARISH; for a long-biased book the only expression is a days-long oversold bounce, and the name sits far below its 200-SMA, so there is no multi-week long thesis until a contract award or the Steyr close carries a firm date and number.",
+      "opportunity_cost": "Book is 100% cash ($100,000 equity, 0 positions, 0 open orders), so nothing would be displaced and all 3/3 weekly trade slots are open - the binding constraint is the rulebook, not capacity. RCAT fails on four independent counts: (1) at $2.3316 it is below this routine's own $3.00 price floor, having gapped THROUGH it from a $3.53 close; (2) it is far under its 200-SMA, so the long-bias filter blocks any long outright; (3) there is no documented bullish catalyst - guidance was withdrawn - so it fails the Confluence rule (>=2 indicators + 1 catalyst), and bottom-fishing on drawdown alone is explicitly forbidden; (4) R:R cannot clear the 2:1 minimum at a sane stop - ATR(14) of about $0.385 is ~10.9% of the Nov 16 close and ~16.5% of the current price, so a 10% stop near $2.10 is only ~0.6 ATR, inside a single day's range and near-certain to be hit before any thesis resolves, while a 2:1 target would demand a near-full round trip to yesterday's close within days. The real cost of taking it would be burning one of three weekly slots and up to 20% of equity on a falling knife while trend-aligned names (NIO +4.0%, CMBT +2.7%, NBIS +2.0%) go untouched. Research only - no order placed (STEP 8)."
     }
   ],
-  "tape_context_sub_threshold": [
-    {"symbol": "NBIS", "price": 110.70, "gap_pct": 3.33},
-    {"symbol": "SATL", "price": 3.1294, "gap_pct": 3.28},
-    {"symbol": "BE", "price": 182.2963, "gap_pct": 2.83},
-    {"symbol": "OPEN", "price": 1.16, "gap_pct": 2.65},
-    {"symbol": "TRMD", "price": 35.09, "gap_pct": -2.64},
-    {"symbol": "CMBT", "price": 17.21, "gap_pct": 2.44},
-    {"symbol": "KLIC", "price": 67.21, "gap_pct": 2.33},
-    {"symbol": "BW", "price": 4.43, "gap_pct": 2.31},
-    {"symbol": "AMKR", "price": 34.78, "gap_pct": 2.14},
-    {"symbol": "CRWV", "price": 50.8982, "gap_pct": 2.04}
+  "sub_threshold_tape": [
+    {"symbol": "NIO", "gap_pct": 4.02, "price": 2.8294},
+    {"symbol": "CMBT", "gap_pct": 2.68, "price": 17.25},
+    {"symbol": "TRMD", "gap_pct": -2.47, "price": 35.15},
+    {"symbol": "KLIC", "gap_pct": 2.33, "price": 67.21},
+    {"symbol": "ASTS", "gap_pct": -2.24, "price": 27.94},
+    {"symbol": "APT", "gap_pct": 2.18, "price": 6.57},
+    {"symbol": "NBIS", "gap_pct": 2.02, "price": 109.2907},
+    {"symbol": "BE", "gap_pct": 1.96, "price": 180.75},
+    {"symbol": "OPEN", "gap_pct": 1.77, "price": 1.15},
+    {"symbol": "AMKR", "gap_pct": 1.76, "price": 34.65}
   ],
-  "tape_context_note": "17 of 69 names moved >1% at 08:08 ET -- feed liveness confirmed, tape genuinely quiet outside RCAT."
+  "feed_liveness": "20 of 69 watchlist names moved >1% premarket - feed confirmed live, tape genuinely quiet outside RCAT"
 }
