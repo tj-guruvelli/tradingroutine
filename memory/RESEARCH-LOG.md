@@ -20005,3 +20005,109 @@ TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER
 No Telegram/ClickUp notification sent (0 grade-A hits — matches the
 local `/setup-scan` quiet rule). Candidate: none for `/trade` or
 `market-open.md`'s next read of `data/setup-scan_cloud_*.json`.
+
+## 2026-11-17 — Pre-Market Research (Day 93, Tuesday, cloud run)
+
+### Account
+- Equity $100,000.00 | Cash $100,000.00 (100%) | BP $400,000 (4x) | Non-marginable BP $100,000 | **0 positions | 0 open orders**
+- `balance_asof: 2026-11-16` (fresh). **`daytrade_count` again NOT returned by the account endpoint** — absent from the JSON, not zero-by-assertion. Inferred 0 (no entry has ever fired). Flagged, not fabricated.
+- Still the live-vs-$10k-baseline mismatch flagged Jul 27 — operator review pending (154th+ session). Account shows `options_trading_level: 3`; **irrelevant and untouched — NO OPTIONS, ever.**
+- Peak equity $100,000 -> drawdown 0.0%. Circuit breaker NOT tripped.
+- Deployment 0% vs the mandated **75-85%** — 93rd straight trading day under-deployed. See Decision.
+
+### Market context (CNBC quote cache + Cboe primary for VIX; Alpaca for all equity/ETF price data; Apify web-search for news; **no Yahoo cited or used**)
+- **PREMARKET 05:59-06:09 ET — modestly lower, third day of pressure into tonight's NVDA print.** S&P 500 Dec'26 fut (ESZ26) **7,414.75, -24.25 (-0.33%)**, prev settle 7,439.00, overnight range 7,395.25-7,456.75. Nasdaq 100 Dec'26 (NQZ26) **27,191.50, -92.75 (-0.34%)**, range 27,085-27,498. Dow Dec'26 (YMZ26) **51,453, -217 (-0.42%)**. No sector/single-name divergence in futures this morning — unlike Monday, the whole board is down roughly the same amount.
+- **Monday Nov 16 cash closes (Alpaca):** SPY **740.04 (-1.89%)**, QQQ **661.80 (-2.68%)**. Corroborated independently by Barron's (S&P -1.9%) and WSJ (Nasdaq -2.5%). **Third consecutive down day**, driven by the Nvidia leadership fallout dragging the AI complex (CNBC, WSJ, Moomoo). Burry still short NVDA into the print (CNBC).
+- **Index technicals are deteriorating, and the Nasdaq is the damage.** SPY: 20-SMA 757.72 (**below, -2.3%**), 50-SMA 763.84 (-3.1%), **200-SMA 732.13 (+1.1% — only just holding)**, RSI(14) **40.4**. QQQ: 20-SMA 692.63 (**below, -4.5%**), **RSI(14) 37.6**, 1mo **-6.8%**, 3mo **-7.8%**. NQ futures are **-14.0% off the 10/06/26 high** (31,616.50 -> 27,191.50). SPY's 200-SMA at ~732 is the last support of consequence and sits ~1.1% below spot.
+- **VIX 23.37 (+0.46, +2.01%)** at 06:09 ET — **Cboe primary + CNBC real-time agree**. Monday cash close **22.91 (+18.70%)**, Monday range 20.43-24.52, open 20.87. 52wk 13.38-35.30. **Elevated and rising — above the 20 line, but still well short of the 35.30 March stress high.** This is the cleanest VIX read in several sessions (prior entries logged aggregator conflicts; resolved here against Cboe's own delayed-quote endpoint).
+- **Rates eased marginally but the 5% line still holds. 10Y 5.111%** (-0.01, real-time 06:09 ET), prev close 5.121%, session range 5.093-5.137%, 52wk 3.93-5.37%. A 5.11% long end remains a direct multiple-compression input and the standing explanation for both the tech de-rate and the defensive bid. Not a relief, just not worse.
+- **Oil firm overnight, but the trend is still down. WTI Dec'26 $86.00 (+0.28, +0.33%)**, prev settle 85.72, range 84.68-86.14 (expires 11/20). **Brent Jan'27 $92.73 (+0.29, +0.31%)**, prev settle 92.44. Against that, the Alpaca ETF proxies show the real trend: **USO 140.04 (-3.81% Mon, -9.7% vs 20-SMA)**, **BNO 58.67 (-3.88% Mon, -9.7% vs 20-SMA)**. A ~$86 WTI / ~$93 Brent tape that is rolling over takes some pressure off the inflation input.
+- **Today's calendar:** no tier-1 US macro print scheduled. **The event is corporate, after the close.** This week: **FOMC minutes Wed Nov 18 14:00 ET**, plus retail sales / industrial production / NAHB.
+- **Earnings — today is the pivot of the quarter.** 43 companies report (Earnings Whispers): **30 BMO, 13 after the close.** BMO: **Home Depot** (consensus $3.84 EPS on $42.8B rev, +3.4% YoY — Kiplinger), **Disney**, JD, LZB, KLAR. **After the close ~16:20 ET: NVIDIA Q3 FY27**, call 17:00 ET (confirmed against NVIDIA IR's own events page). Consensus revenue **$105.84B-$110.16B** (midpoint ~$109.1B, ~+91% YoY); **options imply ~±10%**. First print post-Huang under interim CEO Colette Kress with **no permanent successor named**. NVDA market cap fell **below $4T** last week after shedding **~$570B in five sessions — its worst week since April 2025.**
+- **Live policy risk:** WSJ reports the **US moving to crack down on overseas access to advanced AI chips** — an unpriced regulatory overhang on the entire semi complex, landing the same day as the sector's definitive print.
+- **Also this week:** the **Anthropic IPO** is expected to begin trading on Nasdaq, adding AI-sector supply and sentiment noise.
+- **Held-ticker news:** N/A — zero positions.
+- *Data gap logged honestly:* the free **IEX feed returned no premarket prints at 06:09 ET** (latest trades were Monday's close/after-hours: SPY 740.04 @20:59Z, TLN 359.67 @20:59Z, NVDA 156.66 @21:37Z). `alpaca.sh quote` returned a **stale and uncrossed book** (TLN bid 342 / ask 378.36; **NVDA ask 0.00**) — unusable for premarket pricing. All premarket levels above therefore come from CME/ICE futures and Cboe, not from Alpaca. No premarket single-name gap scan was possible from this feed at this hour.
+
+### Sector momentum (computed from Alpaca daily bars — no third-party sector table)
+| ETF | Last | 1d | 1mo | 3mo | vs 20-SMA | vs 200-SMA | RSI14 |
+|---|---|---|---|---|---|---|---|
+| XLV Health | 187.91 | -0.52% | **+6.4%** | **+10.7%** | +2.0% | **+17.2%** | 63.8 |
+| XLP Staples | 92.63 | +0.32% | **+5.7%** | +8.3% | +3.2% | +9.1% | 65.8 |
+| XLF Fin | 58.18 | -0.84% | +4.8% | +0.6% | +1.7% | +7.8% | 58.0 |
+| XLU Util | 44.14 | **+0.23%** | +4.6% | +0.3% | +2.1% | **-0.4%** | 66.6 |
+| XLY Disc | 118.13 | -1.55% | +3.2% | — | +0.5% | +2.3% | — |
+| XLI Ind | 165.71 | -1.81% | -0.6% | — | -1.2% | -4.5% | — |
+| SPY | 740.04 | -1.89% | -3.1% | -3.6% | -2.3% | +1.1% | 40.4 |
+| XLE Energy | 63.71 | -1.88% | **-6.6%** | +0.1% | -3.4% | +7.0% | 44.6 |
+| XLK Tech | 164.68 | **-3.26%** | **-10.2%** | **-11.3%** | **-7.3%** | **-3.6%** | **35.1** |
+- **The defensive rotation held through a -1.9% index day — that is the signal.** XLU **+0.23%** and XLP **+0.32%** closed GREEN while SPY fell 1.89% and XLK fell 3.26%. XLV and XLP are the only sectors with both 1mo and 3mo positive and comfortably above their 200-SMA. **XLK is worst on every horizon** (1d, 1mo, 3mo), is **7.3% below its 20-SMA**, has **lost its 200-SMA (-3.6%)**, and at **RSI 35.1** is approaching oversold without a catalyst to buy.
+- **Per the strategy's own cycle table the tape is paying Mid-cycle** (Healthcare, Staples, Utilities) — not the Late-cycle blend the last two sessions inferred. XLE, the YTD leader, is now **1mo -6.6%, RSI 44.6 and 3.4% below its 20-SMA** — it **fails Rule 9** for a third straight session. XLU leads on tape but **fails the 200-SMA long-bias filter (-0.4%)**, so momentum and the filter disagree on it.
+
+### Trade ideas (catalyst + entry/stop/target)
+1. **TLN (Talen Energy) — STILL THE ONLY NAME CLEARING BOTH GATES. The dated deferral to Wed Nov 18 HOLDS. Not an entry today.**
+   - Catalysts, both already out (no pending print): **Q3 2026 on Nov 3** — revenue **$1.33B (+63% YoY)**, adj EPS **$2.88**, total generation **+115% YoY to 23.9 TWh**, 2026 adj EBITDA guide **raised to $2.025-2.225B**, buyback expanded, **2027 guidance introduced**. Then **Nov 11 — a seven-year 750 MW Guernsey capacity agreement worth ~$100M annually, contracting revenue through the 2035/36 PJM delivery year** (stock +4.1% that day). This is contracted cashflow, not an AI narrative.
+   - Technicals (Alpaca, Nov 16 close): **$359.67 (-4.37% Mon)**. Above 20-SMA $349.39 (**+2.9%**), 50-SMA $335.51 (**+7.2%**) and **200-SMA $348.86 (+3.1%)** — long-bias filter **PASS**. RSI(14) **52.9** (clean, no extreme). 1mo +1.4%, **3mo +13.2%**.
+   - **R:R math — the only name on the board that clears.** ATR(14) **$20.23 = 5.6% of price**. 10% stop = **1.78 ATR** (outside ordinary daily noise). +20% target = **3.56 ATR** (a plausible swing move). **2:1 gate: PASS.**
+   - Plan when the window opens: entry on a 20-SMA retest **$349-356**; on a ~$352 fill -> 10% trailing GTC **~$317**, +20% target **~$422**. Sizing per `risk_pct_per_trade` 1.0% ($1,000 per 1-ATR move): **~49 shares ≈ $17.2-17.6k = 17.2-17.6% of equity**, inside the 20% cap. Correlation gate trivially passes (0 open positions).
+   - **Why NOT today — unchanged and now imminent:** Talen's equity story is power supply to AI data centers, so it carries **tonight's NVDA print (~±10% implied) as a direct, uncompensated read-through**, and it already fell -4.37% Monday on exactly that beta. The deferral to **no-earlier-than Wed Nov 18, post-FOMC-minutes** was set on Nov 12 and reaffirmed Nov 16 *for precisely today's reason*. **Nothing has changed to invalidate it; entering today would be paying for an event, not harvesting an edge.**
+2. **KLIC (Kulicke & Soffa) — carried-forward precondition NOT met. Reject.**
+   - The precondition on record was **reclaim the ~$73 20-SMA**. Price **$65.63** vs 20-SMA **$72.53 = -9.5%**. **FAILS outright.**
+   - Also **-24.6% vs its 200-SMA ($87.04)** -> long-bias filter fails; RSI 37.9; 1mo **-16.5%**, 3mo **-28.7%**. ATR(14) $4.96 = **7.6% of price** -> 10% stop = **1.32 ATR**, inside noise.
+   - **Fiscal Q4 lands Wed Nov 18** — an added binary on top of three independent rule failures. **No entry.**
+3. **NVDA — rejected on four independent rules for the second straight session. Explicitly OFF the buy list through the print.**
+   - **$156.15**, RSI(14) **22.7** — deeply oversold, but oversold **without a catalyst is bottom-fishing, forbidden outright** by the rulebook.
+   - **-20.2% vs 20-SMA, -26.8% vs 50-SMA, -23.5% vs 200-SMA** -> long-bias filter fails hard. ATR(14) $11.29 = 7.2% -> 10% stop = **1.39 ATR**. Sector (XLK) is the worst on every horizon.
+   - Earnings **tonight ~16:20 ET, ~±10% implied**, interim CEO with no named successor, Burry still short, and a **same-day US chip-export crackdown headline**. **No entry — and not a candidate on any post-print bounce without a fresh, documented catalyst.**
+
+### STRUCTURAL FINDING — the drought is a volatility-band artifact, and here is the arithmetic
+The 93-session drought has been logged as a "10%-stop vs 2:1-R:R conflict." Computed precisely this run, the mechanism is narrower and more damning than that framing: **the rulebook pairs a FIXED 10% stop with a FIXED 2:1 target (-> +20%), so the gate collapses into a pure volatility filter that is independent of setup quality.**
+
+| Instrument | ATR14 % of px | 10% stop in ATR | +20% tgt in ATR | vs 200-SMA | Verdict |
+|---|---|---|---|---|---|
+| XLU | 1.3% | 7.46 ATR | 14.92 ATR | -0.4% | target implausible **+ long-bias fail** |
+| XLP | 1.8% | 5.60 ATR | 11.21 ATR | +9.1% | "passes" — target implausible |
+| XLF | 1.8% | 5.66 ATR | 11.31 ATR | +7.8% | "passes" — target implausible |
+| SPY | 1.8% | 5.71 ATR | 11.42 ATR | +1.1% | "passes" — target implausible |
+| XLV | 2.0% | 4.93 ATR | 9.87 ATR | +17.2% | "passes" — target implausible |
+| **TLN** | **5.6%** | **1.78 ATR** | **3.56 ATR** | **+3.1%** | **genuinely tradeable** |
+| KLIC | 7.6% | 1.32 ATR | 2.65 ATR | -24.6% | stop inside noise |
+| NVDA | 7.2% | 1.39 ATR | 2.79 ATR | -23.5% | stop inside noise |
+| NBIS (11/16) | 14.1% | 0.71 ATR | 1.42 ATR | below | stop inside one day's range |
+
+- **Above ~5.5% ATR:** the 10% stop sits under 2 ATR — inside ordinary noise, certain to be stopped out before a thesis resolves. This is where **the entire watchlist lives** (AI/semis/neoclouds/quantum at 6-14% ATR).
+- **Below ~2.5% ATR:** the gate is *mechanically* passed, but +20% requires a **10-to-15-ATR move** — not a swing-horizon outcome. These "passes" are untradeable, not opportunities.
+- **The only genuinely tradeable band is ATR(14) ~2.8-5.5% of price.** TLN at **5.6%** sits at the very top edge of it — which is the whole reason it is the **only name in 93 sessions** to clear both gates.
+- **Conclusion: this is a universe/rulebook mismatch, not a market problem and not a patience problem.** A watchlist of 6-14% ATR names is *structurally incapable* of producing a legal entry under a fixed 10% stop. Patience cannot fix an empty feasible set.
+- **Operator decision needed (unchanged in substance, now quantified).** Three coherent options, no unilateral action taken: **(a)** make the trailing stop ATR-proportional (e.g. 2x ATR, floored at 7%), which re-admits the high-beta universe on honest risk; **(b)** migrate the watchlist toward the 2.8-5.5% ATR band (mid-vol quality), which keeps the rule intact; **(c)** keep both rules as written and accept that TLN-like names *are* the entire opportunity set — in which case 1-3 entries/quarter is the designed outcome, not a failure. **(a) or (b) is recommended; (c) should be chosen deliberately rather than by default.**
+
+### Risk factors for the day
+1. **NVDA after the close (~16:20 ET, call 17:00 ET) is a market-wide binary, not a single-name one** — largest index constituent, ~±10% implied, first print post-Huang under an interim CEO with no successor named, Burry short. QQQ is already -6.8% on the month.
+2. **Third consecutive down day into that print** (SPY -1.89%, QQQ -2.68% Monday), with SPY **only 1.1% above its 200-SMA** and QQQ at RSI 37.6 below its 20- and 50-SMA. A bad print has little technical support beneath it.
+3. **Two binaries inside 24 hours** — NVDA tonight, then **FOMC minutes Wed 14:00 ET**. Any entry today is exposed to both before a thesis can develop.
+4. **VIX 23.37 and rising** (+18.7% Monday, +2.0% premarket). Elevated enough to widen spreads and gap stops; not yet panic.
+5. **10Y at 5.111%** — still above the 5% line; multiple-compression pressure persists even with rates marginally easier.
+6. **Unpriced policy risk:** US crackdown on overseas access to advanced AI chips (WSJ), same day as the sector's defining print.
+7. **Anthropic IPO** expected to begin Nasdaq trading this week — AI-sector supply and sentiment noise.
+8. **HD BMO today** ($3.84 EPS / $42.8B consensus) is the consumer read; XLY is the marginal sector at only +0.5% vs its 20-SMA.
+9. **Premarket single-name visibility is zero on this feed** (IEX returned no premarket prints, `quote` book stale/uncrossed) — any gap-driven idea would be unverifiable at entry, which is itself a reason not to act pre-open.
+
+### Decision — HOLD (no entry, no orders, 93rd consecutive session)
+1. **Zero candidates pass the full gate today.** TLN passes mechanically but is **dated to Wed Nov 18** by a decision on record made precisely to avoid tonight's NVDA binary — and that binary is now hours away, not days. KLIC fails its own carried-forward precondition by 9.5%. NVDA fails four independent rules.
+2. **Two binaries in 24 hours** (NVDA tonight, FOMC minutes Wed 14:00 ET). The rulebook forbids paying for events.
+3. **Patience > activity.** Weekly trade count **0/3** (week of Nov 16). Deployment 0% vs mandated 75-85% — **93rd straight session**, cause diagnosed above as structural, pending operator decision.
+4. **Setup scan corroborates independently:** `setup-scan-cloud.mjs` at 06:03 ET checked **60/60 watchlist tickers, 0 errors, 0 hits** — no Grade A or Grade B setup anywhere in the universe. (`grade_a_possible: false`, `setup_a_skipped_reason: "outside 10:00-15:30 ET"` — Grade A was unreachable at this hour by design, but Grade B was evaluated and also empty.)
+- **Next action:** re-evaluate **TLN** on Wed Nov 18 **after** the FOMC minutes (14:00 ET), with the NVDA print then known. Entry only if it still holds its 20-SMA (~$349) and the R:R math still clears at the live price. **No order today.**
+
+### Operator flags
+- **Equity baseline mismatch (154th+ session, unchanged):** account is **$100,000**, not the ~$10,000 baseline in CLAUDE.md. Flagged 2026-07-27, still awaiting reconciliation. All sizing math in this entry uses the live $100,000.
+- **Structural rule conflict — now quantified with a precise feasible band (see STRUCTURAL FINDING).** Needs an operator choice between ATR-proportional stops, a mid-vol watchlist migration, or explicit acceptance of a ~1-3 entries/quarter design.
+
+### Tooling notes
+- `mcp__Apify__apify--rag-web-browser` is **again not present** in this cloud session's tool list (confirmed via ToolSearch, not assumed); **`mcp__Apify__apify--web-search` was used as the Apify equivalent** for all news queries, per the standing note from 2026-11-16. Fallback logged as required.
+- **The `-site:` Yahoo suffix is NOT sufficient on its own — confirmed again.** finance.yahoo.com still surfaced at position 4 of the oil query and positions 1/3 of the VIX query despite the suffix; `ca.finance.yahoo.com` surfaced on the calendar query. **All Yahoo hits were discarded and every number re-sourced** (Cboe for VIX, CNBC quote cache for futures/rates/oil, Alpaca for all equity and ETF prices). The suffix reduces but does not eliminate Yahoo; the discard-and-resource step remains mandatory. `blockedDomains` was also tried and returned **zero results**, so it is not a usable substitute.
+- **`cdn.cboe.com/api/global/delayed_quotes/quotes/_VIX.json` is a clean, free, keyless VIX primary source** — worked first try and resolved the VIX discrepancy that the last three entries could not. **Recommend adopting it as the standing VIX source.**
+- **`quote.cnbc.com/quote-html-webservice/.../symbol?symbols=A%7CB%7CC` is a clean keyless source for futures, rates and oil** (pipe-separated symbols; comma-separated returns `code: 1`). Verified symbols: `@SP.1` `@ND.1` `@DJ.1` `@CL.1` `@LCO.1` `.VIX` `US10Y`. **Recommend adopting for the premarket tape** — it fills exactly the gap the IEX feed leaves at 06:00 ET.
+- `apify--web-fetch` **timed out at 60s twice** on heavy JS pages (investing.com, cnbc.com/quotes). The lightweight JSON endpoints above returned instantly. Prefer JSON APIs over rendered pages in this routine.
+- CNBC's daily live blog for the current date **404s before ~07:00 ET** — do not rely on it for a 06:00 ET run.
+- **`scripts/size.mjs` stale-reference-price bug from 2026-11-16 was avoided, not fixed** — all ATR/SMA/RSI figures in this entry were computed directly from `alpaca.sh bars` (Wilder RSI, true-range ATR) against Nov 16 closes. The script still needs the fix.
