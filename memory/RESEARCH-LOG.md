@@ -20111,3 +20111,33 @@ The 93-session drought has been logged as a "10%-stop vs 2:1-R:R conflict." Comp
 - `apify--web-fetch` **timed out at 60s twice** on heavy JS pages (investing.com, cnbc.com/quotes). The lightweight JSON endpoints above returned instantly. Prefer JSON APIs over rendered pages in this routine.
 - CNBC's daily live blog for the current date **404s before ~07:00 ET** — do not rely on it for a 06:00 ET run.
 - **`scripts/size.mjs` stale-reference-price bug from 2026-11-16 was avoided, not fixed** — all ATR/SMA/RSI figures in this entry were computed directly from `alpaca.sh bars` (Wilder RSI, true-range ATR) against Nov 16 closes. The script still needs the fix.
+
+### Gappers (auto-scan 07:12 ET, cloud)
+
+Universe: **69 symbols** extracted from WATCHLIST.md (covers all 60 of
+`rules.json watchlist_tiers.immediate`). Feed `delayed_sip`. Threshold 5.0%.
+**Raw hits ≥5%: 1. Hits passing all filters: 0.**
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 ⚠ | RCAT | 2.47 | -30.03 | 10.39M (prior session, not premkt) | Q3 revenue $11.77M vs ~$40M consensus (−71%) and FY2026 target of $150–180M **withdrawn** |
+
+⚠ **RCAT fails the routine's `price ≥ $3.00` floor** — it gapped *through* that
+floor from a $3.53 close. Reported in full rather than dropped, but it is **not
+tradeable** under the rulebook (see opportunity cost). No ranks 2–10 exist, so
+the deep-dive cap of 5 was never binding — nothing was silently dropped.
+
+#### Deep dive: RCAT $2.47 −30.03%
+- **Catalyst:** Red Cat reported fiscal Q3 2026 after the Nov 16 close. Revenue $11.77M, up 22% YoY from $9.65M but ~71% below the ~$39.5–40.7M consensus; adjusted loss $0.26/sh vs −$0.20 expected, on a net loss of $40.45M. Management **withdrew the FY2026 revenue target of $150–180M outright**, citing slower-than-expected contract awards and defense-funding uncertainty. CFO Christian Morrison said the FANG FPV offering was not selected as a finalist in **Drone Dominance II** (Gauntlet II evaluation) and the deliveries tied to it never materialized. The balance sheet is not the problem: ~$243M cash, ~$127M inventory + prepaid inventory, ~$17.1M 9M capex on the 155,000 sq ft Blue Ops plant in Valdosta, GA. Operationally the B-18 entered sea trials ahead of schedule, the B-39 moved to low-rate production, and a new TRICHON VTOL ISR tricopter was introduced. _(Seeking Alpha, Stocktwits, TheStreet, Investing.com, MarketScreener, MarketBeat — no Yahoo.)_
+- **Why:** The **guidance withdrawal is the mechanism, not the miss**. Pulling a $150–180M full-year target with one quarter left removes the entire revenue ramp the equity was priced on — a de-rating of the growth multiple, not a one-quarter earnings reaction. The FANG non-selection compounds it by deleting the named program catalyst, leaving anyone who owned RCAT for the Army-programs story with no dated milestone to hold against. Forced-seller mechanics follow: already −55%+ YTD into the print, Stocktwits sentiment flipped to extremely bearish on a **+638%** jump in message volume, and a sub-$3 handle pushes the name out of many funds' and screeners' eligible universes.
+- **Impact:** Structural, not a one-day spike likely to mean-revert. Prior-session volume **10.39M vs 4.60M on Nov 13 — 2.3× elevated *into* the print** — and the gap holds a near-30% loss on real premarket prints, not a thin or one-sided quote. A withdrawn full-year guide has no same-day repair path. **Sector read-through is contained**, which argues idiosyncratic over drone-sector contagion: premarket AVAV −1.4%, RR −0.6%, KTOS −0.5%, ONDS −0.4%, RKLB +0.8%. Dead-cat bounce off the open is plausible given ~$243M cash vs the collapsed cap, but no sustained recovery until a contract award carries a date.
+- **Horizon:** SHORT_TERM — the reset is structural but structurally *bearish*; for a long-biased book the only expression is a days-long oversold bounce, and the name sits far below its 200-SMA long-bias filter, so there is no multi-week long thesis until a dated contract award returns.
+- **Opportunity cost:** Book is **100% cash — $100,000 equity, 0 open positions** — so nothing would be displaced and all **3/3** weekly trade slots are open. The binding constraint is the rulebook, not capacity. RCAT at $2.47 is below this routine's own $3.00 floor, sits far under its 200-SMA (long-bias filter blocks any long outright), and has **no documented bullish catalyst**, so it fails the Confluence rule (≥2 indicators + 1 catalyst). On R:R, a sane stop beneath the gap low is ~7–10% ($2.22–2.30), demanding a ~$2.96–3.19 target to clear 2:1 — a full round-trip above yesterday's close within days, which a withdrawn full-year guide does not support. The real cost of taking it would be burning one of three weekly slots and up to 20% of equity on a falling knife while trend-aligned names (NBIS +3.5%, BE +3.4%, CRWV +2.8%) go untouched. **Research only — no order placed (STEP 8).**
+
+**Tape context (sub-threshold, no action):** NIO +4.75% $2.85 · NBIS +3.53% $110.92 · BE +3.41% $183.32 · CRWV +2.77% $51.26 · CMBT +2.74% $17.26 · GFS +2.49% $40.40. 18 of 69 names moved >1% — feed liveness confirmed, tape genuinely quiet outside RCAT.
+
+**Tooling notes (this run)**
+- `mcp__Apify__apify--rag-web-browser` again **absent** from this session's tool list (checked via ToolSearch, not assumed); used **`mcp__Apify__apify--web-search`** as the Apify equivalent, per the standing note.
+- **Yahoo `-site:` suffix insufficient again** — `finance.yahoo.com` surfaced at position 1 and `sg.`/`au.finance.yahoo.com` at positions 2/4/5 *despite* the suffix. All Yahoo hits **discarded**; every RCAT number re-sourced from Seeking Alpha, Stocktwits, TheStreet, Investing.com, MarketScreener and MarketBeat. **Operator action suggested:** add `-site:au.finance.yahoo.com` and `-site:ca.finance.yahoo.com` to the standing suffix in CLAUDE.md — not edited unilaterally by this routine.
+- **`delayed_sip` DOES give premarket single-name visibility**, contradicting the 06:03 ET pre-market entry's "premarket visibility is zero on this feed" (that run hit IEX). 18 of 69 names returned fresh premarket prints at 07:12 ET. Recommend the pre-market routine adopt `ALPACA_FEED=delayed_sip` for its premarket quotes.
+- Snapshot `volume` is **prior-session consolidated volume, not premarket volume** — Alpaca exposes no premarket-volume field, so the `premarket_volume >= 50000` filter was treated as unpopulated (logged as `null`, not faked).

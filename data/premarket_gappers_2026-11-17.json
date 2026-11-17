@@ -1,0 +1,57 @@
+{
+  "scanned_at": "2026-11-17T12:12:00Z",
+  "scanned_at_et": "2026-11-17 07:12 ET",
+  "deep_dive_cap": 5,
+  "universe_scanned": 69,
+  "feed": "delayed_sip (15-min delayed SIP; premarket prints confirmed live on 18 names)",
+  "gap_threshold_pct": 5.0,
+  "raw_hits_at_threshold": 1,
+  "qualifying_hits": 0,
+  "qualifying_hits_note": "The single >=5% gapper (RCAT, -30.0%) fails the routine's price >= $3.00 floor because it gapped THROUGH that floor from a $3.53 close. It is reported in full under below_price_filter rather than dropped, and is explicitly NOT tradeable under the rules.",
+  "gappers": [],
+  "below_price_filter": [
+    {
+      "rank": 1,
+      "symbol": "RCAT",
+      "price": 2.47,
+      "gap_pct": -30.03,
+      "prev_close": 3.53,
+      "filter_failed": "price $2.47 < $3.00 floor",
+      "premarket_volume": null,
+      "premarket_volume_note": "Alpaca snapshot exposes no premarket-volume field. Prior session (Nov 16) consolidated SIP volume was 10,389,521 vs 4,598,521 on Nov 13 — already 2.3x elevated INTO the print.",
+      "catalyst": "Red Cat Holdings collapsed after fiscal Q3 2026 revenue of $11.77M missed the ~$39.5-40.7M consensus by ~71% and management withdrew the entire FY2026 revenue target of $150-180M.",
+      "headlines": [
+        "Red Cat Holdings shares plunge as revenue misses estimates, outlook is withdrawn (Seeking Alpha)",
+        "Why Is RCAT Stock Plunging More Than 24% Overnight? (Stocktwits)",
+        "Red Cat registers massive miss in Q3 2026 earnings - revenue $11.679M vs $40.68M expected, a 71% miss (TheStreet)",
+        "Earnings call transcript: Red Cat misses on Q3 2026 revenue, stock sinks 24% (Investing.com)",
+        "Red Cat Holdings reports Q3 net loss of USD 40.45 million (MarketScreener)",
+        "Red Cat (RCAT) Q3 2026 earnings of -$0.26 per share, missing the -$0.20 consensus (MarketBeat)"
+      ],
+      "catalyst_detail": "Red Cat reported fiscal Q3 2026 after the Nov 16 close. Revenue was $11.77M, up 22% YoY from $9.65M but roughly 71% below the ~$39.5-40.7M consensus; adjusted loss was $0.26/sh against -$0.20 expected, on a net loss of $40.45M. Management withdrew the FY2026 revenue target of $150-180M outright, citing slower-than-expected contract awards and defense-funding uncertainty. CFO Christian Morrison said the FANG FPV offering was not selected as a finalist in Drone Dominance II (Gauntlet II evaluation) and that the deliveries tied to it never materialized, which drove the shortfall. The balance sheet is not the problem: ~$243M cash, ~$127M inventory and prepaid inventory, and ~$17.1M of nine-month capex on the 155,000 sq ft Blue Ops plant in Valdosta, GA. Operationally the B-18 entered sea trials ahead of schedule, the B-39 moved to low-rate production, and a new TRICHON VTOL ISR tricopter was introduced.",
+      "why": "The guidance withdrawal is the mechanism, not the quarterly miss. Pulling a $150-180M full-year target with one quarter left removes the entire revenue ramp the equity was priced on, so this is a de-rating of the growth multiple rather than a one-quarter earnings reaction. The FANG non-selection in Drone Dominance II compounds it by deleting the named program catalyst, leaving holders who owned RCAT for the Army-programs story with no dated milestone to hold against. Forced-seller mechanics follow: already down >55% YTD into the print, Stocktwits sentiment flipped to extremely bearish on a 638% jump in message volume, and a sub-$3 handle pushes the name out of many funds' and screeners' eligible universes.",
+      "impact": "Reads structural, not as a one-day headline spike that mean-reverts. Prior-session volume was 10.4M vs 4.6M on Nov 13 — 2.3x elevated before the print — and the gap is holding a near-30% loss on real premarket prints, not a thin or one-sided quote. A withdrawn full-year guide has no same-day repair path. Sector read-through is contained, which argues idiosyncratic rather than drone-sector contagion: premarket AVAV -1.4%, RR -0.6%, KTOS -0.5%, ONDS -0.4%, RKLB +0.8%, so capital is not fleeing defense-drone broadly. A dead-cat bounce attempt off the open is likely given ~$243M cash against the collapsed market cap, but there is no basis for sustained recovery until a contract award carries a date.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The reset is structural but structurally BEARISH, so for this long-biased book the only expression is a days-long oversold bounce; there is no multi-week long thesis until a dated contract award returns, and the name sits far below its 200-SMA long-bias filter.",
+      "opportunity_cost": "The book is 100% cash — $100,000 equity, zero open positions — so nothing would be displaced and all three weekly new-trade slots are open. The binding constraint is the rulebook, not capacity. RCAT at $2.47 is below this routine's own $3.00 floor, sits far under its 200-SMA (the strategy's long-bias filter blocks any long outright), and has no documented BULLISH catalyst, so it fails the Confluence rule (>=2 indicators plus 1 catalyst) outright. On R:R: a sane stop beneath the gap low is ~7-10% ($2.22-2.30), which demands a ~$2.96-3.19 target to clear 2:1 — a full round-trip back above yesterday's close within days, which a withdrawn full-year guide does not support. The real cost of taking it would be burning one of three weekly slots and up to 20% of equity on a falling knife while trend-aligned watchlist names (NBIS +3.5%, BE +3.4%, CRWV +2.8% premarket) go untouched. Research only; no trade.",
+      "sources": ["seekingalpha.com", "stocktwits.com", "thestreet.com", "investing.com", "marketscreener.com", "marketbeat.com"],
+      "yahoo_sourced": false
+    }
+  ],
+  "ranks_6_to_10": [],
+  "ranks_6_to_10_note": "No ranks 2-10 exist — only one symbol in the 69-name universe gapped >=5%. Deep-dive cap of 5 was therefore never binding; nothing was silently dropped from the deep dive.",
+  "peer_read_through": {
+    "AVAV": -1.37, "RR": -0.61, "KTOS": -0.52, "ONDS": -0.42, "RKLB": 0.77,
+    "note": "Drone/defense peers flat to marginally lower — RCAT's collapse is idiosyncratic, not sector contagion."
+  },
+  "tape_context_sub_threshold": [
+    {"symbol": "NIO", "price": 2.849, "gap_pct": 4.75},
+    {"symbol": "NBIS", "price": 110.915, "gap_pct": 3.53},
+    {"symbol": "BE", "price": 183.32, "gap_pct": 3.41},
+    {"symbol": "CRWV", "price": 51.26, "gap_pct": 2.77},
+    {"symbol": "CMBT", "price": 17.26, "gap_pct": 2.74},
+    {"symbol": "GFS", "price": 40.40, "gap_pct": 2.49}
+  ],
+  "account_state": {"equity": 100000, "open_positions": 0, "weekly_trades_used": 0},
+  "orders_placed": 0
+}
