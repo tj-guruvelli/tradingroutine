@@ -20269,3 +20269,10 @@ archive copy.
 - `mcp__Apify__apify--rag-web-browser` **absent** again (checked via ToolSearch, not assumed); used **`mcp__Apify__apify--web-search`** + **`apify--web-fetch`** as the Apify equivalents, per the standing note.
 - **Yahoo block held clean** — every query carried the three-domain `-site:` suffix **and** an explicit `blockedDomains` array (belt-and-braces); **zero results resolved to any `*finance.yahoo.com` host.** The standing operator recommendation is unchanged: **replace the per-query domain blocklist with a post-fetch URL check discarding any host matching `*finance.yahoo.com*`**, since enumerating domains cannot cover every Yahoo regional host. Not edited unilaterally by this routine.
 - **`scripts/alpaca.sh bars` hardcodes `feed=iex`** (line 52), which returns **IEX-only volume — ~2–5% of consolidated** (e.g. PEPG 30,909 vs 215,566 actual). All volume and ATR figures above were recomputed from the **consolidated `/stocks/bars` endpoint with the `feed` param omitted**, ending **2026-11-14** (recent dates return `subscription does not permit querying recent SIP data`), with today's values taken from `delayed_sip` snapshots. **Operator note: the hardcoded `feed=iex` in the `bars` wrapper is a live data-quality trap** — it silently understates volume by ~20–40x and contradicts the script's own header comment, which says bars must omit `feed`. Worth a one-line fix.
+
+### Setup Scan (15:37 ET, cloud)
+- 60 candidates checked, 0 hits (grade A, B, or C).
+- `grade_a_possible: false` — 15:37 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A was never evaluated this run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`). A 0-hit result here does not mean no Setup B/C candidates exist — Setup A/grade-A was simply unreachable at this run time.
+- 0 errors.
+- Raw JSON: `data/setup-scan_cloud_2026-11-17_1537ET.json`.
+- 0 grade-A hits → no Telegram/ClickUp notification sent (per STEP 4 rule).
