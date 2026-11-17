@@ -2970,3 +2970,10 @@ tradeable under the fixed-stop/fixed-target gate) remains the proximate
 cause of the drought; TLN's entry window opens Wed Nov 18 post-FOMC, pending
 operator sign-off on whether to keep the fixed 10% stop, move to an
 ATR-proportional stop, or migrate the watchlist toward the mid-vol band.
+
+### Nov 17, EOD Snapshot (Day 93, Tuesday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-16`). Market-open run (cloud) evaluated 4 candidates (TLN, KLIC, NVDA, RCAT gap) and logged HOLD across all four — TLN passes the stop-rule + 2:1 R:R gate but is deliberately deferred to Wed Nov 18 (post-FOMC minutes) to avoid carrying tonight's NVDA earnings print as an uncompensated binary one day early; KLIC misses its carried-forward 20-SMA reclaim by 9.5% with its own fiscal Q4 binary tomorrow; NVDA fails 4 independent rules and reports tonight; RCAT gapper fails price floor, 200-SMA, catalyst, and R:R. No midday scan logged; no positions held so nothing to cut/tighten. Weekly trade count: 0/3 (week of Nov 16). 93rd trading day since launch (Jul 9) with zero entries — 155th+ straight no-trade session, live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, pending operator sign-off. TLN entry window opens Wed Nov 18 post-FOMC.
