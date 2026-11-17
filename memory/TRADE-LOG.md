@@ -2913,3 +2913,60 @@ rule should become ATR-proportional.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-13`). Market-open logged HOLD: 12 candidates evaluated (GILD, ABBV, TLN, NVDA, plus 8 gappers), 0 passed the stop-rule + 2:1 R:R gate combo — TLN is the first to clear both but is deliberately deferred to Wed Nov 18 (post-FOMC minutes, to avoid carrying NVDA's Tue-after-close earnings binary). No midday scan logged today; no positions held so nothing to cut/tighten. Weekly trade count: 0/3 (week of Nov 16, fresh). 92nd trading day since launch (Jul 9) with zero entries. Equity flat at $100,000 — still the confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 154th+ straight session, operator review pending. Structural rule conflict (10%-stop vs 2:1-R:R floor) remains the proximate cause of the drought; TLN entry window opens Wed Nov 18 pending operator sign-off on the open stop-rule question.
+
+### Nov 17, Market-Open (Day 93, Tuesday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules. Today's RESEARCH-LOG pre-market
+entry (20009): explicit **Decision: HOLD, 93rd consecutive session**, week of
+Nov 16 still 0/3. **TLN** is the only name clearing both the 10% stop rule and
+the 2:1 R:R gate (ATR 5.6%, 1.78 ATR stop / 3.56 ATR target, +3.1% vs 200-SMA)
+but remains **explicitly dated to no-earlier-than Wed Nov 18, post-FOMC
+minutes** — a decision made precisely to avoid carrying tonight's NVDA print
+(~16:20 ET, ~±10% implied, interim CEO, no successor named) as an
+uncompensated binary, and that binary is now hours away. **KLIC** fails its
+own carried-forward precondition by 9.5% (needs ~$73 20-SMA reclaim, at
+$65.63) plus 3 more rule failures; fiscal Q4 lands tomorrow — added binary.
+**NVDA** rejected on 4 independent rules (RSI 22.7 oversold-without-catalyst,
+-20.2%/-23.5% vs 20-/200-SMA, ATR 7.2% -> 1.39 ATR stop, XLK worst sector) and
+reports tonight. Two gappers auto-scans (07:12, 08:08 ET) independently
+reached NO ACTION: only RCAT cleared the 5% gap threshold (-30% to -33%) and
+it fails outright on 4 counts (below the $3.00 price floor, far under its
+200-SMA, no bullish catalyst — guidance withdrawn — and R:R can't clear 2:1
+at a sane stop). `setup-scan-cloud.mjs` corroborated independently: 60/60
+watchlist tickers checked, 0 Grade A/B hits. TRADE-LOG tail: weekly trade
+count 0/3 (week of Nov 16, carried into Nov 17).
+
+STEP 2: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-16`). Matches pre-market research exactly — no
+change since that run. No planned-ticker quotes pulled: no candidate cleared
+pre-market screening to the point of needing a live entry-price check.
+
+STEP 3 — pass/fail:
+- TLN: FAIL (for today) — passes stop rule + 2:1 gate but is explicitly dated
+  to no-earlier-than Wed Nov 18 (post-FOMC minutes) in pre-market research;
+  entering today would mean carrying tonight's NVDA print as an
+  uncompensated binary one session before the planned entry window opens.
+- KLIC: FAIL — carried-forward precondition (~$73 20-SMA reclaim) missed by
+  9.5% at $65.63; also below 200-SMA, RSI 37.9, fiscal Q4 binary tomorrow.
+- NVDA: FAIL — 4 independent rule failures (oversold-without-catalyst,
+  below 20-/50-/200-SMA, ATR/stop mismatch, worst-momentum sector) plus
+  earnings tonight with no permanent CEO.
+- RCAT (gappers list, -30% to -33% gap): FAIL — below the $3.00 price floor,
+  far under 200-SMA (long-bias filter fails), no bullish catalyst (guidance
+  withdrawn — bottom-fishing is forbidden), R:R fails 2:1 at a sane stop.
+
+4 candidates evaluated, 0 pass — STEPs 4-5 (orders/stops) skipped. No trade
+fired.
+
+STEP 7 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 16). 93rd trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — still the
+confirmed-live-vs-$10k-baseline mismatch flagged Jul 27, unresolved 155th+
+straight session, operator review pending. Structural rule conflict
+(10%-stop vs 2:1-R:R floor, now quantified in today's RESEARCH-LOG as a
+volatility-band artifact — only ATR 2.8-5.5% names are mechanically
+tradeable under the fixed-stop/fixed-target gate) remains the proximate
+cause of the drought; TLN's entry window opens Wed Nov 18 post-FOMC, pending
+operator sign-off on whether to keep the fixed 10% stop, move to an
+ATR-proportional stop, or migrate the watchlist toward the mid-vol band.
