@@ -20873,3 +20873,21 @@ No Telegram/ClickUp notification sent (0 grade-A hits — matches the
 local `/setup-scan` quiet rule). Candidates NOC/PEPG carried as Grade-B-only
 for `/trade` or `market-open.md`'s next read of `data/setup-scan_cloud_*.json`;
 neither is actionable without a Setup A confirmation.
+
+### Setup Scan (17:37 ET, cloud)
+`node scripts/setup-scan-cloud.mjs` — 60/60 watchlist tickers checked, 0
+errors. `grade_a_possible: false` — `setup_a_skipped_reason: "outside
+10:00-15:30 ET"` (run at 17:37 ET, past the Setup A intraday-breakout
+cutoff; post-close run per the 16:30 ET cron slot). **2 Grade B hits, 0
+Grade A** (unreachable this run) — same two tickers as the 15:37 ET run,
+unchanged setup state.
+
+TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER
+--- | --- | --- | --- | ---
+NOC | B | Momentum confluence | daily swing | RSI 58.9, ADX 27.3, EMA9 $546.83 > EMA21 $540.33, px $545.32
+PEPG | B | Momentum confluence | daily swing | RSI 58.2, ADX 26.4, EMA9 $3.89 > EMA21 $3.37, px $3.31
+
+No Telegram/ClickUp notification sent (0 grade-A hits — matches the
+local `/setup-scan` quiet rule). Candidates NOC/PEPG carried as Grade-B-only
+for `/trade` or `market-open.md`'s next read of `data/setup-scan_cloud_*.json`;
+neither is actionable without a Setup A confirmation.
