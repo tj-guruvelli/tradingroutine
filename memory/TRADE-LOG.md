@@ -2977,3 +2977,68 @@ ATR-proportional stop, or migrate the watchlist toward the mid-vol band.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-16`). Market-open run (cloud) evaluated 4 candidates (TLN, KLIC, NVDA, RCAT gap) and logged HOLD across all four — TLN passes the stop-rule + 2:1 R:R gate but is deliberately deferred to Wed Nov 18 (post-FOMC minutes) to avoid carrying tonight's NVDA earnings print as an uncompensated binary one day early; KLIC misses its carried-forward 20-SMA reclaim by 9.5% with its own fiscal Q4 binary tomorrow; NVDA fails 4 independent rules and reports tonight; RCAT gapper fails price floor, 200-SMA, catalyst, and R:R. No midday scan logged; no positions held so nothing to cut/tighten. Weekly trade count: 0/3 (week of Nov 16). 93rd trading day since launch (Jul 9) with zero entries — 155th+ straight no-trade session, live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, pending operator sign-off. TLN entry window opens Wed Nov 18 post-FOMC.
+
+### Nov 18, Market-Open (Day 94, Wednesday, cloud run)
+STEP 1: Memory read — TRADING-STRATEGY rules unchanged. Today's RESEARCH-LOG
+pre-market entry (20287, Day 94): **Decision: HOLD.** The NVDA binary that
+forced TLN's deferral has resolved bullish (beat + raised FY guidance), so
+**TLN now passes every mechanical rule** (10% stop 1.76 ATR, 2:1 R:R 3.51
+ATR, above all 3 SMAs, RSI 52.0) at the premarket price — but the dated plan
+is unchanged: **limit $349-356 only, never market, not before 14:00 ET**
+(FOMC minutes), do not chase the current $364 print. **CEG** fails the
+200-SMA long-bias filter by -2.04%, watch-only with a precise trigger (daily
+close above $278.30) — not evaluable intraday. Two gappers auto-scans
+(07:09, 08:09 ET) covered **BLSH** and **PEPG**, both already concluded
+"research only, no order" in today's RESEARCH-LOG (BLSH fails the 200-SMA
+filter at -38.9% and misses the >=50k premarket-volume gate at 49,695; PEPG's
+2:1 target lands exactly on the $5.00 secondary-offering price, the heaviest
+overhead supply in the book). TRADE-LOG tail: weekly trade count 0/3 (week
+of Nov 16, carried into Nov 18).
+
+STEP 2: Setup-scan — no same-day file exists yet at this run time (market-open
+runs before setup-scan-cloud's first same-day fire, per routine). Used the
+prior trading day's most recent file, `data/setup-scan_cloud_2026-11-17_1737ET.json`:
+60 candidates checked, `grade_a_possible: false`, `hits: []` — zero additional
+candidates merged into the pool.
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-17`). Matches pre-market research exactly — no
+change. Quotes at 08:39 ET (pre-open): TLN ap $373.41 / bp $334.36, CEG ap
+$282.05 / bp $255.68 — both timestamped 21:00:00Z Nov 17 (prior session's
+last quote; no live two-sided market yet at this run time, spread
+uninformative, consistent with TLN's known thin book).
+
+STEP 4 — pass/fail:
+- TLN: FAIL (for today, so far) — clears the stop rule, 2:1 R:R gate,
+  200-SMA filter and RSI<70 at the premarket price, but the entry is
+  explicitly dated **not before 14:00 ET** (post-FOMC minutes) in today's
+  RESEARCH-LOG, and the plan is a **$349-356 limit, never market**,
+  specifically to avoid chasing the current $364+ print. Run time is 08:39 ET
+  market-open — ~5h15m before the gate opens and before the market has even
+  opened. No shortcut taken; re-check at the dated window.
+- CEG: FAIL — watch-only; precondition is a **daily close** above its
+  200-SMA ($278.30), which by definition cannot be satisfied intraday at a
+  market-open run. No trigger hit.
+- BLSH (gappers, +8.72%): FAIL — carried forward from today's RESEARCH-LOG
+  deep dive: 200-SMA long-bias filter fails outright (-38.9%), misses the
+  >=50k premarket-volume gate (49,695/49,700 needed); research-only
+  conclusion already logged, no new information since.
+- PEPG (gappers, +7.47%): FAIL — carried forward: R:R gate fails badly (10%
+  stop = 0.77 ATR; 2:1 target at +20% lands on $5.00, the exact secondary-
+  offering price = heaviest overhead supply); confluence one signal short
+  (RSI 58.5 neutral, no fresh catalyst); research-only conclusion already
+  logged, no new information since.
+
+4 candidates evaluated, 0 pass — STEPs 5-6 (orders/stops) skipped. No trade
+fired.
+
+STEP 8 notification: N/A — no trade placed this run.
+
+Weekly trade count: 0/3 (week of Nov 16). 94th trading day since launch
+(Jul 9) with zero entries. Equity flat at $100,000 — confirmed-live-vs-$10k-
+baseline mismatch (flagged Jul 27) unresolved, 156th+ straight session,
+operator review pending. **TLN's dated entry window opens this afternoon:**
+limit $349-356, 48 shares, 10% trailing GTC stop, +20% target, not before
+14:00 ET, do not chase — handoff to a later intraday run (midday or an
+ad-hoc check after the FOMC minutes) for execution once the window opens.
