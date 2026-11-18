@@ -20768,3 +20768,91 @@ gate result is stated, not skipped.
 - Opportunity cost: Nothing to displace at zero open positions, so the cost is one weekly slot. PEPG is the **only one of the two that PASSES the 200-SMA filter (+32.8%)**, and it is above its 20- and 50-SMA too — **the cleaner trend by far**. **It fails on R:R, badly:** ATR14 **$0.5425 = 13.0%** of price, so a 10% stop at **$3.744** is just **0.77 ATR** — inside a single average day, so ordinary noise would take it out before the thesis resolved. Worse, the **+20% target lands on $4.99, effectively the $5.00 offering price where 25M shares were placed** — the target sits on the heaviest overhead supply in the book. Clearing 2:1 from a stop outside 1 ATR needs roughly a **14% stop / 28% target**, and **14% breaches the 7-10% stop band**. Confluence fails at **1 of 4**: the 200-SMA passes, RSI 58.5 is neutral, no insider signal is documented, and the catalyst is an analyst revision rather than a company event. **The two names remain mirror images — BLSH clears R:R and hard-fails the 200-SMA, PEPG clears the 200-SMA and fails R:R — and neither is takeable.** ATR sizing **1,843 sh ≈ $7,667, 7.7% of equity**. **Research only, no order.**
 
 **STEP 8 compliance:** no orders placed, none proposed for immediate execution. Execution stays gated to market-open / `/trade`, which must re-quote off the 15-min-delayed feed before acting.
+
+## 2026-11-18 — Gappers (auto-scan 10:09 ET, cloud)
+
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0).
+**1 of ~60 tickers qualified.** Two raw hits; `OPEN` (+8.47%, $1.28) excluded
+by the $3.00 price floor. Deep-dive cap is **5** per routine spec — with only
+1 qualifier, all research below applies to CRWV alone; no ranks 6-10 exist, so
+none were silently dropped. Research tool: **Apify** (`apify--web-search` +
+`apify--web-fetch`; `apify--rag-web-browser` absent again — confirmed via
+ToolSearch) with the Yahoo-block suffix on every query. No Yahoo-sourced data.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | $47.25 | -5.30% | 14,909,168 | Gapped UP ~4% premarket on Nvidia's Q3 beat lifting AI-cloud sentiment, then reversed hard at the open — opened $51.07, sold to a $46.33 low, printing a negative intraday gap rather than a premarket gap-down. |
+
+**Headline finding this run — the NVDA relief rally has fully round-tripped.**
+The 06:03 ET pre-market run built the day on "the NVDA binary resolved, and it
+resolved bullish" (NVDA +3.62% premarket to $161.09, SOXX/SMH both ~+2.8%,
+neoclouds surging). Live Alpaca re-check at **10:16 ET** says that is gone:
+
+| Sym | Premarket (this morning's runs) | 10:16 ET | Status |
+|---|---|---|---|
+| NVDA | +3.62% ($161.09) | **−0.70% ($154.38)** | entire gain given back, now red |
+| NBIS | +10.27% ($228.64 @ 09:09 ET) | **+0.10% ($106.14)** | entire gap erased |
+| CRWV | +4% premarket | **−3.93% ($47.93)** | gap-up-and-fail |
+| IREN | bid with the complex | **−1.70% ($15.54)** | faded |
+| QQQ | +1.17% | **+0.34% ($659.17)** | index barely green |
+
+Caveat on the NBIS row: the 09:09 ET entry logged $228.64 while the 10:16 ET
+snapshot reads $106.14 — a level discrepancy far too large to be a price move
+and almost certainly a bad/stale snapshot on one of the two runs. **The
+percentage reads are the defensible part; the 09:09 NBIS *level* should be
+treated as suspect.** Flagged, not resolved, and not used for any decision.
+
+Also note CRWV's own drift *within* this run: the 10:09 ET scan print was
+−5.30% ($47.2476), the 10:16 ET re-check −3.93% ($47.93). The scan caught the
+name near its low; it has since recovered part of the flush. Both figures are
+Alpaca, both are logged, neither is averaged away.
+
+Sourcing gap, disclosed: no news source for the *reversal itself* could be
+obtained. Apify's dated search returned 0 results (too fresh to be indexed),
+Investopedia's live blog is blocked to WebFetch, and a guessed CNBC live-blog
+URL 404'd. The reversal is therefore asserted **only from Alpaca price data**
+(the approved primary market-data source), not from a news attribution. No
+macro cause is claimed here. FOMC October minutes are due 14:00 ET today and
+are the obvious scheduled risk, but nothing read this run ties the fade to it.
+
+#### Deep dive: CRWV $47.25 -5.30%
+- Catalyst: This is a gap-up-and-fail, not a gap-down. CRWV rose ~4%
+  premarket on NVDA's Q3 beat and raised FY guidance (Benzinga, ~09:00 ET),
+  opened at $51.07, then sold to a $46.33 session low; the 10:09 ET scan
+  snapshot caught $47.2476, −5.30% vs the $49.89 prior close. Benzinga's live
+  tape read $48.08 / −3.64% at 10:10 ET. No CRWV-specific negative headline
+  exists for the reversal. Standing context: Q3 EPS −$0.95 vs −$1.53 est
+  (Nov 10), then six analyst PT cuts in four days (DA Davidson $100→$45,
+  Barclays $105→$85, Argus $150→$100, Evercore $150→$100, Truist $165→$115,
+  Macquarie $130→$120) against one raise (Citi $128→$149); −32% in October on
+  neocloud debt concerns; RSI 39; short interest 23.82% with 1.07 days to
+  cover; 52-week range $40.58–$138.25; market cap $26.2B.
+- Why: Sector-wide relief rally failing, not a company event. NVDA's beat bid
+  up the whole neocloud complex premarket; as NVDA gave back its entire +3.6%
+  premarket gain and turned red, the highest-beta derivatives of that trade
+  were sold hardest. CRWV — the most debt-levered neocloud, 23.8% short —
+  travelled furthest. Mechanically a failed breakout / gap fill, with last
+  week's PT-cut wave capping any bid.
+- Impact: Reads as a one-day headline spike that already mean-reverted, inside
+  about 40 minutes of the open — not sustainable. Volume is the tell against
+  durability: 15.6M vs a 45.5M 30-day average, so neither the pop nor the
+  flush is volume-confirmed. Sector read-through (table above) is unambiguous
+  and confirms the move is not idiosyncratic: the whole AI-compute complex
+  round-tripped its NVDA-beat gap within the first 45 minutes.
+- Horizon: SHORT_TERM, a failed relief bounce inside an established downtrend
+  — no structural catalyst, six PT cuts in the past week, RSI 39, and the
+  $40.58 52-week low only ~13% below spot; nothing justifies carrying past
+  the session.
+- Opportunity cost: Account is flat ($100,000 equity, 0/6 positions, 0%
+  deployed vs the 75–85% rule — 94th straight session out of compliance, 0/3
+  weekly trade slots used), so no existing holding would be displaced and
+  nothing else on today's list competes (CRWV is the sole qualifier; OPEN
+  excluded at $1.28). The real cost is sequencing: spending one of three
+  weekly slots going long a name that just failed at the open while its own
+  sector leader went red. R:R is marginal at best — the 3%-minimum stop rule
+  caps a stop at $46.49 or lower, and respecting the $46.33 session low
+  pushes it to ~$46.00 (~4.0% risk), which needs a ~$51.79 target (+8.1%) to
+  clear the 2:1 minimum — above today's $51.07 open and day high, so the
+  trade only pays 2:1 if the failed gap is fully reclaimed. Research only: no
+  size proposed, no order placed, per STEP 8.
