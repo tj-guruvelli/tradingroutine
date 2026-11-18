@@ -20283,3 +20283,336 @@ archive copy.
 - 0 errors.
 - Raw JSON: `data/setup-scan_cloud_2026-11-17_1737ET.json`.
 - 0 grade-A hits → no Telegram/ClickUp notification sent (per STEP 4 rule).
+
+## 2026-11-18 — Pre-Market Research (Day 94, Wednesday, cloud run)
+
+Run time **06:03–06:12 ET**. Research tool: **Apify** (`apify--web-search` +
+`apify--web-fetch`; `apify--rag-web-browser` absent again — checked via
+ToolSearch, not assumed). No Perplexity, no Yahoo.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction — not guessed from a populated field) |
+| `balance_asof` | 2026-11-17 |
+| Deployed | **0%** vs the 75–85% rule — 94th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required
+env vars confirmed `set` before any wrapper call.
+
+### Market context
+
+**The NVDA binary — the single reason TLN was deferred to today — has
+RESOLVED, and it resolved bullish.**
+- Nvidia Q3 (Tue 11/17 after close): **revenue $115.8B**, profit and revenue
+  both **beat**, and the company **lifted FY revenue guidance** for the year
+  ending Jan 2028. First print without Jensen Huang. **NVDA +3.62% premarket
+  to $161.09** (Alpaca `delayed_sip`), after +4% in extended trade.
+- Offsetting headline risk, all post-print and all unresolved: **WSJ reports
+  the SEC is probing Nvidia** amid Huang's departure; the **10-Q is delayed**;
+  **Muddy Waters disclosed a short** today raising questions about an executive
+  connection; and Reuters' live blog has the **board ruling out Huang's
+  return** while Investing.com carries Huang saying **he would return if
+  asked** — a direct conflict logged as a conflict, not resolved.
+- Read-through is broad and strong: **SOXX and SMH both ~+2.8%** premarket,
+  **Kospi +1.99%** (Samsung +4.47%, SK Hynix +5.83%), neoclouds surging.
+
+**Indices / tape**
+- Nov 17 close: **Dow −1.6%, S&P 500 −1.0% (lowest close since Jul 29),
+  Nasdaq Composite −0.7%** — S&P's **fourth straight down day**.
+- Premarket futures: **Nasdaq-100 +1.0%, S&P 500 +0.58%, Dow +0.32%** (CNBC).
+  Corroborated by Alpaca snapshots: **QQQ +1.17% $664.63, SPY +0.61% $736.90**.
+- **VIX 23.66, −1.80 (−7.07%)**, high 27.73 / low 22.39, prev close 25.46 —
+  **sourced direct from Cboe's own VIX dashboard** (2026-11-17 16:15 ET).
+  Independently corroborated at 23.75 / −6.72% by Investing.com. Note the
+  intraday high of 27.73 against a 23.66 close: real fear early, then the
+  event-passing crush.
+
+**Rates / metals — the genuinely new macro fact this run**
+- **Gold futures −2.34% to $3,761.84 (lowest in over a year); silver futures
+  −3.5% to $45.72 (52-week low)** — CNBC attributes this explicitly to
+  **expectations of Fed rate *rises* next month**. US real yields back up to
+  **2.9% from 2.6%**.
+- Curve (Investing.com): **US 2Y 4.80%, 10Y 5.10%, 30Y 5.445%**. Dollar index
+  **103.713 (+0.30%)**. Fed funds currently **3.75–4.00%**.
+- This is a **hike-expectation regime, not a cut-expectation regime** — it
+  matters directly to the TLN thesis below (capital-intensive IPP, rate-
+  sensitive duration).
+
+**Oil** — WTI **$85.13, −1.06%**; Brent **$92.81, −0.35%** (CNBC front-month).
+Falling *despite* Kuwait reporting "hostile drone attacks". **Discrepancy
+disclosed:** Investing.com's WTI tile read **$83.77 (−1.04%)** against CNBC's
+$85.13 — same direction and same percentage, different level (likely a
+different contract/snapshot time). Brent agrees closely ($92.64 vs $92.81).
+**Neither figure is Yahoo-sourced; the WTI *level* should be treated as
+±$1.4 uncertain, the direction as firm.**
+
+**Today's releases** (all ET, from Investing.com's calendar piece)
+- 07:00 MBA mortgage applications (prev +6.2%); MBA 30-yr rate prev **7.21%**
+- **08:30 Building Permits** exp 1.380M vs 1.398M · **Housing Starts** exp
+  1.250M vs 1.221M (prev m/m −5.2%)
+- 10:00 Pending Home Sales exp −2.1% vs −7.3% · Atlanta Fed GDPNow
+- 10:30 EIA crude inventories (prev +4.657M)
+- 12:15 **Daly** · 13:00 **20-Year bond auction** (prev yield **5.469%**)
+- 13:35 Barr · **14:00 FOMC MINUTES (October meeting)** · 14:30 Williams
+- 16:15 Kashkari
+- **Earnings before the open: Lowe's (LOW), Target (TGT), TJX.** No watchlist
+  name reports today.
+
+**Sector momentum** — computed from Alpaca daily bars, not quoted from a site:
+
+| ETF | Last | 1d% | 5d% | 21d% | YTD% | vs20 | vs50 | vs200 |
+|---|---|---|---|---|---|---|---|---|
+| XLV | 185.28 | −1.40 | −1.91 | **+5.48** | +19.1 | +0.39 | +5.43 | +15.42 |
+| XLU | 43.43 | −1.61 | −0.69 | **+4.95** | +0.6 | +0.31 | +3.61 | −2.05 |
+| XLP | 91.48 | −1.24 | +0.48 | **+4.86** | +17.8 | +1.70 | +6.42 | +7.67 |
+| XLF | 57.08 | −1.89 | −2.06 | +3.65 | +3.9 | −0.35 | +2.00 | +5.73 |
+| XLY | 117.15 | −0.83 | −3.23 | +2.36 | −1.0 | −0.38 | +2.81 | +1.52 |
+| XLB | 50.84 | −1.24 | −3.77 | −0.18 | +10.2 | −2.67 | −0.08 | −0.82 |
+| XLI | 164.75 | −0.58 | −2.38 | −1.18 | +4.3 | −1.74 | −2.27 | −5.01 |
+| SPY | 732.41 | −1.03 | −2.34 | −4.46 | +7.2 | −3.11 | −4.03 | +0.01 |
+| XLE | 63.35 | −0.56 | +1.81 | −6.56 | **+38.8** | −3.63 | −2.46 | +6.29 |
+| QQQ | 657.06 | −0.72 | −2.63 | −8.53 | +7.2 | −4.72 | −8.17 | −3.74 |
+| XLK | 163.30 | −0.84 | −3.34 | **−12.19** | +13.2 | −7.47 | −12.28 | −4.51 |
+
+**Defensive leadership is now unambiguous on the 21-day horizon** —
+Healthcare, Utilities and Staples are the only three sectors up more than 4%,
+and they are exactly the **Mid-cycle** trio in the rulebook's rotation table.
+**XLK remains the worst sector on every horizon and is 4.5% under its
+200-SMA**; today's semi rally is a one-day earnings bounce inside that
+downtrend, not a trend change. **XLE still leads YTD (+38.8%) but is the
+second-worst 21-day sector (−6.56%) and below both its 20- and 50-SMA.**
+
+**Premarket gap scan** — `gappers-alpaca.sh watchlist`, feed `delayed_sip`,
+69 tickers. **34 names ≥1.5%; 9 ≥4%.** Tape is genuinely risk-on and the
+leadership is entirely the NVDA read-through:
+
+| Sym | $Price | Gap% |
+|---|---|---|
+| NBIS | 113.94 | +7.46 |
+| PEPG | 4.16 | +7.22 |
+| OPEN | 1.25 | +5.93 |
+| BE | 183.66 | +5.88 |
+| CRWV | 52.70 | +5.63 |
+| AMKR | 35.75 | +4.99 |
+| BW | 4.5965 | +4.94 |
+| QBTS | 8.47 | +4.83 |
+| SATL | 3.06 | +4.44 |
+
+Also: RGTI +3.90 · ASTS +3.70 · RKLB +3.31 · ORCL +2.77 · OKLO +2.50 ·
+GFS +2.37 · KLIC +2.12. Decliners are only XLE-adjacent and micro: TRMD
+−2.33, WLDS −3.25. **RCAT +2.49% to $2.47** — a second dead-cat bounce day;
+still under the $3.00 floor and still untradeable on the four counts logged
+11/17.
+
+### Trade ideas
+
+**1. TLN (Talen Energy) — THE GATE OPENS AT 14:00 ET TODAY. Still the only
+name passing every rule. But the planned entry band is being left behind,
+and that is the real decision.**
+
+- **Catalyst:** **Nov 11** — seven-year agreement to sell **750 MW of
+  capacity**, targeting **~$100M annual revenue**; stock rose ~5–6% to ~$379
+  that day (Reuters/Benzinga via TradingView, Pomegra). Backed by **Q3
+  (Nov 3): 2026 guidance reaffirmed and 2027 guidance introduced**, and the
+  **Oct 1 capacity monetization selling rights to ~$1.5B of future PJM
+  capacity cash flows** (Talen IR / GlobeNewswire). Honest aging note: the
+  catalyst is **7 days old and price has round-tripped it** — $378.39 (11/11)
+  → $386.62 peak (11/12) → $354.92 (11/17), now bouncing.
+- **Technicals (IEX daily bars, Nov 17 close $354.92; premarket $364.25,
+  +2.69%):** RSI(14) **52.0** — nowhere near the 70 no-new-long line.
+  **Above all three SMAs: 20-SMA $349.66, 50-SMA $336.09, 200-SMA $348.94.**
+  At the premarket $364.25 that is **+4.2% / +8.4% / +4.4%**. ATR(14) **$20.73
+  = 5.69% of $364.25**.
+- **Both gates still clear at the premarket price:** 10% stop = **1.76 ATR**;
+  +20% target = **3.51 ATR**. TLN is the **only** name in the candidate set
+  (13 names computed below) to pass the stop rule, the 2:1 R:R gate, the
+  200-SMA long-bias filter and the RSI<70 filter simultaneously.
+- **Plan — UNCHANGED from the dated plan on record, deliberately:** entry
+  **$349–356** (20-SMA retest) as a **limit order, never market** (IEX 20-day
+  average volume ~75.5k shares; a ~$17k clip is thin-book), stop **10%
+  trailing GTC**, target **~+20%**. **Not before 14:00 ET** (FOMC minutes).
+- **Size:** at $352 fill, ATR $20.73, 1.0% risk ($1,000) per 1-ATR move →
+  **48 shares ≈ $16,900 = 16.9% of equity**, inside the 20% cap ($20,000 =
+  56 shares). `scripts/size.mjs TLN` returned `price: 338.58` / `atr14:
+  19.85` / `suggested_shares: 50` — **its price is 8 sessions stale**, so the
+  48-share figure above is recomputed from current bars and should be used.
+  **Operator note: `size.mjs` price staleness is a real bug worth a look.**
+- **THE ACTUAL DECISION THIS RUN — the entry band, not the gate.** TLN is
+  **$364.25 premarket, 2.3% above the top of the $349–356 band**, because it
+  is rallying with the AI-power complex on NVDA (BE +5.88%, CRWV +5.63%,
+  NBIS +7.46%, OKLO +2.50%, CEG +1.72%). The no-chase rule is **not**
+  mechanically triggered (TLN is +2.69%, under the 5% threshold), so chasing
+  to $364 is not *forbidden* — it is simply **not the plan**, and it degrades
+  the setup: a $364 entry puts the 10% stop at **$327.83, which is 6.0%
+  under the 200-SMA**, so the stop would sit well below the structure the
+  entry is supposed to lean on. At $352 the stop is $316.80, 9.2% under the
+  200-SMA — worse on that measure, but the *entry* is at support rather than
+  2.3% extended from it. **Recommendation: hold the $349–356 limit. If TLN
+  never retests, take no trade.** Three weekly slots are open and the book is
+  100% cash; there is no cost to patience and no reason to pay up on day one
+  of a 94-session drought.
+- **Risk specific to TLN today:** it is a **capital-intensive independent
+  power producer in a rate-HIKE-expectation tape** (gold at a 1-year low,
+  real yields 2.9%, 20Y auction at 13:00 with a 5.469% prior yield, minutes
+  at 14:00). A hawkish minutes read at 14:00 hits long-duration power
+  equities directly — and **14:00 is precisely when the gate opens**, so the
+  entry window and the single largest same-day risk event coincide. That is
+  an argument for the limit, not the market order.
+
+**2. CEG (Constellation Energy) — the closest second, fails on ONE rule by
+2.04%. Watch-only, with a precise trigger.**
+- **Catalyst:** same AI-power/datacenter-demand complex as TLN; **+1.72%
+  premarket to $272.69** on the NVDA read-through.
+- **Technicals:** RSI(14) **54.2**. ATR(14) **4.86% of price** — comfortably
+  inside the tradeable 2.8–5.5% band. **10% stop = 2.06 ATR, +20% target =
+  4.12 ATR — the cleanest R:R shape in the entire candidate set, better than
+  TLN's.** Above its 20-SMA (+3.72%) and 50-SMA (+1.58%).
+- **The single failure: −2.04% vs its 200-SMA**, so the long-bias filter
+  blocks a long outright. No discretion applied.
+- **Trigger on record:** a **daily close above ~$278.30** (its 200-SMA)
+  promotes CEG to a live candidate with the same 10%-trailing/+20% frame. Not
+  before that. **Note the correlation gate:** if TLN fills, CEG is the same
+  AI-power trade and `corr-gate.mjs` should be run before any second entry —
+  two positions in one thesis is not diversification.
+
+**3. No third idea is offered, and that is the finding.** Thirteen candidates
+were computed from live bars (BE, CEG, NBIS, OKLO, CRWV, AMKR, GFS, ORCL,
+RKLB, KLIC, VST, NRG, GEV). **Eleven fail outright.** The four that clear the
+R:R band on volatility alone — **NRG** (1.79/3.59 ATR), **VST** (1.61/3.21),
+**GFS** (1.57/3.15), **AMKR** (1.28/2.56) — **all fail the 200-SMA long-bias
+filter** by −30.4%, −16.2%, −26.3% and −36.6% respectively. The four biggest
+gappers all fail on stop-inside-ATR before anything else: **NBIS** 10% stop =
+**0.64 ATR** (ATR 15.70% of price), **BE 0.83 ATR**, **CRWV 0.84 ATR**,
+**OKLO 0.95 ATR** — every one of them a stop inside a single day's range.
+**KLIC** remains ~**6.8%** under its ~$71.79 20-SMA precondition (premarket
+$66.89) and its stop is 1.34 ATR; its fiscal Q4 could not be confirmed as
+reported — a dated-literal search returned **0 results**, so this is logged
+as a **data gap, not as "no earnings"**.
+
+### Risk factors today
+1. **14:00 ET FOMC minutes land exactly when the TLN gate opens.** Highest-
+   impact event of the day, and the October meeting held rates at 3.75–4.00%
+   while the market now prices **hikes** next month. A hawkish read hits
+   rate-sensitive power equities hardest.
+2. **The rate-hike regime itself.** Gold at a 1-year low and silver at a
+   52-week low are not noise — they are the cleanest expression of the
+   repricing. Real yields 2.9% vs 2.6%. 20Y auction at 13:00 (prior yield
+   5.469%) is a same-day test of duration demand.
+3. **NVDA's beat is a one-day bounce inside a downtrend, not a trend change.**
+   S&P closed at its lowest since Jul 29 after four down days; XLK is −12.19%
+   over 21 days and below its 200-SMA. Buying the semis/AI-power gap-up today
+   is buying strength into the weakest sector on the tape.
+4. **Unresolved NVDA headline risk compounds through the session** — SEC
+   probe, delayed 10-Q, a fresh Muddy Waters short, and flatly contradictory
+   reporting on whether Huang might return. Any of these can reverse the
+   complex intraday, and the AI-power names (TLN, CEG, BE, CRWV, NBIS) are
+   the highest-beta expression of it.
+5. **Three retail prints before the open (LOW, TGT, TJX)** plus housing data
+   at 08:30 can swing XLY/XLI and the broad tape before the AI-power read-
+   through is even tested.
+6. **Thin book in TLN.** ~75.5k shares IEX 20-day average. A market order on
+   a ~$17k clip would pay spread it does not need to. Limit only.
+
+### Decision: **HOLD this run. No order placed.**
+
+- The gate on TLN is **time-based and has not opened** — it is **06:12 ET**
+  and the gate is **14:00 ET**, after the FOMC minutes. A pre-market routine
+  structurally cannot take this trade, and nothing about today's news changes
+  that.
+- **What DID change, and it is the most useful output of this run: the reason
+  for the deferral is gone.** The NVDA binary resolved, and resolved bullish.
+  TLN now passes every rule at the premarket price. The deferral logic has
+  done its job — the book avoided carrying a ±10% implied binary and lost
+  nothing by waiting.
+- **The handoff to the 14:00+ window is explicit:** TLN, **limit $349–356**,
+  **48 shares**, **10% trailing GTC stop**, **+20% target**, **not before the
+  minutes**, **and do not chase $364**. Entry only if it retests the band and
+  still holds its 200-SMA ($348.94) with RSI under 70.
+- Weekly trade count **0/3** (week of Nov 16). **94th trading day since
+  launch (Jul 9) with zero entries.**
+- **Equity flat at $100,000** — the confirmed-live-vs-$10k-baseline mismatch
+  first flagged **Jul 27** is now unresolved for a **156th+ straight
+  session**. Operator review still pending.
+- **Structural rule conflict, 7th consecutive session escalated, and today's
+  13-name sample sharpens it again:** the only names clearing the fixed-10%-
+  stop / 2:1-R:R pair are those with **ATR ~2.8–5.5% of price** (TLN 5.69%,
+  CEG 4.86%), and of those, most then fail the 200-SMA filter. The gate is
+  not unsatisfiable — it admitted **exactly one name out of 13 today, and
+  exactly one name in 94 sessions**. Three coherent options, unchanged, none
+  taken unilaterally: **(a)** make the stop ATR-proportional (e.g. 2× ATR,
+  floored at 7%); **(b)** migrate the watchlist toward the 2.8–5.5% ATR band;
+  **(c)** keep both rules and accept 1–3 entries per quarter as the *designed*
+  outcome. **(a) or (b) recommended; (c) should be chosen deliberately, not
+  by default.**
+
+### Tooling notes (this run)
+- `mcp__Apify__apify--rag-web-browser` **absent** (verified via ToolSearch).
+  Used `apify--web-search` + `apify--web-fetch`. **No tradingview-data MCP is
+  registered in this cloud session**, so `combined_analysis` was unavailable
+  and **all technicals above were computed from Alpaca bars in-run** rather
+  than quoted — slower, but fully sourced.
+- **YAHOO: clean run. Zero results resolved to any `*finance.yahoo.com`
+  host.** Every query carried the mandated three-domain `-site:` suffix **and**
+  a six-domain `blockedDomains` array (adding `nz.`, `ca.`, `au.`). The
+  standing operator recommendation is **unchanged and still not self-applied**:
+  replace the per-query domain blocklist with a **post-fetch URL check
+  discarding any host matching `*finance.yahoo.com*`**, because enumerating
+  regional domains cannot cover them all. A clean run is ranking luck.
+- **Apify query-construction gotcha, reproduced:** `dateFrom` works, but a
+  **date embedded in the query string returns 0 results**, and **stacking a
+  tight `dateFrom` with many negations also returns 0** (first futures query
+  came back empty on `dateFrom=2026-11-17` + 9 exclusions; the same topic
+  returned 3 good results with the date dropped from the filter). **Phrase
+  queries naturally; constrain with `dateFrom`; don't stack both hard.**
+- `apify--web-fetch` **timed out at 60s** on `ir.talenenergy.com/news-releases`
+  with `wait: 5000`. Not retried; the 750-MW catalyst was sourced from
+  Reuters/Benzinga-via-TradingView and Pomegra instead. **A `wait` parameter
+  plus a slow IR site can exceed the MCP timeout** — fetch without `wait`
+  first.
+- **`scripts/alpaca.sh bars` still hardcodes `feed=iex`** (line 52), so all
+  volumes from it are IEX-only (~2–5% of consolidated). **Prices/OHLC are
+  usable for SMA/ATR/RSI; volumes from it are not comparable to snapshot
+  volumes.** The one-line fix flagged on 11/17 is still unapplied.
+- **Snapshot `volume` is prior-session consolidated volume, not premarket
+  volume** — Alpaca exposes no premarket-volume field; the
+  `premarket_volume >= 50000` filter was treated as unpopulated, not faked.
+- **Discarded as unreliable, disclosed rather than used:** a `roxom.com` TLN
+  page quoting "$13.12 / Mkt Cap $16.82B" (price plainly wrong for TLN) and a
+  Facebook repost claiming "Nvidia falls short on guidance, stock down 9%
+  after hours" (contradicted by Reuters, CNBC and Investing.com, and almost
+  certainly a stale prior-quarter post). **Neither figure is cited above.**
+
+### STEP 5 notification — SENT (not silent), and the primary channel FAILED
+**Gate met.** The routine default is silent, but a dated entry gate opening
+today on the only candidate in 94 sessions — with price already 2.3% above the
+planned band — is actionable before 14:00 ET, so one line was sent.
+
+**`scripts/clickup.sh` is DOWN.** It exits non-zero with `curl: (22) ... error:
+400` on any message, short or long. Diagnosed against the API directly:
+```
+{"err":"Invalid workspace ID","ECODE":"SHARD_034"}
+```
+`CLICKUP_WORKSPACE_ID` is **present in the environment (30 chars) but rejected
+by ClickUp** — this is a bad/stale value, **not** a missing-var condition, so
+the routine's "STOP and send one ClickUp alert naming the missing var" branch
+does not apply (and could not work anyway, ClickUp being the channel). Also
+note `clickup.sh` line 33 invokes bare **`python`**, which does not exist in
+this cloud image — a second latent break that would bite even with valid
+credentials.
+
+**Fell back to `scripts/telegram.sh`** — which CLAUDE.md designates the
+**primary** channel with ClickUp as fallback, so this is the documented
+hierarchy, not an improvisation. Delivered OK (`message_id: 380`). Full
+pre-market summary plus the ClickUp outage carried in the message body.
+
+**Operator action required:** refresh `CLICKUP_WORKSPACE_ID` (and verify
+`CLICKUP_CHANNEL_ID`, 28 chars, unverified behind the workspace error), and
+change `clickup.sh` to `python3`. Until then **every routine that notifies
+only via ClickUp is silently failing** — `pre-market.md` STEP 5 names ClickUp
+exclusively.
