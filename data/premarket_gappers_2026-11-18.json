@@ -1,0 +1,104 @@
+{
+  "scanned_at": "2026-11-18T12:09:00Z",
+  "scanned_at_et": "2026-11-18 07:09 ET",
+  "run_of_day": "1 of 4",
+  "deep_dive_cap": 5,
+  "universe_scanned": 69,
+  "gap_threshold_pct": 5.0,
+  "price_floor": 3.0,
+  "premarket_volume_filter_applied": false,
+  "premarket_volume_note": "Alpaca's snapshot endpoint exposes no premarket-volume field, so the >=50000 filter was NOT applied. The volume value below is the prior session's full-day consolidated volume from the delayed_sip snapshot, not premarket volume. Flagged, not fabricated.",
+  "feed": "delayed_sip (15-min delayed; market-open and /trade MUST re-quote before acting)",
+  "hits": 3,
+  "deep_dive_cap_binding": false,
+  "deep_dive_cap_note": "Only 3 symbols cleared the screen, so all 3 received the deep dive. The cap of 5 was NOT binding this run and no ranks 6-10 exist.",
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BLSH",
+      "price": 21.19,
+      "prev_close": 19.27,
+      "gap_pct": 9.96,
+      "premarket_volume": null,
+      "prior_session_volume": 2486213,
+      "catalyst": "Q3 2026 results out this morning at 6:45 AM ET plus a board-authorized share repurchase of up to $300 million: adjusted revenue rose to $84.4M from $76.5M even as digital-asset sales fell to $32.1B from $41.6B.",
+      "headlines": [
+        "Bullish Reports Third Quarter 2026 Results (Nov 18, 6:45 AM ET) - stocktitan.net",
+        "Issuer Token Coalition surges to 12 firms as DRW, Flow Traders, SoFi and Superstate join (Nov 17, 4:05 PM ET) - stocktitan.net",
+        "Bullish appoints former NYSE President Stacey Cunningham as President (Nov 9) - stocktitan.net"
+      ],
+      "catalyst_detail": "Bullish reported Q3 2026 before the open today (6:45 AM ET, call at 8:30 AM) and the board authorized up to $300M of share repurchases - roughly 9% of a ~$3.4B market cap. The mix is genuinely split: adjusted revenue rose to $84.4M from $76.5M, but digital-asset sales fell to $32.1B from $41.6B, consistent with the company's own October monthly metrics showing volume down to $37.7B from $48.6B in September. Separately, on Nov 17 after the close Bullish and Equiniti added DRW, Flow Traders, SoFi and Superstate to their Issuer Token Coalition, taking it to 12 firms, though participation is explicitly non-binding. Stacey Cunningham, former NYSE Group President, joined as President on Nov 9.",
+      "why": "Revenue grew while volumes shrank, which says take-rate expansion rather than volume growth, and the $300M buyback is the real lever: a repurchase authorization worth ~9% of market cap, announced on a stock sitting at its 20-day low after a crypto drawdown, puts a bid under a heavily de-rated float and forces short covering. The move is a buyback-plus-beat squeeze off a washed-out base, not a demand-growth re-rating.",
+      "impact": "Reads as a real catalyst rather than a headline spike - a buyback authorization is a durable, dated change in the share count, and the earnings call at 8:30 AM ET can extend or kill the move. But the base is badly broken: price is -13.3% vs its 20-SMA, -30.3% vs its 50-SMA and -32.8% vs its 200-SMA, with RSI14 at 29.9 (oversold). Sector read-through is to the crypto-exchange and digital-asset complex, which is working against it - CoinDesk has bitcoin in its sixth consecutive weekly loss, down 23% from its late-September high, so the parent tape is still falling while this single name gaps up on company news.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The buyback is structural, but the move is a bounce off the 20-day low inside a confirmed downtrend (below the 20-, 50- and 200-SMA) in a sector that appears nowhere in the strategy's late-cycle favored set of Energy, Materials and Financials; a LONG_TERM call needs the crypto tape to stop falling first.",
+      "opportunity_cost": "Nothing to displace - the account is flat at $100,000 with 0 of 6 position slots used and 0 of 3 weekly trades spent - so the true cost is one of three weekly trade slots and the attention of today's remaining three scans. On R:R this is the ONLY name of the three that clears the mechanical gate: ATR14 is 8.65% of price, so a 10% stop is 1.16 ATR and a +20% target is 2.31 ATR, meaning 2:1 is actually reachable at a permitted stop distance. It fails the Indicator Canon's long-bias filter instead, trading 32.8% below its 200-SMA, and buying an oversold RSI in a downtrend is the bottom-fishing the rulebook forbids outright. ATR sizing would put it at 545 shares, about $11,500 or 11.5% of equity, inside the 20% cap. Research only, no order."
+    },
+    {
+      "rank": 2,
+      "symbol": "PEPG",
+      "price": 4.15,
+      "prev_close": 3.88,
+      "gap_pct": 6.96,
+      "premarket_volume": null,
+      "prior_session_volume": 5624869,
+      "catalyst": "No company release today - this is post-offering mean reversion: PepGen doubled on Nov 10 Phase 2 FREEDOM2-DM1 data, then priced a $125M offering at $5.00 on Nov 11, and has been trading below that price ever since.",
+      "headlines": [
+        "PepGen Announces Pricing of $125 Million Public Offering - 25,000,000 shares at $5.00, closing on or about Nov 13 (Nov 11, 10:22 PM ET) - stocktitan.net",
+        "PepGen Stock Doubles in One Session - Here's Why (Nov 10) - benzinga.com",
+        "PepGen reports Phase 2 FREEDOM2-DM1 10 mg/kg results: 46.5% mean splicing correction at Week 13 (Nov 10, 7:01 AM ET) - stocktitan.net",
+        "PepGen Inc. (PEPG) PT Raised to $15 at Guggenheim (Nov 13) - streetinsider.com"
+      ],
+      "catalyst_detail": "There is no PepGen press release dated Nov 17 or 18. The sequence driving today's gap began on Nov 10, when PepGen reported Phase 2 FREEDOM2-DM1 results for its 10 mg/kg cohort showing 46.5% mean splicing correction at Week 13 for PGN-EDODM1 in myotonic dystrophy type 1, and the stock doubled in a session. Management immediately monetized the move: a $125M offering launched the same afternoon and priced on Nov 11 at $5.00 for 25,000,000 shares, closing Nov 13, with a 30-day underwriter option on 3.75M more. Q3 showed a $19.4M net loss and $104.8M of cash at Sept 30, so the raise roughly doubles the cash runway. Guggenheim raised its target to $15 on Nov 13 and BofA upgraded to Neutral. The next hard catalyst is the fully enrolled 12.5 mg/kg cohort, guided to the first half of 2027.",
+      "why": "The mechanism is the offering overhang, not news. Pricing 25M new shares at $5.00 handed every buyer a reference price, the stock broke below it, and the subsequent slide (-7.25% on Nov 14, down to $3.86 by Nov 17) took it ~23% under the deal price. Today's +7% is a dilution-flush snapback off that low by traders treating sub-$4 as a discount to the $5.00 institutions just paid, with no new information behind it.",
+      "impact": "Reads as a one-day bounce likely to mean-revert. Prior-session volume of 5.6M against an IEX 20-day average of 251k confirms the name is still being churned by post-deal rotation rather than accumulated, and the chart is an unresolved spike: a 20-day range of $2.23 to $6.38 on a $4.15 price. Decisively, the next clinical readout is a 2027 event, so there is nothing scheduled to sustain a move for months, while the 3.75M-share underwriter option stays live as fresh supply. Read-through is limited - this is single-asset DM1 biotech risk with no sector complex moving alongside it.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The Phase 2 data is structural but is already priced and then diluted, and with the next cohort not reading out until H1 2027 there is no durable thesis to carry; the strategy's late-cycle favored sectors do not include speculative clinical-stage biotech.",
+      "opportunity_cost": "Nothing to displace (flat account, 0 of 6 slots, 0 of 3 weekly trades), so the cost is one weekly slot. Notably PEPG is the ONLY name in today's list that PASSES the 200-SMA long-bias filter, trading +42.1% above it, with RSI14 at a neutral 58.2 - the cleanest trend structure of the three. It fails on R:R instead, and badly: ATR14 is 15.24% of price, so a 10% stop is just 0.66 ATR and a +20% target only 1.31 ATR, meaning a permitted stop sits well inside a single average day's range and would fire on noise before the thesis resolved. Clearing 2:1 would require a stop near 30% wide, which Rule 7 and the 7-10% stop band forbid. Within today's own list it is dominated on R:R shape by BLSH, which is the mirror image - BLSH clears R:R and fails the 200-SMA, PEPG clears the 200-SMA and fails R:R. ATR sizing would be 1,581 shares, about $6,560 or 6.6% of equity. Research only, no order."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 112.64,
+      "prev_close": 106.035,
+      "gap_pct": 6.23,
+      "premarket_volume": null,
+      "prior_session_volume": 31839745,
+      "catalyst": "No company news - AI-infrastructure sympathy bounce after NVIDIA reported Q3 FY2027 results after the close on Nov 17 and beat, lifting the neocloud complex off its lows.",
+      "headlines": [
+        "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027 (Nov 17, after close) - quantisnow.com",
+        "Nebius Rises 10% After Nvidia Earnings Beat (Nov 17, after hours) - timothysykes.com",
+        "Nebius Revenue Jumps to $980.8 Million, but Capacity Delays Weigh (Nov 12) - stockinvest.us",
+        "Nebius secures $3.5 billion senior secured financing facility from Citi (Oct 22) - stocktitan.net"
+      ],
+      "catalyst_detail": "No Nebius release is dated Nov 17 or 18; the driver is external. NVIDIA reported Q3 fiscal 2027 after the close on Nov 17 and beat, with the earnings call at 7:00 PM ET, and the Nvidia-backed AI-cloud complex rallied with it - Nebius traded up about 10% in the after-hours session. That bounce is off a deep hole of Nebius's own making. Q3, reported Nov 12, actually beat: revenue $980.8M, up 571% year over year, with operating income turning positive. The market traded the guidance instead - the top end of FY26 revenue guidance was cut, data-centre capacity delays were flagged, and capex was raised toward ~$45B - and the stock fell 16.8% that day and kept sliding, roughly 42% below its 20-day high. Baird cut its target from $340 to $200 and BofA to $265, and a Reddit compilation of Nov 13-16 revisions shows analysts still cutting into this week.",
+      "why": "This is borrowed momentum, not repaired fundamentals. Nebius is the highest-beta listed expression of Nvidia GPU demand, so an NVDA beat mechanically lifts it regardless of its own capacity-delay problem. Nothing in the move addresses the two things that broke the stock six sessions ago - the guidance cut and the ~$45B capex requirement - so the bid is sector beta reclaiming an oversold level.",
+      "impact": "Most likely to mean-revert of the three, because the catalyst is not its own and the de-rate is sustained rather than a spike: price is -22.2% vs its 20-SMA, -40.5% vs its 50-SMA and -37.3% vs its 200-SMA, with RSI14 at 33.8. Prior-session volume of 31.8M is heavy but the IEX ratio of 1.10x average shows no accumulation surge behind this particular bounce. Sector read-through is the key risk: CRWV and the rest of the neocloud complex are moving on exactly the same NVDA print, so taking NBIS and any peer would be one macro trade expressed twice - precisely what corr-gate.mjs exists to block.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "A peer's earnings beat is not a durable thesis for this name, the guidance reset that caused the selloff is structurally bearish and unaddressed, and analyst targets were still being cut through Nov 16.",
+      "opportunity_cost": "Nothing to displace (flat account, 0 of 6 slots, 0 of 3 weekly trades), so the cost is one weekly slot spent on the worst-trending name in the list. It is the only one of the three failing BOTH gates: ATR14 is 15.89% of price, so a 10% stop is 0.63 ATR - under two-thirds of an average day's range and near-certain to fire on noise - while a +20% target is only 1.26 ATR, so 2:1 is unreachable at any permitted stop; and at -37.3% vs its 200-SMA the long-bias filter fails outright. It would also stack AI-capex beta that today's tape is driving across the whole neocloud group. Strictly dominated within today's own list: BLSH offers better R:R shape and PEPG a better trend. ATR sizing would be 55 shares, about $6,195 or 6.2% of equity. Research only, no order."
+    }
+  ],
+  "gates_summary": {
+    "names_passing_200sma_long_bias_filter": ["PEPG"],
+    "names_passing_2to1_rr_at_10pct_stop": ["BLSH"],
+    "names_passing_both": [],
+    "actionable": 0,
+    "note": "The two mandatory gates split cleanly across the list and no name clears both. BLSH clears R:R (10% stop = 1.16 ATR) but sits 32.8% below its 200-SMA. PEPG clears the 200-SMA (+42.1%) but its 10% stop is 0.66 ATR. NBIS fails both. Zero actionable setups; this is the 10%-stop-vs-2:1-R:R structural conflict flagged for 155+ sessions, appearing today as a mutually exclusive either/or rather than a blanket fail."
+  },
+  "account_state": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "open_positions": 0,
+    "open_orders": 0,
+    "weekly_trades_used": "0/3 (week of Nov 16)",
+    "note": "Live equity is $100,000, not the ~$10,000 baseline in CLAUDE.md - the mismatch first flagged 2026-07-27 and still unresolved, operator review pending."
+  },
+  "yahoo_block": {
+    "suffix_applied_to_all_queries": true,
+    "finance_yahoo_urls_surfaced": 0,
+    "queries_run": 7,
+    "queries_returning_results": 7
+  },
+  "trading_action": "NONE - research-only routine. No orders placed. Execution happens in market-open or /trade behind the full safety-check gate."
+}
