@@ -20671,3 +20671,70 @@ exclusively.
 - Opportunity cost: Nothing to displace, so the cost is one weekly slot on the worst-trending name in the list. **The only row failing BOTH gates:** ATR14 **15.89%**, so a 10% stop is **0.63 ATR** — under two-thirds of an average day, near-certain to fire on noise — while a +20% target is only **1.26 ATR**, making 2:1 unreachable at any permitted stop; and at **-37.3% vs 200-SMA** the long-bias filter fails outright. It would also stack AI-capex beta the tape is driving across the whole group. **Strictly dominated within today's own list — BLSH offers better R:R shape, PEPG a better trend.** ATR sizing: **55 sh ≈ $6,195, 6.2% of equity**. **Research only, no order.**
 
 **STEP 8 compliance:** no orders placed, none proposed for immediate execution. Execution remains gated to market-open / `/trade`.
+
+## 2026-11-18 — Gappers (auto-scan 08:09 ET, cloud)
+
+Run **2 of 4** today (08:00/09:00/10:00/11:00 ET cadence; this one fired 08:08 ET).
+Scanned **69** tickers via `gappers-alpaca.sh watchlist` at `GAP_THRESHOLD=5.0`,
+feed `delayed_sip`. Research tool: **Apify** (`apify/rag-web-browser` via
+`send-server-actor-request`, plus `apify--web-search` / `apify--web-fetch`).
+No Perplexity, no Yahoo. Account **flat: $100,000 equity, 0 positions, 0 open
+orders, 0 of 6 slots, 0 of 3 weekly trades.**
+
+**2 hits** (down from 3 at 07:09). **Deep-dive cap of 5 was NOT binding** — both
+names got the full deep dive; there are no quick-scan-only ranks 6-10 this run.
+**NBIS dropped off legitimately**, not by error: it faded from its earlier gap to
+**+4.60%** ($110.91 vs $106.04) by 08:01 ET, under the 5.0% floor.
+
+### Three data-quality corrections this run
+
+1. **`scripts/size.mjs` is defective — its ATR and price are ~8 sessions stale.**
+   It requests a ~40-calendar-day window (28 trading bars) with `limit=20`, and
+   Alpaca returns bars **ascending**, so the response is truncated to the
+   **oldest** 20 bars and the last bar is **Nov 6**. Observed live: it reports
+   PEPG at **$2.47** (the Nov 6 close) against a real $3.88, and BLSH at
+   **$21.32** (Nov 6) against $19.27. The CLAUDE.md hard rule "size new positions
+   by ATR(14) — `scripts/size.mjs SYMBOL`" points straight at this. **Every ATR,
+   sizing and R:R figure below was recomputed from consolidated daily bars, not
+   from `size.mjs`.** Not fixed here (research-only run) — flagged for the operator.
+2. **Prior volume ratios were apples-to-oranges.** `alpaca.sh bars` hardcodes
+   `feed=iex` (IEX-only, a small slice of the tape) while snapshot volume is
+   consolidated. The 07:09 run read PEPG's 5.6M session volume against an
+   **IEX** 20-day average of 251k and called it ~22x churn; against the true
+   consolidated 20-day average of **8.17M** it is **0.7x** — volume is
+   **cooling, not churning**. Corrected below.
+3. **The ≥50k premarket-volume gate IS applicable** — prior runs recorded it as
+   impossible. The snapshot has no premarket-volume field, but **1Min bars on the
+   default consolidated feed from 09:00Z do**, and summing them works.
+   Mechanics also pinned down: the bars endpoint **rejects `feed=delayed_sip`**
+   ("invalid feed") and **403s when `end` is today**; omit `feed` with
+   `end <= yesterday` for history. Also, the 07:09 200-SMA distances look
+   **transposed** (logged BLSH -32.8% / PEPG +42.1%); recomputed from 285
+   consolidated bars they are **BLSH -38.9% / PEPG +32.8%**.
+
+**Both names FAIL the ≥50k premarket-volume gate** as of 07:54 ET — BLSH
+**49,695**, PEPG **32,487**. Reported rather than dropped because the window is
+partial (premarket runs to 09:30 and BLSH sits 0.6% under the line), but the
+gate result is stated, not skipped.
+
+### Gappers (auto-scan 08:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BLSH | 20.95 | +8.72 | 49,695 pm / 2.49M prior (1.6x avg) | Q3 beat (adj rev $84.4M vs $76.5M, adj EBITDA $35.6M) + board-authorized **$300M buyback** (~10% of cap); digital-asset sales fell to $32.1B from $41.6B |
+| 2 | PEPG | 4.17 | +7.47 | 32,487 pm / 5.62M prior (0.7x avg) | **No release today** — post-offering mean reversion after the Nov 10 Phase 2 double and the Nov 11 $125M raise priced at $5.00 |
+
+#### Deep dive: BLSH $20.95 +8.72%
+- Catalyst: Q3 2026 landed 6:45 AM ET, call 8:30 AM. **Adjusted revenue $84.4M** (from $76.5M, vs $80.21M consensus) and **adjusted EBITDA $35.6M** (from $28.6M), while **digital-asset sales fell to $32.1B from $41.6B**. Board authorized **up to $300M of repurchases** against a ~$2.9B cap. Headline **net income $576.3M / diluted EPS $3.57** (vs $0.10) is **not operating earnings** — on $84.4M of adjusted revenue it is dominated by non-operating digital-asset fair-value marks. FY26 guidance $225-235M **subscription/services/other** revenue, $220-225M adj opex, $60-65M finance expense. **Equiniti ($4.2B) still guided to close January 2027.** Nov 17 post-close, the Issuer Token Coalition added DRW, Flow Traders, SoFi and Superstate to reach 12 firms — participation explicitly **non-binding**.
+- Why: Revenue and EBITDA grew while platform volumes shrank — **take-rate expansion** (average spread 2.43bps in Oct vs 2.14 in Sep), not demand growth. The real lever is the buyback: ~10% of market cap authorized on a stock at its 20-day low after a crypto drawdown puts a standing bid under a de-rated float and squeezes shorts. A buyback-plus-beat bounce off a washed-out base, not a growth re-rating. **A guidance line circulating as a 35% miss vs $356.8M consensus is a basis mismatch** — the $225-235M covers subscription/services/other revenue only, not total revenue. Checked against the primary release rather than repeated.
+- Impact: Mixed; the tape is the problem. The buyback is a durable, dated change in share count and the 8:30 call can extend or kill the move, so it is more than a headline spike. But structure is broken: **-21.1% vs 20-SMA, -36.6% vs 50-SMA, -38.9% vs 200-SMA, RSI14 29.8**. Prior-session volume **2.49M = 1.6x** the 1.51M consolidated 20-day average — real participation, not a blow-off. **Premarket is thin and unstable: 49,695 shares through 07:54 ET inside a 19.40-21.75 range — a 12% swing on sub-1,000-share minute bars, so the quoted gap is fragile.** Sector read-through is the live risk: the driver is crypto beta and **bitcoin has fallen six consecutive weeks**, so the parent tape is still declining while this name gaps up on company news.
+- Horizon: **SHORT_TERM** — buyback and Equiniti are structural, but this is a bounce off a 20-day low below all three major SMAs with crypto beta still falling. One honest ambiguity: as a regulated exchange operator acquiring a transfer agent, BLSH is arguably **Financials**, a late-cycle favored sector, a better fit than the 07:09 run's blanket "appears nowhere in the favored set" — but it *trades* like crypto, not financials.
+- Opportunity cost: Nothing to displace, so the cost is one of three weekly slots plus the attention of today's two remaining scans. **The only one of the two that clears the mechanical gate:** ATR14 **$1.935 (9.24%)**, so a 10% stop is **1.08 ATR** (just outside an average day, survivable) and a +20% target at **$25.14** sits inside the 20-day high of $29.87 — 2:1 is reachable at a permitted stop. ATR sizing **516 sh ≈ $10,810, 10.8% of equity**, inside the 20% cap. **It fails on confluence, not arithmetic:** only RSI (29.8) argues for it while the **200-SMA long-bias filter actively FAILS at -38.9%** — the bottom-fishing the rulebook forbids — and it misses the ≥50k premarket gate at 49,695. **Research only, no order.**
+
+#### Deep dive: PEPG $4.17 +7.47%
+- Catalyst: **No PepGen release dated Nov 17 or 18** — the most recent is the Nov 11 offering pricing. The sequence began **Nov 10**: Phase 2 FREEDOM2-DM1 10 mg/kg showed **46.5% mean splicing correction at Week 13 vs 6.8% placebo**, vHOT improving 3.9s (~52.7%) vs 0.2s, no serious AEs or discontinuations — the stock roughly doubled. Management monetized it the same afternoon: **$125M priced Nov 11 at $5.00 for 25,000,000 shares**, closed Nov 13, with a live 30-day option on 3.75M more. Q3 net loss **$19.391M**, cash **$104.8M** at Sept 30, runway **into 2028** post-raise. **Two facts the 07:09 run missed:** a **US partial clinical hold REMAINS** in force and the planned 2H-2027 end-of-Phase-2 meeting is contingent on its removal; and the next readout is **not** H1 2027 — **OLE interim 5 mg/kg plus 10 mg/kg safety are guided to January 2027**, with 12.5 mg/kg in H1 2027.
+- Why: **Offering overhang, not news.** Placing 25M shares at $5.00 handed the market a reference price, the stock broke under it and slid to $3.86 by Nov 17, ~23% below the deal. Today's +7% is a dilution-flush snapback by traders treating sub-$4 as a discount to what institutions just paid — no new information, and the **3.75M-share underwriter option stays live as fresh supply**.
+- Impact: Reads as a one-day bounce likely to mean-revert, **but the volume evidence is the opposite of what the 07:09 run reported**: prior-session **5.62M = 0.7x** the 8.17M consolidated 20-day average — participation is **cooling** as post-deal rotation clears, not churning at 22x. Premarket thin at **32,487** shares through 07:54 ET, in a tight 4.10-4.21 band. The chart is an unresolved spike: 20-day range **$2.22-$6.45** on a $4.17 price. Decisively for a swing, the nearest hard catalyst is **January 2027** — weeks out — and the **standing US partial clinical hold** is an unresolved regulatory overhang. Read-through nil: single-asset DM1 risk, no sector complex moving with it.
+- Horizon: **SHORT_TERM** — the Phase 2 data is structural but already priced then diluted, the next readout is January 2027 at the earliest, and a partial clinical hold still gates the regulatory path; speculative clinical-stage biotech is absent from the late-cycle favored set (Energy, Materials, Financials).
+- Opportunity cost: Nothing to displace, so the cost is one weekly slot. PEPG is the **only one of the two that PASSES the 200-SMA filter (+32.8%)**, and it is above its 20- and 50-SMA too — the cleaner trend. **It fails on R:R, badly:** ATR14 **$0.5428 = 13.02%**, so a 10% stop is just **0.77 ATR**, inside a single average day — noise would take it out before the thesis resolved. Worse, **the 2:1 target at +20% lands on $5.00, exactly the offering price where 25M shares were placed** — the target sits on the heaviest overhead supply in the book. Clearing 2:1 from a stop outside 1 ATR needs ~14% stop / 28% target, and **14% breaches the 7-10% stop band**. Confluence also fails: RSI 58.5 is neutral and **no fresh catalyst is documented today**, leaving only the 200-SMA — one signal short of two. **The two names are mirror images — BLSH clears R:R and fails the 200-SMA, PEPG clears the 200-SMA and fails R:R — and neither is takeable.** ATR sizing **1,842 sh ≈ $7,681, 7.7% of equity**. **Research only, no order.**
+
+**STEP 8 compliance:** no orders placed, none proposed for immediate execution. Execution remains gated to market-open / `/trade`, which must re-quote off the 15-min-delayed feed before acting.
