@@ -3042,3 +3042,10 @@ operator review pending. **TLN's dated entry window opens this afternoon:**
 limit $349-356, 48 shares, 10% trailing GTC stop, +20% target, not before
 14:00 ET, do not chase — handoff to a later intraday run (midday or an
 ad-hoc check after the FOMC minutes) for execution once the window opens.
+
+### Nov 18, EOD Snapshot (Day 94, Wednesday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-17`). Market-open logged HOLD across TLN, CEG, and gappers BLSH/PEPG; TLN cleared the mechanical stop/R:R/trend rules but its dated entry window (limit $349-356, not before 14:00 ET post-FOMC) was handed off to a later intraday run — no record in TRADE-LOG shows that handoff was executed today. Weekly trade count: 0/3 (week of Nov 16). 94th trading day since launch (Jul 9) with zero entries — 157th+ straight no-trade session, confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow: re-check TLN against the dated $349-356 limit plan if still valid; otherwise continue pre-market re-scan for a candidate clearing the full gate.
