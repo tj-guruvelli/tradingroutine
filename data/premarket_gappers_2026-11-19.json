@@ -1,0 +1,108 @@
+{
+  "scanned_at": "2026-11-19T12:09:00Z",
+  "scanned_at_et": "2026-11-19 07:09 ET",
+  "run": "gappers-cloud, run 1 of 4 (08:00 ET cron slot, EST = UTC-5)",
+  "deep_dive_cap": 5,
+  "universe": "memory/WATCHLIST.md (~60 tickers) via scripts/gappers-alpaca.sh watchlist, GAP_THRESHOLD=5.0, feed=delayed_sip (15-min delayed)",
+  "raw_hits": 9,
+  "qualified": 8,
+  "excluded": [
+    {"symbol": "WLDS", "gap_pct": 12.28, "price": 1.28, "volume": 38666,
+     "reason": "fails $3.00 price floor AND <50,000 volume"}
+  ],
+  "macro_context": {
+    "driver": "NVDA Q3 FY2027 (reported Nov 18): revenue $115.84B +103% y/y, EPS $2.68 vs $2.48 consensus, gross margin 74.9%. Stock faded the beat and closed -2.9% Nov 18; S&P 500 fell for a 5th straight session. Nov 19 premarket is a broad reversal/bounce.",
+    "tape_0714_et": {"SPY": 1.36, "QQQ": 2.29, "NVDA": 2.21, "AMD": 3.51, "AVGO": 3.19, "PLTR": 2.99, "SMCI": 4.76, "IONQ": 5.15, "RGTI": 4.92, "LUNR": 4.74, "OKLO": 4.27, "SMR": 4.09},
+    "read": "Every one of today's 8 qualifiers is a high-beta derivative of a market-wide risk-on bounce. Beta dominates stock-specific news. This is ONE macro setup, not 8 independent ones.",
+    "precedent_warning": "On Nov 18 a +3.62% NVDA premarket gap on a genuine earnings beat round-tripped entirely within 45 minutes of the open, and the whole neocloud complex round-tripped with it (logged in this file's 10:09 ET section). A premarket risk-on tape has, once this week, predicted nothing about the session."
+  },
+  "gappers": [
+    {
+      "rank": 1, "symbol": "ASTS", "price": 27.72, "gap_pct": 8.75,
+      "prev_close": 25.49, "premarket_volume": 23028580,
+      "catalyst": "No ASTS-specific news dated today; move is beta to the broad AI/space risk-on bounce. Standing context is Q3 2026 (Nov 9): 12 of ~45 planned satellites in orbit, commercial service still not activated.",
+      "headlines": [],
+      "catalyst_detail": "No company-specific catalyst dated Nov 19 could be sourced. The standing fundamental picture is Q3 2026 (reported Nov 9-10): 12 satellites in orbit against ~45 planned, with commercial service activation still pending — only intermittent service expected by year-end 2026 and beta trials not until early 2027. BlueBirds 14 through 25 are scheduled to ship or launch between late 2026 and early 2027, including dual-use missions rated under US government programs. The company holds ~$3.8B of liquidity and had maintained $150-200M 2026 revenue guidance. The stock sits roughly 79% below its 52-week high of $133.86.",
+      "why": "Pure beta. ASTS is one of the highest-beta names in the watchlist's space complex, and a market-wide bounce (QQQ +2.29%) after five down days lifts the most-shorted, furthest-drawdown names hardest. There is no new ASTS information; the mechanism is short covering and dip-buying into an oversold high-beta name, not re-rating on news.",
+      "impact": "Reads as a one-day headline-free spike likely to mean-revert. 23.0M shares premarket is real participation, but the sector read-through is unambiguous and confirms the move is not idiosyncratic: LUNR +4.74%, RKLB +5.18%, SATL +6.04% are all moving together with no company news between them. The launch timeline has slipped toward 2027, so nothing fundamental improved; the +8.75% is the market repricing risk appetite, not ASTS.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The catalyst is market-wide rather than structural, and the one durable company milestone — commercial service activation — slipped to year-end 2026/early 2027, so there is no thesis trigger today to carry past the session.",
+      "opportunity_cost": "The account is flat ($100,000 equity, 0/6 positions, 0% deployed), so no existing holding would be displaced — the real cost is one of three weekly trade slots (0/3 used, week of Nov 16) spent on the list's weakest-evidence name. Within today's own list it is displaced by BE, which has the same beta tailwind plus a genuine company catalyst. On R:R: buying the top of an +8.75% gap puts a compliant stop (3% minimum distance, 7-10% band) near $25.0-26.9, i.e. at or below the prior close, so the 2:1 minimum needs roughly +17-20% from $27.72 (~$32.5-33.3) with no company catalyst to produce it. It also fails the Confluence rule outright — no documented catalyst means the entry checklist cannot be satisfied regardless of indicators. Research only; no size proposed, no order placed."
+    },
+    {
+      "rank": 2, "symbol": "BE", "price": 183.09, "gap_pct": 7.08,
+      "prev_close": 170.98, "premarket_volume": 11524346,
+      "catalyst": "Beta bounce on top of a genuine structural story: record Q3 2026 revenue $1,235.8M (+138.1% y/y) with raised FY26 guidance to ~$4.4B (Oct 22), and a Nov 12 NTT DATA agreement to deploy 900 MW of Bloom fuel cells across global data centers.",
+      "headlines": [],
+      "catalyst_detail": "Bloom reported record Q3 2026 revenue of $1,235.8M, up 138.1% year over year, and raised full-year 2026 revenue guidance to approximately $4.4B (company release, Oct 22). On Nov 12, NTT DATA disclosed plans to deploy 900 MW of Bloom fuel-cell power across global data center projects with initial shipments starting in 2027 — Bloom shares gained ~13% on that news. Bloom's solid-oxide fuel cells supply on-site power to data centers, bypassing grid interconnection constraints, which is the structural bottleneck in AI capacity buildout. The 52-week range is $75.70-$351.28, so the stock is roughly 48% off its high despite the record quarter.",
+      "why": "Two mechanisms stack. The market-wide risk-on bounce supplies the beta, and underneath it sits the strongest company-specific thesis on today's list: a raised guidance reset plus a 900 MW contracted deployment ties Bloom directly to AI data-center power demand. An NVDA blowout quarter is a direct read-through to data-center power suppliers, so Bloom is one of the few names here where the macro catalyst and the company thesis point the same way.",
+      "impact": "The most sustainable-looking move of the five. 11.5M shares premarket is solid for a $50B market cap. Sector read-through is corroborating rather than merely correlated: the data-center power complex is moving together (SMR +4.09%, OKLO +4.27%, BW +5.69% at rank 6), and that group has a real demand mechanism behind it rather than pure beta. The caveat is that the stock already ran on the Oct 22 print and the Nov 12 NTT news, so some of this is a third bite at the same apple.",
+      "horizon": "LONG_TERM",
+      "horizon_reasoning": "The guidance reset and the 900 MW NTT DATA deployment are structural catalysts, not headlines, and the AI-power theme aligns with the Technology/Industrials leadership in TRADING-STRATEGY.md's early-cycle sector-rotation row — worth a multi-day/week swing hold if it also clears the Confluence rule on a later /trade check.",
+      "opportunity_cost": "Nothing to displace — the book is flat — so the cost is one of three weekly slots, and on this list BE is the name worth spending it on: it displaces ASTS, NBIS, CRWV and SATL, all of which are beta-only or carry a negative fundamental reset. Sizing is the real constraint: the 20%-of-equity cap allows ~$20,000, i.e. ~109 shares at $183.09, and ATR sizing via scripts/size.mjs should be checked before any entry. R:R can clear 2:1 at a sane stop: a 10% stop sits at ~$164.78 (18.31 risk), needing ~$219.71 for 2:1 — well inside the $351.28 52-week high, so the target is not a stretch. Research only; no size proposed, no order placed."
+    },
+    {
+      "rank": 3, "symbol": "NBIS", "price": 114.26, "gap_pct": 6.82,
+      "prev_close": 106.96, "premarket_volume": 26635413,
+      "catalyst": "Oversold bounce in the neocloud complex. Q3 2026 (Nov 12) grew revenue ~571% y/y but the stock fell ~25% in two days on soft guidance — 2026 revenue now expected at the LOW end of the $3.0-3.4B range; Nov 17 saw +10% after Nvidia disclosed $32B of neocloud commitments.",
+      "headlines": [],
+      "catalyst_detail": "Nebius reported Q3 2026 on Nov 12 with revenue up ~571% year over year, but the stock fell roughly 25% over the following two sessions on weak core revenue and soft guidance. The company now expects 2026 revenue at the LOW END of its $3.0-3.4B range with an adjusted EBITDA margin of ~40%, and it will stop guiding to ARR after a February update (expected to exceed $7B for that month). 2027 capex is guided at $40-45B, of which management expects 75-85% to be funded through customer prepayments and asset-backed financing rather than equity. On Nov 17 the stock rose over 10% after Nvidia reaffirmed selective support for neoclouds and disclosed $32B in neocloud commitments.",
+      "why": "A beta bounce off an oversold post-earnings flush, amplified by the Nvidia neocloud-commitment read-through from Nov 17. The mechanism is dip-buying and short covering in a name down hard from its highs while the index rallies — not a repair of the guidance problem. The $40-45B 2027 capex funded largely by prepayments and asset-backed debt is the live structural question, and nothing today addressed it.",
+      "impact": "Looks like a bounce likely to mean-revert rather than a sustainable re-rating. 26.6M shares is heavy, but the direct sector read-through is the warning: CRWV (rank 4) is moving +6.56% on the identical driver, and both round-tripped their NVDA-beat gaps within 45 minutes of the open on Nov 18 — NBIS went from +10.27% premarket to +0.10% by 10:16 ET in yesterday's logged run. Same setup, same complex, one session earlier, and it failed.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The company's own most recent structural news was negative — a guidance cut to the low end plus the withdrawal of ARR guidance — so today is an oversold beta bounce rather than a durable thesis trigger, and the Nov 18 precedent in this complex argues explicitly against carrying it.",
+      "opportunity_cost": "Directly competes with CRWV at rank 4: same neocloud trade, same driver, and scripts/corr-gate.mjs would very likely block the second entry at the >0.75 correlation threshold, so taking NBIS effectively displaces CRWV rather than sitting alongside it. Both are in turn displaced by BE, which carries a positive rather than negative fundamental reset. On R:R: a 10% stop at ~$102.83 needs ~$137.12 for 2:1 (+20%), which would require the market to re-rate a company that just guided to the low end — achievable on beta, not on evidence. Research only; no size proposed, no order placed."
+    },
+    {
+      "rank": 4, "symbol": "CRWV", "price": 50.97, "gap_pct": 6.56,
+      "prev_close": 47.83, "premarket_volume": 61310368,
+      "catalyst": "Bounce off a 52-week low in the most debt-levered neocloud. Q3 2026 (Nov 10) revenue +168% to $3.66B with backlog up to $132.5B, but net loss $709M after $846M of interest expense and debt at $46.9B; Nov 17 +9% after-hours on Nvidia's neocloud support.",
+      "headlines": [],
+      "catalyst_detail": "CoreWeave's Q3 2026 (Nov 10) showed revenue up 168% to $3.66B and backlog expanding to $132.5B from $104.2B in Q2, with 1.7 GW active and 4.6 GW contracted power — but a net loss of $709M after $846M of interest expense, and total debt rising to $46.9B from $35.6B in Q2. The stock lost roughly 32% in October alone as neocloud debt concerns came into focus, and closed near a new 52-week low this week with Bernstein cutting its target to $51. It rose ~9% after-hours on Nov 17 when Nvidia affirmed continued disciplined support for neocloud infrastructure.",
+      "why": "Highest-beta leveraged expression of the AI-compute trade bouncing off a 52-week low on a market-wide risk-on day. The mechanism is short covering plus mean reversion from an oversold extreme, with the Nvidia neocloud-support headline as the proximate excuse. The backlog is genuinely structural, but the $46.9B debt load and $846M of quarterly interest are what the market has been repricing, and a one-day bounce does not resolve either.",
+      "impact": "Most liquid and most volume-confirmed move on the list — 61.3M shares premarket, the highest of any qualifier — but that cuts both ways in a name with heavy short interest. The sector read-through is NBIS at rank 3 on the identical driver, which marks this as complex-wide rather than idiosyncratic. The decisive evidence against durability is yesterday: this exact name, on this exact driver, gapped up ~4% premarket, opened $51.07, and sold to $46.33 within 40 minutes — logged in this file's Nov 18 10:09 ET section. Today's $50.97 is below that failed $51.07 open.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The $132.5B backlog is structural but the live risk — $46.9B debt and $846M quarterly interest — is unresolved, and the stock failed at almost exactly this price one session ago, so there is no basis for carrying it past the session.",
+      "opportunity_cost": "Displaces NBIS (same trade, correlation gate would likely block holding both) and is itself displaced by BE on quality of catalyst. Against today's list it has the best mechanical setup of the four beta names: at $50.97 a 10% stop sits at ~$45.87, just under the $46.33 session low that held yesterday and near the $40.58 52-week low, so the stop has real structure beneath it, and 2:1 needs ~$61.17. But that target sits above the failed $51.07 open and would require reclaiming the entire broken level, so the trade only pays 2:1 if the gap that failed yesterday holds today. Spending a weekly slot on the second attempt at a setup that failed 24 hours earlier is the actual cost. Research only; no size proposed, no order placed."
+    },
+    {
+      "rank": 5, "symbol": "SATL", "price": 3.07, "gap_pct": 6.04,
+      "prev_close": 2.895, "premarket_volume": 3806834,
+      "catalyst": "Beta move in the space complex on top of a record Q3 2026 (Nov 10): revenue $16.0M, up 342% from $3.6M, with operating loss narrowed to $2.3M from $8.1M — shares jumped ~14.7% on the print.",
+      "headlines": [],
+      "catalyst_detail": "Satellogic reported record Q3 2026 results on Nov 10: revenue of $16.0M, up 342% from $3.6M a year earlier, split Space Systems $9.5M and Data & Analytics $6.6M, with operating loss narrowing to $2.3M from $8.1M and a second consecutive quarter of positive adjusted EBITDA. Shares jumped ~14.7% on the print to a near one-month high. Market capitalization is roughly $852M, and the stock has since traded back into the low $3s. No SATL-specific news dated Nov 19 could be sourced.",
+      "why": "Beta to the same space-complex bounce lifting ASTS (+8.75%), RKLB (+5.18%) and LUNR (+4.74%), with the Nov 10 earnings beat as residual support rather than today's trigger. The mechanism is risk appetite returning to micro-cap space names after five down sessions, not new information about Satellogic.",
+      "impact": "Reads as a thin, likely-to-mean-revert spike — the lowest-quality move on the list. 3.8M shares on an ~$852M market cap is the weakest participation of any qualifier, and at $3.07 the name only barely clears the routine's $3.00 price floor. The whole space complex is moving in lockstep with no company news between the members, which marks it as pure sector beta. The improving fundamentals are real but were already priced on Nov 10.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "No catalyst dated today, the earnings move is nine sessions old and already faded once, and a sub-$4 micro-cap moving with its sector has no durable thesis to hold past the session.",
+      "opportunity_cost": "Displaced by every name above it on this list — it is the last qualifier and the weakest on both liquidity and catalyst. The binding problem is that it probably cannot clear 2:1 at a sane stop at all: on a $3.07 stock, a 10% stop is $0.31 wide, which is inside normal daily range for a sub-$4 micro-cap, so the position is likely to be stopped out on noise rather than on thesis failure, while the 3%-minimum-distance rule leaves no room to tighten. Tightening the stop to control risk makes the stop-out near-certain; widening it to survive noise breaks the 10% rule. Spending a weekly slot here would be the clearest misallocation on the list. Research only; no size proposed, no order placed."
+    },
+    {
+      "rank": 6, "symbol": "BW", "price": 4.5657, "gap_pct": 5.69,
+      "prev_close": 4.32, "premarket_volume": 3996160,
+      "catalyst": "No catalyst dated today could be sourced; move is beta to the data-center power complex (SMR +4.09%, OKLO +4.27%, BE +7.08%). Standing overhangs: a shareholder class-action and a Northland price-target cut to $15 from $23 (Outperform retained).",
+      "headlines": []
+    },
+    {
+      "rank": 7, "symbol": "QBTS", "price": 8.09, "gap_pct": 5.2,
+      "prev_close": 7.69, "premarket_volume": 15005763,
+      "catalyst": "No catalyst dated today; pure quantum-complex beta, moving in lockstep with IONQ (+5.15%) and RGTI (+4.92%) on the market-wide risk-on bounce.",
+      "headlines": []
+    },
+    {
+      "rank": 8, "symbol": "RKLB", "price": 55.82, "gap_pct": 5.18,
+      "prev_close": 53.07, "premarket_volume": 14723477,
+      "catalyst": "No catalyst dated today; space-complex beta with investors rebuilding positions after a ~65% drawdown from the $151 high. Recent context: Neutron rocket delay flagged as a catalyst for new lows (late Oct), against a $28.9M NASA award and a cited $190M defense deal.",
+      "headlines": []
+    }
+  ],
+  "notes": [
+    "Only 8 qualifiers existed, so there are no ranks 9-10. Deep-dive cap is 5 per routine spec; ranks 6-8 received quick-scan only and were NOT silently dropped.",
+    "Research tool: Apify apify--web-search + apify--web-fetch. apify--rag-web-browser is absent in this environment again (confirmed via ToolSearch) — same as the Nov 18 runs.",
+    "Yahoo block held at the discard stage, not the query stage: the suffix was appended to every query, yet Google still returned finance.yahoo.com / sg / nz / au / de subdomains on 4 of 11 queries (ASTS, SATL x2, BW, QBTS). All were discarded and every fact was re-sourced from non-Yahoo origins (bloomenergy.com, assets.nebius.com, sec-api.io, cnbc.com, uk.investing.com, ca.investing.com, stocktitan.net, finviz, tickertrends.io). No Yahoo-sourced number appears in this file.",
+    "An Instagram post claimed 'Nvidia -8.1% premarket, board weighs CEO's future' for today. Contradicted by live Alpaca data (NVDA +2.21% at 07:14 ET) and discarded as unreliable. Flagged here only because it would have inverted the whole read if taken at face value.",
+    "Gap percentages drift between reads: ASTS printed 8.59% on a first pass and 8.75% on the saved run minutes later. The saved run is what is logged; nothing is averaged.",
+    "Feed is delayed_sip (15-minute delay). market-open and /trade MUST re-quote off the live feed before acting on anything here.",
+    "STEP 8 honored: no orders placed, none proposed. Research only."
+  ]
+}
