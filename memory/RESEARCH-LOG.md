@@ -21873,3 +21873,105 @@ a fresh advance.
 `/trade`, which run the full safety-check gate. Reminder for whoever runs it:
 `size.mjs` is still returning stale prices (logged 08:09) — **do not size off
 it until patched**; the ATR figures above were computed independently this run.
+
+## 2026-11-19 — Gappers (auto-scan 10:21 ET, cloud)
+
+Scan: `GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist` — filters |gap| >= 5.0%,
+price >= $3.00, volume >= 50,000. **9 hits** (cap 10). Fourth scheduled firing today
+(08:00/09:00/10:00/11:00 ET cadence); this run is post-open, so figures are an
+intraday snapshot rather than true premarket. **Deep dive capped at the top 5 by
+|gap%| — ranks 6-9 (KLIC, QCOM, RGTI, QBTS) got quick-scan only and are not
+silently dropped.**
+
+**Macro frame.** Broad risk-on reversal after four consecutive down sessions. Two
+anchors: Nvidia's fiscal Q3 (revenue >$115B, roughly doubled y/y; net profit
+$65.3B), which the tape pointedly refused to reward on Nov 18 — WSJ reported the
+blockbuster print "failed to give tech stocks much of a lift" and stocks closed
+lower for a fourth straight session — and the **Anthropic IPO priced above range
+at $83/share, debuting 09:30 ET today**. **7 of 9 hits have no company-specific
+catalyst.** This is substantially one macro trade expressed nine ways.
+*Conflict disclosure, carried forward from earlier runs: the Anthropic IPO is a
+primary driver of today's AI-infrastructure gaps, and Anthropic develops the model
+running this bot.*
+
+**Rules finding (the actionable one).** Every one of the five deep-dive names fails
+the 10% trailing-stop rule on volatility. ATR(14) as a share of price: UMAC 13.6%,
+CRWV 12.6%, PEPG 13.4%, BE 11.9%, ASTS 14.9% — so the mandated 10% trail sits at
+**0.67-0.84 ATR, inside one average daily range**, and dies to routine noise. The
+only two names on the board whose volatility actually fits the 10% stop are
+**KLIC (6.3%) and QCOM (5.4%)** — both ranked 6-7, both quick-scan only.
+**The gap ranking systematically selects against the stop rule**: sorting by |gap%|
+promotes exactly the names the rulebook cannot hold. This is the same structural
+conflict flagged for 157+ sessions, now with a clean mechanism.
+
+### Gappers (auto-scan 10:21 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | $10.49 | +9.16% | 791,397 | **Oppenheimer initiated at Outperform, $30 target (Nov 19)** — ~3x spot, only fresh sell-side initiation on the list. Offsets: Needham cut to $22 (Nov 6), Piper to $27 (Nov 9), Nov 13 resale registration for 1.93M shares. |
+| 2 | CRWV | $51.74 | +8.17% | 13,356,523 | No company news. AI-cloud sentiment repair on Nvidia's Q3 + Anthropic above-range pricing. Last discrete event: Nov 10 Q3, revenue $3.66B +168% y/y, ~$4.2B convertible raise. |
+| 3 | PEPG | $4.13 | +7.83% | 569,937 | No fresh news; post-offering churn around the Nov 10 Phase 2 data. Only item today: HC Wainwright trimmed FY26 loss est. to -$1.09 from -$1.03. |
+| 4 | BE | $183.35 | +7.23% | 3,391,583 | Sector bounce on the Anthropic IPO after a ~34% drawdown. Real but prior backlog: NTT DATA **900MW** (Nov 5), **702MW** Google Wyoming plant, Barclays upgrade to Overweight. |
+| 5 | ASTS | $27.26 | +6.94% | 3,774,777 | No company news — high-beta satellite bounce. Last event Nov 9 Q3, which came with a **PT cut to $43 from $78**; consensus across 10 analysts is **Reduce**. |
+| 6 | KLIC | $62.77 | **-6.30%** | 156,538 | **Only decliner. Beat-and-fade on Q4 FY26** (8-K filed Nov 18): revenue $410.3M vs ~$375M guided, non-GAAP EPS $1.52 vs ~$1.42. But **Q4 adjusted FCF $14.6M vs $73.2M net income** — quality-of-earnings gap. Q1 FY27 guide ~$410M. |
+| 7 | QCOM | $169.62 | +6.14% | 1,646,372 | Reversal bounce, not good news: closed Nov 18 **-4.12% at $159.81** after an earlier ~9% drop on a smartphone-chip sales miss. **Freedom Broker cut to Hold**, PT $185. No Nov 19 announcement found. |
+| 8 | RGTI | $8.83 | +6.00% | 2,683,385 | No company or quantum-sector news dated Nov 19. Risk-on beta bounce, moving as a pair with QBTS. |
+| 9 | QBTS | $8.09 | +5.20% | 2,346,936 | No company or sector news dated Nov 19. Same quantum beta bounce as RGTI. |
+
+#### Deep dive: UMAC $10.49 +9.16%
+- Catalyst: Oppenheimer opened coverage this morning at **Outperform with a $30 target**, roughly 3x spot, citing UMAC's role as a parts supplier to defense primes and growth tied to **US Army drone procurement**. It lands on a badly de-rated stock: $10.49 against a 52-week range of **$7.25-$34.93**, and the two prior analyst actions both went the other way (Needham $40 to $22 on Nov 6, Piper Sandler to $27 on Nov 9). Fundamentals are a genuine split — Q3 revenue **$13.9M, +551%** from $2.1M y/y, but a **$25.0M net loss** (-$0.50/sh) that management attributed mostly to non-cash items. Largest disclosed order remains the **$16.9M Powerus PO** from October.
+- Why: A fresh initiation at ~3x spot on a name 70% below its 52-week high is a **sentiment-repair trigger, not new business information**. Nothing about revenue or backlog changed overnight; a sell-side desk put a 3x target on a thin float, which pulls in momentum buyers and squeezes shorts, amplified by the broad high-beta bid.
+- Impact: Volume confirms real repositioning — **791k by 10:09 ET vs a 20-day IEX average of 107k, ~7.4x**, among the heaviest on the list. But the driver is **an opinion, not a contract**, and the Needham/Piper cuts show how fast sentiment on this name reverses. The **Nov 13 resale registration for 1.93M holder shares is live overhead supply**. Sector read-through is limited: drone/defense is moving with the general bid, not a shared catalyst.
+- Horizon: **SHORT_TERM** — an initiation re-rates opinion with no operational change, and a $25.0M quarterly loss plus live resale supply gives the bounce nothing structural to hold.
+- Opportunity cost: **Cannot be sized to the rulebook.** ATR(14) = $1.30 (13.6% of price), so the 10% trail at $9.44 sits at **0.73 ATR** — inside one average day's range. A sane 1-ATR stop ($9.19) is 12.4% away and breaks the rule. 2:1 off the 10% stop is $12.59, reachable against the $30 target, so **reward clears and stop placement disqualifies it**. With zero open positions nothing existing is displaced; the real cost is **one of three weekly slots (0/3 used, week of Nov 16) spent on the weakest class of catalyst here — an opinion** — while KLIC and QCOM, the only two names today whose volatility fits the 10% stop, sit unexamined at ranks 6-7.
+
+#### Deep dive: CRWV $51.74 +8.17%
+- Catalyst: **No CoreWeave-specific announcement today.** The move is the AI-infrastructure complex repairing after four down sessions, on two inputs: **Nvidia's fiscal Q3** (revenue >$115B, roughly doubled; net profit $65.3B, beat) and the **Anthropic IPO pricing above range at $83/share** with a 09:30 ET debut today. The tape refused to reward Nvidia on Nov 18, so today is the delayed reaction. CoreWeave's own last discrete catalyst was its **Nov 10 Q3: revenue $3.66B, +168% y/y**, alongside an upsized **~$4.2B convertible note raise**.
+- Why: CRWV is the most liquid pure-play proxy on AI compute demand, so it trades as a **leveraged expression of AI capex sentiment**. Nvidia's print is the upstream demand signal; Anthropic's above-range pricing independently validates the scale of the buildout CoreWeave rents capacity for. Mechanism is short-covering once two confirming datapoints removed the demand-doubt behind the four-day selloff.
+- Impact: **Strongest participation on the list — 13.36M by 10:09 ET vs a 1.49M 20-day IEX average, ~9x** — reading as real institutional repositioning rather than a headline spike, and the catalyst is fundamentally anchored. Two offsets: it is **moving on someone else's news**, and the **Anthropic debut is an unpriced event occurring during this session**. Read-through is broad and confirmed (BE, RGTI, QBTS all gapping on the same impulse), which means today's list is largely one trade.
+- Horizon: **LONG_TERM** — 168% y/y growth against contracted AI-compute demand is structural, and Technology sits in the favored early-cycle bucket of the rotation table. Today's gap is sentiment; the hold case rests on the backlog.
+- Opportunity cost: Best-confirmed gap on volume and the cleanest macro logic, **and it still fails the stop rule**. ATR(14) = $6.01 (12.6%), so the 10% trail at $46.57 is **0.80 ATR**; a 1-ATR stop ($45.73) is 11.6% away, outside the rule. 2:1 off the 10% stop is $62.09 and credible. At $51.74 the 20% cap ($20,000) allows 386 shares, so **sizing is not binding**. The honest cost is **factor concentration**: CRWV, BE, RGTI and QBTS are the same risk-on AI-infrastructure bet, so taking CRWV should *rule out* the others under the >0.75 correlation gate rather than stacking four correlated names into a 6-position book. Entering pre-debut also buys the catalyst at peak uncertainty.
+
+#### Deep dive: PEPG $4.13 +7.83%
+- Catalyst: **No new PepGen news today** beyond an estimate revision — HC Wainwright trimmed FY26 loss est. to -$1.09 from -$1.03. The live catalyst is still the **Nov 10 Phase 2 FREEDOM2-DM1** readout in myotonic dystrophy type 1: **46.5% mean splicing correction at 10 mg/kg vs 6.8% placebo**, which nearly doubled the stock premarket. PepGen immediately monetized it with a **$125M offering: 25M shares at $5.00**, plus a 30-day option for 3.75M more, on top of $104.8M existing cash. Two material caveats: the data covers **only six treated patients**, and a **US clinical hold remains in place**. Targets rose after the readout (Wedbush $4 to $10, Guggenheim $7 to $15, BofA to Neutral $6) but the stock round-tripped from ~$5 to a $3.83 close.
+- Why: **Post-offering mean-reversion churn, not a new catalyst.** The $5.00 offering reset the float and handed 25M new shares to buyers whose cost basis is $5.00, so the stock oscillates beneath a fixed, identifiable supply shelf. A 7.8% move on a $4 stock is **less than one average daily range** for this name — the "gap" is largely noise amplified by the risk-on tape.
+- Impact: Reads as a headline-free spike likely to mean-revert, and volume agrees — **570k vs a 251k 20-day IEX average, ~2.3x, the weakest relative participation of the top five by a wide margin**. A six-patient dataset with an unresolved US clinical hold is not a durable thesis, and the offering has already converted the good news into cash and dilution. **No sector read-through** — no peer is moving on this, confirming idiosyncratic drift.
+- Horizon: **SHORT_TERM** — no news today, the readout is nine days stale and already monetized, and the next real information event is clinical rather than scheduled.
+- Opportunity cost: **Third straight session PEPG has screened, and the conclusion has not changed** — yesterday's TRADE-LOG already recorded it FAIL. Two independent gates kill it. (1) **R:R**: 2:1 off a 10% stop targets **$4.96, landing almost exactly on the $5.00 offering price** — the single heaviest block of overhead supply in the stock — so the trade must grind through 25M shares at breakeven cost to reach its target. (2) **Stop placement**: ATR(14) = $0.51 (13.4%), so the 10% trail at $3.72 is **0.75 ATR**. Note this **corrects a stale reading**: `size.mjs` reports PEPG at $2.47, which understates ATR as a share of price; the stale-price defect logged in the 08:09 run is confirmed again. **Carried forward as FAIL, no new information.**
+
+#### Deep dive: BE $183.35 +7.23%
+- Catalyst: Proximate trigger is **sector-wide, not company-specific**: the **Anthropic IPO priced above range at $83/share** and debuts 09:30 ET today, reviving AI-power suppliers after a brutal drawdown. Bloom fell **~34%** from mid-October into Tuesday, including ~17% in the past week and 4% on Nov 17 as a fuel-cell selloff hit **FuelCell (-5%) and Plug (-4%)**, tied to post-midterm concern that policy shifts could slow domestic datacenter development. Bloom's own fundamentals are strong but already public: **NTT DATA agreed Nov 5 to deploy 900MW** of its solid oxide fuel cell systems, Bloom will build the fuel cells for a **702MW plant powering Google's Wyoming datacenter**, and **Barclays upgraded to Overweight** on stronger-than-expected demand. Bear case is cash burn, which the market has consistently punished.
+- Why: The Anthropic pricing is a **direct demand-signal read-through, not a sentiment accident**. Above-range pricing validates the scale of the compute buildout, and the binding physical constraint on that buildout is **grid power** — precisely what Bloom sells, on a deploy-in-months timeline. Mechanism is repair of a policy-driven overreaction: the selloff priced a datacenter slowdown, and a landmark AI IPO pricing above range contradicts that premise.
+- Impact: **Best fundamental anchor of the top five** — unlike UMAC or PEPG, the backlog behind it is contracted and named. Volume supports it: **3.39M vs a 552k 20-day IEX average, ~6x**. Two real offsets: **cash burn is unresolved and is the specific reason the stock has been sold**, and the catalyst is **unpriced**, since Anthropic actually debuts during this session. Read-through is unambiguous and confirmed (CRWV on the identical driver; fuel cells trading as one block all week), which cuts both ways — Bloom is not moving on its own merits today.
+- Horizon: **LONG_TERM** — the 900MW NTT DATA deployment and the 702MW Google Wyoming plant are structural contracted demand, and Technology/Industrials is the favored early-cycle pairing in the rotation table.
+- Opportunity cost: Strongest fundamental case on the board, **still not sizeable under the rules**. ATR(14) = $20.31 (11.9%), so the 10% trail at $165.01 is **0.84 ATR**; a 1-ATR stop ($163.03) is 11.1% away and breaks the rule. 2:1 off the 10% stop is $220.01, plausible against the pre-drawdown range. At $183.35 the 20% cap buys 109 shares, so sizing is not binding. **BE competes directly with CRWV for the same Anthropic/AI-capex exposure and the correlation gate makes them substitutes, not additions.** The clearest cost here is **timing, not selection**: entering ahead of the debut pays for the catalyst at peak uncertainty, and **waiting for the event to price costs nothing on a LONG_TERM thesis**.
+
+#### Deep dive: ASTS $27.26 +6.94%
+- Catalyst: **No AST SpaceMobile news dated today.** Last discrete event was the **Nov 9** business update and Q3 2026 results, which came with a **price-target cut to $43 from $78**; consensus across the 10 covering analysts is **Reduce**. Independent quote data confirms the move is real rather than a data artifact — Stocktwits showed $27.70, +8.67%, against a $25.49 prior close, matching this scan's prev_close exactly. The standing structural thesis is satellite deployment milestones and launch cadence, none of which advanced overnight.
+- Why: **Pure sector beta** in the highest-volatility expression of the satellite-connectivity trade. ASTS is pre-revenue and milestone-driven, so it functions as a leveraged bet on risk appetite, and after four down sessions the reversal lifted it hardest. **No ASTS-specific information in today's move** — the mechanism is positioning, not news.
+- Impact: Likely to mean-revert absent follow-through, though volume is substantial at **3.77M vs a 577k 20-day IEX average, ~6.5x**. The problem is the **direction of the fundamental news flow**: the most recent analyst action was a cut to $43 from $78 and consensus is **Reduce**, so the bounce runs *against* sell-side positioning. A catalyst-free gap in a Reduce-rated pre-revenue name is the textbook one-day spike. Read-through is the satellite group generally; with no shared catalyst, if the risk-on impulse fails intraday this name has nothing of its own to stand on.
+- Horizon: **SHORT_TERM** — no catalyst today, the Nov 9 print is stale and came with a target cut, and the next information event is an undated deployment milestone.
+- Opportunity cost: **Worst stop geometry of the top five.** ATR(14) = $3.79, **14.9% of price — the highest on the list** — so the 10% trail at $24.53 sits at just **0.67 ATR**: two-thirds of one average day's range stops it out. A 1-ATR stop ($23.47) is 13.9% away and plainly breaks the rule. 2:1 off the 10% stop is $32.71, below the $43 cut target and so reachable — again **reward clears, structure fails**. Against today's own list ASTS is **strictly dominated**: no company catalyst (unlike UMAC's initiation), a weaker fundamental anchor than BE's contracted 900MW/702MW backlog, and worse volume confirmation than CRWV's ~9x. **Least defensible use of a weekly slot on the board.**
+
+**No orders placed — research only.** Execution is gated to `market-open` / `/trade`,
+which run the full safety-check gate.
+
+**Data notes.**
+- `size.mjs` still returns **stale prices** (PEPG $2.47 vs live $4.13; UMAC $11.90 vs
+  $10.49; ASTS $32.30 vs $27.26) — defect first logged 08:09, confirmed again. **Do
+  not size off it until patched.** All ATR figures above were computed independently
+  from Alpaca daily bars (Wilder ATR14); their last closes reconcile to the scan's
+  prev_close for all 9 symbols.
+- Volume is Alpaca free-tier **IEX** feed, a fraction of consolidated. Ratios vs the
+  20-day IEX average are internally comparable; absolute levels are not consolidated
+  share counts. Figures are ~39 min into RTH against full-day averages, so the
+  multiples understate the day's eventual participation.
+- **Yahoo block leaked**: two finance.yahoo.com URLs surfaced in the KLIC query
+  despite the `-site:` suffix. Both **discarded**; KLIC figures sourced from the
+  **SEC-filed Q4 FY26 8-K (Exhibit 99.1)** instead. The suffix is necessary but not
+  sufficient — Google does not always honor negative site operators.
+- **Apify RAG web browser** timed out at 60s whenever `dateFrom` was set, and when
+  three calls ran in parallel. Workaround: **omit `dateFrom`, cap at two concurrent
+  calls** (~26-37s each). **Benzinga quote pages returned HTTP 403** to native
+  WebFetch, so the routine's prescribed fallback was unavailable; the Apify fetcher
+  also timed out on it. Native WebSearch with Yahoo domains blocked was used for the
+  last three tickers.
