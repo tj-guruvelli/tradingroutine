@@ -21983,3 +21983,11 @@ TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
 APT     B      Momentum confluence   daily swing   RSI 71.35, ADX14 32.3, EMA9 $6.06 > EMA21 $5.86, px $6.20
 
 No grade-A hits (unreachable this run). Candidate only — no orders placed; feeds `market-open`/`/trade` next session.
+
+### Setup Scan (17:37 ET, cloud)
+`grade_a_possible: false` — outside 10:00-15:30 ET window, Setup A not evaluated. 60/60 symbols checked, 0 errors.
+
+TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
+APT     B      Momentum confluence   daily swing   RSI 71.35, ADX14 32.3, EMA9 $6.06 > EMA21 $5.86, px $5.28
+
+No grade-A hits (unreachable this run). Candidate only — no orders placed; feeds `market-open`/`/trade` next session.
