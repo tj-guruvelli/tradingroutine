@@ -21744,3 +21744,132 @@ unchanged at 0/3 (week of Nov 16); day 95 since launch.
 does not chunk internally — the same operator item raised in the 07:09 run.
 Worth fixing in the wrapper, since every routine that sends full deep-dive
 detail will keep rediscovering the ~4,096-char Bot API limit.
+
+## 2026-11-19 — Gappers (auto-scan 09:09 ET, cloud)
+
+Run **3 of 4** for the day (09:00 ET slot, fired 09:09). Watchlist scan via
+`scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). **6 raw hits, 5
+qualified**; `WLDS` (+10.53%, $1.26, 38,666 vol) excluded again — fails the
+$3.00 price floor *and* the 50k volume floor. Deep-dive cap is **5** per
+routine spec and exactly 5 names qualified, so **all qualifiers got the full
+deep dive; there are no quick-scan-only ranks 6-10 this run.** Account
+confirmed flat: $100,000 equity, $100,000 cash, 0 positions, 0 open orders,
+**0 of 3 weekly trade slots used**.
+
+**Gap compression into the open — the list is shrinking, not growing.** The
+08:09 run had 7 qualifiers; this run has 5. `CRWV` and `KLIC` both fell back
+under the 5.0% threshold in the last hour. Every surviving name is a bounce
+off a severe multi-week drawdown, and three of the five are the *same trade*.
+
+### Research-tool status (disclosed, not papered over)
+
+`apify--rag-web-browser` **absent again** — confirmed via ToolSearch, not
+assumed. `apify--web-search` is the Apify equivalent and was used first, but
+**4 of 6 Google queries exceeded the 60s MCP timeout** (observed durations
+46.8s and 57.2s on the two that returned, i.e. the tool is running right at
+its own ceiling), and a `duckduckgo` provider retry returned
+`UPSTREAM_SEARCH_ERROR 502`. The routine's documented fallback —
+`WebFetch https://www.benzinga.com/quote/<T>` — **returned HTTP 403 on all 5
+tickers**, so that fallback path is currently dead and the routine spec should
+be updated. Catalysts below therefore come from **native WebSearch** with the
+Yahoo block applied via `blocked_domains`, plus **Alpaca's own bars/quotes**
+for every number. **No Yahoo-sourced data in this entry. No Perplexity.**
+
+### Two findings that matter more than the list
+
+**1. The mandatory 10% trailing stop is sub-1-ATR on 4 of today's 5 names —
+the rulebook's own stop would be noise-stopped.** Computed from real Alpaca
+daily bars this run, paging correctly (`limit=1000`, 50 bars) to sidestep the
+`size.mjs` truncation bug logged at 08:09, which is **still unpatched**.
+
+| Sym | Entry | ATR(14) | ATR% | 1-ATR stop | 1-ATR dist | 10% trail | Rules-compatible? |
+|---|---|---|---|---|---|---|---|
+| UMAC | $10.60 | $1.50 | 15.6% | $9.10 | 14.2% | $9.54 | **No** — trail inside 1 ATR |
+| ASTS | $27.71 | $4.06 | 15.9% | $23.65 | 14.7% | $24.94 | **No** — trail inside 1 ATR |
+| BE | $182.09 | $22.46 | 13.1% | $159.63 | 12.3% | $163.88 | **No** — trail inside 1 ATR |
+| PL | $12.78 | $1.03 | 8.5% | $11.75 | 8.1% | $11.50 | **YES** — 1 ATR inside trail |
+| NBIS | $112.65 | $17.70 | 16.5% | $94.95 | 15.7% | $101.39 | **No** — trail inside 1 ATR |
+
+A 10% trailing stop on a name with a 13-16.5% ATR gets taken out by **less
+than one average day's range**. So for 4 of 5, the strategy cannot
+simultaneously honour the 10% trail *and* give the trade room to work — the
+2:1 R:R minimum is unreachable at a rules-legal stop distance. **`PL` is the
+only rules-compatible setup on the list**, and it has the weakest catalyst and
+the weakest volume of the five. Right structure, wrong reason. This is a
+rulebook tension for the operator, not something to patch here.
+
+**2. Three of five names are one trade in three costumes.** `BE` and `NBIS`
+are both bids on the **Anthropic above-range IPO pricing ($83/share, debuts
+09:30 ET today)**, and `ASTS`/`PL` are both the satellite complex on one
+B. Riley upgrade. Under the >0.75 correlation gate these are **substitutes,
+not additions** — the gate would block the 2nd and 3rd entry. With 3 weekly
+slots open and 0 positions, the real opportunity cost is not displacing a
+holding, it is **spending multiple slots on a single factor**. Preferred
+expression per pair: **BE over NBIS** (three guidance raises + two named
+hyperscale contracts vs. a 17% post-earnings drop and missed deadlines);
+**ASTS vs PL is a genuine toss-up** (ASTS has the catalyst and fails the stop
+rule, PL passes the stop rule with no catalyst).
+
+**Volume quality check — not one gapper has above-average participation.**
+
+| Sym | Premkt vol | 20d avg vol | vs avg |
+|---|---|---|---|
+| UMAC | 3,350,852 | 3,043,342 | **110%** |
+| ASTS | 23,028,580 | 18,232,919 | **126%** |
+| BE | 11,524,346 | 18,527,580 | 62% |
+| PL | 5,023,940 | 7,284,212 | 69% |
+| NBIS | 26,635,413 | 28,814,948 | 92% |
+
+Only `ASTS` and `UMAC` clear their own average, and UMAC's is catalyst-free.
+`NBIS` is the worst geometry on the list: it ran ~10% after-hours on the
+Nvidia print, so a +5.32% gap is a **give-back from the overnight high**, not
+a fresh advance.
+
+### Gappers (auto-scan 09:09 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | 10.60 | +10.30% | 3,350,852 | Drone-component bounce off a ~43% one-month drawdown; **no clean catalyst today** — last news is the Nov 5 Q3 beat (rev $13.9M, +551% y/y) + Oppenheimer Outperform/$30. **Quote bid $8.23 / ask $11.04 — ~30% spread.** |
+| 2 | ASTS | 27.71 | +8.71% | 23,028,580 | **B. Riley upgrade Neutral→Buy, $48 target** ("rocket risk is priced in"); ULA Vulcan probe cleared Blue Origin BE-4 engines, removing a New Glenn launch overhang. |
+| 3 | BE | 182.09 | +6.50% | 11,524,346 | AI-power complex rebound on **Anthropic IPO pricing above range at $83**; NTT DATA 900MW deployment + Google Wyoming 702MW plant; FY26 guidance raised a 3rd time to $4.4-4.6B. |
+| 4 | PL | 12.78 | +6.06% | 5,023,940 | Satellite-group sympathy with ASTS after a ~70% six-month decline; **no news today** — last catalyst was the Nov 9 Stoke Space multi-launch deal, which round-tripped in two weeks. Q3 earnings Dec 10. |
+| 5 | NBIS | 112.65 | +5.32% | 26,635,413 | Neocloud sentiment repair on **strong Nvidia results + Nvidia's AI credit-backstop language**, plus the Anthropic debut; **no Nebius-specific deal**. ~63% below June high. |
+
+#### Deep dive: UMAC $10.60 +10.30%
+- Catalyst: No verifiable company-specific catalyst for today's +10.3% gap. Durable fundamentals date to Nov 5: Q3 revenue $13.9M, up 551% y/y, defense/enterprise ~90% of sales, EPS reported (50c) vs (14c) consensus. Oppenheimer initiated Outperform/$30; Piper Sandler cut to $29 from $38 in late October. The Nov 13 registration covering 1.93M holder shares is a **resale, not fresh dilution**. **DATA INTEGRITY FLAG:** Alpaca's snapshot and daily bars agree on a $9.61 prior close, but the live quote is **bid $8.23 / ask $11.04** — a ~30% spread on a stale 21:00 UTC stamp — and third-party aggregators variously print $13.31, $19.92 and $23.11 for the same sessions. Alpaca is the approved source and is internally consistent, so the gap is reported as-is, but the quote is too wide to trade off.
+- Why: High-beta drone/defense sympathy inside the broad risk-on bid ahead of the Anthropic debut, not news. A name down ~43% in a month with a 15.6% ATR moves double digits on flow alone. Notably the Pentagon Gauntlet II finalist cut that hit peers Red Cat and Ondas **did not name UMAC**, leaving it a relative-strength residual rather than a winner.
+- Impact: One-day headline-free spike, likely to mean-revert. Premarket 3.35M vs 3.04M 20-day average is ~one full session's turnover pre-open, so there is participation, but with no catalyst to anchor it nothing holds the gap. Sector read-through is **negative**: the drone complex just lost a Pentagon selection event and Red Cat/Ondas are not confirming.
+- Horizon: **SHORT_TERM** — no identifiable catalyst plus a 30%-wide quote means no thesis to carry; the Nov 5 beat is two weeks stale and has already faded ~43%.
+- Opportunity cost: Nothing to displace (0 positions). Binding constraints are the 3-trade weekly budget (0 used) and the correlation gate. Fails 2:1 R:R at any sane stop: 1 ATR = $1.50, so a 1-ATR stop at $9.10 is 14.2% away — already wider than the mandatory 10% trail — while the 10% trail at $9.54 sits inside 1 ATR. Clearing 2:1 needs $13.60, a fresh 30%+ advance with nothing behind it. Ranks 2-5 are all better-sourced. **Do not spend a weekly slot here.**
+
+#### Deep dive: ASTS $27.71 +8.71%
+- Catalyst: Two things landed together. **B. Riley moved ASTS Neutral→Buy, $48 target**, arguing negative sentiment was excessively priced in after a selloff to a 52-week low of $25.16 (52-week high $133.86). Separately the **ULA Vulcan failure investigation cleared Blue Origin's BE-4 engines**; AST flies on New Glenn, which uses the same engines, so a nameable overhang was retired rather than deferred. Offsetting negative is real dilution: **10M shares and $400M issued to Firefly Aerospace** for rocket engine technology rights, plus a filing covering 780,052 shares for Ligado Networks / One Dot Six. Desks are split: William Blair Market Perform, UBS and BofA cutting targets, Berenberg reiterating Buy.
+- Why: Upgrade-driven short-covering bounce off a 52-week low, amplified because the engine finding retired a *specific* risk. The mechanism is sentiment repair on an oversold high-beta name — nothing about revenue or subscriber economics changed overnight.
+- Impact: Partly sustainable, with a hard near-term test. Premarket 23.0M vs 18.2M average (**126%**, best on the list) is genuine repositioning, not a thin gap, and an upgrade plus a retired launch risk is more durable than a headline spike. But the dilution that caused the selloff is unresolved and this is a bounce off a 52-week low inside a confirmed downtrend. Read-through is positive and visible — PL is gapping too — which cuts both ways, since it means neither is moving on its own merits.
+- Horizon: **LONG_TERM** — the structural catalyst is the **nationwide intermittent service activation still guided before year-end 2026**, a genuine re-rating event; the upgrade and engine clearance are the setup, not the thesis.
+- Opportunity cost: Best-sourced name here and the most defensible use of a weekly slot, but **it cannot be sized to the rulebook**. 1 ATR = $4.06, so a 1-ATR stop at $23.65 is 14.7% below entry, well outside the 10% trail, while the 10% trail at $24.94 sits inside 1 ATR and dies to one average day's range. 2:1 off a 1-ATR stop needs $35.83 — credible against the $48 target and the $133.86 high — so the setup **clears R:R on reward but fails on stop placement under current rules**. It also directly displaces PL: same satellite bet, so the >0.75 gate makes them alternatives. **Taking ASTS forfeits PL.**
+
+#### Deep dive: BE $182.09 +6.50%
+- Catalyst: Proximate trigger is sector-wide — **Anthropic priced its IPO above range at $83/share**, reviving AI power suppliers after Bloom fell ~34% between Oct 13 and Tuesday, leaving it >40% below its $351.28 52-week high. Bloom's own fundamentals are strong and recent: **NTT DATA agreed to deploy 900MW** of its solid oxide fuel cell systems, Bloom will build the fuel cells for a **702MW plant powering Google's Wyoming datacenter**, and management **raised FY26 revenue guidance a third time to $4.4-4.6B**. On Nov 18 exec Bala Naidu made the core pitch: Bloom can deliver onsite power "in months rather than years." Robert W. Baird raised its target to $351 from $310 (Outperform). Bear case is cash: quarterly FCF around **negative $181M**, plus ongoing insider selling.
+- Why: The Anthropic IPO is a **direct demand-signal read-through, not a sentiment accident** — pricing above range at a ~$1.5T valuation validates the scale of the compute buildout, and the binding constraint on that buildout is grid power, which is exactly what Bloom sells on a months-not-years timeline. Three guidance raises plus two named hyperscale deals means fundamentals underpin the move, unlike UMAC.
+- Impact: Most sustainable catalyst on the list, but **the gap itself is suspect**. Premarket 11.5M vs 18.5M average is only **62%** — thinnest participation relative to normal of any name here — reading as sector beta rather than conviction accumulation. Read-through is unambiguous and confirmed: NBIS gapping on the identical driver, and FuelCell/Plug have moved as one block all week. Tape risk: **Anthropic debuts 09:30 ET today, so the catalyst is an unpriced event, not a settled one.**
+- Horizon: **LONG_TERM** — three guidance raises, the 900MW NTT DATA deployment and the Google Wyoming plant are structural contracted demand, and Technology/Industrials is the favored early-cycle pairing in the rotation table.
+- Opportunity cost: Strongest fundamental case, competing directly with NBIS for the same exposure, so the correlation gate makes them substitutes. At $182.09 the 20% cap ($20,000) buys 109 shares, so sizing is not the constraint. R:R is: 1 ATR = $22.46, a 1-ATR stop at $159.63 is 12.3% away vs the 10% rule, and the 10% trail at $163.88 sits inside 1 ATR. A 2:1 target of $227 is plausible against the $351 high and Baird's $351. **The honest cost is timing** — entering before the Anthropic debut prices in means buying the catalyst at peak uncertainty, on the weakest volume confirmation on the list. **Waiting for the open costs nothing here.**
+
+#### Deep dive: PL $12.78 +6.06%
+- Catalyst: **No new company news today** — sympathy with ASTS and the broader satellite group. Last discrete catalyst was the **Nov 9 multi-launch agreement with Stoke Space** (fully reusable rockets) adding launch capacity for Planet's fleet; it spiked the stock 14.5% to a $14.37 close and then **fully round-tripped to $12.05 by Nov 18**. Fundamentals mixed but improving: fiscal Q2 2027 revenue $116M, up 58.1% y/y, though part came from a satellite handover that pulled revenue out of Q3; Q3 guided $101-105M, FY $430-441M. Still loss-making, and FY27 capex guidance rose to $108M midpoint from $87.5M in June. The six-month decline is partly rotation into SpaceX after its IPO.
+- Why: Pure group beta — ASTS got the upgrade, PL is the liquid satellite-imagery proxy that moves with it. There is **no PL-specific information in today's move**, and the Stoke Space precedent is instructive: an actual signed launch agreement bought exactly one day before round-tripping completely.
+- Impact: Most likely a one-day spike that mean-reverts, and volume agrees — premarket 5.02M vs 7.28M average is **69%**, the weakest absolute participation on the list. The Nov 9 analogue is the base case: a *real* catalyst faded inside two weeks, so a catalyst-free bounce should fade faster. Read-through is the ASTS pair; if the ASTS upgrade bounce fails, PL has nothing of its own to stand on.
+- Horizon: **SHORT_TERM** — no catalyst today, and the Dec 10 fiscal Q3 print is three weeks out, too far to carry a no-news gap into and itself a binary risk event.
+- Opportunity cost: PL is the one genuinely interesting structural observation today, and **it is about volatility, not the catalyst**. At an 8.5% ATR it is the **only name here whose 1-ATR stop ($11.75, 8.1% below entry) fits inside the mandatory 10% trail** — every other name has the 10% trail sitting inside 1 ATR, where the rulebook's own stop dies to routine noise. So PL is the **only rules-compatible setup of the five**, with a 2:1 target of $14.84 that sits below the $14.37 Nov 9 high and well under the $30.27 average analyst target. The catch: weakest catalyst, weakest volume. Right structure, wrong reason. It displaces ASTS under the correlation gate, and choosing the rules-compatible-but-newsless half of that pair over the well-sourced-but-unsizeable half is **a real trade-off, not an obvious win**. Worth a `/trade` check if it holds the gap after the open; not worth chasing premarket.
+
+#### Deep dive: NBIS $112.65 +5.32%
+- Catalyst: **No new Nebius contract** — the move is sector-driven on two inputs. **Nvidia's strong quarterly results** lifted the neocloud group, with Nvidia stating it will keep backing AI buildouts through investments and **credit guarantees**, described as "selective" and "disciplined," its interim CEO noting backstops activate only if partners can actually build and deliver. The **Anthropic debut ahead of 09:30 ET** is the second leg. Nebius's contracted backlog is substantial but previously announced: a binding **AIB Data Centers** deal for 50MW of critical IT capacity in the southeastern US on an initial 12-year term; a five-year **Meta** agreement covering **$12B** of dedicated compute with deliveries beginning early 2027, plus commitments for up to $15B more; and **Palantir** naming Nebius its preferred sovereign AI infrastructure partner. Damage is also real: the stock **fell 17% the day it reported Q3**, sits ~63% below its June high, and **Citi cut its target to $215 from $265** (still Buy), with analysts citing missed deadlines and heavy interest expense.
+- Why: A beta-chase in the highest-leverage expression of the AI-compute trade. Nebius is a levered neocloud, so it trades as a call option on AI capex sentiment, and two sentiment inputs landed at once. The **Nvidia credit-backstop language matters mechanically** because Nebius's bear case *is* financing cost — an explicit willingness to backstop partner buildouts relieves the exact pressure point, with the caveat that Nvidia conditioned it on partners delivering.
+- Impact: Genuine sector repair, but **the least confirmed gap on the list**. Premarket 26.6M vs 28.8M average is 92%, below normal, and it follows an after-hours move of ~10% on the Nvidia print — so a +5.32% gap is a **give-back from the overnight high, not a fresh advance**, the weakest tape structure here. Read-through is broad and confirmed across CoreWeave, IREN and MRVL, and BE is moving on the same Anthropic driver, so **this is one trade expressed five ways**. The disclosed conflict from the pre-market entry applies: the Anthropic IPO is the catalyst, and Anthropic develops the model running this bot.
+- Horizon: **LONG_TERM** — the Meta $12B five-year agreement, the 12-year AIB contract and the Palantir sovereign-AI designation are structural contracted revenue, and the Nvidia backstop addresses the financing bear case directly. The gap is sentiment; the underlying thesis is multi-quarter.
+- Opportunity cost: Competes head-on with BE for the same Anthropic-IPO exposure, and **BE is the better version** (three guidance raises + two named hyperscale contracts vs. a 17% post-earnings drop, missed deadlines, heavy interest expense). Under the >0.75 gate these are substitutes; spending slots on both concentrates the book in one factor. R:R is the worst of the five in stop terms: at a 16.5% ATR, 1 ATR = $17.70, so a 1-ATR stop at $94.95 is 15.7% below entry vs the 10% rule, and the 10% trail at $101.39 sits well inside 1 ATR — stopped out by **half** an average day's range. A 2:1 target of $148 is reachable against Citi's $215, so reward is fine and **stop placement is the disqualifier**. Fading off an overnight high on below-average volume is the worst entry geometry on the list. **Prefer BE for this exposure; do not take both.**
+
+**No orders placed — research only.** Execution is gated to `market-open` /
+`/trade`, which run the full safety-check gate. Reminder for whoever runs it:
+`size.mjs` is still returning stale prices (logged 08:09) — **do not size off
+it until patched**; the ATR figures above were computed independently this run.
