@@ -20891,3 +20891,320 @@ No Telegram/ClickUp notification sent (0 grade-A hits — matches the
 local `/setup-scan` quiet rule). Candidates NOC/PEPG carried as Grade-B-only
 for `/trade` or `market-open.md`'s next read of `data/setup-scan_cloud_*.json`;
 neither is actionable without a Setup A confirmation.
+
+## 2026-11-19 — Pre-Market Research (Day 95, Thursday, cloud run)
+
+Run time **06:01–06:12 ET**. Research tool: **Apify** (`apify--web-search` +
+`apify--web-fetch`; `apify--rag-web-browser` **absent again** — confirmed via
+ToolSearch, not assumed). **Partial fallback to native WebSearch/WebFetch,
+disclosed:** Apify's dated/undated searches returned stale, undated junk on 3
+of 3 market-context queries (2023–2025 Barron's and YouTube results for a
+Nov-19-2026 query) and **Yahoo surfaced unprompted on 2 of those 3 despite the
+block suffix** — both discarded, neither used. `apify--web-fetch` then timed
+out at 60s on 3 of 3 calls. Market context below is sourced from native
+WebSearch/WebFetch plus **Alpaca's own bars/snapshots**, which is the primary
+approved market-data source and carries the numeric load here. No Yahoo data
+in this entry. No Perplexity.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction — not read off a populated field) |
+| `balance_asof` | 2026-11-18 |
+| Deployed | **0%** vs the 75–85% rule — 95th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required
+env vars confirmed `set` before any wrapper call.
+
+### Market context
+
+**The one genuinely new fact: the largest IPO on record prices tonight and
+debuts at 09:30 ET today.**
+- **Anthropic (ANT)** priced at **$83.00/share**, above its revised $70–78
+  range, upsized from 825M to ~**980M shares** for a raise of ~**$81.3B** —
+  **the largest IPO ever, surpassing SpaceX's June listing** — at a fully
+  diluted valuation of ~**$1.5 trillion**. Orders reported at ~**7x** the
+  deal. A separate ~**$26B private placement** (Google, Microsoft, AMD,
+  Broadcom) takes the combined total to ~$107.3B. Debut **09:30 ET today**,
+  Nasdaq Global Select. (CNBC, CNN, PBS, Washington Post, Anthropic IR)
+- **Read-through is the reason the tape is up:** Alphabet, Microsoft, Amazon
+  and Nvidia each hold multi-billion stakes. Anthropic's amended filing shows
+  **Google committing ~$10B at the IPO price** and Anthropic committing **at
+  least $121.3B to Google for compute capacity, Apr 2026 – Jul 2033**. That
+  is the direct cause of **GOOG +4.08% premarket to $290.60**, the single
+  largest move in the scan.
+- Skeptic's side, logged: Anthropic spent **$18.8B on compute/infrastructure
+  in the first nine months of 2026** against a **$1.26B operating loss**
+  (Investing.com). The "record IPO" framing also rests on SpaceX comparisons
+  that vary by source ($75B vs $85.7–86B with over-allotment) — **logged as a
+  disputed comparison, not resolved.**
+- **Conflict-of-interest disclosure, stated rather than buried:** Anthropic
+  develops the model running this bot. **ANT is excluded from the candidate
+  set on a mechanical rule, not a judgment call** — it has one day of price
+  history, so there is no 200-SMA to test the long-bias filter against and no
+  ATR(14) to size or set a stop from. It is unevaluable under this rulebook
+  and will stay so for ~200 sessions. No view is offered on it.
+
+**Indices / tape — premarket is sharply risk-on into an oversold index**
+- Nov 18 close (Alpaca daily bars): **SPY $730.33 −0.28%, QQQ $659.57
+  +0.38%**. SPY's 21-day is **−5.04%**, QQQ's **−8.04%**.
+- **Premarket (Alpaca `delayed_sip` snapshots, ~10:50Z / 05:50 ET), measured
+  against the Nov 18 close, not the stale `prevDailyBar`:** **QQQ $673.74
+  +2.16%**, **SPY $739.33 +1.25%**, **NVDA $153.94 +1.97%**. Nasdaq-100
+  futures reported **+1%** on debut optimism (CBS).
+- **The index-level condition is the real story: SPY RSI(14) 34.6 and QQQ
+  RSI(14) 34.0** — both within ~4 points of the 30 oversold line, the lowest
+  readings of this drawdown. XLK RSI **28.4**, XLE **27.6**.
+- **VIX ~21.94, −2.62 (−10.67%), prev close 24.56** (Investing.com, 05:57),
+  corroborated at **21.98 / 22.37** by TradingEconomics — **both tiles are
+  internally inconsistent** (TradingEconomics prints "−2.58 points (−2.58%)",
+  the same figure twice) so the **level is firm at ~22, the exact change is
+  ±0.4**. **Sourcing gap disclosed: Cboe's own VIX dashboard and delayed-quotes
+  page both returned an empty Market Snapshot to WebFetch this run**, so the
+  primary source used on Nov 18 was unavailable and this figure is
+  second-hand. VIX rose 23.66 → 24.56 across Nov 18 and is now giving that
+  back.
+- **NVDA context worth carrying:** yesterday's pre-market run built on
+  "NVDA +3.62% premarket, the binary resolved bullish." It then **round-tripped
+  the entire gain intraday** (logged in the 10:09 ET gappers entry) and closed
+  Nov 18 at **$150.96**. At $153.94 premarket it is **still below its Nov 17
+  close of $155.46**. The NVDA relief rally did not hold; today's bid is the
+  Anthropic IPO, a different driver.
+
+**Oil** — **WTI $83.33 (+0.08%), Brent $91.91 (−0.04%)** (oilprice.com
+futures tiles, ~11–13 min delayed). **Flat.** Note the drift from yesterday's
+CNBC read of WTI $85.13 / Brent $92.81 — direction over two sessions is mildly
+lower, and the **level spread across vendors remains ~±$1.5**, as flagged
+Nov 18. EIA spot and Bloomberg tiles in the same search returned $89.53 and
+$83.47 respectively — **different contracts/snapshots, not reconciled.**
+
+**Today's releases** (all ET)
+- **08:30 Initial jobless claims** (w/e Nov 14): consensus **~196–198K** vs
+  **200K** prior; **continuing claims** prior **1,697K**. Consensus varies by
+  vendor (finviz / Investing.com / TradingEconomics) — logged as a range.
+- **08:30 Philadelphia Fed Manufacturing (Nov):** exp **20.6** vs **20.9**.
+- **Fed speakers all day:** Hammack (~08:50), Goolsbee (~12:30), Barkin,
+  Barr, Paulson. **Times differ by vendor and are approximate.**
+- **Earnings before the open: Walmart (WMT) Q3 FY27** — cons **$0.64 EPS** on
+  **$187.21B** revenue (vs $0.62 / $179.50B a year ago) — and **Alibaba
+  (BABA)**. **Neither is on the watchlist** (checked); WMT matters only as the
+  consumer read-through into XLP/XLY, where the 21-day leadership sits.
+- **09:30 ANT debut** — see above. No FOMC event today; **yesterday's 14:00 ET
+  minutes gate is gone.**
+
+**Sector momentum** — computed from Alpaca daily bars (Nov 18 close), not
+quoted from a site:
+
+| ETF | Last | 1d% | 5d% | 21d% | vs20 | vs50 | vs200 | RSI |
+|---|---|---|---|---|---|---|---|---|
+| XLU | 43.54 | +0.25 | −0.66 | **+3.99** | +0.38 | +3.85 | −1.80 | 55.7 |
+| XLP | 91.19 | −0.32 | −0.27 | **+3.92** | +1.15 | +5.88 | +7.29 | 60.7 |
+| XLY | 119.19 | +1.74 | −1.48 | **+3.20** | +1.20 | +4.47 | +3.29 | 56.4 |
+| XLF | 56.43 | −1.14 | −3.72 | +1.29 | −1.52 | +0.86 | +4.50 | 47.6 |
+| XLV | 181.19 | −2.21 | −4.12 | +0.77 | −1.88 | +2.93 | +12.78 | 44.5 |
+| XLI | 164.68 | −0.04 | −3.66 | −1.29 | −1.68 | −2.23 | −5.04 | 41.1 |
+| XLB | 50.44 | −0.79 | −4.83 | −1.50 | −3.36 | −0.83 | −1.60 | 38.8 |
+| SPY | 730.33 | −0.28 | −3.88 | −5.04 | −3.11 | −4.22 | −0.30 | **34.6** |
+| QQQ | 659.57 | +0.38 | −4.47 | −8.04 | −3.90 | −7.67 | −3.40 | **34.0** |
+| XLE | 61.31 | −3.23 | −3.24 | −9.78 | −6.25 | −5.49 | +2.78 | **27.6** |
+| XLK | 163.75 | +0.28 | −6.08 | **−11.70** | −6.56 | −11.81 | −4.30 | **28.4** |
+
+**Defensive leadership holds for a second session** — XLU, XLP, XLY are the
+only three sectors positive on 21 days, exactly the rulebook's **Mid-cycle**
+trio. **XLK is still the worst sector on every horizon** (−11.70% / 21d,
+−4.30% vs its 200-SMA, RSI 28.4); today's premarket bid is an IPO-driven
+bounce inside that downtrend, not a trend change. **XLE: YTD leader turned
+second-worst 21-day sector and now the most oversold reading in the table** —
+with oil flat, nothing supports it. **XLV holds the strongest 200-SMA
+cushion (+12.78%)** in the complex.
+
+**Premarket gap scan** — `gappers-alpaca.sh watchlist`, feed `delayed_sip`,
+80-name universe. **26 names ≥3%; 13 ≥4%.** Tape is broadly risk-on and the
+leadership is the AI/Anthropic read-through. (Note: the `volume` column from
+this wrapper is the **prior session's full-day volume**, not premarket volume —
+the snapshot endpoint exposes no premarket-volume field.)
+
+| Sym | $Price | Gap% | Sym | $Price | Gap% |
+|---|---|---|---|---|---|
+| BE | 180.85 | +5.77 | SATL | 3.02 | +4.32 |
+| NBIS | 112.50 | +5.18 | PEPG | 3.99 | +4.18 |
+| CRWV | 50.28 | +5.13 | RDW | 7.10 | +4.11 |
+| ASTS | 26.72 | +4.83 | RGTI | 8.67 | +4.08 |
+| BMNR | 16.20 | +4.72 | **GOOG** | **290.60** | **+4.08** |
+| RKLB | 55.50 | +4.58 | STM | 46.68 | +3.94 |
+| LUNR | 10.56 | +4.35 | OKLO | 22.65 | +3.90 |
+
+`RR` (+4.78%, $0.69) and `OPEN` (+4.33%, $1.32) excluded by the **$3.00 price
+floor**.
+
+### Candidate screen — 29 names, every rulebook gate applied
+
+Run against live Alpaca daily bars with premarket prices where available
+(200-SMA long-bias, RSI<70, $3 floor, 10%-stop-outside-1-ATR, 2:1-R:R):
+
+**Exactly one name passes: TLN.** Identical verdict to Nov 18, but the margin
+is now starker.
+
+- **TLN** — px $360.11, ATR 5.75%, **10% stop = 1.74 ATR**, **20% target =
+  3.48 ATR**, RSI 53.0, **above all three SMAs (+2.98% / +6.89% / +3.18%)**.
+  **PASS.**
+- **TLN is the only individual equity in the set above its own 200-SMA with a
+  tradeable R:R shape.** The 200-SMA column for every other name: CEG −3.73,
+  NOC −6.75, STM −8.80, GOOG −13.37, VST −14.75, BE −19.17, KLIC −20.73,
+  BMNR −20.31, BKSY −21.13, GFS −25.16, RKLB −28.78, NRG −28.81, BLSH −33.20,
+  RDW −34.28, AMKR −35.11, NBIS −37.38, SATL −42.33, CRWV −43.09, LUNR −44.95,
+  AMPX −47.11, ONDS −47.00, RGTI −47.20, UMAC −47.66, PL −51.71, OKLO −54.48,
+  QBTS −56.35, ASTS −63.08.
+- **PEPG is the one other name above its 200-SMA (+36.84%)** and **fails R:R
+  by the widest margin in the set**: ATR 16.26% of price, so a 10% stop is
+  **0.61 ATR** — inside two-thirds of an average day. RSI 64.5 is also the
+  highest reading in the set. Unchanged from the Nov 18 analysis; the $5.00
+  secondary-offering overhead supply still caps its 2:1 target.
+- **Even the indices fail the long-bias filter** — SPY is **−0.30%** and QQQ
+  **−3.40%** below their own 200-SMAs. The oversold-bounce setup the tape is
+  actually offering has **no rule-compliant instrument** in this book. That is
+  a finding about the rulebook, not about the tape.
+
+### Trade ideas
+
+**1. TLN (Talen Energy) — the gate is now fully open and the plan is
+unchanged. The entry band simply has not traded.**
+
+- **Correction to the Nov 18 EOD note, which matters.** That note said TLN's
+  dated window was handed off and "no record shows that handoff was executed."
+  The implication of a dropped handoff is **wrong**. Checked against 15-minute
+  bars: **TLN's low from 14:00 ET onward on Nov 18 was $359.34**, against a
+  limit band of **$349–356**. The band was **never reached inside the window**
+  — the daily low of $353.70 printed earlier in the session, before the gate
+  opened. **The limit correctly did not fill. No trade was missed and no step
+  was skipped.**
+- **Catalyst:** Nov 11 seven-year agreement to sell **750 MW of capacity**,
+  targeting ~**$100M annual revenue**; backed by **Q3 (Nov 3)** reaffirming
+  2026 and introducing 2027 guidance, and the **Oct 1 monetization of rights
+  to ~$1.5B of future PJM capacity cash flows**. **Honest aging note: the
+  catalyst is now 8 days old and price has fully round-tripped it** —
+  $378.39 (11/11) → $386.62 (11/12) → $354.92 (11/17) → $360.11 (11/18). This
+  is the thesis's weakest point and it weakens by one day per session.
+- **Technicals (Nov 18 close $360.11):** RSI(14) **53.0**. **20-SMA $349.69,
+  50-SMA $336.90, 200-SMA $349.03** — above all three. ATR(14) **$20.72 =
+  5.75%**, inside the 2.8–5.5%-ish mechanically-tradeable band.
+- **No premarket print today.** The `delayed_sip` snapshot's latest TLN trade
+  is stamped **2026-11-18T21:01:30Z** — the prior session's close. Thin-book
+  behaviour, consistent with a 20-day average volume of 75,561 shares (IEX feed) and
+  **Nov 18's 46,372 — just 0.61x that average**. **Any entry must be a limit.**
+- **Plan — unchanged, deliberately, and now ungated:** entry **$349–356** as
+  a **limit, never market**; **48 shares** at a $352 fill; **10% trailing GTC**
+  stop; **~+20% target**. The band bottom is well-chosen: **$349 sits on both
+  the 20-SMA ($349.69) and the 200-SMA ($349.03)** simultaneously, so the
+  entry leans on real structure rather than on a round number.
+- **Size:** at $352, ATR $20.72, 1.0% risk ($1,000) per 1-ATR move →
+  **48 shares ≈ $16,896 = 16.9% of equity**, inside the 20% cap (56 shares).
+  **`scripts/size.mjs TLN` returned `price: 338.58` — now 9 sessions stale,
+  one worse than the 8 flagged yesterday. Use 48, not its 50. Operator note:
+  this is a real and worsening bug, still unfixed.** `corr-gate.mjs TLN`
+  returns **pass** ("fewer than 2 open positions").
+- **The decision is unchanged and it is still the right one.** TLN is $360.11,
+  **1.1–3.1% above the band**. The no-chase rule is not mechanically
+  triggered, so paying up is not forbidden — it is simply **not the plan**,
+  and it degrades the setup: a $360 entry puts the 10% stop at **$324.10,
+  which is 7.1% below the 200-SMA** the entry is supposed to lean on. **Hold
+  the $349–356 limit. If TLN never retests, take no trade.** Three weekly
+  slots are open and the book is 100% cash; patience costs nothing.
+- **What is new and favourable:** the **14:00 ET FOMC-minutes collision is
+  gone**. Yesterday the entry window and the day's largest risk event opened
+  at the same minute. Today there is no comparable scheduled event after
+  08:30, so the band — if it trades — trades on a cleaner tape.
+- **What is new and unfavourable:** **ANT's 09:30 debut is an unhedgeable
+  binary sitting directly on TLN's thesis.** TLN is an AI-power/datacenter-
+  demand derivative. A strong ANT debut extends the AI-complex bid and TLN
+  likely runs *away* from the band; a break of issue price on the largest IPO
+  ever would hit the whole complex and could take TLN *through* the band, at
+  which point the 20-/200-SMA confluence is being tested rather than
+  respected. **Both outcomes argue for the limit and against a market order**,
+  and the second argues for honouring the stop without discretion if filled.
+
+**2. CEG (Constellation Energy) — deteriorating, not improving. Watch-only.**
+- **Catalyst:** same AI-power complex as TLN; **+1.99% premarket to $267.96**
+  on the Anthropic/AI read-through.
+- **The single failure got worse, which is the point.** On Nov 18 CEG was
+  **−2.04%** below its 200-SMA. It then **fell 2.04% on the day** to close
+  $262.63, and at today's $267.96 premarket it is **−3.73%** below the
+  **$278.34** 200-SMA. The gap to the trigger **widened by 1.7 points in one
+  session.** No discretion applied; the long-bias filter blocks it outright.
+- **Everything else about it remains the best in the set:** RSI 49.1, ATR
+  4.89%, **10% stop = 2.04 ATR and 20% target = 4.09 ATR — a cleaner R:R
+  shape than TLN's.** This is the frustrating one: the best-shaped trade in
+  the book is the one rule-blocked.
+- **Trigger on record, unchanged:** a **daily close above $278.34**. **Note
+  the correlation gate:** if TLN fills first, CEG is the same AI-power thesis
+  and `corr-gate.mjs` must run before any second entry.
+
+**3. No third idea, and the reason has shifted.** Yesterday's finding was
+that 11 of 13 candidates failed outright. Today **28 of 29 fail**, and the
+binding constraint is now almost entirely one rule: **27 of the 28 failures
+include a 200-SMA breach**, and 14 of them are more than 30% below it. The
+market has sold off far enough that the long-bias filter is excluding the
+entire tradeable universe except one name — **while simultaneously producing
+the most oversold index readings of the drawdown (SPY RSI 34.6, QQQ 34.0) and
+a −10.7% VIX.** This is the structural conflict already on the operator's
+desk, showing up from a new angle: **the rulebook is at its most restrictive
+precisely when a mean-reversion tape is at its most interesting.** Logged as
+evidence for the pending operator decision, **not acted on** — the rules are
+not mine to suspend.
+
+### Risk factors today
+1. **ANT debuts 09:30 ET — the largest IPO on record, priced ~7x
+   oversubscribed at a ~$1.5T valuation.** An unhedgeable, unprecedented
+   binary that lands at the open and whose read-through runs directly through
+   the AI-power complex (TLN, CEG, VST, NRG) and the whole QQQ bid. The +2.16%
+   QQQ premarket is *anticipating* a good debut; that anticipation can reverse
+   as fast as yesterday's NVDA gap did.
+2. **Yesterday's precedent is the warning, not the encouragement.** On Nov 18
+   a +3.62% NVDA premarket on a genuine earnings beat **round-tripped entirely
+   within 45 minutes of the open**, and NVDA still sits below its Nov 17 close.
+   A premarket risk-on tape has, once this week, told us nothing about the
+   session. Do not read QQQ +2.16% as a result.
+3. **08:30 ET jobless claims + Philly Fed**, into a tape pricing **rate hikes**
+   next month (gold at a 1-year low, real yields ~2.9% as of Nov 18). A hot
+   claims print strengthens that and hits long-duration, capital-intensive
+   power equities — i.e. TLN — directly.
+4. **Five Fed speakers** across the session (Hammack, Goolsbee, Barkin, Barr,
+   Paulson) with vendor-inconsistent timings. Unscheduled-feeling headline
+   risk in a hike-expectation regime.
+5. **WMT pre-open** is the consumer read-through into **XLP/XLY — two of the
+   three leading 21-day sectors.** A miss would damage the only sector
+   leadership the tape has.
+6. **TLN-specific liquidity:** Nov 18 volume **46,372 shares** against a 20-day
+   average of **75,561** (IEX) — **0.61x**, so the book is *thinning*, not deepening. A ~$17k clip is
+   meaningful against that. Limit only; a market order is the actual risk here.
+7. **XLE is the most oversold sector (RSI 27.6) with oil flat** — no catalyst
+   under it. The YTD leader is not a dip to buy on this evidence.
+
+### Decision: **HOLD**
+
+No order placed, none proposed for immediate execution. One live plan carried
+forward:
+
+- **TLN — limit $349–356 only, never market, 48 shares, 10% trailing GTC,
+  +20% target.** Now ungated (no FOMC today). Band is 1.1–3.1% below the last
+  close and has not traded since Nov 18 pre-14:00. **Do not chase $360+.**
+  Execution stays gated to `market-open` / `/trade`, which must re-quote off
+  the live feed before acting.
+- **CEG — watch-only.** Trigger: **daily close above $278.34**. Gap to trigger
+  widened to −3.73% this session.
+- **Nothing else is takeable.** 28 of 29 candidates fail, 27 of them on the
+  200-SMA filter.
+
+Weekly trade count **0/3** (week of Nov 16). **95th trading day since launch
+(Jul 9) with zero entries**; 158th+ straight no-trade session. The two open
+operator items are both unchanged and both now have fresh evidence in this
+entry: the **confirmed-live-vs-$10k-baseline mismatch** (flagged Jul 27,
+equity still $100,000) and the **10%-stop / 2:1-R:R structural conflict**,
+which today manifested as the 200-SMA filter excluding 27 of 28 failures while
+index RSI sits at 34. `size.mjs` price staleness is now 9 sessions and is a
+third, smaller operator item.
