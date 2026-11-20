@@ -22770,4 +22770,14 @@ CRWV is the sharpest case — unchanged from 09:09 while QQQ gained ~1.3 points.
 |--------|-------|-----------|-------------|---------|
 | SYNA   | B     | Momentum  | daily swing | px $124.91, ADX14 31.46, EMA9 $117.47 > EMA21 $116.92, RSI14 53.44 |
 
+### Setup Scan (17:37 ET, cloud)
+- `grade_a_possible: false` — 17:37 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A was not evaluated this run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`). 60/60 watchlist symbols checked, 0 errors.
+- 1 hit, grade B (no grade-A hits — Telegram stays quiet per STEP 4).
+
+| TICKER | GRADE | SETUP(S)  | TIMEFRAME   | TRIGGER |
+|--------|-------|-----------|-------------|---------|
+| SYNA   | B     | Momentum  | daily swing | px $117.13, ADX14 31.46, EMA9 $117.47 > EMA21 $116.92, RSI14 53.44 |
+
+- No orders placed — research-only routine (STEP 6).
+
 - No orders placed — research-only routine (STEP 6).
