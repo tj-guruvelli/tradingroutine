@@ -22627,3 +22627,137 @@ there is no seller-exhaustion signal to trade against.
   **Recommend `telegram.sh` auto-chunk at ~3,800 chars** (and surface the API
   `description` field rather than just curl's exit code, which would have named
   the cause immediately).
+
+### Gappers (auto-scan 10:09 ET, cloud)
+
+Run 4 of 4 today (10:00 ET slot). **Market is OPEN** — this run fired after the
+9:30 bell, so `gap_pct` is today's **session change vs the prior close**, not a
+true premarket gap. Scanned the full `memory/WATCHLIST.md` universe via
+`GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist`.
+
+**Filter accounting:** 6 raw hits at |gap| >= 5.0 -> **3 qualified**. Dropped on
+the `price >= 3.00` floor: **DPRO** ($1.87, -6.50%), **AGMH** ($0.3414, -6.11%),
+**WLDS** ($1.09, -5.22%). **Deep-dive cap was 5 and was NOT binding** — only 3
+tickers cleared the filters, so **all 3 received the full deep dive**; no ranks
+were demoted to quick-scan-only, and there are no ranks 4-10 this run.
+
+Composition change vs the 09:09 run: **NBIS and AMKR both dropped off** as their
+declines narrowed back inside the 5% gate (NBIS -4.53%, AMKR -3.16%). ASTS is
+still off the list. **CRWV did not narrow** — it is the only one of the morning's
+five AI-infra names still outside the gate.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | 9.57 | -5.71% | 418,699* | Giving back Nov 19's Oppenheimer initiation pop (Outperform, $30 PT); no fresh company news, drone peer Red Cat fell ~7% in an extended post-earnings rout |
+| 2 | BE | 159.05 | -5.39% | 5,600,041* | No company news — the whole fuel-cell complex is selling off together (FCEL -5%, PLUG -4% on Nov 17) and BMO's Nov 19 Outperform upgrade already failed to hold |
+| 3 | CRWV | 42.53 | -5.30% | 12,190,367* | No fresh disclosure — balance-sheet de-rating continuing; debt now described as exceeding $40B, profit-taking after the Anthropic IPO priced above range |
+
+\* **prior-session consolidated volume, not premarket volume** —
+`gappers-alpaca.sh` populates no premarket-volume field, so the
+`premarket_volume >= 50000` gate **could not be evaluated and was not applied**.
+
+#### THE NEW FACT THIS RUN: the index bounced and the AI complex did not
+
+| Symbol | 09:09 ET | 10:09 ET | Change in tone |
+|---|---|---|---|
+| SPY | **-1.07%** | **+0.02%** | recovered to flat |
+| QQQ | **-2.03%** | **-0.69%** | cut its loss by two-thirds |
+| BE | -6.84% | **-5.39%** | still deeply negative |
+| CRWV | -5.28% | **-5.30%** | **no recovery at all** |
+| UMAC | -5.52% | **-5.71%** | still making lows |
+
+The AI-power / neocloud complex remains down 4-7% (APLD **-6.80%**, IREN
+**-6.18%**, MU **-5.19%**, NBIS **-4.53%**, AMD **-4.05%**, NVDA **-3.40%**)
+**while SPY is flat on the day.**
+
+**This changes the read, and it changes it against the long case.** At 07:10 and
+09:09 the conclusion was that these gaps were high-beta amplification of one
+macro event — 2.6x-3.4x the QQQ gap — which left open the possibility that the
+names would snap back with the index. The index has now snapped back and they
+have not. Residual weakness that survives a benchmark recovery is **idiosyncratic
+sector selling, not beta**, which is the worse of the two diagnoses for a
+counter-trend long: there is no longer a macro overhang to blame or to wait out.
+CRWV is the sharpest case — unchanged from 09:09 while QQQ gained ~1.3 points.
+
+#### Rulebook screen — ALL THREE FAIL, zero entries qualify
+
+- All 3 are DOWN moves; the strategy is long-momentum and "follow sector
+  momentum" forbids buying into an actively de-rating complex.
+- All 3 fail **2:1 R:R under the mandated 10% trailing stop** — each needs a
+  ~+20% target, i.e. a full round trip above its prior close. This is the
+  **fourth consecutive run today** to hit this same structural conflict.
+- SPY sits **below its 200-SMA**, so the index-level long-bias filter fails for
+  every candidate regardless of name.
+- Account: equity **$100,000**, cash **100%**, **0 open positions**, 0 open
+  orders, weekly trades **0/3** (week of Nov 16). `balance_asof: 2026-11-19`.
+  Opportunity cost is therefore a weekly slot, never a displaced holding.
+
+**Decision: HOLD. No orders — this routine is research-only (STEP 8).**
+
+#### Deep dive: UMAC $9.57 -5.71%
+- Catalyst: No new company disclosure today. On Nov 19 Oppenheimer initiated UMAC at Outperform with a $30 price target and the stock rallied ~7% intraday (+4.6% pre-open) per Investing.com, 24/7 Wall St. and MarketScreener; FactSet's polled mean target is $30.11. UMAC makes NDAA-compliant drone *components* rather than finished drones, and the bull case's next real test is whether "Drone Dominance Phase 3" orders reach its customers when that phase begins in early 2027. In the same Nov 19 session drone peer Red Cat fell ~7% in an extended post-earnings rout, and a Nov 18 LD Micro notice flagged potential securities claims being gathered against Red Cat.
+- Why: An analyst-sponsored pop with no earnings floor, unwinding on day two. An initiation and a price target add no cash flow; when the broad bid weakens, a $9-10 microcap that rallied on sell-side sponsorship has no valuation anchor to defend, so the pop round-trips. The Red Cat rout plus the securities-claims notice give holders a group-level reason to cut drone exposure at the same moment.
+- Impact: Reads as a two-day round trip of an analyst pop rather than a durable de-rating — but not a buyable dislocation either. Volume argues against conviction in either direction: only ~425k shares against the 4.2M prior-session consolidated figure cited this morning, and in a low-float microcap thin participation exaggerates both the drop and any bounce. Read-through runs to the small-cap drone group (Red Cat, ONDS), not the AI-infra complex the other two names belong to, making UMAC the one ticker here moving partly on its own reasons. That group read is negative: the peer under investigation is its bellwether.
+- Horizon: **SHORT_TERM** — the move is the unwind of a one-day analyst pop in a microcap with a documented dilution history, and the actual structural catalyst (Phase 3 orders) does not land until early 2027.
+- Opportunity cost: Nothing displaced — 100% cash, 0 positions, 0 of 3 weekly trades used, so the cost is purely a weekly slot. It does not clear 2:1: a 10% trailing stop from $9.57 sits near $8.61, so 2:1 needs roughly **$11.49** — above the $10.15 prior close *and* above the Nov 19 intraday high, i.e. it requires a full recovery plus a new breakout. At microcap liquidity, ATR(14) sizing either demands a stop far wider than the mandated 10% or a position too small to matter, and the 20%-of-equity cap is moot when liquidity is the binding limit. **Worst risk-adjusted candidate of the three.**
+
+#### Deep dive: BE $159.05 -5.39%
+- Catalyst: No earnings, filing or company announcement. The selling is complex-wide: on Nov 17 Bloom fell ~4% alongside FuelCell Energy ~-5% and Plug Power ~-4% (Pluang, Webull), and Seeking Alpha logged an ~8% BE drop on Nov 16 "amid broad market pullback" with the stock at $177.51. BMO upgraded BE to Outperform on Nov 19 while cutting its PT to $230 from $260, and the stock reversed lower on that upgrade the same session. The fundamental backdrop is unchanged — a ~$20B product backlog, record FY revenue of $2.02B, guidance for >100% revenue growth in 2026 — and BE was still up ~96% YTD as of Nov 17 despite the drawdown.
+- Why: A high-multiple beta de-rating in a crowded winner, not a news event. BE is the most richly valued AI-power proxy on the watchlist and ran +96% YTD, so it carries the largest unrealised gain to be harvested when AI-capex conviction cracks — profit-taking rather than reassessment. The sharper tell is the failed upgrade: when a genuine Street upgrade is sold into, supply is in control and the marginal buyer has left. FCEL and PLUG falling with it confirms money is leaving the fuel-cell theme, not Bloom specifically.
+- Impact: Sector-wide and still orderly, so not a mean-reversion setup. The new information this run is the divergence tabled above — SPY recovered to +0.02% and QQQ to -0.69% while BE is still -5.39%. The index bounced and BE did not, so the weakness has stopped being macro beta and is now idiosyncratic sector selling: a worse read for a long than this morning's, when it could still be dismissed as broad risk-off. Read-through is unambiguous: APLD -6.80%, IREN -6.18%, MU -5.19%, AMD -4.05%, NVDA -3.40%.
+- Horizon: **SHORT_TERM** — profit-taking and beta driven with no durable long thesis today; the $20B backlog is a 2027+ revenue story that does nothing to arrest a momentum unwind in progress, and the failed BMO upgrade shows good news cannot currently hold a bid.
+- Opportunity cost: Displaces no holding (100% cash). The cost is one of 3 weekly slots spent on a counter-trend catch in a sector being actively de-rated — blocked by both Rule 9 (follow sector momentum) and the index-level 200-SMA long-bias filter, since SPY sits below its 200-SMA. R:R fails outright: a 10% trailing stop from $159.05 sits near $143.14, so 2:1 demands roughly **$190.86**, above the $168.11 prior close and above the whole of this month's range. No one-day bounce pays that. BE is the largest and most liquid mover here and the only one sizeable enough to matter at 20% of equity — but it is also the most extended.
+
+#### Deep dive: CRWV $42.53 -5.30%
+- Catalyst: No new disclosure. The Motley Fool's Nov 19 market wrap has CRWV closing at $44.91, -6.10%, framed as "profit-taking follows Anthropic IPO pricing above range", with a debt burden now described as **exceeding $40B** — larger than the ~$35.6B cited in this morning's 09:09 entry. The same cohort pattern recurred on Nov 13, when CRWV fell 6.13% on AI-cloud selling plus reports of **$4B in fresh loan talks**. Demand is not the problem: Q3 revenue grew ~168% and backlog stands near $132.5B. The issue is the capital structure — roughly a **16% debt yield against a 7.9% cost of debt**, with Barclays at Hold.
+- Why: A credit repricing transmitted into the equity. When a leveraged growth name's debt trades at a ~16% yield against a 7.9% coupon, the credit market is pricing real default risk, and equity as the residual claim de-rates even while revenue compounds. The Anthropic IPO sharpened it mechanically: investors can now own listed AI exposure without CRWV's balance sheet, and funding the new issue by selling the incumbent is the path of least resistance. Reports of a further $4B in loan talks reinforce that each new dollar of growth arrives as more senior claims ahead of the equity.
+- Impact: Sustained rather than a one-day spike — a credit repricing resolves over quarters, not sessions. Participation is heavy and real: 12.6M shares already traded today against the 12.19M consolidated figure in the scan, on top of ~1.8x average volume on Nov 19. That is institutional de-risking, not drift. Direct read-through to NBIS (-4.53%) on the identical neocloud thesis — and notably both NBIS and AMKR have now narrowed back inside the 5% gate and dropped off this scan **while CRWV has not**, which is relative weakness within its own cohort.
+- Horizon: **LONG_TERM** — a capital-structure repricing at >$40B of debt and a ~16% debt yield is structural and slow-resolving. The classification marks the **durability of the overhang, not a reason to own it**: it is structurally NEGATIVE.
+- Opportunity cost: Nothing to displace. Would spend a weekly slot on the most levered name in a de-rating sector while the credit market explicitly prices distress — unacceptable under the risk gate whatever the backlog. R:R fails: a 10% trailing stop from $42.53 sits near $38.28, so 2:1 requires about **$51.04**, well above the $44.91 prior close. Within today's list it also loses the relative-strength argument to BE on liquidity and to UMAC on idiosyncrasy: it is the one name whose weakness is explicitly about the balance sheet rather than sentiment, so a market-wide bounce helps it least. Were any slot ever spent in this complex, **AMKR** (now off the scan at -3.16%, contract-backed revenue, below-average volume) remained the better-quality dislocation.
+
+#### Data / tool notes (10:09 ET run)
+- **Run fired after the open.** The 10:00 and 11:00 ET slots are, by construction,
+  intraday scans rather than premarket ones. Worth the operator deciding whether
+  the later two slots should switch to a session-change framing (and drop the
+  "premarket" labels in the JSON/table headers) rather than carrying a premarket
+  schema into regular hours.
+- **Price drift inside the run:** a second snapshot taken ~4 minutes after the
+  STEP 1 scan showed BE -5.03% ($159.65), UMAC -5.02% ($9.64) and CRWV -4.83%
+  ($42.74) — all three drifting back toward the 5% gate as the index recovered.
+  The STEP 1 watchlist scan is the authoritative figure logged above; the drift
+  is noted because two of the three would fall out of a scan run minutes later.
+  `/trade` and `market-open` MUST re-quote before acting on anything here.
+- **`gappers-alpaca.sh symbols` needs a comma-separated list**, not
+  space-separated arguments — a space-separated call silently returns `[]`
+  rather than erroring (it scans only the first symbol). Cost one wasted call.
+  Worth a usage guard in the script.
+- **Apify `web-search` remains flaky:** 1 call timed out at 60s and 1 returned
+  HTTP 502 `UPSTREAM_SEARCH_ERROR` (Google backend 500); both recovered on
+  retry with a reworded query.
+- **Undated queries are still near-useless.** The three generic
+  "TICKER stock news today catalyst" queries returned 1-3 results each, mostly
+  stale quote pages, including an `uk.investing.com` snippet quoting BE at
+  **$27.17** — an old article, discarded as obviously stale against a $159 tape.
+  Date-bounding with `dateFrom` is what surfaced the real catalysts again.
+  **Reiterating the 09:09 recommendation: add `dateFrom` to the STEP 2 spec.**
+- **One search returned outright spam** — a `dars.gov.et` page masquerading as
+  UMAC coverage ("Surges 776% to $26.11"). Discarded; re-queried with a quoted
+  company name, which returned clean Investing.com / 24-7 Wall St. /
+  MarketScreener / TipRanks results.
+- **Yahoo block held — no finance.yahoo.com result was used or cited.** Applied
+  as both the `-site:` suffix and the `blockedDomains` parameter on every query;
+  no Yahoo URL surfaced in any result this run (an improvement on the 09:09 run,
+  where two did and were discarded).
+- **`mcp__Apify__apify--rag-web-browser` still does not exist in this session** —
+  the connector exposes `apify--web-search` / `apify--web-fetch`, used instead.
+- **ClickUp still broken** (HTTP 400 `Invalid workspace ID`, unfixed since
+  Nov 19), so Telegram is the only working channel — which makes the
+  4,096-char chunking issue below a single point of failure, not a nuisance.
+- **Telegram 4,096-char cap, flagged for the third run running.**
+  `scripts/telegram.sh` has **no chunking** (source confirmed this run: it posts
+  `msg` verbatim to `sendMessage` and, on failure, chains to the broken ClickUp
+  wrapper). This run pre-split the message rather than discovering the 400 after
+  the fact. **Operator action is now overdue: chunk at ~3,800 chars inside
+  `telegram.sh` and surface the API `description` field instead of curl's bare
+  exit code.** Every multi-ticker run will otherwise keep risking a silent
+  no-notification.
