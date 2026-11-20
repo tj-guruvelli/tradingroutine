@@ -22300,3 +22300,90 @@ sessions; today is the cleanest two-sided evidence produced so far.
   **`scripts/telegram.sh` instead (HTTP 200, message_id 400)**, the primary channel
   per CLAUDE.md. **Fix or rotate `CLICKUP_WORKSPACE_ID`** — until then every routine
   that notifies via ClickUp alone is silently failing.
+
+## 2026-11-20 — Gappers (auto-scan 07:10 ET, cloud)
+
+**Regime: RISK-OFF.** Every qualifying gapper is a DOWN gap. The AI trade is
+cracking: NVDA beat on its Nov 18/19 print but sold the news and is **-32.6%
+over 30 days** ($216.47 on Oct 20 → ~$146). Morningstar's Nov 20 morning
+briefing: *"Stock Futures Fall as Tech Rout Intensifies … investor confidence
+in the artificial-intelligence trade showed signs of cracking."* CNBC Nov 20:
+*"Nasdaq falls 2% as Anthropic IPO fails to resuscitate AI trade."*
+
+Premarket tape (delayed_sip): SPY **-0.56%**, QQQ **-1.41%**, NVDA **-2.24%**,
+AMD **-7.03%**, MU **-4.81%**, CRWV **-4.70%**, VRT **-4.27%**, IREN **-4.09%**,
+APLD **-3.86%**, GEV **-3.21%**, SMR **-2.89%**, OKLO **-0.14%**.
+
+Account is **flat** — $100,000 equity, $100,000 cash, 0 open positions — so all
+opportunity-cost reasoning below is framed against the 3-new-trades-per-week
+cap, not against displacing a holding.
+
+### Gappers (auto-scan 07:10 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 156.30 | -7.03 | 16.8M* | No company news — sold with the whole AI-power complex in an intensifying tech rout, matching AMD's -7.03% almost exactly |
+| 2 | ASTS | 24.16 | -5.44 | 17.6M* | Fresh dilution overhang (Nov 18 8-K: up to 780,052 Class A shares to Ligado / One Dot Six) on an already-broken chart, amplified by the high-beta growth selloff |
+| 3 | NBIS | 91.70 | -5.39 | 38.2M* | No verified catalyst — technical continuation of the post-Q3 neocloud unwind, >57% off its October high as credit conditions tighten |
+
+\* **Volume is the PRIOR completed session's full-day volume, not premarket
+volume** — Alpaca snapshots carry no distinct premarket-volume field, so the
+`premarket_volume >= 50000` gate **could not be evaluated and was not applied**.
+
+**Filter accounting:** 5 raw hits at |gap| ≥ 5.0 → **3 qualified**. Dropped on
+the `price >= 3.00` floor: **AGMH** ($0.333, -8.42%) and **WLDS** ($1.06,
+-7.83%). **Deep-dive cap was 5 and was NOT binding** — only 3 tickers cleared
+the filters, so **all 3 received the full deep dive**; no ranks were demoted to
+quick-scan-only.
+
+#### Deep dive: BE $156.30 -7.03%
+- Catalyst: No earnings, filing or company announcement today. BE closed at $209.47 on Nov 12 (+13.0% that session) on a ~$20B product backlog that has grown roughly 2.5x, record FY revenue of $2.02B driven by AI data-center demand, guidance for >100% revenue growth in 2026, and a statement that it does not expect to issue additional shares to fund growth. It has given back ~25% of that in the eight sessions since, on top of a 26.6% decline in October. Enverus research flags fuel-cell delivery delays stalling a Stargate data-center buildout as the main execution risk against the backlog.
+- Why: A pure high-beta de-rating, not a news event. NVDA beat but the market sold the news, and the AI-power derivatives are unwinding with it. With no idiosyncratic catalyst, BE trades as a levered proxy on AI-capex sentiment — printing -7.03% against AMD's -7.03% is the tell that this is factor exposure, not anything about Bloom.
+- Impact: Sector-wide, so not a mean-reversion setup. Read-through is broad and unambiguous — AMD -7.03%, MU -4.81%, CRWV -4.70%, VRT -4.27%, IREN -4.09%, APLD -3.86%, GEV -3.21%, NVDA -2.24% vs QQQ -1.41% and SPY -0.56%. The entire data-center power cohort is down together; the sector trend is decisively broken rather than one-day dislocated.
+- Horizon: **SHORT_TERM** — sentiment-driven de-rating with no durable long thesis today; the $20B backlog is a 2027+ revenue story and does nothing to arrest a momentum unwind in progress.
+- Opportunity cost: Nothing displaced (flat account) — the real cost is burning one of 3 weekly slots fighting a confirmed downtrend. Rule 9 (follow sector momentum) and the 200-SMA long-bias filter both block it; Rule 10 argues for staying out of the sector entirely. A 7-10% stop sits at $140-145, so clearing 2:1 needs a $185+ target — effectively betting on a full retrace to the Nov 12 high mid-rout. **Fails the gate. No trade.**
+
+#### Deep dive: ASTS $24.16 -5.44%
+- Catalyst: Two overlapping pressures. Fundamentally the Q3 2026 print on Nov 9 was strong on growth — revenue +187.1% YoY to $42.3M — but the stock has kept falling anyway: -12.33% on Nov 16 to $28.58, and now >60% down YTD. An 8-K filed Nov 18 disclosed up to 780,052 Class A shares issuable to Ligado and One Dot Six for certain payments, a fresh dilution overhang. Offsetting that, B. Riley upgraded to BUY and a director bought $619,234.84 of stock in the open market.
+- Why: Dilution overhang stacked on a broken chart, compounded by the same risk-off hitting every high-beta growth name on this list. Capital-intensive, pre-scale space infrastructure is among the first things sold when risk appetite cracks, and the 780K-share issuance confirms ASTS still partly funds itself in equity — exactly the assumption the market reprices when credit and sentiment tighten together.
+- Impact: More likely to keep bleeding than snap back. A 5.4% gap down in a name already -60% YTD immediately after a +187% revenue quarter says the market is repricing the funding path, not the growth — not a one-day headline spike. Read-through runs through the broad high-beta growth unwind rather than satellite peers specifically. Prior-session volume 17.6M.
+- Horizon: **SHORT_TERM** — the director buy and B. Riley upgrade are genuine bullish signals, but neither is structural enough to offset active dilution plus sector-wide de-risking; expect continued fade.
+- Opportunity cost: Nothing to displace. The insider cluster signal is the **only** Confluence leg that fires — price is far below the 200-SMA and sector momentum is negative — so it cannot reach the required 2-of-4 threshold, and the Confluence rule alone blocks entry. A stop below the Nov 16 low implies ~8-10% risk for a 2:1 target near $29-30, the level it has already failed from twice this month: poor R:R against overhead supply. **Weakest of today's three despite the insider buy. No trade.**
+
+#### Deep dive: NBIS $91.70 -5.39%
+- Catalyst: No verified company-specific catalyst. Nebius has corrected >57% since October and trades near $91.70 against a $222.67 sell-side consensus target. Management updated 2026 revenue guidance to $3.0-3.2B, and Simply Wall St's Nov 19 framing makes execution against that revised outlook the key near-term catalyst. Tickeron's Nov 18 note found *"no verified news or fundamental catalyst found for the drop; the move is likely technical, extending the post-Q3 unwind."* Seeking Alpha ran a bearish "A $45 Billion AI Reckoning Is Coming" piece on Nov 17 citing tightening credit conditions.
+- Why: Neoclouds are the most credit-sensitive leg of the AI trade — they fund GPU fleets with debt underwritten against contracted revenue. As AI-capex confidence cracks and credit tightens, the market marks down terminal value and the financing assumption simultaneously, compounding the de-rating. NBIS is falling with its cohort (CRWV -4.70%, IREN -4.09%, APLD -3.86%) — the neocloud group trading as one factor, not on company news.
+- Impact: Sustained, not a one-day spike. A >57% drawdown from October with no identifiable news is a de-rating, and the peer cohort confirms it is structural to the sector rather than specific to Nebius. Prior-session volume was heavy at 38.2M — being distributed on real size, not drifting on a thin tape. The $222.67 consensus target is stale against this tape and should be discounted, not traded on.
+- Horizon: **SHORT_TERM** — despite the most structural underlying story of the three, the real catalyst (execution vs the $3.0-3.2B outlook) does not land until the next print, and the current sector-rotation phase is against it. Revisit as LONG_TERM only once the neocloud cohort stops making lower lows.
+- Opportunity cost: Nothing displaced. Among today's three this has the most credible eventual long thesis, so if any slot were ever spent in this complex it would be here rather than BE or ASTS — but all three fail the same gate today. Spending one of 3 weekly trades to catch a -57% falling knife ahead of a credit-driven repricing is the textbook violation of Rule 11 (patience > activity). R:R cannot be constructed honestly: there is no nearby structural support to anchor a stop against, so the 2:1 minimum is unverifiable at any sane stop distance. **No trade.**
+
+**Net read: no longs in this complex today.** All three gappers are down-gaps in
+the same unwinding sector, and the one rule that settles it is Rule 9 — follow
+sector momentum. AI-power / AI-infra momentum is decisively negative. Staying
+flat is the position. Research only; no orders placed (STEP 8).
+
+**Notes / data caveats (2026-11-20 07:10 ET run):**
+- **All premarket prices are Alpaca `delayed_sip` (15-minute delay).**
+  `market-open` / `/trade` MUST re-quote before acting on anything above.
+- **`mcp__Apify__apify--rag-web-browser` does not exist in this cloud session.**
+  The Apify connector exposes **`apify--web-search`** and **`apify--web-fetch`**
+  instead; catalyst research used `apify--web-search` (the equivalently-named
+  tool the routine permits). Yahoo block applied as both the `-site:` suffix and
+  `blockedDomains` — **no finance.yahoo.com result was used or cited.**
+- **Apify is flaky this morning:** 1 call timed out at 60s and 1 returned HTTP
+  502 `UPSTREAM_SEARCH_ERROR` (Google backend 500) on first attempt; both
+  succeeded on retry. The BE catalyst query returned only **2 results** —
+  the no-company-news conclusion for BE rests on that thin return plus the
+  peer-tape evidence, not on a positive confirmation of silence.
+- **`scripts/alpaca.sh quote` returns stale/wide premarket quotes** (NVDA showed
+  bid $144.40 / ask $178.29, a 23% spread, timestamped 2026-11-19T21:32Z). Used
+  `gappers-alpaca.sh symbols` snapshots for the tape read instead.
+- **ClickUp still broken** (HTTP 400 `Invalid workspace ID`, per the Nov 19
+  entry — unfixed). Telegram is the working channel.
+- **NEW: Telegram has a 4096-char hard limit and the routine's full deep-dive
+  message now exceeds it.** A single 4223-byte message returned **HTTP 400**, and
+  `scripts/telegram.sh` then fell through to ClickUp, which also failed (400) —
+  so the alert silently went nowhere on the first attempt. Re-sent successfully as
+  **2 parts** (2521 + 1903 bytes, message_ids 402/403). **Action for the operator:
+  `scripts/telegram.sh` should chunk at ~3800 chars rather than fail**, otherwise
+  every run with 4+ deep-dive tickers will lose its notification entirely now that
+  both channels 400 on the same message.

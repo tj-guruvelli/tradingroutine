@@ -1,0 +1,104 @@
+{
+  "scanned_at": "2026-11-20T12:10:00Z",
+  "scanned_at_et": "2026-11-20 07:10 ET",
+  "deep_dive_cap": 5,
+  "universe": "memory/WATCHLIST.md (~60 tickers, synced with config/rules.json watchlist_tiers.immediate)",
+  "filters": {
+    "min_abs_gap_pct": 5.0,
+    "min_price": 3.0,
+    "min_premarket_volume": 50000,
+    "premarket_volume_filter_applied": false,
+    "premarket_volume_note": "Alpaca snapshots carry no distinct premarket-volume field; the volume figure below is the PRIOR completed session's full-day volume, so the >=50000 premarket gate could not be evaluated and was not applied."
+  },
+  "raw_hits_before_filters": 5,
+  "dropped_by_filters": [
+    {"symbol": "AGMH", "price": 0.333, "gap_pct": -8.42, "reason": "price < 3.00"},
+    {"symbol": "WLDS", "price": 1.06, "gap_pct": -7.83, "reason": "price < 3.00"}
+  ],
+  "qualifying_hits": 3,
+  "deep_dive_cap_binding": false,
+  "deep_dive_note": "Only 3 tickers cleared the filters, so all 3 received the full deep dive. The cap of 5 was not binding and no ranks were dropped to quick-scan-only.",
+  "market_context": {
+    "regime": "RISK-OFF — broad AI-complex unwind, all qualifying gappers are DOWN gaps",
+    "driver": "AI trade cracking. NVDA beat on its Nov 18/19 print but sold the news and is -32.6% over 30 days ($216.47 on Oct 20 to ~$146). Morningstar's Nov 20 morning briefing: 'Stock Futures Fall as Tech Rout Intensifies ... investor confidence in the artificial-intelligence trade showed signs of cracking.' CNBC Nov 20: 'Nasdaq falls 2% as Anthropic IPO fails to resuscitate AI trade.'",
+    "premarket_tape": {
+      "SPY": -0.56, "QQQ": -1.41, "NVDA": -2.24, "AMD": -7.03, "MU": -4.81,
+      "CRWV": -4.7, "VRT": -4.27, "IREN": -4.09, "APLD": -3.86, "GEV": -3.21,
+      "SMR": -2.89, "OKLO": -0.14
+    },
+    "data_caveat": "All premarket prices are Alpaca delayed_sip (15-minute delay). market-open / /trade MUST re-quote before acting."
+  },
+  "account_state": {
+    "equity": 100000.0,
+    "cash": 100000.0,
+    "open_positions": 0,
+    "note": "Account is flat, so opportunity cost below is framed against the 3-new-trades-per-week cap, not against displacing an existing holding."
+  },
+  "gappers": [
+    {
+      "rank": 1,
+      "symbol": "BE",
+      "price": 156.3,
+      "prev_close": 168.11,
+      "gap_pct": -7.03,
+      "premarket_volume": null,
+      "prior_session_volume": 16838574,
+      "catalyst": "No company-specific news — Bloom Energy is being sold with the whole AI-power complex in an intensifying tech rout, matching AMD's -7.03% almost exactly.",
+      "headlines": [
+        "Bloom Energy Fuel Cells Delay Stalls Stargate Data Center (Enverus, undated) — flags execution risk against the ~$20B backlog",
+        "Can Bloom Energy (BE) Help AI Data Centers Skip Long Grid Power Waits? (Simply Wall St, 2026-11-20)",
+        "Data Center Power Suppliers Post Backlog and Guidance Updates Alongside a Fuel Cell Deal (PR Newswire, 2026-11-12) — BE closed $209.47, +13.0%"
+      ],
+      "catalyst_detail": "No earnings, filing or company announcement today. BE closed at $209.47 on Nov 12 (+13.0% that session) on a ~$20B product backlog that has grown roughly 2.5x, record FY revenue of $2.02B driven by AI data-center demand, guidance for more than 100% revenue growth in 2026, and a statement that it does not expect to issue additional shares to fund growth. It has given back roughly 25% of that in the eight sessions since, on top of a 26.6% decline in October. Enverus research has flagged fuel-cell delivery delays stalling a Stargate data-center buildout as the main execution risk against the backlog.",
+      "why": "A pure high-beta de-rating, not a news event. NVDA beat on Nov 18/19 but the market sold the news, and the AI-power derivatives are unwinding with it. With no idiosyncratic catalyst, BE is trading as a levered proxy on AI-capex sentiment — it is printing -7.03% against AMD's -7.03%, which is the tell that this is factor exposure rather than anything about Bloom.",
+      "impact": "Sector-wide, so not a mean-reversion setup. The read-through is unambiguous and broad: AMD -7.03%, MU -4.81%, CRWV -4.70%, VRT -4.27%, IREN -4.09%, APLD -3.86%, GEV -3.21%, NVDA -2.24% against QQQ -1.41% and SPY -0.56%. The entire data-center power and AI-infrastructure cohort is down together, and the sector trend is decisively broken rather than one-day dislocated.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Sentiment-driven de-rating with no durable long thesis today; the $20B backlog is a 2027+ revenue story and does nothing to arrest a momentum unwind in progress.",
+      "opportunity_cost": "Account is flat ($100k cash, 0 positions), so nothing gets displaced — the real cost is burning one of the week's 3 trade slots fighting a confirmed downtrend. Strategy Rule 9 (follow sector momentum) and the 200-SMA long-bias filter both block it: AI-power is in its momentum-negative phase, and Rule 10 (exit a sector after 2 failed trades) argues for staying out entirely. On R:R, a 7-10% stop sits at $140-145, so clearing the 2:1 minimum needs a $185+ target — effectively betting on a full retrace to the Nov 12 high mid-rout. Fails the gate. Research only; no trade."
+    },
+    {
+      "rank": 2,
+      "symbol": "ASTS",
+      "price": 24.16,
+      "prev_close": 25.55,
+      "gap_pct": -5.44,
+      "premarket_volume": null,
+      "prior_session_volume": 17550272,
+      "catalyst": "Fresh dilution overhang — a Nov 18 8-K disclosed up to 780,052 Class A shares issuable to Ligado and One Dot Six — landing on an already-broken chart and amplified by the high-beta growth selloff.",
+      "headlines": [
+        "AST SpaceMobile may issue 780K Class A shares (StockTitan 8-K, 2026-11-18)",
+        "Down More Than 60% in 2026, Here Is How You Should Play the Nasty Selloff in AST SpaceMobile Stock (Barchart, 2026-11-18) — Q3 revenue +187.1% YoY to $42.3M",
+        "Why AST SpaceMobile (ASTS) Stock Dropped 12.3% (KoalaGains, 2026-11-16) — closed $28.58",
+        "AST SpaceMobile Upgraded to BUY Rating at B. Riley; Director Buys $619,234.84 in Stock (Reddit/r/ASTSpaceMobile)"
+      ],
+      "catalyst_detail": "Two overlapping pressures. Fundamentally the Q3 2026 print on Nov 9 was strong on growth — revenue up 187.1% year-over-year to $42.3 million — but the stock has kept falling anyway: -12.33% on Nov 16 to $28.58, and now more than 60% down year-to-date. An 8-K filed Nov 18 disclosed that ASTS may issue up to 780,052 Class A shares to Ligado and One Dot Six for certain payments, a fresh dilution overhang. Offsetting that, B. Riley upgraded the name to BUY and a director bought $619,234.84 of stock in the open market.",
+      "why": "Dilution overhang stacked on a broken chart, now compounded by the same risk-off that is hitting every high-beta growth name on this list. Capital-intensive, pre-scale space infrastructure is among the first things sold when risk appetite cracks, and the 780K-share issuance confirms ASTS still partly funds itself in equity — which is exactly the assumption the market reprices when credit and sentiment tighten together.",
+      "impact": "More likely to keep bleeding than to snap back. A 5.4% gap down in a name already -60% YTD immediately after a +187% revenue quarter says the market is repricing the funding path rather than the growth, and that is not a one-day headline spike. Sector read-through runs through the broad high-beta growth unwind rather than satellite peers specifically. Prior-session volume 17.6M.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The director buy and B. Riley upgrade are genuine bullish signals, but neither is structural enough to offset active dilution plus sector-wide de-risking; expect continued fade rather than a durable swing thesis.",
+      "opportunity_cost": "Nothing to displace on a flat account. The insider cluster signal is the only Confluence leg that fires — price is far below the 200-SMA and sector momentum is negative — so it cannot reach the required 2-of-4 indicator threshold, and the Confluence rule alone blocks entry. A stop below the Nov 16 low implies roughly 8-10% risk for a 2:1 target near $29-30, which is the level it has already failed from twice this month: poor-quality R:R against overhead supply. Of today's three, this has the weakest setup despite the insider buy. No trade."
+    },
+    {
+      "rank": 3,
+      "symbol": "NBIS",
+      "price": 91.7,
+      "prev_close": 96.92,
+      "gap_pct": -5.39,
+      "premarket_volume": null,
+      "prior_session_volume": 38230135,
+      "catalyst": "No verified company-specific catalyst — a technical continuation of the post-Q3 neocloud unwind, now more than 57% off its October high as credit conditions tighten against GPU-fleet financing.",
+      "headlines": [
+        "Nebius: A $45 Billion AI Reckoning Is Coming (Seeking Alpha, 2026-11-17) — stock corrected >57% since October as tightening credit conditions bite",
+        "Nebius Group (NBIS) and the $285 Analyst Target (Tickeron, 2026-11-18) — 'No verified news or fundamental catalyst found for the drop; the move is likely technical'",
+        "Did Nvidia Earnings Just Shift Nebius Group's (NBIS) Investment Case? (Simply Wall St, 2026-11-19) — 2026 revenue outlook updated to $3.0-3.2B",
+        "Nebius Group (NBIS) Stock Price, News & Analysis (MarketBeat, 2026-11-20) — consensus PT $222.67"
+      ],
+      "catalyst_detail": "No verified company-specific catalyst. Nebius has corrected more than 57% since October and now trades near $91.70 against a $222.67 sell-side consensus target. Management updated 2026 revenue guidance to $3.0-3.2 billion, and Simply Wall St's Nov 19 framing makes execution against that revised outlook the key near-term catalyst. Tickeron's Nov 18 note on the decline found 'no verified news or fundamental catalyst found for the drop; the move is likely technical, extending the post-Q3 unwind.' Seeking Alpha published a bearish 'A $45 Billion AI Reckoning Is Coming' piece on Nov 17 citing tightening credit conditions.",
+      "why": "Neoclouds are the most credit-sensitive leg of the AI trade: they fund GPU fleets with debt underwritten against contracted revenue. As AI-capex confidence cracks and credit tightens, the market marks down the terminal value and the financing assumption simultaneously, which compounds the de-rating. NBIS is falling with its cohort — CRWV -4.70%, IREN -4.09%, APLD -3.86% — which is the neocloud group trading as one factor rather than on company news.",
+      "impact": "Sustained, not a one-day spike. A greater-than-57% drawdown from October with no identifiable news is a de-rating, and the peer cohort confirms it is structural to the sector rather than specific to Nebius. Prior-session volume was heavy at 38.2M, so this is being distributed on real size, not drifting on a thin tape. The $222.67 consensus target is stale against this tape and should be discounted rather than traded on.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Despite the most structural underlying story of the three, any trade now is short-term: the real catalyst — execution against the $3.0-3.2B outlook — does not land until the next print, and the current sector-rotation phase is against it. Revisit as LONG_TERM only once the neocloud cohort stops making lower lows.",
+      "opportunity_cost": "Nothing displaced on a flat account. Among today's three this has the most credible eventual long thesis, so if any slot were ever spent in this complex it would be here rather than BE or ASTS — but all three fail the same gate today. Spending one of 3 weekly trades to catch a -57% falling knife ahead of a credit-driven repricing is the textbook violation of Rule 11 (patience > activity). R:R cannot be constructed honestly: there is no nearby structural support to anchor a stop against, so the 2:1 minimum is unverifiable at any sane stop distance. No trade."
+    }
+  ]
+}
