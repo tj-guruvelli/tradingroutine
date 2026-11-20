@@ -3056,3 +3056,10 @@ ad-hoc check after the FOMC minutes) for execution once the window opens.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-18`). No market-open or midday run logged in TRADE-LOG today, so this EOD run is the only record for the session; TLN's dated $349-356 limit window (post-FOMC) from Nov 18's handoff has no execution logged. Weekly trade count: 0/3 (week of Nov 16). 95th trading day since launch (Jul 9) with zero entries — 158th+ straight no-trade session, confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow: re-check TLN against the dated $349-356 limit plan if still valid; otherwise continue pre-market re-scan for a candidate clearing the full gate.
+
+### Nov 20, EOD Snapshot (Day 96, Friday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-19`). Pre-market research (Day 96) and four gappers scans (07:10/08:09/09:09/10:09 ET) all logged HOLD, research-only — no market-open or midday execution run logged today, so no candidate was re-evaluated against TLN's dated $349-356 limit plan. Weekly trade count: 0/3 (week of Nov 16). 96th trading day since launch (Jul 9) with zero entries — 159th+ straight no-trade session, confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow: re-check TLN against the dated $349-356 limit plan if still valid; otherwise continue pre-market re-scan for a candidate clearing the full gate.
