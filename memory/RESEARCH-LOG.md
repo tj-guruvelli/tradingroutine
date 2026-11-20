@@ -22518,3 +22518,112 @@ placed (STEP 8).**
 - **`mcp__Apify__apify--rag-web-browser` still does not exist in this session;**
   used `apify--web-search`, the equivalently-named tool the routine permits.
 - **ClickUp still broken** (HTTP 400 `Invalid workspace ID`, unfixed since Nov 19).
+
+
+## 2026-11-20 — Gappers (auto-scan 09:09 ET, cloud)
+
+Run 3 of 4 today. Only **5** symbols cleared the >=5.0% gap / >=$3.00 filters, so
+there are no ranks 6-10 this run — **all 5 got the full deep dive (cap 5)**.
+All five are gap-DOWNS. Composition change vs the 08:09 run: **ASTS dropped off**
+(gap narrowed below 5.0%), **AMKR is new**.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 156.60 | -6.84% | 16.8M* | No fresh news — BMO's Nov 19 upgrade to Outperform ($230 PT, cut from $260) failed to hold and BE gaps down again with the whole AI-power complex |
+| 2 | UMAC | 9.59 | -5.52% | 4.2M* | Microcap drone name giving back its Oppenheimer-initiation pop; Nov 18 securities-claims investigation into drone peer Red Cat adds sector read-through |
+| 3 | NBIS | 91.60 | -5.49% | 38.2M* | No new news; extending a ~43% 30-day neocloud unwind since Q3 guided 2026 revenue to the low end of $3.0-3.4B while raising 2026 capex to ~$27B on data-center delays |
+| 4 | CRWV | 42.54 | -5.28% | 78.3M* | No fresh news; balance-sheet de-rating — ~$35.6B debt, ~16% debt yield vs 7.9% cost of debt — despite Q3 revenue +168% and ~$132.5B backlog; Barclays at Hold |
+| 5 | AMKR | 32.35 | -5.22% | 3.7M* | **Zero** fresh company news (date-bounded 3-day search returned no results) — pure semis/AI sympathy drift on BELOW-average volume |
+
+\* prior-session **consolidated** volume, not premarket volume — `gappers-alpaca.sh`
+does not populate a premarket-volume field, so that filter could not be applied.
+
+#### Tape context — one macro event, not five catalysts
+
+| Index | Nov 19 open | Nov 19 close | Nov 19 intraday | Nov 20 premkt | Gap% |
+|---|---|---|---|---|---|
+| SPY | 737.54 | 715.84 | **-2.94%** | 708.21 | **-1.07%** |
+| QQQ | 671.23 | 645.095 | **-3.89%** | 632.00 | **-2.03%** |
+
+MarketWatch's Nov 19 live coverage: the US market "closed sharply lower Thursday
+in a broad selloff, as investors scooped up shares of artificial-intelligence
+company Anthropic" in its IPO debut (priced above expectations; ~$1.5T implied
+valuation per UCapital). That is the mechanism — a mega-IPO absorbing AI capital
+out of the incumbent AI-infra complex, continuing into this morning.
+
+**The key read: today's five gappers are down 5.2-6.8%, i.e. 2.6x-3.4x the QQQ
+gap. This is high-beta amplification of a single macro/funding event, not five
+independent company stories.** Four of five are the same AI-infra/power trade.
+
+Volume tells against a capitulation low. Nov 19 IEX volume vs 20d IEX average,
+like-for-like: UMAC ~2.0x, CRWV ~1.8x, BE ~1.4x, NBIS ~1.1x, **AMKR ~0.4x**.
+Orderly distribution, no climax flush — so the de-rating is not finished, and
+there is no seller-exhaustion signal to trade against.
+
+#### Rulebook screen — ALL FIVE FAIL, zero entries qualify
+
+- All 5 are gap-DOWNS; strategy is long-momentum and "follow sector momentum"
+  forbids buying into an actively de-rating complex.
+- All 5 fail 2:1 R:R under the mandated 10% trailing stop — each needs a ~+20%
+  target, i.e. a full round-trip above its prior close. (Same structural
+  10%-stop/2:1 conflict logged in the 07:10 run.)
+- 4 of 5 are the same AI-infra trade — any entry stacks correlated risk against
+  the >0.75 correlation gate.
+- Account: equity $100,000, cash 100%, **0 open positions**, weekly trades 0/3
+  (week of Nov 16). `balance_asof: 2026-11-19`.
+
+**Decision: HOLD. No orders — this routine is research-only.**
+
+#### Deep dive: BE $156.60 -6.84%
+- Catalyst: No negative company-specific event. On Nov 19 BMO upgraded BE to Outperform while cutting its PT to $230 from $260, and IBD reported the stock reversed LOWER on that upgrade the same day. It now gaps a further -6.84% from $168.11. Robinhood (Nov 20) attributes it to "a broader sell-off in technology and artificial intelligence-linked stocks". A Benzinga snippet claiming BE was +6.63% premarket on an Anthropic-IPO-driven AI-power rebound directly contradicts Alpaca's 09:09 ET snapshot and was DISCARDED in favour of the approved source.
+- Why: Pure beta — BE is the highest-multiple AI-power proxy on the watchlist, so it absorbs the most selling when the complex de-rates. The sharper tell is that a genuine analyst upgrade was sold into: when good news cannot hold a bid, supply is in control and the marginal buyer has left.
+- Impact: Complex-wide de-rating continuation, but only ~1.4x average volume — orderly distribution, not a climax flush, which argues there is more to come. Strongest and most symmetric sector read-through of the group; BE is the largest mover of the five.
+- Horizon: SHORT_TERM — headline-and-beta driven with no durable thesis; the upgrade already failed to hold, so nothing structural to carry past the week.
+- Opportunity cost: Displaces no holding (100% cash). Spends one of 3 weekly slots on a counter-trend catch in a sector being actively de-rated. R:R fails outright — a 10% trailing stop from $156.60 sits near $141, so 2:1 demands a ~$188 target, above the pre-selloff $168 close. No one-day bounce delivers that.
+
+#### Deep dive: UMAC $9.59 -5.52%
+- Catalyst: No new disclosure. UMAC continues unwinding its recent Oppenheimer initiation pop (Outperform, $30 PT) — an analyst-sponsored move with no earnings floor. A Nov 18 LD Micro notice flags potential securities claims being gathered against drone peer Red Cat Holdings, tainting the small-cap drone group. UMAC also carries a documented history of equity offerings diluting rallies.
+- Why: A low-float microcap whose rally rested on analyst sponsorship rather than cash flow unwinds fastest when risk appetite drops — no valuation anchor to defend. The Red Cat investigation gives a group-level reason to cut drone exposure, and the dilution record means holders expect strength to be sold into an offering.
+- Impact: ~2.0x average volume is the highest conviction of the five, so this is real position-reduction, not drift — but in a $9.59 microcap thin liquidity exaggerates both the drop and any bounce. Read-through runs to the drone group (Red Cat), not AI-infra, making UMAC the one name here moving partly on its own reasons.
+- Horizon: SHORT_TERM — unwinding an initiation pop in a microcap with dilution history and a peer under investigation; expect continued fade.
+- Opportunity cost: Nothing to displace. ATR sizing on a microcap this volatile either demands a stop far wider than 10% or a position too small to matter; the 20%-of-equity cap is moot when liquidity is the real limit. At a 10% stop (~$8.63), 2:1 needs ~$11.51 — above the $10.15 prior close, achievable only on a full drone-group reversal the Red Cat overhang argues against. Worst risk-adjusted candidate of the five.
+
+#### Deep dive: NBIS $91.60 -5.49%
+- Catalyst: Nothing fresh fired today — continuation of a post-Q3 de-rating. At Q3, Nebius guided 2026 revenue to the LOW end of its $3.0-3.4B range while simultaneously raising 2026 capex to ~$27B, citing data-center build delays. Less revenue, more spend, slower delivery. The stock is now >57% off its October high and ~43% lower over 30 days; today's -5.49% is that trend continuing under the Nov 19 risk-off.
+- Why: A guidance reset that cuts revenue while raising capex directly reprices the DCF — the cash-burn window widens and payback moves further out. In a tightening-credit tape a capex-heavy, pre-profit neocloud loses its multiple first, and the Anthropic IPO absorbing AI capital gave holders a concrete reason to fund the new issue by selling the incumbent.
+- Impact: Only ~1.1x average volume — passive drift and sympathy selling, no fresh capitulation. A stock already -57% from its high WITHOUT a climax-volume flush points to further grind lower. Direct read-through to CRWV, the other neocloud, gapping -5.28% on the same thesis.
+- Horizon: LONG_TERM — the driver is a structural guidance reset, not a headline. But it is structurally **negative**: LONG_TERM marks the durability of the de-rating, not a reason to own it.
+- Opportunity cost: No holding to displace. Would spend a weekly slot buying a name whose own guidance says revenue is tracking to the low end while capex rises — the opposite of the confluence requirement, in a sector already showing consecutive failed down-days. A 10% stop from $91.60 sits near $82.44, so 2:1 needs ~$110 — above the $96.92 prior close, requiring a ~20% retrace inside a -57% downtrend. Does not clear the minimum.
+
+#### Deep dive: CRWV $42.54 -5.28%
+- Catalyst: No new disclosure. CoreWeave's problem is its capital structure, not its demand: Q3 revenue grew ~168% and backlog stands near $132.5B, yet the market is repricing ~$35.6B of debt now carrying a ~16% debt yield against a 7.9% cost of debt. Markets Insider's standing headline is "CoreWeave's AI Growth Faces Mounting Debt"; Barclays carries a Hold. Today's -5.28% is that repricing continuing through the broad selloff.
+- Why: When a leveraged growth name's debt yield (~16%) runs far above its coupon (7.9%), the credit market is pricing real default risk — and equity, as the residual claim, de-rates even while revenue compounds. The Anthropic IPO pulling AI capital into a new, unlevered issue sharpened the contrast: investors can own AI exposure without CRWV's balance sheet.
+- Impact: ~1.8x average volume, the second-most-participated move of the five — genuine institutional de-risking, not a headline spike. Unlikely to mean-revert cleanly because a credit repricing resolves over quarters, not days. Direct read-through to NBIS on the same group thesis.
+- Horizon: LONG_TERM — a capital-structure repricing at ~$35.6B debt and a ~16% debt yield is structural and slow-resolving; again structurally **negative**, marking the overhang's durability, not a swing-long thesis.
+- Opportunity cost: Nothing to displace. Would spend a weekly slot on the most levered name in a de-rating sector while the credit market explicitly prices distress — unacceptable under the risk gate regardless of backlog. A 10% stop from $42.54 sits near $38.29, so 2:1 requires ~$51, well above the $44.91 prior close. CRWV and NBIS are the two declines least likely to reverse, so even a relative-strength argument favours neither.
+
+#### Deep dive: AMKR $32.35 -5.22%
+- Catalyst: A date-bounded search of Nov 17-20 returned **literally zero results** for AMKR — there is no company-specific catalyst behind this gap. Fundamentally it is the strongest business of the five: largest US-headquartered OSAT, 83% of 2025 revenue from advanced packaging, record $1.9B revenue in Q2 2026 and ~$1.99B in Q3 2026, long-term agreements with TSMC and NVIDIA, co-packaged optics (CPO) added to the platform. It traded BELOW its 20-day average volume on Nov 19 and still gapped -5.22%.
+- Why: Advanced packaging is the physical bottleneck for AI accelerators, so AMKR is indexed to the same AI-capex narrative being sold — it falls by association through semis-basket and ETF flows, not on any judgement about its order book. The below-average volume is the tell: mechanical, passive selling with no informed seller stepping up.
+- Impact: The one name here that reads as a one-day sympathy dislocation likely to mean-revert rather than a durable de-rating. A -5.22% gap on 0.4x average volume with no news is the signature of a sympathy move, and AMKR's advanced-packaging backlog rests on foundry/accelerator demand this rotation does not touch. Read-through runs the other way for AMKR: it is being dragged by the neoclouds and AI-power despite a different, contract-backed revenue base.
+- Horizon: SHORT_TERM — no company catalyst and below-average volume; a dislocation that should close when the complex stabilises.
+- Opportunity cost: No holding to displace. On merit AMKR displaces the other four — best-quality business, only decline that looks genuinely unjustified — yet it still fails the gate, because buying a -5.2% gap-down in an actively selling sector is counter-trend and violates "follow sector momentum". R:R is the hard block: a 10% stop from $32.35 sits near $29.12, so 2:1 requires ~$38.80 (+20%), far above the $34.13 prior close. **A mean-reversion bounce simply cannot pay 2:1 under a 10% trailing stop** — AMKR is the cleanest illustration yet of the flagged structural conflict: the right read and still no admissible trade. Re-check on a confirmed reversal with volume.
+
+#### Data / tool notes (09:09 ET run)
+- `alpaca.sh quote` returned **stale Nov 19 16:00 ET closing quotes with nonsensical spreads** in premarket (NBIS ask=0, AMKR ask=0, BE bid/ask 161.76/177.56). The `gappers-alpaca.sh` snapshot values are authoritative and were used throughout. Worth fixing the wrapper to prefer the snapshot endpoint premarket.
+- `alpaca.sh bars` uses `feed=iex`, so absolute volumes are a fraction of consolidated. Volume ratios above are computed like-for-like (Nov 19 IEX vs 20d IEX average) and are valid; they are NOT comparable to the scanner's consolidated volume column.
+- **Yahoo block held.** A `sg.finance.yahoo.com` result and a `finance.yahoo.com` result both surfaced unprompted on the CRWV query despite the exclusion suffix — both DISCARDED, facts re-sourced from Markets Insider, Tickeron, IBD, Robinhood, MarketWatch and Alpaca. (The CRWV Yahoo snippet did hint at an "Nvidia leadership shock" angle; not cited, as no clean non-Yahoo source confirmed it.)
+- Apify `web-search`/`web-fetch` **timed out on 3 of 11 calls**; Benzinga returned **HTTP 403 to WebFetch** (the documented fallback). Catalysts were sourced via date-bounded Apify searches instead — recommend switching the STEP 2 fallback from WebFetch-to-Benzinga to an Apify fetch, which handles the bot protection.
+- Undated generic searches ("TICKER stock news today catalyst") returned mostly **stale index content** (2026-03, 2026-07, 2026-08 articles). Date-bounding with `dateFrom` was what surfaced today's actual tape. Recommend adding `dateFrom` to the STEP 2 query spec.
+- **Telegram STEP 6 hit a hard 400 on first send: the full deep-dive message was
+  5,887 chars vs Telegram's 4,096-char `sendMessage` cap.** `telegram.sh` reported
+  only `curl: (22) ... error: 400` and fell through to ClickUp, which failed too
+  (still `Invalid workspace ID`, unfixed since Nov 19) — so **the run would have
+  notified nobody** had it not been caught. Resent split on blank-line boundaries
+  into `[1/2]`/`[2/2]` chunks of ~3.1k and ~2.7k chars: both delivered
+  (message_id **407**, **408**). This is **structural, not a one-off** — STEP 6
+  mandates the full 4-line deep-dive block for five tickers plus a quick-scan
+  tail, which will exceed 4,096 chars on essentially every multi-hit run.
+  **Recommend `telegram.sh` auto-chunk at ~3,800 chars** (and surface the API
+  `description` field rather than just curl's exit code, which would have named
+  the cause immediately).

@@ -1,186 +1,116 @@
 {
-  "scanned_at": "2026-11-20T13:09:00Z",
-  "scan_time_et": "08:09",
-  "run_label": "gappers-cloud 08:00 ET slot",
+  "scanned_at": "2026-11-20T14:09:00Z",
+  "scan_time_et": "09:09",
+  "run": "gappers-cloud 09:00 ET (3rd of 4 today)",
   "deep_dive_cap": 5,
-  "universe_scanned": "memory/WATCHLIST.md (full)",
-  "filters": {
-    "min_abs_gap_pct": 5.0,
-    "min_price": 3.0,
-    "min_premarket_volume": 50000,
-    "note": "gappers-alpaca.sh returns a `volume` field that is PRIOR-SESSION (Nov 19) volume, not premarket volume. The premarket_volume filter could therefore not be applied; premarket_volume is left null and the real figure is reported as volume_prev_session."
-  },
-  "data_caveats": [
-    "All prices are Alpaca delayed_sip (15-minute delay). market-open / /trade MUST re-quote before acting.",
-    "BE's premarket print ($156.9033) is byte-identical to the 07:10 ET run, i.e. no new trade in ~1h of thin premarket. Treat as a stale last print, not a live quote.",
-    "scripts/size.mjs reports a stale `price` field (BE $173.07, NBIS $129.46, ASTS $32.30 vs premarket $156.90 / $91.74 / $24.27). Its atr14 values are from real daily bars and were used; its price field was NOT.",
-    "200-SMA and RSI(14) computed locally from Alpaca 1Day bars (264 bars). Cross-check: computed SPY 200-SMA $732.67 / RSI 31.5 reproduces the 06:02 ET pre-market run exactly.",
-    "No finance.yahoo.com result was used or cited; Yahoo blocked via both -site: suffix and blockedDomains on every query."
-  ],
-  "tape_context": {
-    "SPY": {"price": 709.66, "gap_pct": -0.87, "sma200": 732.67, "pct_vs_200sma": -3.14, "rsi14": 31.5},
-    "QQQ": {"price": 633.85, "gap_pct": -1.73, "sma200": 682.97, "pct_vs_200sma": -7.19, "rsi14": 33.7},
-    "deterioration_vs_0617_et": "SPY -0.29% -> -0.87%, QQQ -1.03% -> -1.73%: the tape got worse into the open, it did not stabilise.",
-    "leaders": {"NVDA": -3.18, "AMD": -6.31},
-    "only_green": {"XLU": 0.62},
-    "sector_reads": {"XLK": -2.39, "XLE": -0.44, "IWM": -0.28},
-    "regime": "Benchmark below its 200-SMA, VIX ~29.5, defensives the only bid. Reads as the Recession/defensive phase of TRADING-STRATEGY.md's rotation table (favored: Utilities, REITs, Staples) — no AI-infra or growth name aligns with the current phase."
-  },
-  "rulebook_screen": {
-    "verdict": "ALL FIVE FAIL. Zero entries qualify.",
-    "confluence_rule": "Needs >=2 of {VWAP, RSI<30, 200-SMA, insider} plus 1 catalyst. Every one of the five trades 29.9%-66.3% BELOW its 200-SMA, so the 200-SMA long-bias leg fails outright for all five. Only ASTS (RSI 29.9) fires a single oversold leg; BE 38.0, CRWV 36.6, NBIS 31.8, UMAC 30.8 are not oversold. Max legs achieved by any name = 1 of the 2 required.",
-    "atr_vs_stop_rule": "1-ATR(14) is 13.7%-18.2% of the current premarket price for all five (BE 13.7%, CRWV 15.0%, UMAC 16.6%, ASTS 16.5%, NBIS 18.2%). The mandated 10% trailing stop therefore sits INSIDE one average day's range on every name, and the -7% manual cut is ~0.4-0.5 ATR — a coin-flip against ordinary noise. Clearing the 2:1 R:R minimum off a 1-ATR stop would need a +27% to +36% move, against a benchmark in a confirmed downtrend.",
-    "conclusion": "Rule 9 (follow sector momentum) and Rule 11 (patience > activity) both say flat. Staying 100% cash is the position."
-  },
-  "account_state": {
-    "equity": 100000.0,
-    "cash": 100000.0,
-    "positions": 0,
-    "open_orders": 0,
-    "deployed_pct": 0.0,
-    "note": "0% deployed vs the 75-85% rule — 96th consecutive session out of compliance. Nothing to displace, so opportunity cost below is framed against the 3-new-trades-per-week budget, not against existing holdings."
+  "hits": 5,
+  "note": "Only 5 symbols cleared the >=5.0% gap / >=$3.00 filters, so ranks 6-10 do not exist this run. All 5 are gap-DOWNS. The 'volume' field from gappers-alpaca.sh is prior-session consolidated volume, NOT premarket volume - the premarket_volume filter could not be applied.",
+  "macro_context": {
+    "driver": "Nov 19 (Thu) broad US selloff with capital rotating into Anthropic's IPO debut; continuation into Nov 20 premarket.",
+    "spy": {"nov19_open": 737.54, "nov19_close": 715.84, "nov19_intraday_pct": -2.94, "nov20_premarket": 708.21, "gap_pct": -1.07},
+    "qqq": {"nov19_open": 671.23, "nov19_close": 645.095, "nov19_intraday_pct": -3.89, "nov20_premarket": 632.0, "gap_pct": -2.03},
+    "read": "All 5 gappers are AI-infra / AI-power / semis names gapping -5.2% to -6.8%, i.e. 2.6x-3.4x the QQQ gap. This is high-beta amplification of ONE macro event, not five idiosyncratic catalysts.",
+    "sources": ["MarketWatch Nov 19 live coverage", "UCapital Nov 19", "Alpaca bars (SPY/QQQ)"]
   },
   "gappers": [
     {
-      "rank": 1,
-      "symbol": "BE",
-      "price": 156.9033,
-      "prev_close": 168.11,
-      "gap_pct": -6.67,
-      "premarket_volume": null,
-      "volume_prev_session": 16838574,
-      "atr14": 21.5351,
-      "atr_pct_of_price": 13.7,
-      "sma200": 223.85,
-      "pct_vs_200sma": -29.91,
-      "rsi14": 38.0,
-      "catalyst": "BMO Capital upgraded Bloom Energy to Outperform from Market Perform with a $230 target (cut from $260), yet the stock still gaps down ~6.7% as AI-power and data-center infrastructure names are sold indiscriminately.",
+      "rank": 1, "symbol": "BE", "price": 156.6032, "prev_close": 168.11, "gap_pct": -6.84,
+      "volume": 16838574, "volume_note": "prior-session consolidated; Nov 19 IEX volume ~1.4x its 20d IEX average",
+      "catalyst": "No fresh company news - BMO's Nov 19 upgrade to Outperform ($230 PT, cut from $260) failed to hold and BE gaps down again with the whole AI-power complex.",
       "headlines": [
-        "BMO Capital Upgrades Bloom Energy (BE) Stock — TipRanks / Quantisnow, Nov 19-20",
-        "Why Is Bloom Energy (BE) Stock Down -4.78% Today? — Tickeron, Nov 18: 'renewed wave of selling in AI-power and data-center infrastructure stocks, with no fresh company announcement behind today's leg lower'",
-        "Bloom Energy Shares Gain 13% in Data Center Power deal — StockTitan, Nov 12: NTT DATA to deploy 900 MW of Bloom fuel cells, first shipments 2027"
+        "Bloom Energy Stock, AI Power Play, Has Room To Run - Investor's Business Daily, 2026-11-19",
+        "Bloom Energy Corp (NYSE:BE) stock fell as a broader sell-off in technology and AI-linked stocks weighed on sentiment - Robinhood, 2026-11-20"
       ],
-      "catalyst_detail": "There is a genuinely bullish company-specific catalyst in hand and it is not working. BMO Capital upgraded BE to Outperform from Market Perform overnight (dated Nov 19-20) with a $230 price target, though it cut that target from $260. This follows a strong Q3 2026 — record revenue of $1.24B, up 138% year on year, with full-year 2026 guidance raised to $4.4-4.6B of revenue and $3.10-3.40 non-GAAP EPS — and a Nov 12 announcement that NTT DATA will deploy 900 MW of Bloom fuel-cell power across global data-center projects, with initial shipments in 2027. Total current backlog is ~$20B. Tickeron's Nov 18 note on an earlier leg lower found 'no fresh company announcement behind today's leg lower,' attributing it to 'a renewed wave of selling in AI-power and data-center infrastructure stocks.' Despite all of that, BE closed at $217.77 on the Q3 print (down 8.7% on the day), and is now $156.90 premarket — roughly 28% below that post-earnings close in about a week.",
-      "why": "The mechanism is a multiple reset, not an earnings problem. BE's fundamentals improved and its sell-side rating improved; what fell is what the market will pay for AI-datacenter-linked growth. The Simply Wall St narrative frames the valuation problem precisely — even at US$192 the price required roughly US$12B of 2028 revenue against a company guiding $4.4-4.6B for 2026. When the market stops underwriting that terminal growth, good news cannot hold the tape. A down-gap on an upgrade day is the single cleanest read available this morning that AI-power supply is being de-rated as a factor.",
-      "impact": "Sustainable direction, and the sector read-through is unambiguous. Prior-session volume was 16.8M — real distribution, not a thin tape. Peers confirm it is a factor move rather than company news: NVDA -3.18%, AMD -6.31%, IREN -4.53%, APLD -4.46%, XLK -2.39%, with XLU (+0.62%) the only green ticker on the board. The tape also deteriorated into the open rather than stabilising (SPY -0.29% at 06:17 ET to -0.87% now; QQQ -1.03% to -1.73%). The caveat: BE's premarket print is byte-identical to the 07:10 ET run, so $156.90 is a stale last print in thin premarket, not a live quote — the open could reprice it materially either way.",
+      "catalyst_detail": "There is no negative company-specific event. On Nov 19 a Wall Street skeptic (BMO) upgraded BE to Outperform while cutting its price target to $230 from $260, and IBD reported the stock reversed LOWER on that upgrade the same day. It now gaps down a further 6.84% from $168.11 to $156.60. Robinhood's Nov 20 note attributes the decline to 'a broader sell-off in technology and artificial intelligence-linked stocks'. A Benzinga snippet claimed BE was +6.63% premarket on the Anthropic IPO sparking an AI-power rebound; that directly contradicts Alpaca's 09:09 ET snapshot of -6.84% and was DISCARDED in favour of the approved Alpaca source.",
+      "why": "Pure beta. BE is the highest-multiple AI-power/fuel-cell proxy on the watchlist, so it absorbs the most selling when the AI complex de-rates. The more telling mechanism is that a genuine analyst UPGRADE was sold into - when good news cannot hold a bid, supply is in control and the marginal buyer has left.",
+      "impact": "Reads as a continuation of a complex-wide de-rating rather than a one-day headline spike, but the volume does not support a capitulation call: Nov 19 traded only ~1.4x its 20d average. Orderly distribution, not a climax flush, which argues the de-rating is not finished. Sector read-through is strong and symmetric - all four other gappers today are the same AI-infra/power/semis trade, and BE is the largest mover of the five.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "BE has the best underlying story of the five — raised guidance, a 900 MW contract, a $20B backlog, a fresh upgrade — but LONG_TERM requires the catalyst to align with the current sector-rotation phase, and it does not: the tape reads Recession/defensive (Utilities, REITs, Staples favored) while BE trades as AI-infra beta. A structural thesis fighting its own sector's momentum is a SHORT_TERM instrument.",
-      "opportunity_cost": "Nothing is displaced — the account is 100% cash with 0 positions — so the real cost is one of only 3 new trades per week spent fighting Rule 9. Within today's own list BE is the best-ranked name and the only one with a positive catalyst, so if any slot were ever spent here it would be this one over CRWV/NBIS/UMAC/ASTS. It still cannot be sized honestly: ATR(14) is $21.54, or 13.7% of price, so the mandated 10% trailing stop sits inside a single average day's range and the -7% manual cut is about a third of one ATR. Clearing 2:1 R:R off a 1-ATR stop demands a ~27% advance while the benchmark is 3.1% below its own 200-SMA. Confluence also fails on its own: price is 29.9% below the 200-SMA and RSI is 38.0, so zero of the two required indicator legs fire. No trade."
+      "horizon_reasoning": "Headline-and-beta driven with no durable thesis in the tape - the BMO upgrade already failed to hold, so there is nothing structural to carry past the week.",
+      "opportunity_cost": "The account is 100% cash with zero open positions, so this displaces no existing holding. What it would actually spend is one of 3 weekly trade slots (0/3 used, week of Nov 16) on a counter-trend catch in a sector the market is actively de-rating - directly against the rulebook's 'follow sector momentum'. It also cannot clear the 2:1 R:R minimum at a sane stop: the mandated 10% trailing stop on a $156.60 entry sits near $141, so 2:1 demands a ~$188 target (+20%), i.e. a full recovery above the pre-selloff $168 close, which no one-day bounce delivers. Fails the gate on both momentum and R:R."
     },
     {
-      "rank": 2,
-      "symbol": "CRWV",
-      "price": 42.48,
-      "prev_close": 44.91,
-      "gap_pct": -5.41,
-      "premarket_volume": null,
-      "volume_prev_session": 78285432,
-      "atr14": 6.353,
-      "atr_pct_of_price": 15.0,
-      "sma200": 88.18,
-      "pct_vs_200sma": -51.82,
-      "rsi14": 36.6,
-      "catalyst": "No fresh company news; CoreWeave keeps de-rating on balance-sheet risk — ~$35.6B of debt against a 16% debt yield and 7.9% cost of debt — even as Q3 revenue grew 168% and backlog rose to ~$132.5B.",
+      "rank": 2, "symbol": "UMAC", "price": 9.59, "prev_close": 10.15, "gap_pct": -5.52,
+      "volume": 4235624, "volume_note": "prior-session consolidated; Nov 19 IEX volume ~2.0x its 20d IEX average - the highest conviction of the five",
+      "catalyst": "Microcap drone name giving back its Oppenheimer-initiation pop, with a securities-claims investigation into drone peer Red Cat Holdings (Nov 18) adding sector read-through.",
       "headlines": [
-        "CoreWeave: 16% Debt Yield, 7.9% Cost Of Debt — Stockcircle, Nov 18; Q3 revenue +168%, trading at 2.25x forward FY26 sales",
-        "CoreWeave earnings: Debt and AI spending in focus — CNBC, Nov 10: $35.6B debt, $5.5B cash, $104.2B backlog as of Q2",
-        "Big Take: CoreWeave And The Fragile AI Economy — Bloomberg: debt cost spiked to 16% on high-interest borrowing",
-        "CRWV Stock: Is the CoreWeave Sell-Off a Buying Opportunity — CMC Markets, Oct 29: -32% in October alone as neocloud debt concerns came into focus"
+        "INVESTIGATION: SueWallSt Notifies Investors of Potential Securities Claims Involving Red Cat Holdings, Inc. - LD Micro, 2026-11-18",
+        "Unusual Machines (UMAC) PT Raised to $40 at Roth/MKM - StreetInsider",
+        "Unusual Machines Reveals Stock Offering - StocksToTrade (prior dilution event)"
       ],
-      "catalyst_detail": "No company-specific event drove this gap. The operating business is growing hard — Q3 revenue of $5.1B, up 167.9% year on year, revenue backlog of roughly $132.5B (up from $104.2B at Q2), a year-end target above 1.85 GW of active power, and a $128M operating profit. What the market is repricing is the financing: CoreWeave carried approximately $35.6B of total debt against $5.5B of cash as of June 30, a 7.9% cost of debt and a 16% debt yield, and a $626M net loss. Bloomberg's 'Big Take: CoreWeave And The Fragile AI Economy' frames the high-interest borrowing as existential. The de-rating is well advanced: the stock lost nearly 32% in October alone, traded near $50 on Nov 17-18, closed $44.91 on Nov 19, and is $42.48 premarket.",
-      "why": "Neoclouds are the most credit-sensitive leg of the AI trade: they fund GPU fleets with debt underwritten against contracted revenue. When AI-capex confidence cracks and credit tightens, the market marks down the terminal value and the financing assumption at the same time, so the de-rating compounds — a growing backlog does not help if the market doubts the cost of the capital needed to serve it. At a 16% debt yield the market is pricing meaningful refinancing risk, not a growth story.",
-      "impact": "Sustained, not a one-day spike. Prior-session volume of 78.3M is very heavy and the stock is 51.8% below its 200-SMA — a completed de-rating, not a dip. The cohort moves as one factor: NBIS -5.34%, IREN -4.53%, APLD -4.46% this morning, which confirms the move belongs to the sector rather than to CoreWeave. Read-through is negative for the whole GPU-leasing complex and, one step out, for BE as a power supplier into the same capex.",
+      "catalyst_detail": "No new company-specific disclosure today. UMAC is continuing to unwind the pop from its recent Oppenheimer initiation (Outperform, $30 PT), a move that was analyst-sponsored rather than earnings-driven and therefore had no fundamental floor. Compounding it, a Nov 18 notice on LD Micro flags potential securities claims being gathered against drone peer Red Cat Holdings, which taints sentiment across the small-cap drone group. UMAC also has a documented history of equity offerings diluting rallies.",
+      "why": "A low-float microcap whose rally was built on analyst sponsorship, not cash flow, unwinds fastest when risk appetite drops - there is no valuation anchor to defend. The Red Cat investigation supplies a group-level reason to reduce drone exposure, and the dilution track record means holders expect any strength to be sold into an offering.",
+      "impact": "The ~2.0x volume ratio is the strongest of the five, so this move has real participation rather than drift - but in a $9.59 microcap that cuts both ways: thin liquidity exaggerates both the drop and any bounce. Reads as a genuine position-reduction, not a headline blip. Read-through is to the small-cap drone group (Red Cat) rather than to the AI-infra complex, making UMAC the one name here moving for partly its own reasons.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The driver is a credit-cycle repricing with no resolution date, which makes it the opposite of a tradeable structural catalyst — there is nothing scheduled to stop it. Revisit only once the neocloud cohort stops making lower lows.",
-      "opportunity_cost": "Nothing displaced (zero positions). Within today's list CRWV ranks second on gap size but last on thesis quality for a long: it is the only name whose problem is its balance sheet rather than its multiple, so a slot spent here would be strictly worse than the same slot spent on BE. It fails every gate independently — 51.8% below the 200-SMA and RSI 36.6 means zero of the two required confluence legs fire, and with ATR(14) at $6.35 (15.0% of price) there is no nearby structural support to anchor a stop against, so the 2:1 R:R minimum is unverifiable at any sane stop distance. No trade."
+      "horizon_reasoning": "Unwinding an analyst-initiation pop in a microcap with a dilution history and a peer under securities investigation - no structural catalyst, expect continued fade.",
+      "opportunity_cost": "Nothing to displace (zero positions, 100% cash). The binding cost is a weekly trade slot plus the position-sizing math: ATR-based sizing on a $9.59 microcap this volatile would either demand a stop far wider than 10% or a position too small to matter, and the 20%-of-equity cap is irrelevant when the real limit is UMAC's liquidity. At a 10% trailing stop (~$8.63) the 2:1 minimum needs ~$11.51, above the $10.15 prior close - achievable only if the whole drone group reverses, which the Red Cat overhang argues against. Worst risk-adjusted candidate of the five."
     },
     {
-      "rank": 3,
-      "symbol": "NBIS",
-      "price": 91.74,
-      "prev_close": 96.92,
-      "gap_pct": -5.34,
-      "premarket_volume": null,
-      "volume_prev_session": 38230135,
-      "atr14": 16.7317,
-      "atr_pct_of_price": 18.2,
-      "sma200": 179.72,
-      "pct_vs_200sma": -48.95,
-      "rsi14": 31.8,
-      "catalyst": "No new company news; Nebius is extending a ~43% 30-day slide that began when Q3 pushed 2026 revenue guidance to the low end of $3.0-3.4B while raising 2026 capex to roughly $27B on data-center delays.",
+      "rank": 3, "symbol": "NBIS", "price": 91.6, "prev_close": 96.92, "gap_pct": -5.49,
+      "volume": 38230135, "volume_note": "prior-session consolidated; Nov 19 IEX volume only ~1.1x its 20d IEX average - the move is drift, not panic",
+      "catalyst": "No new news; extending a ~43% 30-day neocloud unwind that began when Q3 guided 2026 revenue to the low end of $3.0-3.4B while raising 2026 capex to ~$27B on data-center delays.",
       "headlines": [
-        "Nebius Group (NBIS) Shares Slide -43% in 30 Days Following Earnings and Guidance Update — Tickeron, Nov 20 (~50 min before this scan): $171 to below $97 on a softer outlook and higher spending plans",
-        "Nebius Q3 2026 revenue $980.8M, up 571% YoY; FY26 guidance cut to low end of $3.0-3.4B range — Tickerstar, Nov 12",
-        "2026 capex forecast rises to ~$27B; 2027 revenue guidance $12-13B — Cazenove",
-        "Did Nvidia Earnings Just Shift Nebius Group's (NBIS) Investment case — Simply Wall St, Nov 19: execution against the revised outlook is the key near-term catalyst"
+        "Nebius Group (NBIS) Investment Themes - TickerBell",
+        "Nebius Group NBIS Jumps As AI Contract Fuels Volatile Trading - StocksToTrade, 2026-08-12 (prior-cycle context)"
       ],
-      "catalyst_detail": "The gap is continuation, not news. Nebius reported Q3 2026 revenue of $980.8M, up 571% year on year, with adjusted EBITDA turning positive — but guided 2026 revenue to the low end of its $3.0-3.4B range because of data-center delays, while raising 2026 capex to approximately $27B and setting 2027 revenue guidance at $12-13B. The stock fell roughly 17% on that print. Tickeron, in a note published about 50 minutes before this scan, measures the damage since: down roughly 43% in 30 days, from about $171 to below $97. Simply Wall St's Nov 19 piece makes execution against the revised 2026 outlook the key near-term catalyst — which means the next real information arrives at the next print, not today. MarketBeat still shows a $222.67 consensus target against a $96.92 close; that target is stale against this tape and should be discounted, not traded on.",
-      "why": "Guiding revenue down while guiding capex up is the single worst combination for a capital-intensive growth name: it lengthens the payback period and raises the financing requirement in the same breath. The market responds by cutting the multiple and raising the discount rate together. Layered on top is the same credit-sensitivity that is hitting CRWV, so Nebius is being sold both for its own guidance reset and as a member of the neocloud factor.",
-      "impact": "Sustained. A 43% 30-day drawdown on 38.2M prior-session shares is distribution on real size, and at 49.0% below its 200-SMA the de-rating is structural rather than a headline spike. The peer cohort (CRWV -5.41%, IREN -4.53%, APLD -4.46%) confirms a factor move. RSI 31.8 is the second-lowest of the five and close to oversold, which is worth noting as a bounce risk for anyone short — but it does not fire the <30 confluence leg.",
-      "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The guidance reset is genuinely structural, but the catalyst that would resolve it — execution against the $3.0-3.2B outlook — does not land until the next print, and the current rotation phase is against the sector. Structural story, untradeable timing.",
-      "opportunity_cost": "Nothing displaced (zero positions). Of the three AI-infra names on today's list this has the most credible eventual long thesis, so any slot ever spent in this complex belongs here rather than on CRWV — but spending one of three weekly trades to catch a -43% falling knife ahead of a credit-driven repricing is the textbook violation of Rule 11. The mechanics settle it: ATR(14) is $16.73, 18.2% of price — the widest of the five — so a 10% trailing stop is barely half of one average day's range and would be taken out by noise alone, while a 1-ATR stop would need a +36% advance to clear 2:1. Confluence fires zero of two legs (49.0% below the 200-SMA, RSI 31.8). No trade."
+      "catalyst_detail": "Nothing fresh fired today - this is the continuation of a post-Q3 de-rating. At Q3, Nebius guided 2026 revenue to the LOW end of its $3.0-3.4B range while simultaneously raising 2026 capex to roughly $27B, citing data-center build delays. That combination - less revenue, more spend, slower delivery - is the core of the move; the stock is now more than 57% off its October high and roughly 43% lower over 30 days. Today's -5.49% is that trend continuing under the Nov 19 market-wide risk-off, not a new disclosure.",
+      "why": "A guidance reset that cuts revenue while raising capex forces a direct repricing of the discounted cash flows: the cash-burn window widens and the payback moves further out. In a tightening-credit tape, a capex-heavy, pre-profit neocloud is exactly the profile that loses its multiple first - and the Anthropic IPO absorbing AI capital on Nov 19 gave holders a concrete reason to fund the new issue by selling the incumbent.",
+      "impact": "Only ~1.1x average volume means today's leg is passive drift and sympathy selling rather than fresh capitulation - no evidence of a seller-exhaustion bottom. Given the stock is already -57% from its high WITHOUT a climax-volume flush, the base case is further grind lower. Read-through is direct to CRWV (rank 4), the other neocloud here, which is gapping -5.28% on the same thesis - confirming this is a group de-rating.",
+      "horizon": "LONG_TERM",
+      "horizon_reasoning": "The driver is a structural guidance reset (revenue to the low end, capex to ~$27B), not a headline - but it is structurally NEGATIVE, so LONG_TERM describes the durability of the de-rating, not a reason to own it.",
+      "opportunity_cost": "No holding to displace. Taking it would spend a weekly slot buying a name whose own guidance says revenue is tracking to the low end while capex rises - the opposite of the rulebook's confluence requirement, and in a sector already showing two consecutive failed down-days (the 'exit a sector after 2 failed trades' spirit). On R:R: a 10% trailing stop from $91.60 sits near $82.44, so 2:1 needs ~$110 - above the $96.92 prior close and requiring a ~20% retrace inside a -57% downtrend. Does not clear the minimum."
     },
     {
-      "rank": 4,
-      "symbol": "UMAC",
-      "price": 9.6239,
-      "prev_close": 10.15,
-      "gap_pct": -5.18,
-      "premarket_volume": null,
-      "volume_prev_session": 4235624,
-      "atr14": 1.6022,
-      "atr_pct_of_price": 16.6,
-      "sma200": 18.9,
-      "pct_vs_200sma": -49.08,
-      "rsi14": 30.8,
-      "catalyst": "Giving back Wednesday's Oppenheimer-initiation pop — the broker started coverage at Outperform with a $30 target, the stock rallied 7-12%, and small-cap drone names are now being sold again as a group.",
+      "rank": 4, "symbol": "CRWV", "price": 42.54, "prev_close": 44.91, "gap_pct": -5.28,
+      "volume": 78285432, "volume_note": "prior-session consolidated; Nov 19 IEX volume ~1.8x its 20d IEX average",
+      "catalyst": "No fresh news; ongoing balance-sheet de-rating - roughly $35.6B debt at a ~16% debt yield and 7.9% cost of debt - despite Q3 revenue +168% and a ~$132.5B backlog. Barclays has it at Hold.",
       "headlines": [
-        "Oppenheimer Initiates Unusual Machines at Outperform With $30 Price Target — MarketScreener / GuruFocus, Nov 19; FactSet mean target $30.11",
-        "Unusual Machines Rallies 7% on Oppenheimer's $30 Target; Red Cat falls 7% in extended post-earnings rout — 24/7 Wall St, Nov 19 (UMAC $10.24 intraday)",
-        "Why Is Unusual Machines (UMAC) Stock Up +12.49% — Tickeron, Nov 20: Army intent to buy at least one million small drones cited as a structural demand driver; projected 2027 revenue $122.2M",
-        "Revenue rose 551.3% year over year to $13.9 million — 24/7 Wall St, Nov 19"
+        "CoreWeave's (CRWV) AI Growth Faces Mounting Debt - Markets Insider",
+        "CoreWeave (CRWV) Gets a Hold from Barclays - Markets Insider",
+        "No verified news or fundamental catalyst found for the intraday reversal; likely profit-taking after the +21% post-earnings move - Tickeron, 2026-11-08"
       ],
-      "catalyst_detail": "This is a round-trip of a broker-initiation pop rather than bad news. On Nov 19 Oppenheimer initiated coverage of Unusual Machines at Outperform with a $30 price target — roughly three times the stock's price — and the shares rallied 7% intraday (Tickeron logs a +12.49% day), taking out an earlier slide. FactSet's polled mean target is $30.11, so Oppenheimer is at consensus rather than above it. The underlying business is small but growing fast: revenue up 551.3% year on year to $13.9M, a net loss of $25.04M, projected 2027 revenue of $122.2M, and a product line of US-sourced drone components (flight controllers, speed controllers, motors, cameras) built to meet US defense sourcing requirements, plus an October acquisition of Upgrade Energy for US drone battery manufacturing. The cited structural driver is the Army's stated intention to buy at least one million small drones.",
-      "why": "An initiation moves a $10 microcap because it is a liquidity and attention event, not an information event about cash flows — no numbers changed between Nov 18 and Nov 19. Pops of that kind mean-revert once the initiating desk's flow clears, and in a risk-off tape they revert faster. The group is doing exactly that this morning: ONDS -4.49%, RCAT -3.04%. Note also that reporting on this name is unreliable — Tickeron describes UMAC 'down 8.69% to approximately $13.35' on Nov 19, which is irreconcilable with 24/7 Wall St's $10.24 the same day and with Alpaca's $10.15 close. Treat third-party price levels on UMAC with suspicion; only the Alpaca prints were used for the numbers in this row.",
-      "impact": "Reads as a one-day-pop give-back within a continuing downtrend, which is the worst of both readings: the immediate move is mean-reversion of a headline spike, but the backdrop is a stock 49.1% below its 200-SMA. Prior-session volume of 4.2M is the lightest of the five, so this is also the thinnest tape — a $10 microcap with 16.6% ATR and a 551% revenue growth rate attached to a $25M net loss. Sector read-through is to the small-cap drone complex, and it is negative.",
-      "horizon": "SHORT_TERM",
-      "horizon_reasoning": "An analyst initiation is not a structural catalyst — no contract, no guidance change, no regime change. The Army's million-drone intent is structural, but it long predates this week and is not what moved the stock.",
-      "opportunity_cost": "Nothing displaced (zero positions). This would be the worst use of a weekly trade slot on the list: it is the lowest-quality setup — chasing the give-back of a broker-initiation pop in the thinnest name — and a slot spent here instead of BE would trade a real catalyst for an attention event. Position mechanics are the hard blocker: ATR(14) is $1.60 on a $9.62 stock, 16.6% of price, so the 10% trailing stop is roughly 0.6 ATR and the -7% manual cut about 0.4 ATR; both are inside normal daily noise for a microcap. Confluence fires zero of two legs — RSI 30.8 misses the <30 oversold threshold and price is 49.1% below the 200-SMA. No trade."
+      "catalyst_detail": "No new disclosure today. CoreWeave's problem is its capital structure, not its demand: Q3 revenue grew ~168% and backlog stands near $132.5B, yet the market is repricing roughly $35.6B of debt that now carries a ~16% debt yield against a 7.9% cost of debt. Markets Insider's standing headline is 'CoreWeave's AI Growth Faces Mounting Debt', and Barclays carries a Hold. Today's -5.28% is that repricing continuing through the Nov 19 broad selloff.",
+      "why": "When a leveraged growth name's debt yield (~16%) runs far above its coupon (7.9%), the credit market is pricing real default risk, and equity is the residual claim - so the equity de-rates even as revenue compounds. The Anthropic IPO pulling AI capital into a new, unlevered issue on Nov 19 sharpened the contrast: investors can own AI exposure without CRWV's balance sheet.",
+      "impact": "At ~1.8x average volume this is the second-most-participated move of the five, consistent with genuine institutional de-risking rather than a headline spike. It is unlikely to mean-revert cleanly because the driver is a credit repricing, which resolves over quarters, not days. Direct read-through to NBIS (rank 3), the other neocloud, down -5.49% on the same group thesis.",
+      "horizon": "LONG_TERM",
+      "horizon_reasoning": "A capital-structure repricing at ~$35.6B debt and a 16% debt yield is structural and slow-resolving - but structurally negative, so LONG_TERM marks the durability of the overhang, not a swing-long thesis.",
+      "opportunity_cost": "Nothing to displace. The real cost is a weekly slot spent on the most levered name in a de-rating sector, when the credit market is explicitly pricing distress - unacceptable under the rulebook's risk gate regardless of the backlog. R:R also fails: a 10% trailing stop from $42.54 sits near $38.29, so 2:1 requires ~$51, well above the $44.91 prior close and demanding a ~20% rally against an active credit de-rating. Of today's list, CRWV and NBIS are the two whose declines are least likely to reverse, so even a relative-strength argument favours neither."
     },
     {
-      "rank": 5,
-      "symbol": "ASTS",
-      "price": 24.27,
-      "prev_close": 25.55,
-      "gap_pct": -5.01,
-      "premarket_volume": null,
-      "volume_prev_session": 17550272,
-      "atr14": 4.0033,
-      "atr_pct_of_price": 16.5,
-      "sma200": 71.98,
-      "pct_vs_200sma": -66.28,
-      "rsi14": 29.9,
-      "catalyst": "Continued post-earnings de-rating after a Q3 double miss (-$0.44 EPS on $42.3M revenue), with investors anxious about widening losses and steep capex for the new rocket program; no fresh company news this morning.",
+      "rank": 5, "symbol": "AMKR", "price": 32.35, "prev_close": 34.13, "gap_pct": -5.22,
+      "volume": 3710763, "volume_note": "prior-session consolidated; Nov 19 IEX volume only ~0.4x its 20d IEX average - BELOW average, the weakest conviction of the five",
+      "catalyst": "Zero fresh company news - a date-bounded search of the last 3 days returned no results. Pure semis/AI sympathy drift on below-average volume.",
       "headlines": [
-        "Why Is AST SpaceMobile (ASTS) Stock Down -2.60% Today? — Tickeron, Nov 10: Q3 'double miss', loss of $0.44/share on revenue of $42.32M, both below Wall Street",
-        "Why AST SpaceMobile (ASTS) Stock Dropped 12.3% — KoalaGains, Nov 16: anxiety over widening losses and steep capital spending for the new rocket program",
-        "AST SpaceMobile Provides Business Update and Third Quarter 2026 Results — Morningstar/BusinessWire, Nov 9: cash, equivalents and restricted cash above $3.2B as of Sept 30; FY revenue guidance reiterated",
-        "AST SpaceMobile: The Market May Have Gone Too Far — Seeking Alpha, Nov 19",
-        "AST SpaceMobile Stock Is Down on SpaceX News — Reddit/Barron's framing: carriers may ultimately benefit as they compete with Starlink"
+        "Amkor (AMKR) Q2 2026 earnings: record $1.9B revenue, CPO joins its tech platform, TSMC and NVIDIA long-term deals - Simple Tech Trend, 2026-10-07",
+        "83% of 2025 revenue from advanced packaging; largest US-headquartered OSAT, with US manufacturing expansion planned - Quartr investor presentation",
+        "Amkor Technology Reports Financial Results for the Third Quarter 2026 - quarterly revenue ~$1.99B, EPS guidance $0.65-$0.77"
       ],
-      "catalyst_detail": "No catalyst landed overnight; this is the fifth week of a post-earnings de-rating. ASTS reported Q3 2026 on Nov 9: revenue of $42.3M and a loss of $0.44 per share, both below Wall Street — a double miss — while reiterating full-year revenue guidance and reporting more than $3.2B of cash, cash equivalents and restricted cash as of September 30, which the earnings call framed as ample liquidity for the constellation build. The market has focused on the other side of that: KoalaGains attributes the Nov 16 fall of 12.33% to 'widening losses, steep capital spending for its new rocket program.' Sentiment is genuinely split — Seeking Alpha published 'The Market May Have Gone Too Far' on Nov 19, and retail chatter on Stocktwits (premarket $24.58, prev close $25.55 — consistent with Alpaca's $24.27/$25.55) is waiting on a launch-date announcement. There is also a competitive overhang from SpaceX/Starlink direct-to-cell news.",
-      "why": "The move is a shift in how the market finances a pre-revenue story. With $42.3M of quarterly revenue against a constellation plus an in-house rocket program, ASTS is a duration asset: its value sits almost entirely in terminal cash flows, so it is the most sensitive name on this list to the discount rate. A rising-risk-premium tape marks down long-duration equity hardest, and announcing a second capital-hungry program (the rocket) into that tape pushes the cash-flow date further out at exactly the wrong moment. The $3.2B cash balance is why this is a de-rating rather than a solvency question.",
-      "impact": "Sustained and the most extreme of the five: price is 66.3% below its 200-SMA, the deepest de-rating on the board, on 17.6M prior-session shares. Notably, ASTS is underperforming its own satellite peers — GSAT -0.45%, IRDM -2.50% against ASTS -5.01% — so unlike BE/CRWV/NBIS this is NOT purely a sector factor move; a meaningful share is idiosyncratic high-beta unwind. RSI 29.9 is the only sub-30 reading on the list, which makes it the most likely of the five to produce a sharp counter-trend bounce — and the most dangerous to be short into.",
+      "catalyst_detail": "A date-bounded news search covering Nov 17-20 returned literally zero results for AMKR, so there is no company-specific catalyst behind this gap. Fundamentally the business is the strongest of the five: Amkor is the largest US-headquartered OSAT (outsourced semiconductor assembly and test), drew 83% of 2025 revenue from advanced packaging, posted a record $1.9B in Q2 2026 and ~$1.99B in Q3 2026, holds long-term agreements with TSMC and NVIDIA, and has added co-packaged optics (CPO) to its platform. Notably it traded BELOW its 20-day average volume on Nov 19 and still gapped -5.22% today.",
+      "why": "Advanced packaging is the physical bottleneck for AI accelerators, so AMKR is indexed to the same AI capex narrative being sold - it falls by association through semis ETF and basket flows rather than on any judgement about its own order book. The below-average volume is the tell: this is mechanical, passive selling with no informed seller stepping up.",
+      "impact": "This is the one name on the list that reads as a one-day headline/beta spike likely to mean-revert rather than a durable de-rating. A -5.22% gap on 0.4x average volume with no news is the signature of a sympathy move, and AMKR's advanced-packaging backlog is driven by foundry and accelerator demand that today's rotation does not touch. Sector read-through runs the other way for AMKR: it is being dragged by the neoclouds (NBIS, CRWV) and AI-power (BE) despite having a different, contract-backed revenue base.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "A reiterated guide and a strong cash position are not a new catalyst, and the one scheduled event that could re-rate the name — a launch date — has no confirmed timing. Until it is dated, this is headline-driven.",
-      "opportunity_cost": "Nothing displaced (zero positions). ASTS is the one name on the list that gets closest to a rule-sanctioned entry: its RSI of 29.9 fires the oversold leg, making it the only ticker today with any confluence leg at all. It still fails, because the Confluence rule requires two and price is 66.3% below the 200-SMA, which kills the long-bias leg outright. The mechanics are no kinder: ATR(14) is $4.00, 16.5% of price, so the 10% trailing stop is about 0.6 ATR and would be removed by one ordinary session, and clearing 2:1 off a 1-ATR stop needs a +33% move with no dated catalyst to drive it. Spending a weekly slot on the single most discount-rate-sensitive asset on the board, while the benchmark sits below its 200-SMA, inverts the risk the rulebook is built to avoid. No trade."
+      "horizon_reasoning": "No company catalyst at all and below-average volume - a sympathy dislocation that should close when the complex stabilises, so it is a days-timeframe observation rather than a multi-week thesis.",
+      "opportunity_cost": "No holding to displace. Against today's own list AMKR is the best-quality business and the only one whose decline looks genuinely unjustified, so it displaces the other four on merit - but it still fails the entry gate, because buying a -5.2% gap-down in an actively selling sector is counter-trend and violates 'follow sector momentum'. R:R is the hard block: a 10% trailing stop from $32.35 sits near $29.12, so 2:1 requires ~$38.80 (+20%), far above the $34.13 prior close - a mean-reversion bounce simply cannot pay 2:1 under a 10% stop. This is the structural 10%-stop/2:1-R:R conflict already flagged in the log, and AMKR is the cleanest illustration of it: the right read and still no admissible trade. Worth re-checking on a confirmed reversal with volume."
     }
   ],
-  "ranks_6_to_10": {
-    "count": 0,
-    "note": "Only 5 names cleared the >=5% gap and >=$3 price filters, so the top-10 quick-scan list and the top-5 deep-dive list are identical — all 5 received the full deep dive, and no ticker was dropped to quick-scan-only. AGMH gapped -8.42% (the largest absolute gap in the scan) but was excluded by the $3.00 price floor at $0.333."
+  "rulebook_screen": {
+    "verdict": "HOLD - zero entries qualify",
+    "reasons": [
+      "All 5 hits are gap-DOWNS; the strategy is long-momentum and 'follow sector momentum' forbids buying into an actively de-rating complex.",
+      "All 5 fail the 2:1 reward:risk minimum under the mandated 10% trailing stop - each would need a ~+20% target, i.e. a full round-trip above its prior close.",
+      "Volume ratios (0.4x-2.0x) show orderly distribution, not a capitulation low - no seller-exhaustion signal to trade against.",
+      "Sector concentration: 4 of 5 are the same AI-infra/power trade, so any entry would stack correlated risk against the >0.75 correlation gate."
+    ],
+    "account": {"equity": 100000, "cash": 100000, "positions": 0, "weekly_trades": "0/3 (week of Nov 16)"},
+    "open_items": [
+      "Confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) still unresolved - equity reports $100,000.",
+      "The 10%-stop / 2:1-R:R pair has a nearly empty admissible set - operator review pending.",
+      "TLN dated entry window ($349-356 limit, 48 shares) from Nov 18 handoff still shows no execution."
+    ]
   },
-  "net_read": "All five qualifying gappers are DOWN-gaps, four of the five in AI-infrastructure or AI-power. No long qualifies: every name fails the Confluence rule with at most 1 of 2 required legs, and all five carry an ATR(14) wider than the mandated 10% trailing stop. Research only, no orders placed (STEP 8).",
-  "orders_placed": 0
+  "data_notes": [
+    "scripts/alpaca.sh quote returned stale Nov 19 16:00 ET closing quotes with nonsensical spreads (e.g. NBIS ask=0, AMKR ask=0) during premarket; the gappers-alpaca.sh snapshot values are authoritative and were used throughout.",
+    "scripts/alpaca.sh bars uses feed=iex, so absolute volumes are a fraction of consolidated. Volume ratios are computed like-for-like (Nov 19 IEX volume vs 20d IEX average) and are valid; they are NOT comparable to the scanner's consolidated volume field.",
+    "Yahoo block held: a sg.finance.yahoo.com result surfaced unprompted on the CRWV query and a finance.yahoo.com result on the same query - both DISCARDED, facts re-sourced from Markets Insider, Tickeron, IBD, Robinhood, MarketWatch and Alpaca.",
+    "Apify web-search/web-fetch timed out on 3 of 11 calls; Benzinga returned HTTP 403 to WebFetch. Catalysts were sourced via date-bounded Apify searches instead."
+  ]
 }
