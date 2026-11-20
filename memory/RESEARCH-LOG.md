@@ -21991,3 +21991,303 @@ TICKER  GRADE  SETUP(S)              TIMEFRAME     TRIGGER
 APT     B      Momentum confluence   daily swing   RSI 71.35, ADX14 32.3, EMA9 $6.06 > EMA21 $5.86, px $5.28
 
 No grade-A hits (unreachable this run). Candidate only — no orders placed; feeds `market-open`/`/trade` next session.
+
+## 2026-11-20 — Pre-Market Research (Day 96, Friday, cloud run)
+
+Run time **06:02–06:25 ET**. Research tool: **Apify RAG web browser**, reached via
+`mcp__Apify__send-server-actor-request` → `apify/rag-web-browser` `/search` (the
+dedicated `apify--rag-web-browser` tool is absent from this session's tool list —
+confirmed via ToolSearch, not assumed). It worked on **every** call this run; no
+60s timeouts, unlike Nov 19. Numeric load carried by **direct TradingEconomics URL
+fetches** plus **Alpaca's own bars/snapshots**. No Perplexity. **No Yahoo data in
+this entry.**
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction — not read off a populated field) |
+| `balance_asof` | 2026-11-19 |
+| Deployed | **0%** vs the 75–85% rule — 96th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required env
+vars confirmed `set` before any wrapper call.
+
+### Market context
+
+**The one fact that changes the regime: the benchmark has lost its 200-day.**
+- **SPY closed $715.84, BELOW its 200-SMA of $732.67 (−2.30%).** QQQ closed
+  $645.10 vs a 200-SMA of $682.97 (**−5.55%**). SPY RSI(14) **31.5**, QQQ **33.7**.
+  21-day: SPY **−7.41%**, QQQ **−11.05%**, XLK **−14.75%**.
+- The rulebook's 200-SMA long-bias filter is written per-name, but it now **fails
+  at index level**. Every new long today is a long placed against a benchmark in a
+  confirmed downtrend.
+
+**Thursday Nov 19 was a failed-rally reversal, not a flush** (Alpaca daily bars)
+- SPY: open into a **$739.77 high**, close **$715.84 — the session low**, −2.02%.
+  QQQ: high **$675.20**, close **$645.10**, −2.19%. All three major indexes fell
+  more than 2%; the **Nasdaq Composite hit its lowest level since April**.
+- Mechanism per TradingEconomics: markets opened sharply higher and **reversed
+  shortly after Anthropic began trading**. ANT debuted **+17%** off its $83 IPO
+  price, then **fell ~4% after hours**; TE quotes it $97.17. **NVDA −3.3%** amid a
+  leadership crisis; **AMD −7.7%** after short seller Hunterbrook Capital flagged
+  its China market and supply-chain exposure.
+- *Conflict-of-interest disclosure, repeated rather than buried: Anthropic develops
+  the model running this bot. ANT remains mechanically unevaluable — two days of
+  price history, so no 200-SMA and no ATR(14). No view is offered on it.*
+
+**Premarket today** (Alpaca `delayed_sip` snapshots, ~11:17Z / 06:17 ET, measured
+against the Nov 19 close)
+- **SPY $713.78 −0.29%**, **QQQ $638.40 −1.03%** — Nasdaq leading down again.
+  TradingEconomics headline: *"US Futures Tick Lower After AI-Driven Selloff."*
+- **Defensives bid, tech sold:** XLP **+0.82%**, XLU **+0.63%**, TLT **+0.57%**,
+  IWM +0.09%, XLE −0.56%, QCOM −1.54%, **GLD −1.92%**, KLIC −2.60%.
+
+**VIX 29.54** (+1.10 on the day; **+12.86% over four weeks**) — TradingEconomics
+`vix:ind`, 11:03Z. Q4 model forecast 18.87, i.e. spot is ~57% above it.
+
+**Oil — third consecutive weekly decline**
+- **WTI $81.52 −1.11%** (below $82; **−16.09% MoM**, +40.41% YoY).
+  **Brent $90.73 −1.36%** (−16.62% MoM).
+- Drivers: US Energy Secretary Chris Wright said Strait of Hormuz flows reached
+  **record levels**; the **US, China and Russia agreed Thursday** to boost refined
+  product production/supply; the **IEA projects a ~2 mb/d global surplus this
+  quarter** and Goldman Sachs warns of oversupply next year. Trump said he is
+  **"in no rush"** on Iran despite reports of further strikes.
+- EIA weekly: US crude inventories **+3.38 mb to 417.8 mb**, gasoline +5.192 mb,
+  distillates +1.571 mb.
+
+**Cross-asset / overseas**
+- US 10Y **4.996%** (*"US 10Y Yield Edges Lower on Safe-Haven Demand"*).
+  DXY **103.881** (*"Dollar Gains for 4th Week"*).
+- **Gold $3,588.15 −1.05%** spot and **GLD −1.92%** premarket — gold is **not**
+  acting as a haven. Correlated de-risking, not a clean rotation.
+- BTC **$61,899**. Nikkei **−4.38%**, Hong Kong −2.07%, Singapore −2.05%,
+  Germany −1.63%, France −1.15%, UK −0.42%, Sensex +1.08%.
+
+**Today's releases — LOW CONFIDENCE, logged as a gap, not as an empty calendar.**
+The TradingEconomics US calendar table is JS-rendered and returned **zero rows** to
+the fetcher. Inferred from the known month sequence (jobs Nov 6, CPI Nov 10, PPI
+Nov 13, retail sales Nov 17, FOMC minutes Nov 18, **PCE + GDP Nov 25**): **no
+tier-1 US macro print scheduled today.** Thursday delivered Philadelphia Fed
+manufacturing at a **six-month low**, Kansas City Fed manufacturing at its
+**highest since 2022**, jobless claims and nat-gas stocks. **Today is the third
+Friday — November monthly options expiration.**
+
+**Earnings** — already reported (Thu PM / pre-open), none on the watchlist:
+**Keysight (KEYS)** EPS $3.61 beat, **Ross Stores (ROST)** $1.91 beat,
+**Intuit (INTU)** $2.91 beat.
+
+**Sector momentum** (Alpaca daily bars, Nov 19 close; YTD from the last 2025 close)
+| Sector | YTD % | 21d % | 5d % |
+|---|---|---|---|
+| XLE Energy | **+36.18** | −10.64 | −5.30 |
+| XLP Staples | +15.72 | **+3.20** | −1.28 |
+| XLV Health | +14.64 | −0.80 | −5.51 |
+| XLK Tech | +11.63 | **−14.75** | −7.49 |
+| XLB Materials | +9.06 | −3.65 | −5.51 |
+| XLRE REITs | +6.27 | +1.96 | −3.30 |
+| QQQ | +5.02 | −11.05 | −6.26 |
+| **SPY** | **+4.99** | −7.41 | −5.46 |
+| XLI Industrials | +4.01 | −4.14 | −4.78 |
+| XLF Financials | +1.50 | −0.77 | −4.47 |
+| XLU Utilities | +0.77 | +2.40 | −1.83 |
+| XLY Discretionary | −2.99 | +0.28 | −3.81 |
+| XLC Comm Svcs | −12.72 | −5.73 | −4.50 |
+
+Only **XLP, XLU, XLRE and XLY** are positive over 21 days; **every** sector is
+negative over 5. That is the **defensive row** of the rulebook's rotation table
+(Utilities / REITs / Staples). **Energy is the YTD leader and the 21-day laggard** —
+do not read YTD leadership as momentum.
+
+### Candidate screen — gap scan, 13 of 14 DOWN
+
+`gappers-alpaca.sh watchlist` (delayed_sip, 3% gate): **14 hits, 13 down, 1 up.**
+The single gainer is **PEPG +3.56%**.
+
+| Sym | Premkt | Prev close | Gap % | Vol |
+|---|---|---|---|---|
+| PEPG | $4.07 | $3.93 | **+3.56%** | 3,125,551 |
+| BE | $158.87 | $168.11 | **−5.49%** | 16,838,574 |
+| WLDS | $1.09 | $1.15 | −5.22% | 35,030 |
+| NBIS | $92.98 | $96.92 | −4.07% | 38,230,135 |
+| ASTS | $24.53 | $25.55 | −4.00% | 17,550,272 |
+| AMKR | $32.91 | $34.13 | −3.57% | 3,710,763 |
+| OKLO | $20.10 | $20.84 | −3.55% | 7,643,237 |
+| STM | $42.25 | $43.78 | −3.49% | 12,121,902 |
+| CRWV | $43.38 | $44.91 | −3.41% | 78,285,432 |
+| RKLB | $49.30 | $50.99 | −3.31% | 15,542,133 |
+| ONDS | $4.09 | $4.23 | −3.31% | 36,482,130 |
+| LPG | $43.50 | $44.98 | −3.29% | 504,913 |
+| RDW | $6.30 | $6.51 | −3.23% | 12,626,837 |
+| BW | $4.06 | $4.19 | −3.10% | 5,025,237 |
+
+**Yesterday's five deep-dive long candidates all round-tripped and worse**, measured
+against the levels quoted in the Nov 19 10:21 ET gappers entry: **CRWV $51.74 →
+$43.38 (−16.2%)**, **BE $183.35 → $158.87 (−13.4%)**, **ASTS $27.26 → $24.53
+(−10.0%)**, **PEPG $4.13 → $4.07 (−1.5%)**; **UMAC did not clear today's 3% gate.**
+Logging HOLD on all five was correct.
+
+**Power / IPP complex, premarket:** BE −5.49%, OKLO −3.55%, VST −2.17%, SMR −2.11%,
+NRG −1.64%, CEG −0.81%. **TLN: no premarket print at all.**
+
+### Trade ideas
+
+**1. TLN (Talen Energy) — LONG. The only name that passes the mechanics. DEFER today.**
+- **Catalyst (carried forward, no new one found):** NVDA fiscal Q3 — revenue >$115B,
+  net profit $65.3B, beat with a raised FY guide — validates AI-power demand; plus
+  TLN's own relative strength on Nov 19 (**closed $355.91, −1.19%** vs Nov 18's
+  $360.18, while SPY fell 2.02%). **No TLN-specific news was retrievable this run** —
+  MarketBeat and MarketScreener both returned HTTP 403 to the Apify fetcher. Logged
+  as a **sourcing gap, not as "no news."**
+- **Technicals** (computed from Alpaca daily bars, Wilder): close **$355.99**,
+  **ATR(14) $18.30 = 5.1% of price**, **RSI(14) 51.5**, above SMA20 $350.93
+  (+1.44%), SMA50 $337.78 (+5.39%), SMA200 $349.22 (+1.94%).
+- **Rules passed:** 10% trail **$320.39 = 1.95 ATR** ✓ (the only rule-compliant stop
+  geometry on the entire board today) · 2:1 target **$427.19** ✓ · RSI < 70 ✓ ·
+  price > 200-SMA ✓.
+- **Size:** 1.0% equity risk = $1,000 ÷ $18.30 ATR = **54 shares ≈ $19,219 = 19.2%
+  of equity** (under the 20% cap). The Nov 18 plan said 48 shares; the difference is
+  the unresolved **$100k-live vs $10k-mandate baseline mismatch**.
+- **Entry:** limit **$349–356 only, never market**. Last trade $355.91 is at the top
+  of the window.
+- **Why NOT today — four independent blocks:**
+  1. **Sector momentum fails (Rule 9).** Every other name in the power/IPP complex
+     is red premarket (BE −5.49%, OKLO −3.55%, VST −2.17%, SMR −2.11%, NRG −1.64%,
+     CEG −0.81%). Rule 9 says follow sector momentum; this sector's is down.
+  2. **Index long-bias filter fails.** SPY is below its own 200-SMA (−2.30%), QQQ by
+     −5.55%. Buying a high-beta AI-power long here is the bet that filter exists to
+     refuse.
+  3. **Untradeable spread.** Live quote **bid $333.33 / ask $374.99 — $41.66 wide,
+     11.7% of price**, 40×40 size. A ~$19k order gets a guaranteed bad fill.
+  4. **No premarket print.** Last trade is Nov 19 21:39Z. There is no current price
+     to validate the entry window against.
+- **Re-arm condition (explicit, so a later run need not re-derive it):** enter only
+  on a session where **(i)** TLN prints inside **$349–356** on a live two-sided quote
+  with spread **< 2%**, **(ii)** at least **two of VST / NRG / CEG are green** on the
+  day, and **(iii)** SPY has **reclaimed its 200-SMA ($732.67) on a daily close**.
+  Then: 54 shares, **10% trailing GTC stop ($320.39)**, target **$427**.
+
+**2. CEG (Constellation Energy) — WATCH-ONLY. Deteriorated since Nov 18.**
+- 200-SMA long-bias filter now fails by **−9.48%** ($249.98 premkt / $251.96 close
+  vs SMA200 **$278.35**) — it was −2.04% on Nov 18. RSI(14) 42.9; below SMA20
+  (−3.96%) and SMA50 (−5.68%). ATR(14) $12.83 = 5.1% of price.
+- **Trigger unchanged in kind, repriced: a daily close above $278.35** — now **+10.5%
+  away**. Not actionable, and by construction not satisfiable intraday.
+
+**3. XLP (Consumer Staples) — the only trend actually working. REJECTED on R:R, and the rejection is the finding.**
+- **Catalyst, measured not asserted:** live defensive rotation. Premarket XLP
+  **+0.82%**, XLU +0.63%, TLT +0.57% while QQQ −1.03%. 21-day momentum: XLP
+  **+3.20%** vs XLK **−14.75%**. VIX 29.5 and SPY below its 200-day place the tape
+  in the rotation table's defensive row.
+- **Technicals:** close $89.90, ATR(14) $1.46 (1.6%), RSI(14) 52.5, above SMA200
+  $85.01 (**+5.76%**) ✓ and SMA50 $86.26 (+4.22%) ✓, a hair under SMA20 (−0.28%).
+- **Rules passed:** trend ✓ · RSI ✓ · confluence ✓ (SMA200 + SMA50 + measured
+  rotation) · 10% trail $80.91 = **6.14 ATR**, compliant with enormous room.
+- **FAILS the 2:1 gate on realism.** 2:1 off a 10% stop demands **+20% to $107.88**.
+  XLP's entire 2026 YTD move is **+15.72%** and its best 21-day stretch is +3.20%. A
+  1.6%-ATR staples ETF reaching +20% inside a swing horizon is not a plausible
+  target. **FAIL — reward unreachable.**
+- The other two defensives bid premarket **fail the 200-SMA filter outright**:
+  **XLU −2.97%**, **TLT −4.53%**. So the defensive rotation has exactly **one**
+  rule-eligible expression, and that one cannot clear 2:1.
+
+**4. APT — FAIL, carried from setup-scan.** RSI(14) **71.3 > 70** → the rulebook
+forbids a new long. Separate **data-integrity flag**: the two Nov 19 setup scans
+printed px **$6.20** (15:37) and **$5.28** (17:37) off an *unchanged* trigger line,
+and this morning the snapshot reads **$6.24 / prev $6.24 (0.00%)** while the live
+quote shows **bid $5.28, ask 0**, on 28,288 shares. Thin-microcap quote noise — **do
+not size off any of these prints.**
+
+### Rules finding — the 10%-stop / 2:1 rule pair has a nearly empty admissible set
+
+Yesterday's entry established one half: **sorting gappers by |gap%| systematically
+selects names whose ATR is 12–15% of price**, so the mandated 10% trail sits at
+**0.67–0.84 ATR** and dies to routine noise. Today supplies the mirror image. XLP,
+XLU and TLT hold the 10% trail with enormous room — **6.14, 7.20 and 10.91 ATR** —
+and **cannot plausibly reach the +20% that 2:1 off that stop demands.**
+
+Taken together the two rules admit only a narrow volatility band: a 10% trail is
+≥1.5 ATR **and** a +20% target is reachable only where **ATR(14) ≈ 4–7% of price**.
+Today's entire board contains **exactly one** such name — **TLN at 5.1%** — and that
+one is blocked on sector momentum and an 11.7% spread. This is not a bad-luck day;
+it is the rule pair's admissible set being nearly empty by construction.
+
+**Operator decision needed.** Either (a) make the trailing stop **ATR-based**
+(e.g. 1.5–2.0 ATR, floored at 7%) instead of a flat 10%, or (b) make the R:R gate
+**ATR-based** (e.g. 2.0 ATR of profit) instead of a flat +20%. Flagged for 96
+sessions; today is the cleanest two-sided evidence produced so far.
+
+### Risk factors today
+1. **Index trend break.** SPY below its 200-SMA (−2.30%), QQQ −5.55%; Nasdaq
+   Composite lowest since April. 21-day SPY −7.41%, QQQ −11.05%, XLK −14.75%.
+2. **Thursday was a rejected rally, not a capitulation.** SPY reached $739.77 and
+   closed at the session low after ANT began trading. A market that sells its own
+   best news is distributing — buying into that is the "bottom-fish" the rulebook
+   explicitly forbids.
+3. **VIX 29.54 and rising** (+12.86% in four weeks). Sizing off a 14-day ATR
+   **understates forward risk while realized vol is expanding.**
+4. **Gold falling with equities** (spot −1.05%, GLD −1.92%) alongside a dollar up a
+   fourth week = correlated liquidation. This is the regime where correlation gates
+   fail and "diversified" longs move as one.
+5. **November monthly opex** (third Friday). Pinning and unwind flows distort
+   intraday levels; a breakout today carries less information than on a normal day.
+6. **Energy's YTD leadership is stale** (XLE +36.18% YTD, **−10.64% 21d**) with WTI
+   −16.09% MoM on an IEA ~2 mb/d surplus call. The late-cycle Energy row is actively
+   failing.
+7. **Iran headline risk is unscheduled and two-sided** — Trump "in no rush," reports
+   of further strikes persist.
+8. **Zero positions means zero market downside today.** The only live risk this run
+   is the risk of entering into items 1–7.
+
+### Decision: **HOLD**
+- **No orders placed. Research only.** Execution stays gated to `market-open` /
+  `/trade`.
+- Weekly trade count **0/3** (week of Nov 16). **96th trading day** since the Jul 9
+  launch with zero entries — **159th straight no-trade session.**
+- **Deployed 0% vs the 75–85% rule** — 96th session out of compliance. The
+  confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the
+  10%-stop/2:1-R:R structural conflict both remain open, pending operator sign-off.
+- **Benchmark gap, stated plainly: SPY is +4.99% YTD; this account is +0.00%.** The
+  mission is to beat the S&P. Discipline has avoided the drawdown (SPY −7.41% over
+  21 days) but has not produced a competing return.
+- **What discipline did earn today:** all five of yesterday's deep-dive long
+  candidates are lower, four materially (CRWV −16.2%, BE −13.4%, ASTS −10.0%,
+  PEPG −1.5% from the levels quoted yesterday).
+- **Carried forward:** TLN with the explicit three-part re-arm condition above ·
+  CEG watch-only at a **$278.35 daily close** · XLP as the live rotation candidate
+  **pending an operator ruling on the R:R rule.**
+
+### Data / tool notes
+- **Apify reached via `send-server-actor-request` → `apify/rag-web-browser` `/search`**;
+  the dedicated `apify--rag-web-browser` tool is absent from this session (confirmed
+  via ToolSearch). **Worked on every call — no 60s timeouts**, unlike Nov 19.
+- **Two Apify failure modes to carry forward.** (1) A query containing a literal
+  **`&`** ("S&P 500 futures premarket today") was mangled into Spanish-language
+  results about the letter *S* — **spell out "S and P" or use "SPX"**. (2) Crawls of
+  search results returned **HTTP 403/500 on Barchart, MarketWatch, MarketBeat and
+  MarketScreener**. **Direct TradingEconomics URL fetches succeeded every time** and
+  carried the numeric load — **prefer naming the URL over keyword search.**
+- **Yahoo block held.** The `-site:` suffix was appended to all 5 keyword queries;
+  **no finance.yahoo.com URL resolved in any result this run.** No Yahoo-sourced
+  number appears in this entry.
+- **Economic-calendar gap, disclosed:** the TradingEconomics US calendar table is
+  JS-rendered and returned no rows. Today's release list is **inferred and low
+  confidence** — it is *not* a confirmed empty calendar.
+- **`gappers-alpaca.sh most-active` returns HTTP 404** on this subscription. The
+  `watchlist` and `symbols` modes work.
+- **Alpaca IEX 1Min bars returned 0 premarket bars** for SPY/QQQ/TLN at 06:15 ET;
+  `delayed_sip` snapshots *do* carry premarket prints on a 15-minute delay. **All
+  premarket figures above are delayed_sip — `market-open` / `/trade` MUST re-quote
+  before acting.**
+- **`mcp__tradingview-data__*` is not available in this cloud session** (only Apify,
+  claude-code-remote and github are wired), so `combined_analysis` technicals could
+  not be used. **Every ATR(14) (Wilder), RSI(14) (Wilder) and SMA figure in this
+  entry was computed independently from Alpaca daily bars** — not from `size.mjs`,
+  which was still returning stale prices as of Nov 19.
+- **TLN quoted spread $333.33 / $374.99 = 11.7% of price.** Treat any TLN "price"
+  here as the **Nov 19 last trade ($355.91)**, not a current tradeable level.
