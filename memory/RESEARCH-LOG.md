@@ -22387,3 +22387,134 @@ flat is the position. Research only; no orders placed (STEP 8).
   `scripts/telegram.sh` should chunk at ~3800 chars rather than fail**, otherwise
   every run with 4+ deep-dive tickers will lose its notification entirely now that
   both channels 400 on the same message.
+
+### Gappers (auto-scan 08:09 ET, cloud)
+
+Run 2 of 4 today (08:00 ET slot). Scanned the full `memory/WATCHLIST.md` universe
+via `GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist`. Six rows returned;
+**AGMH excluded by the $3.00 price floor** at $0.333 despite the largest absolute
+gap in the scan (-8.42%). Five names qualified, so **the top-10 quick-scan list
+and the top-5 deep-dive list are identical — all 5 got the full deep dive and
+nothing was dropped to quick-scan-only** (`deep_dive_cap: 5`).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 156.90 | -6.67% | 16.8M | BMO upgraded BE to Outperform, $230 PT (cut from $260) — and it still gaps down ~6.7% as AI-power/data-center names are sold indiscriminately |
+| 2 | CRWV | 42.48 | -5.41% | 78.3M | No fresh news; de-rating on balance-sheet risk — ~$35.6B debt, 16% debt yield, 7.9% cost of debt — despite Q3 revenue +168% and ~$132.5B backlog |
+| 3 | NBIS | 91.74 | -5.34% | 38.2M | No new news; extending a ~43% 30-day slide since Q3 cut 2026 revenue to the low end of $3.0-3.4B while raising 2026 capex to ~$27B on data-center delays |
+| 4 | UMAC | 9.62 | -5.18% | 4.2M | Giving back Wednesday's Oppenheimer-initiation pop (Outperform, $30 PT); small-cap drone names sold again as a group |
+| 5 | ASTS | 24.27 | -5.01% | 17.6M | Continued post-earnings de-rating after a Q3 double miss (-$0.44 EPS on $42.3M rev); widening losses + steep rocket-program capex |
+
+**`Vol` is PRIOR-SESSION (Nov 19) volume, not premarket volume** — the field
+`gappers-alpaca.sh` returns is full-session volume, so the routine's
+`premarket_volume >= 50000` filter could not be applied and is logged as `null`
+in the JSON rather than faked.
+
+#### Tape context (why none of these is a buy)
+
+| | Price | Gap% | 200-SMA | vs 200-SMA | RSI(14) |
+|---|---|---|---|---|---|
+| SPY | 709.66 | -0.87% | 732.67 | **-3.14%** | 31.5 |
+| QQQ | 633.85 | -1.73% | 682.97 | **-7.19%** | 33.7 |
+
+**The tape got worse into the open, it did not stabilise** — SPY -0.29% → -0.87%
+and QQQ -1.03% → -1.73% versus the 06:17 ET pre-market read. Leaders still
+leading down: **NVDA -3.18%, AMD -6.31%**, XLK -2.39%. **XLU +0.62% is the only
+green ticker on the board** (XLE -0.44%, IWM -0.28%). With the benchmark below
+its own 200-SMA and VIX ~29.5, this reads as the **Recession/defensive phase** of
+the TRADING-STRATEGY.md rotation table (favored: Utilities, REITs, Staples) —
+**no AI-infra or growth name aligns with the current phase.**
+
+#### Rulebook screen — ALL FIVE FAIL, zero entries qualify
+
+| Sym | vs 200-SMA | RSI(14) | ATR(14) | ATR as % of price | Confluence legs |
+|---|---|---|---|---|---|
+| BE | -29.91% | 38.0 | $21.54 | 13.7% | **0 of 2** |
+| CRWV | -51.82% | 36.6 | $6.35 | 15.0% | **0 of 2** |
+| NBIS | -48.95% | 31.8 | $16.73 | **18.2%** | **0 of 2** |
+| UMAC | -49.08% | 30.8 | $1.60 | 16.6% | **0 of 2** |
+| ASTS | **-66.28%** | **29.9** | $4.00 | 16.5% | **1 of 2** |
+
+- **Confluence rule (≥2 of {VWAP, RSI<30, 200-SMA, insider} + 1 catalyst):** every
+  one of the five trades **29.9% to 66.3% BELOW its 200-SMA**, so the long-bias leg
+  fails outright for all five. Only **ASTS (RSI 29.9)** fires a single oversold leg.
+  **Max legs achieved by any name = 1 of the 2 required.**
+- **ATR vs the stop rules:** 1-ATR(14) is **13.7%-18.2% of price on every name**.
+  The mandated **10% trailing stop therefore sits INSIDE one average day's range**
+  for all five, and the -7% manual cut is **~0.4-0.5 ATR** — a coin-flip against
+  ordinary noise. Clearing the **2:1 R:R minimum off a 1-ATR stop would need a
+  +27% to +36% move**, against a benchmark in a confirmed downtrend.
+- **Account:** equity **$100,000**, cash **$100,000**, **0 positions, 0 open
+  orders, 0% deployed** vs the 75-85% rule — 96th consecutive session out of
+  compliance. Nothing to displace, so opportunity cost below is framed against
+  the **3-new-trades-per-week budget**, not against existing holdings.
+
+#### Deep dive: BE $156.90 -6.67%
+- Catalyst: There is a genuinely bullish company-specific catalyst in hand **and it is not working.** BMO Capital upgraded BE to Outperform from Market Perform overnight (dated Nov 19-20) with a $230 price target, though it cut that target from $260. This follows a strong Q3 2026 — record revenue of **$1.24B, up 138% YoY**, with full-year 2026 guidance **raised to $4.4-4.6B** of revenue and $3.10-3.40 non-GAAP EPS — and a Nov 12 announcement that **NTT DATA will deploy 900 MW** of Bloom fuel-cell power across global data-center projects (first shipments 2027). Total current backlog ~$20B. Tickeron's Nov 18 note on an earlier leg lower found *"no fresh company announcement behind today's leg lower,"* attributing it to *"a renewed wave of selling in AI-power and data-center infrastructure stocks."* Despite all of that, BE closed at $217.77 on the Q3 print (-8.7% that day) and is **$156.90 premarket — ~28% below that post-earnings close in about a week.**
+- Why: The mechanism is a **multiple reset, not an earnings problem.** BE's fundamentals improved and its sell-side rating improved; what fell is what the market will pay for AI-datacenter-linked growth. The Simply Wall St narrative frames the valuation problem precisely — even at US$192 the price required roughly **US$12B of 2028 revenue** against a company guiding $4.4-4.6B for 2026. When the market stops underwriting that terminal growth, good news cannot hold the tape. **A down-gap on an upgrade day is the cleanest read available this morning that AI-power supply is being de-rated as a factor.**
+- Impact: Sustainable direction, sector read-through unambiguous. Prior-session volume 16.8M — real distribution, not a thin tape. Peers confirm a factor move rather than company news: NVDA -3.18%, AMD -6.31%, IREN -4.53%, APLD -4.46%, XLK -2.39%, XLU (+0.62%) the only green. **Caveat: BE's premarket print is byte-identical to the 07:10 ET run**, so $156.90 is a stale last print in thin premarket, not a live quote — the open could reprice it materially either way.
+- Horizon: **SHORT_TERM** — BE has the best underlying story of the five (raised guidance, a 900 MW contract, a $20B backlog, a fresh upgrade), but LONG_TERM requires alignment with the current sector-rotation phase, and it does not: the tape reads Recession/defensive while BE trades as AI-infra beta. A structural thesis fighting its own sector's momentum is a SHORT_TERM instrument.
+- Opportunity cost: Nothing displaced — 100% cash, 0 positions — so the real cost is **one of only 3 weekly trades spent fighting Rule 9.** Within today's list BE is the best-ranked name and the **only one with a positive catalyst**, so if any slot were ever spent here it would be this one over CRWV/NBIS/UMAC/ASTS. It still cannot be sized honestly: ATR(14) $21.54 = **13.7% of price**, so the mandated 10% trail sits inside a single average day's range and the -7% cut is about a third of one ATR. Clearing 2:1 off a 1-ATR stop demands a **~27% advance** while the benchmark is 3.1% below its own 200-SMA. Confluence fails independently (29.9% below the 200-SMA, RSI 38.0 — **zero of two legs**). **No trade.**
+
+#### Deep dive: CRWV $42.48 -5.41%
+- Catalyst: No company-specific event drove this gap. The operating business is growing hard — **Q3 revenue $5.1B, +167.9% YoY**, revenue backlog **~$132.5B** (up from $104.2B at Q2), a year-end target above **1.85 GW** of active power, and a $128M operating profit. What the market is repricing is **the financing**: approximately **$35.6B of total debt** against $5.5B of cash as of June 30, a **7.9% cost of debt and a 16% debt yield**, and a $626M net loss. Bloomberg's *"Big Take: CoreWeave And The Fragile AI Economy"* frames the high-interest borrowing as existential. The de-rating is well advanced: **-32% in October alone**, near $50 on Nov 17-18, closed $44.91 Nov 19, $42.48 premarket.
+- Why: Neoclouds are the **most credit-sensitive leg of the AI trade** — they fund GPU fleets with debt underwritten against contracted revenue. When AI-capex confidence cracks and credit tightens, the market marks down terminal value **and** the financing assumption at once, so the de-rating compounds. **A growing backlog does not help if the market doubts the cost of the capital needed to serve it.** At a 16% debt yield the market is pricing refinancing risk, not a growth story.
+- Impact: Sustained, not a one-day spike. Prior-session volume **78.3M** is very heavy and the stock is **51.8% below its 200-SMA** — a completed de-rating, not a dip. The cohort moves as one factor (NBIS -5.34%, IREN -4.53%, APLD -4.46%), confirming the move belongs to the sector. Read-through negative for the whole GPU-leasing complex and, one step out, for **BE as a power supplier into the same capex**.
+- Horizon: **SHORT_TERM** — the driver is a credit-cycle repricing with **no resolution date**, the opposite of a tradeable structural catalyst. Revisit only once the neocloud cohort stops making lower lows.
+- Opportunity cost: Nothing displaced. Within today's list CRWV ranks second on gap size but **last on thesis quality for a long**: it is the only name whose problem is its **balance sheet** rather than its multiple, so a slot spent here would be **strictly worse than the same slot spent on BE.** It fails every gate independently — 51.8% below the 200-SMA, RSI 36.6, **zero of two legs** — and with ATR(14) $6.35 (15.0% of price) there is **no nearby structural support to anchor a stop against**, so the 2:1 minimum is unverifiable at any sane stop distance. **No trade.**
+
+#### Deep dive: NBIS $91.74 -5.34%
+- Catalyst: The gap is **continuation, not news.** Nebius reported Q3 2026 revenue of **$980.8M, +571% YoY**, with adjusted EBITDA turning positive — but guided **2026 revenue to the low end of its $3.0-3.4B range** on data-center delays, while **raising 2026 capex to ~$27B** and setting 2027 guidance at $12-13B. The stock fell ~17% on that print. Tickeron, in a note published **~50 minutes before this scan**, measures the damage since: **down ~43% in 30 days, from about $171 to below $97.** Simply Wall St (Nov 19) makes execution against the revised outlook the key near-term catalyst — i.e. **the next real information arrives at the next print, not today.** MarketBeat still shows a $222.67 consensus target against a $96.92 close; **that target is stale against this tape and should be discounted, not traded on.**
+- Why: **Guiding revenue down while guiding capex up is the single worst combination for a capital-intensive growth name** — it lengthens payback and raises the financing requirement in the same breath, so the market cuts the multiple and raises the discount rate together. Layered on top is the same credit-sensitivity hitting CRWV, so NBIS is sold both for its own guidance reset and as a member of the neocloud factor.
+- Impact: Sustained. A 43% 30-day drawdown on **38.2M** prior-session shares is distribution on real size, and at **49.0% below its 200-SMA** the de-rating is structural, not a headline spike. Cohort (CRWV -5.41%, IREN -4.53%, APLD -4.46%) confirms a factor move. **RSI 31.8 is the second-lowest of the five and close to oversold** — worth noting as bounce risk for anyone short, but it does **not** fire the <30 leg.
+- Horizon: **SHORT_TERM** — the guidance reset is genuinely structural, but the catalyst that would resolve it (execution against the $3.0-3.2B outlook) does not land until the next print, and the rotation phase is against the sector. Structural story, untradeable timing.
+- Opportunity cost: Nothing displaced. Of the three AI-infra names today this has **the most credible eventual long thesis**, so any slot ever spent in this complex belongs here rather than CRWV — but spending one of three weekly trades to catch a **-43% falling knife** ahead of a credit-driven repricing is the textbook violation of Rule 11. The mechanics settle it: ATR(14) **$16.73 = 18.2% of price, the widest of the five**, so a 10% trail is barely half of one average day's range and would be taken out by noise alone, while a 1-ATR stop would need **+36%** to clear 2:1. Confluence fires **zero of two** (49.0% below the 200-SMA, RSI 31.8). **No trade.**
+
+#### Deep dive: UMAC $9.62 -5.18%
+- Catalyst: A **round-trip of a broker-initiation pop**, not bad news. On Nov 19 **Oppenheimer initiated at Outperform with a $30 price target** — roughly 3x the stock's price — and the shares rallied 7% intraday (Tickeron logs a +12.49% day). FactSet's polled mean target is **$30.11**, so Oppenheimer is **at consensus, not above it**. The underlying business is small but fast-growing: **revenue +551.3% YoY to $13.9M**, a **net loss of $25.04M**, projected 2027 revenue of $122.2M, and a line of US-sourced drone components (flight controllers, ESCs, motors, cameras) built to meet US defense sourcing requirements, plus an **October acquisition of Upgrade Energy** for US drone battery manufacturing. Cited structural driver: the Army's stated intention to buy **at least one million small drones**.
+- Why: An initiation moves a $10 microcap because it is a **liquidity and attention event, not an information event about cash flows** — no numbers changed between Nov 18 and Nov 19. Pops of that kind mean-revert once the initiating desk's flow clears, and **faster in a risk-off tape**. The group is doing exactly that: **ONDS -4.49%, RCAT -3.04%.** ⚠️ **Reporting on this name is unreliable** — Tickeron describes UMAC *"down 8.69% to approximately $13.35"* on Nov 19, irreconcilable with 24/7 Wall St's $10.24 the same day and with Alpaca's $10.15 close. **Treat third-party price levels on UMAC with suspicion; only Alpaca prints were used for the numbers above.**
+- Impact: Reads as a **one-day-pop give-back inside a continuing downtrend** — the worst of both readings: the immediate move is mean-reversion of a headline spike, but the backdrop is a stock **49.1% below its 200-SMA**. Prior-session volume **4.2M is the lightest of the five**, so this is also the thinnest tape — a $10 microcap with 16.6% ATR and a 551% revenue growth rate attached to a $25M net loss. Sector read-through to the small-cap drone complex is negative.
+- Horizon: **SHORT_TERM** — an analyst initiation is **not** a structural catalyst: no contract, no guidance change, no regime change. The Army's million-drone intent *is* structural, but it long predates this week and is **not what moved the stock.**
+- Opportunity cost: Nothing displaced. **This would be the worst use of a weekly trade slot on the list** — the lowest-quality setup, chasing the give-back of a broker-initiation pop in the thinnest name; a slot spent here instead of BE trades a real catalyst for an attention event. Position mechanics are the hard blocker: ATR(14) **$1.60 on a $9.62 stock = 16.6% of price**, so the 10% trail is ~0.6 ATR and the -7% cut ~0.4 ATR — **both inside normal daily noise for a microcap**. Confluence fires **zero of two** — RSI 30.8 **misses** the <30 threshold and price is 49.1% below the 200-SMA. **No trade.**
+
+#### Deep dive: ASTS $24.27 -5.01%
+- Catalyst: **No catalyst landed overnight**; this is the fifth week of a post-earnings de-rating. ASTS reported Q3 2026 on Nov 9: revenue **$42.3M** and a loss of **$0.44/share, both below Wall Street — a double miss** — while **reiterating full-year revenue guidance** and reporting **more than $3.2B of cash, equivalents and restricted cash** as of Sept 30, which the earnings call framed as ample liquidity for the constellation build. The market has focused on the other side: KoalaGains attributes the **Nov 16 fall of 12.33%** to *"widening losses, steep capital spending for its new rocket program."* Sentiment is genuinely split — Seeking Alpha published *"The Market May Have Gone Too Far"* on Nov 19, and Stocktwits chatter (premarket $24.58, prev close $25.55 — **consistent with Alpaca's $24.27/$25.55**) is waiting on a launch-date announcement. Competitive overhang from **SpaceX/Starlink direct-to-cell** news as well.
+- Why: The move is a shift in **how the market finances a pre-revenue story.** With $42.3M of quarterly revenue against a constellation **plus an in-house rocket program**, ASTS is a **duration asset** — its value sits almost entirely in terminal cash flows, making it **the most discount-rate-sensitive name on this list**. A rising-risk-premium tape marks down long-duration equity hardest, and announcing a second capital-hungry program into that tape pushes the cash-flow date further out at exactly the wrong moment. The $3.2B cash balance is why this is a **de-rating rather than a solvency question**.
+- Impact: Sustained and **the most extreme of the five: 66.3% below its 200-SMA**, the deepest de-rating on the board, on 17.6M prior-session shares. Notably, **ASTS is underperforming its own satellite peers — GSAT -0.45%, IRDM -2.50% vs ASTS -5.01%** — so unlike BE/CRWV/NBIS this is **NOT purely a sector factor move**; a meaningful share is **idiosyncratic high-beta unwind**. **RSI 29.9 is the only sub-30 reading on the list**, making it the most likely of the five to produce a sharp counter-trend bounce — and the most dangerous to be short into.
+- Horizon: **SHORT_TERM** — a reiterated guide and a strong cash position are not a new catalyst, and the one scheduled event that could re-rate the name (a launch date) **has no confirmed timing**. Until it is dated, this is headline-driven.
+- Opportunity cost: Nothing displaced. **ASTS gets closest to a rule-sanctioned entry of any name today**: its RSI of 29.9 fires the oversold leg, making it **the only ticker with any confluence leg at all**. It still fails, because the rule requires **two** and price is 66.3% below the 200-SMA, which kills the long-bias leg outright. The mechanics are no kinder: ATR(14) **$4.00 = 16.5% of price**, so the 10% trail is ~0.6 ATR and would be removed by one ordinary session, and clearing 2:1 off a 1-ATR stop needs **+33%** with no dated catalyst to drive it. Spending a weekly slot on **the single most discount-rate-sensitive asset on the board**, while the benchmark sits below its 200-SMA, **inverts the risk the rulebook is built to avoid.** **No trade.**
+
+**Net read: no longs today, and the BE tell is the headline.** All five qualifying
+gappers are DOWN-gaps, four of five in AI-infrastructure or AI-power. The single
+most informative fact in this scan is that **BE gapped -6.7% on the morning of a
+BMO upgrade, with raised guidance and a 900 MW NTT DATA contract already in
+hand** — when good news cannot hold a stock, the factor is being de-rated, not
+the company. **Rule 9 (follow sector momentum) and Rule 11 (patience > activity)
+both say flat. Staying 100% cash is the position.** Research only; **no orders
+placed (STEP 8).**
+
+**Notes / data caveats (2026-11-20 08:09 ET run):**
+- **All premarket prices are Alpaca `delayed_sip` (15-minute delay).**
+  `market-open` / `/trade` MUST re-quote before acting on anything above.
+- **BE's premarket print ($156.9033) is byte-identical to the 07:10 ET run** —
+  no new trade in ~1h of thin premarket. Treat as a stale last print, not a quote.
+- **`scripts/size.mjs` reports a badly stale `price` field** (BE $173.07,
+  NBIS $129.46, ASTS $32.30 vs premarket $156.90 / $91.74 / $24.27 — NBIS is off
+  by 41%). Its `atr14` values come from real daily bars and were used; **its
+  `price` field was not, and should not be trusted for sizing.** Worth a fix:
+  `suggested_shares` is computed off that stale price, so the wrapper's own share
+  counts are wrong by the same margin.
+- **200-SMA and RSI(14) computed locally** from Alpaca 1Day bars (264 bars each).
+  Cross-check: the computed **SPY 200-SMA $732.67 / RSI 31.5 reproduces the
+  06:02 ET pre-market run exactly**, so the method is sound.
+- **`gappers-alpaca.sh`'s `volume` field is prior-session volume, not premarket
+  volume** — the routine's `premarket_volume >= 50000` filter is therefore
+  inapplicable and is logged as `null` rather than faked.
+- **Apify flakiness continues:** 4 of 12 `apify--web-search` calls timed out at
+  60s; all succeeded on retry. One over-narrow query (ASTS + `dateFrom`) returned
+  **0 results** and was re-run without the date bound. Yahoo block applied as both
+  the `-site:` suffix and `blockedDomains` on **every** query — **no
+  finance.yahoo.com result was used or cited.**
+- **`mcp__Apify__apify--rag-web-browser` still does not exist in this session;**
+  used `apify--web-search`, the equivalently-named tool the routine permits.
+- **ClickUp still broken** (HTTP 400 `Invalid workspace ID`, unfixed since Nov 19).
