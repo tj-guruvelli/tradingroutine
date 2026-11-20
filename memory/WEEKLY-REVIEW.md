@@ -719,3 +719,46 @@ Template for each entry:
 - Re-verify the Market-Open TRADE-LOG entry gap next week — confirm whether Nov 10/13 were isolated misses or a recurrence of the pre-Sep-25 pattern
 - Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's NVDA-shock response is the clearest evidence yet the discipline holds under single-company tail risk, not just macro-wide ones; every blocker remains operational/data-pipeline, not the rules themselves
 ### Overall Grade: C
+
+## Week ending 2026-11-20
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $100,000.00 |
+| Ending portfolio | $100,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | -8.43% (SPY proxy: $754.27 → $690.68, Alpaca daily bars, Fri Nov 13 close → Fri Nov 20 close) |
+| Bot vs S&P | +8.43% |
+| Trades | 0 (W:0 / L:0 / open:0) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no trades) |
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No trades closed this week |
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | 0 open positions |
+### What Worked
+- Discipline held all 5 sessions through the week's defining event — SPY broke below its own 200-SMA (-2.30% by Nov 20), VIX spiked from ~22 to 29.54 (+12.86% over 4 weeks), and the Nasdaq Composite hit its lowest level since April; zero positions meant zero drawdown through the single worst week of the challenge to date, more than 3x the magnitude of the Nov 6 precedent (+2.69% that week vs +8.43% this week)
+- TLN's dated $349-356 limit-entry plan (built Nov 18, post-FOMC) correctly never filled — verified via 15-minute bars that the band was never reached inside the window, so no trade was missed and no step was skipped; the name then round-tripped and fell with the broader tape anyway, validating the patience
+- Produced the clearest two-sided quantitative evidence yet on the standing 10%-stop/2:1-R:R structural conflict: Nov 19 showed 28 of 29 individual candidates fail (27 on the 200-SMA filter) while index RSI sat at 34; Nov 20 showed the mirror image — the only clean defensive trend candidates (XLP/XLU/TLT) pass trend but fail R:R because their ATR is too low to reach +20% — proving the admissible volatility band is narrow by construction in both market directions, not a one-off
+- Correctly treated the Anthropic (ANT) IPO — the largest on record — as mechanically unevaluable (one day of price history, no 200-SMA/ATR) rather than speculating on it, while disclosing the model-provider conflict of interest each time it came up
+- Account/position state re-confirmed live via `alpaca.sh` every session — no reliance on stale cached figures
+### What Didn't Work
+- **21st consecutive zero-entry week** (96 trading days since launch, Jul 9) — the streak remains the dominant structural fact about the account even though this week's variance was strongly favorable
+- `tradingview-data` MCP still unavailable the entire week (16th+ straight week) — the Alpaca-bars fallback still hasn't been wired into the pre-market/gappers confluence check itself
+- **ClickUp notification channel confirmed broken again, with a new and more specific error**: HTTP 400, `{"err":"Invalid workspace ID","ECODE":"SHARD_034"}` — all three ClickUp env vars are present and non-empty, so this is a rejected credential, not a missing one; unresolved since first found Sep 18 (10th+ straight week)
+- Market-Open/midday execution runs were missing from TRADE-LOG on 2 of 5 sessions this week (Nov 19, Nov 20) — a partial recurrence of the logging-gap pattern after several clean weeks; HOLD logic stays traceable via RESEARCH-LOG, but the execution-layer log itself has gaps again
+- $100k live equity vs $10,000 baseline in TRADING-STRATEGY.md/PROJECT-CONTEXT.md mismatch, flagged every session since Jul 27, now the **21st consecutive weekly review**, still unresolved — no operator response yet
+### Key Lessons
+- This week is the strongest evidence yet that "patience > activity" has real teeth: zero positions meant zero exposure to an -8.43% benchmark week, the sharpest weekly decline of the challenge, more than 3x the magnitude of the previous best outperformance week (Nov 6, +2.69%)
+- The two-sided rule-conflict finding (individual longs fail the 200-SMA filter in the falling tape; the only clean defensive trend candidates fail the R:R floor because their ATR is too low) shows the 10%-stop/2:1-R:R pair has a structurally narrow admissible band regardless of market direction — a mechanical property of the two rules together, not a one-off or a data-availability artifact
+- Standing unresolved operator items (baseline mismatch 21 weeks, ClickUp rejected-credential 10+ weeks) continue to accumulate without action; none affected this week's capital-protection outcome, but they remain the dominant risk to the review/notification process itself, not to the trading discipline
+### Adjustments for Next Week
+- Escalate the $10k/$100k baseline mismatch (21 weeks) and ClickUp's rejected-workspace-ID failure (10+ weeks, new SHARD_034 error) together as one bundled operator action item
+- Wire the Alpaca-bars technical fallback into the pre-market/gappers confluence check — carried over for a 16th straight week
+- Re-verify the Market-Open TRADE-LOG entries next week — confirm whether Nov 19/20's gaps are isolated or a recurrence of the pre-Sep-25 pattern
+- Keep trade limits and confluence rule unchanged — no strategy rule proven wrong; this week's extreme benchmark decline is the clearest data point yet that the discipline protects capital in a real drawdown, not just in calm weeks
+### Overall Grade: B
