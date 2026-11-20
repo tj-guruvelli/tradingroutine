@@ -22291,3 +22291,12 @@ sessions; today is the cleanest two-sided evidence produced so far.
   which was still returning stale prices as of Nov 19.
 - **TLN quoted spread $333.33 / $374.99 = 11.7% of price.** Treat any TLN "price"
   here as the **Nov 19 last trade ($355.91)**, not a current tradeable level.
+- **NOTIFICATION CHANNEL FAILURE — ClickUp is down, needs operator action.**
+  `scripts/clickup.sh` exits 22 on **HTTP 400** with body
+  `{"err":"Invalid workspace ID","ECODE":"SHARD_034"}`. All three ClickUp env vars
+  are **present and non-empty** — this is not the "KEY not set" case the routine
+  handles, it is a **rejected `CLICKUP_WORKSPACE_ID`**, so the script's own
+  local-file fallback never triggers either. STEP 5 was delivered via
+  **`scripts/telegram.sh` instead (HTTP 200, message_id 400)**, the primary channel
+  per CLAUDE.md. **Fix or rotate `CLICKUP_WORKSPACE_ID`** — until then every routine
+  that notifies via ClickUp alone is silently failing.
