@@ -22781,3 +22781,287 @@ CRWV is the sharpest case — unchanged from 09:09 while QQQ gained ~1.3 points.
 - No orders placed — research-only routine (STEP 6).
 
 - No orders placed — research-only routine (STEP 6).
+
+## 2026-11-23 — Pre-Market Research (Day 97, Monday, cloud run)
+
+Run time **06:02–06:40 ET**. Research tool: **native WebSearch (fallback)** — the
+Apify connector's search backend was **down this run**: `apify--web-search`
+returned 1× 60s timeout and 3× HTTP 502 `UPSTREAM_SEARCH_ERROR` across **both**
+providers (`google` *and* `duckduckgo`), so the failure is upstream of the
+provider choice, not a query problem. `mcp__Apify__apify--rag-web-browser` still
+does not exist in this session (only `apify--web-search` / `apify--web-fetch`).
+Numeric load carried by **Alpaca's own bars/snapshots on the `sip` feed**. No
+Perplexity. **No Yahoo data in this entry** — block applied as the `-site:`
+suffix plus `blockedDomains`/`blocked_domains` on every query; no
+finance.yahoo.com URL surfaced or was cited.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction) |
+| `balance_asof` | 2026-11-20 |
+| Deployed | **0%** vs the 75–85% rule — 97th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required env
+vars confirmed `set` before any wrapper call. Endpoint = `paper-api.alpaca.markets`
+(PAPER).
+
+### Market context
+
+**The regime fact: the S&P 500 closed Friday in a confirmed correction.**
+- **SPY $689.81 on Nov 20, −3.64% in one session.** The cash index closed
+  **6,910.39**, **−11.6% below its Oct 6 record of 7,818.93** — correction
+  territory, and the Dow joined it. Week ended Nov 20: **S&P −8.6%, Nasdaq −10.0%**.
+- **Both benchmarks remain below their 200-day.** SPY vs 200-SMA **−5.7%**
+  ($689.81 vs $732.74); QQQ **−10.7%** ($608.45 vs $683.04). SPY RSI(14) **29.4**
+  — the first sub-30 benchmark print of the challenge window. QQQ RSI **31.2**.
+- The 200-SMA long-bias filter is written per-name but **fails at index level for
+  the second session running**. Every new long today is placed against a benchmark
+  in a confirmed downtrend, now an oversold one.
+
+**Friday was an AI-complex flush, not a broad liquidation** (Alpaca `sip` dailies)
+
+| Symbol | Nov 19 | Nov 20 | Day | vs 200-SMA | RSI(14) |
+|---|---|---|---|---|---|
+| **NVDA** | 145.98 | **125.53** | **−14.01%** | — | — |
+| QQQ | 645.04 | 608.45 | −5.67% | −10.7% | 31.2 |
+| SPY | 715.87 | 689.81 | −3.64% | −5.7% | 29.4 |
+| IWM | 264.22 | 256.61 | −2.88% | −8.2% | 32.0 |
+| MSFT | 498.30 | 484.52 | −2.77% | **+9.6%** | 43.1 |
+| XLF | 55.58 | 54.57 | −1.82% | **+1.1%** | 36.4 |
+| XLE | 60.89 | 60.51 | −0.62% | **+1.4%** | 24.8 |
+| XLV | 177.46 | 177.24 | −0.12% | **+10.8%** | 37.3 |
+| V | 402.25 | 401.87 | −0.09% | **+15.5%** | 34.9 |
+| MA | 626.50 | 625.59 | −0.15% | **+15.2%** | 36.2 |
+| **XLP** | 89.86 | **90.46** | **+0.67%** | **+7.4%** | 48.6 |
+
+- **NVDA −14% in a single session is the epicenter.** XLK fell **−7.21%**. But
+  **XLP closed green** and XLV/V/MA were flat-to-down-fractionally. This was a
+  concentrated de-rating of the AI-capex complex, not an everything-down panic —
+  the dispersion is the signal.
+- Four sectors still hold their 200-day: **XLV +10.8%, XLP +7.4%, XLE +1.4%,
+  XLF +1.1%.** Everything else is below, led down by **XLK −12.9%** and
+  **XLI −9.8%**.
+
+**VIX 35.89** (Nov 20 close, **+26% on the day** from 28.44) — the **highest close
+since April 2025**, with an intraday touch near **40**. Cboe-sourced via multiple
+outlets; one feed reporting 37.65 was discarded as a different dataset. For
+context the Nov 20 pre-market run logged 29.54, so the fear gauge added **~6.3
+points in one session**.
+
+**Premarket today — a violent rebound bid** (Alpaca `delayed_sip` snapshots
+~10:51Z / 05:51 ET, measured against **Nov 20** closes)
+
+| Symbol | Nov 20 close | PM last | PM vs Nov 20 |
+|---|---|---|---|
+| **NVDA** | 125.53 | 136.01 | **+8.35%** |
+| QQQ | 608.45 | 631.80 | **+3.84%** |
+| MSFT | 484.52 | 501.82 | +3.57% |
+| SPY | 689.81 | 710.11 | **+2.94%** |
+| TRMD | 31.90 | 32.75 | +2.66% |
+| IWM | 256.61 | 262.99 | +2.49% |
+| XLF | 54.57 | 55.74 | +2.14% |
+| V | 401.87 | 407.10 | +1.30% |
+| XLE | 60.51 | 61.20 | +1.14% |
+| MA | 625.59 | 629.63 | +0.65% |
+| XLV | 177.24 | 178.23 | +0.56% |
+| D | 66.28 | 66.37 | +0.14% |
+| XLP | 90.46 | 90.53 | +0.08% |
+
+- Index futures were reported **S&P +2.1% to +2.7%, Nasdaq 100 +2.6% to +3.6%,
+  Dow +1.4% to +2.0%** depending on feed and timestamp. Semis led: NVDA **+8%**,
+  with MU/ARM/TSMC each **+6%**.
+- **The rebound is exactly inverse to Friday's damage.** The names bouncing hardest
+  are the ones that broke hardest; the defensives that held (XLP +0.08%, XLV
+  +0.56%) are barely participating. That is a short-covering/dip-buying bounce in
+  the oversold complex, **not** a rotation into quality — and it is the single
+  biggest reason not to buy anything at the open today.
+
+**Oil — WTI into the low $80s, third weekly decline extended**
+- **WTI ~$83.4–84.0** and **Brent ~$89.9–92.6** at the Nov 20 close; sources
+  disagree by ~$2.60 on Brent, so treat as approximate. A Nov 22 report has WTI
+  slipping to **~$82.70** and Brent **~$89.30** into the Monday open, attributed to
+  Bessent publicly challenging the Fed's hawkish rate path.
+- **XLE is still the #1 YTD sector (+35% to +40%)**, driven by oil up ~46% since
+  January on the Middle East conflict. But XLE's RSI(14) is **24.8** — the most
+  oversold sector reading on the board, and it sits only +1.4% above its 200-day.
+  Energy's YTD leadership is now being actively unwound.
+
+**This week's calendar — front-loaded, then shut**
+- **Mon Nov 23:** flash Manufacturing PMI **54.5e** (prior 54.9) and Services
+  **55.6e** (prior 56.1), **09:45 ET**. NY Fed's **Williams speaks 16:00 ET**.
+- **Tue Nov 24:** Conference Board consumer confidence **10:00 ET** (~92.1–92.5e
+  vs 91.7). **Dell after the close.** Busiest pre-open earnings day of the week:
+  **ADI, MDT, DLTR, BBY, BURL, SJM, DKS, ANF, BILI**.
+- **Wed Nov 25 — the main event:** **October core PCE +0.3% m/m e** and the Q3 GDP
+  second estimate, both **08:30 ET**; durable goods and jobless claims the same
+  morning; **Beige Book 14:00 ET**. **DE and Li Auto** report pre-open.
+- **Thu Nov 26:** **US equity markets CLOSED** (Thanksgiving).
+- **Fri Nov 27:** **early close 13:00 ET.**
+- **Mon Nov 23 pre-open earnings: none noteworthy.** Monday's reports are
+  after-the-close (HPE, Agilent, Zoom).
+- **Fed:** rates held at **3.75–4.00%**, and CME FedWatch has **>95% pricing a
+  quarter-point move on Dec 9** — reported as a *hike*, which is worth the operator
+  treating with suspicion given a market in correction; the direction in the source
+  conflicts with a risk-off tape and was not independently confirmed this run.
+  **Logged as a flagged gap, not a fact.**
+
+**Why this matters for position sizing this week:** the two liquid sessions are
+Mon/Tue, then PCE lands Wednesday into a half-staffed tape, Thursday is shut and
+Friday is a half day. Any entry taken today carries a **binary macro print at
+08:30 Wed with no ability to manage the aftermath for two of the next four
+sessions.** Holiday-week liquidity also widens slippage on every stop.
+
+### Trade ideas
+
+Three ideas below. All three are **logged, none are triggered today** — each
+depends on a gate that today's tape has not cleared. Sizing is ATR(14)-based,
+recomputed by hand from `sip` bars because `scripts/size.mjs` is returning stale
+prices this run (see Data / tool notes — **this is a live bug**).
+
+**1. XLP (Consumer Staples Select Sector SPDR) — the only thing that worked**
+- **Catalyst:** the sole sector ETF to close **green (+0.67%)** on a day the S&P
+  fell 3.64% and NVDA fell 14%; also the only one within ~3% of its own high while
+  the index sits 11.6% below record. Mid-cycle/defensive rotation is the textbook
+  response to a growth-led correction, and the strategy's own sector table puts
+  Consumer Staples in the favored set for mid-cycle and recession phases.
+- **Confluence (3 of 4):** price **+7.4% above its 200-SMA** (long-bias filter
+  passes); **above its 50-SMA ($86.34)**; **RSI 48.6** — neutral, not overbought,
+  the only non-oversold reading on the board.
+- **Entry:** limit **$89.50–90.25**, i.e. **on a pullback toward Friday's close,
+  not at today's open.** Do not pay up through $90.75.
+- **Size:** **221 shares** (ATR(14) $1.52 = 1.7%; ATR sizing allows 659, the 20%
+  cap binds at 221) ≈ **$19,992 = 20.0% of equity**.
+- **Stop:** 10% trailing GTC → **~$81.41**. **Target:** +20% → **$108.55**.
+- **Honest R:R note:** a +20% move in a staples ETF with a 1.7% ATR is a
+  multi-quarter move, not a swing target. This is the clearest case yet of the
+  **structural 10%-stop / 2:1-R:R conflict** — the stop is ~6 ATR wide and the
+  target ~12 ATR away. XLP passes every trend and confluence gate and **fails the
+  2:1 gate on any realistic horizon.** Flagged for operator resolution, not
+  overridden.
+
+**2. V (Visa) — relative strength, but the catalyst leg is negative**
+- **Setup:** **+15.5% above its 200-SMA**, the strongest trend reading on the
+  watchlist, **RSI 34.9** (oversold inside an intact uptrend), ATR 2.2%, 7.3M
+  avg 20d volume — fully liquid. Essentially **flat (−0.09%) on a −3.64% day.**
+  XLF also holds its 200-day (+1.1%).
+- **Why it is NOT a buy today — the news checked out badly:** Visa raised its
+  dividend 16% to $0.78 (payable Dec 1) and Bernstein lifted its target to $486,
+  but against that sit **Walmart and Amazon exploring their own stablecoins to
+  bypass card fees** (V fell ~3.1% on that report in early November), a **~$38B
+  merchant-interchange settlement** reported Nov 17, and — for the pair trade —
+  **MA fell 2% on Nov 19 on a reported data breach.** The confluence gate passes on
+  indicators; the **catalyst gate fails**, because the live idiosyncratic news flow
+  is disintermediation risk, not a tailwind. Rule: *no entry without ≥2 indicators
+  AND ≥1 documented catalyst.* **Catalyst absent → no entry.**
+- If ever taken: **49 shares** (ATR $8.93; cap binds) ≈ $19,692 = 19.7% equity;
+  stop **$361.68**; target **$482.24** — which sits **above** the Nov 4 52-week
+  high of $436.57, i.e. 2:1 again requires a new all-time high.
+- **MA is the same trade, strictly worse:** +15.2% vs 200-SMA, RSI 36.2, but
+  carries the fresh breach headline. 31 shares if ever taken. **Do not hold both —
+  they would fail the >0.75 correlation gate against each other.**
+
+**3. XLE / energy — the oversold YTD leader, on watch only**
+- **Setup:** **#1 YTD sector (+35–40%)**, still **+1.4% above its 200-SMA**, and
+  **RSI 24.8 — the most oversold reading on the entire board.** Oil ~+46% YTD on
+  the Middle East conflict.
+- **Why watch-only:** the precondition is a **daily close back above the 50-SMA
+  ($64.70)** from $60.51 — a **+6.9% move** that cannot be satisfied intraday, so
+  by construction there is no trigger today. Separately, the Nov 22 driver for
+  oil's slide (Bessent vs the Fed's rate path) is a **macro** input that PCE on
+  Wednesday can invalidate in either direction.
+- **Reconsider only after Wed 08:30 ET PCE**, and only on a 50-SMA reclaim.
+
+### Risk factors for the day
+- **Benchmark in confirmed correction and below its 200-day.** SPY −11.6% from
+  record, −5.7% vs 200-SMA. Rule 9 (follow sector momentum) and the long-bias
+  filter both argue against new longs in anything but the four sectors still above
+  their 200-day.
+- **VIX 35.89, highest close since April 2025, intraday ~40.** At this level a 10%
+  trailing stop is roughly **1 day of index range** — stops get taken out by noise
+  rather than by thesis failure. This is the dominant argument for standing aside:
+  the mandated stop is structurally too tight for the current volatility regime.
+- **Today's bounce is a dip-buy in the broken complex, not a rotation to quality.**
+  NVDA +8.35%, QQQ +3.84% vs XLP +0.08%. Buying strength at the open means paying a
+  3% gap in the exact names that just fell 14% — "never chase" applies directly.
+- **Gap risk into a shortened week.** PCE 08:30 Wed, market closed Thu, half day
+  Fri. Two of the next four sessions cannot be managed. Holiday liquidity widens
+  slippage on stops.
+- **Fed direction genuinely unclear.** >95% odds on a Dec 9 quarter-point move, but
+  the sourced *direction* (hike) conflicts with a correcting tape and is logged as
+  unconfirmed. Do not size against an unresolved rate path.
+- **Monday 09:45 ET flash PMIs** both forecast to decline (mfg 54.9→54.5, svcs
+  56.1→55.6) — a miss feeds the growth-scare narrative within 15 minutes of the
+  open.
+- **AI-complex contagion is not resolved.** The Nov 20 flush came with CRWV's
+  >$40B debt load and ~16% debt yield, NBIS −54.7% vs its 200-SMA, and the
+  Anthropic IPO breaking 8.5% below its debut. *Conflict-of-interest disclosure,
+  repeated rather than buried: Anthropic develops the model running this bot. No
+  view is offered on ANT.*
+
+### Decision: **HOLD. No orders.**
+
+- **0 of 3 weekly trades used** (week of Nov 23 — new week, counter reset).
+- Nothing clears the full gate. XLP passes trend + confluence and fails 2:1 R:R.
+  V passes indicators and fails the catalyst test on adverse idiosyncratic news.
+  XLE's trigger (50-SMA reclaim, +6.9% away) cannot fire intraday.
+- The deciding factor is not the absence of a candidate — it is that **VIX ~36 makes
+  the mandated 10% stop narrower than one session's range**, so any entry taken
+  today is a coin-flip on noise rather than a managed risk. Patience > activity.
+- **100% cash through a −8.6% S&P week and a −14% NVDA session is, this once, the
+  position that worked.** It is an accident of 97 sessions of non-participation
+  rather than a decision — the 0%-vs-75–85%-deployed breach is still a breach and
+  still needs operator resolution — but it is not a loss to recover from.
+- **Next checkpoint:** Mon 09:45 ET flash PMIs, then **Wed 08:30 ET core PCE** as
+  the week's real decision point. Re-run the XLP pullback limit and the XLE 50-SMA
+  reclaim after PCE, not before.
+
+### Data / tool notes (06:02–06:40 ET run)
+- **`scripts/size.mjs` is returning prices ~7 trading days stale — live bug,
+  affects every ATR size calculation.** Root cause read from source, not guessed:
+  line 82 requests a **~40-calendar-day** window (`start = now − 40d`) but passes
+  **`limit=20`**. That window holds ~27 trading bars, and Alpaca returns bars
+  **ascending**, so `limit=20` keeps the **oldest 20** and silently discards the
+  **most recent ~7 sessions**. `bars[bars.length - 1].c` is therefore a week-old
+  close. Measured this run: it reported **V $425.68 vs the true Nov 20 close of
+  $401.87 (+5.9% stale)** and **MA $660.22 vs $625.59 (+5.5%)**. In a correction
+  this silently **undersizes** risk and prices stops off a level the stock has
+  already left. **Fix: raise `limit` to ~60 (or drop it) and keep the newest bars.**
+  Sizing in this entry was recomputed by hand from `sip` bars.
+- **`/v2/stocks/snapshots` `prevDailyBar` lagged a full session** on the
+  `delayed_sip` feed at 10:51Z — it returned **Nov 19** closes (SPY 715.87), not
+  **Nov 20** (689.81). A naive snapshot read showed **SPY −0.80%** when the true
+  premarket move was **+2.94%** — an inverted sign on the single most important
+  number of the run. **Every routine computing a premarket % off `prevDailyBar`
+  should pull the prior close from `/bars` instead.** Flagged as high-priority:
+  `gappers`/`lowfloat` both key off snapshot deltas.
+- **Apify search backend down this run.** `apify--web-search`: 1× 60s timeout, 3×
+  HTTP 502 `UPSTREAM_SEARCH_ERROR` on **both** `google` and `duckduckgo`. Fell
+  back to native WebSearch per the routine spec, noted here as required. The
+  `dateFrom` recommendation from the Nov 20 runs remains un-actioned in the STEP 2
+  spec and could not be exercised this run.
+- **`adjustment=raw` corrupts long-lookback stats — use `adjustment=all`.** The
+  first watchlist pass (raw, the default in `alpaca.sh bars`) produced impossible
+  252-day highs: **XLK $291.56** (vs $183 in September) and **XLU $90.70** (vs
+  $42.26), implying −48.9%/−52.9% drawdowns that do not exist. Re-pulled on
+  `adjustment=all` and cross-checked against September closes. All figures in this
+  entry use `adjustment=all` on the **`sip`** feed. **Recommend `alpaca.sh bars`
+  default to `adjustment=all`;** any prior entry citing a raw `fromHi` for a
+  dividend-paying ETF should be treated as suspect.
+- **`sip` feed beats `iex` for this routine.** IEX gave SPY Nov 20 at 690.68 vs
+  `sip` 689.81, and IEX 20-day average volumes are a fraction of consolidated
+  (e.g. V 0.43M on IEX vs **7.3M** on `sip`) — IEX volume is unusable for a
+  liquidity gate. `alpaca.sh bars` hardcodes `feed=iex`; **recommend a `feed`
+  argument.**
+- **ClickUp still broken** (HTTP 400 `Invalid workspace ID`, unfixed since Nov 19)
+  — STEP 5 notification could not go out on the specified channel; see below.
+- **`scripts/telegram.sh` 4,096-char cap still unchunked** — flagged for the
+  fourth run running, still un-actioned. With ClickUp down this is a single point
+  of failure for every notification.
+
+- No orders placed — research-only routine (STEP 6).
