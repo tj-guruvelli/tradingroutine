@@ -23517,3 +23517,165 @@ and **0% deployed** against the 75-85% mandate; 0/3 weekly trades used (week of
 Nov 23); Day 97 since launch with zero entries. `gappers-alpaca.sh` should rank
 on a live feed or re-quote its finalists before ranking — today it would have
 dropped the #2 gapper off the list entirely.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+
+Research tool: **Apify `apify--web-search`** (the documented `rag-web-browser`
+tool still does not exist in this session). Backend **up and fast** this run —
+2.6–53s per query, 1 of 8 queries hit a 502 `UPSTREAM_SEARCH_ERROR` and
+succeeded on retry via the `duckduckgo` provider. **No Yahoo data in this
+entry** — `-site:` suffix plus `blockedDomains` on every query; no
+finance.yahoo.com URL surfaced or was cited.
+
+**MARKET IS OPEN THIS RUN (10:09 ET).** These are regular-session prices, so
+"gap%" is a day-change vs the Nov 20 close, not a premarket gap. That also means
+the `volume` column is **today's accumulating session volume**, not the prior
+session's — the field flips once `dailyBar` rolls, so it is genuinely
+informative this run (unlike the 07:09/08:17/09:09 runs, where it was Friday's
+full-day volume).
+
+**TAPE-WIDE GAP — read every number against QQQ, not against zero.** NVIDIA's
+board unanimously reinstated **Jensen Huang** as President/CEO/director before
+Monday's open, effective immediately, 11 days after his Nov 12 resignation.
+**Confirmed holding this run** (CNBC live blog, Nov 23): Trump said the board
+"made the correct" decision. **NVDA +32.68%.** Benchmarks: **QQQ +6.74%**
+($609.75 → $650.83), **SPY +4.53%** ($690.68 → $721.97), **IWM +2.89%**. A
+"+7% gapper" today is flat beta; NVDA itself is outrunning every name on this
+list.
+
+**THE NEW FACT THIS RUN — GAP-AND-FADE IS UNDERWAY.** All 10 names opened **at
+or within 2% of their session high** and have since sold off. This was not
+visible at 09:09 ET and it reverses the read on the whole list:
+
+| Sym | Open | Session H | Now | Off high |
+| --- | ---- | --------- | --- | -------- |
+| NBIS | 110.01 | 110.01 | 99.58 | **−9.5%** |
+| BW | 4.13 | 4.345 | 4.03 | −7.2% |
+| CRWV | 50.80 | 51.89 | 48.28 | −7.0% |
+| QBTS | 7.62 | 7.925 | 7.54 | −4.8% |
+| RGTI | 8.23 | 8.62 | 8.27 | −4.1% |
+| BE | 175.65 | 177.01 | 170.03 | −3.9% |
+| BMNR | 15.29 | 15.60 | 14.99 | −3.9% |
+| AMPX | 6.42 | 6.73 | 6.53 | −3.0% |
+| RDW | 6.50 | 6.615 | 6.43 | −2.7% |
+| AMKR | 35.09 | 35.09 | 34.33 | −2.2% |
+
+NBIS opened **exactly at its high** and has given back 9.5%; it is also below
+the **$105.15** the 09:09 run marked it at. The gap is being distributed, not
+accumulated.
+
+**Index long-bias filter still FAILS.** Even after a +6.7% Nasdaq day, **SPY
+$721.97 is −1.5% below its ~$732.74 200-SMA** and **QQQ $650.83 is −4.7% below
+~$683.04**. Third straight session with the benchmark 200-day filter failing at
+index level.
+
+**Scan-defect check — much smaller than at 09:09.** `gappers-alpaca.sh` ranks on
+the `delayed_sip` feed. Premarket that understated gaps by 2–4× and mis-ordered
+the list; with the market open the lag costs only **+0.4 to +3.3 pts** and
+changed no rank by more than two places. All gap% below are re-derived from
+**live last-traded 1Min closes** vs the Nov 20 close, not from the script's
+output. Live re-ranking still mattered at the margin: **BE moved from the 09:09
+"also gapping" bucket (+5.96%) to rank 3 (+19.41%)**, and quote-mid ranking was
+rejected because thin names carried unusable spreads (BKSY 14.5%, KLIC 17%,
+SATS 28.7%).
+
+Filters: |gap| ≥ 5.0, price ≥ $3.00, cap 10. **27 of ~60 watchlist tickers
+cleared** — the broadest hit count of the challenge window. Price filter
+excluded **RCAT ($1.93)** and **SATL ($2.59)**. Premarket-volume gate **not
+applicable** this run (market open; no distinct premarket field exists).
+**Deep dive capped at the top 5 (NBIS, CRWV, BE, QBTS, BMNR); ranks 6-10 got
+quick-scan only.**
+
+| Rank | Sym | $Price | Gap% | Dly% | vs QQQ | Vol | Catalyst |
+| ---- | --- | ------ | ---- | ---- | ------ | --- | -------- |
+| 1 | NBIS | 99.58 | +22.46 | +20.76 | +15.7 | 18.9M | Neocloud dip-buying on Huang reinstatement; no company news |
+| 2 | CRWV | 48.28 | +22.20 | +18.94 | +15.5 | 34.3M | Same neocloud driver; credit-spread relief on $66.2B debt |
+| 3 | BE | 170.03 | +19.41 | +17.62 | +12.7 | 6.4M | BMO upgrade to Outperform/$230 (Nov 19) finally working as AI-power is bid |
+| 4 | QBTS | 7.54 | +15.72 | +14.32 | +9.0 | 5.1M | No company news; quantum complex rebounding with tech |
+| 5 | BMNR | 14.99 | +15.52 | +14.52 | +8.8 | 9.2M | ETH-treasury NAV wrapper; routine $11.1B holdings update (Nov 22) |
+| 6 | RGTI | 8.27 | +15.43 | +13.62 | +8.7 | 4.2M | No fresh news; quantum beta. Q3 missed; $100M DoC award dates to Sept |
+| 7 | RDW | 6.43 | +13.89 | +11.15 | +7.2 | 2.6M | No fresh driver; space sympathy. $15M ELSA + Oppenheimer both Nov 19 |
+| 8 | BW | 4.03 | +13.84 | +14.69 | +7.1 | 0.9M | No news; AI-datacenter-power theme with BE. 5 insiders bought ~$210K/90d, no sales |
+| 9 | AMKR | 34.33 | +13.51 | +13.07 | +6.8 | 0.9M | NVDA supply-chain beta (OSAT packaging). Only item: ~+1% dividend raise |
+| 10 | AMPX | 6.53 | +13.08 | +12.13 | +6.3 | 1.1M | No news; battery small-cap beta. Clear Street PT cut to $26 from $30, keeps Buy |
+
+Also gapping, outside the top 10: ASTS +13.06, ORCL +12.82, BLSH +12.59,
+STM +12.50, ONDS +11.97, GFS +11.47, UMAC +10.88, LUNR +10.54, KLIC +10.38,
+PL +9.97, RKLB +9.62, QTUM +9.05, QCOM +8.92, BKSY +8.43, OKLO +8.06,
+SATS +6.60, KTOS +5.99.
+
+#### Deep dive: NBIS $99.58 +22.46%
+- Catalyst: No NBIS-specific news. The driver is entirely external — NVIDIA's board unanimously reinstated Huang before the open and Trump publicly backed it; NVDA +32.7%. Nebius is an AI-infrastructure "neocloud" renting GPU clusters, and fell 16.1% on Nov 20 to $81.31 as the AI-capex complex de-rated. Its own Q3 (Nov 12) beat on revenue but guided ~$40B of 2027 capex far above consensus; that guidance, the ~193x P/E and the reported construction delays are all unchanged over the weekend.
+- Why: Sponsor-risk reversal, not fundamentals. Neocloud equity is a levered call on Nvidia's willingness to keep supplying and financing GPU capacity; Huang's exit repriced that counterparty risk and his return un-prices it. Nothing about Nebius's own economics changed.
+- Impact: A one-day headline spike **already mean-reverting**. Opened AT its session high of $110.01 and has given back 9.5% to $99.58 — the largest fade on the list, and below the $105.15 marked at 09:09. Session volume 18.9M is heavy but it is the whole complex, not this name: CRWV +22.2% on the identical driver, with BE, AMKR, ORCL and the quantum group all moving together. No idiosyncratic signal; read-through is total.
+- Horizon: SHORT_TERM, a board reversing its own stated position of six days earlier under public political pressure — with a committee still investigating reports Huang was targeted by a foreign intelligence effort — is headline-driven and reversible, not a structural reset.
+- Opportunity cost: Displaces nothing (0/6 positions, 0/3 weekly trades), so R:R binds, not the caps. The mandated 10% trail sits $89.62, **inside Friday's $80.68–$93.84 range**, so ordinary gap-fill noise stops it out; 2:1 off a 10% risk leg needs +20% to ~$119.50 after a 22% run that is already fading. A stop outside Friday's range implies ~22% risk, over twice the 1.0%-of-equity ATR allowance. Also consumes the single AI-infra slot CRWV competes for — correlation far above the 0.75 gate makes the pair one trade.
+- **Verdict: NO ENTRY** — fails R:R at any sane stop; chasing a reversible headline that is fading intraday.
+
+#### Deep dive: CRWV $48.28 +22.20%
+- Catalyst: Largest listed neocloud; TTM revenue $9.89B (+129.6%) against a reported $66.2B debt load. Fell toward its $40 IPO price last week as that leverage drew scrutiny, closing Nov 20 at $39.51. Supportive items all predate today: Huang's foundation pledged $350M to rent CoreWeave compute, co-founder Brian Venturo bought $30M face value of its bonds, Citizens JMP reiterated Buy at $180. Nothing new landed today beyond the NVDA headline; a Form 144 (McVeety) was filed Nov 22 and CRWV appeared on Nov 22 after-hours movers lists.
+- Why: Leverage plus sponsor risk. $66.2B of debt against negative free cash flow makes the equity a levered bet on continued AI capex and cheap financing; Huang's departure widened its implied credit spread and his return narrows it. The analyst note and insider bond buying confirm an existing bull case rather than adding information.
+- Impact: Credit-driven relief bounce, not a trend change, and already fading — opened $50.80, peaked $51.89, now $48.28 (−7.0% off the high). Still only ~$8 above its IPO price, and the $66.2B refinancing overhang that caused the selloff is untouched. Session volume 34.3M is the heaviest on the list, which cuts both ways: real participation, but into a fade. Read-through identical to NBIS, so holding both adds no diversification; the $350M compute pledge and insider bond buy are the only CRWV-specific supports.
+- Horizon: SHORT_TERM, same reversible CEO headline; the refinancing overhang is unchanged and is what sets the medium-term path.
+- Opportunity cost: Competes directly with NBIS for one AI-infra slot — the correlation gate blocks both, so taking either forfeits the other. **This is the one name on the list whose 10% trail ($43.45) clears Friday's high ($43.21)**, so it is the only top-5 setup where the mandated stop is not pure noise-width; but 2:1 then needs +20% to ~$58 on a name already up 22% and 7% off its high, with the $40 IPO shelf just under the stop.
+- **Verdict: NO ENTRY** — least-bad R:R on the list and the only stop clearing Friday's range, but still needs +20% follow-through from a fading gap on an unresolved leverage story.
+
+#### Deep dive: BE $170.03 +19.41%
+- Catalyst: Bloom Energy builds solid-oxide fuel-cell systems sited directly at customer facilities and has become the preferred trade on off-grid power for AI data centres. **BMO upgraded it to Outperform with a $230 target on Nov 19**; the stock gapped up on the news and immediately gave it all back as the Dow fell 1,101 points, then dropped a further 8.5–13% on Nov 20 in the AI selloff. It had fallen ~21.6% over the trailing month into today. Google is a publicly reported fuel-cell customer; the bear case is cash burn. Also named to TIME's America's Top Manufacturers of 2027 on Nov 18.
+- Why: An oversold second-derivative AI play with a standing upgrade the tape would not let work. Data-centre power demand is the bull mechanism and an AI-capex slowdown was explicitly the key risk; when the Huang headline removed that risk for a session, the upgrade re-priced in one move. ORCL (+12.82%) moving alongside is the same trade — a reported Oracle project sits in Bloom's data-centre pipeline.
+- Impact: The most sustainable-looking move in the top five on mechanism, and the shallowest fade (−3.9% off a $177.01 high), but volume argues caution: **6.4M shares is the lightest of the top three by a wide margin**, so +19% is not volume-confirmed. Unlike ranks 1, 4 and 5 it has a real documented analyst catalyst — but four days stale and already twice rejected by the market. Read-through runs to the whole fuel-cell/AI-power group (FuelCell, Plug both fell with it Nov 20) plus BW at rank 8.
+- Horizon: SHORT_TERM, the catalyst is an analyst upgrade rather than a company event — no contract, guidance change or filing — and the cash-burn objection is untouched; Technology/Industrials being a favoured rotation phase is the one argument the other way.
+- Opportunity cost: Displaces nothing, and it is the only top-5 name whose catalyst satisfies the Entry Checklist's catalyst line on its own terms. But R:R fails: a 10% trail at $153.03 sits **inside Friday's $140.73–$162.65 range**, so the stop is noise-width, and 2:1 needs +20% to ~$204 — beyond the $230 street target's implied path in days. It also stacks with BW on the identical AI-power theme, so entering both would breach the correlation gate.
+- **Verdict: NO ENTRY** — best mechanism and a genuine catalyst, but the mandated stop lands mid-range and 2:1 needs another +20% on unconfirmed volume.
+
+#### Deep dive: QBTS $7.54 +15.72%
+- Catalyst: No D-Wave-specific news for today or the weekend. Fell 10.8% on Nov 20 to $6.52 on **20.9M shares against a 30-day average of 14.6M** — a heavy-volume capitulation day — in the broad technology selloff. Street consensus target $30.00 against a ~$6.51 price, which reads as stale rather than as a forecast. The quantum group is moving as one: RGTI at rank 6 on the same non-catalyst, QTUM (ETF) +9.05%.
+- Why: High-beta small-cap mechanically retracing an oversold low. With no company news the move is fully explained by the index gap plus speculative risk appetite returning to the longest-duration, least-profitable corner of tech — the cohort that falls hardest and bounces hardest without any change in the business.
+- Impact: A one-day beta spike likely to mean-revert. **Session volume 5.1M is well below Friday's 20.9M capitulation turnover** — the bounce is being made on a quarter of the conviction of the selloff, the clearest volume tell on the list. Already −4.8% off its $7.925 high, and even after +15.7% it has not recovered Friday's loss plus the prior week's. Read-through is the entire quantum complex, confirming zero idiosyncratic signal.
+- Horizon: SHORT_TERM, no catalyst at all, so nothing structural to carry; the strategy's own Entry Checklist says pass when the catalyst line is empty.
+- Opportunity cost: Displaces nothing but would spend one of three weekly trades on the thinnest thesis in the top five, strictly dominated by BE which at least has a documented catalyst. R:R fails outright — a 10% trail at $6.79 sits inside Friday's $6.46–$7.28 range and barely above Friday's close, so a routine gap-fill stops it out, while 2:1 needs +20% to ~$9.05. Entering alongside RGTI would breach the correlation gate; the two are one quantum trade.
+- **Verdict: NO ENTRY** — no catalyst, fails the Entry Checklist outright, bounce volume a quarter of selloff volume.
+
+#### Deep dive: BMNR $14.99 +15.52%
+- Catalyst: Ethereum treasury vehicle — an ~$8.1B market cap wrapped around roughly 6.08M ETH (~4.97% of supply as of Nov 15). Only fresh disclosure is a routine weekend holdings update putting total crypto, cash and "moonshots" at $11.1B as of Nov 22 15:00 ET, which confirms holdings rather than changing them. No corporate catalyst. Fell 13.9% on Nov 20 to $12.98. B. Riley cut its target to $27 from $34 keeping Buy; shares down ~52% over twelve months.
+- Why: Pure risk-asset beta through a leveraged NAV wrapper. The equity trades at a premium/discount to its ETH stack, so a risk-on reversal moves the stock more than the coin. At an ~$8.1B cap against $11.1B of stated assets the stock is marked **below its own stated NAV** — the only genuinely interesting feature, and a valuation observation, not a catalyst.
+- Impact: Likely to mean-revert with crypto, already −3.9% off its $15.60 high. **The one name in the top five whose driver is NOT the Huang headline**, making it the only real diversifier on the list even though it fails on its own merits — recorded for correlation purposes. Sustainability depends entirely on ETH, which this scan did not price, so the read is explicitly low-confidence.
+- Horizon: SHORT_TERM, a holdings-snapshot press release is not structural and crypto-proxy equities have no thesis independent of the coin; no phase in the sector-rotation table favours an ETH treasury wrapper.
+- Opportunity cost: Displaces nothing, but would spend a trade slot on undiversifiable crypto beta as the account's very first position while the mandate is to beat the S&P 500. The NAV discount gives the stop more logic than the others have, yet a 10% trail at $13.50 still sits inside Friday's $12.88–$15.17 range, and 2:1 needs +20% to ~$18 — achievable only on a large ETH move this scan has no read on.
+- **Verdict: NO ENTRY** — no corporate catalyst, undiversifiable single-factor crypto beta, 2:1 R:R unmet.
+
+**Net read — 0 of 10 actionable.** All ten are retracing **one shared macro
+catalyst**, and all ten **opened at or near their session high and are fading**.
+**Eight of ten have no company-specific news whatsoever**; only BE (analyst
+upgrade) and marginally CRWV (compute pledge, insider bond buy) have anything
+name-specific. Every top-5 name fails the 2:1 R:R minimum: the mandated 10%
+trailing stop lands **inside Friday's trading range for four of five**, making
+the stop noise-width while 2:1 needs another +20% from names already up 15-22%
+and rolling over. CRWV is the sole exception on stop placement and still needs
++20% follow-through. This is the same 10%-stop/2:1-R:R structural conflict
+flagged since Jul 27, and a +6.7% index day makes it acute. No orders placed —
+research-only routine (STEP 8).
+
+**Standing flags, unchanged:** account equity **$100,000** vs the CLAUDE.md
+~$10,000 baseline (flagged Jul 27, unresolved); **0 positions, 0% deployed**
+against the 75-85% mandate; 0/3 weekly trades used (week of Nov 23); Day 97
+with zero entries. `scripts/size.mjs` line 82 `limit=20` stale-price bug still
+unfixed. `alpaca.sh bars` still hardcodes `feed=iex`/`adjustment=raw`.
+`gappers-alpaca.sh` should re-quote finalists on a live feed before ranking —
+the fix matters less once the market is open (≤3.3 pts today) but it moved BE
+from "also gapping" to rank 3.
+
+**NEW DEFECT — Telegram 4096-char limit vs the routine spec.** STEP 6 requires
+the full top-5 deep-dive breakdown in the message body, which for a 10-hit day
+is **6,629 chars** — Telegram's `sendMessage` hard limit is 4,096, so the send
+returned **HTTP 400** and `telegram.sh` chained to ClickUp, which **also 400'd**
+(so the message landed only in the local `DAILY-SUMMARY.md` fallback, which is
+not visible to the operator). Worked around this run by splitting at paragraph
+boundaries into **2 parts of ~3.4KB** labelled `part i/n`, both delivered
+(msg_id 427, 428) after a short single-line send confirmed the channel was
+healthy (msg_id 426). **`telegram.sh` should chunk at ~3,800 chars internally**
+rather than failing whole — every gappers run with ≥4 deep-dive names will hit
+this. The silent part is the worse half: a 400 from both channels currently
+looks like a successful run because `telegram.sh` exits 0 after writing the
+local fallback. ClickUp's own 400 is a second, separate issue — it was never
+reached successfully, so the documented fallback channel is currently unproven.
