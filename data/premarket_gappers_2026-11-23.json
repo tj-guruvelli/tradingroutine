@@ -1,161 +1,221 @@
 {
-  "scanned_at": "2026-11-23T12:17:56+00:00",
+  "scanned_at": "2026-11-23T13:17:00Z",
+  "scanned_at_et": "2026-11-23 08:17 ET",
+  "run": "gappers-cloud 08:00 ET slot",
   "deep_dive_cap": 5,
+  "universe": "memory/WATCHLIST.md (~60 tickers, synced with config/rules.json watchlist_tiers.immediate)",
+  "filters": {
+    "gap_pct_min_abs": 5.0,
+    "price_min": 3.0,
+    "premarket_volume_min": "NOT APPLIED - field not populated (see notes)"
+  },
+  "market_context": {
+    "regime": "RELIEF BOUNCE inside a confirmed correction",
+    "spy_premarket_pct": 2.41,
+    "qqq_premarket_pct": 3.22,
+    "note": "All three major averages closed Friday 2026-11-20 in correction territory after an AI-trade rout. Nasdaq futures +3% today. Trigger: Treasury Secretary Scott Bessent pushed back against further Fed rate hikes on Sunday. Every gapper below is beta to this bounce, not a stock-specific catalyst.",
+    "btc_usd": 61230.33,
+    "btc_pct": 0.11,
+    "divergence": "Crypto is FLAT (+0.11%) while equities gap +2.4-3.2%. BMNR's +9.4% is therefore equity-beta/short-covering, not an ETH move."
+  },
+  "verdict": {
+    "admissible_entries": 0,
+    "blocking_rules": [
+      "200-SMA long-bias filter: all 5 trade 30.0%-50.9% BELOW their 200-SMA. TRADING-STRATEGY.md: 'only long when price > 200-SMA on daily'. Hard fail on every name.",
+      "Stop geometry: the mandated 10% trailing stop is 0.51-0.96 ATR(14) on all 5 - inside one session's normal range, so it would be hit by noise alone.",
+      "2:1 R:R minimum: a stop placed outside 1 ATR is -10.4% to -19.8%, i.e. outside the 10% trailing-stop rule on all 5. No name clears 2:1 at a legal stop distance."
+    ],
+    "action": "NO TRADE. Research-only routine; no orders placed (STEP 8)."
+  },
   "gappers": [
     {
       "rank": 1,
-      "symbol": "NBIS",
-      "price": 89.5365,
-      "gap_pct": 10.12,
-      "premarket_volume": 1337029,
-      "catalyst": "Rebounding with the broad AI-complex relief rally after a -16.1% Friday ($81.31); no company-specific news \u2014 Baird cut its PT to $200 from $340 (Outperform kept) and Zacks went to Hold on Nov 19.",
+      "symbol": "BMNR",
+      "price": 14.20,
+      "gap_pct": 9.40,
+      "prev_close": 12.98,
+      "premarket_volume": null,
+      "catalyst": "Ethereum-treasury proxy (6.08M ETH) bouncing after a -13.87% Friday; no company news - BTC/ETH are flat today, so the move is equity-beta and short-covering.",
       "headlines": [
-        "Nebius Group (NBIS) Shares Plunge Nearly 14% Amid Tech Sector Selloff on November 20, 2026 \u2014 GuruFocus",
-        "Why Nebius Stock Is Falling Today Despite Strong AI Cloud Demand \u2014 Benzinga",
-        "Nebius Group (NBIS) Stock Price Prediction: Revenue cut, heavy selling, and a test of support \u2014 Blockchain.News"
+        "BitMine Stock Falls to Key Support as Ethereum Crash Tests Tom Lee's Bull Run Thesis (Benzinga, Nov 22)",
+        "Why Is Bitmine Immersion Stock Falling on Friday? (Benzinga, Nov 20)",
+        "BitMine Hits 6M ETH Holdings but BMNR Drops 5% (Benzinga, Nov 16)"
       ],
-      "catalyst_detail": "No NBIS-specific catalyst today. The move is the high-beta leg of a market-wide relief rally: Nasdaq-100 futures +3.0-3.4%, S&P futures +2.7%, breaking a seven-day S&P losing streak, with NVDA up roughly 10% premarket, China cutting margin requirements on borrowed-share purchases over the weekend and South Korea preparing a stabilisation fund. The stock-specific news is all older and all negative: on Nov 12 Nebius trimmed its 2026 revenue forecast on delays in third-party capacity additions, raised its capex plan and said it would lean on customer prepayments and asset-backed financing rather than fresh equity (shares -16%); Baird then cut its target to $200 from $340 while keeping Outperform, and Zacks downgraded to Hold on Nov 19. Friday's -16.1% to $81.31 was sector selling, not a new disclosure.",
-      "why": "Mechanical beta snapback, not re-rating. NBIS is the most levered liquid proxy for the neocloud funding question, so when AI risk is sold it falls 2-4x the index and when the index bounces it retraces the same multiple. At +10.1% against QQQ's +3.7% premarket gap it is running ~2.7x the index \u2014 the same amplification factor in reverse. Short covering and the unwind of unusually expensive index put protection add a non-fundamental bid.",
-      "impact": "Reads as a one-to-three-day oversold bounce, not a sustainable turn. Premarket volume of 1.34M shares is real participation against a 31.2M 20-day average, so the bounce is not a thin-tape artifact \u2014 but it is also only ~4% of a normal day, which is not enough to call a reversal. The stock is 50.6% below its 50-SMA ($181.30) and 50.2% below its 200-SMA ($179.75); a +10% day does not approach either, so the long-bias filter still fails. The fundamental overhang that drove the de-rate (capacity delays, capex, funding mix) is unresolved. Read-through is to the whole neocloud complex, which is moving as one block \u2014 CRWV +7.9% is on this same list at rank 10.",
+      "technicals": {
+        "rsi14": 25.2, "atr14": 1.48, "atr_pct": 10.4,
+        "sma50": 22.44, "vs_sma50_pct": -42.3,
+        "sma200": 20.28, "vs_sma200_pct": -30.0,
+        "low_252d": 12.80, "high_252d": 42.05, "off_high_pct": -69.2
+      },
+      "catalyst_detail": "BitMine Immersion is an Ethereum treasury vehicle - its equity is a levered proxy on ETH, built around Tom Lee's thesis. It crossed 6.08M ETH holdings on Nov 16 and the stock fell 5% on the announcement, which tells you the accumulation story has stopped being a bid. Friday it dropped 13.87% to $12.98, a fresh 252-day low, as Bitcoin broke below $60,000 and Ethereum sold off hard. There is no BitMine-specific news today: the only Nov 23 item on its news feed is a generic crypto-market recap. The +9.4% gap is the equity bouncing with the Nasdaq, not with its own underlying asset.",
+      "why": "Short-covering in the highest-beta corner of a market that closed Friday in correction. BMNR carries both equity-market beta and ETH beta; today only the equity leg is working. With the stock printing a 252-day low on Friday, the float was crowded short into a +3% Nasdaq futures gap, and that is the mechanism - a squeeze, not a re-rating.",
+      "impact": "Reads as a one-day headline spike with a worse-than-usual foundation, because the thing it is supposed to track is not moving. BTC/USD is $61,230, +0.11%; ETH remains broken. A levered ETH proxy gapping +9.4% while ETH is flat is a divergence that historically closes toward the asset, not away from it. Sector read-through is to the crypto-treasury complex (Strategy hit a 52-week low Friday), which is the weakest group on the tape, not a leadership group. Premarket volume could not be measured (see notes), so there is no accumulation evidence to offset this.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "Headline-free beta bounce off a 20.7%-ATR capitulation low, with the Nov 12 guidance cut still the operative fundamental fact; expect it to fade or chop rather than trend, and do not carry it past the session.",
-      "opportunity_cost": "Nothing to displace \u2014 the account is 100% cash with 0 open positions, so the cost is one of three weekly trade slots and one of six position slots. Against today's own list it is the highest-gap name but the worst-quality setup: RKLB (rank 5) has a structural thesis and a 10.9% ATR versus NBIS's 20.7%. The decisive point is that it cannot clear the 2:1 minimum at a rule-legal stop: the mandated 10% trailing stop sits at $80.58, which is 0.53 ATR below entry \u2014 inside half a session's normal range, so noise takes it out before any thesis plays. A sane 1-ATR stop is $72.69 (-18.8%), which breaches the 10% rule outright, and the matching 2:1 target of $123.23 is still 58.9% below the 252-day high. No admissible version of this trade exists."
+      "horizon_reasoning": "Nothing structural changed - no ETH move, no company announcement, and the catalyst is a market-wide rate-expectation headline, so expect the gap to fade as soon as the index bid stops.",
+      "opportunity_cost": "Nothing to displace: the account is 100% cash with 0 open positions and all 3 weekly trade slots free. The real cost is the slot itself, and BMNR is the worst name on this list to spend it on. It fails the 200-SMA long-bias filter by 30.0% and has no catalyst of its own. The stop geometry is disqualifying in a specific way: the mandated 10% trailing stop sits at $12.78, which is 0.96 ATR away AND two cents BELOW Friday's 252-day low of $12.80 - so the stop is parked exactly where the whole market can see it. A stop outside 1 ATR is $12.72 (-10.4%), already outside the 10% rule, and the matching 2:1 target of $17.16 (+20.8%) is 59.2% below the 252-day high. Cannot clear 2:1 at a legal stop. Not admissible."
     },
     {
       "rank": 2,
-      "symbol": "BMNR",
-      "price": 14.27,
-      "gap_pct": 9.94,
-      "premarket_volume": 899198,
-      "catalyst": "ETH-proxy bounce after Friday's -13.87% close at $12.98; BitMine remains the #1 Ethereum treasury at 6.08M ETH (~99% of the way to 5% of supply) after adding 52,203 ETH last week.",
+      "symbol": "NBIS",
+      "price": 88.24,
+      "gap_pct": 8.52,
+      "prev_close": 81.31,
+      "premarket_volume": null,
+      "catalyst": "AI-infrastructure 'neocloud' bouncing after a -16.11% Friday; Nvidia's strong quarter lifted the group after hours Nov 20 and Bessent's anti-rate-hike comments extended it.",
       "headlines": [
-        "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.08 Million Tokens \u2014 OTC Markets",
-        "Bitmine Adds 52,203 ETH, Inches Closer to 5% of Ether Supply \u2014 CoinMarketCap",
-        "Why Is Bitmine Immersion Stock Falling on Friday? \u2014 Benzinga"
+        "Nebius Shares Jump After Hours as Nvidia's Strong Quarterly Numbers Lift AI Infrastructure Stocks (Benzinga, Nov 20)",
+        "Nebius Group N.V. falls sharply by -16.11% to $81.31 on Friday (StockInvest, Nov 20)",
+        "Why Are Neocloud Stocks CoreWeave, IREN, and Nebius Rallying in Premarket Today, November 23? (TipRanks)"
       ],
-      "catalyst_detail": "No new company disclosure this morning. BitMine is a virtual-asset treasury company whose equity trades as a levered claim on its ETH stack: it holds 6.08M ETH, the largest Ethereum treasury, roughly 99% of the way to owning 5% of supply, having added 52,203 ETH last week at around $1,733/ETH. Friday it closed $12.98, -13.87%, which Benzinga attributed to crypto-linked equities declining broadly as ETH itself fell 6.49%; it then printed $13.40 (+3.24%) after hours. Today's +9.9% is the continuation of that after-hours bid alongside the general risk-on gap.",
-      "why": "This is an ETH beta trade wearing an equity ticker. The mechanism is the treasury's mark: a move in ETH flows through to net asset value at roughly 1x and to the share price at more than 1x, because the market applies a swinging premium/discount to the stack on top. Friday's -13.9% on a -6.5% ETH day is that leverage; today's +9.9% is the same leverage unwinding. No operating result, contract or guidance is involved.",
-      "impact": "Likely to mean-revert with ETH rather than hold on its own. Premarket volume of 899k against a 31.5M 20-day average is adequate but thin relative to the move. The stock closed Friday at $12.98 against a 252-day low of $12.80 \u2014 it bounced off the bottom of its entire year's range, which makes this a technical bounce with no fundamental floor beneath it except the ETH price. It sits 29.6% below its 200-SMA ($20.28) and 36.4% below its 50-SMA ($22.45), 66.1% off its 252-day high. The read-through is to every crypto treasury vehicle and to BLSH (+7.5% premarket, excluded from this list on thin premarket volume), so there is no idiosyncratic edge to capture here that an ETH position would not give more cheaply.",
+      "technicals": {
+        "rsi14": 32.0, "atr14": 17.43, "atr_pct": 19.8,
+        "sma50": 181.31, "vs_sma50_pct": -55.1,
+        "sma200": 179.76, "vs_sma200_pct": -50.9,
+        "low_252d": 73.53, "high_252d": 299.72, "off_high_pct": -72.9
+      },
+      "catalyst_detail": "Nebius is a GPU-cloud 'neocloud' and one of the most levered names to AI-capex sentiment. It fell 16.11% on Friday to $81.31 even though Nvidia had just posted strong quarterly numbers that lifted AI-infrastructure peers after hours - the group-wide de-rating overwhelmed the read-through. Today it gaps +8.52% alongside CoreWeave and IREN; TipRanks attributes the neocloud rally to Treasury Secretary Scott Bessent pushing back against further Fed rate hikes on Sunday. That is a discount-rate story for long-duration growth equities, not a Nebius development. No Nebius-specific news has been published today.",
+      "why": "Duration repricing. Neoclouds are the longest-duration, most capital-intensive AI assets on the tape, so they move hardest on any shift in rate expectations - down last week when hike odds rose, up today on a Treasury Secretary's pushback. The mechanism is entirely multiple, not earnings: a single official's weekend comment moved the group, and Nvidia's actual results on Nov 20 did not.",
+      "impact": "Most likely to mean-revert of the five, because the volatility is extreme and the move is pure multiple. ATR(14) is 19.8% of price - NBIS routinely travels nearly 20% in a session, so an 8.5% gap is less than half a normal day's range and carries almost no informational content. The stock is 50.9% below its 200-SMA and 55.1% below its 50-SMA, i.e. not merely below trend but nowhere near it, and 72.9% off a $299.72 peak. Friday's close was only 10.6% above the 252-day low of $73.53. Read-through is to the whole neocloud complex (CRWV +7.04% here, IREN), which is the group that caused last week's correction - a bounce in the epicentre is the least durable kind.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The entire thesis is the direction of ETH over the next few days; nothing structural changed at the company, and crypto-treasury vehicles map to no sector in the TRADING-STRATEGY.md rotation table, so there is no rotation phase to align with.",
-      "opportunity_cost": "Nothing to displace (0 open positions, 100% cash), so the cost is a weekly slot plus the correlation budget: a BMNR long is a concentrated crypto-beta bet that would block or crowd any later crypto-adjacent entry under the >0.75 correlation gate. Within today's list it ranks below RDW and RKLB on thesis quality despite a higher gap. R:R is borderline-admissible but unattractive: the 10% stop at $12.84 is 0.97 ATR, the tightest ratio on the top five, but that stop sits one cent above the 252-day low of $12.80, so it is a stop placed exactly where the whole market's sell orders already are. The 2:1 target off a 1-ATR stop is $17.23, 59.1% below the 252-day high \u2014 reachable in principle, but only on an ETH rally the setup gives no information about."
+      "horizon_reasoning": "The catalyst is one weekend remark about Fed policy, which is a sentiment input that can reverse at the next CPI or Fed speaker; nothing about Nebius's contracts, capacity or guidance changed.",
+      "opportunity_cost": "Nothing to displace (100% cash, 0 positions), so the cost is one of three weekly slots - and NBIS has the worst risk arithmetic on the entire list. The mandated 10% trailing stop at $79.42 is 0.51 ATR, barely half of one session's normal range: on a 19.8%-ATR stock that stop is not a risk control, it is a guaranteed exit on the first adverse open. To sit outside 1 ATR the stop must go to $70.81, which is -19.8% and roughly double the 10% rule's allowance, and the matching 2:1 target is $123.10 (+39.5%). Requiring a 40% advance to earn 2:1 on a name 50.9% below its 200-SMA is not a swing setup. Under the >0.75 correlation gate it would also block CRWV and the rest of the AI-infra block for the week. Not admissible on either the trend filter or the R:R minimum."
     },
     {
       "rank": 3,
-      "symbol": "RDW",
-      "price": 6.16,
-      "gap_pct": 9.03,
-      "premarket_volume": 217228,
-      "catalyst": "Space-infrastructure bounce on real contract momentum \u2014 a ~$15M AscendArc ELSA solar-array award (Nov 19), a ~$40M NASA moon-base power system, and a CEO open-market purchase of 14,144 shares at $7.07 on Nov 16 \u2014 but Wall Street Zen cut the stock to Sell today.",
+      "symbol": "RKLB",
+      "price": 48.90,
+      "gap_pct": 7.66,
+      "prev_close": 45.42,
+      "premarket_volume": null,
+      "catalyst": "Bouncing after a seventh straight down day (-11% Friday) triggered by a neutral analyst initiation at $83; CFO flagged a 'very strong uplift' in Electron pricing within nine months.",
       "headlines": [
-        "Redwire Stock Rises After $15M Solar Array Contract with AscendArc \u2014 Benzinga",
-        "Redwire (NYSE:RDW) Stock Dropped to 'Sell' by Wall Street Zen \u2014 DefenseWorld (Nov 23)",
-        "Redwire scores fresh U.S. Army deal to support high-stakes drone training missions \u2014 Benzinga"
+        "Rocket Lab Falls 11% As Weekly Slide Continues (TimothySykes, Nov 20)",
+        "Cramer believes Rocket Lab's recent share-price weakness has created an opportunity (TheStreet)",
+        "Rocket Lab shares plunged 12% after an analyst opened coverage with a neutral rating and an $83 price target"
       ],
-      "catalyst_detail": "Redwire is the one name in today's top five with a genuine stock-specific fact set, though the immediate gap is still mostly beta. Q3 (Nov 4) missed on revenue at about $109M with a narrower-than-expected per-share loss; full-year revenue guidance was maintained and backlog hit a record $619.7M, up nearly 75% year over year \u2014 and the stock still fell roughly 19% the next day. Piper Sandler cut its target to $8 from $11 (neutral) on Nov 6. Since then: a roughly $40M award to supply the power generation system for NASA's planned moon base, a ~$15M contract for ELSA solar-array wings to AscendArc announced Nov 19, a follow-on U.S. Army order, and CEO Peter Cannito Jr. buying 14,144 shares on the open market at an average $7.07 on Nov 16. Cutting the other way, Wall Street Zen downgraded hold to sell this morning, Nov 23.",
-      "why": "Two mechanisms are stacked. The dominant one is the same market-wide risk-on gap lifting every high-beta small cap. Underneath it is a real re-rating argument: a record backlog up 75% y/y plus three fresh awards plus a CEO buying stock with his own money at $7.07 is the 'insider signal' leg of the strategy's confluence rule, and it arrives while the stock trades at $6.16 \u2014 below the price the CEO paid eight days ago. The Wall Street Zen downgrade pushes against it but is a quant-model rating change, not new information about the business.",
-      "impact": "The most plausible sustainable move on the list, and still not a clean one. Premarket volume of 217k against a 13.2M 20-day average is light \u2014 this is a beta lift on thin participation, not accumulation. Backlog and contract wins are durable facts that do not reverse when the tape turns, which separates RDW from NBIS and BMNR; but the stock is 42.8% below its 200-SMA ($10.77), 32.6% below its 50-SMA ($9.14), 76.9% off its 252-day high, and its Friday close of $5.65 is only 16% above a 252-day low of $4.87. RSI(14) at 30.2 is right at the oversold line. Sector read-through is to the small-cap space-infrastructure group, which is moving as a block today \u2014 RKLB, ASTS and LUNR all sit on this same list.",
+      "technicals": {
+        "rsi14": 43.6, "atr14": 5.38, "atr_pct": 11.0,
+        "sma50": 61.34, "vs_sma50_pct": -25.9,
+        "sma200": 77.71, "vs_sma200_pct": -37.1,
+        "low_252d": 37.60, "high_252d": 150.96, "off_high_pct": -69.9
+      },
+      "catalyst_detail": "Rocket Lab fell about 11% on Friday to $45.42, its seventh consecutive daily decline, after a sell-side firm initiated coverage at neutral with an $83 price target - the same note gave AST SpaceMobile a $100 target, making it a relative-preference call within the space group rather than a verdict on the business. Pushing the other way, the CFO said Electron pricing should see a 'very strong uplift' within nine months, citing a record 54-launch Q3 book and tightening SpaceX rideshare capacity. Neutron remains the central growth catalyst and consensus sits near a $93 twelve-month target. Cramer publicly framed the weakness as an opportunity.",
+      "why": "A seven-day sentiment unwind meeting a risk-on gap. Friday's decline was driven by an analyst preference shift, not an operating event; today's bounce is the market-wide relief rally giving holders a reason to stop selling. Underneath sits a real pricing-power mechanism: if capacity on the only cheaper alternative is tightening while RKLB's launch book is at a record, per-launch price is the margin lever - an operating fact rather than a target-price opinion.",
+      "impact": "The most structurally sound move on today's list, though the gap itself is still beta. RKLB has the second-lowest ATR here at 11.0% of price and is the closest of the five to its own trend: 25.9% below its 50-SMA versus 29.5-55.1% for everything else. RSI(14) at 43.6 is the healthiest reading on the list - neither washed out nor extended - and Friday's close sat 20.8% above the $37.60 252-day low rather than on it, unlike BMNR. Read-through is to the launch/space complex, where RDW, LUNR and ASTS are all gapping 7.4-7.6% today; the fact that the entire group moves together in near-lockstep is itself the strongest evidence that today is the tide and not the thesis.",
       "horizon": "LONG_TERM",
-      "horizon_reasoning": "Unlike the rest of the top five, the catalyst set is structural rather than a headline \u2014 record backlog, three signed awards and an insider purchase are facts that persist after the bounce fades \u2014 and space/defense infrastructure maps to Industrials, a favored sector in the early-cycle row of the TRADING-STRATEGY.md rotation table; it would be worth a multi-day swing hold if it later clears the Confluence rule, which today it does not.",
-      "opportunity_cost": "Nothing to displace \u2014 100% cash, 0 positions \u2014 so the real cost is that RDW would consume one of three weekly trade slots and, being in the same space-infrastructure block as RKLB, ASTS and LUNR, would likely trip the >0.75 correlation gate against any second space name taken this week. That makes it a direct either/or with RKLB (rank 5), which has the larger franchise and a lower 12.4%-versus-10.9% ATR. On R:R, the 10% stop at $5.54 is 0.88 ATR \u2014 under one session's normal range, so it fails the practical test even though it is the second-best ratio here; a 1-ATR stop is $5.46 (-11.4%), already outside the 10% rule, and its 2:1 target of $7.56 is 71.6% below the 252-day high but above both the CEO's $7.07 basis and Piper's $8 target, so the target is at least credible. Not admissible today on the 200-SMA filter alone."
+      "horizon_reasoning": "Neutron, a record 54-launch Q3 book and a CFO-guided Electron price uplift are structural changes, and launch/space infrastructure sits in Industrials - a favored sector in the early-cycle row of the rotation table - so this is the one name here worth a multi-day/week swing hold if it later clears the Confluence rule on a /trade check.",
+      "opportunity_cost": "Nothing to displace (100% cash, 0 positions). Because RKLB, RDW, LUNR and ASTS form one correlated space block, taking RKLB would consume effectively the whole space allocation for the week under the >0.75 correlation gate - and on thesis quality it is the right name to spend that slot on, ahead of RDW on franchise size and ahead of NBIS and BMNR outright. It still cannot be entered today. The 10% trailing stop at $44.01 is 0.91 ATR - the best ratio on this list but still inside one session's range, and it would have been hit on each of the last several days. A 1-ATR stop is $43.52 (-11.0%), fractionally outside the rule, and its 2:1 target of $59.66 (+22.0%) is the only target here that is genuinely reachable, sitting below the ~$93 consensus. The blocking failure is the 200-SMA long-bias filter - price is 37.1% below it - not the arithmetic. Watch, do not chase."
     },
     {
       "rank": 4,
-      "symbol": "ASTS",
-      "price": 25.37,
-      "gap_pct": 9.02,
-      "premarket_volume": 455011,
-      "catalyst": "Berenberg initiated coverage with a bullish $92 price target (published overnight), lifting the stock after an -8.92% Friday close at $23.27 and a $24.10 after-hours print.",
+      "symbol": "RDW",
+      "price": 6.08,
+      "gap_pct": 7.58,
+      "prev_close": 5.65,
+      "premarket_volume": null,
+      "catalyst": "Space-infrastructure name bouncing with the group despite a Wall Street Zen downgrade to Sell dated today; real contract wins are offset by a badly missed Q3 revenue print.",
       "headlines": [
-        "AST SpaceMobile Stock Soared 12% \u2014 This Was the Catalyst \u2014 stocknews.com (Nov 23)",
-        "ASTS News | AST SPACEMOBILE INC \u2014 ChartMill (close 23.27, -8.92%, Nov 20; 24.10 +3.57% after hours)",
-        "AST SpaceMobile upgraded to Buy \u2014 ChartMill releases"
+        "Redwire (NYSE:RDW) Stock Dropped to 'Sell' by Wall Street Zen (DefenseWorld, Nov 23)",
+        "Redwire Stock Rises After $15M Solar Array Contract with AscendArc (Benzinga)",
+        "Redwire Scores Fresh US Army Deal to Support High-Stakes Drone Training Missions (Benzinga)",
+        "Why Redwire (RDW) stock is nosediving (StockStory, Nov 5)"
       ],
-      "catalyst_detail": "ASTS has the clearest single-name catalyst in today's top five: a Berenberg analyst initiated coverage with a $92 price target, a call published in the last several hours, framed as bullish despite the company's regulatory hurdles and heavy cash burn. A separate initiation the same week handed ASTS a $100 target while initiating Rocket Lab at neutral with $83. The stock closed Friday at $23.27, -8.92%, then printed $24.10 (+3.57%) after hours, and is quoted $25.37 premarket. There is no operational news \u2014 no launch, no contract, no regulatory decision \u2014 behind the move.",
-      "why": "Sell-side sponsorship into an oversold tape. The mechanism is sentiment and positioning, not cash flow: a $92 target against a $25 price is a 263% implied upside headline, which draws momentum buyers and gives shorts a reason to cover in a name 81% off its 252-day high. The market-wide +3.7% QQQ gap supplies the rest. Note that the price-target gap itself is evidence of how little the initiation settles \u2014 no analyst model moves a stock from $25 to $92, and the cited risks (regulatory approvals, cash burn) are exactly the unresolved items.",
-      "impact": "Most likely a one-to-two-day headline spike that fades. Premarket volume of 455k against an 18.8M 20-day average is unremarkable for a move this size. An initiation is a durable opinion but not a durable fact: it adds no revenue, no license and no funding, so there is nothing for the price to hold onto once the momentum flow is done \u2014 and ASTS already round-tripped a similar 12% pop earlier in the week per the same coverage. The technical position is the weakest on the list: 64.6% below its 200-SMA ($71.63), 45.0% below its 50-SMA ($46.10), RSI(14) 27.6, and Friday's close of $23.27 sits 2.4% above a 252-day low of $22.72. Read-through is to the satellite/space group \u2014 RKLB, RDW and LUNR are all on this list, and the same analyst note explicitly ranked ASTS above RKLB, which is part of why both are moving.",
+      "technicals": {
+        "rsi14": 35.2, "atr14": 0.74, "atr_pct": 12.2,
+        "sma50": 9.14, "vs_sma50_pct": -38.2,
+        "sma200": 10.77, "vs_sma200_pct": -43.6,
+        "low_252d": 4.88, "high_252d": 26.64, "off_high_pct": -78.8
+      },
+      "catalyst_detail": "Redwire's Q3 on Nov 4 missed badly on revenue - roughly $109M against consensus near $126M - though the per-share loss was smaller than forecast; shares fell 19.4% that afternoon. Management held the 2026 revenue outlook at $450-500M and reported a record backlog near $620M. Since then the contract flow has been genuinely good: about $40M from NASA for Moon Base power generation (Nov 10), a $20M DARPA Otter testing contract, a follow-on U.S. Army order for Stalker drone support, and a $15M AscendArc order for ELSA solar-array wings, plus an insider purchase by CEO Peter Cannito. Working directly against today's gap, Wall Street Zen cut the stock from Hold to Sell dated Nov 23 - a same-day bearish action. Sell-side targets were cut broadly after the print: Piper Sandler to $8, Canaccord to $13, B. Riley to $14.",
+      "why": "Group beta plus a cheap-optionality bid. RDW is the lowest-priced name in the space block, so it moves most per dollar of index risk appetite, and a record $620M backlog against a ~$6 share price gives bounce-chasers a story to point at. But the mechanism of today's move is not the contracts - those were announced between Nov 4 and Nov 20 and did not stop the stock from grinding to $5.65 - it is the same market-wide rate-expectation relief lifting the entire complex.",
+      "impact": "Mixed, and the clearest case on the list of news cutting both ways on the same morning. The contract wins are real, repeat-customer, government-backed revenue, which is the most durable kind in this group - but the Q3 revenue miss was large, every major target was cut, and a fresh downgrade to Sell is dated today. The stock is 78.8% off its $26.64 high, 43.6% below its 200-SMA, and Friday's close of $5.65 sat only 15.8% above the $4.88 252-day low. Read-through is to the space block moving in lockstep (RKLB, LUNR, ASTS all +7.4-7.7%), confirming beta. With premarket volume unmeasurable there is no evidence of genuine accumulation behind the gap.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "An analyst initiation is a headline, not a structural change \u2014 nothing about the constellation, the regulatory path or the cash position moved \u2014 so expect the pop to fade within days and do not carry it past the session.",
-      "opportunity_cost": "Nothing to displace (100% cash, 0 positions). The cost is a weekly slot spent on the lowest-quality thesis in the space block: taking ASTS would almost certainly block RDW or RKLB later in the week under the >0.75 correlation gate, and both have real contract-level facts where ASTS has an opinion. R:R is the second-worst on the list: the 10% stop at $22.83 is just 0.67 ATR \u2014 two-thirds of one session's normal range, and it sits essentially on the 252-day low, so it is both too tight and badly placed. A 1-ATR stop is $21.60 (-14.9%), outside the 10% rule, and the matching 2:1 target of $32.92 is 75.4% below the 252-day high. Not admissible."
+      "horizon_reasoning": "The contract wins are structural but are three weeks stale and already failed to hold the stock up; today's move is group beta against a same-day Sell downgrade, so treat it as a headline bounce rather than a re-rating.",
+      "opportunity_cost": "Nothing to displace (100% cash, 0 positions). Within the correlated space block the choice is RDW or RKLB, not both, and RKLB wins on every axis that matters: better trend position (-25.9% vs 50-SMA against RDW's -38.2%), lower volatility, healthier RSI, and a thesis not contradicted by a downgrade published this morning. Taking RDW would also forfeit the RKLB slot under the >0.75 correlation gate. The geometry fails regardless: the 10% stop at $5.47 is 0.82 ATR, inside one session's range, and a 1-ATR stop is $5.34 (-12.2%), outside the rule. The matching 2:1 target of $7.56 (+24.3%) is 71.6% below the 252-day high and below three of the four post-print analyst targets, so it is reachable on paper - but it cannot be paired with a legal stop. Not admissible."
     },
     {
       "rank": 5,
-      "symbol": "RKLB",
-      "price": 49.46,
-      "gap_pct": 8.9,
-      "premarket_volume": 459563,
-      "catalyst": "Bouncing after a seventh straight down day (-11% Friday to $45.42) triggered by a neutral-rating initiation at an $83 target; the CFO has guided to a 'very strong uplift' in Electron pricing within nine months off a record 54 launches booked in Q3.",
+      "symbol": "LUNR",
+      "price": 9.43,
+      "gap_pct": 7.46,
+      "prev_close": 8.775,
+      "premarket_volume": null,
+      "catalyst": "Lunar-lander name bouncing with the space block; its genuine catalyst - a slot on NASA's $10B CLPS 2 framework - is two weeks old and has already been fully given back.",
       "headlines": [
-        "CFO Sees 'Very Strong Uplift' In Electron Prices Within 9 Months, SpaceX Rideshare Slots Tighten \u2014 Stocktwits (Nov 23)",
-        "Cramer believes Rocket Lab's recent share-price weakness has created an opportunity \u2014 TheStreet",
-        "Prediction: Rocket Lab Will Triple Its Revenue by 2028 \u2014 The Globe and Mail"
+        "NASA Awards Intuitive Machines Spot In $10 Billion Lunar Program (Benzinga, Nov 9)",
+        "Intuitive Machines (LUNR) Wins NASA CLPS 2 Contract, Shares Rise Premarket (GuruFocus)",
+        "Why Intuitive Machines Stock Went to the Moon on Monday (Motley Fool, Nov 9)"
       ],
-      "catalyst_detail": "Rocket Lab fell nearly 11% on Friday to $45.42, its seventh consecutive daily decline, after a sell-side firm opened coverage at neutral with an $83 price target \u2014 the same note handed AST SpaceMobile a $100 target, so the move was a relative-preference call inside the space group rather than a judgement on the business. Pushing the other way, the CFO said over the weekend that Electron pricing should see a 'very strong uplift' within nine months, that the company booked a record 54 launches in Q3, and that SpaceX rideshare slots are tightening \u2014 which is the supply-side argument for that pricing power. Neutron remains the central growth catalyst; consensus is a strong buy with a 12-month target around $93, and Q4 results are due Mar 4. Cramer publicly framed the weakness as an opportunity.",
-      "why": "A sentiment-driven seven-day unwind meeting a risk-on gap. The mechanism of Friday's drop was an analyst preference shift, not a business event; the mechanism of today's bounce is the market-wide relief rally plus the CFO's pricing commentary giving holders a reason to stop selling. Underneath both sits a genuine pricing-power story: if rideshare capacity on the only cheaper alternative is tightening while RKLB's launch book is at a record, per-launch price is the margin lever, and that is an operating fact rather than a target-price opinion.",
-      "impact": "The most sustainable-looking move on today's list on both volume and structure. Premarket volume of 460k against a 19.0M 20-day average is ordinary, so the gap itself is beta rather than accumulation \u2014 but RKLB carries the lowest ATR on the top five at 10.9% of price and is the closest to its own trend, 19.4% below its 50-SMA ($61.34) against 23-51% for everything else here. It is still 36.4% below its 200-SMA ($77.72) and 67.2% off a $151 prior peak, with RSI(14) at 35.6 \u2014 oversold but not washed out, and Friday's close is 21% above the $37.57 52-week low rather than sitting on it like ASTS and BMNR. Read-through is to the launch/space complex, where ASTS, RDW and LUNR are all bouncing today; the fact that the whole group is moving together is the strongest evidence that today's gap is the tide, not the thesis.",
-      "horizon": "LONG_TERM",
-      "horizon_reasoning": "Neutron, a record 54-launch Q3 book and a CFO-guided Electron price uplift are structural, and launch/space infrastructure sits in Industrials \u2014 a favored sector in the early-cycle row of the TRADING-STRATEGY.md rotation table \u2014 so this is the one name here worth a multi-day/week swing hold if it later clears the Confluence rule on a /trade check.",
-      "opportunity_cost": "Nothing to displace (100% cash, 0 positions), so the cost is one of three weekly trade slots and \u2014 because RKLB, RDW, ASTS and LUNR are one correlated space block \u2014 effectively the whole space allocation for the week under the >0.75 correlation gate. Ranked on thesis quality it is the name to spend that slot on, above RDW on franchise size and above NBIS/BMNR/ASTS outright. It still cannot clear 2:1 at a legal stop: the mandated 10% trailing stop at $44.51 is 0.99 ATR, the best ratio on this list but still inside one session's range, and it would have been hit on each of the last several days. A 1-ATR stop is $44.49 (-10.1%), fractionally outside the rule, and its 2:1 target of $59.40 is 60.7% below the 252-day high and below the ~$93 consensus target \u2014 the only target on this list that is genuinely reachable. The blocking failure is the 200-SMA long-bias filter, not the arithmetic."
+      "technicals": {
+        "rsi14": 45.2, "atr14": 1.34, "atr_pct": 14.2,
+        "sma50": 12.46, "vs_sma50_pct": -29.5,
+        "sma200": 19.12, "vs_sma200_pct": -50.7,
+        "low_252d": 7.79, "high_252d": 46.72, "off_high_pct": -81.2
+      },
+      "catalyst_detail": "Intuitive Machines was selected in early November for NASA's CLPS 2 lunar delivery contract - a 10-year multiple-award framework with a $10B ceiling, extendable to $15B, shared among eight providers including Blue Origin, SpaceX and Firefly. The stock rose about 15% on the news around Nov 9. Its Q3 (Nov 12) disclosed roughly $450M of new awards plus Goonhilly acquired backlog, and its 10-Q lists a fifth NASA payload contract, IM-6, awarded March 2026 at an estimated $160.1M fixed-price. Despite all of that the shares have round-tripped the entire CLPS pop and more, closing Friday at $8.775 - the whole gain is gone, which analysts attribute to sector-wide multiple compression. B. Riley cut its target to $34 from $43 and KeyBanc to $30 from $38. No LUNR-specific news today.",
+      "why": "Pure group beta on a name whose own good news has already been overwhelmed. The important mechanism here is what CLPS 2 actually is: an IDIQ framework that makes LUNR eligible to compete for missions, not a funded backlog - eight providers share the ceiling, so the headline $10B number overstates what accrues to any one of them. That is why a 15% pop faded completely, and why today's +7.46% - with no company news at all - should be read as the space complex moving together.",
+      "impact": "Reads as a one-day spike on the weakest structural footing in the space block. LUNR is 81.2% off its $46.72 high, the worst drawdown on today's entire list, and 50.7% below its 200-SMA. Friday's close of $8.775 sat just 12.7% above the $7.79 252-day low. ATR(14) at 14.2% of price is the second-highest of the five. RSI(14) at 45.2 is the highest reading here, meaning LUNR is the least oversold of the group - it has the least mean-reversion fuel while carrying the most drawdown, which is the wrong combination. The read-through is unambiguous: RKLB, RDW and ASTS are all gapping within 0.2 points of the same percentage, which is the signature of an index bid, not five separate catalysts.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The CLPS 2 award is structural on paper but is an unfunded eight-way IDIQ framework that the market has already repriced to nothing over two weeks, and there is no fresh catalyst today - so this is a beta bounce with a short half-life.",
+      "opportunity_cost": "Nothing to displace (100% cash, 0 positions). LUNR is the weakest use of a weekly slot in the space block: it has the deepest drawdown, the least oversold RSI, and a flagship catalyst the market has already rejected over two full weeks of trading. Under the >0.75 correlation gate taking it would block RKLB, the one name here with a defensible multi-week thesis - which is the clearest opportunity cost on this list. The geometry also fails: the 10% stop at $8.49 is 0.70 ATR, well inside one session's range, and a 1-ATR stop is $8.09 (-14.2%), materially outside the 10% rule. The matching 2:1 target of $12.11 (+28.4%) is 74.1% below the 252-day high and still under both reduced analyst targets, but it cannot be paired with a legal stop. Not admissible."
     },
     {
       "rank": 6,
-      "symbol": "LUNR",
-      "price": 9.55,
-      "gap_pct": 8.83,
-      "premarket_volume": 148454,
-      "catalyst": "Space-group beta bounce; no news today. Q3 (Nov 12) revenue rose ~413% y/y to ~$269M and beat, loss narrowed to 2c vs 12c expected, record $1.9B backlog, FY26 revenue narrowed to $920-950M; Macquarie cut to $20 (Outperform kept) and Clear Street to $41 on dilution.",
-      "headlines": [
-        "Intuitive Machines (LUNR) Shares Surge 11% Premarket on Strong Q3 Revenue Beat \u2014 GuruFocus",
-        "Intuitive Machines Is No Longer Just About The Moon, CEO Sees Bigger Space Opportunity \u2014 Benzinga"
-      ]
+      "symbol": "ASTS",
+      "price": 25.00,
+      "gap_pct": 7.43,
+      "prev_close": 23.27,
+      "premarket_volume": null,
+      "catalyst": "Space/satellite name bouncing with the complex after an analyst initiation at a $100 target last week; no company-specific news today - quick scan only.",
+      "headlines": []
     },
     {
       "rank": 7,
-      "symbol": "RGTI",
-      "price": 7.74,
-      "gap_pct": 8.1,
-      "premarket_volume": 129869,
-      "catalyst": "Quantum-complex rebound with the tech tape after shedding 11.17% Friday; no company news \u2014 Q3 revenue missed and fell 28% y/y, and the stock is down ~56% over three months.",
-      "headlines": [
-        "Why Are Quantum Computing Stocks Jumping Today? IonQ, Rigetti, and D-Wave Rally as Tech Rebounds \u2014 TipRanks"
-      ]
+      "symbol": "UMAC",
+      "price": 9.26,
+      "gap_pct": 7.18,
+      "prev_close": 8.64,
+      "premarket_volume": null,
+      "catalyst": "Drone-components name rebounding from a -14.88% Friday; Q3 (Nov 5) missed badly at -$0.50 EPS vs -$0.20 est, offset by US drone-tariff policy tailwind and maintained Buy/Overweight ratings from Needham and Piper Sandler. Quick scan only.",
+      "headlines": []
     },
     {
       "rank": 8,
-      "symbol": "QBTS",
-      "price": 7.04,
-      "gap_pct": 7.98,
-      "premarket_volume": 327357,
-      "catalyst": "Same quantum-group bounce after a -10.81% Friday; Q3 revenue rose 21% while bookings fell 19%, Rosenblatt trimmed its target to $30 (Buy kept), and the stock is down more than 65% over three months.",
-      "headlines": [
-        "Why Are Quantum Computing Stocks Jumping Today? IonQ, Rigetti, and D-Wave Rally as Tech Rebounds \u2014 TipRanks",
-        "D-Wave Quantum: Rosenblatt Trims Its Target While a Margin Squeeze Undercuts the Revenue Story \u2014 ad-hoc-news.de"
-      ]
+      "symbol": "CRWV",
+      "price": 42.29,
+      "gap_pct": 7.04,
+      "prev_close": 39.51,
+      "premarket_volume": null,
+      "catalyst": "Neocloud peer of NBIS, up on the same Bessent rate-hike pushback; -12.02% Friday on a $66.2B debt load, then +6% after hours as a co-founder personally bought $30M of its unsecured bonds and Wells Fargo reiterated Overweight. Quick scan only.",
+      "headlines": []
     },
     {
       "rank": 9,
       "symbol": "ONDS",
-      "price": 4.0597,
-      "gap_pct": 7.97,
-      "premarket_volume": 607290,
-      "catalyst": "Small-cap drone/counter-drone bounce; no catalyst dated today. Q3 (Nov 12) beat on $167.5M revenue and -10c EPS with FY26 guided to at least $550M and FY27 to at least $1.1B, but Stifel cut to $15 and Northland to $13, and a Nov 18 prospectus supplement for share resale keeps dilution in view.",
-      "headlines": [
-        "Ondas tops Q3 2026 estimates but shares fall \u2014 Investing.com",
-        "Ondas to acquire German airframe maker Stemme GmbH in all-cash deal, outlines U.S. ULTRA manufacturing expansion (Nov 5)",
-        "Ondas announces counter-drone contracts with a European police organization and an Asian government customer (Nov 4, values undisclosed)"
-      ]
+      "price": 4.02,
+      "gap_pct": 6.91,
+      "prev_close": 3.76,
+      "premarket_volume": null,
+      "catalyst": "Drone/network name bouncing off its 12-month low of $3.73 despite a Wall Street Zen cut from Sell to Strong Sell dated Nov 22; record Q3 revenue of $167.5M and a raised outlook have not held the stock. Quick scan only.",
+      "headlines": []
     },
     {
       "rank": 10,
-      "symbol": "CRWV",
-      "price": 42.61,
-      "gap_pct": 7.85,
-      "premarket_volume": 1288720,
-      "catalyst": "Neocloud bounce alongside NBIS after falling toward its $40 March-2025 IPO price on debt concerns (down >36% over the past month); co-founder Brian Venturo disclosed buying $30M face value of CoreWeave bonds, and First Trust Advisors raised its stake.",
-      "headlines": [
-        "Premarket: Wall Street futures rebound as battered AI stocks gain ground \u2014 The Globe and Mail",
-        "CoreWeave Inc. $CRWV Stock: First Trust Advisors LP Boosts Stake \u2014 American Market News (Nov 23)"
-      ]
+      "symbol": "RGTI",
+      "price": 7.64,
+      "gap_pct": 6.67,
+      "prev_close": 7.16,
+      "premarket_volume": null,
+      "catalyst": "Quantum-computing name near the bottom of its 52-week range, bouncing with the high-beta complex after quantum stocks fell as much as 10% last week; B. Riley trimmed its target to $23 from $25. No news today - quick scan only.",
+      "headlines": []
     }
-  ]
+  ],
+  "notes": {
+    "premarket_volume_gate": "NOT APPLIED - the field is not populated. scripts/gappers-alpaca.sh lines 152-155 state its 'volume' field is the most recent COMPLETED session's full-day volume, not today's premarket volume. Independently attempted to measure premarket volume from 1Min bars (09:00Z-13:20Z) for all 10 tickers: IEX returned 0 shares for 9 of 10 and 100 shares for NBIS, because alpaca.sh bars hardcodes feed=iex and the free IEX tier publishes effectively no premarket prints. Conclusion: the gate is unenforceable on the current free-tier data path, and no accumulation-vs-beta judgement in this entry rests on premarket volume.",
+    "apify_degraded": "apify--web-search failed again - of 7 attempts: 3 returned results (22-56s), 2 x HTTP 502 UPSTREAM_SEARCH_ERROR, 2 x 60s MCP timeouts. Fifth consecutive run with Apify as a failure point. Native WebSearch worked on every query with blocked_domains covering the whole Yahoo family. Recommendation stands: promote native WebSearch to primary, demote Apify to fallback.",
+    "yahoo_block": "No Yahoo-sourced data in this entry. Used native WebSearch blocked_domains across the full Yahoo family (finance/uk/sg/au/ca/nz/in/ph), which is cleaner than the routine's 3-domain suffix - the 07:09 run saw au.finance.yahoo.com leak through that suffix.",
+    "ranking_volatility": "The top-10 reshuffled materially between the 13:12Z and 13:17Z scans: BKSY was rank 4 (+6.79%) on the first pass and dropped out of the >=5% set entirely on the second, while RDW and LUNR moved into the top 5. The 13:17Z scan is the one of record. On a broad-beta day the gap ranking is noise at the margin - another reason not to treat rank as signal.",
+    "account_change": "Alpaca paper account now reports equity $100,000 / cash $100,000 / buying power $400,000 with ZERO open positions. PROJECT-CONTEXT describes a ~$10,000 account. The paper account appears to have been reset or re-provisioned; TRADE-LOG open positions are not reflected in the broker state. Flagged for operator confirmation before the next execution run - market-open would size against $100k.",
+    "stale_script_issues": "scripts/size.mjs line 82 limit=20 stale-price bug still unfixed (flagged Nov 20 and Nov 23 07:09). alpaca.sh bars still hardcodes feed=iex and adjustment=raw. All ATR/RSI/SMA arithmetic here computed directly from /bars output in this session, not from size.mjs."
+  }
 }
