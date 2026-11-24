@@ -24154,3 +24154,108 @@ Monday's squeeze burned off the oversold condition in all five **without repairi
 **Data-source note:** the Apify RAG web browser timed out repeatedly (5 of 6 calls, 60s limit; one BE query returned at 41s) and the routine's Benzinga fallback returned HTTP 403 on all four tickers. `scripts/afterhours.sh` is also broken — a Python quoting bug (unescaped single quotes in the embedded prompt string) makes it exit with SyntaxError before any fetch, and it depends on the retired Perplexity path anyway. Catalyst research was completed via the native WebSearch tool with explicit `blocked_domains` for all three Yahoo hosts. **No Yahoo-sourced figure appears above.** Two maintenance items for the operator: the `afterhours.sh` quoting bug, and a Benzinga fallback that no longer works from cloud IPs.
 
 **No orders placed** (routine is research-only). Notification sent (hits > 0).
+
+### Gappers (auto-scan 10:09 ET, cloud)
+Watchlist scan via `scripts/gappers-alpaca.sh watchlist` (GAP_THRESHOLD=5.0). Raw hits: 11.
+Price floor ($3.00) / volume floor (50,000) dropped **AGMH** ($0.37, 8,094 vol) and
+**RCAT** ($1.80) -> **9 qualified**, all inside the top-10 cap. Deep-dive cap is **5**
+(CRWV, NBIS, AMKR, ASTS, STM); **ranks 6-9 (RKLB, OKLO, KLIC, LUNR) got quick-scan only**,
+not silently dropped. `vol` below is the **prior session's full-day volume (Mon 11-23)**,
+not true premarket volume - the script's known limitation. Technicals (Wilder RSI14/ATR14,
+SMA200) computed locally from `alpaca.sh bars` (`feed=iex`) since `mcp__tradingview-data__*`
+is not registered in cloud. Catalyst research: `apify--web-search` + `apify--web-fetch`
+(Morningstar/MarketWatch primary source) with native WebSearch fallback; the Apify
+**RAG web browser** (`send-server-actor-request` -> `apify/rag-web-browser`) **does exist**
+via the server-actor path but returned **stale (Jan 2026) and Yahoo-tainted** results on
+the first call, so it was abandoned for `apify--web-search`. `apify--web-search` remains
+**timeout-prone** (~43-48s server-side vs the 60s MCP ceiling): 3 of 6 calls timed out.
+**No Yahoo data in this entry** - `-site:` suffix *plus* `blockedDomains`/`blocked_domains`
+on every query; one finance.yahoo.com URL surfaced through the RAG browser and was
+**discarded**, its facts re-sourced from Morningstar/MarketWatch.
+
+**ALL 9 HITS ARE GAP-DOWNS. ALL 9 ARE BELOW THEIR 200-DAY SMA.** Every name fails the
+long-bias filter (`only long when price > 200-SMA on daily`), so **no tradeable long
+exists in this scan**. 49-85% off 52-week highs, RSI 30-40, ATR 6.9-19.2% of price.
+
+**Driver (single, confirmed, primary-sourced):** Jensen Huang was **reinstated as NVDA CEO
+Mon 11-23** after resigning Nov 11, producing one of the rarest rallies on record - only
+**6 of the Nasdaq-100 fell**; Nasdaq Composite **+6.5%**, QQQ ~+7%, XLK ~+9%, CRWV **+22%**
+(2nd-best in the NDX behind NVDA), NBIS **+20%**, IREN **+24%**, ORCL **+12%**. Today the
+relief trade is being handed back: **Nasdaq opened -1.4/-1.6%, extended to ~-2%, NVDA -6%**,
+on fresh **US tariffs on China**, renewed **Fed rate-hike** concern, pending **US inflation
+data**, and newly-listed **Anthropic breaking below its $83 IPO price** (-6.5% to $82).
+This confirms and extends the read the 09:14 run logged.
+
+**This is one trade, not nine.** Every name is the same AI-infra/high-beta factor, so the
+**>0.75 correlation gate permits at most one entry** from this entire list even if a name
+cleared the other gates. None does.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | $44.83 | -7.24% | 11,374,527 | Giving back Monday's +22%/+20%-style Huang-reinstatement relief rally as the AI complex de-risks |
+| 2 | NBIS | $90.95 | -7.00% | 5,935,895 | Giving back Monday's +22%/+20%-style Huang-reinstatement relief rally as the AI complex de-risks |
+| 3 | AMKR | $32.47 | -6.72% | 281,702 | Broad semiconductor/high-beta selloff; no confirmable same-day company catalyst |
+| 4 | ASTS | $24.01 | -6.47% | 2,212,226 | Broad semiconductor/high-beta selloff; no confirmable same-day company catalyst |
+| 5 | STM | $40.68 | -6.46% | 1,866,364 | Broad semiconductor/high-beta selloff; no confirmable same-day company catalyst |
+| 6 | RKLB | $46.90 | -5.50% | 2,396,678 | No company-specific news; space/high-beta complex giving back Monday's Huang-reinstatement bounce (-5.5%), 41% below its 200-SMA, 69% off the 52-week high. |
+| 7 | OKLO | $19.63 | -5.49% | 879,907 | No fresh catalyst; pre-revenue nuclear/SMR name de-risking on renewed Fed rate-hike concern (-5.5%), 60% below its 200-SMA and 84.6% off its high - the deepest drawdown on the list. |
+| 8 | KLIC | $58.34 | -5.20% | 69,551 | No same-day catalyst; semiconductor-equipment sympathy with AMKR/STM (-5.2%) and the thinnest name here at a 43.5k 20-day average volume. |
+| 9 | LUNR | $9.26 | -5.03% | 1,510,722 | No company-specific news; space-sector unwind alongside RKLB and ASTS (-5.0%), 52% below its 200-SMA and 80% off its high. |
+
+#### Deep dive: CRWV $44.83 -7.24%
+- Catalyst: No company-specific news. CRWV closed +22% Monday (second-best Nasdaq-100 performer behind NVDA) purely on Huang's reinstatement, because Nvidia is CRWV's chip supplier, an equity investor, and has agreed to buy back capacity CRWV cannot sell. Jensen Huang was reinstated as Nvidia CEO on Mon 2026-11-23 after resigning Nov 11, triggering one of the rarest rallies on record (only 6 of the Nasdaq-100 fell; Nasdaq Composite +6.5%, QQQ ~+7%, XLK ~+9%). On Tue 2026-11-24 that relief trade is being given back: Nasdaq opened -1.4/-1.6% and extended to ~-2%, NVDA -6%, with fresh US tariffs on China, renewed Fed rate-hike concern, pending US inflation data, and newly-listed Anthropic breaking below its $83 IPO price (-6.5% to $82) as the drags. CRWV had lost 35% between Nov 11 (Huang's resignation) and Friday's close, so Monday recovered only part of that.
+- Why: Pure vendor-financing beta. The market treats CRWV as a levered call option on Nvidia's willingness to backstop neoclouds; Huang's return restored that backstop premium Monday and today's broad AI de-risking strips it back out. Nothing about CRWV's own contracts changed in either direction.
+- Impact: Reads as mean-reversion inside a severe downtrend, not a new leg. Monday's 11.4M shares was ~7x the 20-day average of 1.6M - a buying climax, which makes a give-back the base case rather than a surprise. Sector read-through is total: NBIS (rank 2) and IREN closed +20% and +24% Monday and NBIS is down a near-identical -7.0% today, so this is one trade, not two. Price is 49% below the 200-SMA ($87.53) and 67.8% off the 52-week high.
+- Horizon: **SHORT_TERM**, The move is headline-driven give-back of a 1-day relief spike with no durable thesis; ATR(14) is 14.6% of price, so a multi-day hold is a volatility bet, not a swing thesis.
+- Opportunity cost: Nothing to displace - the account is 100% cash, 0 positions, with all 3 weekly trades unspent, so the real cost is the correlation slot, not a holding. CRWV, NBIS, AMKR, STM, RKLB, OKLO, KLIC and LUNR are all one AI-infra/high-beta factor right now, so taking CRWV would consume the only entry the >0.75 correlation gate allows from this entire list. It cannot clear the setup gate anyway: price is far below the 200-SMA, failing the long-bias filter, and with a 14.6% ATR the mandatory 10% trailing stop sits inside one ATR of noise, so a 2:1 R:R is unreachable at any sane stop distance.
+- Technicals: RSI14 **40.3** | 200-SMA **$87.53** (price **below**) | ATR14 $6.49 (**14.6%** of price) | **-67.8%** off 52w high | 20d avg vol 1,615,090
+
+#### Deep dive: NBIS $90.95 -7.00%
+- Catalyst: No company-specific news. NBIS closed +20% Monday as a named CRWV neocloud peer in the Huang-reinstatement trade, and is handing back -7.0% today. Jensen Huang was reinstated as Nvidia CEO on Mon 2026-11-23 after resigning Nov 11, triggering one of the rarest rallies on record (only 6 of the Nasdaq-100 fell; Nasdaq Composite +6.5%, QQQ ~+7%, XLK ~+9%). On Tue 2026-11-24 that relief trade is being given back: Nasdaq opened -1.4/-1.6% and extended to ~-2%, NVDA -6%, with fresh US tariffs on China, renewed Fed rate-hike concern, pending US inflation data, and newly-listed Anthropic breaking below its $83 IPO price (-6.5% to $82) as the drags. Nvidia's financing of the AI ecosystem was cited directly as crucial to Nebius alongside Oracle, CoreWeave and Iren.
+- Why: Same vendor-financing mechanism as CRWV, one notch more speculative. NBIS borrows to buy Nvidia GPUs, so the perceived durability of Nvidia's support is the dominant input to its multiple; that perception round-tripped in two sessions.
+- Impact: Least sustainable of the top 5 and the most dangerous to touch. ATR(14) is 19.2% of price - the widest on the list - and price sits 50.7% below the 200-SMA ($179.79) and 69.2% off the 52-week high. Monday's 5.9M shares was ~7.5x the 787k 20-day average, again a climax rather than accumulation. RSI 33.9 is nearly oversold but in a downtrend that is a trend reading, not a buy signal.
+- Horizon: **SHORT_TERM**, Sympathy move on someone else's news with a 19% ATR; there is no NBIS-specific structural change to hold for.
+- Opportunity cost: Would displace CRWV, the higher-ranked and more liquid expression of the identical trade - taking both is blocked by the correlation gate. It fails the same two gates as CRWV (below 200-SMA, 10% trail inside one ATR) and fails them harder: a 19.2% ATR means the required trailing stop is roughly half an ATR wide, so 2:1 R:R is arithmetically out of reach. No existing holding is at risk since the book is empty.
+- Technicals: RSI14 **33.9** | 200-SMA **$179.79** (price **below**) | ATR14 $17.04 (**19.2%** of price) | **-69.2%** off 52w high | 20d avg vol 787,172
+
+#### Deep dive: AMKR $32.47 -6.72%
+- Catalyst: No confirmable company-specific catalyst for Nov 24 after a direct search. AMKR is caught in the broad semiconductor de-rating: it dropped ~11.4% to close at $30.24 on Nov 20, printing a 52-week low near $30, bounced with the group Monday, and is giving back -6.7% today. Jensen Huang was reinstated as Nvidia CEO on Mon 2026-11-23 after resigning Nov 11, triggering one of the rarest rallies on record (only 6 of the Nasdaq-100 fell; Nasdaq Composite +6.5%, QQQ ~+7%, XLK ~+9%). On Tue 2026-11-24 that relief trade is being given back: Nasdaq opened -1.4/-1.6% and extended to ~-2%, NVDA -6%, with fresh US tariffs on China, renewed Fed rate-hike concern, pending US inflation data, and newly-listed Anthropic breaking below its $83 IPO price (-6.5% to $82) as the drags. Sector-level overhangs cited in coverage alongside KLA, Lam, Marvell and Semtech include Federal Reserve warnings about debt-fuelled AI spending and new US export-licensing rules, though that specific report carried no reliable date.
+- Why: Second-derivative semiconductor beta. As an outsourced packaging and test provider, AMKR has no direct AI product narrative but trades on expected leading-edge unit volumes, so it amplifies sentiment swings in the names it packages for without the offsetting pricing power.
+- Impact: Looks like continued trend damage rather than a tradeable dislocation, and the tape is too thin to trust. The 282k-share print is only ~1.5x the 184k 20-day average - by far the weakest participation on this list, so there is no volume confirmation behind the move in either direction. Price is 42% below the 200-SMA ($56.03) and 65.6% off the 52-week high. Sector read-through is confirmed via STM (rank 5) and KLIC (rank 8) moving the same way.
+- Horizon: **SHORT_TERM**, A sector give-back with no AMKR-specific development; the only durable fact is a persistent downtrend that argues against a long, not for one.
+- Opportunity cost: Nothing to displace with an empty book, but AMKR is the weakest use of the single correlation slot this list permits: it has the thinnest liquidity (184k 20-day average) of the nine, so slippage alone erodes the edge, and STM offers the same semiconductor exposure with 4x the volume and a 6.9% rather than 9.1% ATR. It fails the 200-SMA long filter outright, and no catalyst is documented, so it also fails the Confluence rule, which demands at least one documented catalyst on top of two aligned indicators.
+- Technicals: RSI14 **40.3** | 200-SMA **$56.03** (price **below**) | ATR14 $2.92 (**9.1%** of price) | **-65.6%** off 52w high | 20d avg vol 183,728
+
+#### Deep dive: ASTS $24.01 -6.47%
+- Catalyst: No fresh Nov 24 catalyst. ASTS is in a deep post-Q3 de-rating inside a broad space-sector unwind: down ~44% in a month to about $23 and ~72% over a longer window, after a Nov 17 investor summit featuring a new Rakuten joint venture backed by up to $1bn in Japanese government support, and a Nov 19 B. Riley call (Mike Crawford) that the stock was finally cheap enough to buy. It bounced with all high-beta risk Monday and is -6.5% today. Jensen Huang was reinstated as Nvidia CEO on Mon 2026-11-23 after resigning Nov 11, triggering one of the rarest rallies on record (only 6 of the Nasdaq-100 fell; Nasdaq Composite +6.5%, QQQ ~+7%, XLK ~+9%). On Tue 2026-11-24 that relief trade is being given back: Nasdaq opened -1.4/-1.6% and extended to ~-2%, NVDA -6%, with fresh US tariffs on China, renewed Fed rate-hike concern, pending US inflation data, and newly-listed Anthropic breaking below its $83 IPO price (-6.5% to $82) as the drags.
+- Why: Long-duration, pre-revenue cash-flow story traded as a pure rates-and-risk-appetite proxy. Renewed Fed rate-hike concern raises the discount rate on a company whose value is almost entirely terminal, so it falls hardest when risk appetite reverses, independent of satellite operational progress.
+- Impact: Reads as trend continuation, with the deepest damage on the list: 66% below the 200-SMA ($70.85) and 82.5% off the 52-week high. RSI 30.8 is the only genuinely oversold reading among the nine, and Monday's 2.2M shares was ~3.4x the 659k average, so there is real two-way interest. But a 15.6% ATR means a bounce and a further 15% leg look identical on entry. Read-through to the other space names is direct and confirmed: RKLB (rank 6) and LUNR (rank 9) are on this same list.
+- Horizon: **SHORT_TERM**, The Rakuten JV and the government backing are genuinely structural, but they predate this move by a week and did not stop the slide, so today's gap is risk-appetite noise rather than that thesis being priced in; it also sits in no favoured sector of the rotation table.
+- Opportunity cost: With zero positions nothing is displaced, but ASTS would spend the list's one correlation slot on its most speculative member while CRWV and NBIS at least carry contracted revenue. The oversold RSI is the single most interesting datapoint in today's scan and still is not enough: price below the 200-SMA fails the long-bias filter, and at a 15.6% ATR the compulsory 10% trailing stop sits inside one ATR, so the 2:1 R:R minimum cannot be met without a stop so wide it breaks the 20% position cap on any meaningful size.
+- Technicals: RSI14 **30.8** | 200-SMA **$70.85** (price **below**) | ATR14 $3.65 (**15.6%** of price) | **-82.5%** off 52w high | 20d avg vol 659,314
+
+#### Deep dive: STM $40.68 -6.46%
+- Catalyst: No company-specific catalyst confirmed for Nov 24. STM is tracking the global semiconductor selloff on both sides of the Atlantic: the Paris line fell ~5.9% to EUR 37.66 in mid-afternoon trade after a ~6.5% intraday drop in the prior session and a weekly loss of more than 9%, making it the CAC 40 laggard. The US ADR is -6.5% here. Jensen Huang was reinstated as Nvidia CEO on Mon 2026-11-23 after resigning Nov 11, triggering one of the rarest rallies on record (only 6 of the Nasdaq-100 fell; Nasdaq Composite +6.5%, QQQ ~+7%, XLK ~+9%). On Tue 2026-11-24 that relief trade is being given back: Nasdaq opened -1.4/-1.6% and extended to ~-2%, NVDA -6%, with fresh US tariffs on China, renewed Fed rate-hike concern, pending US inflation data, and newly-listed Anthropic breaking below its $83 IPO price (-6.5% to $82) as the drags.
+- Why: Broad-based analogue and automotive semiconductor cyclical being sold with the group. STM has little direct AI-datacenter revenue, so it is not recovering on the Nvidia news the way CRWV or NBIS did; it is absorbing the sector-wide multiple compression and the China-tariff headline without the offsetting AI narrative.
+- Impact: The most orderly decline of the five and the least likely to snap back violently. ATR(14) is 6.9% of price - the tightest on the list - and price is only 21% below the 200-SMA ($51.42) and 49.5% off the 52-week high, both far shallower than the AI-infra names. Monday's 1.87M shares was ~2.4x the 778k average. That relative calm is the point: this is multiple compression on a cyclical, not a liquidation.
+- Horizon: **SHORT_TERM**, A sector-wide tariff-and-rates give-back with no STM development; the automotive-semi cycle argument is a quarters-long thesis that today's gap says nothing about.
+- Opportunity cost: Nothing displaced with an empty book. STM is the best-constructed long on this list on pure mechanics - tightest ATR at 6.9% and the only name where a 10% trailing stop sits outside one ATR, so a 2:1 R:R is at least arithmetically possible - and it still fails the hard gate, because price below the 200-SMA blocks the long outright and no catalyst is documented, so the Confluence rule fails too. Taking it would also burn the one correlation slot on a semiconductor with no AI revenue while the sector is being de-rated, which the rulebook's 'exit a sector after 2 failed trades' logic argues against entering, not into.
+- Technicals: RSI14 **40.1** | 200-SMA **$51.42** (price **below**) | ATR14 $2.78 (**6.9%** of price) | **-49.5%** off 52w high | 20d avg vol 777,921
+
+**Account:** equity **$100,000**, cash **$100,000**, **0 positions**, **0 of 3** weekly
+trades used (verified live via `alpaca.sh account`/`positions`; PAPER endpoint). With an
+empty book, no deep-dive opportunity cost is a displaced holding - the scarce resource is
+the single correlation slot this list permits, plus the 3 unspent weekly trades.
+
+**What this scan is worth:** it prices the 11-23/11-24 whipsaw precisely - Monday's volume
+was a **buying climax, not accumulation** (CRWV 11.4M vs 1.6M 20-day avg = ~7x; NBIS 5.9M
+vs 787k = ~7.5x), which makes today's give-back the base case rather than a surprise. The
+one genuinely interesting datapoint is **ASTS RSI 30.8**, the only true oversold print, and
+it still fails on a 15.6% ATR against a mandatory 10% trailing stop. **STM is the only name
+whose ATR (6.9%) sits outside the 10% trail**, i.e. the only one where 2:1 R:R is even
+arithmetically reachable - and it is still below its 200-SMA with no documented catalyst.
+**Preserve the $100,000 cash and the 3 unspent weekly trades. Market-open should not chase
+any of these nine.**
+
+**No orders placed** (routine is research-only). Notification sent (hits > 0).
+
