@@ -1,0 +1,34 @@
+{
+  "scanned_at": "2026-11-24T20:37:26.355Z",
+  "ny_time": "15:37",
+  "candidates_checked": 60,
+  "grade_a_possible": false,
+  "setup_a_evaluated_at_ny": null,
+  "setup_a_skipped_reason": "outside 10:00-15:30 ET",
+  "hits": [
+    {
+      "symbol": "SYNA",
+      "result": "hit",
+      "grade": "B",
+      "setups": [
+        "B"
+      ],
+      "curr_px": 108.67,
+      "prev_daily_high": 117.72,
+      "prev_daily_close": 117.01,
+      "sma200": 105.25,
+      "sma200_window_days": 200,
+      "pmh": null,
+      "today_hod": 117.49,
+      "rsi14": 53.81,
+      "adx14": 27.45,
+      "ema9": 117.09,
+      "ema21": 116.83,
+      "premarket_volume": 0,
+      "daily_volume": 107005,
+      "avg_daily_volume_30": 69583,
+      "setup_a_checkable": false
+    }
+  ],
+  "errors": []
+}
