@@ -23971,3 +23971,35 @@ runs ~43–46s against a 60s MCP timeout, so it fails more often than it succeed
 and should either be given a retry/serial-with-backoff wrapper or be demoted
 below native WebSearch in the routine. `gappers-alpaca.sh most-active` **404s**
 (only `watchlist` / `symbols` work).
+
+### Gappers (auto-scan 07:10 ET, cloud)
+
+**0 hits.** No watchlist symbol cleared the |gap| >= 5.0% / price >= $3.00 filter, so the quick-scan table is empty and no deep dive ran (cap would have been top 5 of top 10).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| — | — | — | — | — | _no qualifying gappers_ |
+
+**Scanner verified live, not silently returning a false all-clear.** A control re-run at `GAP_THRESHOLD=0.5` returned **40 populated rows** with fresh pre-market prints (`delayed_sip`, 15-min delay), max |gap| **4.59%**. Zero hits is a quiet tape, not a data outage.
+
+Largest moves, all **below** the 5% trigger — quick scan only, no catalyst research run, no deep dive, not trade candidates:
+
+| Sym | $Price | Gap% | Vol |
+| --- | ------ | ---- | --- |
+| CRWV | 46.11 | -4.59 | 96,021,013 |
+| BE | 160.92 | -4.30 | 22,648,886 |
+| NBIS | 93.6 | -4.29 | 52,133,855 |
+| KLIC | 58.92 | -4.26 | 1,314,941 |
+| AGMH | 0.378 | -4.26 | 93,196 |
+| CMBT | 17.54 | +4.22 | 1,035,669 |
+| AMKR | 33.38 | -4.11 | 4,543,951 |
+| BW | 4 | -3.61 | 4,487,635 |
+| STM | 42 | -3.43 | 12,632,899 |
+| QBTS | 7.063 | -3.38 | 19,830,965 |
+
+**Read-through:** the tape is broadly red and the weakness is concentrated, not random — AI-infra and semis are down near-uniformly (CRWV −4.59, NBIS −4.29, BE −4.30, KLIC −4.26, AMKR −4.11, STM −3.43, GFS −3.21). That is a sector-wide risk-off print rather than any single name's news. **Account is flat (equity $100,000, 0 open positions, 100% cash), so nothing is exposed to it** — this is context for the market-open run, not a risk event.
+
+**CMBT, the one queued plan:** printing **$17.54 (+4.22%)**. That is above the plan's $16.90–17.30 limit band but still under its $17.60 do-not-chase line — and materially unchanged from the **$17.56** the pre-market run already logged hours ago. **No new information, so no alert.** The plan's own caveat stands: buying this gap forfeits the clean stop that was the entire reason the name passed. Market-open must re-quote before acting.
+
+**No notification sent** — STEP 6 fires only on hits > 0 or a scan error, and this run had neither. **No orders placed** (routine is research-only).
+

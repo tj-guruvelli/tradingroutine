@@ -1,0 +1,83 @@
+{
+  "scanned_at": "2026-11-24T12:10:16Z",
+  "deep_dive_cap": 5,
+  "gap_threshold_pct": 5.0,
+  "symbols_scanned": 40,
+  "hits": 0,
+  "gappers": [],
+  "note": "No watchlist symbol cleared |gap| >= 5.0%. Scanner verified live, not silently failing: a control re-run at GAP_THRESHOLD=0.5 returned 40 populated rows with fresh pre-market prints (max |gap| 4.59%, CRWV). Zero hits is a genuinely quiet tape, not a data outage. No deep dive run and no notification sent (STEP 6 gate: hits > 0 or scan error).",
+  "near_misses_below_threshold": [
+    {
+      "symbol": "CRWV",
+      "price": 46.11,
+      "gap_pct": -4.59,
+      "volume": 96021013
+    },
+    {
+      "symbol": "BE",
+      "price": 160.92,
+      "gap_pct": -4.3,
+      "volume": 22648886
+    },
+    {
+      "symbol": "NBIS",
+      "price": 93.6,
+      "gap_pct": -4.29,
+      "volume": 52133855
+    },
+    {
+      "symbol": "KLIC",
+      "price": 58.92,
+      "gap_pct": -4.26,
+      "volume": 1314941
+    },
+    {
+      "symbol": "AGMH",
+      "price": 0.378,
+      "gap_pct": -4.26,
+      "volume": 93196
+    },
+    {
+      "symbol": "CMBT",
+      "price": 17.54,
+      "gap_pct": 4.22,
+      "volume": 1035669
+    },
+    {
+      "symbol": "AMKR",
+      "price": 33.38,
+      "gap_pct": -4.11,
+      "volume": 4543951
+    },
+    {
+      "symbol": "BW",
+      "price": 4,
+      "gap_pct": -3.61,
+      "volume": 4487635
+    },
+    {
+      "symbol": "STM",
+      "price": 42,
+      "gap_pct": -3.43,
+      "volume": 12632899
+    },
+    {
+      "symbol": "QBTS",
+      "price": 7.063,
+      "gap_pct": -3.38,
+      "volume": 19830965
+    },
+    {
+      "symbol": "GFS",
+      "price": 37.7,
+      "gap_pct": -3.21,
+      "volume": 6578570
+    },
+    {
+      "symbol": "RCAT",
+      "price": 1.95,
+      "gap_pct": 3.17,
+      "volume": 11110869
+    }
+  ]
+}
