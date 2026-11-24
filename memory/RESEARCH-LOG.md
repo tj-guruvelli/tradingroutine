@@ -23699,3 +23699,275 @@ reached successfully, so the documented fallback channel is currently unproven.
 | SYNA   | B     | Momentum  | daily swing | px $116.66, ADX14 29.56, EMA9 $117.11 > EMA21 $116.81, RSI14 46.88 |
 
 - No orders placed — research-only routine (STEP 6).
+
+## 2026-11-24 — Pre-Market Research (Day 98, Tuesday, cloud run)
+
+Run time **06:02–06:20 ET**. Research tools: **Apify `apify--web-search`
+(partial) + native WebSearch (fallback)**. `mcp__Apify__apify--rag-web-browser`
+**still does not exist in this session** — the Apify connector exposes only
+`apify--web-search` / `apify--web-fetch`; the routine's named tool has never been
+available and should be corrected in `routines/pre-market.md`. `apify--web-search`
+**works but is slow and timeout-prone**: each call takes ~43–46s server-side
+against a 60s MCP ceiling, so 3 of 7 queries returned (oil, S&P futures, VIX) and
+4 timed out — including on a **serial** retry, so it is latency, not concurrency.
+Remaining topics carried by native WebSearch. Numeric load (indices, sectors,
+candidate technicals, gaps) carried by **Alpaca's own bars/snapshots** —
+`alpaca.sh bars` still hardcodes **`feed=iex`/`adjustment=raw`** (known defect,
+unfixed), so dailies below are IEX-consolidated, not `sip`. The
+`mcp__tradingview-data__*` MCP is **not registered in this cloud session**, so no
+`combined_analysis`; technicals computed locally from Alpaca bars (Wilder ATR14 /
+RSI14, SMA20/50/200). **No Yahoo data in this entry** — block applied as the
+`-site:` suffix *plus* `blockedDomains`/`blocked_domains` on every query; no
+finance.yahoo.com URL surfaced or was cited.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction) |
+| `balance_asof` | 2026-11-23 |
+| Deployed | **0%** vs the 75–85% rule — 98th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required env
+vars confirmed `set` before any wrapper call. Endpoint = `paper-api.alpaca.markets`
+(PAPER). No held tickers, so STEP 3's holdings-news query is **N/A**.
+
+### Market context
+
+**Yesterday was the biggest one-day bounce of the challenge window; this morning
+is giving part of it back.**
+- **Nov 23 closes: Nasdaq Composite +6.5%** (best session since 2025-04-09),
+  **S&P 500 +4.7%**, **Dow +3.0%** — driven by Jensen Huang's reinstatement as
+  NVDA CEO (NVDA +31% on the day).
+- **Premarket Nov 24 (CNBC, ~06:00 ET): Nasdaq-100 futures −1.61%, S&P 500
+  futures −0.75%, Dow futures −0.34%.** NVDA itself **−3%+** premarket;
+  governance questions unresolved and Treasury added Megaspeed plus six other
+  Southeast Asian firms to the trade blacklist.
+- **VIX ~26.6** (−25.8% on Nov 23, per MarketWatch/TradingView) after **tagging
+  40 on Nov 20** — the first 40-print since early 2025. Still far above the
+  sub-20 regime; a 26-handle VIX is not a calm tape.
+- **10-year Treasury 4.901%**, easing slightly.
+- **Oil: WTI ~$80.03 (−0.17%), Brent ~$89.16 (−0.25%)** — both near their
+  **lowest since late August**, which is the key tell against the Hormuz
+  headlines (see trade ideas).
+
+**Index/sector technicals, Nov 23 close (Alpaca `iex` dailies)**
+
+| Symbol | Close | vs SMA20 | vs SMA50 | vs SMA200 | RSI(14) | ATR14 % |
+|---|---|---|---|---|---|---|
+| SPY | 722.56 | −3.11% | −4.86% | **−1.41%** | 41.5 | 2.08% |
+| QQQ | 651.18 | −3.61% | −8.26% | **−4.69%** | 42.0 | 3.17% |
+| IWM | 265.75 | −3.60% | −4.34% | **−4.94%** | 41.5 | 2.14% |
+| XLV | 179.50 | −2.65% | +1.56% | **+11.50%** | 45.7 | 1.92% |
+| XLP | 90.40 | +0.02% | +4.48% | **+6.31%** | 54.3 | 1.64% |
+| XLF | 55.64 | −2.67% | −0.36% | **+3.00%** | 44.3 | 1.79% |
+| XLE | 59.84 | −6.70% | −7.38% | **+0.12%** | **32.6** | 2.53% |
+| XLK | 162.42 | −5.17% | −11.72% | **−5.24%** | 41.1 | 4.21% |
+
+- **The index-level 200-SMA long-bias filter still fails for a third straight
+  session** — SPY −1.41%, QQQ −4.69%, IWM −4.94%. A +4.7% day was not enough to
+  reclaim it. Every long today is placed against a benchmark still in a confirmed
+  downtrend, and the per-name filter must carry the whole load.
+- **Four sectors hold their 200-day: XLV +11.5%, XLP +6.3%, XLF +3.0%, XLE
+  +0.12%.** XLE's hold is now **marginal** and its RSI is **32.6** — nearly
+  oversold. XLK (−5.2%) and the broad indices fail.
+- **Sector YTD (multi-source, as of ~Nov 18): Energy is the clear leader
+  (+34.8% to +39.8% depending on provider), Communication Services the worst
+  (−9.5% to −19.7%).** Providers disagree materially on magnitude; direction is
+  consistent.
+
+**Today's calendar**
+- **10:00 ET — Conference Board Consumer Confidence (Nov)**, consensus ~92.1–92.5
+  vs 91.7 prior. The main print of the day; first read on holiday-season consumer
+  mood.
+- 09:00 ET — Case-Shiller home prices (Sep). 11:30 ET — 2-yr FRN auction;
+  13:00 ET — 5-yr note auction.
+- **Tomorrow (Wed Nov 25) is the session that matters: October core PCE** —
+  the **last inflation print before the Dec 9 Fed decision** — plus revised Q3
+  GDP. Cleveland Fed nowcast **+0.27% m/m** core, Goldman **+0.30%**; a
+  **≥0.35%** print is the threshold cited for reviving 50bp talk.
+- **Regime fact worth stating plainly: the market is pricing a 25bp HIKE on
+  Dec 9 at ~93–96%** (CME FedWatch; Kalshi 94% hike / 5% no change). A 50bp move
+  has been largely rejected. **This is a hiking tape, not a cutting one** — it
+  explains the 4.90% 10-year, the 26-handle VIX, and why the longest-duration
+  growth complex keeps getting sold on every bounce.
+- Also live: **Sanofi–Insmed, $41B all-cash at $175/share** (INSM +14% premarket).
+
+**Premarket gap scan (`gappers-alpaca.sh watchlist`, 18 symbols moving >3%):
+yesterday's rally names are unwinding almost one-for-one.**
+
+| Symbol | Gap | Px | Prev | Premkt vol |
+|---|---|---|---|---|
+| RCAT | **+5.82%** | 2.00 | 1.89 | 11,110,869 |
+| CMBT | **+4.34%** | 17.56 | 16.83 | 1,035,669 |
+| …16 names negative… | | | | |
+| AMKR | −5.77% | 32.80 | 34.81 | 4,543,951 |
+| NBIS | −5.91% | 92.02 | 97.80 | 52,133,855 |
+| BE | −6.03% | 158.01 | 168.14 | 22,648,886 |
+| CRWV | **−6.58%** | 45.15 | 48.33 | 96,021,013 |
+
+**Yesterday's NO-ENTRY call on the Huang-relief complex was validated inside one
+session.** The four deepest decliners premarket — CRWV, BE, NBIS, AMKR —
+are the same names ranked 1–3 and 8 in yesterday's deep dive, every one rejected
+on the grounds that they had "opened at or near their session high and were
+fading" a single reversible macro headline. They are now **−5.8% to −6.6% below
+yesterday's close** before the open. Only **2 of 18** watchlist movers are green.
+
+### Trade ideas
+
+#### 1. CMBT (CMB.TECH) — the first name in a month to clear the stop-placement test
+- **Catalyst (fresh, name-specific, reported pre-open TODAY):** Q3 2026 results.
+  **Net profit $373.9M vs $17.3M a year ago**; **revenue $802.9M vs $454.2M**;
+  **EBITDA $562.3M**; contract backlog stable at **$3.1B**. Board declared
+  **$0.65/share** ($0.21 interim + $0.44 from share premium), **ex-div Dec 9 for
+  NYSE shares**. A VLCC sale will add a **~$74.3M gain in Q4**. Two ratings
+  upgrades in a week: **DNB Carnegie hold → strong-buy (Nov 17)**, **Wall Street
+  Zen → buy (Nov 23)**.
+- **Technicals (Nov 23 close $16.81):** ATR14 **$0.61 = 3.65%** — inside the
+  2.8–5.5% band that the Nov 17 analysis identified as the only mechanically
+  tradeable volatility range under a fixed 10% stop / +20% target. RSI14 **43.8**
+  (no overbought block, room to run). **Above SMA200 $15.81 (+6.35%) — per-name
+  long-bias filter PASSES.** Below SMA20 $17.22 (−2.37%) and SMA50 $18.44
+  (−8.82%). 20d hi/lo **18.95 / 16.06**.
+- **Why this one is different from the last month of rejections — the stop is
+  clean.** A 10% stop from a ~$17.10 fill sits at **~$15.39**, which is **below
+  the 20-day low ($16.06) AND below the 200-SMA ($15.81)**. It is **outside the
+  recent range**, not noise-width. That single test is what failed for 4 of 5
+  names yesterday and for essentially every candidate since late October.
+- **Plan — limit only, do not chase:**
+  - **Entry: limit $16.90–17.30**, never market. Do **not** pay above **$17.60**;
+    the premarket print is $17.56 and buying the gap forfeits the clean stop.
+  - **Size: 1,135 shares** (`size.mjs CMBT` → price $17.61, ATR14 $0.5887,
+    atr_shares 1,698, **cap_shares 1,135, cap_applied true** — the 20%-of-equity
+    cap binds, not the ATR allowance). ≈**$19,400 notional, 19.4% of equity**.
+  - **Stop: 10% trailing GTC**, placed immediately on fill (~$15.39 from a
+    $17.10 fill).
+  - **Target: +20% ≈ $20.52**; tighten trail to 7% at +15% ($19.67), to 5% at
+    +20%.
+  - `corr-gate.mjs CMBT` → **pass** ("fewer than 2 open positions").
+- **Honest caveats — this is a conditional plan, not a green light:**
+  1. **The +20% target is still the weak leg.** It requires ~**5.6 ATR** of
+     travel and a break above **both** the 20-day high ($18.95) and the SMA50
+     ($18.44). The 2:1 R:R is satisfied arithmetically by the rulebook's fixed
+     10%/20% pair, not by a chart level that argues for $20.52.
+  2. **Rule 9 (follow sector momentum) is only partly met.** Energy leads YTD
+     (+35–40%) and the late-cycle/inflation-rising row of the rotation table
+     favours Energy/Materials/Financials — which the Dec-9-hike pricing confirms
+     structurally. **But XLE's own price momentum is negative** (−6.70% vs SMA20,
+     RSI 32.6, barely holding its 200-day at +0.12%). The thesis rests on CMBT's
+     earnings and tanker freight rates, **not** on energy-sector price momentum.
+  3. **NEW MECHANICAL HAZARD — ex-dividend vs the mandated trailing stop.** The
+     **$0.65/share distribution goes ex on Dec 9 (NYSE)**, a **3.80% gap down**
+     on a $17.10 fill. That single scheduled gap **consumes ~38% of the 10% trail
+     distance** in one print, and **Rule 7 forbids moving a stop down**, so it
+     cannot be adjusted around. Any CMBT hold through Dec 9 starts with a
+     38%-of-trail handicap. Either exit before Dec 9 or accept it — **operator
+     should decide which before the position is opened.**
+  4. Premarket volume **1.04M** is light, and the live IEX quote book at 06:09 ET
+     is unusable (CMBT bid/ask **14.49 / 19.95**), so the $17.56 reference comes
+     from the snapshot path. `gappers-alpaca.sh` **still** does not re-quote
+     finalists on a live feed (known defect, unfixed).
+  5. Confluence is **thin but met**: 200-SMA ✓ plus RSI with room ✓, reinforced
+     by a documented same-day fundamental catalyst and two upgrades — against the
+     Entry Checklist's ≥2-indicator-plus-1-catalyst bar.
+
+#### 2. TRMD / HAFN (product tankers) — WATCH ONLY, triggers set
+- **Rationale:** CMBT's print is a read-through to the tanker complex, and both
+  names are oversold while still holding their 200-day — **TRMD $32.78** (RSI
+  **37.5**, SMA200 +3.73%, ATR 4.57%), **HAFN $8.71** (RSI **34.1**, SMA200
+  +4.79%, ATR 4.15%). Both ATRs sit in the tradeable band. Neither gapped
+  >3% premarket, so neither is being chased.
+- **Why NOT today:** the read-through runs into the **wrong sub-segment**. Kpler
+  calls clean/product tanker markets **"mostly bearish — softening Western
+  demand, building vessel availability"** and expects **Aframax downside into
+  2027**; VLCC spot has retreated from October's record (~$805k/day peak →
+  ~$540k/day, with a partial re-firming to ~$649k/day). **CMB.TECH's own
+  disclosure guides crude tanker supply accelerating to 7.1% in 2027, 16.1% in
+  2028, 12.3% in 2029.** Buying the beta instead of the name with the catalyst is
+  the error here. HAFN is additionally **sitting on its 20-day low ($8.67)** —
+  no reclaim yet.
+- **Triggers (daily close, not intraday):** TRMD above **$34.00**; HAFN above
+  **$9.20** — each also requiring CMBT to hold its gap. Re-evaluate then.
+
+#### 3. INSM — explicit reject, logged so it is not re-surfaced
+- **$170.61 premarket (+14.43%) against Sanofi's $175.00 all-cash offer.** Max
+  remaining upside **+2.57%**, hard-capped by the deal price. Fails the 2:1 R:R
+  minimum **by construction**, and a completed takeout is a terminal event, not a
+  trend catalyst. **NO ENTRY** — and not a candidate on any future scan either.
+
+#### Also rejected
+- **CRWV / BE / NBIS / AMKR** (−5.8% to −6.6% premarket): yesterday's rejections,
+  now unwinding. Buying them here is **bottom-fishing a 24-hour-old failed
+  bounce**, which the strategy explicitly forbids (drawdown alone is not a
+  catalyst).
+- **RCAT $2.00 (+5.82%):** fails the **$3.00 price floor** outright, as on Nov 17.
+- **SYNA $117.01** (the only setup-scan hit on Nov 23, grade B both runs):
+  **fails R:R.** ATR14 is **1.11%**, so the mandated +20% target is **~18 ATR**
+  away — unreachable on any sane horizon. Textbook low-volatility-band failure.
+
+### Risk factors for today
+1. **Futures are red into a 10:00 ET consumer-confidence print** after a +4.7%
+   S&P day. Entering on a fade of the biggest up-day of the window is the single
+   largest timing risk; a weak confidence number hits a tape with no cushion.
+2. **Tomorrow's core PCE is the gating event**, not today's data. It is the last
+   inflation print before Dec 9 and a **≥0.35%** core reading reopens 50bp talk.
+   Any position opened today carries that binary overnight.
+3. **A 25bp hike is ~94% priced for Dec 9.** This is a tightening regime with the
+   10-year at 4.90% — multiple compression pressure persists regardless of
+   earnings quality.
+4. **Index 200-SMA filter fails for a third session** (SPY −1.41%, QQQ −4.69%,
+   IWM −4.94%). Longs are being placed against a benchmark downtrend.
+5. **VIX 26.6 after a 40 print four sessions ago.** Realized vol is elevated;
+   10% stops get hit by noise more often than the backtested regime implies.
+6. **The NVDA governance story is unresolved and reversible** — it drove +31%
+   one day and −3% the next, and the blacklist addition is a fresh negative. The
+   whole AI complex remains headline-driven in both directions.
+7. **Hormuz is a trap for the naive long.** The IRGC claims three (Iran's Navy
+   says two more) tankers struck mines on Nov 24 under US escort, war-risk cover
+   runs **7–9% of hull value vs ~0.25% pre-war**, and JMIC holds the region at
+   **SEVERE** — yet **WTI/Brent are near late-August lows** and **Hormuz tanker
+   freight fell 63.4% from Oct 8 to Nov 13**. A restricted strait removes
+   ton-mile demand as readily as it adds risk premium. UKMTO/JMIC have **not**
+   confirmed mines as the cause. **Do not trade the Hormuz headline; trade the
+   earnings print.**
+8. **The $100,000-vs-~$10,000 baseline mismatch is unresolved** (flagged Jul 27,
+   122nd day). Every dollar figure above — the $19,400 CMBT notional in
+   particular — is sized against the live $100,000 equity and would be **10×
+   too large** against the CLAUDE.md mandate. **Operator must confirm the
+   baseline before any order is placed.**
+
+### Decision: **HOLD — with one conditional plan queued for the market-open run**
+
+No order is placed by this routine (pre-market is research-only). **CMBT is a
+queued, dated plan, not an instruction to buy:** limit **$16.90–17.30**, **1,135
+shares**, **10% trailing GTC on fill**, target **+20%** — valid only if the
+market-open run re-validates the gap holding above **$16.81** (Nov 23 close) on
+real volume, and explicitly **void if price is above $17.60**. Everything else is
+HOLD.
+
+**Two operator decisions are blocking, and both should be answered before the
+market-open run acts:**
+1. **The $100,000 / ~$10,000 baseline** — determines whether the correct size is
+   1,135 shares or ~114.
+2. **The Dec 9 ex-dividend vs the no-lower-stops rule** — exit before ex-div, or
+   accept a scheduled 3.80% gap against a 10% trail?
+
+Absent answers, the market-open run should default to **HOLD** and log why.
+
+**Standing flags, unchanged:** 0 positions / **0% deployed** against the 75–85%
+mandate; **0/3 weekly trades** used (week of Nov 23); **Day 98 with zero
+entries** (161st+ straight no-trade session). The **10%-stop / 2:1-R:R structural
+conflict** remains the proximate cause of the drought — CMBT is notable precisely
+because it is the first name in weeks whose *stop* clears the recent range, and
+its *target* leg is still strained. `scripts/size.mjs` line 82 `limit=20`
+stale-price bug unfixed. `alpaca.sh bars` still hardcodes `feed=iex`. New this
+run: **`routines/pre-market.md` names `mcp__Apify__apify--rag-web-browser`, which
+has never existed in this session** — and `apify--web-search`, the actual tool,
+runs ~43–46s against a 60s MCP timeout, so it fails more often than it succeeds
+and should either be given a retry/serial-with-backoff wrapper or be demoted
+below native WebSearch in the routine. `gappers-alpaca.sh most-active` **404s**
+(only `watchlist` / `symbols` work).
