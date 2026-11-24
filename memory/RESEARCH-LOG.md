@@ -24003,3 +24003,41 @@ Largest moves, all **below** the 5% trigger — quick scan only, no catalyst res
 
 **No notification sent** — STEP 6 fires only on hits > 0 or a scan error, and this run had neither. **No orders placed** (routine is research-only).
 
+
+### Gappers (auto-scan 08:09 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | AMKR | 32.90 | -5.49 | 4.54M* | No AMKR-specific headline — sector-wide give-back of Monday's AI/semi rip; only company news is a ~1% dividend raise to $0.08436 (mildly positive) |
+
+Only 1 hit >=5% (watchlist scan, 60-ticker immediate tier). Deep dive cap 5; 1 row, so no quick-scan-only ranks.
+
+_Filtered: WLDS (+6.26%, $1.137) excluded <$3._
+_*Vol caveat: Alpaca's snapshot has no premarket-volume field — 4.54M is the prior completed session's (11-23) consolidated volume, not today's premarket. The >=50k premarket-volume filter was therefore not applicable, not passed._
+_Feed: delayed_sip, 15-min delayed. Market-open / /trade MUST re-quote before acting._
+
+**Escalation vs the 07:10 run:** that run logged AMKR at **-4.11%** and found 0 rows >=5%. Two hours later AMKR is **-5.49%** and the sector-wide risk-off it flagged has **deepened**, not faded.
+
+**Peer sweep (1.5% threshold, same 08:09 ET read)** — the whole complex is gapping down together, which is why AMKR's move carries little stock-specific information:
+
+| Sym | Gap% | Sym | Gap% |
+| --- | ---- | --- | ---- |
+| MU | -6.15 | AMD | -3.97 |
+| FORM | -5.59 | NBIS | -3.89 |
+| AMKR | -5.49 | GFS | -3.72 |
+| TER | -5.25 | ASX | -3.58 |
+| CRWV | -4.76 | QCOM | -2.47 |
+| NVDA | -4.70 | TSM | -1.80 |
+| KLIC | -4.26 | STM | -4.07 |
+
+Prior session for contrast: on 11-23 the same complex ripped — Nasdaq-100 futures +882 pts (+3.5%), AMKR +15.1% off its 11-20 low, OSAT peer ASX ~+20%. Today is the unwind of that squeeze. **Account is flat (equity $100,000, 0 positions, 100% cash), so nothing is exposed.**
+
+#### Deep dive: AMKR $32.90 -5.49%
+
+- Catalyst: No same-day company-specific negative catalyst exists. AMKR is giving back part of Monday's move: on 11-23 the entire AI/semi complex ripped (Nasdaq-100 futures +3.5%; AMKR closed +15.1% off Friday's $30.21 low at $34.77; peer ASX ~+20%). This morning the same complex is reversing in unison. The only genuine AMKR news is a token ~1% quarterly dividend raise ($0.08352 -> $0.08436) approved 11-20/11-21 — a positive, not the cause of a -5.5% gap. The standing overhang is the 10-26 Q3 print: revenue $1.99B flat YoY and 245bps below consensus, with forward revenue/EPS guidance narrowed below consensus, driven by a multi-year smartphone upgrade-cycle slowdown (mobile ~45% of revenue; carriers pulling back from handset subsidies, VZ Q3 upgrades -20%).
+- Why: Pure sector beta, not alpha. AMKR sits mid-pack in a ranked list of its own peers (see sweep above) — the signature of index/basket de-risking rather than a stock-specific event. As a high-beta, 9.3%-ATR OSAT name it simply amplifies the group: it overshot on Monday's squeeze and is overshooting on the unwind.
+- Impact: Continuation of a two-day whipsaw, not a fresh directional move, and unsustainable in either direction. $32.90 sits below SMA20 $35.98, SMA50 $43.50 and SMA200 $56.14 — below all three, ~66% off the 52-wk high of $96.53 and only ~10% above the 52-wk low of $29.95 set on 11-20. RSI(14) 45.5 is neutral, so there is no oversold-bounce edge either: Monday's rally burned off the oversold condition without repairing a single moving average. ATR(14) $3.05 = 9.3% of price, so a -5.5% gap is well inside one day's normal range and carries little information. Sector read-through is total — this is the same AI-infra de-rating driving the watchlist for weeks (CRWV, NBIS gapping with it), so the signal is a regime read on the whole book, not a trade in AMKR.
+- Horizon: SHORT_TERM — the gap is headline-free sector beta inside a two-day mean-reversion whipsaw with no durable thesis to carry. The underlying AI advanced-packaging story (~$3B NVIDIA commitments, $12B Arizona OSAT build, computing+auto/industrial now 48% of revenue at +1,100bps YoY, margins expanding with net income +50% on flat revenue) is genuinely LONG_TERM and fits the Technology leg of the rotation table — but management guides below consensus and the sell-side case itself puts the real reversal in 2027 when top-line growth resumes. A structural story whose own timeline is next year is not a gap trade today.
+- Opportunity cost: Nothing is displaced — account is flat at $100,000 cash, 0/6 position slots used, 0/3 weekly trades spent, so the true cost is optionality, not a holding. Nor would it displace a better name from today's list: there is no other qualifying name (WLDS was the only other hit, fails the $3 floor). The binding objection is the rulebook: price is below the 200-SMA, so the long-bias filter fails outright, and the Confluence rule cannot reach 2-of-4 with RSI neutral at 45.5, price below all three MAs and no insider signal. On R:R, ATR 9.3% puts a sane stop ~10% out at ~$29.61 — *below* the 52-wk low of $29.95, i.e. the only technically sane stop is already through support — and clearing 2:1 would need ~+20% to ~$39.48, above SMA20 and into SMA50 resistance, requiring the entire sector to reverse to pay. Fails the Entry Checklist on catalyst, trend filter and R:R simultaneously. The scan's real value today is the regime read: preserve the dry powder and the 3 unspent weekly trades rather than catching a falling knife in the weakest sector on the tape.
+
+**No orders placed** (routine is research-only). Notification sent (hits > 0).

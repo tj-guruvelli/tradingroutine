@@ -1,83 +1,61 @@
 {
-  "scanned_at": "2026-11-24T12:10:16Z",
+  "scanned_at": "2026-11-24T13:11:00Z",
+  "scanned_at_et": "2026-11-24T08:09:00-05:00",
   "deep_dive_cap": 5,
-  "gap_threshold_pct": 5.0,
-  "symbols_scanned": 40,
-  "hits": 0,
-  "gappers": [],
-  "note": "No watchlist symbol cleared |gap| >= 5.0%. Scanner verified live, not silently failing: a control re-run at GAP_THRESHOLD=0.5 returned 40 populated rows with fresh pre-market prints (max |gap| 4.59%, CRWV). Zero hits is a genuinely quiet tape, not a data outage. No deep dive run and no notification sent (STEP 6 gate: hits > 0 or scan error).",
-  "near_misses_below_threshold": [
+  "universe": "memory/WATCHLIST.md watchlist scan (60-ticker immediate tier)",
+  "filters": "abs(gap_pct)>=5.0, price>=3.0, premarket_volume>=50000 where populated (not populated - see volume_note)",
+  "data_feed": "alpaca delayed_sip (15-min delayed); market-open/trade MUST re-quote before acting",
+  "filtered_out": [
     {
-      "symbol": "CRWV",
-      "price": 46.11,
-      "gap_pct": -4.59,
-      "volume": 96021013
+      "symbol": "WLDS",
+      "gap_pct": 6.26,
+      "price": 1.137,
+      "reason": "price $1.137 below $3.00 floor"
+    }
+  ],
+  "sector_context": {
+    "note": "AMKR's gap is sector-wide, not idiosyncratic. Peer sweep run at 1.5% threshold, same 08:09 ET read.",
+    "peers_gapping_down": {
+      "MU": -6.15,
+      "FORM": -5.59,
+      "AMKR": -5.49,
+      "TER": -5.25,
+      "CRWV": -4.76,
+      "NVDA": -4.7,
+      "KLIC": -4.26,
+      "STM": -4.07,
+      "AMD": -3.97,
+      "NBIS": -3.89,
+      "GFS": -3.72,
+      "ASX": -3.58,
+      "QCOM": -2.47,
+      "TSM": -1.8
     },
+    "prior_session": "2026-11-23 AI/semi complex ripped: Nasdaq-100 futures +882 pts (+3.5%); AMKR +15.1% off the 11-20 low; ASX ~+20%"
+  },
+  "gappers": [
     {
-      "symbol": "BE",
-      "price": 160.92,
-      "gap_pct": -4.3,
-      "volume": 22648886
-    },
-    {
-      "symbol": "NBIS",
-      "price": 93.6,
-      "gap_pct": -4.29,
-      "volume": 52133855
-    },
-    {
-      "symbol": "KLIC",
-      "price": 58.92,
-      "gap_pct": -4.26,
-      "volume": 1314941
-    },
-    {
-      "symbol": "AGMH",
-      "price": 0.378,
-      "gap_pct": -4.26,
-      "volume": 93196
-    },
-    {
-      "symbol": "CMBT",
-      "price": 17.54,
-      "gap_pct": 4.22,
-      "volume": 1035669
-    },
-    {
+      "rank": 1,
       "symbol": "AMKR",
-      "price": 33.38,
-      "gap_pct": -4.11,
-      "volume": 4543951
-    },
-    {
-      "symbol": "BW",
-      "price": 4,
-      "gap_pct": -3.61,
-      "volume": 4487635
-    },
-    {
-      "symbol": "STM",
-      "price": 42,
-      "gap_pct": -3.43,
-      "volume": 12632899
-    },
-    {
-      "symbol": "QBTS",
-      "price": 7.063,
-      "gap_pct": -3.38,
-      "volume": 19830965
-    },
-    {
-      "symbol": "GFS",
-      "price": 37.7,
-      "gap_pct": -3.21,
-      "volume": 6578570
-    },
-    {
-      "symbol": "RCAT",
-      "price": 1.95,
-      "gap_pct": 3.17,
-      "volume": 11110869
+      "price": 32.9,
+      "gap_pct": -5.49,
+      "premarket_volume": null,
+      "prev_session_volume": 4543951,
+      "volume_note": "Alpaca snapshot has no premarket-volume field; 4,543,951 is the prior completed session (2026-11-23) consolidated volume. The >=50k premarket-volume filter was therefore not applicable.",
+      "catalyst": "No AMKR-specific headline: the gap is sector-wide give-back of Monday's violent AI/semi rebound (Nasdaq-100 futures +3.5% on 11-23), with the only company news a ~1% quarterly dividend raise to $0.08436 (mildly positive).",
+      "headlines": [
+        "Amkor board approves quarterly dividend increase from $0.08352 to $0.08436 per share (robinhood.com, 2026-11-24; simplywall.st, 2026-11-21)",
+        "Premarket movers: chip stocks lead AI rebound, Nasdaq-100 futures surged 882 pts / +3.5% (ca.investing.com, 2026-11-23)",
+        "AMKR momentum indicator moved below 0 on 2026-11-20, signalling a new downward move (tickeron.com, 2026-11-20)",
+        "Amkor's mobile business is slowing, but its AI ambitions aren't - Q3 rev $1.99B flat YoY, 245bps below consensus, guidance narrowed below consensus (stocknews.com/MarketBeat, 2026-10-30)",
+        "Amkor holds ~$3B in multi-year NVIDIA commitments and is funding a $12B Arizona expansion (tickeron.com, 2026-11-20)"
+      ],
+      "catalyst_detail": "No same-day company-specific negative catalyst exists. AMKR is giving back part of Monday's move: on 2026-11-23 the entire AI/semi complex ripped higher (Nasdaq-100 futures +882 pts / +3.5%; AMKR itself closed +15.1% off Friday's $30.21 low at $34.77, and OSAT peer ASX ran ~+20%). This morning the same complex is reversing in unison. The only genuine AMKR news is a token ~1% quarterly dividend raise ($0.08352 -> $0.08436) approved around 11-20/11-21, which is a positive, not the cause of a -5.5% gap. The standing fundamental overhang is the 2026-10-26 Q3 print: revenue $1.99B flat YoY and 245bps below consensus, with forward revenue and EPS guidance narrowed below consensus, driven by a multi-year smartphone upgrade-cycle slowdown (mobile is ~45% of revenue; Verizon and other carriers are pulling back from handset subsidies, VZ Q3 upgrades -20%).",
+      "why": "Pure sector beta, not an idiosyncratic move. A peer sweep at an 08:09 ET read shows the whole complex gapping down together: MU -6.15%, FORM -5.59%, AMKR -5.49%, TER -5.25%, CRWV -4.76%, NVDA -4.70%, KLIC -4.26%, STM -4.07%, AMD -3.97%, NBIS -3.89%, GFS -3.72%, ASX -3.58%, QCOM -2.47%, TSM -1.80%. AMKR sits mid-pack in a ranked list of its own peers, which is the signature of index/basket de-risking rather than a stock-specific event. As a high-beta, 9.3%-ATR OSAT name it simply amplifies the group: it overshot on Monday's squeeze and is overshooting on the unwind.",
+      "impact": "Reads as continuation of a two-day whipsaw, not a fresh directional move, and is the opposite of sustainable in either direction. AMKR is $32.90 against SMA20 $35.98, SMA50 $43.50 and SMA200 $56.14 - below all three, roughly 66% off the 52-week high of $96.53 and only ~10% above the 52-week low of $29.95 set on 11-20. RSI(14) is 45.5, i.e. neutral, so there is no oversold-bounce edge either; the Monday rally burned off the oversold condition without repairing any moving average. ATR(14) is $3.05, 9.3% of price, so a -5.5% gap is well inside one day's normal range and carries little information. Sector read-through is total: this is the same AI-infrastructure de-rating that has been driving the watchlist for weeks (CRWV and NBIS are gapping with it), so the signal to take from today is a regime read on the whole book, not a trade in AMKR.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The gap itself is headline-free sector beta inside a two-day mean-reversion whipsaw and should be expected to keep chopping, so there is no durable thesis to carry. The underlying AI advanced-packaging story (~$3B NVIDIA commitments, $12B Arizona OSAT build, computing+auto/industrial now 48% of revenue, +1,100bps YoY, margins expanding with net income +50% on flat revenue) is genuinely LONG_TERM and fits the Technology leg of the sector-rotation table, but management has guided below consensus and the sell-side case itself puts the real reversal in 2027 when top-line growth resumes. A structural story whose own timeline is next year is not a gap trade today.",
+      "opportunity_cost": "Nothing is displaced: the account is flat at $100,000 cash, 0 of 6 position slots used and 0 of 3 weekly trades spent, so the true cost is optionality rather than an existing holding. It also would not displace a better name from today's list, because today's list has no other qualifying name (WLDS was the only other hit and fails the $3 price floor). The binding objection is the rulebook, not the opportunity set: price is below the 200-SMA, so the long-bias filter in TRADING-STRATEGY.md fails outright, and the Confluence rule cannot reach 2-of-4 with RSI neutral at 45.5, price below all three MAs and no insider signal. On R:R, ATR 9.3% means a sane stop sits ~10% out at ~$29.61, which is *below* the 52-week low of $29.95 - i.e. the only technically sane stop is already through support - and clearing 2:1 would need ~+20% to ~$39.48, above SMA20 and into SMA50 resistance, requiring the entire sector to reverse to pay. Fails the Entry Checklist on catalyst, trend filter and R:R simultaneously. The real value of today's scan is the regime read, which argues for preserving the dry powder and the 3 unspent weekly trades rather than spending one catching a falling knife in the weakest sector on the tape."
     }
   ]
 }
