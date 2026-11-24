@@ -1,61 +1,119 @@
 {
-  "scanned_at": "2026-11-24T13:11:00Z",
-  "scanned_at_et": "2026-11-24T08:09:00-05:00",
+  "scanned_at": "2026-11-24T14:14:00Z",
+  "scanned_at_et": "2026-11-24 09:14 ET",
+  "run": "gappers-cloud 09:00 ET slot (3rd of 4 today)",
+  "universe": "memory/WATCHLIST.md immediate tier (~60 tickers) via scripts/gappers-alpaca.sh watchlist",
+  "feed": "delayed_sip (15-min delayed) — market-open / /trade MUST re-quote before acting",
+  "filters": {"min_abs_gap_pct": 5.0, "min_price": 3.0, "min_premarket_volume": 50000, "premarket_volume_filter_applicable": false},
   "deep_dive_cap": 5,
-  "universe": "memory/WATCHLIST.md watchlist scan (60-ticker immediate tier)",
-  "filters": "abs(gap_pct)>=5.0, price>=3.0, premarket_volume>=50000 where populated (not populated - see volume_note)",
-  "data_feed": "alpaca delayed_sip (15-min delayed); market-open/trade MUST re-quote before acting",
-  "filtered_out": [
-    {
-      "symbol": "WLDS",
-      "gap_pct": 6.26,
-      "price": 1.137,
-      "reason": "price $1.137 below $3.00 floor"
-    }
+  "hits": 5,
+  "excluded_sub_3_dollar": [
+    {"symbol": "AGMH", "price": 0.3553, "gap_pct": -10.01},
+    {"symbol": "WLDS", "price": 1.137, "gap_pct": 6.26}
   ],
-  "sector_context": {
-    "note": "AMKR's gap is sector-wide, not idiosyncratic. Peer sweep run at 1.5% threshold, same 08:09 ET read.",
-    "peers_gapping_down": {
-      "MU": -6.15,
-      "FORM": -5.59,
-      "AMKR": -5.49,
-      "TER": -5.25,
-      "CRWV": -4.76,
-      "NVDA": -4.7,
-      "KLIC": -4.26,
-      "STM": -4.07,
-      "AMD": -3.97,
-      "NBIS": -3.89,
-      "GFS": -3.72,
-      "ASX": -3.58,
-      "QCOM": -2.47,
-      "TSM": -1.8
-    },
-    "prior_session": "2026-11-23 AI/semi complex ripped: Nasdaq-100 futures +882 pts (+3.5%); AMKR +15.1% off the 11-20 low; ASX ~+20%"
-  },
+  "regime_note": "All 5 hits are the same trade: the unwind of Monday's Jensen-Huang-reinstatement squeeze. NVIDIA's board reinstated Huang as CEO on 11-23 (he had resigned 11-12; chair said 11-17 he would not return; Trump pushed the board). AI-infra/semis ripped in one session — NBIS +29%, CRWV +22%, BE +18%, AMKR +15%, KLIC +12% — then gapped down together this morning. Governance/political catalyst, not a fundamental one, so there was nothing underneath the squeeze to hold it up.",
   "gappers": [
     {
       "rank": 1,
       "symbol": "AMKR",
-      "price": 32.9,
-      "gap_pct": -5.49,
+      "price": 32.78,
+      "gap_pct": -5.83,
       "premarket_volume": null,
-      "prev_session_volume": 4543951,
-      "volume_note": "Alpaca snapshot has no premarket-volume field; 4,543,951 is the prior completed session (2026-11-23) consolidated volume. The >=50k premarket-volume filter was therefore not applicable.",
-      "catalyst": "No AMKR-specific headline: the gap is sector-wide give-back of Monday's violent AI/semi rebound (Nasdaq-100 futures +3.5% on 11-23), with the only company news a ~1% quarterly dividend raise to $0.08436 (mildly positive).",
+      "prior_session_volume": 4543951,
+      "catalyst": "No AMKR-specific news — giving back part of Monday's +15.1% Huang-reinstatement rip; only company item is a token ~1% dividend raise to $0.08436 (11-18)",
       "headlines": [
-        "Amkor board approves quarterly dividend increase from $0.08352 to $0.08436 per share (robinhood.com, 2026-11-24; simplywall.st, 2026-11-21)",
-        "Premarket movers: chip stocks lead AI rebound, Nasdaq-100 futures surged 882 pts / +3.5% (ca.investing.com, 2026-11-23)",
-        "AMKR momentum indicator moved below 0 on 2026-11-20, signalling a new downward move (tickeron.com, 2026-11-20)",
-        "Amkor's mobile business is slowing, but its AI ambitions aren't - Q3 rev $1.99B flat YoY, 245bps below consensus, guidance narrowed below consensus (stocknews.com/MarketBeat, 2026-10-30)",
-        "Amkor holds ~$3B in multi-year NVIDIA commitments and is funding a $12B Arizona expansion (tickeron.com, 2026-11-20)"
+        "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director (nvidianews, 11-23)",
+        "Amkor Technology raises quarterly dividend to 8.436c from 8.352c (11-18)",
+        "Needham cuts AMKR target to $55 from $90, keeps Buy; B. Riley to $38 from $41 (11-09)"
       ],
-      "catalyst_detail": "No same-day company-specific negative catalyst exists. AMKR is giving back part of Monday's move: on 2026-11-23 the entire AI/semi complex ripped higher (Nasdaq-100 futures +882 pts / +3.5%; AMKR itself closed +15.1% off Friday's $30.21 low at $34.77, and OSAT peer ASX ran ~+20%). This morning the same complex is reversing in unison. The only genuine AMKR news is a token ~1% quarterly dividend raise ($0.08352 -> $0.08436) approved around 11-20/11-21, which is a positive, not the cause of a -5.5% gap. The standing fundamental overhang is the 2026-10-26 Q3 print: revenue $1.99B flat YoY and 245bps below consensus, with forward revenue and EPS guidance narrowed below consensus, driven by a multi-year smartphone upgrade-cycle slowdown (mobile is ~45% of revenue; Verizon and other carriers are pulling back from handset subsidies, VZ Q3 upgrades -20%).",
-      "why": "Pure sector beta, not an idiosyncratic move. A peer sweep at an 08:09 ET read shows the whole complex gapping down together: MU -6.15%, FORM -5.59%, AMKR -5.49%, TER -5.25%, CRWV -4.76%, NVDA -4.70%, KLIC -4.26%, STM -4.07%, AMD -3.97%, NBIS -3.89%, GFS -3.72%, ASX -3.58%, QCOM -2.47%, TSM -1.80%. AMKR sits mid-pack in a ranked list of its own peers, which is the signature of index/basket de-risking rather than a stock-specific event. As a high-beta, 9.3%-ATR OSAT name it simply amplifies the group: it overshot on Monday's squeeze and is overshooting on the unwind.",
-      "impact": "Reads as continuation of a two-day whipsaw, not a fresh directional move, and is the opposite of sustainable in either direction. AMKR is $32.90 against SMA20 $35.98, SMA50 $43.50 and SMA200 $56.14 - below all three, roughly 66% off the 52-week high of $96.53 and only ~10% above the 52-week low of $29.95 set on 11-20. RSI(14) is 45.5, i.e. neutral, so there is no oversold-bounce edge either; the Monday rally burned off the oversold condition without repairing any moving average. ATR(14) is $3.05, 9.3% of price, so a -5.5% gap is well inside one day's normal range and carries little information. Sector read-through is total: this is the same AI-infrastructure de-rating that has been driving the watchlist for weeks (CRWV and NBIS are gapping with it), so the signal to take from today is a regime read on the whole book, not a trade in AMKR.",
+      "catalyst_detail": "There is no same-day AMKR catalyst. The move is the second half of a two-day whipsaw: AMKR bottomed at a 52-wk low of $29.95 on 11-20 (close $30.21, -11.4% that day), then closed 11-23 at $34.77, +15.1%, when NVIDIA's board unanimously reinstated Jensen Huang as CEO after his 11-12 resignation — a reversal that came with explicit White House involvement, Trump saying he personally intervened with the board. The only AMKR-specific news in the window is a ~1% quarterly dividend raise ($0.08352 -> $0.08436) on 11-18, which is a positive and plainly not the cause of a -5.8% gap. The standing overhang is unchanged: the 10-26 Q3 print came in at revenue $1.99B (flat YoY, ~245bps below consensus) and EPS $0.76 vs $0.783 consensus, with forward guidance narrowed below consensus on a multi-year smartphone upgrade-cycle slowdown (mobile ~45% of revenue). Needham and B. Riley both cut targets into the print.",
+      "why": "Pure sector beta with a governance trigger, not alpha. Monday's rally was a political/governance headline — Huang back at NVIDIA — not a demand datapoint, so it repriced the whole AI-supply-chain basket at once without changing any company's numbers. A squeeze with no fundamental support gives back, and AMKR, as a 8.8%-ATR OSAT name sitting mid-pack in its own peer sweep, simply amplifies the group in both directions.",
+      "impact": "Not sustainable in either direction — this is range noise, not a directional move. ATR(14) is $3.05 = 8.8% of price, so a -5.8% gap sits well inside one day's normal range and carries almost no information. $32.78 is below SMA20 $35.98 and SMA50 $43.50, ~66% off the 52-wk high and only ~9% above the 11-20 low of $29.95. RSI(14) 45.4 is neutral, so Monday's rip burned off the oversold condition without repairing a single moving average — there is no oversold-bounce edge left either. Sector read-through is total: every peer gapped with it (CRWV -5.75, KLIC -5.75, BE -5.50, NBIS -5.24, STM -4.92, GFS -4.36), which is the signature of basket de-risking.",
       "horizon": "SHORT_TERM",
-      "horizon_reasoning": "The gap itself is headline-free sector beta inside a two-day mean-reversion whipsaw and should be expected to keep chopping, so there is no durable thesis to carry. The underlying AI advanced-packaging story (~$3B NVIDIA commitments, $12B Arizona OSAT build, computing+auto/industrial now 48% of revenue, +1,100bps YoY, margins expanding with net income +50% on flat revenue) is genuinely LONG_TERM and fits the Technology leg of the sector-rotation table, but management has guided below consensus and the sell-side case itself puts the real reversal in 2027 when top-line growth resumes. A structural story whose own timeline is next year is not a gap trade today.",
-      "opportunity_cost": "Nothing is displaced: the account is flat at $100,000 cash, 0 of 6 position slots used and 0 of 3 weekly trades spent, so the true cost is optionality rather than an existing holding. It also would not displace a better name from today's list, because today's list has no other qualifying name (WLDS was the only other hit and fails the $3 price floor). The binding objection is the rulebook, not the opportunity set: price is below the 200-SMA, so the long-bias filter in TRADING-STRATEGY.md fails outright, and the Confluence rule cannot reach 2-of-4 with RSI neutral at 45.5, price below all three MAs and no insider signal. On R:R, ATR 9.3% means a sane stop sits ~10% out at ~$29.61, which is *below* the 52-week low of $29.95 - i.e. the only technically sane stop is already through support - and clearing 2:1 would need ~+20% to ~$39.48, above SMA20 and into SMA50 resistance, requiring the entire sector to reverse to pay. Fails the Entry Checklist on catalyst, trend filter and R:R simultaneously. The real value of today's scan is the regime read, which argues for preserving the dry powder and the 3 unspent weekly trades rather than spending one catching a falling knife in the weakest sector on the tape."
+      "horizon_reasoning": "The catalyst driving the gap is the decay of a one-day governance headline, with no durable thesis to carry; the genuinely structural AI advanced-packaging story (~$3B NVIDIA commitments, $12B Arizona OSAT build, computing+auto/industrial now 48% of revenue) has a sell-side timeline of 2027, which is not a gap trade today.",
+      "opportunity_cost": "Displaces nothing — account is flat at $100,000 cash, 0/6 position slots used, 0/3 weekly trades spent — so the real cost is optionality, not a holding. Within today's own list it would displace nothing better either: all five hits are the same single trade (long AI-infra beta into an unwind), so taking any one of them is a concentrated bet on one factor, not diversification. The binding objection is the rulebook: price is below SMA20 and SMA50, the Confluence rule cannot reach 2-of-4 (RSI neutral 45.4, price under the MAs, no insider signal), and on R:R an ATR-sane 10% stop lands at ~$29.50, which is *through* the 11-20 low of $29.95 — the only technically defensible stop is already broken. Clearing 2:1 would need ~+20% to ~$39.40, above SMA20 and into SMA50 resistance, requiring the whole sector to reverse to pay. Fails the Entry Checklist on catalyst, trend and R:R at once."
+    },
+    {
+      "rank": 2,
+      "symbol": "CRWV",
+      "price": 45.55,
+      "gap_pct": -5.75,
+      "premarket_volume": null,
+      "prior_session_volume": 96021013,
+      "catalyst": "Giving back Monday's +22% Huang-reinstatement spike as investors refocus on CoreWeave's debt and financing — D/E above 9x, bond yields near 15-16%",
+      "headlines": [
+        "CoreWeave Stock Jumps 29% as Jensen Huang Returns to Nvidia (Benzinga, 11-23)",
+        "CoreWeave stock slips 5.0% pre-open to ~$45.90 as debt and financing concerns resurface (Investing.com, 11-24)",
+        "CoreWeave faces mounting risks as Nvidia turmoil rattles its biggest backer (CryptoBriefing)"
+      ],
+      "catalyst_detail": "CRWV spiked 29.8% intraday to $51.27 on 11-23 and closed $48.32 (+22.3%) on NVIDIA's reinstatement of Huang — NVIDIA is both its largest backer and its supply dependency, so the governance reversal hit it hardest in the group. This morning it is handing it back, with coverage attributing the fade to investors refocusing on the balance sheet rather than any new company news: debt/equity above 9x, deeply negative free cash flow, and dependence on credit markets where its own bond yields have climbed to roughly 15-16%. The positive side of the ledger is intact but old news — Q3 revenue +168% YoY, backlog ~$133B, FY26 revenue guidance raised to $13.0-13.3B, Citizens JMP reiterating Buy at $180 — while Barclays and Stifel have cut targets. Co-founder Brian Venturo disclosed buying $30M face value of CoreWeave unsecured bonds personally, a sentiment gesture that does not change the financing math.",
+      "why": "The squeeze repriced CRWV on who runs its supplier, not on its cost of capital — and the cost of capital is the entire bear case. When the headline stopped being new, the market went straight back to the 15-16% bond yields and 9x leverage, which Monday never addressed. Mechanically: a highly levered, cash-burning name is the highest-beta expression of AI-infra sentiment, so it overshoots up on a sentiment headline and overshoots down when sentiment normalizes.",
+      "impact": "Reads as a one-day headline spike mean-reverting, and the volatility is extreme enough that the gap is barely a signal: ATR(14) is $6.95 = 14.4% of price, so -5.75% is roughly a third of a normal day's range. $45.55 is below SMA20 $51.50 and far below SMA50 $67.30, ~56% off the 3-month high of $104.55 and ~16% above the 11-20 low of $39.29. RSI(14) 45.3 is neutral. Read-through is the whole neocloud complex moving as one — NBIS -5.24 beside it — and the sector faces a dated structural risk: new U.S. rules require approval for advanced AI chip shipments to four Southeast Asian countries, with a remote-access crackdown effective February, aimed squarely at the capacity-rental model.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The gap is sentiment decay; the real thesis question — whether CoreWeave can fund a $133B backlog at 15-16% money — is unresolved and will not be answered by a gap, so there is nothing here to hold past the session.",
+      "opportunity_cost": "Nothing is displaced from the book (flat, $100,000 cash, 0/6 slots, 0/3 weekly trades), but within today's list CRWV and NBIS are near-duplicates — the correlation gate (scripts/corr-gate.mjs, blocks >0.75 against 2+ open positions) would almost certainly fire on the second one taken, so today's five hits are effectively one trade slot, not five. On R:R the 14.4% ATR is disqualifying under the rulebook: the 'never within 3% of current price' rule and a 10% trailing stop put the stop at ~$41.00, which is less than one ATR away, so normal intraday noise stops it out before the thesis can resolve; an ATR-respecting stop would need to be ~15% wide at ~$38.70 — below the 11-20 low — and clearing 2:1 from there would require ~+30% to ~$59, above SMA50. It cannot clear 2:1 at a sane stop distance. Also fails Confluence (price below both MAs, RSI neutral, no insider equity signal — the founder bought bonds, not stock)."
+    },
+    {
+      "rank": 3,
+      "symbol": "KLIC",
+      "price": 58.0,
+      "gap_pct": -5.75,
+      "premarket_volume": null,
+      "prior_session_volume": 1314941,
+      "catalyst": "No new KLIC news — giving back Monday's +12% sector rip; the stock has been sold since its 11-18 fiscal-Q4 beat-and-raise, with Needham cutting its target to $80 from $115",
+      "headlines": [
+        "Kulicke & Soffa fiscal Q4: revenue $410.3M (+131% YoY) and non-GAAP EPS $1.52 both beat; Q1 guide $390-430M above consensus (11-18/11-19)",
+        "Kulicke and Soffa Industries stock falls 7.2% (11-19)",
+        "Needham cuts target to $80 from $115, keeps Buy; B. Riley to $71 from $70, Neutral (11-21)"
+      ],
+      "catalyst_detail": "There is no 11-24 KLIC catalyst; it is tracking the group. What makes KLIC the most informative name on the list is what happened before: it reported fiscal Q4 on 11-18 with revenue ~$410.3M, +131% YoY and above estimates, non-GAAP EPS $1.52 vs $1.43 consensus, and guided the next quarter to $390-430M revenue and $1.49-1.82 EPS, also above consensus — and the stock fell 7.2% the next day and kept falling to a 3-month low of $54.08 on 11-20. Sell-side responded by cutting, not raising: Needham to $80 from $115 (Buy retained), B. Riley to $71 from $70 (Neutral), consensus now Hold with an average target around $75.50. Operationally the company is expanding Advanced Solutions production in Singapore toward ~$400M of segment revenue by early fiscal 2027 and has shipped its first fluxless thermo-compression panel-level packaging systems to two major Taiwan customers for AI/HPC.",
+      "why": "A beat-and-raise that gets sold is the clearest read on the regime: the market is de-rating AI-supply-chain multiples regardless of delivered numbers, so good news is being used as liquidity rather than paid for. That makes Monday's +12% obviously an index-driven squeeze rather than a re-rating of KLIC, and this morning's -5.75% simply the squeeze reversing — in a name where the market has already told you it will not pay up for 131% revenue growth.",
+      "impact": "Likely to keep fading, and the sector read-through is the point rather than the stock. $58.00 is below SMA20 $68.82 and SMA50 $79.68, ~43% off the 3-month high of $101.63 and only ~7% above the 11-20 low of $54.08. RSI(14) 40.0 is the second-weakest on the list — approaching but not at oversold, so no mean-reversion trigger. ATR(14) $5.25 = 8.5% of price, so the gap is again inside one normal day. The durable signal: if the strongest fundamental print in the group (KLIC) cannot hold a bid, nothing else on this list deserves a long on fundamentals either.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The gap itself is sector-beta decay with no company trigger; the Singapore Advanced Solutions ramp and the panel-level packaging wins are genuinely LONG_TERM and fit the Technology leg of the rotation table, but the market just demonstrated it will not pay for them yet, so the structural case needs a price base first, not a gap entry.",
+      "opportunity_cost": "Displaces nothing in the book (flat, 0/6 slots, 0/3 trades) and is the best *research* candidate on today's list, but still the wrong trade. It would displace the dry powder and one of only three weekly trades for an entry where a 10% stop sits at ~$52.20 — below the 11-20 low of $54.08, so the stop is through support — and clearing 2:1 needs ~+20% to ~$69.60, which is through SMA20 $68.82 and still under SMA50. Fails Confluence at 0-of-4 going long: price below SMA20/SMA50, RSI 40 neutral-not-oversold, no insider signal, and the one documented catalyst (a beat-and-raise) has already been rejected by the tape. The right action is to keep it on the watchlist for a base-and-reclaim of SMA20, not to buy an unwind."
+    },
+    {
+      "rank": 4,
+      "symbol": "BE",
+      "price": 158.9,
+      "gap_pct": -5.5,
+      "premarket_volume": null,
+      "prior_session_volume": 22648886,
+      "catalyst": "Giving back Monday's +18% AI-power rip; Truist initiated/holds at Hold and the scandium-from-China securities class action plus a new officer-and-director investigation remain open",
+      "headlines": [
+        "Truist Securities starts/maintains Bloom Energy at Hold (StreetInsider, 11-22)",
+        "Bloom Energy falls amid AI sector selloff (StreetInsider)",
+        "Kahn Swick & Foti announces investigation of Bloom officers and directors over scandium disclosures (11-16)"
+      ],
+      "catalyst_detail": "BE is the most violent name on the list and its own chart tells the story: $142.41 close on 11-20 (a 3-month low of $140.73 intraday), then $168.15 on 11-23, +18.1%, on the same AI-power/Huang-reinstatement rip — and now gapping back to ~$158.90. There is no new 11-24 company catalyst; Truist's position is Hold, having cut its target to $218 from $250 on data-center demand concerns before later lifting it to $240. Two legal items remain live and unresolved: a securities class action covering purchasers 2025-02-27 to 2026-07-08, stemming from a 07-08-2026 Hunterbrook Media short-seller report alleging Bloom made materially false or misleading statements about sourcing scandium through intermediaries that obtained the metal from China — Bloom filed an 8-K rejecting the report and stating its supply is not China-dependent — and a separate Kahn Swick & Foti investigation of officers and directors over the same disclosures, announced 11-16, eight days ago.",
+      "why": "BE is being traded as an AI-power derivative, so it inherits the full AI-infra sentiment swing while carrying an unresolved disclosure-integrity overhang of its own. Monday's move was the beta; today's is the beta reversing. The legal items are the reason the beta is asymmetric to the downside — an open short-seller allegation plus a fresh officer-and-director investigation is exactly the kind of overhang that caps rallies and deepens unwinds, because any bid has to underwrite a disclosure risk that has not been adjudicated.",
+      "impact": "A one-day spike mean-reverting, in the second-most-volatile name here: ATR(14) is $23.25 = 13.8% of price, so -5.5% is under half a normal day's range and close to meaningless as a signal. $158.90 sits below SMA20 $190.30 and far below SMA50 $232.21, ~47% off the 3-month high of $302.32, and RSI(14) 38.4. The 11-20 session alone ranged $162.54 open to $140.73 low — a 13% intraday swing — which is the real risk characterisation: this is a name that can take out any reasonable stop inside a single session on no news.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "Headline-driven beta decay with an open legal overhang and no company catalyst; an unadjudicated short-seller allegation and an active officer-and-director investigation are the opposite of a durable long thesis, so nothing here should be carried past the session.",
+      "opportunity_cost": "Nothing in the book is displaced (flat, $100,000 cash, 0/6 slots), but BE is the clearest fail of the hard caps on arithmetic alone. At ~$158.90 the 20%-of-equity cap allows ~125 shares ($19,862), and with ATR 13.8% that single position swings ~$2,900 — roughly 2.9% of total equity — on one average day, against a rulebook sized to risk 1.0% of equity per 1-ATR move; the ATR sizer would cut it to a fraction of that cap, meaning the trade would tie up a scarce position slot for a position too small to matter. On R:R, a 10% stop at ~$143 is inside one ATR and sits right on the 11-20 low of $140.73, so the stop is both noise-sensitive and on broken support; clearing 2:1 needs ~+20% to ~$190.70, which is exactly SMA20 resistance. Confluence fails and the documented catalyst is negative (legal), not positive. It also fails the rotation table: the structural read is late-cycle Energy/Materials, and BE is not an energy value play, it is an AI-infrastructure growth proxy wearing an energy label."
+    },
+    {
+      "rank": 5,
+      "symbol": "NBIS",
+      "price": 92.68,
+      "gap_pct": -5.24,
+      "premarket_volume": null,
+      "prior_session_volume": 52133855,
+      "catalyst": "Giving back Monday's ~+29% rip; U.S. curbs now require approval for advanced AI chip shipments to four Southeast Asian countries with a February remote-access crackdown, and the 2027 capex plan of $40-45B keeps financing risk central",
+      "headlines": [
+        "Nebius rallies ~29-30% despite new U.S. curbs threatening neocloud business in Southeast Asia (24/7 Wall St., 11-23)",
+        "Nebius stock falls nearly 17% on weak outlook, Nvidia turmoil and Nscale's wider loss (Benzinga, 11-12)",
+        "Nebius drops 7% as Michael Burry takes a victory lap on the neocloud rout (24/7 Wall St., 11-20)"
+      ],
+      "catalyst_detail": "NBIS had the largest Monday move on the list — roughly +29% from Friday's $81.31 to ~$104.75-105.50 intraday, closing $97.65 — on the Huang reinstatement plus a Treasury comment pushing back on further Fed hikes. It is now giving it back with no new company news. The bear case it rallied *through* is intact and dated: new U.S. rules require approval for advanced AI chip shipments to four Southeast Asian countries, with a separate crackdown on remote access to restricted hardware effective February, aimed at Chinese firms renting capacity in places like Malaysia — a direct hit to the neocloud rental model. Its own Q3 (11-12) cut 2026 revenue guidance while raising capex, sending the stock down ~17%, and the 2027 capex plan of $40-45B puts financing at the centre of the short case; Michael Burry has been publicly taking a victory lap on the neocloud rout.",
+      "why": "A 29% single-session move on a governance headline in a name whose problem is funding $40-45B of 2027 capex is a short squeeze, not a re-rating — the headline changed nothing about the capital plan or the export rules. The unwind is the squeeze exhausting. The mechanism to watch is reflexive: a company that must raise capital is hostage to its own share price, so sentiment swings here are not just noise, they feed back into the financing risk that caused them.",
+      "impact": "Reads as the most extreme mean-reversion on the list and the least tradeable. ATR(14) is $18.68 = 19.1% of price — the -5.24% gap is roughly a quarter of one average day's range, so it is statistically indistinguishable from nothing. $92.68 is far below SMA20 $131.72 and SMA50 $179.01, ~64% off the 3-month high of $255.03, and RSI(14) 34.4 is the weakest on the list, the only one approaching oversold — which is the one marginally constructive datapoint anywhere in this scan, and still above the <30 threshold the rulebook requires. Read-through: NBIS and CRWV are the same trade, and both face the February remote-access deadline.",
+      "horizon": "SHORT_TERM",
+      "horizon_reasoning": "The gap is squeeze decay; the structural items that do exist (export curbs, the February deadline, a $40-45B capex plan) are all thesis-negative, so there is no LONG_TERM case to carry even though the move's drivers are structural.",
+      "opportunity_cost": "Displaces nothing in the book (flat, 0/6 slots, 0/3 weekly trades), and within today's list it is strictly dominated — it is the same neocloud factor bet as CRWV with twice the volatility, so the correlation gate makes taking both impossible and taking the more violent one irrational. It cannot clear 2:1 at any sane stop: with ATR at 19.1%, the rulebook's 10% trailing stop at ~$83.40 is half an ATR away and would be hit by an ordinary quiet session, while an ATR-respecting ~20% stop at ~$74 sits below the 3-month low of $80.68 and would require a ~+40% move to ~$130 — SMA20 — just to pay 2:1. Confluence fails: price below both MAs, RSI 34.4 not yet oversold, no insider signal, and the documented catalysts are negative. The honest opportunity cost is reversed here: the value of this name today is as the regime thermometer, and trading it would cost the dry powder that the regime read says to keep."
     }
-  ]
+  ],
+  "orders_placed": [],
+  "note": "Research only. No orders placed. Execution gate lives in market-open / /trade."
 }
