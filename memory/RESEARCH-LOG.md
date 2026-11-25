@@ -25028,3 +25028,18 @@ signal on its own.
   date; worth correcting, but out of scope for a research-only routine.
 - **No orders placed — STEP 8 honoured.**
 
+### Setup Scan (15:37 ET, cloud)
+
+- `grade_a_possible`: false — `setup_a_skipped_reason`: "outside 10:00-15:30 ET". Setup A
+  (TJL breakout) not evaluated for any of 60 watchlist symbols this run; a 0-grade-A result
+  here reflects the clock, not an absence of breakout setups.
+- 60 symbols scanned, 0 errors, 1 hit.
+
+```
+TICKER  GRADE  SETUP(S)            TIMEFRAME     TRIGGER
+APT     B      Momentum confluence daily swing   px $5.82 > SMA200 $5.29, ADX 34.85, EMA9 $6.00 > EMA21 $5.89, RSI 48.1
+```
+
+- No grade-A hits → no Telegram/ClickUp alert per rule (STEP 4).
+- No orders placed — candidate only, feeds `/trade` or next `market-open.md` run.
+
