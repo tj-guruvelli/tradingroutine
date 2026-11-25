@@ -24849,3 +24849,182 @@ out on the $3.00 price floor ($0.359).
 - Source-price discrepancies noted for ONDS (web sources $5.15–5.57 vs Alpaca snapshot $3.63) and RGTI (web $8.45–10.57 vs $7.16) — Alpaca snapshot treated as authoritative; the web figures are stale by a week or more.
 - **Yahoo block applied** as the `-site:` suffix plus `blockedDomains`/`blocked_domains` on every query; no finance.yahoo.com URL surfaced or was cited.
 - **No orders placed — STEP 8 honoured.**
+
+## 2026-11-25 — Gappers (auto-scan 10:08 ET, cloud)
+
+**Run 3 of 4 today** (07:09 / 08:10 / 09:12 already logged; 11:00 ET still to come).
+Market is **OPEN** (cash session, ~40 min in), so "Gap%" below is last-vs-prev-close —
+i.e. intraday change, not a pre-market gap.
+
+**The scan result IS the headline: 25 of ~60 watchlist names moved >=5% and every single**
+**one of them was DOWN. Zero up-gappers.** The 09:12 run saw 14 qualifiers; this run sees
+25, and the gaps have widened materially in the hour since: **BE -6.98 -> -9.28,**
+**CRWV -8.58 -> -9.26, BW -5.89 -> -9.03.** Breadth and depth are both deteriorating.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BE | 141.9 | -9.28 | 3.2M | Power/AI-infra selling plus a Baird target cut to $263 from $351 and a Hunterbrook report alleging a China-linked scandium fuel-cell parts shipment; peers FCEL -13%, VRT -12%. |
+| 2 | CRWV | 38.66 | -9.26 | 14.5M | AI-credit stress day 3 — 5y CDS at a record ~1,314bp (~68% implied 5y default odds), all four bond issues at record lows, 2031 notes ~76c; Q4 interest expense guided to $1.05-1.15B. |
+| 3 | BW | 3.475 | -9.03 | 491k | No fresh company news — low-float power-infra name dragged down with the AI/semis selloff on light volume; still digesting the 11/20 -15.5% session, Q3 EPS miss and discounted equity offering. |
+| 4 | BKSY | 14.96 | -8.84 | 282k | No company-specific news today — space/defense high-beta selling; context is the 50-DMA break on 11/20, CAO and insider share sales, and a split sell-side view (Mizuho initiated Outperform $37 on 11/24 vs Jefferies Hold $27). |
+| 5 | NBIS | 79.72 | -8.70 | 9.7M | Neocloud financing fears — HPE's CEO said its financing arm has not lent to neocloud providers or high-risk customers; Citi cut its target to $215 from $265 (Buy) and part of revenue slips to early 2027. |
+| 6 | LUNR | 8.19 | -8.29 | 2.1M | Space complex selloff — 52-week low area despite a 11/23 space-nuclear preliminary design review pass and Mizuho initiating Outperform $15 on 11/24; stock is ~77% off its six-month high. |
+| 7 | ONDS | 3.57 | -8.23 | 6.5M | Drone selloff continuation — Q3 operations used $141M, gross margin fell to 21.8%, dilution concerns and target cuts, with short interest near 40%; hit a 52-week low alongside NVDA. |
+| 8 | AMPX | 5.275 | -7.78 | 716k | No fresh news — high-beta battery name grinding to new 52-week lows (was $5.84, -5.12% on 11/24) on post-Q3 derating plus broad risk-off. |
+| 9 | ORCL | 101.1 | -7.64 | 6.3M | Debt-funded AI buildout under credit scrutiny — negative free cash flow and debt above $125B; fell more than 6% on 11/24 as the AI-led selloff resumed, now ~53% off peak. |
+| 10 | BMNR | 12.18 | -7.63 | 9.5M | ETH treasury unwind — holdings ~6.09M ETH (~4.98% of supply) lost ~$655M of value in a week, mNAV fell to 0.77 (below the ETH behind it), share count up 164%; ether slipped under $1,700. |
+
+Deep dive **capped at the top 5** by |gap%| per routine spec (BE, CRWV, BW, BKSY, NBIS).
+**Ranks 6-10 received quick-scan catalysts only** — not silently dropped.
+
+Filtered out on the **$3.00 price floor**: SATL $2.305 (-7.80), RCAT $1.595 (-7.54),
+RR $0.5248 (-7.49). Also qualifying but **outside the top 10**: UMAC $8.19 (-7.56),
+KLIC $53.39 (-7.29), QBTS $6.26 (-7.20), OKLO $17.82 (-7.19), RGTI $7.05 (-7.18),
+RDW $5.49 (-6.95), AMKR $29.66 (-6.76), RKLB $43.14 (-6.18), GFS $34.58 (-5.05),
+QTUM $110.27 (-5.03).
+
+**Volume-field finding — resolves the open question from the 07-28 and 09:12 entries.**
+The scanner's `volume` is the snapshot `dailyBar` volume, which **rolls at the open**: the
+09:12 pre-market run was reading *Tuesday's* full-day volume (CRWV 61.6M), while this
+10:08 post-open run reads *today's running* volume (CRWV 14.5M). So the field is
+prior-session volume before 09:30 and live same-day volume after — not statically one or
+the other, which is why the two runs' Vol columns look contradictory. Either way it is
+never pre-market volume, so the routine's `premarket_volume >= 50000` gate stays
+inoperative as written and was not applied as a distinct filter; all 10 rows clear 50k.
+
+### Macro backdrop (why everything is red)
+
+This is not a stock-picking tape. Confirmed this run:
+
+- **October PCE at 3.8%**, and CME FedWatch now prices a **December 9 rate HIKE at
+  ~97-98%**, with ~63% odds of **another hike in January**. A *hiking* Fed is a different
+  regime from every prior assumption in this log.
+- **New 20% tariffs** on China, the EU and 12-14 other partners (16 trading partners)
+  after an excess-industrial-capacity probe; effective after a comment period, January at
+  the earliest. Sources differ on announced-vs-expected — treat as expected.
+- **Nasdaq-100 futures -2.4% to -3%** pre-open; S&P -1.44%, Dow -0.76%.
+- **Asia led the decline**: Kospi **-6.16%**, Taiex **-4.8%**, Nikkei **-2.78%**.
+- **Nasdaq fell 10.02%** in the week ending 11/20.
+- **AI credit is the transmission channel**: CRWV 5y CDS at a record **~1,314bp** (~68%
+  implied 5y default probability), all four bond issues at record lows, 2031 notes ~76c.
+  HPE's financing arm has withdrawn from neocloud lending.
+- Inflation pressure tied to sustained oil strength from the unresolved US-Iran conflict.
+
+**Live index check (Alpaca, 15:09 UTC / 10:09 ET): SPY $703.14 vs $718.91 Tue close =
+-2.2%. QQQ $616.21 vs $638.12 = -3.4%.** Both remain below their 200-SMAs.
+
+### Strategy verdict: NO TRADE, and it is not close
+
+Every one of the 10 fails the rulebook on two independent gates:
+
+1. **200-SMA long-bias filter** — all 10 trade far below their daily 200-SMA. The rulebook
+   permits longs only above it. This alone disqualifies the entire list.
+2. **Sector rotation table** — rising inflation plus a hiking Fed is the **late-cycle** row,
+   which favors **Energy, Materials, Financials**. Today's list is AI/neocloud (CRWV, NBIS,
+   ORCL), space/defense (BKSY, LUNR), drones (ONDS), power-for-AI (BE, BW), battery (AMPX)
+   and crypto-treasury (BMNR) — **not one of them in a favored sector.**
+
+**Correlation-gate note** for any later `/trade` check: CRWV, NBIS and ORCL are three
+expressions of one AI-credit trade and would very likely trip the >0.75 block against each
+other. BE/BW are a second cluster; BKSY/LUNR a third.
+
+**Account unchanged: equity $100,000.00, cash 100%, 0 positions, 0 open orders.** Day 100
+at 0% deployed vs the 75-85% rule. The circuit breaker is not armed in any meaningful
+sense (no peak-to-trough drawdown is possible with no positions) — and today that
+100%-cash posture is the sole reason this tape has cost the book nothing.
+
+### Relative-volume read (same-feed IEX-only, ~40 min into the session)
+
+Today's IEX volume so far vs each name's 20-day IEX average, then vs the ~10% of the
+session elapsed. This is the main thing separating real distribution from thin-tape drift,
+and it does separate them:
+
+| Sym | RVOL so far | Implied pace | Read |
+| --- | ----------- | ------------ | ---- |
+| NBIS | 0.63x | **~6.3x** | heaviest — real distribution |
+| BMNR | 0.65x | **~6.5x** | real distribution |
+| CRWV | 0.29x | ~2.9x | elevated, corroborated by credit |
+| ORCL | 0.26x | ~2.6x | elevated |
+| ONDS | 0.24x | ~2.4x | elevated |
+| BE | 0.22x | ~2.2x | elevated |
+| LUNR | 0.22x | ~2.2x | elevated |
+| BKSY | 0.19x | ~1.9x | mildest of the top 5 |
+| AMPX | 0.17x | ~1.7x | light |
+| BW | 0.09x | **~0.9x** | **below normal — thin-tape drift** |
+
+Opens are front-loaded, so implied pace overstates a full-day projection; use it as a
+ranking, not a forecast. The signal that matters: **BW's -9.03% is happening on
+below-normal volume** (most likely of the five to retrace), while **NBIS and BMNR are
+genuinely being sold.**
+
+ATR14 (daily, Wilder-approx, computed locally from Alpaca IEX bars), for sizing context:
+BE 14.6% of price, CRWV 16.5%, BW 14.9%, BKSY 11.5%, NBIS 21.5%. **Every one of today's**
+**gaps is smaller than one ATR** — the quantitative reason none of them is a tradeable
+signal on its own.
+
+### Deep dive: BE $141.9 -9.28%
+- Catalyst: BE opened sharply lower in a sector-wide AI-infrastructure selloff, not on an earnings event. Baird cut its price target to $263 from $351, and a Hunterbrook Media report published Tuesday alleged a container of scandium-containing fuel-cell parts tied to China, with no company response found. Fuel-cell and power peers moved with it (FCEL about -13%, VRT about -12% pre-market). The stock had already fallen ~9% on 11/24 on HPE's prolonged component-shortage warning and sits roughly 60% below its $351.28 52-week high.
+- Why: BE is the highest-beta expression of the 'power for AI data centers' trade, so it de-rates faster than the datacenter names it supplies when AI capex funding is questioned. The Baird cut removes the sell-side price anchor and the Hunterbrook supply-chain allegation adds an unquantified China-exposure discount on top of the macro move.
+- Impact: Reads as continuation of a multi-week de-rating, not a one-day spike: -31.4% over 20 sessions and ATR14 is 14.6% of price, so a 9% gap is under one ATR and carries little information. IEX volume is ~2.2x normal pace 40 minutes in — elevated but not capitulation. Sector read-through is broad and confirmed (FCEL, VRT, BW, OKLO all down), so this is beta, not an idiosyncratic BE event.
+- Horizon: **SHORT_TERM**, No durable thesis change today — a target cut and an unconfirmed media allegation inside a market-wide risk-off session; the structural AI-power story is intact but unpriceable until credit stress resolves.
+- Opportunity cost: Nothing to displace: 0 open positions, $100,000 cash, so the 6-position and 20%-per-position caps are not binding. The real cost is one of three weekly new-trade slots. It cannot clear the setup gate regardless: price is far below its 200-SMA, which fails the long-bias filter outright, and with ATR14 at 14.6% a stop outside noise sits ~15-20% away, demanding a 30-40% target for 2:1 R:R — not credible into a 97% December rate-hike probability. Higher-ranked CRWV is the cleaner short-side expression of the same theme; neither is actionable long.
+
+### Deep dive: CRWV $38.66 -9.26%
+- Catalyst: CRWV extended Tuesday's ~11.9% slide and broke below its prior $39.28 52-week low. The driver is credit, not operations: the five-year CDS spread hit a record ~1,314bp, which S&P Global Market Intelligence data maps to roughly a 68% implied chance of default within five years, and all four outstanding note issues printed record lows, with the 9% 2031 notes near 76 cents. HPE's financing arm has reportedly stopped lending to neocloud operators and high-risk AI server buyers, and management has guided Q4 interest expense alone to $1.05-1.15B. SpaceX's compute-leasing push adds competitive pressure. Monday's rally on Nvidia reinstating Jensen Huang as CEO has fully reversed.
+- Why: The mechanism is funding cost, not demand. A neocloud is a levered spread business: it borrows to buy GPUs and rents them out. When its own cost of debt gaps to distressed levels, the spread it earns compresses toward zero and the equity becomes an option on refinancing. The CDS print is the market pricing that option down, and HPE's vendor-financing withdrawal removes a channel the sector relied on.
+- Impact: Sustainable direction, unsustainable pace. Volume is the second heaviest on the list at ~2.9x normal IEX pace, and the move is corroborated across the credit stack rather than equity-only, which argues against mean reversion. Clear sector read-through: NBIS and IREN fell in step and all three neoclouds are down more than 30% in a month. ATR14 is 16.5% of price, so the gap is roughly half an ATR.
+- Horizon: **LONG_TERM**, Structural — a funding-regime change for the whole debt-funded AI buildout, not a headline; but it is structurally BEARISH, and the rulebook is long-only, so the correct expression is avoidance, not a swing entry.
+- Opportunity cost: Displaces nothing (0 positions, 100% cash); cost is one weekly trade slot and it is not worth spending. Long is unavailable: price is below the 200-SMA, and buying a name whose CDS implies ~68% five-year default risk is a thesis against the credit market with no catalyst to force a re-rate. 2:1 R:R is arithmetically reachable on a bounce but the stop would have to sit under a 52-week low that is being made in real time, which is not a stop, it is a hope. Of the whole list this is the single clearest do-not-touch.
+
+### Deep dive: BW $3.475 -9.03%
+- Catalyst: No company-specific news dated 11/25 surfaced. BW is carrying over damage from a -15.51% session on 11/20 that closed at $3.54, itself part of a derating that began with an equity offering priced at a discount and a Q3 that grew revenue ~109% y/y but missed EPS by a cent, drawing target cuts on 11/10 (Northland $15, Craig-Hallum $10, Needham $15). Earlier October coverage ties weakness to securities class-action litigation and investor unease about dilution and execution risk on large data-center power projects. Today it is simply moving with the power/AI-infrastructure complex.
+- Why: Mechanically this is beta plus float. A sub-$4 stock with a pending dilution overhang and litigation has no marginal buyer in a risk-off tape, so modest sell pressure moves price a long way. There is no new information in today's 9% — it is the absence of bids, not the arrival of news.
+- Impact: Most likely of the five to mean-revert, and the volume data is the reason: IEX volume is running at only ~0.9x normal pace, the lightest on the list, so this 9% gap is thin-tape drift rather than distribution. Thin moves retrace when the tape steadies. Offsetting that, it is 20d -16.2%, near the low end of a $3.065-$22.030 52-week range, and the dilution overhang is real. Sector read-through is shared with BE and OKLO.
+- Horizon: **SHORT_TERM**, Purely headline-and-beta driven with no catalyst of its own today; a low-volume gap in a broken sub-$4 name is the definition of a fade-within-days move.
+- Opportunity cost: No holding to displace. Would consume one of three weekly slots on the lowest-quality name in the top five, and would be displaced by CRWV or BE as the better-informed expression of the identical sector thesis. R:R fails in practice: ATR14 is 14.9% of price, so a non-noise stop sits near the $3.065 52-week low, and the required 2:1 target implies a move back near $4.50-5.00 with an unpriced dilution overhang in the way. Sub-$4 price also makes the 10% trailing-stop rule behave badly on tick granularity.
+
+### Deep dive: BKSY $14.96 -8.84%
+- Catalyst: No 11/25 company announcement was found; the move is tape-driven. The recent record is a sharp slide of -5.71% (11/18), -9.01% (11/19) and -12.88% (11/20, closing $16.37), a bounce to $17.60 on 11/23, and now another leg down. Structurally the news has been mixed-to-good: Q3 beat with EPS $0.10 against a consensus $0.23 loss on revenue of $42.84M, a seven-figure contract with a new international MoD on 11/10, and Mizuho initiating Outperform with a $37 target on 11/24. Against that, shares crossed below the 50-DMA on 11/20, Jefferies cut to a $27 target with a Hold on 11/10, and insiders sold into the decline (CAO ~$101,520 at an average $16.92 on 11/20; Christiana Lin 6,000 shares reported 11/25).
+- Why: The mechanism is multiple compression on a profitless-to-marginal space name, not a change in business trajectory. With December rate-hike odds near 97%, long-duration equities re-price on the discount rate alone, and BKSY has the thinnest liquidity in the top five, so index-level selling translates into an outsized percentage move. Insider selling into the slide removes the one offsetting signal the rulebook would credit.
+- Impact: Reads as a one-day spike inside a real downtrend, and the tell is liquidity, not news: avg20 IEX volume is only ~47k, by far the thinnest on the list, so the -8.84% is small absolute dollar flow. Today's ~1.9x normal pace is the mildest relative volume of the five. Sector read-through is confirmed and broad — LUNR -8.29%, RDW -6.95%, RKLB -6.18%, PL -7.33%, SATL -7.80% all moved together, so this is the space complex de-rating, not a BKSY event.
+- Horizon: **SHORT_TERM**, Headline-free, liquidity-driven move against an intact set of fundamentals; expect it to trade with the space complex over days rather than resolve on anything company-specific.
+- Opportunity cost: Nothing held to displace. It is the only top-5 name whose own fundamentals argue the other way (Q3 beat, MoD contract, Mizuho $37 initiation), which makes it the most tempting and therefore the one to be most disciplined about: price is well below the 200-SMA, so the long-bias filter blocks it, and the Confluence rule cannot be met because the one indicator that could align is contradicted by insider selling. Within today's list it would be displaced by nothing — the higher-ranked names are worse — but across the week it competes with any late-cycle Energy/Materials/Financials setup, which is where the rotation table actually points. 2:1 R:R is the closest to achievable here (ATR14 11.5%, the tightest of the five) but still needs a ~$12.50 stop and a ~$20 target, i.e. a full retrace to the pre-slide level.
+
+### Deep dive: NBIS $79.72 -8.70%
+- Catalyst: NBIS fell from Tuesday's $87.31 close in the third consecutive session of neocloud selling. The proximate trigger remains HPE's earnings-call statement that HPE Financial Services has not extended financing to neocloud providers or high-risk customers, read as a major equipment financier withdrawing from riskier AI builders. Company-specific pressure compounds it: Nebius expects a portion of revenue only in early 2027 and has guided to the bottom of its full-year range, and Citigroup cut its target to $215 from $265 while keeping a Buy. Monday's ~20% rally on the Jensen Huang reinstatement has fully unwound.
+- Why: Same funding-channel mechanism as CRWV, one rung less levered. The market is re-pricing every debt- or vendor-financed GPU buildout at a higher cost of capital simultaneously, and the early-2027 revenue slip means Nebius must fund a longer gap before cash arrives — exactly the duration that a 97%-probability December rate hike punishes most.
+- Impact: The most convincing of the five on volume: ~6.3x normal IEX pace, the heaviest relative turnover on the list, which signals real distribution rather than a gap-and-drift. Direction looks sustainable, magnitude does not — ATR14 is 21.5% of price, the widest here, so an 8.7% gap is well inside one ATR and intraday reversals of this size are routine. Strong confirmed sector read-through: CRWV and IREN down in step, all three neoclouds -30%+ in a month, and NBIS itself is 20d -52.2%, the worst drawdown on the list.
+- Horizon: **LONG_TERM**, Structural like CRWV — a financing-regime reset plus a guidance/timing reset, not a headline — but again structurally negative, so for a long-only book the actionable conclusion is to stay out rather than to swing it.
+- Opportunity cost: Displaces no holding; the binding cost is a weekly trade slot plus the correlation gate. NBIS, CRWV and ORCL are three expressions of one AI-credit trade, so taking any two would almost certainly trip the >0.75 correlation block against each other and concentrate the book in the exact theme that is breaking. Ranked below CRWV on thesis clarity but above it on tradeability, and it would be displaced by CRWV if a short were permitted, which it is not. Long R:R does not clear 2:1: with ATR14 at 21.5%, a sane stop is ~$62 and the matching target is ~$115, which is above where the stock traded before the guidance reset.
+
+### Tooling notes (this run)
+
+- `mcp__Apify__apify--rag-web-browser` **still does not exist** in this session (6th
+  consecutive run). The connector exposes only `apify--web-search` / `apify--web-fetch`.
+  `routines/gappers-cloud.md` STEP 2 names a tool that has never been available here.
+- **`apify--web-search` was hard-down this run**: 3 of 4 parallel calls returned
+  `UPSTREAM_SEARCH_ERROR` / `Google search backend returned status 502`; the 4th timed out
+  at the 60s MCP ceiling. This is a **new failure mode** (upstream 502), distinct from the
+  latency timeouts logged in today's pre-market entry. `apify--web-fetch` against
+  `benzinga.com/quote/BKSY` also timed out at 60s, so the routine's documented STEP 2
+  fallback was unavailable too.
+- **Catalyst research therefore ran on the native `WebSearch` tool** (Yahoo suppressed via
+  `blocked_domains` on every query, per CLAUDE.md's Perplexity-falls-back-to-WebSearch
+  precedent). All numerics — prices, gaps, volumes, ATR, RVOL, indices, account — came
+  from Alpaca wrappers, never from search.
+- **No Yahoo data in this entry.** Block applied as both the `-site:` suffix and
+  `blocked_domains`; no finance.yahoo.com URL surfaced in any result or was cited.
+- `alpaca.sh bars` still hardcodes `feed=iex`/`adjustment=raw` (known unfixed defect), so
+  volume/ATR figures are IEX-consolidated, not SIP. RVOL compares IEX-to-IEX, so the
+  *ratio* is valid even though absolute levels understate true volume.
+- Sell-side sourcing caveat: much of the per-ticker colour traces to MarketBeat/Tickeron-
+  style auto-generated pages that disagree on intraday prices. **Every price and gap in**
+  **the table above is Alpaca's, not theirs**; syndicated pages supplied narrative only.
+- **Pre-existing log defect spotted (not fixed, flagging for the operator):** there is a
+  block headed `## 2026-11-25 — Gappers (auto-scan 10:08 ET, cloud)` earlier in this file
+  whose contents are clearly **not** from 2026-11-25 — it lists PEPG +23.92%, CRWV $58.63
+  +20.29%, NBIS $154.08, BE $208.74, and references "Q3 lands Nov 12". It appears to be a
+  **mis-dated ~2026-11-11 entry**. It is a trap for any future run that greps this file by
+  date; worth correcting, but out of scope for a research-only routine.
+- **No orders placed — STEP 8 honoured.**
+
