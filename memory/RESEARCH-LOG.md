@@ -24279,3 +24279,271 @@ any of these nine.**
 
 - No orders placed — research-only routine (STEP 6).
 
+
+## 2026-11-25 — Pre-Market Research (Day 100, Wednesday, cloud run)
+
+Run time **06:03–06:20 ET**. Research tools: **Apify `apify--web-fetch`
+(primary) + `apify--web-search` (partial)**. `mcp__Apify__apify--rag-web-browser`
+**still does not exist in this session** (5th consecutive run) — the connector
+exposes only `apify--web-search` / `apify--web-fetch`; `routines/pre-market.md`
+names a tool that has never been available and should be corrected.
+`apify--web-search` remains **slow and timeout-prone**: ~47–54s server-side
+against a 60s MCP ceiling, so **4 of 6 search calls timed out** (oil ×2, S&P
+futures, today's data calendar) — including on serial retries, confirming latency
+not concurrency. **Pivoted to `apify--web-fetch` against named non-Yahoo sources**
+(Cboe, TradingEconomics), which succeeded on every call and returned better data
+than search would have. Numeric load (indices, sectors, 63-name technicals)
+carried by **Alpaca bars**; `alpaca.sh bars` still hardcodes **`feed=iex`/
+`adjustment=raw`** (known defect, unfixed), so dailies below are IEX-consolidated,
+not `sip`. `mcp__tradingview-data__*` **not registered in this cloud session** —
+technicals computed locally (Wilder ATR14 / RSI14, SMA200). **No Yahoo data in
+this entry** — block applied as the `-site:` suffix *plus* `blockedDomains` on
+every query; no finance.yahoo.com URL surfaced or was cited.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed, so 0 by construction) |
+| `balance_asof` | 2026-11-24 |
+| Deployed | **0%** vs the 75–85% rule — 100th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required env
+vars confirmed `set` before any wrapper call. Endpoint = `paper-api.alpaca.markets`
+(PAPER). No held tickers, so STEP 3's holdings-news query is **N/A**.
+
+### Market context
+
+**Risk-off is broadening out of tech into the index, and volatility is being
+repriced upward into a pre-holiday session.**
+
+**Futures (Wed 2026-11-25, pre-open)** — source: TradingEconomics, 11:05 UTC
+- **Dow futures -0.5% · S&P 500 futures -0.8% · Nasdaq 100 futures -1.4%**
+- Driver: AI-trade pressure plus **US set to announce raised tariffs on China,
+  the EU and 14 other economies** accused of excess industrial production.
+
+**Volatility — the headline number of this run**
+- **VIX spot 29.21, +10.81% (+2.85)**, open 28.16, prev close 26.36 — source:
+  **Cboe** (live, 11:04 UTC). 52-wk range 13.38–40.03.
+- VIX **29** is "elevated stress" territory and it is rising **pre-market**, not
+  after a cash-session shock. VIXY (Alpaca) **+23.1% since Nov 10**.
+
+**Tuesday Nov 24 closes**
+- **S&P 500 -0.5% · Nasdaq Composite -1.48% · Dow +0.85%** — a genuine
+  divergence, not a uniform selloff.
+- Carnage concentrated in AI/semis: **NVDA -5.86% ($155.38) · Micron -11% ·
+  AMD -8.9% · Intel -8.1% · HPE -16.4%** (revenue miss) · **Anthropic -6.5%,
+  now below its IPO price**.
+- Dow leadership was **defensive**: NKE +5.82%, AMGN +5.54%, MRK +4.62%,
+  LLY +3.15%.
+
+**After-hours warning shot**
+- **Ambarella (AMBA) -37%** on Q4 revenue guidance of **$70–75M vs $112M**
+  consensus. An AI-vision chipmaker guiding ~35% below consensus is a
+  demand-side datapoint, not a sentiment one.
+- Earnings already out (Nov 24 PM), all beats: **Dell EPS 9.45 · Workday 2.82 ·
+  Autodesk 3.20** — beats did not stop the tape.
+
+**Index damage vs trend (Alpaca dailies, 20-day Wilder)**
+| Index | Last | vs 200-SMA | 1-mo |
+|---|---|---|---|
+| SPY | 718.91 | **-1.9% (below)** | — |
+| QQQ | 638.12 | **-6.6% (below)** | — |
+| US Top 500 (CFD) | 7,098.56 | — | **-7.53%** |
+| US Tech 100 (CFD) | 25,577.52 | — | **-12.63%** |
+
+**SPY is below its own 200-SMA and QQQ is 6.6% below its.** Nasdaq-100 is down
+12.6% in a month — correction territory. The long-bias filter the rulebook
+applies to single names now fails on the benchmark itself.
+
+**Sector momentum (Alpaca, Nov 10 → Nov 24)**
+| ETF | Nov 24 | Nov 10→24 | vs 200-SMA |
+|---|---|---|---|
+| XLP (staples) | +1.64% | **+0.92%** | +8.0% |
+| XLU (utilities) | +0.24% | -0.73% | -2.1% |
+| XLE (energy) | +0.99% | -2.88% | +1.1% |
+| XLV (health) | **+2.93%** | -2.19% | +14.7% |
+| XLK (tech) | **-3.29%** | **-7.03%** | **-8.4%** |
+
+Defensive rotation is **confirmed and dated**, not inferred: XLV +2.93% and
+XLP +1.64% on a day the S&P fell 0.5% and XLK fell 3.29%. Algebris
+("Defensive stocks outperform technology stocks", 2026-11-25) reads it the same way.
+Per the rulebook's own sector table, CPI **3.70%** (Sep, up from 3.40%), Fed funds
+**4.00%**, unemployment **4.10%** is a **late-cycle** print — favouring Energy /
+Materials / Financials, with Healthcare / Staples / Utilities the mid-cycle hedge.
+
+**Oil — down hard despite a shooting war** (TradingEconomics, Nov 25)
+- **WTI $81.41 (-0.78%) · Brent $91.00 (-0.44%)**
+- **1-mo: WTI -20.0%, Brent -21.4%**; 1-yr: +38.8% / +45.5%
+- Falling *through* escalation: four tankers afire on naval mines in the Strait
+  of Hormuz, third US carrier in the Gulf, fresh Iran sanctions — and crude still
+  broke $82. **IEA forecasts a Q4 global surplus**; Persian Gulf exports back to
+  74% of pre-war levels; Libya's Sharara pipeline reopened; China/India at record
+  Russian-crude imports. **OPEC+ meets Nov 29** on 2027 policy.
+- Read: supply surplus is now dominating geopolitical risk premium. XLE at
+  RSI 36.0 and -4.6% over 5 days agrees. **Do not treat energy as the late-cycle
+  long here** — the cycle table says energy, the tape says the surplus wins.
+
+**Rates / today's releases**
+- US 10-yr yield at a **two-week low**; Bunds at a 3-month low; gilts bid on
+  tech-selloff safe-haven demand. Global duration rally = risk-off confirmation.
+- **PCE inflation is the pending US print**, flagged twice by TradingEconomics on
+  2026-11-25 ("Dollar Holds Decline Ahead of PCE Inflation Data"; "US PCE
+  Inflation to Remain Elevated"). **Exact release time not confirmed** — the TE
+  calendar table is JS-rendered and returned empty, and the 4 search attempts at
+  the day's schedule all timed out. Logged as a **gap**: treat PCE as live-today
+  risk, do not trade ahead of it on the assumption it has passed.
+- **Pre-Thanksgiving session**: holiday Thu Nov 26, half-day Fri Nov 27. Thin,
+  unreliable liquidity in the back half of today.
+
+### Trade ideas
+
+This run produced **no tradeable idea — and for the first time the reason is
+measured rather than asserted.** I scanned the **full 60-ticker watchlist plus
+defensive/large-cap and sector-ETF names (63 total)** against the rulebook's own
+gates. The result is a clean structural finding, below.
+
+**#1 — XLV (Health Care Select SPDR) — BLOCKED on R:R**
+- **Catalyst (documented, sector-level):** defensive rotation dated Nov 24 —
+  XLV +2.93% on a -0.5% S&P / -3.29% XLK day; Dow +0.85% led by AMGN +5.54%,
+  MRK +4.62%, LLY +3.15%; corroborated by Algebris Nov 25.
+- Technicals: px **$184.76** (size.mjs quote $188.90), **200-SMA $161.13
+  (+14.7% above)**, **RSI14 55.5** (neutral, room both ways), ATR14 $3.62
+  (**2.0%** of px), 20d avg vol 1.22M. Correlation gate: **PASS** (0 open
+  positions).
+- Sizing (`size.mjs XLV`): 105 shares, 20%-of-equity cap applied.
+- Plan if it were takeable: entry $184–186, 10% trailing GTC stop ≈ $166,
+  target +20% ≈ $222.
+- **Why blocked:** at the mandated 10% stop, the 2:1 minimum puts the target at
+  **+20% = 10.0 ATR away**. A sector ETF with a 2.0% ATR does not travel 10 ATR
+  on a swing horizon. The R:R gate fails on arithmetic, not on judgement.
+
+**#2 — ABBV — BLOCKED on R:R *and* catalyst**
+- Technicals: px **$300.34**, 200-SMA $243.15 (**+23.5%**), RSI14 **64.1**
+  (approaching but not over the 70 no-new-long line), ATR14 2.3%, 5d **+2.6%**.
+  Strongest trend/momentum combination above the 200-SMA in the universe.
+- **Catalyst: none confirmable.** The AMGN/ABBV-specific search returned stale
+  pages (April and July 2026 prices of $346/$370/$435 against today's $473.68 for
+  AMGN) — unusable. Sector rotation is documented; a *company* catalyst is not.
+  The **Confluence rule** requires ≥1 documented catalyst, so this fails
+  independently of R:R.
+- R:R: +20% target = **8.7 ATR**. Same block as #1.
+
+**#3 — STM / QCOM — the only names where 2:1 is reachable, BLOCKED on 200-SMA**
+- **STM** px $39.70, ATR **7.2%** → +20% target is **2.8 ATR** — comfortably
+  reachable. 200-SMA $51.41: price **-22.8% below**. Long filter blocks.
+- **QCOM** px $164.95, ATR **5.7%** → target **3.5 ATR**. 200-SMA $170.82:
+  **-3.4% below** — the *closest* any viable-R:R name is to reclaiming trend.
+- **These are the watch candidates.** QCOM needs only a **+3.6% reclaim of
+  $170.82** to clear the long filter while keeping an ATR that makes 2:1 real.
+  That is the single most actionable line in this entry.
+
+### The structural finding (quantified — escalate to operator)
+
+The 10%-stop / 2:1-R:R conflict flagged since **2026-07-27** has been logged
+qualitatively for ~100 sessions. This run measured it. The two mandated rules
+together define a **viable ATR band**:
+
+- **Lower bound — ATR% ≥ ~5%.** With a 10% stop, 2:1 forces a **+20%** target.
+  Target distance in ATRs = `20 / ATR%`. Below ~5% ATR the target sits **>4 ATR**
+  away, i.e. beyond a swing horizon.
+- **Upper bound — ATR% < 10%.** Above that, the mandated 10% trailing stop sits
+  **inside one ATR** and gets taken out by noise (exactly the PEPG rejection).
+
+**Scan of all 63 names, 2026-11-25:**
+
+| Bucket | Count | Names |
+|---|---|---|
+| Above 200-SMA (long filter PASS) | **23** | V, MA, MSFT, LMT, RTX, SYNA, PEPG, ZIM, IRDM, AAPL, LLY, MRK, AMGN, JNJ, ABBV, COST, WMT, KO, PG, VZ, XLV, XLP, XLE |
+| ATR% in viable 5–10% band | **11** | ORCL 7.6, AMKR 9.3, KLIC 8.4, NIO 5.7, GFS 7.2, QCOM 5.7, STM 7.2, KTOS 7.7, AVAV 8.1, PL 9.5, BLSH 9.9 |
+| **In BOTH** | **0** | **— empty —** |
+
+**The two sets are perfectly disjoint.** All 11 names with a tradeable ATR are
+below their 200-SMA. Of the 23 above their 200-SMA, 22 have ATR **< 3.5%**
+(target 6–18 ATR away); the 23rd, **PEPG at 11.6% ATR**, is the only name that
+clears the long filter *with* a high ATR — and it is disqualified from the other
+side, because a 10% stop sits inside one ATR. The rule pair is a pincer.
+
+**Breadth context:** 23/63 (36.5%) above 200-SMA, and **SPY itself is below its
+own 200-SMA**. In a regime where the high-ATR names are all in deep downtrends
+(AI/space/quantum unwind: CRWV -51%, NBIS -52%, OKLO -61%, ASTS -67%, RCAT -82%
+vs 200-SMA) and everything above trend is low-vol defensives, **this rule set
+cannot fire.** 100 trading days / 162+ sessions of zero entries is not patience
+winning — it is an unsatisfiable constraint set in this tape.
+
+**Proposed amendment — NOT APPLIED, operator approval required.** The rulebook is
+marked "Never violate" and I have changed nothing. Options, cheapest first:
+1. **Make the stop ATR-based rather than fixed** — e.g. trail at
+   `max(2.5 × ATR, 7%)`. Preserves noise protection at every volatility level and
+   lets the 2:1 target scale with the name. One-line change; unblocks the
+   defensive book immediately.
+2. **Relax 2:1 to 1.5:1 for sub-3% ATR names** — target +15% at a 10% stop
+   (7.5 ATR for XLV — still long, but survivable).
+3. **Accept a 200-SMA *reclaim* as the long filter** instead of "price above" —
+   would put QCOM in play on a +3.6% move.
+4. **Change nothing** and accept that the bot does not trade in this regime.
+   Legitimate, but it should be a decision, not a default.
+
+Also still open and unresolved: **equity is $100,000 against the documented
+~$10,000 baseline** (flagged 2026-07-27, 163rd+ session). Every `size.mjs` output
+above is computed off $100,000 and is **10× the intended risk** if $10,000 is the
+real mandate. This must be settled before any entry fires, or the first trade will
+be ten times the size the strategy intends.
+
+### Risk factors for today
+- **PCE inflation print pending today**, exact time unconfirmed (logged gap).
+  Do not enter ahead of it.
+- **Tariff announcement pending** — China, EU, +14 economies. Headline risk with
+  no tradeable direction.
+- **VIX 29.21 and +10.8% pre-market.** Rising vol into the open widens slippage
+  and makes any 10% stop more likely to be touched intraday.
+- **Futures -0.8% (S&P) / -1.4% (NDX)** — gap-down open likely; the "never enter
+  within 3% of a print >5% up" rule's mirror image applies: do not catch a knife.
+- **AMBA -37% after hours** on a 35%-below-consensus guide. If AI-demand guidance
+  is rolling over, every high-ATR name on the watchlist re-rates lower.
+- **Pre-holiday liquidity.** Closed Thu Nov 26, half-day Fri Nov 27. Thin books
+  this afternoon; stops fill worse than they model.
+- **Oil falling through a shooting war** (-20% MoM with Hormuz mined) says the Q4
+  surplus dominates. XLE RSI 36 — energy is not the late-cycle long today.
+- **Benchmark below trend.** SPY under its 200-SMA; QQQ -6.6% under. New longs
+  fight the index, not just the sector.
+
+### Decision: **HOLD — no orders, no dated plan queued**
+
+- **0 of 63 names clear the rulebook's gates.** Not "none looked good" — the
+  gate intersection is provably empty today (table above).
+- Even if a name qualified, today is the wrong day: PCE print + tariff
+  announcement + VIX 29 rising + gap-down futures + pre-holiday liquidity. Four
+  independent reasons to stand aside, on a session where I cannot even confirm
+  the release schedule.
+- **Weekly trade count: 0/3** (week of Nov 23). Capital preserved at $100,000,
+  all 3 weekly trades unspent.
+- **Watch item for the next run:** **QCOM $170.82** — a +3.6% reclaim of the
+  200-SMA makes it the first name in 100 sessions to clear the long filter while
+  holding an ATR (5.7%) that makes a 2:1 target genuinely reachable. Check it
+  first on Friday's half-day and Monday's pre-market.
+- **Escalated to operator via ClickUp**: the quantified pincer finding plus the
+  $100k/$10k sizing mismatch. Both need a human decision; neither is mine to make.
+
+**No orders placed** (routine is research-only). Notification sent (structural
+escalation, not a trade alert).
+
+**STEP 5 notification — channel defect found.** `scripts/clickup.sh` **failed**:
+HTTP 400 `{"err":"Invalid workspace ID","ECODE":"SHARD_034"}`, and
+`GET /api/v2/team` returns 401 `OAUTH_019`. Cause: the three ClickUp env vars are
+**placeholder strings, not credentials** (`CLICKUP_API_KEY` is 25 chars beginning
+`you…`; workspace/channel ids are 30/28-char literals). They are **non-empty**, so
+the wrapper's `-z` guard passes and the routine's "KEY not set in environment"
+stop-condition never triggers — the failure surfaces only at the API. **The
+routine's STEP-5 escalation path has been silently dead**, which matters because
+every prior run logged "notification sent" on a silent-unless-urgent rule that
+rarely fired. Escalation **delivered via `scripts/telegram.sh` instead**
+(Telegram is the primary channel per CLAUDE.md; `TELEGRAM_BOT_TOKEN` /
+`TELEGRAM_CHAT_ID` both valid — message_id 440 confirmed). **Operator action:**
+either populate the real ClickUp values or make `clickup.sh` fail loudly / fall
+back to Telegram automatically, and tighten the wrapper guard to reject
+placeholder-shaped values rather than only empty ones.
