@@ -24775,3 +24775,77 @@ below their 200-SMAs. **No orders placed — STEP 8 honoured.**
 - **Yahoo block applied** as the `-site:` suffix plus `blockedDomains` on every query; no
   finance.yahoo.com URL surfaced or was cited.
 - **No orders placed — STEP 8 honoured.**
+
+## 2026-11-25 — Gappers (auto-scan 09:12 ET, cloud)
+
+**Regime: RISK-OFF.** Day 2 of a broad AI-infrastructure unwind on buildout-cost and
+credit fears — record 5y CDS at ORCL/CRWV/GOOGL/SpaceX, HPE's component-shortage warning,
+and HPE's CEO saying its financing arm will not lend to neoclouds. Post-midterm AI-regulation
+worry is an added overhang. **All 14 qualifying gappers were gap-DOWNS. Zero gap-ups in the
+~60-ticker watchlist.** Monday's (11/23) Nvidia-CEO-reinstatement rally has been fully given back.
+
+Account state at scan: **equity $100,000, cash $100,000, 0 open positions, 0% deployed**
+(strategy target is 75–85%). All 3 weekly trade slots free.
+
+### Gappers (auto-scan 09:12 ET, cloud)
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 38.95 | -8.58 | 61.6M | Credit unwind day 2 — 5y CDS record ~1,314bp, 2031 bonds ~18% yield; HPE CEO says its financing arm won't lend to neoclouds |
+| 2 | NBIS | 80.20 | -8.14 | 28.7M | AI-neocloud funding fears; -11.5% on 11/24 after HPE margin warning, extends the 11/12 guide-to-low-end |
+| 3 | AMPX | 5.31 | -7.17 | 5.4M | No fresh news; post-Q3 derating (−10% postmarket 11/10 on bottom-line miss) plus high-beta risk-off |
+| 4 | UMAC | 8.24 | -7.00 | 2.6M | WSJ 11/24: Pentagon in talks with GM to ramp drone production — competitive threat to component suppliers |
+| 5 | BE | 145.50 | -6.98 | 13.7M | −9% on 11/24 on HPE's prolonged component-shortage warning; MS calls it a buying op (OW, $335 PT) |
+| 6 | ONDS | 3.63 | -6.68 | 45.7M | Drone selloff on the WSJ/GM report + post-Q3 margin, loss and dilution concerns despite $835M backlog |
+| 7 | ORCL | 102.68 | -6.23 | 21.1M | Debt-funded AI buildout as market stress test — 5y CDS +7% to ~356bp, >$117B LT debt, now ~53% off peak |
+| 8 | AMKR | 29.83 | -6.22 | 2.8M | −8.6% on 11/24 to 52-wk-low area on Q3 miss ($0.76/$1.99B vs $0.78/$2.04B) and flat Q4 guide |
+| 9 | BW | 3.595 | -5.89 | 3.2M | Post-Q3 derating — rev +109% y/y but EPS missed by 1c; 11/10 target cuts (Northland $15, Craig-Hallum $10, Needham $15) |
+| 10 | RGTI | 7.16 | -5.67 | 15.3M | Quantum complex slides with IONQ/QBTS — Q3 rev −27.5% y/y to $1.41M vs ~$3.5M est; CEO concedes no ROI vs classical yet |
+
+Deep dive capped at the top 5 by |gap%| (stated per routine spec). **Ranks 6–10 received
+quick-scan catalysts only** — not silently dropped. Also qualifying but outside the top 10:
+QBTS $6.37 (−5.49), KLIC $54.50 (−5.37), RDW $5.60 (−5.08), PL $10.11 (−5.03). AGMH filtered
+out on the $3.00 price floor ($0.359).
+
+#### Deep dive: CRWV $38.95 -8.58%
+- Catalyst: CRWV fell 11.8% on 11/24 and gapped down again pre-market 11/25, giving back all of Monday's +22.3% squeeze. No earnings release or 8-K; the driver is credit. The five-year CDS spread blew out to a record ~1,314bp and the 2031 bonds fell more than 1.6c on the dollar to yield nearly 18%. HPE CEO Antonio Neri's comment that HPE's financing arm deliberately will not lend to neoclouds hardened the funding narrative. Total debt including leases was $66.2B at end-Sept 2026.
+- Why: Cost-of-capital, not demand. A leveraged neocloud whose model depends on continuous debt issuance reprices violently when its own credit spreads blow out; equity is the residual claim, so an 18% bond yield mechanically compresses equity value and forces levered/momentum holders out.
+- Impact: Sustainable trend, not a one-day spike. 61.6M shares on the prior session is well above normal and this is day 2 of the unwind, with read-through confirmed across NBIS, IREN, ORCL and record CDS at ORCL/GOOGL/SpaceX. A +22% rally failing completely in one session is distribution, not accumulation.
+- Horizon: SHORT_TERM — falling-knife downtrend, price far below the 200-SMA, so the long-bias filter blocks it outright; any bounce is a headline fade.
+- Opportunity cost: Displaces nothing (0 positions, 3 slots free), but fails the Entry Checklist: catalyst is bearish, sector momentum is down, price < 200-SMA kills Confluence. A 7–10% stop would sit below an undefined low while spreads are still widening, so no sane stop produces 2:1 R:R against no identifiable target. Pass — short/avoid name only, and the strategy is long-only.
+
+#### Deep dive: NBIS $80.20 -8.14%
+- Catalyst: Nebius guided 2026 revenue to the low end on the 11/12 Q3 report, blaming third-party data-center capacity slipping into 1H27, while raising 2026 capex toward ~$27B. At least seven brokers have cut targets since. It fell ~16% on one session, bounced ~22% on 11/23 on the Jensen Huang reinstatement headline, then gave it all back (−11.5%) on 11/24 as HPE's lower margin outlook cooled the AI complex. 2027 plans reportedly call for $40–45B capex against $12–13B revenue, funded largely by customer prepayments and asset-backed loans.
+- Why: A capex-to-revenue gap of roughly 3.5x funded by prepayments and asset-backed debt is only viable while credit is cheap and available. The same credit repricing hitting CRWV re-rates NBIS on identical logic, and the guidance cut removed the growth story that justified the multiple.
+- Impact: Sustainable downtrend. 28.7M shares is heavy, and a +22% one-day rally fully reversed within a session says sellers are using strength to exit. Read-through is sector-wide and symmetric with CRWV/IREN — these names now trade as one credit basket, which is also a correlation-gate problem.
+- Horizon: SHORT_TERM — headline/credit driven; the structural news (guidance cut, capex blowout) is negative, so there is nothing to carry.
+- Opportunity cost: Nothing to displace, but every top-5 name is a gap-DOWN in the same AI-infra/credit theme, so holding any two would trip the >0.75 correlation gate. R:R fails: no defined support, and 2:1 would require calling the exact bottom of an active credit unwind. Research only.
+
+#### Deep dive: AMPX $5.31 -7.17%
+- Catalyst: Amprius posted record Q3 revenue on 11/10 but missed on the bottom line and sold off ~10% after hours. Four brokers cut targets (Roth $19 from $22, B. Riley $16 from $22, Clear Street $26 from $30, Craig-Hallum trimmed) while keeping Buy. 2026 target is ~$140–145M revenue at >=28% gross margin. Older overhangs remain: a short-seller report alleging misconduct and a Block & Leviton securities-fraud investigation announced in May. **No dated 11/24–11/25 catalyst surfaced** — at $5.31 it is near the bottom of its 52-week range and below the 200-SMA.
+- Why: Beta plus a broken story. A pre-profit battery name with a legal overhang and a recent earnings miss has no bid when high-beta growth is being sold; the late-Sept $75M DoW grant pop has fully round-tripped.
+- Impact: Reads as part of the broad spike rather than stock-specific. 5.4M shares is the thinnest liquidity in the top 5 — wider slippage and a higher chance of a sharp mean-reverting bounce, but with no catalyst to drive it. Read-through is to the small-cap battery/defense complex generally, not a specific peer.
+- Horizon: SHORT_TERM — no structural catalyst at all, just beta drift and a post-earnings derating.
+- Opportunity cost: Weakest candidate on today's list; would displace capacity better spent on a real setup. The 20% cap is ~$20k into a $5 stock with an unresolved fraud investigation. 2:1 is theoretically reachable off the 52-week low against $16–19 targets, but only if the legal overhang clears and the tape turns — not a 7–10% stop trade today. Pass.
+
+#### Deep dive: UMAC $8.24 -7.00%
+- Catalyst: UMAC is down ~47% in a month. The 11/24 trigger was a WSJ report that the Pentagon is in talks with GM (and reportedly Ford) to scale drone manufacturing — directly threatening to UMAC, which sells motors and components automakers could in-source. This lands on top of a Q3 report (11/5) where revenue rose 551% y/y to $13.9M and beat, but management **withdrew full-year revenue guidance**, citing slower defense contract awards and the Gauntlet II evaluation outcome, with gross margin slipping to 35.4% from 39.4%. Two insiders sold on 11/20 under 10b5-1 plans. Oppenheimer initiated at $30 on 11/19 and the pop faded within days.
+- Why: Competitive displacement plus a withdrawn guide. Pulled guidance removes the forward anchor analysts were paying for, and a credible report that primes could go to GM/Ford attacks the core thesis that UMAC owns the US drone component supply chain. Insider selling into weakness and a faded initiation confirm nobody is defending the price.
+- Impact: Mixed. 2.6M shares is the lightest volume in the top 5, so the gap is easier to fade on a headline denial — but the damage is structural, and a guidance withdrawal does not expire. Sector read-through is already moving: RCAT −9%, ONDS −4% on the same story, and ONDS is rank 6 on today's own list.
+- Horizon: SHORT_TERM — the Pentagon/GM story could be walked back, and the stock is 47% off its highs well below the 200-SMA; no long thesis survives a withdrawn guide.
+- Opportunity cost: Per the sector rule, the drone complex is the one group here with two separate failed catalysts in a week (Oppenheimer $30 init faded, Q3 beat sold) — that argues for avoiding the sector, not entering it. R:R is the weakest of the five: a 7–10% stop at $8.24 sits inside daily noise for a name moving 7–10% a day, so the stop gets taken out before any 2:1 target. Pass.
+
+#### Deep dive: BE $145.50 -6.98%
+- Catalyst: BE rose 18.1% on Monday 11/23 to close $168.15 on the Nvidia CEO reinstatement, then fell ~8–9% on 11/24 and gapped down again to $145.50 pre-market. The driver is HPE's warning of prolonged component shortages — HPE management said supply, not demand, now determines how fast backlog converts to revenue — which Morgan Stanley flagged as a cost risk for data-center power suppliers. Separately, Truist initiated BE at Hold on 11/22. Fundamentals are the strongest of the top 5: 2026 guidance has been raised three times to $4.4–4.6B, Q3 revenue +138% y/y, and Morgan Stanley stayed Overweight with a $335 target.
+- Why: Input-cost and timing risk, not lost demand. Component shortages push out revenue recognition and squeeze margins on backlog that is already sold, so the market is discounting the *pace* of the AI-power buildout rather than its existence. The Truist Hold initiation removed a marginal buyer at the same time.
+- Impact: The one name where the move looks more like an overshoot than a thesis break — 13.7M shares is elevated but the catalyst is third-party (HPE) while the company's own guidance is going up. Read-through is the whole AI-power group (FCEL −10%, PLUG −5%), so this is a sector de-rating, and it is only day 2–3 of a reversal from a +18% spike, meaning it can keep going.
+- Horizon: **LONG_TERM** — the catalyst is structural (AI data-center power demand, thrice-raised guidance) and fits the Early-cycle Technology/Industrials row of the sector-rotation table; worth a multi-day swing IF a later /trade check confirms Confluence and price reclaims the 200-SMA.
+- Opportunity cost: Best-quality name on the list and the only LONG_TERM read, so it is the one slot worth reserving — it would displace CRWV/NBIS, same AI-infra theme but with credit risk instead of raised guidance. At $145 the 20% cap (~$20k) permits ~137 shares, and a 10% stop near $131 against the $168 prior close is roughly 1.5:1 — **under the 2:1 minimum, so not actionable today.** It only clears 2:1 entered nearer a flushed low with a defined swing stop. Watch, do not chase the gap.
+
+### Notes / data quality
+- **No gap-ups anywhere in the watchlist** — in a long-only strategy with a 200-SMA filter, today's list contains zero valid entries. Correct action is to stay in cash, not to force a trade.
+- **Account is 0% deployed vs the 75–85% target.** Not a new condition created by this scan, but it is now coinciding with a risk-off tape, so staying flat is the aligned choice rather than a drift to correct.
+- `mcp__Apify__apify--rag-web-browser` is **not present** in this session; the Apify connector exposes `apify--web-search` / `apify--web-fetch` instead. Serial `apify--web-search` works (~53s) but 3 of 5 parallel calls hit the 60s MCP timeout and 1 returned Bad Gateway, so catalyst research used the native search fallback. Routine spec should be updated to the real tool name and to serial calls.
+- `volume` from `gappers-alpaca.sh` is the **prior session's** full-day volume, not pre-market volume, so the routine's `premarket_volume >= 50000` filter remains inoperative (unchanged from 07-28 entry).
+- Source-price discrepancies noted for ONDS (web sources $5.15–5.57 vs Alpaca snapshot $3.63) and RGTI (web $8.45–10.57 vs $7.16) — Alpaca snapshot treated as authoritative; the web figures are stale by a week or more.
+- **Yahoo block applied** as the `-site:` suffix plus `blockedDomains`/`blocked_domains` on every query; no finance.yahoo.com URL surfaced or was cited.
+- **No orders placed — STEP 8 honoured.**
