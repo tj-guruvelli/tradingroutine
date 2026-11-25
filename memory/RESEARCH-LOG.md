@@ -24547,3 +24547,118 @@ rarely fired. Escalation **delivered via `scripts/telegram.sh` instead**
 either populate the real ClickUp values or make `clickup.sh` fail loudly / fall
 back to Telegram automatically, and tighten the wrapper guard to reject
 placeholder-shaped values rather than only empty ones.
+
+### Gappers (auto-scan 07:09 ET, cloud)
+
+Run 1 of 4 today (08:00/09:00/10:00/11:00 ET cron + jitter). Universe =
+`memory/WATCHLIST.md` via `scripts/gappers-alpaca.sh watchlist`,
+`GAP_THRESHOLD=5.0`. Feed = `delayed_sip`, so prices are ~06:54 ET prints —
+**market-open and `/trade` must re-quote before acting.** All 7 env vars
+confirmed `set` before any wrapper call.
+
+**Deep-dive cap = 5. Only 4 names cleared the filters, so all 4 got the full
+deep dive and there is NO rank 6-10 quick-scan-only tier today — nothing was
+silently dropped.** One name was filtered out and is named here for the record:
+**WLDS** gapped **+5.45%** but was **excluded on the price floor** ($1.16 <
+$3.00; its 23,800 prior-session volume is also under the 50k bar).
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 39.75 | **-6.70** | 2.09M (1.24x) | No company news; AI-infra factor unwind — NDX futures -1.4%, VIX 29.21, AMBA -37% on a ~35%-below-consensus guide |
+| 2 | NBIS | 81.61 | **-6.53** | 745k (0.92x) | No news since Nov 12 Q3; PT cuts Truist→$245 (11/21), Baird→$200 (11/23) |
+| 3 | BE | 146.55 | **-6.30** | 506k (0.90x) | No company news since Nov 20 ($10k donation); unwinding the +21-27% Nov 23 Huang-return spike |
+| 4 | AMKR | 30.17 | **-5.16** | 129k (0.68x) | No company news; semis read-through (MU -11%, AMD -8.9%, INTC -8.1%) + pending China/EU tariffs |
+
+Vol column = **prior completed session's** full-day volume and its ratio to the
+20-day average — **not** pre-market volume. Alpaca's snapshot endpoint has no
+pre-market-volume field. The one real pre-market figure obtained: **AMKR 34,916
+shares at 07:12 ET** (CNBC), against a 3.62M 10-day average.
+
+**Headline finding — this is one factor, not four stories.** All four gappers are
+gap-**downs** in the same AI-datacenter / semis / power complex, and all four
+share an identical shape: **Nov 11 peak → Nov 20 capitulation low → sharp Nov 23
+bounce on Nvidia reinstating Huang → full retrace over Nov 24-25.** None of the
+four has a company-specific catalyst. **CRWV (+1.2%) and AMKR (+0.8%) are
+printing essentially at their 52-week lows**; NBIS is +11.0% off its own.
+
+| Sym | ATR14% | RSI14 | vs 200-SMA | vs 52w low | 10% stop in ATR | +20% tgt in ATR |
+|---|---|---|---|---|---|---|
+| CRWV | 16.73 | 39.0 | **-54.6%** | +1.2% | **0.60** | 1.20 |
+| NBIS | 21.15 | 33.6 | **-54.6%** | +11.0% | **0.47** | 0.95 |
+| BE | 14.63 | 39.1 | **-34.6%** | +93.5% | **0.68** | 1.37 |
+| AMKR | 9.86 | 39.9 | **-46.2%** | +0.8% | 1.01 | 2.03 |
+
+**Verdict: NO TRADE — 4/4 fail the entry gate on two independent grounds.**
+(1) Every name is **34.6-54.6% below its 200-SMA**, so the long-bias filter
+fails outright. (2) For 3 of 4 the mandated **10% trailing stop sits inside one
+ATR** (0.47-0.68 ATR) and would be taken out by a single day's noise — the same
+upper-bound failure mode as the PEPG rejection. This is the **10%-stop / 2:1-R:R
+pincer quantified again** on live gappers, consistent with this morning's
+pre-market finding that the "above 200-SMA" and "ATR 5-10%" sets are perfectly
+disjoint across all 63 names. **AMKR is the sole near-miss** — its 9.86% ATR is
+the only one inside the viable band, and its stop/target geometry (1.01 / 2.03
+ATR) does clear 2:1 — but it fails the 200-SMA filter by 46.2%, with the
+200-SMA at $56.03 sitting 86% above spot.
+
+Context carried from the 06:03 ET pre-market run: **VIX 29.21 (+10.81%, Cboe)**,
+**NDX futures -1.4%**, SPY below its own 200-SMA and QQQ -6.6% below its,
+defensive rotation dated Nov 24 (XLV +2.93%, XLP +1.64% vs XLK -3.29%),
+**PCE print pending today with release time unconfirmed**, **tariff announcement
+pending** on China/EU/+14, and pre-Thanksgiving liquidity (holiday Thu Nov 26,
+half-day Fri Nov 27). Account unchanged: **equity $100,000, cash 100%, 0
+positions, 0 open orders, weekly trade count 0/3** (week of Nov 23).
+
+#### Deep dive: CRWV $39.75 -6.70%
+- **Catalyst:** No CRWV-specific news on Nov 24 or Nov 25. Last release is a Nov 23 conference-participation notice; last substantive one is Q3 results Nov 10. What is moving it is the AI-infrastructure complex repricing: NDX futures -1.4%, VIX 29.21 (+10.81%), Ambarella -37% after Tuesday's close on Q4 revenue guidance of $70-75M vs ~$112M consensus, and Nov 24's MU -11% / AMD -8.9% / INTC -8.1% / NVDA -5.86%. CRWV's own Q3 supplies the bear case: revenue tripled to $3.661B and operating income hit $207M, but net loss **widened** to $709M because net interest expense reached $846M, with Q4 interest guided $1.05-1.15B against $37-39B planned capex.
+- **Why:** A debt-funded, pre-profit buildout is a long-duration asset, and its equity reprices first when risk appetite and the AI demand narrative crack together. Interest expense now exceeds operating income ~4x, financed with ~$4.2B converts, a $2.6B facility and a new program for up to 35M Class A shares — so the market is marking financing risk, not the $132.5B backlog. AMBA's guide is a demand-side datapoint, not a sentiment one, which is why it transmitted straight through.
+- **Impact:** Continuation of a confirmed downtrend, not a spike that mean-reverts. Nov 24 volume 2.09M = **1.24x** the 20-day average — the only above-average print of the four, so CRWV is the name actually being distributed. $39.75 is +1.2% above the Nov 20 52-week low of $39.29 and -36% from the Nov 11 high of $62.02; the +28% Nov 23 bounce fully retraced in two sessions — a failed-bounce / lower-high rejection, not a base. Sector read-through total: NBIS, BE, AMKR all -5% to -6.5% on the same tape with no news of their own.
+- **Horizon:** SHORT_TERM — headline/factor-driven with no durable thesis here; the interest-expense overhang is a multi-quarter problem, not a days-to-weeks catalyst, and the rulebook's late-cycle read does not favour Technology.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0% deployed, 0/3 weekly. The gate fails on arithmetic: at ATR14 16.73% the 10% trailing stop sits **0.60 ATR** below spot, inside one day's range, and the +20% 2:1 target is just 1.20 ATR away. Price -54.6% vs 200-SMA fails the long filter independently. **Cannot clear 2:1 at any sane stop distance.** Research only — no order.
+
+#### Deep dive: NBIS $81.61 -6.53%
+- **Catalyst:** No Nebius release since the Nov 12 Q3 report (which itself closed -16.84%). Only fresh single-name news is two PT cuts — Truist to $245 (Nov 21), Baird to $200 (Nov 23) — both still far above spot, i.e. the sell-side chasing price down, confirmation rather than cause. Q3 frames the risk: revenue +571% y/y to $980.8M, adj EBITDA $465.8M, operating income positive at $50.4M — but non-current debt went **$4.103B → $14.003B**, quarterly capex reached **$7.300B**, and operating cash flow was a $273.0M **outflow**. The $3.5B Citi facility (Oct 22) is **364-day** paper at SOFR +2.75%, rising to 3.50%.
+- **Why:** Same mechanism as CRWV and it is a funding-structure story, not a demand story: short-dated floating-rate debt financing a long-dated buildout. With VIX 29 and the 10-year at a two-week low, the market reprices refinancing risk on 364-day paper and the equity absorbs it — which is why it falls despite >$40B of disclosed long-term contracts and 571% growth. High beta does the rest.
+- **Impact:** Mixed, and volume argues against panic. Nov 24 did 745k = **0.92x** the 20-day average, vs 1.54M on the Nov 20 low — drift on below-average participation, not liquidation, which is the more constructive reading for an eventual double bottom. But $81.61 sits barely above the Nov 20 low of $80.68 and is -49% from the Nov 11 high of $160.18, so the retest is live and unresolved. +11.0% above its 52-week low of $73.53 — slightly more cushion than CRWV or AMKR. Chart shape identical to the other three.
+- **Horizon:** SHORT_TERM — factor- and funding-driven with the Nov 20 low still being retested; nothing structural has changed since Nov 12, and the only two analyst actions in hand are target cuts.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly. **Worst of the four on stop arithmetic:** ATR14 21.15%, so the 10% stop sits **0.47 ATR** below spot and would be hit by roughly half a normal day's range, while the +20% target is only 0.95 ATR away. -54.6% vs 200-SMA fails the long filter independently. **No stop distance satisfies both the 10% rule and 2:1.** Research only — no order.
+
+#### Deep dive: BE $146.55 -6.30%
+- **Catalyst:** No negative company news at all. Last release is a Nov 20 $10k community donation, and the fundamental record is the strongest of the four: Q3 revenue $1,235.8M (**+138.1% y/y**), product revenue +179.4%, GAAP gross margin 33.8%, operating income $225.4M (vs $7.8M), net income $250.3M, diluted EPS $0.78; FY26 guidance raised to **$4.4-4.6B revenue / $3.10-3.40 non-GAAP EPS**; cash $2.487B; **joined the S&P 500**. Commercially: **900MW onsite-power agreement with NTT DATA** (its largest international project) plus Oracle's stated intent for **up to 2.8GW**. What actually happened is the Nov 23 Huang-return spike, worth +21% to +27% in a session, being given back over Nov 24-25. CNBC corroborates at -11.74 (-6.98%).
+- **Why:** A valuation/duration unwind, not an earnings problem. At $146.55 against $3.10-3.40 FY26 non-GAAP EPS the stock is **~43-47x forward**, and essentially all NTT DATA 900MW revenue ships **from 2027**. A multiple that high resting on 2027+ cash flows is the most rate- and sentiment-sensitive cohort in the market, so with QQQ -6.6% vs its 200-SMA, VIX 29 and PCE pending, the multiple compresses regardless of the last print. The Huang headline inflated it on no fundamental change; the same absence deflates it.
+- **Impact:** Continued mean-reversion of a headline spike rather than a fundamental break, and volume supports that: Nov 24 did 506k = **0.90x** the 20-day average, the same below-average drift signature as NBIS and well under the 1.12M on the Nov 20 low. $146.55 is +4.1% above the Nov 20 low of $140.73 and -33% from the Nov 11 high of $217.76, but still **+93.5% above its 52-week low** — of the four it has given back the least and has the most air beneath it. Read-through runs both ways: BE's own Nov 12 sector release bundled GEV/CEG/TLN/PWR, and **TLN** is the name that carried the dated $349-356 limit plan in the Nov 18-20 handoff.
+- **Horizon:** SHORT_TERM — the gap is the unwind of a two-day sentiment spike. The NTT/Oracle contracts are genuinely structural but **2027-dated**, too far out to support a multi-day swing entry into a falling tape ahead of PCE.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly; the three names ranked above it fail the same gate, so it crowds out nothing. It fails anyway: ATR14 14.63% puts the 10% trailing stop **0.68 ATR** below spot, inside one day's range, and price is -34.6% vs its 200-SMA — the shallowest breach of the four but still a clear fail. **Name it as the first candidate to revisit if the operator approves an ATR-based stop:** real fundamentals, mildest drawdown, largest 52-week-low cushion. Research only — no order.
+
+#### Deep dive: AMKR $30.17 -5.16%
+- **Catalyst:** Nothing company-specific. Newest release is a Nov 18 dividend increase of **$0.08352 → $0.08436** (under a tenth of a cent); only analyst action in the window is B. Riley trimming its target to $38 from $41 (Nov 9). The move is transmitted from the semis complex — Nov 24's MU -11%, AMD -8.9%, INTC -8.1%, NVDA -5.86%, then AMBA guiding Q4 revenue $70-75M vs ~$112M and falling 37% after the close. Layered on: the **pending US tariff announcement on China, the EU and 14 other economies**, which lands directly on AMKR given its Korea/Asia-heavy footprint. CNBC confirms the 52-week low of **$29.95 was set Nov 20** and today's $29.94-$30.17 print is right back on it. AMKR closed Nov 24 **-8.62%** at $31.81.
+- **Why:** AMKR is the highest-beta transmission line in the group at **beta 2.43** and the purest OSAT read on AI packaging demand, so any demand-side datapoint in accelerated computing hits it amplified. AMBA's guide and the Nov 24 memory/logic selloff speak to exactly the advanced-packaging volumes AMKR is building **$12B of Arizona capacity** against; tariffs compound it by threatening the cost base of its Asian footprint. The market is discounting the forward volume assumption, not the delivered quarter.
+- **Impact:** **Most likely of the four to mean-revert, because the gap is not volume-confirmed.** Nov 24 did 129k = **0.68x** the 20-day average, the lightest in the group, and pre-market volume is only ~**35k shares** against a 3.62M 10-day average. A -5% gap on 35k shares is a thin-book quote, not distribution. The dissonance worth flagging is valuation: **forward P/E 12.18**, trailing 12.82, Q3 net income $191M on $1.991B revenue, 18.3% gross margin, $2.4B cash vs $2.5B debt, and **$3B of NVIDIA prepayment agreements** across Arizona and South Korea — the cheapest fundamentals of the four sitting on the deepest drawdown at **-68.7% from the 52-week high**.
+- **Horizon:** SHORT_TERM for the gap — unconfirmed thin-book move, no company catalyst. But **carry AMKR forward as the one LONG_TERM watch candidate of the four**: the NVIDIA prepayment contracts and 12x forward earnings are structural, and it is the only one of the four whose ATR sits inside the rulebook's viable 5-10% band.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly. **The only one of the four where the geometry nearly works:** at ATR14 9.86% the 10% trailing stop sits **1.01 ATR** below spot, just outside one day's range, and the +20% 2:1 target is **2.03 ATR** away — reachable on a swing horizon. It still fails the long filter decisively at **-46.2% vs its 200-SMA**, which at $56.03 sits **86% above spot**, so a trend reclaim is not a near-term event. Taking it would spend one of three weekly slots on a confirmed downtrend, ahead of a PCE print whose release time this session could not confirm and a pending tariff announcement, into pre-Thanksgiving liquidity. Research only — no order.
+
+**Tooling notes.** `mcp__Apify__apify--rag-web-browser` **still does not exist in
+this session** (6th consecutive run) — the connector exposes only
+`apify--web-search` / `apify--web-fetch`. `routines/gappers-cloud.md` names a
+tool that has never been available and should be corrected, same as
+`routines/pre-market.md`. `apify--web-search` **timed out or returned upstream
+502 on 5 of 9 attempts**; pivoted to `apify--web-fetch` against named non-Yahoo
+sources (StockTitan, CNBC), which **succeeded on every call** and returned
+better data than search. The routine's documented Benzinga fallback
+(`benzinga.com/quote/<T>`) returned **HTTP 403** for both tickers tried —
+recommend replacing it with StockTitan/CNBC in the routine spec. **Yahoo block
+applied as the `-site:` suffix PLUS `blockedDomains` on every query; no
+finance.yahoo.com URL surfaced or was cited.** `alpaca.sh bars` still hardcodes
+`feed=iex`/`adjustment=raw` (known defect, unfixed), so the technicals above are
+IEX-consolidated, not `sip`. **No orders placed — STEP 8 honoured.**
+
+**Notification note (new defect found this run).** The full deep-dive message is
+~5,700 chars and Telegram's `sendMessage` hard-caps `text` at **4,096**, so the
+single-message send returned **HTTP 400** and `scripts/telegram.sh` then chained
+to ClickUp, which **also 400'd** (the placeholder-credentials defect already
+logged). Sent successfully as **3 parts** (message_id 441/442/443) after manual
+splitting. `scripts/telegram.sh` does **no length checking or chunking** —
+STEP 6 of `routines/gappers-cloud.md` mandates the full breakdown in the message
+body, so any run with 4+ deep dives will fail the same way. **Operator action:**
+add automatic 4,000-char chunking to `scripts/telegram.sh` (split on blank lines,
+suffix "part n/m"), and fix or hard-disable the ClickUp fallback so a Telegram
+failure does not silently chain into a second failure.
