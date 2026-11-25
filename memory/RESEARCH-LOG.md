@@ -24662,3 +24662,116 @@ body, so any run with 4+ deep dives will fail the same way. **Operator action:**
 add automatic 4,000-char chunking to `scripts/telegram.sh` (split on blank lines,
 suffix "part n/m"), and fix or hard-disable the ClickUp fallback so a Telegram
 failure does not silently chain into a second failure.
+
+### Gappers (auto-scan 08:10 ET, cloud)
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | CRWV | 39.71 | -6.79% | 61.5M (0.86x) | No company news since a Nov 23 conference notice; AI/neocloud complex repricing, 2nd straight session |
+| 2 | NBIS | 81.71 | -6.41% | 28.7M (0.89x) | No release since Nov 12 Q3; neocloud funding-risk cohort, only fresh items are PT cuts |
+| 3 | BE | 146.40 | -6.40% | 13.7M (0.77x) | No negative news; giving back the Nov 23 Huang-return spike as that catalyst inverts |
+| 4 | ONDS | 3.66 | -5.93% | 45.7M (0.97x) | No news since Nov 20; **new 52-week low**, 1.9% below the prior $3.73 floor |
+| 5 | AMKR | 29.94 | -5.88% | 2.8M (0.57x) | Nothing company-specific; highest-beta OSAT read on the semis selloff, **marginal new 52-week low** |
+| 6 | KLIC | 54.37 | -5.59% | 0.75M (0.85x) | Semi-cap equipment in the chip selloff; no news since the Nov 18 FQ4 beat that still closed -8.08% |
+| 7 | UMAC | 8.40 | -5.19% | 2.6M (0.77x) | No negative news (Nov 24 notice of a Dec 3 Investor Day); drone/defense small-cap complex |
+| 8 | ORCL | 103.89 | -5.12% | 21.1M (0.49x) | No news since Nov 18; only mega-cap on the board, AI-capex unwind, 56.2% off its high |
+
+**Scan params**: GAP_THRESHOLD=5.0, price>=$3.00, universe = WATCHLIST.md (63 names).
+**Excluded**: WLDS $1.18 +7.39% — fails the $3.00 price filter, and was the *only* up-gapper
+on the entire board. **Deep-dive cap = 5** (CRWV, NBIS, BE, ONDS, AMKR); ranks 6-8 got
+quick-scan only and were not silently dropped. KLIC crossed 5% between the 13:10 and
+13:12 UTC scan passes, so it is listed at its scan-time value.
+
+**Tape (TradingEconomics, 13:13 UTC).** VIX **30.87 (+4.51%)**, up 12.48% on the month and
+now through 30. US Tech 100 **25,496.44, -1.99% on the day and -12.90% on the month**;
+US Top 500 7,068.87, -7.92% on the month. S&P 500 futures -1.5%, Nasdaq 100 futures -2%
+— sharply lower for a **second** session. NVDA -5% pre-market on top of Tuesday's -6%, now
+on criticism of US-government influence over its governance **following Huang's return as
+CEO** — the same event that sparked Monday's bounce. AVGO/AMD/MU/INTC down up to 7%;
+GOOGL/AMZN/MSFT down up to 4% on an explicit unwind of speculative AI positions. Tariff
+increases on China, the EU and 14 other economies still pending; Fed hawkish with
+inflation 3.70% (Sep) and funds at 4.00%. 10-year at a two-week low, gold and silver at
+2025 lows, dollar and Swiss franc bid — a textbook risk-off configuration.
+
+**Breadth is the finding this run.** At a 2% threshold, **36 of 37** qualifying watchlist
+names are DOWN; the single up-gapper is a $1.18 stock. Mega-caps are now participating
+(GOOG -3.59%, MSFT -3.31%, QCOM -2.88%), and **ORCL is new to the >=5% board this run** —
+it was not a 5% gapper at 07:09 ET. A $341B-cap name gapping 5% on zero news is the
+clearest single marker that this has broadened out of small-cap AI into mega-cap.
+
+**The volume read cuts against bottom-fishing.** Every one of the eight gapped on
+*below*-average Nov 24 volume — ratios 0.49x to 0.97x. The complex is grinding to new lows
+**without capitulation volume**, which argues the de-rating is unfinished rather than
+exhausted. ONDS (0.97x) is the only near-full-participation print, and it is the one
+making a clean new low.
+
+**Account unchanged**: equity **$100,000, cash 100%, 0 positions, 0 open orders, weekly
+trade count 0/3** (week of Nov 23). Nothing to displace, so no gapper crowds out a holding.
+
+**All five deep-dive names fail the entry gate on stop arithmetic**, and for the same
+structural reason: the fixed 10% trailing stop is smaller than one day's range when
+ATR% exceeds ~10%. Stop distance in ATR units — AMKR 0.98, ONDS 0.77, BE 0.67, CRWV 0.59,
+NBIS 0.47. Only AMKR reaches ~1 ATR. All five also fail the long filter, sitting 30-54%
+below their 200-SMAs. **No orders placed — STEP 8 honoured.**
+
+#### Deep dive: CRWV $39.71 -6.79%
+- **Catalyst:** Still no company-specific release: the newest CRWV item is a Nov 23 conference-participation notice, and the last substantive one is Q3 results on Nov 10. What is driving it is a second consecutive session of AI-infrastructure de-rating. NVDA fell 5% pre-market on top of Tuesday's 6% slump, with criticism now aimed at US-government influence over the company's governance following Jensen Huang's return as CEO. Broadcom, AMD, Micron and Intel are down up to 7%, and TradingEconomics describes an active "unwind on speculative positions on AI". CRWV's own Q3 is the bear case: revenue tripled to $3.661B and operating income reached $207M, but net loss **widened** to $709M because net interest expense hit $846M, with Q4 interest guided to $1.05-1.15B against $37-39B of planned capex.
+- **Why:** A debt-funded, pre-profit buildout is a long-duration asset whose equity reprices first when risk appetite and the AI demand narrative crack together. Interest expense now runs roughly **4x operating income**, financed with ~$4.2B of converts, a $2.6B facility and a program for up to 35M Class A shares, so the market is marking financing risk rather than the $132.5B backlog. Critically, the Nov 23 Huang-return headline that sparked a +28% bounce has now **inverted into a governance negative** — the bounce's own catalyst is gone.
+- **Impact:** Continuation of a confirmed downtrend. $39.71 sits only **1.1% above** the Nov 20 52-week low of $39.28 and 69.2% below the 52-week high of $138.25; the +28% Nov 23 bounce has fully retraced. Volume dissonance: Nov 24 traded 61.5M against a 71.3M 20-day average — **0.86x, below average**. Across all eight qualifying gappers the ratio runs 0.49-0.97, so the whole complex is grinding to new lows **without capitulation volume**, which argues the de-rating is unfinished. Sector read-through is total: NBIS, BE, ONDS, AMKR, KLIC and ORCL all down 5-6.8% with no news of their own.
+- **Horizon:** SHORT_TERM — factor-driven with no durable thesis; the interest-expense overhang is a multi-quarter problem, not a days-to-weeks catalyst, and the rulebook's late-cycle read does not favour Technology.
+- **Opportunity cost:** Nothing to displace — 0 positions, 100% cash, 0/3 weekly. The gate fails on arithmetic: at ATR14 **16.92%** of price the mandatory 10% trailing stop sits **0.59 ATR** below spot, well inside a single day's range, and the +20% level needed for 2:1 is only 1.18 ATR away. Price **-51.3% vs its 200-SMA** fails the long filter independently. **Cannot clear 2:1 at any stop distance compatible with the 10% rule.** Research only — no order.
+
+#### Deep dive: NBIS $81.71 -6.41%
+- **Catalyst:** No company news since the Nov 12 Q3 report, which itself closed -16.84%. The only fresh single-name items remain price-target cuts — Truist to $245 on Nov 21, Baird to $200 on Nov 23 — both still far above spot, i.e. the sell-side chasing price down rather than leading it. Q3 frames the risk: revenue rose **571% y/y to $980.8M** with adjusted EBITDA of $465.8M and positive operating income of $50.4M, but non-current debt went **$4.103B → $14.003B**, quarterly capex reached **$7.300B**, and operating cash flow was a **$273.0M outflow**. The $3.5B Citi facility signed Oct 22 is **364-day** paper at SOFR +2.75% stepping to 3.50%.
+- **Why:** The same funding-structure mechanism as CRWV, not a demand story: short-dated floating-rate debt financing a long-dated buildout. With VIX at 30.87 and the 10-year at a two-week low, the market reprices refinancing risk on 364-day paper and the equity absorbs it — which is why NBIS falls despite >$40B of disclosed long-term contracts and 571% growth. High beta does the rest.
+- **Impact:** Reads as drift rather than liquidation, and volume supports that: Nov 24 did 28.7M against a 32.3M average — **0.89x**. At $81.71 it is **11.1% above** the Nov 20 low of $73.52 — the largest cushion of the four high-volatility names — but 70.9% below the Nov 11 high of $299.86. The Nov 20 low is the level that matters and has not been retested today. Chart shape is identical to the rest of the cohort, which is the point: nothing here is idiosyncratic.
+- **Horizon:** SHORT_TERM — factor- and funding-driven; nothing structural has changed since Nov 12 and the only two analyst actions in hand are target cuts.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly. **Worst of the whole board on stop arithmetic:** ATR14 is **21.23%** of price, so the 10% trailing stop sits just **0.47 ATR** below spot and would be taken out by roughly half a normal day's range, while the +20% target is only 0.94 ATR away. Price **-51.4% vs its 200-SMA**. **No stop distance satisfies both the 10% rule and the 2:1 minimum.** Research only — no order.
+
+#### Deep dive: BE $146.40 -6.40%
+- **Catalyst:** No negative company news whatsoever — the last release is a Nov 20 community donation, and the fundamental record is the strongest on the board: Q3 revenue $1,235.8M (**+138.1% y/y**), product revenue +179.4%, GAAP gross margin 33.8%, operating income $225.4M (vs $7.8M), net income $250.3M, diluted EPS $0.78; FY26 guidance raised to **$4.4-4.6B revenue / $3.10-3.40 non-GAAP EPS**; cash $2.487B; **S&P 500 inclusion**. Commercially: a **900MW onsite-power agreement with NTT DATA** (its largest international project) plus Oracle's stated intent for **up to 2.8GW**. What is actually happening is the Nov 23 Huang-return spike, worth +21% to +27% in a session, being handed back over Nov 24-25 **as that same headline turns into a governance criticism of NVDA**.
+- **Why:** A valuation/duration unwind, not an earnings problem. At $146.40 against $3.10-3.40 FY26 non-GAAP EPS the stock is **~43-47x forward**, and essentially all NTT DATA 900MW revenue ships **from 2027**. A multiple that high resting on 2027+ cash flows is the most rate- and sentiment-sensitive cohort in the market, so with the Nasdaq 100 -12.9% on the month, VIX above 30 and tariffs pending, the multiple compresses regardless of the last print. The Huang headline inflated it on no fundamental change; the reversal of that headline deflates it.
+- **Impact:** Continued mean-reversion of a sentiment spike rather than a fundamental break, and volume agrees: Nov 24 did 13.7M against a 17.9M average — **0.77x**, the second-lightest participation on the board. $146.40 is **+106.6% above** its 52-week low of $75.70 — by far the most air beneath it of any name here — and 55.5% below the high of $351.28. Of the whole cohort BE has given back the least relative to its base. Read-through runs both ways: BE's own Nov 12 sector release bundled GEV/CEG/TLN/PWR, and **TLN** is the name carrying the dated $349-356 limit plan from the Nov 18-20 handoff.
+- **Horizon:** SHORT_TERM — the gap is the unwind of a two-day sentiment spike whose catalyst has now inverted. The NTT/Oracle contracts are genuinely structural but **2027-dated**, too far out to support a swing entry into a falling tape.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly, and every name ranked above it fails the same gate, so it crowds out nothing. It fails anyway: ATR14 at **14.83%** puts the 10% trailing stop **0.67 ATR** below spot, inside one day's range, and price is **-30.2% vs its 200-SMA** — the shallowest breach on the board but still a clear fail. **Carry it forward as the first candidate to revisit if the operator ever approves an ATR-based stop** in place of the fixed 10%: real and accelerating fundamentals, mildest drawdown, largest 52-week-low cushion. Research only — no order.
+
+#### Deep dive: ONDS $3.66 -5.93%
+- **Catalyst:** No company-specific news since Nov 20, when Ondas co-hosted a defense technology summit with Palantir and Regna AI — an item that still closed **-11.11%**. The Nov 18 Aston Martin F1 multi-year partnership closed +0.68%. The relevant record is the Nov 12 Q3: revenue hit a record **$167.5M** versus $10.1M a year earlier, bookings $214M, backlog $835M, FY26 guidance raised to at least $550M and 2027 to at least $1.1B, and adjusted-EBITDA profitability pulled forward a quarter to Q3 2027 — yet the stock closed **-7.16%** on it. The reason sits in the same release: **gross margin collapsed to 21.8% from 43.1% sequentially**, operating loss widened to $189.5M and net loss was $64.7M, against $820.3M of cash after six completed acquisitions.
+- **Why:** The market is refusing to pay for **acquired, low-margin** revenue growth. Ondas has bought six companies and booked record top-line, but margin halved sequentially and the operating loss is **larger than the quarter's entire revenue** — so the growth reads as consolidation accounting rather than earning power, with adjusted-EBITDA breakeven still three quarters out. Every positive release since Oct 29 has closed red (-8.14%, -8.98%, -14.23%, -6.70%, -7.16%, -11.11%), the signature of persistent **distribution into good news**. Layered on, the risk-off tape hits the speculative small-cap defense/drone complex hardest.
+- **Impact:** The most negative technical read on the board, and the genuinely new development since the 07:09 ET run: at $3.66 ONDS is **1.9% BELOW its prior 52-week low of $3.73** — making a new low, not testing one. It is 74.5% off the high of $15.28 and **-54.2% vs its 200-SMA**. Volume is the one near-confirming print in the cohort: Nov 24 did 45.7M against a 47.2M average — **0.97x, essentially full participation**, versus 0.49-0.89 for everything else. A new low on near-average volume with no company news is **distribution**, not a headline spike that mean-reverts. Read-through to drone/defense peers is visible in the same scan: UMAC -5.19%, RCAT -3.66%, DPRO -3.06%, KTOS -2.52%, AVAV -2.29%.
+- **Horizon:** SHORT_TERM — breaking to a new 52-week low on full volume with no catalyst and a sequential margin collapse; the backlog is real but the structural case needs an inflection in **margin**, not in bookings, and that is three quarters out.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly. ATR14 at **12.92%** of price puts the 10% trailing stop **0.77 ATR** below spot — inside one day's range, so the stop is statistically likely to be hit before the +20% level 1.55 ATR away, and **2:1 cannot be cleared under the 10% rule**. It fails the long filter independently at -54.2% vs its 200-SMA, and a $3.66 name sitting at a new low is where the rulebook's "patience > activity" line most applies. Worth noting the structural asymmetry if the operator ever wants it: **$820.3M of cash against a ~$2.3B market cap**. Research only — no order.
+
+#### Deep dive: AMKR $29.94 -5.88%
+- **Catalyst:** Nothing company-specific. The newest release is a Nov 18 dividend increase of **$0.08352 → $0.08436** — under a tenth of a cent — and the only analyst action in the window is B. Riley trimming its target to $38 from $41 (Nov 9). The move is transmitted from the semis complex: AVGO/AMD/MU/INTC down up to 7% pre-market after Nov 24's MU -11% / AMD -8.9% / INTC -8.1% / NVDA -5.86%, and **Ambarella guided Q4 revenue to $70-75M against ~$112M consensus, falling 37%** after Tuesday's close. Layered on is the **pending US tariff announcement on China, the EU and 14 other economies**, which lands directly on AMKR's Korea/Asia-heavy footprint. AMKR closed Nov 24 **-8.62%** at $31.81.
+- **Why:** AMKR is the highest-beta transmission line in the group at **beta 2.43** and the purest OSAT read on AI advanced-packaging demand, so any demand-side datapoint in accelerated computing hits it amplified. AMBA's guide and the Nov 24 memory/logic selloff speak to exactly the packaging volumes AMKR is building **$12B of Arizona capacity** against; tariffs compound it by threatening the cost base of its Asian footprint. The market is discounting the forward volume assumption, not the delivered quarter.
+- **Impact:** Thin-book quote rather than distribution — but now at a new low. Nov 24 traded 2.84M against a 4.97M average — **0.57x, the lightest participation of any deep-dive name** — and at $29.94 the stock is a fraction below its **$29.95 52-week low** set Nov 20, so it joins ONDS in making a new low this morning. A marginal new low on the lightest volume in the cohort is the weakest possible confirmation, which cuts both ways: most likely of the five to snap back, and also the one where the low means least. The valuation dissonance is the real story: **forward P/E 12.18**, trailing 12.82, Q3 net income $191M on $1.991B revenue, 18.3% gross margin, $2.4B cash vs $2.5B debt, and **$3B of NVIDIA prepayment agreements** across Arizona and South Korea — the cheapest fundamentals on the board on a 67.1% drawdown.
+- **Horizon:** SHORT_TERM for the gap — an unconfirmed thin-book move at a new low with no company catalyst. But **carry AMKR forward as the single LONG_TERM watch candidate of the five**: the NVIDIA prepayment contracts and 12x forward earnings are structural, and it is the only name here whose ATR sits inside the rulebook's viable band.
+- **Opportunity cost:** Nothing to displace — 0 positions, 0/3 weekly. **The only name on the board where the geometry nearly works:** ATR14 at **10.16%** puts the 10% trailing stop **0.98 ATR** below spot, just about one day's range, with the +20% 2:1 target **2.0 ATR** away — reachable on a swing horizon. It still fails the long filter decisively at **-43.2% vs its 200-SMA**, which at $56.03 sits **87% above spot**, so a trend reclaim is not a near-term event. Taking it would spend one of three weekly slots on a confirmed downtrend making a new low, ahead of a pending tariff announcement and into pre-Thanksgiving liquidity. Research only — no order.
+
+**Tooling notes (08:10 ET run).**
+- `mcp__Apify__apify--rag-web-browser` **still does not exist** (7th consecutive run) — the
+  connector exposes only `apify--web-search` / `apify--web-fetch`. `routines/gappers-cloud.md`
+  names a tool that has never been available and should be corrected.
+- `apify--web-search` **timed out (60s) on 2 of 2 attempts** this run; `apify--web-fetch`
+  against named non-Yahoo sources (StockTitan, TradingEconomics) **succeeded on 5 of 6**
+  (one CNBC `.VIX` fetch with `wait` timed out; VIX sourced from TradingEconomics instead).
+  Recommend the routine spec drop `web-search` and the 403-ing Benzinga fallback in favour
+  of StockTitan + TradingEconomics direct fetches.
+- **NEW DEFECT — `scripts/size.mjs` returns stale prices and ATR.** It requests
+  `start=-40d` with `limit=20`, and Alpaca returns the *oldest* 20 bars in the window, so
+  the "price" is ~3 weeks old: it reported CRWV $53.11 (live $39.71), NBIS $115.85 (live
+  $81.71), ONDS $5.15 (live $3.66). **Position sizing from this script is wrong by 30-40%
+  right now.** Fix: drop `limit`, or add `sort=desc`, or set `start` to ~25 calendar days
+  and keep the last 20 bars. All ATR/SMA figures in this entry were computed from a fresh
+  full-history `sip` pull, not from `size.mjs`.
+- `scripts/alpaca.sh quote` returns pre-market **ask** prices that are unusable as a last
+  price (NBIS ask $99.29 vs $81.71 last; ORCL $114.33 vs $103.89) — wide thin-book spreads.
+  Snapshot prices from `gappers-alpaca.sh` were used throughout.
+- The `volume` field emitted by `gappers-alpaca.sh` is the **prior session's** volume, not
+  pre-market volume, so the routine's `premarket_volume >= 50000` filter is inoperative.
+  Logged as `prev_session_volume` in the JSON with `premarket_volume: null` rather than
+  fabricating a value.
+- **Yahoo block applied** as the `-site:` suffix plus `blockedDomains` on every query; no
+  finance.yahoo.com URL surfaced or was cited.
+- **No orders placed — STEP 8 honoured.**
