@@ -25615,3 +25615,20 @@ aborting on a not-yet-existing data file.
 **No orders. Research only** (STEP 8). Four-run Thanksgiving cadence complete.
 Next real session: **Friday 2026-11-27, 09:30–13:00 ET (half day)** — the
 07:11/08:10 ET runs will see genuine Friday pre-market prints.
+
+### Setup Scan (15:37 ET, cloud)
+
+Market CLOSED today (Thanksgiving) — run reflects last-session (Wed 2026-11-25)
+bars/quotes, not live intraday prints. `grade_a_possible: false` (15:37 ET is
+outside the 10:00-15:30 ET intraday-breakout window regardless of the holiday
+closure) — Setup A not evaluated for any of 60 watchlist symbols. 0 errors.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| --- | --- | --- | --- | --- |
+| SYNA | B | Momentum confluence | daily swing | px $116.44, RSI 51.8, ADX14 24.7, EMA9 $116.96 > EMA21 $116.81 |
+| APT | B | Momentum confluence | daily swing | px $4.92, RSI 47.7, ADX14 34.2, EMA9 $5.96 > EMA21 $5.89 |
+
+0 grade-A hits → no Telegram/ClickUp notification per STEP 4 (quiet by rule).
+Candidates are B-grade scan output only, saved to
+`data/setup-scan_cloud_2026-11-26_1537ET.json` for `market-open.md` to pick up
+next session — no orders placed (research-only routine).
