@@ -3097,3 +3097,43 @@ structural conflict both still open, operator review pending.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Zero trades today, zero open positions, zero open orders — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000, `balance_asof: 2026-11-24`). No market-open, pre-market, or midday run logged in TRADE-LOG today. Weekly trade count: 0/3 (week of Nov 23). 100th trading day since launch (Jul 9) with zero entries — 163rd+ straight no-trade session, confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow: continue pre-market re-scan for a candidate clearing the full gate; no dated plan currently pending.
+
+### Nov 26, Market-Open (Thanksgiving, MARKET CLOSED, cloud run)
+**No action — market closed, no execution possible.**
+
+STEP 1: Memory read — TRADING-STRATEGY rules unchanged. Today's RESEARCH-LOG
+pre-market entry (line 25062, "Pre-Market Research (Thanksgiving, MARKET
+CLOSED, cloud run)") confirms **US equity market is CLOSED today** via
+Alpaca `/v2/clock` (`is_open: false`) and `/v2/calendar` (no session dated
+2026-11-26; `next_open` 2026-11-27 09:30 ET, early close 13:00 ET). Day
+counter stays at Day 100 — no trading day elapses today. TRADE-LOG tail:
+weekly trade count 0/3 (week of Nov 23).
+
+STEP 2: Setup-scan — no same-day file exists (expected, market closed).
+Used prior trading day's most recent file, `data/setup-scan_cloud_2026-11-25_1737ET.json`:
+60 candidates checked, `grade_a_possible: false`, one hit — **APT** (grade
+B, momentum confluence). Already evaluated in today's pre-market entry
+(line 25055): FAILS the 200-SMA long-bias filter, px $4.92 < SMA200 $5.29.
+No new catalyst fetch needed (already logged, already failed).
+
+STEP 3: Live re-validation — `alpaca.sh account`: equity $100,000.00, cash
+$100,000.00, buying power $400,000, 0 positions, 0 open orders
+(`balance_asof: 2026-11-25`), matching pre-market exactly. No quote checks
+run — market closed, no candidate cleared STEP 2 to warrant one.
+
+STEP 4 — pass/fail:
+- APT: FAIL — fails the 200-SMA long-bias filter (px $4.92 < SMA200 $5.29),
+  carried forward from today's pre-market research, no change on re-check.
+
+STEP 5-6: No buys, no stops — zero candidates passed STEP 4, and the market
+is closed regardless (no live execution venue today).
+
+STEP 8: No notification — no trade placed.
+
+Weekly trade count: 0/3 (week of Nov 23). 100th trading day since launch
+(Jul 9), still zero entries — 163rd+ straight no-trade session (holiday,
+no session elapsed), confirmed-live-vs-$10k-baseline mismatch (flagged Jul
+27) and the 10%-stop/2:1-R:R structural conflict both still open, operator
+review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET):
+re-run market-open against Friday's live setup-scan + gappers data; APT
+re-checks against SMA200 with a fresh daily bar.
