@@ -3137,3 +3137,27 @@ no session elapsed), confirmed-live-vs-$10k-baseline mismatch (flagged Jul
 review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET):
 re-run market-open against Friday's live setup-scan + gappers data; APT
 re-checks against SMA200 with a fresh daily bar.
+
+### Nov 26, Midday Scan (Day 100, Thursday, Thanksgiving — MARKET CLOSED, cloud run)
+**No action — market closed, no execution possible.**
+
+STEP 1: Memory read — TRADING-STRATEGY rules unchanged. Today's RESEARCH-LOG
+pre-market entry already confirmed market CLOSED (Thanksgiving) via Alpaca
+`/v2/clock`/`/v2/calendar`; market-open run also logged no action. Day counter
+stays at Day 100 — no trading day elapses today.
+
+STEP 2: `alpaca.sh positions` → `[]`, `alpaca.sh orders` → `[]`. 0 positions,
+0 open orders — matches market-open and pre-market exactly.
+
+STEP 3: Cut losers — N/A, no open positions.
+STEP 4: Tighten winners — N/A, no open positions.
+STEP 5: Thesis check — N/A, no open positions.
+STEP 6: Intraday research — not triggered, no held position moving.
+STEP 7: No notification — no action taken.
+
+Weekly trade count: 0/3 (week of Nov 23). 100th trading day since launch
+(Jul 9), still zero entries — 164th+ straight no-trade session (holiday, no
+session elapsed), confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27)
+and the 10%-stop/2:1-R:R structural conflict both still open, operator
+review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET):
+market-open run re-checks APT and the live setup-scan + gappers pool.
