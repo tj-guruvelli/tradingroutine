@@ -25555,3 +25555,63 @@ stale comment on line 34.
 
 **No orders. Research only** (STEP 8). Next real session: **Friday 2026-11-27,
 09:30–13:00 ET (half day)**.
+
+### Gappers (auto-scan 10:09 ET, cloud) — NO HITS, MARKET CLOSED (Thanksgiving)
+
+Run **4 of 4** (final run of the day). **Zero tickers at the 5.0% gate** across
+52 watchlist symbols returning a trustworthy price; max |gap| 3.93%. Market
+**CLOSED** (Thanksgiving) — re-confirmed live via Alpaca `/v2/clock`
+(`is_open: false`, `timestamp 2026-11-26T10:09:20-05:00`) and `/v2/calendar`,
+which returns **11/24, 11/25, 11/27, 11/30 and skips 2026-11-26 entirely**.
+`next_open` **2026-11-27 09:30 ET**, early close **13:00 ET** (half day).
+
+**Output is identical to all three earlier runs** (07:11, 08:10, 09:09 ET) —
+verified, not assumed: re-scanned at `GAP_THRESHOLD=0.0` and diffed all 15
+reference rows against the stored 09:09 file. Symbol, gap_pct, price and
+prev_close match on **every row, zero diffs**. Expected, not a scanner fault —
+the tape is closed, so no new prints can arrive.
+
+Prices remain **Wednesday 11/25 after-hours prints (19:48–19:59 ET)** measured
+against Wednesday's regular-session close, *not* a Thursday pre-market gap —
+none exists. Re-confirmed from raw `delayed_sip` snapshots this run:
+
+| Sym | latestTrade (UTC) | price | dailyBar | close |
+| --- | ----------------- | ----- | -------- | ----- |
+| DPRO | 2026-11-26T00:48:00Z | 2.2242 | 2026-11-25 | 2.14 |
+| NBIS | 2026-11-26T00:59:56Z | 88.24 | 2026-11-25 | 84.99 |
+
+The freshness guard compares trade timestamps to the **UTC** date, and Wed
+after-hours runs to 20:00 ET = 01:00 UTC Thu, so Wednesday's last prints pass
+as "today". Baseline selection is correct — the data-driven bar check resolves
+`prev_close` to Wed's close, not to today's own bar.
+
+Top of the sub-threshold list, unchanged across all four runs — mild risk-on
+bid in AI infra and space/defense, now ~14 hours stale:
+
+| Sym | $Last (AH) | vs Wed close | Prior-session vol |
+| --- | ---------- | ------------ | ----------------- |
+| DPRO | 2.22 | +3.93% | 850,086 |
+| NBIS | 88.24 | +3.82% | 40,807,368 |
+| ASTS | 26.98 | +3.69% | 26,717,999 |
+| RDW | 6.08 | +3.23% | 12,726,688 |
+| OPEN | 1.30 | +3.17% | 50,263,969 |
+| AMPX | 5.87 | +3.16% | 6,599,558 |
+| BE | 157.71 | +3.15% | 18,666,762 |
+
+**STEP 2/STEP 3 skipped** — zero tickers cleared the 5.0% gate, so there were
+no candidates to research. No Apify catalyst queries run, no deep dive, and
+none fabricated. Deep-dive cap (5) untested this run.
+
+No notification sent: STEP 6 gates on `hits > 0 OR scan errored`, and this run
+is zero hits with no error. Telegram is configured and healthy, left unused by
+design; ClickUp remains dead per today's earlier finding.
+
+**Outstanding from earlier runs today, still unfixed** (noted, not actioned —
+this routine is research-only): the stale comment at
+`scripts/gappers-alpaca.sh:34` claiming an omitted `feed` param "resolves to
+15-min-delayed SIP" when it actually resolves to IEX, and STEP 7's `git add`
+aborting on a not-yet-existing data file.
+
+**No orders. Research only** (STEP 8). Four-run Thanksgiving cadence complete.
+Next real session: **Friday 2026-11-27, 09:30–13:00 ET (half day)** — the
+07:11/08:10 ET runs will see genuine Friday pre-market prints.

@@ -1,15 +1,19 @@
 {
-  "scanned_at": "2026-11-26T14:10:22.505746+00:00",
-  "scanned_at_et": "2026-11-26 09:09 ET",
+  "scanned_at": "2026-11-26T15:10:17.395403+00:00",
+  "scanned_at_et": "2026-11-26 10:09 ET",
   "deep_dive_cap": 5,
-  "market_status": "CLOSED - Thanksgiving holiday 2026-11-26; Alpaca /v2/clock is_open=false, calendar skips 11/26 entirely (returns 11/24, 11/25, 11/27, 11/30); next_open 2026-11-27 09:30 ET with early close 13:00 ET",
+  "market_status": "CLOSED - Thanksgiving holiday 2026-11-26; Alpaca /v2/clock is_open=false, /v2/calendar skips 11/26 entirely (returns 11/24, 11/25, 11/27, 11/30); next_open 2026-11-27 09:30 ET with early close 13:00 ET",
   "data_as_of": "2026-11-25 19:48-19:59 ET (final minutes of Wednesday's extended/after-hours session)",
-  "data_caveat": "No Thursday pre-market exists - market closed. Prices are Wednesday after-hours prints measured vs Wednesday's regular-session close. The scanner's freshness guard compares latestTrade timestamps to the UTC date, and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so these stale prints pass as 'today'. Re-confirmed this run from raw delayed_sip snapshots.",
-  "run_note": "Third of four scheduled runs on 2026-11-26 (07:11, 08:10, 09:09, ~10:00 ET). Output is identical to both earlier runs - verified, not assumed, by re-scanning at GAP_THRESHOLD=0.0 and diffing all 15 reference rows against the stored 08:10 file (symbol, gap_pct and prev_close all match). The tape is closed so no new prints can arrive; the 4th run will reproduce the same frozen snapshot. Logged and pushed per the cadence rule anyway.",
-  "feed_note": "Scanner uses feed=delayed_sip. A bare snapshot call with no feed param resolves to IEX, which returns DIFFERENT and earlier prints for the same symbols (e.g. NBIS latestTrade 2026-11-25T21:53Z p=84.60 on IEX vs 2026-11-26T00:59Z p=88.24 on delayed_sip). Any manual cross-check of this routine's numbers must pass feed=delayed_sip or it will appear to contradict the scan.",
+  "data_caveat": "No Thursday pre-market exists - market closed. Prices are Wednesday after-hours prints measured vs Wednesday's regular-session close. The scanner's freshness guard compares latestTrade timestamps to the UTC date, and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so these stale prints pass as 'today'. Re-confirmed this run from raw delayed_sip snapshots (DPRO latestTrade 2026-11-26T00:48:00Z p=2.2242 vs dailyBar 2026-11-25 c=2.14; NBIS 2026-11-26T00:59:56Z p=88.24 vs dailyBar 2026-11-25 c=84.99).",
+  "run_note": "Fourth and FINAL of four scheduled runs on 2026-11-26 (07:11, 08:10, 09:09, 10:09 ET). Output is identical to all three earlier runs - verified, not assumed, by re-scanning at GAP_THRESHOLD=0.0 and diffing all 15 reference rows against the stored 09:09 file: symbol, gap_pct, price and prev_close match on every row, zero diffs. The tape is closed so no new prints can arrive. Logged and pushed per the cadence rule anyway.",
+  "feed_note": "Scanner uses feed=delayed_sip. A bare snapshot call with no feed param resolves to IEX, which returns DIFFERENT and earlier prints for the same symbols. Any manual cross-check of this routine's numbers must pass feed=delayed_sip or it will appear to contradict the scan. The stale comment at scripts/gappers-alpaca.sh:34 still claims otherwise and remains unfixed.",
   "threshold_pct": 5.0,
   "hits_at_threshold": 0,
   "symbols_scanned": 52,
+  "max_abs_gap_pct": 3.93,
+  "apify_catalyst_research": "SKIPPED - zero tickers cleared the 5.0% gate, so STEP 2/STEP 3 had no candidates. No deep dive performed and none fabricated.",
+  "notification_sent": false,
+  "notification_reason": "STEP 6 gates on hits > 0 OR scan errored. Zero hits, no error, so no alert sent. Telegram is configured and healthy; ClickUp is dead as of today's earlier finding.",
   "gappers": [],
   "below_threshold_reference": [
     {
@@ -18,7 +22,7 @@
       "price": 2.2242,
       "gap_pct": 3.93,
       "prev_close": 2.14,
-      "prior_session_volume": 850086
+      "premarket_volume": 850086
     },
     {
       "rank": 2,
@@ -26,7 +30,7 @@
       "price": 88.24,
       "gap_pct": 3.82,
       "prev_close": 84.99,
-      "prior_session_volume": 40807368
+      "premarket_volume": 40807368
     },
     {
       "rank": 3,
@@ -34,7 +38,7 @@
       "price": 26.98,
       "gap_pct": 3.69,
       "prev_close": 26.02,
-      "prior_session_volume": 26717999
+      "premarket_volume": 26717999
     },
     {
       "rank": 4,
@@ -42,7 +46,7 @@
       "price": 6.08,
       "gap_pct": 3.23,
       "prev_close": 5.89,
-      "prior_session_volume": 12726688
+      "premarket_volume": 12726688
     },
     {
       "rank": 5,
@@ -50,7 +54,7 @@
       "price": 1.3,
       "gap_pct": 3.17,
       "prev_close": 1.26,
-      "prior_session_volume": 50263969
+      "premarket_volume": 50263969
     },
     {
       "rank": 6,
@@ -58,7 +62,7 @@
       "price": 5.87,
       "gap_pct": 3.16,
       "prev_close": 5.69,
-      "prior_session_volume": 6599558
+      "premarket_volume": 6599558
     },
     {
       "rank": 7,
@@ -66,7 +70,7 @@
       "price": 157.71,
       "gap_pct": 3.15,
       "prev_close": 152.89,
-      "prior_session_volume": 18666762
+      "premarket_volume": 18666762
     },
     {
       "rank": 8,
@@ -74,7 +78,7 @@
       "price": 7.19,
       "gap_pct": 2.71,
       "prev_close": 7,
-      "prior_session_volume": 20383682
+      "premarket_volume": 20383682
     },
     {
       "rank": 9,
@@ -82,7 +86,7 @@
       "price": 48.2608,
       "gap_pct": 2.64,
       "prev_close": 47.02,
-      "prior_session_volume": 20022707
+      "premarket_volume": 20022707
     },
     {
       "rank": 10,
@@ -90,7 +94,7 @@
       "price": 10.88,
       "gap_pct": 2.54,
       "prev_close": 10.61,
-      "prior_session_volume": 6723628
+      "premarket_volume": 6723628
     },
     {
       "rank": 11,
@@ -98,7 +102,7 @@
       "price": 32.8,
       "gap_pct": 2.44,
       "prev_close": 32.02,
-      "prior_session_volume": 4723496
+      "premarket_volume": 4723496
     },
     {
       "rank": 12,
@@ -106,7 +110,7 @@
       "price": 43.5599,
       "gap_pct": 2.33,
       "prev_close": 42.57,
-      "prior_session_volume": 82518594
+      "premarket_volume": 82518594
     },
     {
       "rank": 13,
@@ -114,7 +118,7 @@
       "price": 13.75,
       "gap_pct": 2.31,
       "prev_close": 13.44,
-      "prior_session_volume": 51171687
+      "premarket_volume": 51171687
     },
     {
       "rank": 14,
@@ -122,7 +126,7 @@
       "price": 19.88,
       "gap_pct": 2.11,
       "prev_close": 19.47,
-      "prior_session_volume": 11847431
+      "premarket_volume": 11847431
     },
     {
       "rank": 15,
@@ -130,7 +134,7 @@
       "price": 8.0138,
       "gap_pct": 2.09,
       "prev_close": 7.85,
-      "prior_session_volume": 19979869
+      "premarket_volume": 19979869
     }
   ]
 }
