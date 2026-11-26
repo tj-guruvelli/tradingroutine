@@ -25437,3 +25437,51 @@ never run and the whole run's output is silently lost**. Worked around this run
 with `git add -f`. Operator fix: either un-ignore `/data/` (or add
 `!data/premarket_gappers_*.json`), or change STEP 7 in
 `routines/gappers-cloud.md` to use `git add -f`.
+
+### Gappers (auto-scan 08:10 ET, cloud) — NO HITS, MARKET CLOSED (Thanksgiving)
+
+Run 2 of 4 today. **Zero tickers at the 5.0% gate** across 52 watchlist symbols
+returning a trustworthy price. Market **CLOSED** (Thanksgiving) — re-confirmed
+live via Alpaca `/v2/clock` (`is_open: false`) and `/v2/calendar` (no session
+dated 2026-11-26; `next_open` **2026-11-27 09:30 ET**, early close **13:00 ET**).
+
+**Output is byte-identical to the 07:11 ET run** — same 52 symbols, same prices,
+same ranks, max |gap| 3.93%. That is the expected result, not a scanner fault:
+the tape is closed, so no new prints can arrive, and the remaining runs today
+(~09:00, ~10:00 ET) will reproduce this same frozen snapshot. Verified rather
+than assumed — the scan was re-run at `GAP_THRESHOLD=0.0` and diffed against
+the stored 07:11 file.
+
+Prices are **Wednesday 11/25 after-hours prints (19:48–19:59 ET)** measured
+against Wednesday's regular-session close, *not* a Thursday pre-market gap —
+none exists. The freshness guard compares trade timestamps to the **UTC** date,
+and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so Wednesday's last prints
+pass as "today". Confirmed from raw snapshot timestamps (e.g. `NBIS
+latestTrade t=2026-11-26T00:59:56Z`, `dailyBar=2026-11-25 c=84.99`). Baseline
+selection is correct — the script's data-driven bar check resolves `prev_close`
+to Wed's close, not to today's own bar.
+
+Top of the sub-threshold list, unchanged from 07:11 — mild risk-on bid in AI
+infra and space/defense, already ~12 hours stale:
+
+| Sym | $Last (AH) | vs Wed close | Prior-session vol |
+| --- | ---------- | ------------ | ----------------- |
+| DPRO | 2.22 | +3.93% | 850,086 |
+| NBIS | 88.24 | +3.82% | 40,807,368 |
+| ASTS | 26.98 | +3.69% | 26,717,999 |
+| RDW | 6.08 | +3.23% | 12,726,688 |
+| OPEN | 1.30 | +3.17% | 50,263,969 |
+| AMPX | 5.87 | +3.16% | 6,599,558 |
+| BE | 157.71 | +3.15% | 18,666,762 |
+
+No catalyst research run (STEP 2/3) — **deep-dive cap 5 noted, but with zero
+tickers past the 5.0% gate there is nothing to deep-dive, and ranks 6–10 do not
+exist either.** Spending Apify budget to annotate day-old moves that Friday's
+real pre-market will supersede is not justified.
+
+**No orders. Research only** (STEP 8). Next actionable scan: **Friday
+2026-11-27**, ahead of the 09:30–13:00 ET half session.
+
+STEP 7 again required `git add -f` for the data file — the `.gitignore:23`
+`/data/` defect written up under the 07:11 entry is still unfixed, and STEP 7's
+literal `&&`-chained command still aborts before the commit without it.

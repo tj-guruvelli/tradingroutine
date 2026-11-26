@@ -1,12 +1,14 @@
 {
-  "scanned_at": "2026-11-26T12:11:05.804643+00:00",
-  "scanned_at_et": "2026-11-26 07:11 ET",
+  "scanned_at": "2026-11-26T13:10:30.108193+00:00",
+  "scanned_at_et": "2026-11-26 08:10 ET",
   "deep_dive_cap": 5,
   "market_status": "CLOSED - Thanksgiving holiday 2026-11-26; Alpaca calendar skips 11/26, next_open 2026-11-27 09:30 ET (early close 13:00 ET)",
   "data_as_of": "2026-11-25 19:48-19:59 ET (final minutes of Wednesday's extended/after-hours session)",
-  "data_caveat": "No Thursday pre-market exists - market closed. Prices below are Wednesday after-hours prints vs Wednesday's regular-session close. The scanner's freshness guard compares trade timestamps to the UTC date, and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so these stale prints passed as 'today'.",
+  "data_caveat": "No Thursday pre-market exists - market closed. Prices are Wednesday after-hours prints vs Wednesday's regular-session close. The scanner's freshness guard compares trade timestamps to the UTC date, and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so these stale prints pass as 'today'.",
+  "run_note": "Second of four scheduled runs on 2026-11-26 (07:11, 08:09, ~09:00, ~10:00 ET). Output is byte-identical to the 07:11 ET run: the tape is closed, so no new prints can arrive and every remaining run today will reproduce this same frozen snapshot. Logged and pushed per the cadence rule anyway.",
   "threshold_pct": 5.0,
   "hits_at_threshold": 0,
+  "symbols_scanned": 52,
   "gappers": [],
   "below_threshold_reference": [
     {
