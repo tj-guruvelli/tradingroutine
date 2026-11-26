@@ -25323,3 +25323,117 @@ the routine doc is inconsistent with CLAUDE.md on this point.
 fallback, matching CLAUDE.md). Recommend also hardening `clickup.sh` to treat a
 `your_*`-prefixed key as unset so it takes the local-fallback branch instead of
 failing silently with a 400.
+
+### Gappers (auto-scan 07:11 ET, cloud) — NO HITS, MARKET CLOSED (Thanksgiving)
+
+**0 of ~60 watchlist tickers cleared the gate** (|gap| >= 5.0%, price >= $3.00).
+Nothing to deep-dive, so the STEP 3 top-5 writeup is empty by result, not by
+omission. Deep-dive cap would have been 5.
+
+**The market is closed today.** Alpaca trading clock: `is_open: false`,
+`next_open` **2026-11-27 09:30 ET** with an **early close 13:00 ET**. The
+calendar endpoint skips 2026-11-26 entirely — it returns 11/25, then 11/27,
+then 11/30. There is no Thursday pre-market session to scan. This routine is
+scheduled to fire **four times today** (08:00/09:00/10:00/11:00 ET) against a
+closed tape.
+
+#### Data-freshness defect found in `scripts/gappers-alpaca.sh` (new, 2026-11-26)
+
+The scan did *not* return `[]` the way a closed market should make it. At
+`GAP_THRESHOLD=0.3` it returned **36 symbols with apparently "fresh" prices**.
+Those prices are **not** today's — every one is a print from
+**2026-11-25 19:48–19:59 ET**, the final minutes of *Wednesday's* extended
+(after-hours) session:
+
+| Sym | latestTrade (UTC) | = ET | dailyBar | prevDailyBar |
+| --- | ----------------- | ---- | -------- | ------------ |
+| NBIS | 2026-11-26T00:59:56Z | 2026-11-25 19:59 | 2026-11-25 | 2026-11-24 |
+| BE   | 2026-11-26T00:59:54Z | 2026-11-25 19:59 | 2026-11-25 | 2026-11-24 |
+| DPRO | 2026-11-26T00:48:00Z | 2026-11-25 19:48 | 2026-11-25 | 2026-11-24 |
+
+**Root cause.** The freshness guard is a *UTC-date* comparison standing in for
+a *session* check:
+
+```python
+today = date -u +%Y-%m-%d            # 2026-11-26
+if trade_px and str(trade.get("t","")).startswith(today):
+    current = trade_px
+```
+
+US after-hours runs to 20:00 ET = **01:00 UTC the next day**. So every
+Wednesday-evening print from 19:00–20:00 ET carries a UTC date of 2026-11-26
+and sails through a guard whose comment claims it only admits "a trade from
+today's session."
+
+**What the numbers therefore actually mean.** `prev_close` = Wednesday's
+regular-session close (`dailyBar` 11/25); `current` = Wednesday's *after-hours*
+last print. That is a real and arguably useful measure — Wednesday's
+after-hours drift, which previews Friday's open — but it is **not** a
+pre-market gap, and must not be logged or alerted as one.
+
+**Impact beyond today.** On a normal trading day the routine fires 08:00–11:00
+ET, when the UTC date is correct and liquid names have genuine pre-market
+prints that supersede the stale ones, so the guard mostly works. The failure
+mode is **thin names with no pre-market print**: the previous evening's
+after-hours trade passes as "today's price," and the scan reports a ~12-hour-old
+move as a live gap. Low-float names are exactly where this routine's
+false-positive cost is highest. Note this is a *different* bug from the
+2026-09-04 stale-quote fix — that one hardened `latestQuote` handling; this one
+is in the `latestTrade` date test that the quote path falls back from.
+
+**Suggested fix (operator's call, not applied this run):** gate on the ET
+session date rather than the UTC date, and additionally reject any print older
+than the current session's `session_open` from `/v2/calendar`. Cheapest correct
+version: if `/v2/clock` says `is_open: false` and today is absent from the
+calendar, exit early with an explicit "market closed" status instead of
+scanning at all.
+
+#### Reference: Wednesday after-hours drift (NOT today's gaps — see caveat above)
+
+Logged for context only, explicitly **not** trade signals. 35 of 36 movers were
+green, one red (CMCSA) — a broad risk-on tilt into Wednesday's close, led by AI
+infra and space/defense names.
+
+| Sym | $Last (AH) | vs Wed close | Prior-session vol |
+| --- | ---------- | ------------ | ----------------- |
+| DPRO | 2.22 | +3.93% | 850,086 |
+| NBIS | 88.24 | +3.82% | 40,807,368 |
+| ASTS | 26.98 | +3.69% | 26,717,999 |
+| RDW | 6.08 | +3.23% | 12,726,688 |
+| OPEN | 1.30 | +3.17% | 50,263,969 |
+| AMPX | 5.87 | +3.16% | 6,599,558 |
+| BE | 157.71 | +3.15% | 18,666,762 |
+| QBTS | 7.19 | +2.71% | 20,383,682 |
+| RKLB | 48.26 | +2.64% | 20,022,707 |
+| PL | 10.88 | +2.54% | 6,723,628 |
+| AMKR | 32.80 | +2.44% | 4,723,496 |
+| CRWV | 43.56 | +2.33% | 82,518,594 |
+| BMNR | 13.75 | +2.31% | 51,171,687 |
+| OKLO | 19.88 | +2.11% | 11,847,431 |
+| RGTI | 8.01 | +2.09% | 19,979,869 |
+
+No catalyst research was run (STEP 2/3): with zero tickers past the gate and a
+closed tape, Apify queries would spend budget to annotate moves that are
+already a day old and will be superseded by Friday's actual pre-market.
+
+**No orders. Research only** (STEP 8). Next real session: **Friday 2026-11-27,
+09:30–13:00 ET (half day)** — the 08:00–11:00 ET runs that morning are the first
+that can produce a genuine pre-market gap list.
+
+#### Minor tooling note — STEP 7's `git add` aborts on a new data file (2026-11-26)
+
+`.gitignore:23` ignores `/data/`, yet 301 files under `data/` are already
+tracked (gitignore does not affect tracked files). A brand-new
+`data/premarket_gappers_<DATE>.json` is therefore ignored, and STEP 7's literal
+command fails:
+
+```
+$ git add memory/RESEARCH-LOG.md data/premarket_gappers_2026-11-26.json
+The following paths are ignored by one of your .gitignore files: data
+```
+
+Because STEP 7 chains with `&&`, that non-zero exit means **the commit and push
+never run and the whole run's output is silently lost**. Worked around this run
+with `git add -f`. Operator fix: either un-ignore `/data/` (or add
+`!data/premarket_gappers_*.json`), or change STEP 7 in
+`routines/gappers-cloud.md` to use `git add -f`.

@@ -1,0 +1,133 @@
+{
+  "scanned_at": "2026-11-26T12:11:05.804643+00:00",
+  "scanned_at_et": "2026-11-26 07:11 ET",
+  "deep_dive_cap": 5,
+  "market_status": "CLOSED - Thanksgiving holiday 2026-11-26; Alpaca calendar skips 11/26, next_open 2026-11-27 09:30 ET (early close 13:00 ET)",
+  "data_as_of": "2026-11-25 19:48-19:59 ET (final minutes of Wednesday's extended/after-hours session)",
+  "data_caveat": "No Thursday pre-market exists - market closed. Prices below are Wednesday after-hours prints vs Wednesday's regular-session close. The scanner's freshness guard compares trade timestamps to the UTC date, and Wed after-hours runs to 20:00 ET = 01:00 UTC Thu, so these stale prints passed as 'today'.",
+  "threshold_pct": 5.0,
+  "hits_at_threshold": 0,
+  "gappers": [],
+  "below_threshold_reference": [
+    {
+      "rank": 1,
+      "symbol": "DPRO",
+      "price": 2.2242,
+      "gap_pct": 3.93,
+      "prev_close": 2.14,
+      "prior_session_volume": 850086
+    },
+    {
+      "rank": 2,
+      "symbol": "NBIS",
+      "price": 88.24,
+      "gap_pct": 3.82,
+      "prev_close": 84.99,
+      "prior_session_volume": 40807368
+    },
+    {
+      "rank": 3,
+      "symbol": "ASTS",
+      "price": 26.98,
+      "gap_pct": 3.69,
+      "prev_close": 26.02,
+      "prior_session_volume": 26717999
+    },
+    {
+      "rank": 4,
+      "symbol": "RDW",
+      "price": 6.08,
+      "gap_pct": 3.23,
+      "prev_close": 5.89,
+      "prior_session_volume": 12726688
+    },
+    {
+      "rank": 5,
+      "symbol": "OPEN",
+      "price": 1.3,
+      "gap_pct": 3.17,
+      "prev_close": 1.26,
+      "prior_session_volume": 50263969
+    },
+    {
+      "rank": 6,
+      "symbol": "AMPX",
+      "price": 5.87,
+      "gap_pct": 3.16,
+      "prev_close": 5.69,
+      "prior_session_volume": 6599558
+    },
+    {
+      "rank": 7,
+      "symbol": "BE",
+      "price": 157.71,
+      "gap_pct": 3.15,
+      "prev_close": 152.89,
+      "prior_session_volume": 18666762
+    },
+    {
+      "rank": 8,
+      "symbol": "QBTS",
+      "price": 7.19,
+      "gap_pct": 2.71,
+      "prev_close": 7,
+      "prior_session_volume": 20383682
+    },
+    {
+      "rank": 9,
+      "symbol": "RKLB",
+      "price": 48.2608,
+      "gap_pct": 2.64,
+      "prev_close": 47.02,
+      "prior_session_volume": 20022707
+    },
+    {
+      "rank": 10,
+      "symbol": "PL",
+      "price": 10.88,
+      "gap_pct": 2.54,
+      "prev_close": 10.61,
+      "prior_session_volume": 6723628
+    },
+    {
+      "rank": 11,
+      "symbol": "AMKR",
+      "price": 32.8,
+      "gap_pct": 2.44,
+      "prev_close": 32.02,
+      "prior_session_volume": 4723496
+    },
+    {
+      "rank": 12,
+      "symbol": "CRWV",
+      "price": 43.5599,
+      "gap_pct": 2.33,
+      "prev_close": 42.57,
+      "prior_session_volume": 82518594
+    },
+    {
+      "rank": 13,
+      "symbol": "BMNR",
+      "price": 13.75,
+      "gap_pct": 2.31,
+      "prev_close": 13.44,
+      "prior_session_volume": 51171687
+    },
+    {
+      "rank": 14,
+      "symbol": "OKLO",
+      "price": 19.88,
+      "gap_pct": 2.11,
+      "prev_close": 19.47,
+      "prior_session_volume": 11847431
+    },
+    {
+      "rank": 15,
+      "symbol": "RGTI",
+      "price": 8.0138,
+      "gap_pct": 2.09,
+      "prev_close": 7.85,
+      "prior_session_volume": 19979869
+    }
+  ]
+}
