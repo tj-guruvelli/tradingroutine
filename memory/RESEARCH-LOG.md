@@ -25632,3 +25632,21 @@ closure) — Setup A not evaluated for any of 60 watchlist symbols. 0 errors.
 Candidates are B-grade scan output only, saved to
 `data/setup-scan_cloud_2026-11-26_1537ET.json` for `market-open.md` to pick up
 next session — no orders placed (research-only routine).
+
+### Setup Scan (17:32 ET, cloud)
+
+Market CLOSED today (Thanksgiving) — run reflects last-session (Wed 2026-11-25)
+bars/quotes, not live intraday prints. `grade_a_possible: false` (17:32 ET is
+outside the 10:00-15:30 ET intraday-breakout window regardless of the holiday
+closure) — Setup A not evaluated for any of 60 watchlist symbols. 0 errors.
+Same two B-grade hits as the 15:37 ET run this session (static last-close data).
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+| --- | --- | --- | --- | --- |
+| SYNA | B | Momentum confluence | daily swing | px $116.44, RSI 51.8, ADX14 24.7, EMA9 $116.96 > EMA21 $116.81 |
+| APT | B | Momentum confluence | daily swing | px $4.92, RSI 47.7, ADX14 34.2, EMA9 $5.96 > EMA21 $5.89 |
+
+0 grade-A hits → no Telegram/ClickUp notification per STEP 4 (quiet by rule).
+Candidates are B-grade scan output only, saved to
+`data/setup-scan_cloud_2026-11-26_1732ET.json` for `market-open.md` to pick up
+next session — no orders placed (research-only routine).
