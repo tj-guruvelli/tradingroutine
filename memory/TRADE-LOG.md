@@ -3161,3 +3161,10 @@ session elapsed), confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27)
 and the 10%-stop/2:1-R:R structural conflict both still open, operator
 review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET):
 market-open run re-checks APT and the live setup-scan + gappers pool.
+
+### Nov 26, EOD Snapshot (Day 100, Thursday — Thanksgiving, Market Closed)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Market closed all day (Thanksgiving) — confirmed via `alpaca.sh account`/`positions`/`orders`: equity/cash unchanged at $100,000.00 (`balance_asof: 2026-11-25`), 0 positions, 0 open orders. Pre-market, market-open, and midday runs all logged no action today for the same reason. Trades today: none. Weekly trade count: 0/3 (week of Nov 23). Day counter holds at 100 — no trading session elapsed. 164th+ straight no-trade session; confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET): market-open run re-checks APT against a fresh daily bar and scans the live setup-scan + gappers pool for a candidate clearing the full gate.
