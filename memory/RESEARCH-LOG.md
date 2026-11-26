@@ -25058,3 +25058,233 @@ APT     B      Momentum confluence daily swing   ADX 34.85, EMA9 $6.00 > EMA21 $
 - No grade-A hits → no Telegram/ClickUp alert per rule (STEP 4).
 - No orders placed — candidate only, feeds `/trade` or next `market-open.md` run.
 
+
+## 2026-11-26 — Pre-Market Research (Thanksgiving, MARKET CLOSED, cloud run)
+
+Run time **06:02–06:20 ET**. **US equity market is CLOSED today** (Thanksgiving) —
+confirmed via Alpaca `/v2/clock` (`is_open: false`) and `/v2/calendar`: no session
+dated 2026-11-26; `next_open` **2026-11-27 09:30 ET** with an **early close at
+13:00 ET** (half session). This entry is therefore research **for Friday's half
+session and Monday 11/30**, not for today. No trading day elapsed, so the day
+counter stays at **Day 100**.
+
+Research tools: **Apify `apify--web-search` was UP this run** (first clean run in
+7) — 4 of 6 calls returned HTTP 200 in ~42–48s; 2 timed out at the 60s MCP ceiling
+(today's-catalysts, Fed-odds), so those two were re-sourced via native `WebSearch`.
+`apify--web-fetch` succeeded first try against Cboe. `mcp__Apify__apify--rag-web-browser`
+**still does not exist in this session (7th consecutive run)** — the connector
+exposes only `apify--web-search` / `apify--web-fetch`; `routines/pre-market.md`
+STEP 3 names a tool that has never been available here and should be corrected.
+`mcp__tradingview-data__*` **not registered in this cloud session** — all technicals
+computed locally (Wilder ATR14 / RSI14, SMA200/SMA50) from Alpaca bars.
+`alpaca.sh bars` still hardcodes **`feed=iex`/`adjustment=raw`** (known defect,
+unfixed). **No Yahoo data in this entry** — block applied as the `-site:` suffix
+*plus* `blockedDomains` on every query; no finance.yahoo.com URL surfaced or was cited.
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed) |
+| `balance_asof` | 2026-11-25 |
+| Deployed | **0%** vs the 75–85% rule — 100th straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 7 required env
+vars confirmed `set` before any wrapper call. Endpoint = `paper-api.alpaca.markets`
+(PAPER). No held tickers, so STEP 3's holdings-news query is **N/A**.
+
+### Market context — Wed 2026-11-25 close (last completed session)
+
+**A tech-led bear market inside a flat index: the AI complex is de-rating while
+money rotates into defensives, and breadth is positive under a negative tape.**
+
+| Index proxy | Close | 1d | 5d | 20d | vs SMA200 | RSI14 |
+|---|---|---|---|---|---|---|
+| SPY | 716.74 | -0.30% | -1.86% | **-7.19%** | **-2.24%** | 39.7 |
+| QQQ | 633.92 | -0.66% | -3.89% | **-12.63%** | **-7.25%** | 38.3 |
+| IWM | 268.84 | +0.61% | -0.48% | -4.43% | -3.84% | 44.9 |
+| DIA | 501.29 | +0.30% | -0.08% | -4.45% | — | — |
+
+- Cash-index closes (CNBC): **Dow +164.25 to 50,182.95 · S&P 500 -0.25% to
+  7,182.78 · Nasdaq Composite -0.62% to 23,585.80**. The Nasdaq 100 traded
+  **~20% below its record close intraday** (bear-market threshold) before paring;
+  the Dow closed green. Dow had erased a ~1,100-point intraday plunge.
+- **VIX 28.29** (+7.32% from 26.36) — source **Cboe** (primary), as of 11/25.
+  Intraday high **34.95**; 11/20 close was 35.89. 52-wk range 13.38–40.03.
+  Elevated-stressed, not panic.
+- **Oil:** WTI **~$84** / Brent **~$95** (oil-price.net, businessinsider,
+  TradingEconomics; EIA spot WTI Cushing 82.24, Brent-Europe 91.80). Brent
+  **-13.0% over the past month** (TradingEconomics). Bloomberg's WTI/Brent pair
+  disagrees with the others on Brent — treated as a range, not a print.
+- **Drivers:** (1) hot inflation data lifting **December Fed rate-HIKE** odds,
+  (2) a proposed US tariff round on **14 trading partners**, (3) renewed doubts on
+  AI-capex returns, (4) post-midterm regulatory scrutiny. NVDA closed **-4%** even
+  with Huang reinstated; MSFT, ORCL, GOOG, MU all lower. META **+3.4%** bucked it.
+- **S&P 500 and Nasdaq are on pace for their worst November since 2008**
+  (Star-Advertiser).
+- **TLT +2.52% 5d / +1.51% 20d** — bonds bid *despite* rising hike odds. That is a
+  flight-to-quality bid overwhelming the rate story; worth watching, because the two
+  cannot both persist.
+
+### Sector momentum (20d, Alpaca closes) — the actionable read
+
+| Leading | 20d | | Lagging | 20d |
+|---|---|---|---|---|
+| XLP Staples | **+6.23%** | | XLK Tech | **-18.46%** |
+| XLRE Real Estate | +4.14% | | GLD Gold | -12.33% |
+| XLU Utilities | +2.60% | | XLE Energy | -11.07% |
+| XLV Healthcare | +2.14% | | XLI Industrials | -3.34% |
+| XLY Disc. | +1.88% | | XLB Materials | -1.33% |
+| XLF Financials | +0.66% | | | |
+
+Staples / REITs / Utilities / Healthcare leading maps to the **Recession row** of
+the strategy's sector-rotation table (Utilities, REITs, Consumer Staples). XLF is
+the only cyclical holding positive on 20d. **Rule 9 (follow sector momentum) now
+points away from almost the entire watchlist**, which is ~70% AI-infrastructure,
+semis, space, quantum and drones — i.e. the -18% sector.
+
+### Universe gate scan — 61 symbols
+
+Applied the long-bias filter (price > SMA200) **and** the trend filter
+(price > SMA50), then tested whether a 2:1 target against the **mandated 10%
+trailing stop** (= +20%) sits at or below the 52-week high:
+
+| SYM | Last | vs200 | ATR14% | 52wH | off-H | 2:1 tgt (+20%) | tgt vs 52wH |
+|---|---|---|---|---|---|---|---|
+| V | 424.51 | +21.11% | 2.13% | 442.12 | -3.98% | 509.42 | **+15.2%** ✗ |
+| MA | 660.29 | +20.95% | 2.14% | 681.40 | -3.10% | 792.35 | **+16.3%** ✗ |
+| XLV | 183.61 | +13.85% | 1.97% | 192.32 | -4.53% | 220.33 | **+14.6%** ✗ |
+| ZIM | 30.86 | +13.79% | 2.44% | 30.98 | -0.36% | 37.04 | **+19.6%** ✗ |
+| **SYNA** | 116.65 | +10.51% | 1.14% | 148.09 | -21.23% | 139.98 | **-5.5%** ✓ |
+| XLP | 92.28 | +8.46% | 1.61% | 93.48 | -1.28% | 110.74 | **+18.5%** ✗ |
+| LMT | 599.19 | +5.63% | 2.80% | 691.23 | -13.31% | 719.03 | +4.0% ✗ |
+| XLF | 56.49 | +4.52% | 1.81% | 60.03 | -5.90% | 67.79 | +12.9% ✗ |
+| XLRE | 43.86 | +0.70% | 1.59% | 46.45 | -5.57% | 52.63 | +13.3% ✗ |
+| RTX | 196.11 | +0.49% | 2.51% | 226.82 | -13.54% | 235.33 | +3.8% ✗ |
+| **CMCSA** | 25.71 | +0.23% | 2.66% | 32.85 | -21.75% | 30.85 | **-6.1%** ✓ |
+
+**12 of 61 pass both trend filters. Only 2 also clear 2:1 without needing a new
+52-week high: CMCSA and SYNA.** (XLY also screened ✓ but its $239.60 "52wH" is a
+split artifact of `adjustment=raw` — discarded, not a real level.)
+
+**This quantifies the structural conflict flagged since Jul 27.** The rulebook's
+10% trailing stop forces a +20% target for 2:1 R:R. Of the 10 strongest-trending
+names in the universe, 8 would need a **new all-time/52-week high of +4% to +20%**
+just to hit target — V, MA, XLP and ZIM are strong *because* they are already at
+their highs, which is exactly what makes their 2:1 unreachable. The two names that
+pass do so only by being **~21% below their highs**, i.e. the filter systematically
+selects laggards over leaders. That is the mechanism behind 100 sessions of zero
+entries. **Operator decision needed** (see Risk factors).
+
+### Trade ideas
+
+**1. CMCSA (Comcast) — LONG, the only name clearing the full gate. Entry window Mon 11/30.**
+- **Catalyst (documented):** Q3 2026 beat on **22 Oct** — adjusted EPS **$1.07 vs
+  $0.98** consensus, revenue **$29.3B vs $29.28B** (CNBC; primary: cmcsa.com press
+  release + SEC EDGAR `ex991-9302026.htm`, EPS +7.2% to $0.97). Beat driven by
+  Media, not connectivity. Structural catalyst: **NBCUniversal + Sky separation,
+  co-CEO says "on track" for mid-2027**. A Hold→Buy upgrade was reported **23 Nov**
+  (GuruFocus — secondary, unverified against the issuing broker).
+- **Technicals:** +19.14% over 20d while SPY fell 7.19% (**+26pt relative
+  strength**). Reclaimed SMA200 ($25.65); SMA50 $22.98 is **+11.9%** below spot.
+  RSI14 **65.5** — rising, not overbought. Six-week advance from $20.68 (10/12) to
+  $25.71 is an orderly higher-lows grind on normal-to-elevated volume — accumulation,
+  not a spike. Held $24.73 through the 11/20 -3.7% SPX day.
+- **Confluence (rule: ≥2 + 1 catalyst):** SMA200 reclaim ✓ · SMA50 trend ✓ ·
+  RSI rising from oversold without hitting 70 ✓ · catalyst documented ✓.
+- **Sector:** Communication Services / media — outside the de-rating AI-capex complex.
+- **Plan:** entry **limit $25.40–25.90** (do not chase above $25.90) ·
+  **778 sh** (20%-of-equity cap at last close = $20,002; `size.mjs` returns 793 sh
+  on its stale $25.19 basis, ATR14 $0.742, `cap_applied: true`) ·
+  **10% trailing GTC stop → $23.14**, which sits just above SMA50 $22.98 and is
+  **3.8 ATR** away (outside noise, >3% from price ✓) ·
+  **target $30.85 (+20%)**, which is **6.1% BELOW** the 52wH of $32.85 ✓ · R:R 2:1 ✓.
+- **Risks to this idea, stated plainly:** (a) the SMA200 margin is **+0.23%** —
+  a single 0.3% down day voids the long-bias filter, so this is a *fragile* pass and
+  must be re-verified at the execution run, not assumed; (b) **Goldman's target is
+  $23.00, below spot**, cut on broadband churn; (c) the core business is
+  **shrinking** — 144K domestic residential broadband net losses in Q3 — so the
+  thesis is sum-of-parts re-rating, not operations; (d) ratings are **conflicting**
+  (one Hold→Buy, one Strong Buy→Buy, Zacks Strong Sell→Hold).
+- **Note on data quality:** `adjustment=raw` biases a dividend payer's SMA200
+  *upward*, so the true adjusted margin above SMA200 is likely **wider** than
+  +0.23% — the raw read is the conservative one. The Versant spinoff (5 Jan 2026)
+  falls **outside** the SMA200 window (verified: window = 2026-02-11 → 2026-11-25),
+  so the average is not distorted by it.
+
+**2. SYNA (Synaptics) — screens ✓ on R:R, REJECTED on sector momentum.**
+- Passes both trend filters (+10.51% vs SMA200, +2.7% vs SMA50) and its 2:1 target
+  $139.98 sits 5.5% below the 52wH. Lowest ATR in the universe at **1.14%**.
+- **Rejected:** no catalyst found, and momentum is absent (20d **-1.51%**, 5d
+  -0.90%, RSI 51.8). Decisively, its sector is the worst on the board — peers
+  AMKR -24.2%, KLIC -27.3%, GFS -21.5%, STM -18.2% over 20d. **Rule 9 fails.**
+  A 10% stop here is **10 ATR** wide, which is not risk control, it is a shrug.
+
+**3. V / MA (payments) — best-structured longs in the universe, blocked by R:R only.**
+- Both ~**+21% above SMA200**, above SMA50, RSI 59–61, positive 5d *and* 20d while
+  SPY fell 7.19%, ATR ~2.1%, each only 3–4% off a **5 Nov** 52-week high.
+- **Real catalyst exists:** Visa's own investor-relations release forecasts **US
+  holiday retail sales +4.5% y/y** for Nov–Dec, the strongest since 2021, and
+  **Black Friday is tomorrow (11/27)**. (A Mastercard SpendingPulse figure of +7.2%
+  appears in one secondary stock-commentary source only — **not corroborated**,
+  not relied on.)
+- **Blocked:** a 2:1 target against the mandated 10% stop needs **+15.2% (V)** and
+  **+16.3% (MA)** above their 52-week highs. Even at the Entry Checklist's tighter
+  7% stop, 2:1 requires +14%, still above the high. **No rule-compliant entry
+  exists**, despite these being the cleanest trend + catalyst pairing on the board.
+  This is the single best illustration of the gate conflict above.
+
+### Risk factors for Friday 11/27 and Monday 11/30
+- **Friday is a half session (13:00 ET close)** with post-holiday liquidity.
+  Thin tape widens spreads and makes a 10% trailing stop more likely to be gapped
+  through. **Do not initiate CMCSA on Friday** — set the entry window to
+  **Monday 11/30** (full session) unless the operator overrides.
+- **SPY is below its SMA200 (-2.24%)** and QQQ -7.25%. The strategy's own long-bias
+  filter fails at the index level: any long is a long against the broad trend.
+- **VIX 28.29** with a 34.95 intraday print. A 10%-wide stop on a 2.66%-ATR name is
+  ~3.8 ATR, which is adequate *at this volatility* but shrinks if VIX re-expands.
+- **December Fed rate HIKE odds elevated on hot inflation** (direction confirmed
+  across sources; the "97%" figure carried in the 11/25 entry was **not
+  re-verified today** — both Fed-odds queries timed out, so treat the probability
+  as *elevated and rising*, not as a number).
+- **New tariff round proposed on 14 trading partners** — unpriced, headline risk
+  over a long weekend.
+- **Worst November since 2008 for SPX/Nasdaq.** Month-end rebalancing into 11/30
+  can force mechanical selling of winners and buying of losers.
+- **Thin-liquidity holiday gap risk:** entering before a weekend plus a half day
+  means two sessions of headline exposure with no ability to manage.
+
+### Decision: **HOLD today — no action possible (market closed).**
+
+Hand off to the **Monday 11/30 market-open run** a single dated, gated plan:
+
+> **CMCSA long — limit $25.40–25.90, 778 sh, 10% trailing GTC stop ($23.14),
+> target $30.85. NOT before Monday 11/30 (skip Friday's half session). Do not
+> chase above $25.90.**
+> **Pre-trade re-verification is mandatory and the plan voids if any fails:**
+> (1) price still **> SMA200** — margin was only +0.23%, recompute, do not assume;
+> (2) price still > SMA50; (3) RSI14 still < 70; (4) entry not within 3% of a
+> print >5% up on the day; (5) `corr-gate.mjs CMCSA` still passes;
+> (6) re-run `size.mjs` on the live price so the 20% cap binds correctly.
+
+Weekly trade count **0/3** (week of Nov 23). Positions **0/6**. Correlation gate
+**pass** (`corr-gate.mjs`: "fewer than 2 open positions"). Deployed 0% vs the
+75–85% rule — **100th straight session out of compliance**.
+
+**Two items still open for the operator, both unresolved for 100+ sessions:**
+1. **Equity baseline mismatch** — account equity is **$100,000**, the mandate says
+   **~$10,000**. Flagged Jul 27, never reconciled. Every position size in this log,
+   including CMCSA's 778 sh / $20,002, is computed off $100k and is **10x too large**
+   if the $10k mandate is the real one.
+2. **The 10%-stop / 2:1-R:R conflict, now quantified above.** The two rules
+   together eliminate every trending leader in the universe and admit only names
+   ~21% below their highs. Three ways out, operator's call: (a) permit the Entry
+   Checklist's **7% stop** for 2:1 at +14%; (b) lower the R:R floor to **1.5:1**
+   (+15% at a 10% stop — which *would* admit V, MA, XLP, ZIM); (c) accept that the
+   rulebook is a momentum system whose stop is sized for 8–20% ATR names and
+   deliberately filters out 2% ATR mega-caps. **No trade will clear the current
+   gate in a defensive-rotation tape without one of these.**
