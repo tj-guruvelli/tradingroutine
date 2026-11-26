@@ -25288,3 +25288,38 @@ Weekly trade count **0/3** (week of Nov 23). Positions **0/6**. Correlation gate
    rulebook is a momentum system whose stop is sized for 8–20% ATR names and
    deliberately filters out 2% ATR mega-caps. **No trade will clear the current
    gate in a defensive-rotation tape without one of these.**
+
+### Tooling note — ClickUp notification channel is DEAD (new finding, 2026-11-26)
+
+`scripts/clickup.sh` **fails with HTTP 400** on every call. The wrapper's own
+env guard passes (all three vars are non-empty, so it does *not* take the
+local-fallback branch and does *not* print "not set"), but the ClickUp API
+rejects the request:
+
+```
+{"err":"Invalid workspace ID","ECODE":"SHARD_034"}
+```
+
+Root cause: **the ClickUp credentials in this environment are placeholders, not
+real values.** `CLICKUP_API_KEY` begins with `you` (i.e. a
+`your_..._here`-style placeholder); `CLICKUP_WORKSPACE_ID` is 30 characters, but
+real ClickUp workspace IDs are short numeric strings. A `GET /chat/channels`
+probe returns the same error, confirming it is the workspace ID and not the
+message payload. **This is not a formatting or escaping problem** — a minimal
+`{"content":"test"}` body fails identically.
+
+Impact: **`routines/pre-market.md` STEP 5 cannot work as written**, and the
+prompt's own failure path ("send one ClickUp alert naming the missing var") is
+unreachable, because the only channel it names is the broken one. The env guard
+gives a false pass: it checks for *emptiness*, never for validity.
+
+Mitigation applied this run: **sent via `scripts/telegram.sh` instead, which
+succeeded** (`{"ok":true,...,"message_id":456}`, chat "TJ"). CLAUDE.md already
+designates Telegram as the **primary** channel and ClickUp as the fallback, so
+the routine doc is inconsistent with CLAUDE.md on this point.
+
+**Operator action:** either supply real ClickUp credentials or change
+`routines/pre-market.md` STEP 5 to call `telegram.sh` (with `clickup.sh` as the
+fallback, matching CLAUDE.md). Recommend also hardening `clickup.sh` to treat a
+`your_*`-prefixed key as unset so it takes the local-fallback branch instead of
+failing silently with a 400.
