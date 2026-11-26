@@ -25485,3 +25485,73 @@ real pre-market will supersede is not justified.
 STEP 7 again required `git add -f` for the data file — the `.gitignore:23`
 `/data/` defect written up under the 07:11 entry is still unfixed, and STEP 7's
 literal `&&`-chained command still aborts before the commit without it.
+
+### Gappers (auto-scan 09:09 ET, cloud) — NO HITS, MARKET CLOSED (Thanksgiving)
+
+Run 3 of 4 today. **Zero tickers at the 5.0% gate** across 52 watchlist symbols
+returning a trustworthy price. Market **CLOSED** — re-verified live this run via
+Alpaca `/v2/clock` (`is_open: false`, `timestamp 2026-11-26T09:09:26-05:00`) and
+`/v2/calendar?start=2026-11-24&end=2026-11-30`, which returns sessions for
+**11/24, 11/25, 11/27, 11/30 and skips 2026-11-26 entirely**. `next_open`
+**2026-11-27 09:30 ET**, early close **13:00 ET** (`session_close 1700`).
+
+**Identical to both earlier runs — verified, not assumed.** Re-scanned at
+`GAP_THRESHOLD=0.0` and diffed all 15 reference rows against the stored 08:10
+file: symbol, `gap_pct` and `prev_close` match on every row (max |gap| 3.93%,
+DPRO). The tape is closed, so no new prints can arrive and run 4 (~10:00 ET)
+will reproduce the same frozen snapshot.
+
+Prices remain **Wednesday 11/25 after-hours prints (19:48–19:59 ET)** against
+Wednesday's regular-session close — not a Thursday pre-market gap, none exists.
+Re-confirmed from raw snapshots this run (`DPRO latestTrade
+t=2026-11-26T00:48:00Z p=2.2242, dailyBar=2026-11-25 c=2.14`; `NBIS
+t=2026-11-26T00:59:56Z p=88.24, dailyBar=2026-11-25 c=84.99`). The UTC-date
+freshness guard documented in the 07:11 entry is the cause and still stands.
+
+Top of the sub-threshold list, unchanged from 07:11 and 08:10 — mild risk-on
+bid in AI infra and space/defense, now ~13 hours stale:
+
+| Sym | $Last (AH) | vs Wed close | Prior-session vol |
+| --- | ---------- | ------------ | ----------------- |
+| DPRO | 2.22 | +3.93% | 850,086 |
+| NBIS | 88.24 | +3.82% | 40,807,368 |
+| ASTS | 26.98 | +3.69% | 26,717,999 |
+| RDW | 6.08 | +3.23% | 12,726,688 |
+| OPEN | 1.30 | +3.17% | 50,263,969 |
+| AMPX | 5.87 | +3.16% | 6,599,558 |
+| BE | 157.71 | +3.15% | 18,666,762 |
+
+No catalyst research run (STEP 2/3) — **deep-dive cap 5 noted explicitly, but
+with zero tickers past the 5.0% gate there is nothing to deep-dive and ranks
+6–10 do not exist.** No Apify budget spent annotating day-old moves that
+Friday's real pre-market will supersede.
+
+No notification sent: STEP 6 gates on `hits > 0 OR scan errored`, and this run
+is zero hits with no error. (ClickUp is dead as of today's earlier finding;
+Telegram is configured and was left unused by design, not by failure.)
+
+#### New tooling note — cross-checks MUST pass `feed=delayed_sip` (2026-11-26)
+
+While verifying the frozen snapshot, a bare
+`/v2/stocks/snapshots?symbols=...` call with **no `feed` param** appeared to
+contradict the scan outright — different timestamps *and* different prices:
+
+| Sym | delayed_sip (what the scanner sees) | bare call / IEX |
+| --- | ----------------------------------- | --------------- |
+| NBIS | `t=2026-11-26T00:59:56Z p=88.24`, dailyBar c=84.99 | `t=2026-11-25T21:53:33Z p=84.60`, dailyBar c=84.85 |
+| ASTS | `t=2026-11-26T00:59:21Z p=26.98`, dailyBar c=26.02 | `t=2026-11-25T20:59:48Z p=26.025`, dailyBar c=26.025 |
+| DPRO | `t=2026-11-26T00:48:00Z p=2.2242`, dailyBar c=2.14 | `t=2026-11-25T20:59:10Z p=2.16`, dailyBar c=2.16 |
+
+`scripts/gappers-alpaca.sh:37` sets `FEED="${ALPACA_FEED:-delayed_sip}"` and
+passes it on line 87. The bare call resolves to **IEX**, whose last prints stop
+at Wednesday's regular close (~16:00–16:53 ET) and whose `dailyBar.c` differs
+from SIP's. Note this contradicts the script's own comment at line 34, which
+claims omitting `feed` "resolves to 15-min-delayed SIP" — it does not; it
+resolves to IEX. Not a scanner bug and nothing to fix in the scan path, but it
+is a live trap for exactly this kind of verification: **any manual
+cross-check of this routine's numbers must pass `feed=delayed_sip`** or it will
+look like the scan is reporting phantom prices. Also worth correcting that
+stale comment on line 34.
+
+**No orders. Research only** (STEP 8). Next real session: **Friday 2026-11-27,
+09:30–13:00 ET (half day)**.
