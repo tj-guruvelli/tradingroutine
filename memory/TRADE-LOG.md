@@ -3192,3 +3192,10 @@ Weekly trade count: 0/3 (week of Nov 23). 101st trading day since launch
 live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R
 structural conflict both still open, operator review pending. Half session
 closes 13:00 ET today; no EOD/weekly-review action pending from this run.
+
+### Nov 27, EOD Snapshot (Day 101, Friday, half session, cloud run)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** +$0.00 (0.00%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Flat day, zero trades, zero open positions — confirmed via `alpaca.sh account`/`positions`/`orders` (equity/cash unchanged at $100,000.00, `balance_asof: 2026-11-25`, buying power $400,000, 0 positions, 0 open orders). Matches the midday-scan snapshot exactly; no pre-market, market-open, or midday action today cleared the gate (BKSY/AMPX both failed Confluence). Trades today: none. Weekly trade count: 0/3 (week of Nov 23). Day counter holds at 101 — 165th+ straight no-trade session; confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow: weekend, no session — next trading day Mon Nov 30, weekly-review due this afternoon/Friday per schedule.
