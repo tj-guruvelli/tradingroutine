@@ -3168,3 +3168,27 @@ market-open run re-checks APT and the live setup-scan + gappers pool.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Market closed all day (Thanksgiving) — confirmed via `alpaca.sh account`/`positions`/`orders`: equity/cash unchanged at $100,000.00 (`balance_asof: 2026-11-25`), 0 positions, 0 open orders. Pre-market, market-open, and midday runs all logged no action today for the same reason. Trades today: none. Weekly trade count: 0/3 (week of Nov 23). Day counter holds at 100 — no trading session elapsed. 164th+ straight no-trade session; confirmed-live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R structural conflict both still open, operator review pending. Tomorrow (Fri 11/27, half session, early close 13:00 ET): market-open run re-checks APT against a fresh daily bar and scans the live setup-scan + gappers pool for a candidate clearing the full gate.
+
+### Nov 27, Midday Scan (Day 101, Friday, half session, local run)
+**No action — zero open positions, nothing to cut/tighten/re-check.**
+
+STEP 1: Memory read — TRADING-STRATEGY rules unchanged. Today's RESEARCH-LOG
+pre-market/gappers entries (BKSY, AMPX deep dives) logged **no action** — both
+counter-trend bounces below MAs on thin holiday-adjacent volume, neither
+cleared Confluence. 0/3 weekly trades still open.
+
+STEP 2: `alpaca.sh positions` → `[]`, `alpaca.sh orders` → `[]`. `account`:
+equity/cash $100,000.00 flat (`balance_asof: 2026-11-25`), buying power
+$400,000.
+
+STEP 3: Cut losers — N/A, no open positions.
+STEP 4: Tighten winners — N/A, no open positions.
+STEP 5: Thesis check — N/A, no open positions.
+STEP 6: Intraday research — not triggered, no held position moving.
+STEP 7: No notification — no action taken (local run).
+
+Weekly trade count: 0/3 (week of Nov 23). 101st trading day since launch
+(Jul 9), still zero entries — 165th+ straight no-trade session. Confirmed
+live-vs-$10k-baseline mismatch (flagged Jul 27) and the 10%-stop/2:1-R:R
+structural conflict both still open, operator review pending. Half session
+closes 13:00 ET today; no EOD/weekly-review action pending from this run.
