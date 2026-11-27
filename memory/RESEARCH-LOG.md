@@ -26443,3 +26443,18 @@ native `WebFetch` against `browse-edgar` instead. Fix: that header value should 
 from an environment variable rather than being hardcoded in the script. **No Yahoo data
 in this entry** — the `-site:` suffix plus `blockedDomains` was applied to every query;
 no finance.yahoo.com URL surfaced or was cited.
+
+### Setup Scan (15:32 ET, cloud)
+
+Full-universe scan, 60/60 symbols checked, 0 errors. `grade_a_possible: false` —
+15:32 ET is outside the 10:00-15:30 ET intraday-breakout window, so Setup A was not
+evaluated this run (`setup_a_skipped_reason: "outside 10:00-15:30 ET"`); a 0-grade-A
+result here reflects that window miss, not an absence of breakouts. 2 grade-B hits.
+
+| TICKER | GRADE | SETUP(S) | TIMEFRAME | TRIGGER |
+|---|---|---|---|---|
+| SYNA | B | Momentum confluence | daily swing | px $119.36 > SMA200 $105.56, RSI 51.8, ADX 24.7, EMA9 $116.96 > EMA21 $116.81 |
+| APT | B | Momentum confluence | daily swing | px $4.94 (SMA200 $5.29), RSI 47.7, ADX 34.2, EMA9 $5.96 > EMA21 $5.89 |
+
+No grade-A hits → no Telegram alert (rule: notify only on >=1 grade-A hit). Candidates
+only — no orders placed. Saved to `data/setup-scan_cloud_2026-11-27_1532ET.json`.
