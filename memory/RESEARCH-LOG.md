@@ -25650,3 +25650,199 @@ Same two B-grade hits as the 15:37 ET run this session (static last-close data).
 Candidates are B-grade scan output only, saved to
 `data/setup-scan_cloud_2026-11-26_1732ET.json` for `market-open.md` to pick up
 next session — no orders placed (research-only routine).
+
+## 2026-11-27 — Pre-Market Research (Day 101, Friday, HALF SESSION, cloud run)
+
+Run time **06:07–06:35 ET**. **Market is OPEN today, 09:30–13:00 ET (early close,
+Black Friday half session)**; bond market closes 14:00 ET. First tradeable session
+since Wed 11/25 — Thanksgiving closure confirmed in yesterday's entry via
+`/v2/calendar` (`next_open` 2026-11-27 09:30 ET, early close 13:00 ET), and the
+13:00 ET close re-confirmed today from NYSE/Nasdaq hours reporting. Day counter
+advances to **Day 101**.
+
+Research tools: **Apify `apify--web-search` partially DOWN this run** — 3 of 6 calls
+returned HTTP 200 in ~46–53s; **3 timed out at the 60s MCP ceiling** (today's
+catalysts, econ calendar, selloff drivers), re-sourced via native `WebSearch` per
+STEP 3's fallback clause. The 3 that did return were **stale and Yahoo-contaminated**:
+undated/multi-year-old pages, and 3 of 6 VIX results resolved to finance.yahoo.com /
+uk.finance.yahoo.com / sg.finance.yahoo.com **despite the `-site:` suffix** — all
+**DISCARDED, none cited**; VIX re-sourced from Cboe-backed reporting instead. Adding
+`blockedDomains` on top of the suffix is the only thing that actually holds; the
+suffix alone does not. `mcp__Apify__apify--rag-web-browser` **still does not exist in
+this session (8th consecutive run)** — `routines/pre-market.md` STEP 3 names a tool
+that has never been available here and should be corrected to
+`apify--web-search` / `apify--web-fetch`.
+`mcp__tradingview-data__*` **not registered in this cloud session** — all technicals
+(Wilder ATR14 / RSI14, SMA20/50/200) computed locally from Alpaca bars.
+`alpaca.sh` has **no `clock`/`calendar` subcommand** (usage line lists only
+account|positions|position|quote|bars|crypto-bars|orders|order|cancel|cancel-all|close|close-all)
+— prior entries citing `/v2/clock` did not go through the wrapper. `alpaca.sh bars`
+still hardcodes **`feed=iex`/`adjustment=raw`** (known defect, unfixed).
+**No Yahoo data in this entry.**
+
+### Account snapshot
+| Field | Value |
+|---|---|
+| Equity | **$100,000.00** |
+| Cash | **$100,000.00** (100%) |
+| Buying power | $400,000 (regt $200,000; non-marginable $100,000) |
+| Positions | **0** |
+| Open orders | **0** |
+| Day-trade count | **0** (field absent from `/v2/account`; zero trades ever placed) |
+| `balance_asof` | 2026-11-25 |
+| Deployed | **0%** vs the 75–85% rule — 101st straight session out of compliance |
+
+Verified live via `alpaca.sh account` / `positions` / `orders`. All 6 required env
+vars confirmed `set` before any wrapper call. Endpoint = `paper-api.alpaca.markets`
+(PAPER). No held tickers, so STEP 3's holdings-news query is **N/A**.
+
+### Market context — Wed 2026-11-25 close + Friday pre-market
+
+**The rulebook's long-bias filter now fails at index level: SPY *and* QQQ both closed
+below their 200-day SMA, into a Fed that is ~100% priced to HIKE on Dec 8–9.**
+
+| Proxy | Close | 1d | 5d | 20d | vs SMA200 | RSI14 | ATR% |
+|---|---|---|---|---|---|---|---|
+| SPY | 716.74 | -0.30% | -1.86% | **-7.19%** | **-2.24%** | 39.7 | 2.14% |
+| QQQ | 633.92 | -0.66% | -3.89% | **-12.63%** | **-7.25%** | 38.3 | 3.35% |
+| IWM | 268.84 | +0.61% | -0.48% | -4.43% | **-3.84%** | 44.9 | 2.17% |
+| DIA | 501.29 | +0.30% | -0.08% | -4.45% | **-1.24%** | 43.5 | 1.81% |
+| TLT | 82.23 | +0.91% | +2.52% | +1.51% | -2.15% | 62.5 | 0.96% |
+| NVDA | 149.32 | **-3.96%** | -1.02% | **-30.66%** | **-26.40%** | 37.5 | **8.93%** |
+| GLD | 327.46 | +0.61% | -4.03% | **-12.33%** | **-18.91%** | 31.6 | 2.57% |
+
+- **Friday pre-market: sharply higher.** NDX futures **+2.9%**, SPX **+1.7–1.8%**,
+  DJIA **+0.87%** (as of 01:41 ET). Relief bid as the AI complex stabilizes.
+  Alpaca pre-market *quotes* are unusable this run — `quote` returns Wed 16:00 ET
+  (21:00 UTC) closing-auction prints with nonsense spreads (SPY bid 696.33 / ask
+  738.69). Futures levels are from reporting, not from our own feed.
+- **VIX 28.29** at the 11/25 close (+7.32% from 26.36), intraday high ~34.95;
+  11/20 close 35.89 was the 52-wk high (range 13.47–35.89). Cboe-backed. Our own
+  proxy agrees: **VIXY 23.29**, up from 16.97 on 11/11. Elevated-stressed, not panic.
+  Dec VIX futures ~23.73 — **backwardation**, i.e. the market expects vol to fall.
+- **Oil firming:** WTI **~$84.9–85.1** (TradingEconomics 84.85, Macrotrends 84.88,
+  Investing.com 84.92 — tight agreement). **Brent is a genuine data gap: $90.97
+  (Investing.com) vs $96.33 (TradingEconomics)**, a ~$5 spread between two normally
+  reliable sources — logged as a range, not a print. Our own proxy: **USO +4.84%
+  over 11/24–11/25** to 139.89, confirming the bid.
+- **Drivers (verified, not assumed):** (1) **Jensen Huang reinstated as NVDA CEO
+  11/23** — confirmed from the **SEC 8-K** (board voted unanimously; 8-K states the
+  board took input from senior US government levels and found no national-security
+  risk) plus CNN/CNBC. He had resigned 11/12 (CFO Colette Kress interim). Our bars
+  show the move exactly: **125.65 → 165.185 (+31.5%) on 11/23**, then faded to
+  149.32 by 11/25. (2) **December Fed rate HIKE** — CME FedWatch ~99.8–100%, Kalshi
+  93%, OIS ~96% for 25bp at the **Dec 8–9** meeting; target range 3.75–4.00% → 
+  4.00–4.25%. **Waller has floated a half-point move.** One source prices a 64%
+  chance of ≥50bp cumulative by the Jan 27, 2027 meeting. (3) AI-capex/regulation
+  doubts. (4) **November on pace for the worst month for US equities since 2008.**
+- **Today's calendar is thin:** Census **October trade deficit + business inventories
+  at 08:30 ET** (goods deficit consensus ~$133B vs $135.1B prior); one source counts
+  no major releases at all. **No major earnings** — next notable are CRM (Dec 2) and
+  AVGO (Dec 9).
+
+### Sector momentum (Alpaca closes, 11/25)
+
+| Leading (20d) | 20d | YTD | vs SMA200 | | Lagging (20d) | 20d | YTD | vs SMA200 |
+|---|---|---|---|---|---|---|---|---|
+| XLP staples | **+6.23%** | +18.8% | +8.46% | | XLK tech | **-18.46%** | +8.0% | **-9.16%** |
+| XLRE real est. | +4.14% | +8.7% | +0.70% | | XLE energy | -11.07% | **+33.4%** | +1.74% |
+| XLU utilities | +2.60% | +1.0% | -1.64% | | XLI industrials | -3.34% | +3.1% | -5.93% |
+| XLV health | +2.14% | +18.1% | **+13.85%** | | XLB materials | -1.33% | +11.0% | -0.06% |
+| XLC comm. | +2.04% | **-9.9%** | -5.85% | | XLY discretionary | +1.88% | -0.8% | +1.86% |
+
+**Read:** textbook defensive rotation. Staples/health/utilities/REITs lead, tech is
+in an outright bear (XLK -18.5% in 20d, 9.2% below its 200-SMA). Only **XLP, XLV,
+XLF, XLY, XLRE, XLE** still sit above their 200-SMA. Per the strategy's cycle table
+this is **late cycle (inflation rising)** → Energy/Materials/Financials, with the
+defensives already bid. **No hedge is working**: GLD is 18.9% below its 200-SMA
+(YTD -17.8%), while TLT is bid (+2.52% 5d) *despite* rising hike odds — those two
+cannot both persist, and that tension is the thing to watch into Dec 8–9.
+
+### Candidate re-check — and a scanner data bug
+
+Pool = the two B-grade hits carried from `data/setup-scan_cloud_2026-11-26_1732ET.json`.
+
+**APT (Alpha Pro Tech) — DATA BUG FOUND, then rejected on liquidity.**
+The last three logs rejected APT because "px $4.92 < SMA200 $5.29". **That price was
+wrong.** APT's real 11/25 daily close is **$5.79**; SMA200 is **$5.29**, so APT is
+**+9.40% ABOVE its 200-SMA and PASSES the long-bias filter** — the opposite of the
+logged verdict. Root cause: `$4.92` is the **stale IEX closing-auction quote bid**
+(`alpaca.sh quote APT` returns `bid 4.92 / ask 0 / size 0`, timestamped
+2026-11-25T21:00:05Z) — the setup-scan graded off a quote bid with a **zero-size,
+zero-price ask** instead of the daily bar close. A ~15% price error in the scanner's
+grading input. **Fix needed in the setup-scan price source** (use the daily bar
+close, or reject quotes with zero-size asks).
+**Rejected anyway — liquidity.** IEX volume over the last 12 sessions is **240–3,887
+shares/day, with 11/17 printing literally 0**. A 1% ATR-sized position is untradeable
+in that book at any price we'd accept. **NO-GO.**
+
+**SYNA (Synaptics) — passes the filters, fails the entry checklist.**
+Px $116.65; above SMA200 $105.56 (**+10.51%**) and SMA50 $113.58; marginally below
+SMA20 $117.30. RSI 51.8. Genuine relative strength — it traded a **115.67–118.12
+range for 12 straight sessions while QQQ fell 12.6%**. But **ATR14 is $1.33 (1.14%)**
+and there is **no documented catalyst**, so it fails the confluence rule (needs ≥2
+indicators AND ≥1 catalyst) and cannot be given a 2:1 R:R stop/target that isn't
+pure invention. **NO-GO today** — worth a catalyst check if it breaks $118.12 on volume.
+
+### Trade ideas (with catalyst + levels) — none triggered today
+
+1. **XLP (Consumer Staples) — the only rule-compliant momentum long.**
+   Catalyst: Fed hiking Dec 8–9 (~100% priced, 50bp tail per Waller) + worst November
+   since 2008 → defensive rotation, already confirmed by price, not forecast.
+   Setup: +6.23% 20d vs SPY -7.19%; above SMA20/50/200 (+8.46% vs SMA200); RSI 61.2.
+   Entry: pullback to SMA20 **$90.89–91.50**. Stop **$88.40** (~-2.8%, ~1.7 ATR).
+   Target **$98.00** (≈2.6:1). Trigger: entry only on a touch of that zone — do not
+   chase $92.28.
+2. **XLV (Healthcare) — second defensive, deepest 200-SMA cushion.**
+   Catalyst: same rotation; XLV held **+2.14% over 20d while XLK fell 18.5%**.
+   Setup: +13.85% above SMA200, RSI 53.2, YTD +18.1%. Entry: hold above SMA20
+   **$184.86**. Stop **$177.40** (SMA50, -4.0%). Target **$196.00** (≈2.3:1).
+3. **XLE (Energy) — WATCH, not a buy.**
+   Catalyst: WTI firming to ~$85, USO +4.8% in two sessions; late-cycle sector per
+   the strategy table; YTD +33.4% is the best of any sector and it is still above its
+   200-SMA (+1.74%). But **-11.07% over 20d and below both SMA20 $63.37 and SMA50
+   $64.43** — short-term momentum is broken. No entry until it reclaims **$63.37**
+   on volume. Then: stop **$59.60** (below SMA200), target **$70.00**.
+
+**Rule conflict, still open:** all three stops above are 2.8–4.0%, sized off ATR as
+the rulebook requires. The mandatory **10% trailing GTC stop** would sit 4–6 ATR away
+on these low-vol ETFs and break the 2:1 R:R math it is paired with. This is the same
+**10%-stop vs 2:1-R:R structural conflict flagged since Jul 27** — unresolved, and it
+is the binding reason a compliant entry keeps failing to exist. **Operator decision
+required.**
+
+### Risk factors — today
+- **Half session (13:00 ET) + post-holiday thin liquidity** — moves exaggerate on
+  low volume and fills are poor. Reporting notes that in the last four cases where
+  this tape accelerated into a holiday close, at least two reversed within 48h.
+- **The +1.7–2.9% futures pop is a bounce inside a downtrend.** QQQ needs **+7.8%**
+  just to reclaim its 200-SMA; SPY needs **+2.3%**. Nothing structural has repaired.
+- **Dec 8–9 FOMC is the real event.** A 25bp hike is fully priced, so the risk is
+  asymmetric to a **50bp** surprise (Waller) or hawkish guidance.
+- **Single-stock AI vol is extreme** — NVDA ATR 8.93%, -26.4% below its 200-SMA,
+  and the +31.5% reinstatement spike has already given back more than half. No edge
+  in chasing either direction.
+- **No functioning hedge** (GLD broken, TLT/hike-odds tension unresolved).
+- **Data quality:** IEX feed only; pre-market quotes unusable (stale closing-auction
+  prints, nonsense spreads); Brent unresolved $91–96; Apify 50% timeout rate and
+  Yahoo-leaking. Do not size a trade off any single number in this entry.
+
+### DECISION: **HOLD — no orders.**
+Rationale, in rule order: (1) the **200-SMA long-bias filter fails on SPY, QQQ, IWM
+and DIA simultaneously** — rule 7 of the Indicator Canon permits longs only above the
+daily 200-SMA, and the broad tape is below it; (2) the Fed is hiking into a tape that
+has had its worst November since 2008, with 50bp tail risk; (3) both scanner
+candidates are **NO-GO** — APT on liquidity (hundreds of shares/day), SYNA on a
+missing catalyst; (4) the three ideas above are **pullback-triggered and none is at
+its level** — XLP at $92.28 is above the $90.89–91.50 entry zone, XLE has not
+reclaimed $63.37; (5) a half session with bad fills is the worst possible venue for a
+first entry. **Patience > activity.** Weekly trade count **0/3** (week of Nov 23).
+
+Carried forward, unresolved, operator review pending: the **confirmed-live-vs-$10k
+baseline mismatch** (account is $100k, CLAUDE.md says ~$10k — flagged Jul 27; note
+PDT does not actually bind at $100k equity), the **10%-stop/2:1-R:R conflict** above,
+**0% deployed vs the 75–85% rule for 101 sessions**, the **new setup-scan stale-quote
+price bug**, `routines/pre-market.md` naming a **nonexistent Apify tool**, and
+`scripts/gappers-alpaca.sh:34`'s stale `feed` comment. Next: market-open run against
+Friday's live scan; **Monday 11/30 is the next full session** and the last full week
+before Dec 8–9 FOMC.
