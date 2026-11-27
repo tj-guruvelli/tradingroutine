@@ -26305,3 +26305,141 @@ logged DEAD on 2026-11-26). Sent successfully as **3 parts** (2,254 / 2,272 / 1,
 message_ids 469+. **`scripts/telegram.sh` should split at ~3,900 chars**; until it does,
 every gappers run that emits the full STEP-6 format will 400 on the first attempt and
 silently lose the alert if the operator is not watching the console.
+
+### Gappers (auto-scan 10:09 ET, cloud)
+
+Run 3 of 4 today (08:00/09:00/10:00/11:00 ET cadence). **Market is OPEN** — half
+session, early close 13:00 ET, `is_open: true` at scan time. Thu 11/26 was the
+Thanksgiving holiday, so `gap_pct` is measured against the **2026-11-25** close and is
+an intraday change, not a true pre-open gap.
+
+Raw hits at `GAP_THRESHOLD=5.0`: **6**. Qualified after filters (|gap| ≥ 5.0, price ≥
+$3.00, vol ≥ 50,000): **2**. Dropped on the $3 price floor: DPRO ($2.30, +7.48%), AGMH
+($0.3724, +6.34%, also vol 4,926), NIO ($2.8577, +6.23%), OPEN ($1.335, +5.95%).
+
+**Deep-dive cap is 5; only 2 tickers qualified, so both got the full deep dive.** No
+ranks 6-10 exist today — nothing was silently dropped from the deep dive.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | BKSY | 17.04 | +6.67 | 208,501 | No news 11/25-11/27; bounce off the 11/25 low after a 31% three-week de-rate despite a Nov 5 Q3 beat-and-raise |
+| 2 | AMPX | 5.99 | +5.29 | 752,478 | No news today; bounce off the 11/25 one-year low after a post-Q3 de-rate that cut 46% off the 60-day high |
+
+**Data-source note.** `scripts/gappers-alpaca.sh` still reads **`feed=iex`** (known
+defect, unfixed — logged 2026-11-26). The IEX prices above are the scan's own output as
+required by STEP 1, but they understate both names. Re-verified against
+**`feed=sip`/`adjustment=all`** at 10:13 ET:
+
+| Sym | IEX scan | SIP last | SIP prev close | SIP gap% | SIP vol | % of 20d avg vol |
+| --- | -------- | -------- | -------------- | -------- | ------- | ---------------- |
+| BKSY | 17.035 / +6.67% | 17.21 | 15.97 | **+7.76** | 322,932 | **27%** |
+| AMPX | 5.9912 / +5.29% | 6.07 | 5.69 | **+6.68** | 978,186 | **16%** |
+
+All technicals and deep-dive fields below use SIP.
+
+| Sym | ATR14 | ATR% | SMA20 | SMA50 | 60d high | 60d low | off high | off low |
+| --- | ----- | ---- | ----- | ----- | -------- | ------- | -------- | ------- |
+| BKSY | 1.81 | 10.5% | 19.81 | 20.08 | 24.92 | 14.62 | −30.9% | +17.7% |
+| AMPX | 0.72 | 11.8% | 7.52 | 8.41 | 11.23 | 5.15 | −45.9% | +17.8% |
+
+**Both names bottomed on the same session (11/25) and are bouncing ~18% off their lows
+by the same amount.** That co-movement is the single most important read of this scan:
+this is a market-wide speculative-growth/space bounce, not two independent setups. Both
+sit below SMA20 *and* SMA50 — every qualifier today is counter-trend and fails the
+Confluence rule on trend alignment.
+
+#### Deep dive: BKSY $17.21 +7.76%
+
+- **Catalyst:** No fresh company-specific catalyst today. BlackSky's last material news
+  was strongly positive: the Nov 5 Q3 2026 report showed revenue of $42.8M (+118% YoY vs
+  $39.55M consensus), GAAP EPS $0.10 against a −$0.22 estimate, net income $18.5M vs a
+  $15.3M loss a year earlier, $231M cash, and **raised** FY revenue and adj-EBITDA
+  guidance. A seven-figure Assured contract with a new international ministry of defense
+  followed ~Nov 10. Despite both, the stock fell from a 60-day high of $24.92 to a $14.62
+  low on 11/25 in a broad risk-off de-rating of space names. Today is the second up-day
+  off that low. Most recent 424B5 shelf takedown is dated **2026-05-22**, so no equity
+  offering explains the November decline.
+- **Why:** Short-covering and dip-buying off a capitulation low, not a response to news.
+  The beat-and-raise is three weeks stale and was already sold through; what changed is
+  that selling pressure exhausted at $14.62 and a holiday-thinned tape lets small buy
+  flow move price a long way.
+- **Impact:** Low-conviction technical bounce, not sustainable. Volume is the tell —
+  322,932 shares by 10:13 ET vs a 1,190,397 20-day average (**27% of normal**) in a
+  session that closes at 13:00. A genuine reversal off a multi-week low needs
+  above-average volume, not a quarter of it. Price remains 31% below the 60-day high and
+  under both SMA20 ($19.81) and SMA50 ($20.08) — trend intact to the downside. ATR14 is
+  $1.81 (10.5%), so a 7.8% day is **less than one ATR** and inside normal noise.
+  Read-through: AMPX bottomed the same day and is bouncing the same amount.
+- **Horizon:** **SHORT_TERM** — no new catalyst, below both MAs, sub-1-ATR move on 27%
+  of average volume; the durable part of the thesis was already rejected by the tape for
+  three weeks, so there is no structural trigger to carry past the session.
+- **Opportunity cost:** Account is **100% cash, 0 positions, 0 open orders** — displaces
+  no existing holding. Binding constraints are the 3-trades-per-week budget and the
+  Confluence rule, which this fails on trend. **R:R does not clear cleanly:** a compliant
+  10% trailing stop from $17.21 sits at $15.49, risking $1.72/share (0.95 ATR), so the
+  2:1 minimum needs **$20.65** — landing directly in the SMA20/SMA50 resistance band at
+  $19.81/$20.08. The reward leg must punch through three weeks of overhead supply to pay.
+  ATR sizing permits 552 shares (~$9,500, 9.5% of equity), inside the 20% cap. There is
+  no higher-ranked alternative on today's list — this *is* rank 1 of 2, and rank 2 is a
+  worse version of the same trade.
+
+#### Deep dive: AMPX $6.07 +6.68%
+
+- **Catalyst:** No fresh catalyst; a third-party finance tracker explicitly logged "no
+  new macro, sector, or company-specific catalysts detected." The relevant history is the
+  Nov 10 Q3 2026 print: sales $39.15M with the net loss narrowed, but **adjusted EBITDA
+  swung negative to −$1.0M from +$0.2M** a year earlier — the line most coverage blames
+  for the de-rate. The stock then fell in steps: −10.5% on 11/20, a new one-year low on
+  11/24, −7.87% to ~$5.27 intraday on 11/25, with **no company release attached to any of
+  them.** Provenance note: the Manatee Research short report alleging ≥$29M of illusory
+  LEV orders, a "Potemkin village" partner network and bill-and-hold accounting is dated
+  **May 2026, not November** — it is background on the high short base (~21% of float per
+  one secondary source), not today's catalyst, and must not be cited as such.
+- **Why:** Same mechanism as BKSY and no more. Selling exhausted at a one-year low and a
+  heavily shorted high-beta small cap snapped back on thin holiday flow. With a large
+  short base, modest buy pressure forces covering, exaggerating the percentage move
+  relative to the dollar flow behind it. Nothing reflects a change in the business.
+- **Impact:** One-day headline-less spike, high odds of mean-reverting. Volume is the
+  weakest part of the setup — 978,186 vs a 6,121,759 20-day average (**16% of normal**),
+  the lowest-conviction bounce of the two. Price sits 46% below the 60-day high and far
+  under SMA20 ($7.52) and SMA50 ($8.41). ATR14 $0.72 (11.8%), so today's 6.7% is roughly
+  **half an ATR** — not even an outsized day for this name. Bottomed the same 11/25
+  session as BKSY and is bouncing the same ~18%, marking this as market-wide. Unresolved
+  May short-seller allegations are a standing overhang capping a no-news bounce.
+- **Horizon:** **SHORT_TERM** — half-ATR move, no catalyst, 16% of average volume, 46%
+  below the 60-day high, below both MAs, unresolved fraud allegations outstanding.
+- **Opportunity cost:** Nothing to displace (0 positions, 100% cash). Cost is one of three
+  weekly trades on the weaker of two already-weak setups, failing Confluence on trend
+  exactly as BKSY does but with a worse volume profile. **R:R arithmetic is nominally the
+  better of the two but the quality is worse:** 10% trail from $6.07 sits at $5.46,
+  risking $0.61/share (0.85 ATR), and the 2:1 target of **$7.29** does clear *below* SMA20
+  resistance at $7.52 — unlike BKSY the reward leg is not blocked by the MAs. ATR sizing
+  permits 1,396 shares (~$8,475, 8.5% of equity), within the cap. The problem is the stop:
+  **$5.46 is only 6% above the 11/25 one-year low of $5.15 on a name with 11.8% daily
+  ATR**, so normal noise takes out the stop without the thesis being wrong, and the
+  Manatee allegations remain an unquantified tail risk. Directly displaced by BKSY, which
+  has real revenue growth and $231M cash behind it rather than an open fraud allegation.
+
+**No orders placed (STEP 8).** Research only. Net call: **no action** — every qualifier
+today is a counter-trend bounce below both MAs on 16-27% of normal volume in a half
+session, and neither clears the Confluence rule. Not worth one of three weekly trades.
+
+**Corrections to earlier-cited data.** A Finviz-surfaced Zacks snippet claiming BKSY
+"Reports Q3 Loss, Misses Revenue Estimates" is **wrong/stale** — the Nov 5 8-K and
+coverage confirm a revenue *beat* ($42.8M vs $39.55M), positive GAAP EPS ($0.10) and
+*raised* guidance. Similarly, the AMPX short-seller story is a **May 2026** event; two
+aggregators surfaced it undated in a "today's news" context, which would have been a
+fabricated catalyst if taken at face value.
+
+**Tooling notes.** `mcp__Apify__apify--rag-web-browser` **still does not exist in this
+session (8th consecutive run)** — the connector exposes only `apify--web-search` /
+`apify--web-fetch`; `routines/gappers-cloud.md` STEP 2 names a tool that has never been
+available here and should be corrected to `apify--web-search`. This run: 2 of 3
+`apify--web-search` calls returned HTTP 200 in ~47-53s, 1 timed out at the 60s MCP
+ceiling, and `apify--web-fetch` timed out against Benzinga — those three were re-sourced
+via native `WebSearch`/`WebFetch`. `scripts/edgar.sh` was **blocked by the privacy
+plugin** because of how it populates its SEC User-Agent header; EDGAR was queried via
+native `WebFetch` against `browse-edgar` instead. Fix: that header value should come
+from an environment variable rather than being hardcoded in the script. **No Yahoo data
+in this entry** — the `-site:` suffix plus `blockedDomains` was applied to every query;
+no finance.yahoo.com URL surfaced or was cited.
