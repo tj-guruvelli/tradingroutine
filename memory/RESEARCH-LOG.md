@@ -26115,3 +26115,193 @@ Carried forward, unresolved: the **10%-stop vs 2:1-R:R conflict** (today 0.54-0.
 for 101 sessions**, the **nonexistent Apify tool** in `routines/gappers-cloud.md` STEP 2
 (now with every Apify path proven dead), the **Benzinga 403**, and the new
 **`size.mjs` stale-price bug**.
+
+### Gappers (auto-scan 09:09 ET, cloud)
+
+Scan: `GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist` over the 60-ticker
+watchlist (delayed_sip feed, 15-min delayed — market-open/`/trade` MUST re-quote).
+20 rows returned at >=5%; **15 passed** the price>=$3.00 filter (SATL $2.73, RCAT $1.90,
+DPRO $2.31, RR $0.63, NIO $2.86 excluded); **capped at the top 10** by |gap%|. OKLO +5.65,
+AMKR +5.56, KLIC +5.34, RKLB +5.21 and RDW +5.09 ranked 11-15 and were dropped by the cap.
+**Deep dive capped at the top 5** (LUNR, NBIS, AMPX, BE, UMAC) per STEP 3 — ranks 6-10
+(BW, PL, QBTS, BKSY, ONDS) got **quick-scan only**, not silently dropped.
+
+Baseline is **Wed Nov 25's close** (Nov 26 was Thanksgiving, market closed), confirmed
+from the snapshot bar dates themselves: `dailyBar.t = 2026-11-25`, `prevDailyBar.t =
+2026-11-24`, `latestTrade.t = 2026-11-27T13:5x UTC`. The gap math is therefore
+Friday-pre-market vs Wednesday's close, which is correct and not stale.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | LUNR | 9.83 | +7.55 | 12.76M | No Intuitive Machines news Nov 26-27; a 24.75%-shorted space name bouncing off its $8.01 52-week low with the tape. Last items: NASA $10B lunar program slot (Nov 9), Q3 beat (Nov 12, -$0.02 vs -$0.11 est), Mizuho initiation at $15 (Nov 24). |
+| 2 | NBIS | 91.30 | +7.42 | 40.81M | No Nebius news Nov 26-27. Nov 25 was negative: a death cross formed as Microsoft reassessed neocloud projects and Meta explored selling excess AI compute, and the stock fell near its $73.52 52-week low. |
+| 3 | AMPX | 6.10 | +7.21 | 6.60M | No Amprius news Nov 26-27; at its $5.15 52-week low after Q3 (Nov 10) missed and the stock "dived on a wider-than-expected Q3 loss". Last positive item: $75M defense grant for US drone battery production (Sep 28). |
+| 4 | BE | 163.90 | +7.20 | 18.67M | No Bloom Energy news Nov 26-27. Nov 25 was negative: shares fell after Hunterbrook Media alleged Chinese scandium supply routes, compounding AI weakness and tariffs; Nov 24 slid with the broader AI selloff. |
+| 5 | UMAC | 9.68 | +6.71 | 2.58M | No Unusual Machines news Nov 26-27. Nov 24: announced an Investor Day for Dec 3, 2026. Q3 (Nov 5) missed badly (-$0.50 vs -$0.15 est, -233% surprise); near its $7.82 52-week low. |
+| 6 | BW | 3.98 | +6.42 | 4.37M | No Babcock & Wilcox news Nov 26-27; AI-power-adjacent beta bounce. Latest item is a Pomerantz securities class-action investor reminder (Nov 24); Q3 (Nov 9) missed at $0.02 vs $0.03 est. |
+| 7 | PL | 11.26 | +6.13 | 6.72M | Nov 25: "Planet Labs Stock Nears 52-Week Low"; same day the FCC authorized 1 million satellites for in-space data centers (sector read-through). Nov 24: contract expansion with a European defense and intelligence customer. Fiscal-Q3 2027 earnings Dec 10. |
+| 8 | QBTS | 7.43 | +6.13 | 20.38M | Only fresh Nov 27 items are securities class-action lead-plaintiff reminders (Rosen, Kaplan Fox; Dec 14-15 deadlines) — negative, not the driver. The move is quantum-complex beta off a $6.08 52-week low. |
+| 9 | BKSY | 16.90 | +5.82 | 1.41M | Nov 24: acquired EpochGeo for AI-enabled RF, signals and multi-source analytics, and Mizuho initiated at $37. Investor Day Dec 2. Pre-market volume only 6.6K shares (0.5% of its 20-day average) — the thinnest print on the list. |
+| 10 | ONDS | 4.12 | +5.66 | 47.07M | Nov 23: reaffirmed its 2026 revenue target. Q3 (Nov 12) was the strongest on this list — record revenue $167.5M, EPS -$0.10 vs -$0.14 est, FY outlook raised. Repeatedly flagged as a high-short-interest squeeze candidate. |
+
+`Vol` is the **prior completed session's (Nov 25) full-day volume** — Alpaca's snapshot has
+no pre-market volume field, so STEP 1's `premarket_volume >= 50000` filter was not
+applicable from the wrapper. **New this run:** real pre-market volume was recovered for 6
+of 10 from Benzinga and is far more damning than the prior-session figures (see below).
+
+#### The single most important finding
+
+**This is one trade, not ten — and the pre-market volume says even the one is not real
+yet.** The driver is market-wide and verified independently from Alpaca snapshots at
+~08:59 ET: **SPY +1.54%, QQQ +2.22%, IWM +1.35%**. **15 of ~60 watchlist names gapped
+>=5% in the same direction** — that is tape beta, not stock selection. Context: through
+Nov 25 the Nasdaq was *flirting with bear-market territory* as Trump tariffs rattled
+markets and the AI rally unwound (Reuters, Nov 25), and this morning's pre-market
+research entry recorded **SPY and QQQ both below their 200-day SMA into a Fed ~100%
+priced to HIKE on Dec 8-9**. Today is a relief bounce inside a downtrend, on a
+**half session (13:00 ET close)**.
+
+**Not one of the top 5 has company-specific news dated Nov 26 or Nov 27.** Stronger than
+that: for **4 of the 5** the most recent company news is *negative* — NBIS a death cross
+plus Microsoft/Meta demand doubts (Nov 25), BE a short-seller allegation on scandium
+sourcing (Nov 25), AMPX a Q3 miss that took it to a 52-week low (Nov 10), UMAC a -233%
+Q3 EPS surprise (Nov 5). The gaps are being set by the group's discount rate.
+
+**Every one of the 10 fails the 200-SMA long-bias filter** (TRADING-STRATEGY.md line 44,
+*only long when price > 200-SMA on daily*) — by **26.8% to 63.8%**. All 10 are also below
+their 50-SMA, and **every one has RSI(14) between 31.4 and 41.1** — uniformly oversold,
+which is the signature of a group washout, not ten independent setups.
+
+| Sym | vs 200-SMA | vs 50-SMA | RSI | ATR% | gap in ATR | 10% stop in ATR | Prev vol vs 20d | **Pre-mkt vol vs 20d avg** |
+| --- | ---------- | --------- | --- | ---- | ---------- | --------------- | --------------- | -------------------------- |
+| LUNR | -48.2% | -19.3% | 40.1 | 12.3% | 0.57 | 0.81 | 1.20x | **4.1%** |
+| NBIS | -49.2% | -47.6% | 33.1 | 18.6% | 0.37 | **0.54** | 1.22x | **5.1%** |
+| AMPX | -53.1% | -28.1% | 31.7 | 12.2% | 0.55 | 0.82 | 1.06x | **2.6%** |
+| BE | -26.8% | -28.1% | 38.3 | 13.1% | 0.51 | 0.76 | 1.03x | **3.3%** |
+| UMAC | -48.6% | -43.3% | 31.7 | 14.3% | 0.44 | 0.70 | **0.77x** | **0.8%** |
+| BW | -63.8% | -19.6% | 41.1 | 12.7% | 0.47 | 0.79 | **0.76x** | n/a |
+| PL | -56.0% | -22.5% | 33.7 | 9.3% | 0.62 | 1.08 | **0.91x** | n/a |
+| QBTS | -58.7% | -40.3% | 31.4 | 12.6% | 0.46 | 0.79 | 1.18x | n/a |
+| BKSY | -37.1% | -16.3% | 36.8 | 10.9% | 0.50 | 0.92 | 1.15x | **0.5%** |
+| ONDS | -51.3% | -33.1% | 32.2 | 11.8% | 0.45 | 0.84 | 1.01x | n/a |
+
+Measured in ATR the gaps are **meaningless**: **0.37-0.62 ATR**, i.e. every "big gap"
+here sits well inside one normal daily range. And on **9 of 10** the mandatory 10%
+trailing GTC stop sits **closer than 1 ATR** (PL alone clears, at 1.08) — a near-certain
+noise stop-out. **No name shows real volume expansion** (best 1.22x; UMAC, BW and PL are
+*below* average), and where true pre-market volume is observable it is **0.5%-5.1% of
+20-day average** — these quotes were set on almost no shares. A gap with no volume and
+no news is flow, not a signal.
+
+#### Deep dive: LUNR $9.83 +7.55%
+- **Catalyst:** Intuitive Machines published nothing on Nov 26 (market closed) or Nov 27. The last company-specific items are a NASA award giving it a slot in a $10 billion lunar program (Nov 9) and a Q3 report on Nov 12 that beat on EPS (-$0.02 vs -$0.11 estimated). Against that, the sell-side spent November cutting: Roth $30->$20, Canaccord $39->$38, B. Riley $43->$34, Keybanc $38->$30, and Mizuho's Nov 24 initiation came in at just $15 versus a $22.93 consensus. The stock closed Nov 25 at $9.14, 22.7% above its $8.01 52-week low and 48.2% below its 200-day SMA.
+- **Why:** Short-squeeze mechanics on sector beta, not news. With 24.75% of float short and 3.09 days to cover, a 2.2% QQQ move forces covering in the most crowded space shorts; that is what lifts a stock sitting a fifth above its 52-week low. No new information about Intuitive Machines reached the market.
+- **Impact:** Reads as a one-day bounce. The gap is only 0.57 ATR against a 12.3% ATR — just over half a normal daily range — and pre-market volume of 431K is 4.1% of its 10.6M 20-day average, so there is no participation behind it. Sector read-through is total: PL +6.13%, BKSY +5.82%, RDW +5.09% and RKLB +5.21% all moved with it, which confirms beta over thesis. Price remains 48.2% below the 200-SMA and 19.3% below the 50-SMA.
+- **Horizon:** **LONG_TERM** — the underlying catalyst set is structural (a NASA slot in a $10B lunar program, a Q3 EPS beat) and aerospace/defense sits in the Industrials leg of the rotation table; but today's move is pure beta, so the thesis is a watch item, not an entry.
+- **Opportunity cost:** Displaces nothing — 0 open positions and 0/3 weekly trades used — so the true cost is one of three weekly slots. Within today's list its only real competitor is BE, which has the same improving-fundamentals-with-compressing-multiple shape at far larger scale, so BE ranks ahead. On R:R this is the most achievable name here: a 1-ATR stop is 12.3% ($8.62, just above the $8.01 52-week low) and needs only a +25% target of $12.28, essentially the $12.18 50-SMA, against a $22.93 consensus — so 2:1 clears at a sane stop. It still fails the 200-SMA long-bias filter by 48.2%, and the mandatory 10% trailing GTC stop sits 0.81 ATR away, inside one normal day. Research only.
+
+#### Deep dive: NBIS $91.30 +7.42%
+- **Catalyst:** Nebius published nothing on Nov 26-27. Its most recent coverage is actively bearish: on Nov 25 Benzinga reported a death cross (50-SMA crossing below the 200-SMA) as Microsoft reassessed neocloud projects and Meta explored selling excess AI compute capacity, and separately that the stock had fallen near its 52-week low. On Nov 22 it was grouped with CoreWeave and IREN as neoclouds getting "oversold as AI bubble fears rise". Q3 (Nov 12) was a large headline beat (+$0.30 vs -$1.11 est, +127.5%), yet four brokers cut targets the next day, DA Davidson halving $250->$125. Consensus is still $218.90 against a $91.30 price — a gap that reflects stale targets, not upside.
+- **Why:** Leveraged beta plus the highest short interest on the list (25.61% of float, only 1.72 days to cover — the fastest-covering crowd here). A capex-heavy neocloud is a high-duration proxy on AI sentiment and funding costs, so it falls hardest on margin warnings and bounces hardest on risk-on. Today's move is the bounce leg, with no Nebius-specific input.
+- **Impact:** Reads as a one-day spike, and it is the weakest signal on the list. The gap is 0.37 ATR against an 18.6% ATR — barely a third of a normal session for this name. Pre-market volume of 1.71M is 5.1% of its 33.5M average. A confirmed death cross is in place and price is 49.2% below the 200-SMA and 47.6% below the 50-SMA. Read-through across the neocloud group is complete, so nothing here is Nebius-specific.
+- **Horizon:** **SHORT_TERM** — a headline-free bounce off a 52-week low inside a confirmed death cross, with the two most recent news items (Microsoft reassessing neoclouds, Meta reselling compute) both cutting against demand. Nothing structural has been repaired.
+- **Opportunity cost:** Displaces nothing at 0 positions, but would spend a weekly slot on the worst risk/reward on the list. 2:1 cannot clear at a sane stop: a 1-ATR stop is 18.6% wide ($74.31, effectively sitting on the $73.52 52-week low), demanding a +37% target near $125 for 2:1. Worse, the mandatory 10% trailing GTC stop is only 0.54 ATR away — about half a normal day's range — making it the most certain noise stop-out here. Fails the 200-SMA filter by 49.2%.
+
+#### Deep dive: AMPX $6.10 +7.21%
+- **Catalyst:** Amprius published nothing on Nov 26-27. Its Q3 on Nov 10 missed (-$0.02 vs -$0.01 est) and Benzinga's headline was "Amprius Stock Dives After Wider-Than-Expected Q3 Loss"; B. Riley then cut $22->$16 and Needham $20->$15. The genuine structural positive is older: a $75 million defense grant (Sep 28) to scale US drone battery production. A short-seller raised red flags in May 2026. At $6.10 the stock sits 18.4% above its $5.15 52-week low, set this week, and 53.1% below its 200-day SMA.
+- **Why:** Sector beta amplified by a low nominal share price. At $6.10 a 41-cent move is 7.2%, so AMPX gaps on order flow that would be rounding error in a higher-priced name. Drone/battery peers moved in lockstep (ONDS at rank 10), confirming group pricing rather than company news.
+- **Impact:** Reads as a one-day bounce likely to mean-revert. The gap is 0.55 ATR on a 12.2% ATR, and pre-market volume of 160.6K is just 2.6% of its 6.25M average — among the thinnest here. Price is 53.1% below the 200-SMA and only 18.4% above a 52-week low set days ago, so there is almost no structural cushion beneath it. ONDS +5.66% confirms the drone/battery group is moving as one.
+- **Horizon:** **SHORT_TERM** — the $75M defense grant is structural but two months stale, and the most recent company event was a Q3 miss that sent the stock to a 52-week low. A thin bounce on no news is not a regime change.
+- **Opportunity cost:** Displaces nothing at 0 positions. Within today's list it is dominated by LUNR and BE — similar shape, smallest scale, thinnest cushion. R:R clears only on paper: a 1-ATR stop is 12.2% ($5.36), needing a +24% target of $7.57, which is below the $8.48 50-SMA and so plausible. The problem is that stop sits just 4% above the $5.15 52-week low, leaving no structural support, and the mandatory 10% trailing stop is 0.82 ATR away. Fails the 200-SMA filter by 53.1%.
+
+#### Deep dive: BE $163.90 +7.20%
+- **Catalyst:** Bloom Energy published nothing on Nov 26-27, and the two most recent news items are both negative: on Nov 25 the stock fell after Hunterbrook Media alleged Chinese scandium supply routes, compounding AI-market weakness and tariff pressure, and on Nov 24 it slid with the broader AI selloff. Fundamentally it is the strongest name here — Q3 (Oct 22) beat at $0.94 vs $0.65 estimated, Barclays upgraded on Nov 3, and consensus sits at $241.41 with RBC at $335. But the price has collapsed from a $351.28 52-week high to $152.89, and at a 92.66 P/E the multiple is still the binding risk.
+- **Why:** Sector beta on a stock whose fundamentals keep improving while its multiple compresses. AI-power names are being repriced by the group's discount rate, not by Bloom's results: peers confirm it, with GEV +3.39%, SMR +6.34% and XE +5.30% on the same print. Nothing about Bloom changed overnight.
+- **Impact:** Best fundamentals here, still not a tradeable setup. The gap is 0.51 ATR on a 13.1% ATR, and pre-market volume of 588K is 3.3% of its 18.0M average. Sector read-through is explicit across fuel-cell and nuclear peers (GEV +3.39%, SMR +6.34%, XE +5.30%, INIO +4.52%). At 26.8% below the 200-SMA this is the shallowest breach on the list — and still a fail. The stock has round-tripped violently inside six sessions; in a 13%-ATR regime a 7% gap carries no information.
+- **Horizon:** **LONG_TERM** — AI/data-center power is a durable demand regime aligned with the Industrials/Technology leg of the rotation table, Q3 beat at $0.94 vs $0.65, and consensus sits at $241.41 versus $163.90 — worth a multi-day swing IF it reclaims the 200-SMA and clears Confluence.
+- **Opportunity cost:** Nothing to displace at 0 positions, and of today's ten this is the one thesis that survives the gap fading, so a weekly slot costs least here — but it is premature. The R:R math works: a 1-ATR stop is 13.1% ($142.35) and a +26% target near $207 is well inside the $241 consensus. The binding constraint is the mandatory 10% trailing GTC stop at 0.76 ATR — noise stops it out before the thesis can resolve. Correct action is WATCH with a trigger on reclaiming the $224.04 200-SMA on above-average volume, then re-check Confluence via `/trade`.
+
+#### Deep dive: UMAC $9.68 +6.71%
+- **Catalyst:** Unusual Machines published nothing on Nov 26-27. The nearest forward catalyst is an Investor Day on Dec 3, 2026, announced Nov 24 — six days out, and not today's driver. Q3 (Nov 5) was a severe miss at -$0.50 versus -$0.15 estimated, a -233% surprise, following three consecutive misses. Needham cut $40->$22 and Piper $29->$27. The structural story is real but older: it completed the Upgrade Energy acquisition (Oct 19) to expand US drone battery manufacturing and benefited in August from US action on critical drone supply chains. At $9.68 it is 23.8% above its $7.82 52-week low and 48.6% below its 200-day SMA.
+- **Why:** Thin-float drift, not demand. The gap was set on 27,730 pre-market shares — 0.8% of its 3.35M 20-day average — so a handful of small orders repriced the whole quote. Layered on top is 20.59% short interest in a drone name moving with the defense-tech group.
+- **Impact:** The least reliable print on the list and the most likely to mean-revert. Pre-market volume of 27,730 shares is 0.8% of its 3.35M 20-day average, and the prior session's volume was itself 0.77x average — below normal on both measures, the clearest non-confirmation here. The gap is 0.44 ATR against a 14.3% ATR. Price is 48.6% below the 200-SMA and 43.3% below the 50-SMA, with four straight earnings misses behind it.
+- **Horizon:** **SHORT_TERM** — four consecutive earnings misses, a -233% Q3 surprise and targets cut from $40 to $22 give no durable thesis; the Dec 3 Investor Day is an event to watch, not a reason to hold through a fade.
+- **Opportunity cost:** Displaces nothing at 0 positions, but is strictly dominated by LUNR (same drone/defense-adjacent beta, a Q3 beat instead of a -233% miss, and a tighter ATR). 2:1 is not credibly clearable: a 1-ATR stop is 14.3% ($8.30, only 6% above the $7.82 52-week low) and would need a +29% target of $12.46 — straight into overhead supply well below the $17.07 50-SMA, with Needham having just cut $40->$22. Combined with 0.8%-of-average pre-market volume, this is the lowest-quality setup on the list.
+
+#### Tooling notes — **the catalyst path is FIXED this run**
+
+- **RESOLVED: `mcp__Apify__apify--web-fetch` against Benzinga works.** The 07:08 and 08:09
+  runs concluded "**both documented catalyst paths are down**" and "every Apify catalyst
+  path is now confirmed dead". **That is no longer true.** `apify--web-fetch` GET
+  `/?url=https://www.benzinga.com/quote/<T>&formats=markdown&unwrap=true` returns
+  **HTTP 200** in ~20s with the full page — and it is *richer* than WebSearch: live
+  pre-market price and timestamp, **today's pre-market volume**, 20-day average volume,
+  RSI, short interest and days-to-cover, the full analyst price-target table, the earnings
+  surprise history, and dated headlines. All 10 catalysts in this entry came from it. This
+  is the path `routines/gappers-cloud.md` STEP 2 should name. Apify's unblocker handles the
+  bot protection that defeats native WebFetch.
+- **Native `WebFetch` against Benzinga still returns HTTP 403** (re-confirmed on 5 tickers)
+  — so the *documented* fallback is genuinely dead; the fix is to route it through Apify's
+  fetcher rather than to abandon Benzinga.
+- **`apify--web-search` is usable but poor for this job.** Single calls return HTTP 200 in
+  ~43-46s; **6 parallel calls all timed out at the 60s MCP ceiling**, so it must be issued
+  serially. Result quality was bad — an "AMPX ... catalyst" query returned *Catalyst
+  Pharmaceuticals* pages and an undated CoinGlass quote. Use it for macro/tape context
+  only, not per-ticker catalysts.
+- **Yahoo block held — zero finance.yahoo.com results reached this log.** `blockedDomains`
+  plus the `-site:` suffix were set on every search call. Sources cited: Benzinga (via
+  Apify), Reuters, Detroit Free Press. **No Yahoo data in this entry.**
+- **`scripts/size.mjs` stale-price bug re-confirmed** (now 2 runs): it reported LUNR $13.00,
+  NBIS $115.85, BE $191.92, UMAC $11.27, AMPX $7.92 against live snapshot values of
+  $9.83 / $91.30 / $163.90 / $9.68 / $6.10 — **18-32% high**. Its `atr14` values are sound
+  (they match a locally computed Wilder ATR14 to within 1%) and were used; `price` and the
+  derived `cap_shares` must not be trusted. All percentages in this entry were recomputed
+  as `atr14 / live snapshot price` from Alpaca daily bars directly.
+- **`alpaca.sh bars` still hardcodes `feed=iex`** (known defect, unfixed) — the ATR/RSI/SMA
+  table above was built by calling `/v2/stocks/<sym>/bars` directly with `adjustment=split`
+  and no `feed`, per the note in `gappers-alpaca.sh`.
+- **Alpaca is broker-of-record for every price here.** Benzinga's own pre-market *percentage*
+  disagreed with its own close (LUNR shown as "+10.08%" off a $9.14 close that implies
+  +7.55%), so only Benzinga's absolute price, volume and news fields were used, never its
+  computed deltas.
+
+### DECISION: **RESEARCH ONLY — no orders** (STEP 8)
+
+Unchanged from the 07:08 and 08:09 runs, re-verified on a wider ticker set and now with
+**pre-market volume**, which is the strongest evidence yet against acting: **all 10 fail
+the 200-SMA long-bias filter** (-26.8% to -63.8%), **all 10 are below their 50-SMA**,
+**all 10 have RSI 31-41**, every gap is **0.37-0.62 ATR** (inside normal daily range),
+**no top-5 name has company news dated Nov 26-27** and for 4 of 5 the latest news is
+*negative*, and on **9 of 10** the mandatory 10% trailing GTC stop sits **under 1 ATR**
+away. Where pre-market volume is observable it is **0.5%-5.1% of 20-day average** — the
+gaps were set on almost no shares, into a **half session that closes at 13:00 ET**. The
+list is **one correlated AI/power/space/quantum beta bet**, so `corr-gate.mjs` would
+block a 3rd entry regardless. Account: **$100,000 equity, 0 positions, 0/3 weekly trades
+used** — full capacity and still no compliant entry. *Patience > activity.*
+
+**Watch list unchanged from the 08:09 run — both still LONG_TERM, neither actionable:**
+- **BE** — strongest thesis here (Q3 $0.94 vs $0.65, consensus $241.41, peers confirming
+  the AI-power demand regime). Trigger: reclaim **$224.04** (200-SMA) on above-average
+  volume, then re-check Confluence via `/trade`. New caution: the Nov 25 Hunterbrook
+  allegation on Chinese scandium sourcing is unquantified supply-chain risk.
+- **LUNR** — still **the only 2:1 R:R on this list that clears at a sane stop** (1-ATR stop
+  $8.62 above the $8.01 52-week low; +25% target $12.28 ≈ the $12.18 50-SMA, vs $22.93
+  consensus). Trigger: reclaim the **$12.18 50-SMA** on above-average volume as a first
+  step toward the $18.98 200-SMA. Not today.
+
+Carried forward, unresolved: the **10%-stop vs 2:1-R:R conflict** (today 0.54-0.92 ATR on
+9 of 10 names — structural, and the single reason no gapper has ever been actionable),
+the **$100k-vs-$10k baseline mismatch**, and **0% deployed vs the 75-85% rule for 101
+sessions**. **Newly resolved:** the catalyst-path outage — `routines/gappers-cloud.md`
+STEP 2 should be rewritten to name `mcp__Apify__apify--web-fetch` against
+`benzinga.com/quote/<T>` as the primary path (`apify--rag-web-browser` has never existed
+in this session, 11 consecutive runs). **Newly confirmed:** the `size.mjs` stale-price bug.
+
+**STEP 6 notification note (new finding):** the full deep-dive message is **5,633 chars**
+and `scripts/telegram.sh` returned **HTTP 400** on it — Telegram's `sendMessage` hard-caps
+a single message at **4,096 characters**. The wrapper does not chunk, and on the 400 it
+fell through to `scripts/clickup.sh`, which also returned **400** (ClickUp channel already
+logged DEAD on 2026-11-26). Sent successfully as **3 parts** (2,254 / 2,272 / 1,775 chars),
+message_ids 469+. **`scripts/telegram.sh` should split at ~3,900 chars**; until it does,
+every gappers run that emits the full STEP-6 format will 400 on the first attempt and
+silently lose the alert if the operator is not watching the console.
