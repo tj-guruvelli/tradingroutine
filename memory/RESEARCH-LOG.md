@@ -25846,3 +25846,124 @@ price bug**, `routines/pre-market.md` naming a **nonexistent Apify tool**, and
 `scripts/gappers-alpaca.sh:34`'s stale `feed` comment. Next: market-open run against
 Friday's live scan; **Monday 11/30 is the next full session** and the last full week
 before Dec 8–9 FOMC.
+
+### Gappers (auto-scan 07:08 ET, cloud)
+
+Scan run **07:08 ET**, ahead of the 09:30–13:00 ET half session. Universe: 69 watchlist
+symbols via `scripts/gappers-alpaca.sh watchlist` at `GAP_THRESHOLD=5.0`. 16 raw hits,
+**all positive** — that uniformity was treated as a possible baseline fault and verified
+before reporting: `dailyBar`=**2026-11-25** (Nov 26 Thanksgiving closure), `prevDailyBar`
+=2026-11-24, latest trades stamped **2026-11-27 ~11:54Z = 06:54 ET**. Baseline is correct;
+the gaps are real premarket moves against Wednesday's close.
+
+Filters applied: |gap| ≥ 5.0 and price ≥ $3.00. The **premarket-volume ≥ 50k filter could
+not be applied** — Alpaca's snapshot endpoint exposes no premarket-volume field, so the
+`volume` column below is the **last completed session's full-day volume**, not premarket.
+Screened out on the $3 price floor: SATL (+9.12%), DPRO (+8.88%), RR (+7.33%), RCAT
+(+6.82%). Cleared 5% but outside the top-10 cap: CRWV (+5.22%), RKLB (+5.15%).
+Feed is `delayed_sip` (15-min delay) — **re-quote before acting on any price here.**
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | UMAC | 9.73 | +7.28 | 2.58M | No company news; drone complex bouncing with high-beta tape after −47% month; Nov 24 WSJ Pentagon/GM drone talks overhang |
+| 2 | BE | 163.53 | +6.96 | 18.67M | No company news; AI-power rebound; Morgan Stanley reiterated $335 target Nov 25 |
+| 3 | BW | 4.00 | +6.95 | 4.37M | No news; low-price beta bounce after Nov 9 EPS miss, 3 target cuts Nov 10, Nov 26 class-action alert |
+| 4 | NBIS | 90.48 | +6.46 | 40.81M | No company news; neoclouds +8–9.5% premarket; closed near 52-wk low Nov 25 |
+| 5 | QBTS | 7.45 | +6.43 | 20.38M | No company news; quantum complex bouncing after −42% month and Nov 10 Q3 miss |
+| 6 | AMPX | 6.05 | +6.33 | 6.60M | No catalyst found; battery beta. CFO sold 13,719 sh Nov 24 @ ~$5.72 (tax withholding); 52-wk low $5.15 this week |
+| 7 | LUNR | 9.71 | +6.24 | 12.76M | No catalyst found; space beta. Set a new 52-wk low in Nov 27 reporting despite Nov 12 revenue beat |
+| 8 | ONDS | 4.14 | +6.19 | 47.07M | No company news; moving in lockstep with the drone group |
+| 9 | AMKR | 33.97 | +6.09 | 4.72M | No fresh news; semis bid premarket (AMD +5–7%, NVDA +4%); prior CNBC tariff pressure, B. Riley cut to $38 Nov 9 |
+| 10 | PL | 11.21 | +5.66 | 6.72M | **Research gap** — no catalyst located in non-Yahoo sources; tracking space/high-beta bounce |
+
+**Deep dive cap: top 5 by |gap%| (UMAC, BE, BW, NBIS, QBTS).** Ranks 6–10 above got
+**quick-scan only** and were not dropped.
+
+#### The single most important finding
+
+**This is one trade, not ten.** Every name on the list is the same bet: a broad AI/high-beta
+technical bounce. Nasdaq 100 futures **+2.3–2.9%**, S&P futures +1.7–2.0%, NVDA +4–4.7%,
+AMD +5–7%, CoreWeave/Nebius +8–9.5% premarket. Treating these as ten independent signals
+would be a correlation error — the correlation gate would block the 3rd entry regardless.
+
+**And not one of these gaps is statistically notable.** Measured against each stock's own
+ATR(14), every gap is **between 0.31 and 0.65 ATR** — i.e. *less than one normal session's
+range*. ATR runs **8.9%–19.5%** across this list, so the 5% gap threshold is far below the
+noise floor in this volatility regime. NBIS's +6.46% is **0.31 ATR**: under a third of a
+typical day.
+
+| Sym | ATR14 | ATR% | gap/ATR | px vs 200-SMA | >200-SMA? | off 52wk hi |
+| --- | ----- | ---- | ------- | ------------- | --------- | ----------- |
+| UMAC | 1.22 | 12.5% | 0.54 | −48.3% | **NO** | −72.1% |
+| BE | 21.29 | 13.0% | 0.50 | −27.0% | **NO** | −53.4% |
+| BW | 0.57 | 14.4% | 0.45 | −63.6% | **NO** | −81.8% |
+| NBIS | 17.68 | 19.5% | 0.31 | −49.7% | **NO** | −69.8% |
+| QBTS | 1.00 | 13.4% | 0.45 | −58.6% | **NO** | −80.2% |
+| AMPX | 0.81 | 13.4% | 0.45 | −53.5% | **NO** | −75.0% |
+| LUNR | 1.38 | 14.2% | 0.41 | −48.8% | **NO** | −79.2% |
+| ONDS | 0.51 | 12.3% | 0.47 | −51.1% | **NO** | −72.9% |
+| AMKR | 3.02 | 8.9% | 0.65 | −39.3% | **NO** | −64.9% |
+| PL | 1.08 | 9.6% | 0.56 | −56.2% | **NO** | −78.3% |
+
+**All 10 fail the 200-SMA long-bias filter**, by −27.0% to −63.6%. All are 53–82% off their
+52-week highs. Per the Indicator Canon ("only long when price > 200-SMA on daily"),
+**no entry on this list is rule-compliant today** — unanimously, not marginally.
+
+#### Deep dive: UMAC $9.73 +7.28%
+- **Catalyst:** No UMAC-specific news. Drone complex re-rating with the high-beta bounce after a ~47% one-month drawdown into Nov 24. Live sector overhang: Nov 24 WSJ report that the Pentagon is in talks with GM about drone production, read as a competitive threat to small suppliers. Oppenheimer initiated Outperform/$30 on Nov 19 and the stock fell the next day; a CRO and the president both reported small pre-arranged insider sales; a Nov 13 filing registered shares from two prior deals for resale.
+- **Why:** Pure sector beta. A high-short-interest, low-float drone supplier acting as a leveraged proxy on risk appetite. No new information about the business.
+- **Impact:** One-day headline-free bounce, not a repair. +0.54 ATR on a 12.5% ATR — noise, not a breakout. Prior-session volume 2.58M vs 3.35M 20-day average: **no volume confirmation.** Read-through is total — ONDS +6.19% and RCAT +6.82% in lockstep, confirming beta over thesis. GM/Pentagon overhang unresolved and structurally bearish for a component supplier.
+- **Horizon:** **SHORT_TERM** — headline-free sector bounce, unresolved competitive overhang, 48.3% below the 200-SMA.
+- **Opportunity cost:** Displaces nothing — **zero open positions, 0/3 weekly trades used.** Real cost is one of three weekly slots on the lowest-quality setup here. Cannot clear 2:1 R:R: a 1-ATR stop is 12.5% wide, so the minimum target is +25% ($12.16), implausible inside a week. The mandatory 10% trailing GTC stop sits at **0.8 ATR — closer than one normal day's range** — so noise stops it out before the thesis resolves. **NO-GO.**
+
+#### Deep dive: BE $163.53 +6.96%
+- **Catalyst:** No BE-specific news. Rebounding with the AI-power/data-center complex. Morgan Stanley reiterated a $335 target on Nov 25 calling shares an attractive entry, on a day the stock still fell ~11%; BMO upgraded to Outperform Nov 19 while cutting its target to $230. Fundamentals are genuinely strong — Q3 revenue $1.235B (+138.1% y/y), 2026 guidance raised to $4.4–4.6B, NTT DATA + Google fuel-cell deals Nov 5 totaling 1,602MW — yet the stock fell ~16% the day after those deals. Q3 operating cash flow was **−$27.1M** as working capital absorbed cash.
+- **Why:** Sector beta on a stock whose fundamentals improve while its multiple compresses. The Nov 20 −15.3% day came with **no announcement, earnings or filing**, and all 17 peers above $2B fell with it.
+- **Impact:** Best name here on fundamentals, still not a tradeable setup. +0.50 ATR on a 13.0% ATR. Volume 18.67M vs 18.04M average — in line, no confirmation. Group move confirmed (FuelCell −7%, Plug −6% on Nov 25). Has round-tripped 170.98 → 142.39 → 168.15 → 152.89 in six sessions; in a 10–15% daily-range regime a 7% gap carries no signal. −27.0% vs 200-SMA is the shallowest breach on the list, but still a fail.
+- **Horizon:** **LONG_TERM** — the catalyst set is structural (138% revenue growth, raised guidance, 1,602MW signed, two analysts defending $230–335) and AI/data-center power aligns with the Technology leg of the rotation table; worth a swing **if** it reclaims the 200-SMA and clears Confluence on a later /trade check.
+- **Opportunity cost:** Nothing to displace. Of today's list this is the one thesis that survives the gap fading, so a weekly slot costs least here — but it is premature. A 1-ATR stop is 13.0% ($142.27, below the Nov 20 low of $140.69), needing a +26% target near $206 for 2:1 — reachable against the $230–335 range, so the math works **on paper**. But the mandatory 10% trailing GTC stop is only **0.77 ATR** away, so noise stops it out first. This is the unresolved **10%-stop vs 2:1-R:R conflict**, made worse by a 13% ATR. **WATCH** — revisit on a reclaim of $224 (200-SMA) on above-average volume.
+
+#### Deep dive: BW $4.00 +6.95%
+- **Catalyst:** No fresh news, and the company-specific facts all cut the other way: Q3 (Nov 9) missed at 2c vs 3c; on Nov 10 Northland cut to $15 from $23, Craig-Hallum to $10 from $20, Needham to $15 from $20. Pomerantz issued another securities class-action investor alert **Nov 26**. Balance sheet: $166.4M secured debt and bonds against $128.9M cash and restricted cash; did fully redeem its 6.5% bonds due Dec 2026; $50M repurchase authorization outstanding.
+- **Why:** Beta plus a low nominal share price — at $4, a 26-cent move is 6.95%, so BW gaps on order flow that would be rounding error in a higher-priced name. No new information.
+- **Impact:** One-day spike likely to mean-revert; weakest fundamental story on the list. +0.45 ATR on a 14.4% ATR. Volume 4.37M vs 5.74M average — **below** average, no confirmation. −63.6% vs 200-SMA (second-worst here) and −81.8% off its 52-week high. The live class action with a **Dec 15 lead-plaintiff deadline** is unquantified headline risk that can reprice the stock independently of the tape.
+- **Horizon:** **SHORT_TERM** — headline-free bounce in a name with an earnings miss, three target cuts and a live lawsuit; nothing structural repaired.
+- **Opportunity cost:** **Strictly dominated by BE** — same sector tailwind, but with growing revenue instead of an earnings miss and a lawsuit. Cannot clear 2:1 R:R: a 1-ATR stop is 14.4% ($3.42), needing a +29% target of $5.16 — above the 50-SMA of $4.85 and against three analysts who just cut to $10–15. The 10% trailing stop sits 0.70 ATR away. **NO-GO.**
+
+#### Deep dive: NBIS $90.48 +6.46%
+- **Catalyst:** No NBIS-specific news; neoclouds are the highest-beta expression of the AI bounce (CoreWeave and Nebius both quoted +8–9.5% premarket). Closed near its 52-week low Nov 25 after −11% as QQQ fell ~4% on HPE's weak margin outlook. The structural problem is from Q3 (Nov 12): shares fell on a **LOWERED** 2026 revenue outlook plus disclosed **data-center delays**, and guidance is **$40–45B of 2027 capex against only $12–13B of 2027 revenue**, funded largely by customer prepayments and asset-backed loans. A **death cross** (50-SMA under 200-SMA) formed in November. Citigroup kept Buy, cut target $324 → $265.
+- **Why:** Leveraged sector beta — a capex-heavy, externally-funded buildout story that trades as a high-duration proxy on AI sentiment *and* funding costs. Hence it fell hardest on HPE's margin warning and bounces hardest on risk-on. No new Nebius information today.
+- **Impact:** **The least meaningful gap on the list** — +6.46% is only **0.31 ATR** against a 19.5% ATR, under a third of a normal session. Volume 40.81M vs 33.49M average is the one genuine tick-up here, but on a bounce day that is sector flow, not accumulation. The stock **reversed most of a 20% Monday gain within two sessions** — expect that pattern again. −49.7% vs 200-SMA with a confirmed death cross. The $40–45B/$12–13B capex-to-revenue structure funded by prepayments and asset-backed loans is **solvency-sensitive if AI credit tightens into Dec 8–9 FOMC.**
+- **Horizon:** **SHORT_TERM** — despite a structural-looking capex story, the Q3 guidance cut and data-center delays moved the thesis the *wrong* way. A technical bounce off a 52-week low inside a death cross is not a regime change.
+- **Opportunity cost:** Would displace BE — same AI-power tailwind but with *raised* rather than lowered guidance, a strictly better version of the same bet. R:R is structurally unreachable: a 1-ATR stop is 19.5% wide ($72.84, below the $73.52 52-week low), demanding a +39% target near $126 for 2:1. The 10% trailing GTC stop is just **0.51 ATR — half a normal day — the most certain noise stop-out on this list.** **NO-GO.**
+
+#### Deep dive: QBTS $7.45 +6.43%
+- **Catalyst:** No QBTS-specific news. Quantum complex bouncing after a 42% one-month drawdown; MarketBeat logged a near-identical **+12.1% bounce on Nov 23**, so this is a repeating pattern. Q3 (Nov 10) missed: revenue ~$4.5M, net loss $0.13/sh vs $0.10 expected, gross margin down to 52.9% from 71.4% as lower-margin services took more of the mix. The $8.08 close on Nov 17 was its lowest of the year. Sector-wide: IonQ −28%, Rigetti −34%. Genuine strength is the balance sheet — **$503M cash and short-term investments against $56.9M total debt.** A securities class action is being advertised with a **Dec 15, 2026** lead-plaintiff deadline.
+- **Why:** Sector beta on a pre-revenue-scale story. At ~$4.5M quarterly revenue there is effectively **no earnings anchor**, so price is almost purely a function of discount rates and risk appetite.
+- **Impact:** One-day spike likely to mean-revert — **and it already did exactly this on Nov 23**, fading within two sessions. +0.45 ATR on a 13.4% ATR. Volume 20.38M vs 17.22M average. −58.6% vs 200-SMA, −80.2% off its high. Real catalysts do exist but are not today's news: a **$20M Florida Atlantic University system delivery due in fiscal Q4** with substantial revenue booked on delivery, and a DoC agreement for up to **$100M of CHIPS funding** tied to milestones. Next earnings not until **February 2027**.
+- **Horizon:** **SHORT_TERM** — headline-free sector bounce on a Q3 miss and margin compression inside an 80% drawdown; FAU delivery and CHIPS milestones are real but unscheduled.
+- **Opportunity cost:** Ranks below BE on every dimension except cash-to-debt. A 1-ATR stop is 13.4% ($6.45), needing a +27% target of $9.45 — below the 50-SMA of $12.23 so technically reachable, but sitting directly under heavy overhead supply from the whole November decline. The 10% trailing stop is 0.75 ATR away. A **rate-sensitive, no-earnings-anchor name is also the worst thing to carry into a Dec 8–9 FOMC with 50bp tail risk.** **NO-GO.**
+
+#### Tooling notes
+- `mcp__Apify__apify--rag-web-browser` **still does not exist in this session (9th consecutive run)** — `routines/gappers-cloud.md` STEP 2 names it. The nearest available tool, `apify--web-search`, **timed out at the 60s MCP ceiling on the first call** and was abandoned.
+- The documented STEP 2 fallback, **WebFetch against `benzinga.com/quote/<T>`, returns HTTP 403** to automated clients — tested on UMAC, BE, NBIS. **Both documented catalyst paths are down.** All catalysts above were sourced via native `WebSearch` with `blocked_domains` set against the three Yahoo hosts. Routine should be updated to name `WebSearch` as the primary catalyst path.
+- **Yahoo block held** — zero finance.yahoo.com results reached this log; `blocked_domains` (not the `-site:` suffix) is what enforces it, consistent with the 11-27 pre-market finding.
+- **Source-vs-broker discrepancy:** GuruFocus reported NBIS's Nov 25 close at $77.69; Alpaca's own daily bar is **$84.99** (o 80.46 / h 87.26 / l 75.60). Alpaca is broker-of-record and was used throughout. Secondary-source prices on these names conflicted routinely — none were cited for price.
+
+### DECISION: **RESEARCH ONLY — no orders** (STEP 8)
+Not one of the 10 is rule-compliant: **all fail the 200-SMA long-bias filter** (−27% to −64%),
+every gap is **under 0.65 ATR** (inside normal daily range), and on **8 of 10** the mandatory
+10% trailing GTC stop sits **closer than 1 ATR** — a near-certain noise stop-out. The list is
+**one correlated sector bet**, so the correlation gate blocks a 3rd entry anyway. Account is
+**$100k equity, 0 positions, 0/3 weekly trades used** — there is full capacity and still no
+compliant entry, which is the cleanest possible illustration of *Patience > activity*.
+
+**Single watch item: BE** — the only structural thesis here (revenue +138% y/y, guidance raised
+to $4.4–4.6B, 1,602MW signed, analysts at $230–335). Trigger: reclaim **$224** (200-SMA) on
+above-average volume, then re-check Confluence via /trade. Not today.
+
+Carried forward, unresolved: the **10%-stop vs 2:1-R:R conflict** (today's data makes it
+concrete — a 10% trail is 0.51–0.80 ATR on 8 of these 10 names), the **$100k-vs-$10k baseline
+mismatch**, **0% deployed vs the 75–85% rule for 101 sessions**, the **nonexistent Apify tool**
+named in `routines/gappers-cloud.md` STEP 2, and now the **Benzinga 403** breaking that step's
+documented fallback.
