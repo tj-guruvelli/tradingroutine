@@ -25967,3 +25967,151 @@ concrete — a 10% trail is 0.51–0.80 ATR on 8 of these 10 names), the **$100k
 mismatch**, **0% deployed vs the 75–85% rule for 101 sessions**, the **nonexistent Apify tool**
 named in `routines/gappers-cloud.md` STEP 2, and now the **Benzinga 403** breaking that step's
 documented fallback.
+
+### Gappers (auto-scan 08:09 ET, cloud)
+
+Scan: `GAP_THRESHOLD=5.0 scripts/gappers-alpaca.sh watchlist` over the 60-ticker
+watchlist (delayed_sip feed, 15-min delayed — market-open/`/trade` MUST re-quote).
+17 rows returned at >=5%; **13 passed** the price>=$3.00 filter (SATL $2.72, RCAT $1.89,
+RR $0.63, NIO $2.83 excluded); **capped at the top 10** by |gap%|. RDW +5.09, OKLO +5.08
+and RKLB +5.02 ranked 11-13 and were dropped by the cap.
+**Deep dive capped at the top 5** (NBIS, BE, LUNR, AMPX, BW) per STEP 3 — ranks 6-10
+(QBTS, ONDS, PL, CRWV, AMKR) got **quick-scan only**, not silently dropped.
+
+| Rank | Sym | $Price | Gap% | Vol | Catalyst |
+| ---- | --- | ------ | ---- | --- | -------- |
+| 1 | NBIS | 91.25 | +7.37 | 40.81M | No company news; neocloud bounce as Nasdaq-100 futures jumped ~2% on the return from Thanksgiving; closed near its 52-week low ($73.52) on Nov 25. |
+| 2 | BE | 163.95 | +7.23 | 18.67M | No company news; AI-power/data-center complex rebounding with the tape; Morgan Stanley reiterated a $335 target on Nov 25. |
+| 3 | LUNR | 9.78 | +7.05 | 12.76M | No company news today; space beta. Mizuho initiated Outperform/$15 on Nov 26 and the Nov 23 START preliminary design review for space nuclear systems passed; the stock still printed a new 52-week low ($8.24) in Nov 27 reporting. |
+| 4 | AMPX | 6.09 | +7.03 | 6.60M | No company news today; battery/drone-supplier beta bouncing off this week's 52-week low ($5.15). Q3 on Nov 10 raised FY26 guidance to $145M; B. Riley cut its target to $16 from $22. |
+| 5 | BW | 3.98 | +6.42 | 4.37M | No news; low-priced beta bounce. Nov 9 EPS miss, three target cuts on Nov 10, and a fresh Pomerantz class-action investor alert on Nov 26. |
+| 6 | QBTS | 7.43 | +6.19 | 20.38M | No company news; quantum complex bouncing after a ~42% one-month drawdown and a Nov 10 Q3 miss (revenue ~$4.5M, loss $0.13/sh vs $0.10 expected). Balance sheet strong at $503M cash vs $56.9M debt; class action advertised with a Dec 15 lead-plaintiff deadline. |
+| 7 | ONDS | 4.14 | +6.15 | 47.07M | No company news; drone group moving in lockstep with AMPX on the broad risk-on open. Volume 47.07M vs a 46.82M 20-day average - no expansion. |
+| 8 | PL | 11.25 | +6.03 | 6.72M | No fresh news; space beta with LUNR. Expanded a European defense/intelligence agreement in the Nov 23-24 window; the real catalyst is fiscal-Q3 2027 earnings on Dec 10 (guide $101-105M, small adjusted loss expected). FY27 revenue guidance raised to $430-441M. |
+| 9 | CRWV | 44.95 | +5.59 | 82.52M | Neocloud bounce plus a reported $4.5B Meta-backed loan being arranged by Morgan Stanley and MUFG at an indicated 7-7.5% yield versus ~18% on its 2031 bonds; executives sold shares Nov 20 for tax withholding on vesting. |
+| 10 | AMKR | 33.79 | +5.53 | 4.72M | No fresh company news; semis bid broadly (AMD, Intel and Broadcom all rallying premarket, NVDA +4%, Marvell +7.3% on a fiscal-Q3 beat). Prior overhang: tariff pressure and a B. Riley cut to $38 on Nov 9. |
+
+`Vol` is the prior completed session's full-day volume — Alpaca's snapshot has no
+distinct pre-market volume field, so STEP 1's `premarket_volume >= 50000` filter was
+not applicable (field not populated as pre-market).
+
+#### The single most important finding
+
+**This is one trade, not ten.** The driver is market-wide and confirmed: Nasdaq-100
+futures +~2% as investors returned from Thanksgiving and piled back into battered AI
+names (NVDA +4%, AMD/INTC/AVGO all up, MRVL +7.3% on a fiscal-Q3 beat; Deutsche Bank
+called the tech selloff 'stabilized'). **Not one of the top 10 has company-specific news
+today.** 13 of ~60 watchlist names gapped >=5% in the same direction — that is tape beta.
+XTB's Kathleen Brooks: *"The recovery in stocks seems technical. The questions that
+caused the market panic are still unanswered."* The Nasdaq-100 is still tracking its
+worst month since December 2022. **Session is a half day — 1:00pm ET close.**
+
+**Every one of the 10 fails the 200-SMA long-bias filter** (TRADING-STRATEGY.md line 44,
+*only long when price > 200-SMA on daily*) — by **26.8% to 63.8%**. All 10 are also below
+their 50-SMA. Measured in ATR the gaps are **meaningless**: 0.36–0.61 ATR, i.e. every
+'big gap' here is well inside one normal daily range. And on **8 of 10** the mandatory
+10% trailing GTC stop sits **closer than 1 ATR** — a near-certain noise stop-out.
+
+| Sym | vs 200-SMA | ATR% | gap in ATR | 10% stop in ATR | Vol vs 20d avg |
+| --- | ---------- | ---- | ---------- | --------------- | -------------- |
+| NBIS | -49.2% | 18.6% | 0.37 | 0.54 | 1.22x |
+| BE | -26.8% | 13.1% | 0.51 | 0.76 | 1.03x |
+| LUNR | -48.4% | 12.4% | 0.53 | 0.81 | 1.20x |
+| AMPX | -53.2% | 12.2% | 0.54 | 0.82 | 1.06x |
+| BW | -63.8% | 12.7% | 0.47 | 0.79 | **0.76x** |
+| QBTS | -58.7% | 12.6% | 0.46 | 0.79 | 1.18x |
+| ONDS | -51.1% | 11.8% | 0.49 | 0.85 | 1.01x |
+| PL | -56.0% | 9.3% | 0.61 | 1.08 | **0.91x** |
+| CRWV | -48.5% | 14.8% | 0.36 | 0.68 | 1.13x |
+| AMKR | -39.5% | 9.0% | 0.58 | 1.11 | 1.10x |
+
+**No name shows real volume expansion** — the best is 1.22x and two (BW, PL) are *below*
+average. A gap with no volume and no news is flow, not a signal.
+
+#### Deep dive: NBIS $91.25 +7.37%
+- **Catalyst:** No Nebius-specific news. The move is the highest-beta expression of a market-wide AI rebound: Nasdaq-100 futures +2%, NVDA +4%, Marvell +7.3% on a fiscal-Q3 beat, with Deutsche Bank flagging that the tech selloff had 'stabilized'. The stock-specific facts still point the wrong way: Q3 (Nov 12) carried a LOWERED 2026 revenue outlook plus disclosed data-center delays, and 2027 guidance is $40-45B of capex against only $12-13B of revenue, funded largely by customer prepayments and asset-backed loans. A death cross (50-SMA under 200-SMA) formed in November; Citigroup kept Buy but cut its target from $324 to $265.
+- **Why:** Leveraged sector beta. A capex-heavy, externally-funded buildout trades as a high-duration proxy on both AI sentiment and funding costs, so it falls hardest on margin warnings and bounces hardest on risk-on. No new Nebius information today.
+- **Impact:** Reads as a one-day headline spike. The gap is only 0.37 ATR against an 18.6% ATR - barely a third of a normal session. Prior-session volume 40.81M vs 33.49M 20-day average is 1.22x: a tick up, but on a sector bounce day that is flow, not accumulation. Sector read-through is total - CRWV +5.59% in lockstep at rank 9, confirming beta over thesis. Price sits 49.2% below the 200-SMA with a confirmed death cross. The $40-45B/$12-13B capex-to-revenue structure is solvency-sensitive if AI credit tightens.
+- **Horizon:** **SHORT_TERM** — despite a structural-sounding capex story, Q3 cut guidance and disclosed data-center delays, moving the thesis the wrong way; a bounce off a 52-week low inside a death cross is not a regime change.
+- **Opportunity cost:** Displaces nothing - 0 open positions, 0/3 weekly trades used - so the real cost is one of three weekly slots on the weakest risk/reward here. Cannot clear 2:1 R:R at a sane stop: a 1-ATR stop is 18.6% wide ($74.27, essentially on the $73.52 52-week low), demanding a +37% target near $125 for 2:1. Worse, the mandatory 10% trailing GTC stop sits just 0.54 ATR away - about half a normal day's range - the most certain noise stop-out on this list. Fails the 200-SMA long-bias filter outright.
+
+#### Deep dive: BE $163.95 +7.23%
+- **Catalyst:** No Bloom Energy-specific news today; it is rising with the AI-power complex on the broad rebound. The underlying business is genuinely the strongest on this list: Q3 revenue $1.235B (+138.1% y/y), 2026 guidance raised to $4.4-4.6B, and NTT DATA plus Google fuel-cell deals announced Nov 5 totalling 1,602MW. Analysts are defending it - Morgan Stanley reiterated $335 on Nov 25 (a day the stock still fell ~11%) and BMO upgraded to Outperform on Nov 19 while cutting its target to $230. The offset is cash: Q3 operating cash flow was -$27.1M as working capital absorbed cash.
+- **Why:** Sector beta on a stock whose fundamentals keep improving while its multiple compresses. The Nov 20 -15.3% day came with no announcement, earnings or filing, and every peer above $2B fell with it - the move is being set by the group's discount rate, not by Bloom's results.
+- **Impact:** Best fundamentals here, still not a tradeable setup. The gap is 0.51 ATR on a 13.1% ATR - half a normal day. Volume 18.67M vs an 18.04M 20-day average is 1.03x: no confirmation at all. Group move confirmed across fuel-cell peers. The stock has round-tripped 170.98 to 142.39 to 168.15 to 152.89 inside six sessions; in a 13%-ATR regime a 7% gap carries no information. At 26.8% below the 200-SMA this is the shallowest breach on the list - and still a fail.
+- **Horizon:** **LONG_TERM** — the catalyst set is structural (revenue +138% y/y, guidance raised to $4.4-4.6B, 1,602MW signed, analysts defending $230-335) and AI/data-center power aligns with the Technology leg of the rotation table; worth a swing IF it reclaims the 200-SMA and clears Confluence.
+- **Opportunity cost:** Nothing to displace at 0 positions. Of today's ten this is the one thesis that survives the gap fading, so a weekly slot costs least here - but it is premature. A 1-ATR stop is 13.1% ($142.47, just below the Nov 20 low of $140.69), needing a +26% target near $207 for 2:1, which is reachable against the $230-335 analyst range, so the math works on paper. The binding constraint is the mandatory 10% trailing GTC stop at only 0.76 ATR: noise stops it out before the thesis can resolve. WATCH, trigger a reclaim of $224 (200-SMA) on above-average volume, then re-check Confluence via /trade.
+
+#### Deep dive: LUNR $9.78 +7.05%
+- **Catalyst:** No fresh Intuitive Machines catalyst - it is bouncing with the space complex on the broad risk-on open. Two recent items are genuinely constructive: Mizuho initiated coverage Outperform on Nov 26 (albeit at a $15 target, well under the $26.89 consensus), and on Nov 23 the company announced a successful START preliminary design review for space nuclear systems aimed at lunar-night survival. Q3 (Nov 12) beat: $269M revenue, positive adjusted EBITDA, record free cash flow and a $1.9B backlog, with FY26 revenue narrowed to $920-950M from $900M-$1B. Yet the stock set a new 52-week low ($8.24 intraday) in Nov 27 reporting and Roth cut its target from $30 to $20.
+- **Why:** Sector beta, not news. The mechanism is the same multiple compression hitting the whole space group - record backlog and a revenue beat met by target cuts and a sliding share price. Today's move is the group re-rating off a 52-week low as risk appetite returns, not a re-pricing of Intuitive Machines.
+- **Impact:** Looks like a one-day spike, with a caveat that it is bouncing off a genuine 52-week low rather than mid-range. The gap is 0.53 ATR on a 12.4% ATR - inside normal daily range. Volume 12.76M vs 10.64M 20-day average is 1.20x, a mild tick-up but not accumulation. Sector read-through is explicit: PL +6.03% and RDW +5.09% moved with it, and ASTS is being written up on the same bounce. Price is 48.4% below the 200-SMA and below the $12.18 50-SMA.
+- **Horizon:** **LONG_TERM** — the catalyst set is structural — a Q3 beat with positive adjusted EBITDA, record FCF, a $1.9B backlog, FY26 narrowed upward at the low end, the Nov 23 START nuclear PDR passed and a fresh Mizuho Outperform initiation; the move is sector beta but the underlying thesis is durable.
+- **Opportunity cost:** Nothing to displace at 0 positions and 0/3 weekly trades. Its competitor for a slot is BE, which has the same shape of thesis - improving fundamentals, compressing multiple - but larger scale and a defended $230-335 analyst range, so BE ranks ahead. R:R is the most achievable on this list: a 1-ATR stop is 12.4% ($8.57, above the $8.01 52-week low), needing only a +25% target of $12.21, essentially the 50-SMA at $12.18, against a $26.89 consensus - so 2:1 is clearable at a sane stop. It still fails the 200-SMA long-bias filter by 48%, and the 10% trailing GTC stop sits 0.81 ATR away, inside one normal day.
+
+#### Deep dive: AMPX $6.09 +7.03%
+- **Catalyst:** No Amprius-specific news today - it is rebounding with the high-beta battery and drone-supplier complex after setting a 52-week low of $5.15 this week. The fundamental record is strong and improving: Q3 2026 (Nov 10) revenue $39.1M, up 83% from $21.4M a year earlier, with the net loss narrowing slightly to $3.5M from $3.9M. FY26 revenue guidance has been raised three times this year - at least $125M, then $130M in May, $140M in August with a 28%+ gross-margin target, and $145M in the November release. Commercially it signed a multi-year supply agreement with Stark Future starting 2027 worth over $100M and took a $24.0M order from a major European drone developer. Analysts still cut: B. Riley to $16 from $22 (Buy), Clear Street to $26 from $30 (Buy).
+- **Why:** Sector beta plus a low nominal share price. At ~$6 a 40-cent move is 7%, so AMPX gaps on order flow that would be rounding error in a higher-priced name. No new company information today; the drone-adjacent group (ONDS at rank 7) is moving in lockstep.
+- **Impact:** Reads as a one-day bounce likely to mean-revert. The gap is 0.54 ATR against a 12.2% ATR. Volume 6.60M vs a 6.25M 20-day average is 1.06x - effectively no confirmation. Price is 53.2% below the 200-SMA and well under the $8.48 50-SMA, and it is only 18% above a 52-week low it set days ago. Note a CFO sale of 13,719 shares on Nov 24 at ~$5.72, which is routine tax withholding rather than a signal.
+- **Horizon:** **LONG_TERM** — structural catalysts — revenue +83% y/y, FY26 guidance raised four times to $145M, a >$100M multi-year Stark Future supply agreement from 2027 and a $24M European drone order; today's move is beta, but the business trajectory is real.
+- **Opportunity cost:** Displaces nothing at 0 positions. Within today's list it is dominated by LUNR and BE - the same improving-fundamentals-with-compressing-multiple shape, but at the smallest scale and with the thinnest stop cushion. R:R can clear 2:1 on paper: a 1-ATR stop is 12.2% ($5.34), needing a +24% target of $7.58 - below the $8.48 50-SMA and far under B. Riley's $16 - so the target is plausible. The problem is the stop sits only ~3.7% above the $5.15 52-week low, so there is almost no structural cushion, and the mandatory 10% trailing GTC stop is 0.82 ATR away. Fails the 200-SMA filter by 53%.
+
+#### Deep dive: BW $3.98 +6.42%
+- **Catalyst:** No fresh Babcock & Wilcox news, and every company-specific fact cuts against the move. Q3 (Nov 9) missed at 2c vs 3c expected. On Nov 10 three brokers cut targets: Northland to $15 from $23, Craig-Hallum to $10 from $20, Needham to $15 from $20. Pomerantz issued another securities class-action investor alert on Nov 26, with a Dec 15 lead-plaintiff deadline. The balance sheet carries $166.4M of secured debt and bonds against $128.9M of cash and restricted cash, though it did fully redeem its 6.5% bonds due Dec 2026 and has a $50M repurchase authorization outstanding.
+- **Why:** Beta plus a low nominal share price. At $3.98 a 24-cent move is 6.4%, so BW moves on order flow that would be noise elsewhere. There is no new information about the business - only the market-wide bid.
+- **Impact:** A one-day spike very likely to mean-revert, and the weakest fundamental story on the list. The gap is 0.47 ATR on a 12.7% ATR. Volume 4.37M vs a 5.74M 20-day average is 0.76x - actively BELOW average, the clearest non-confirmation here. Price is 63.8% below the 200-SMA, the worst breach on the list, and it sits just 30% above a $3.06 52-week low. The live class action with its Dec 15 deadline is unquantified headline risk that can reprice the stock independently of the tape.
+- **Horizon:** **SHORT_TERM** — a headline-free bounce in a name with an earnings miss, three target cuts and a live securities class action; nothing structural has been repaired.
+- **Opportunity cost:** Strictly dominated by BE - same broad energy/power tailwind, but with 138% revenue growth instead of an earnings miss, three target cuts and a live lawsuit. Cannot clear 2:1 R:R credibly: a 1-ATR stop is 12.7% ($3.47), requiring a +25% target of $4.99, which sits just above the $4.95 50-SMA and directly into overhead supply, against three analysts who just cut to $10-15 on deteriorating numbers. The 10% trailing GTC stop is 0.79 ATR away. Displaces nothing, but would waste a weekly slot on the lowest-quality setup here.
+
+#### Tooling notes
+- **`mcp__Apify__apify--rag-web-browser` does not exist in this session (10th consecutive
+  run).** `routines/gappers-cloud.md` STEP 2 names it. **New finding this run:** the Actor
+  Server HTTP path — `send-server-actor-request` GET `/search` on `apify/rag-web-browser`,
+  which earlier runs had not tried — also fails, returning **HTTP 500 `{"errorMessage":
+  "Timed out."}`**. Combined with the previously-logged 60s MCP timeout on
+  `apify--web-search`, **every Apify catalyst path is now confirmed dead**, not just the
+  missing tool name.
+- The documented STEP 2 fallback, **WebFetch against `benzinga.com/quote/<T>`, returns
+  HTTP 403** to automated clients (re-confirmed by the 07:08 run). **Both documented
+  catalyst paths are down.** All catalysts above came from native `WebSearch` with
+  `blocked_domains` set against the three Yahoo hosts. **`routines/gappers-cloud.md`
+  STEP 2 should be rewritten to name `WebSearch` as the primary catalyst path** — this is
+  now a 10-run-old documentation bug, not a transient outage.
+- **Yahoo block held** — zero finance.yahoo.com results reached this log. Note that
+  `blocked_domains` is what actually enforces it; the `-site:` suffix in the prompt is
+  inert for `WebSearch` (consistent with the 11-27 pre-market finding).
+- **`scripts/size.mjs` reports a stale `price`** — NBIS $115.85, BE $191.92, LUNR $13.00
+  against live snapshot values of $91.25 / $163.95 / $9.78. Its **ATR(14) figures are
+  sound** and were used, but the `price` (and therefore `cap_shares`) field is off by
+  20-30% and must not be trusted for sizing until investigated. Percentages above were
+  recomputed as `atr14 / live snapshot price` from Alpaca daily bars directly.
+- **Alpaca is broker-of-record for all prices here.** Secondary sources conflicted again
+  (LUNR quoted simultaneously at a $8.24 52-week low and at $9.14 +2.4% in two articles
+  dated today; CRWV at $42.57, $39.05 and $45.70 across three). None were cited for price.
+
+### DECISION: **RESEARCH ONLY — no orders** (STEP 8)
+
+Unchanged from the 07:08 run and for the same reasons, now re-verified on a different
+ticker set: **all 10 fail the 200-SMA long-bias filter**, every gap is **under 0.61 ATR**
+(inside normal daily range), **no name has company-specific news**, and on **8 of 10** the
+mandatory 10% trailing GTC stop sits **under 1 ATR** away. The list is **one correlated
+AI/space/quantum beta bet**, so `corr-gate.mjs` would block a 3rd entry regardless.
+Account: **$100,000 equity, 0 positions, 0/3 weekly trades used** — full capacity and
+still no compliant entry. *Patience > activity.*
+
+**Promoted to watch — two names, both LONG_TERM, neither actionable today:**
+- **BE** — the strongest thesis on the list (revenue +138% y/y, guidance raised to
+  $4.4-4.6B, 1,602MW signed, analysts at $230-335). Trigger: reclaim **$224** (200-SMA)
+  on above-average volume, then re-check Confluence via `/trade`.
+- **LUNR** — *new this run*, promoted from quick-scan on the Nov 23 START nuclear PDR and
+  the Nov 26 Mizuho Outperform initiation on top of a Q3 beat with record FCF and a $1.9B
+  backlog. It also has **the only 2:1 R:R on this list that clears at a sane stop** (1-ATR
+  stop $8.57 above the $8.01 52-week low; +25% target $12.21 ≈ the 50-SMA, vs $26.89
+  consensus). Trigger: reclaim the **$12.18 50-SMA** on above-average volume as a first
+  step toward the $18.98 200-SMA. Not today.
+
+Carried forward, unresolved: the **10%-stop vs 2:1-R:R conflict** (today 0.54-0.85 ATR on
+8 of 10 names), the **$100k-vs-$10k baseline mismatch**, **0% deployed vs the 75-85% rule
+for 101 sessions**, the **nonexistent Apify tool** in `routines/gappers-cloud.md` STEP 2
+(now with every Apify path proven dead), the **Benzinga 403**, and the new
+**`size.mjs` stale-price bug**.
